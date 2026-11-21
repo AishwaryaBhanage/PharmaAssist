@@ -1,0 +1,130 @@
+{
+  "question": "A new LTC resident arrived without meds, and their first fill rejects with 01642. Which override applies?",
+  "status": "answered",
+  "assumption": "Assuming NY Medicaid (NYRx), since 01642 is an eMedNY Early Fill Overuse edit and the question is a claim rejection.",
+  "answer": "Assuming NY Medicaid: use the **New Patient Processing override**, not Leave of Absence.\n\n1. Confirm you're an LTC-servicing pharmacy and eligibility returns \"NH\" (the member is a recent admit to a SNF or health-related facility).\n2. Confirm the 01642 (or 02242) denial is the first dispensing of that drug, strength and directions after admission.\n3. Resubmit with Reason for Service Code (439-E4) **NP** and Submission Clarification Code **18** (LTC Patient Admit/Readmit).\n4. Day supply is limited to 30 days unless the drug is subject to short-cycle billing.\n\nYou can't use this override if any condition isn't met. In that case, call the Department. Community pharmacies should also call the Department.",
+  "citations": [
+    {
+      "doc_id": "ny_medicaid_pharmacy_policy",
+      "page": 9,
+      "link": "https://www.emedny.org/ProviderManuals/Pharmacy/PDFS/Pharmacy_Policy_Guidelines.pdf#page=9",
+      "flag": null
+    }
+  ],
+  "conflicts_noted": [],
+  "flags": [],
+  "answered_by": "claude-sonnet-5-5",
+  "fallback_used": false,
+  "timing_s": {
+    "total": 9.214,
+    "search": 0.109,
+    "search_cold": 0,
+    "search_warm": 0.109,
+    "read_page": 0,
+    "list_documents": 0,
+    "model_calls": [
+      5.091,
+      4.014
+    ]
+  },
+  "index_warm_at_start": true,
+  "lookups": 2,
+  "tokens": {
+    "input": 6,
+    "output": 596,
+    "cache_read": 2248,
+    "cache_write": 11482
+  },
+  "cost_usd": 0.035127,
+  "pages_seen": [
+    "cms_partd_dmp_guidance_2019:p37",
+    "cms_partd_opioid_pharmacists_2022:p1",
+    "cms_partd_opioid_pharmacists_2022:p2",
+    "ny_medicaid_pdl:p78",
+    "ny_medicaid_pharmacy_policy:p10",
+    "ny_medicaid_pharmacy_policy:p26",
+    "ny_medicaid_pharmacy_policy:p27",
+    "ny_medicaid_pharmacy_policy:p38",
+    "ny_medicaid_pharmacy_policy:p40",
+    "ny_medicaid_pharmacy_policy:p6",
+    "ny_medicaid_pharmacy_policy:p9"
+  ],
+  "started_at": "2026-10-14T22:03:38+00:00",
+  "config": {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium",
+    "setup": "baseline",
+    "max_tool_calls": 6,
+    "deadline_s": 25,
+    "search_k": 8
+  },
+  "model_calls": [
+    {
+      "duration_s": 5.091,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 4,
+        "output": 116,
+        "cache_read": 0,
+        "cache_write": 2248
+      }
+    },
+    {
+      "duration_s": 4.014,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 2,
+        "output": 480,
+        "cache_read": 2248,
+        "cache_write": 9234
+      }
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "search_documents",
+      "input": {
+        "query": "LTC new admission early refill override 01642 opioid"
+      },
+      "duration_s": 0.09,
+      "is_error": false,
+      "pages": [
+        "ny_medicaid_pharmacy_policy:p9",
+        "ny_medicaid_pharmacy_policy:p10",
+        "ny_medicaid_pharmacy_policy:p9",
+        "ny_medicaid_pharmacy_policy:p9",
+        "cms_partd_opioid_pharmacists_2022:p2",
+        "cms_partd_opioid_pharmacists_2022:p1",
+        "cms_partd_opioid_pharmacists_2022:p1",
+        "ny_medicaid_pharmacy_policy:p40"
+      ],
+      "index_loaded": true
+    },
+    {
+      "name": "search_documents",
+      "input": {
+        "query": "reject code 01642 override"
+      },
+      "duration_s": 0.019,
+      "is_error": false,
+      "pages": [
+        "ny_medicaid_pharmacy_policy:p9",
+        "ny_medicaid_pharmacy_policy:p26",
+        "cms_partd_dmp_guidance_2019:p37",
+        "ny_medicaid_pharmacy_policy:p10",
+        "ny_medicaid_pdl:p78",
+        "ny_medicaid_pharmacy_policy:p27",
+        "ny_medicaid_pharmacy_policy:p6",
+        "ny_medicaid_pharmacy_policy:p38"
+      ],
+      "index_loaded": true
+    }
+  ],
+  "cost_note": "priced at the requested model's rates; a fallback hop bills at its own rates"
+}

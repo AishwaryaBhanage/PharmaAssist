@@ -1,0 +1,144 @@
+{
+ "va_pbm_bup_chronic_pain": {
+  "pages": 4,
+  "convert_seconds": 24.3,
+  "this_run_seconds": 0.0,
+  "blocks": {
+   "figure": 16,
+   "text": 78,
+   "table": 2
+  },
+  "figures": 16,
+  "figures_by_source": {
+   "docling": 16
+  }
+ },
+ "va_dod_cpg_diabetes_2023": {
+  "pages": 165,
+  "convert_seconds": 109.2,
+  "this_run_seconds": 0.0,
+  "blocks": {
+   "figure": 4,
+   "text": 1178,
+   "table": 64
+  },
+  "figures": 5,
+  "figures_by_source": {
+   "docling": 2,
+   "pdf_image": 3
+  }
+ },
+ "va_pbm_t2dm_clinicians_guide": {
+  "pages": 24,
+  "convert_seconds": 42.6,
+  "this_run_seconds": 0.0,
+  "blocks": {
+   "figure": 85,
+   "text": 308,
+   "table": 7
+  },
+  "figures": 91,
+  "figures_by_source": {
+   "docling": 66,
+   "pdf_image": 25
+  }
+ },
+ "va_pbm_t2dm_pharmacotherapy_2025": {
+  "pages": 16,
+  "convert_seconds": 26.3,
+  "this_run_seconds": 0.0,
+  "blocks": {
+   "figure": 16,
+   "text": 171,
+   "table": 7
+  },
+  "figures": 16,
+  "figures_by_source": {
+   "docling": 16
+  }
+ },
+ "va_dod_cpg_opioids_2022": {
+  "pages": 177,
+  "convert_seconds": 109.1,
+  "this_run_seconds": 0.0,
+  "blocks": {
+   "figure": 6,
+   "text": 1718,
+   "table": 69
+  },
+  "figures": 7,
+  "figures_by_source": {
+   "docling": 5,
+   "pdf_image": 2
+  }
+ },
+ "va_pbm_bup_oud": {
+  "pages": 4,
+  "convert_seconds": 18.8,
+  "this_run_seconds": 0.0,
+  "blocks": {
+   "figure": 10,
+   "text": 45,
+   "table": 3
+  },
+  "figures": 10,
+  "figures_by_source": {
+   "docling": 10
+  }
+ },
+ "cms_partd_dmp_guidance_2019": {
+  "pages": 41,
+  "convert_seconds": 17.6,
+  "this_run_seconds": 0.0,
+  "blocks": {
+   "figure": 1,
+   "text": 416,
+   "table": 4
+  },
+  "figures": 1,
+  "figures_by_source": {
+   "docling": 1
+  }
+ },
+ "cms_partd_opioid_pharmacists_2022": {
+  "pages": 2,
+  "convert_seconds": 6.2,
+  "this_run_seconds": 0.0,
+  "blocks": {
+   "text": 40,
+   "figure": 4
+  },
+  "figures": 4,
+  "figures_by_source": {
+   "docling": 4
+  }
+ },
+ "ny_medicaid_pdl": {
+  "pages": 86,
+  "convert_seconds": 220.0,
+  "this_run_seconds": 0.0,
+  "blocks": {
+   "text": 140,
+   "table": 87
+  },
+  "figures": 7,
+  "figures_by_source": {
+   "pdf_image": 7
+  }
+ },
+ "ny_medicaid_pharmacy_policy": {
+  "pages": 50,
+  "convert_seconds": 62.5,
+  "this_run_seconds": 0.0,
+  "blocks": {
+   "text": 919,
+   "figure": 49,
+   "table": 14
+  },
+  "figures": 50,
+  "figures_by_source": {
+   "docling": 49,
+   "pdf_image": 1
+  }
+ }
+}

@@ -1,0 +1,495 @@
+{
+  "question": "This Veteran has T2DM and established ASCVD, but their A1c is already at goal. Do we need to try metformin before starting an SGLT2, or can the prescriber start it for cardiovascular benefit?",
+  "status": "answered",
+  "assumption": "Assuming VA (Veteran); clinical question, so VA clinical guidance applies. I did not check formulary status or Criteria for Use for a specific SGLT2.",
+  "answer": "Assuming VA: **No, metformin first isn't required.** The prescriber can start an SGLT2 for cardiovascular benefit.\n\n- The 2025 VA PBM summary (04/2025) calls SGLT2 inhibitors first-line in T2DM with ASCVD, HF, or CKD. It says to use them regardless of HbA1c, with metformin added if more glycemic control is needed.\n- The 2023 VA/DoD CPG says a GLP-1 RA or SGLT2 with proven CV benefit should be part of the regimen regardless of HbA1c. Of the SGLT2s, those with ASCVD benefit are empagliflozin and canagliflozin.\n- Check eGFR ≥20 before starting.\n- The 2020 PBM guide (metformin first, then SGLT2) is older and superseded.",
+  "citations": [
+    {
+      "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+      "page": 3,
+      "link": "https://www.pbm.va.gov/PBM/AcademicDetailingService/Documents/508/IB10-1775_PharmacotherapyforT2DM_P97221.pdf#page=3",
+      "flag": null,
+      "locator": "va_pbm_t2dm_pharmacotherapy_2025:p3"
+    },
+    {
+      "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+      "page": 5,
+      "link": "https://www.pbm.va.gov/PBM/AcademicDetailingService/Documents/508/IB10-1775_PharmacotherapyforT2DM_P97221.pdf#page=5",
+      "flag": null,
+      "locator": "va_pbm_t2dm_pharmacotherapy_2025:p5"
+    },
+    {
+      "doc_id": "va_dod_cpg_diabetes_2023",
+      "page": 59,
+      "link": "https://www.healthquality.va.gov/guidelines/CD/diabetes/VADoD-Diabetes-CPG_Final_508.pdf#page=59",
+      "flag": null,
+      "locator": "va_dod_cpg_diabetes_2023:p59"
+    },
+    {
+      "doc_id": "va_dod_cpg_diabetes_2023",
+      "page": 68,
+      "link": "https://www.healthquality.va.gov/guidelines/CD/diabetes/VADoD-Diabetes-CPG_Final_508.pdf#page=68",
+      "flag": null,
+      "locator": "va_dod_cpg_diabetes_2023:p68"
+    },
+    {
+      "doc_id": "va_pbm_t2dm_clinicians_guide",
+      "page": 12,
+      "link": "https://www.pbm.va.gov/PBM/AcademicDetailingService/Documents/508/IB10-1402_Type2DiabetesCliniciansGuide_508Conformant.pdf#page=12",
+      "flag": null,
+      "locator": "va_pbm_t2dm_clinicians_guide:p12"
+    }
+  ],
+  "conflicts_noted": [
+    "The 2020 VA PBM Clinician's Guide (metformin first-line, SGLT2 as add-on) differs from the 2025 PBM summary and 2023 VA/DoD CPG (SGLT2 first or regardless of HbA1c in ASCVD). Decided by rule 4, more recent over older. All are advisory."
+  ],
+  "flags": [],
+  "needs_review": false,
+  "words": {
+    "displayed": 105,
+    "rendered": 105
+  },
+  "answered_by": "claude-sonnet-5-5",
+  "fallback_used": false,
+  "timing_s": {
+    "total": 29.462,
+    "search": 22.451,
+    "search_cold": 0,
+    "search_warm": 22.451,
+    "read_page": 0,
+    "list_documents": 0,
+    "model_calls": [
+      1.408,
+      5.583
+    ]
+  },
+  "index_warm_at_start": true,
+  "lookups": 1,
+  "tokens": {
+    "input": 6,
+    "output": 881,
+    "cache_read": 3638,
+    "cache_write": 24754
+  },
+  "cost_usd": 0.071435,
+  "pages_seen": [
+    "va_dod_cpg_diabetes_2023:p58",
+    "va_dod_cpg_diabetes_2023:p59",
+    "va_dod_cpg_diabetes_2023:p63",
+    "va_dod_cpg_diabetes_2023:p64",
+    "va_dod_cpg_diabetes_2023:p67",
+    "va_dod_cpg_diabetes_2023:p68",
+    "va_dod_cpg_diabetes_2023:p73",
+    "va_dod_cpg_diabetes_2023:p74",
+    "va_pbm_t2dm_clinicians_guide:p11",
+    "va_pbm_t2dm_clinicians_guide:p12",
+    "va_pbm_t2dm_clinicians_guide:p13",
+    "va_pbm_t2dm_clinicians_guide:p22",
+    "va_pbm_t2dm_pharmacotherapy_2025:p10",
+    "va_pbm_t2dm_pharmacotherapy_2025:p11",
+    "va_pbm_t2dm_pharmacotherapy_2025:p12",
+    "va_pbm_t2dm_pharmacotherapy_2025:p13",
+    "va_pbm_t2dm_pharmacotherapy_2025:p14",
+    "va_pbm_t2dm_pharmacotherapy_2025:p3",
+    "va_pbm_t2dm_pharmacotherapy_2025:p4",
+    "va_pbm_t2dm_pharmacotherapy_2025:p5",
+    "va_pbm_t2dm_pharmacotherapy_2025:p6"
+  ],
+  "started_at": "2026-10-18T03:43:35+00:00",
+  "config": {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium",
+    "setup": "docling_rerank_structured",
+    "max_tool_calls": 6,
+    "deadline_s": 25,
+    "search_k": 8
+  },
+  "structured_lookups": true,
+  "model_calls": [
+    {
+      "t_start": 0.004,
+      "duration_s": 1.408,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 4,
+        "output": 113,
+        "cache_read": 0,
+        "cache_write": 3638
+      }
+    },
+    {
+      "t_start": 23.865,
+      "duration_s": 5.583,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 2,
+        "output": 768,
+        "cache_read": 3638,
+        "cache_write": 21116
+      }
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "search_documents",
+      "input": {
+        "query": "SGLT2 inhibitor established ASCVD type 2 diabetes cardiovascular benefit regardless of A1c metformin",
+        "program": "VA"
+      },
+      "duration_s": 22.451,
+      "is_error": false,
+      "pages": [
+        "va_dod_cpg_diabetes_2023:p58",
+        "va_dod_cpg_diabetes_2023:p59",
+        "va_dod_cpg_diabetes_2023:p63",
+        "va_dod_cpg_diabetes_2023:p64",
+        "va_dod_cpg_diabetes_2023:p67",
+        "va_dod_cpg_diabetes_2023:p68",
+        "va_dod_cpg_diabetes_2023:p73",
+        "va_dod_cpg_diabetes_2023:p74",
+        "va_pbm_t2dm_clinicians_guide:p11",
+        "va_pbm_t2dm_clinicians_guide:p12",
+        "va_pbm_t2dm_clinicians_guide:p13",
+        "va_pbm_t2dm_clinicians_guide:p22",
+        "va_pbm_t2dm_pharmacotherapy_2025:p10",
+        "va_pbm_t2dm_pharmacotherapy_2025:p11",
+        "va_pbm_t2dm_pharmacotherapy_2025:p12",
+        "va_pbm_t2dm_pharmacotherapy_2025:p13",
+        "va_pbm_t2dm_pharmacotherapy_2025:p14",
+        "va_pbm_t2dm_pharmacotherapy_2025:p3",
+        "va_pbm_t2dm_pharmacotherapy_2025:p4",
+        "va_pbm_t2dm_pharmacotherapy_2025:p5",
+        "va_pbm_t2dm_pharmacotherapy_2025:p6"
+      ],
+      "index_loaded": true,
+      "search": {
+        "original_query": "This Veteran has T2DM and established ASCVD, but their A1c is already at goal. Do we need to try metformin before starting an SGLT2, or can the prescriber start it for cardiovascular benefit?",
+        "agent_query": "SGLT2 inhibitor established ASCVD type 2 diabetes cardiovascular benefit regardless of A1c metformin",
+        "executed": [
+          {
+            "source": "original",
+            "query": "This Veteran has T2DM and established ASCVD, but their A1c is already at goal. Do we need to try metformin before starting an SGLT2, or can the prescriber start it for cardiovascular benefit?",
+            "program": "VA",
+            "k": 8,
+            "seconds": 22.442,
+            "cached": false,
+            "results": 8
+          },
+          {
+            "source": "agent",
+            "query": "SGLT2 inhibitor established ASCVD type 2 diabetes cardiovascular benefit regardless of A1c metformin",
+            "program": "VA",
+            "k": 8,
+            "seconds": 12.055,
+            "cached": false,
+            "results": 8
+          }
+        ],
+        "duplicates_merged": 4,
+        "returned": 12,
+        "from_both": 4,
+        "from_original_only": 4,
+        "from_agent_only": 4,
+        "provenance": [
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s2",
+            "found_by": {
+              "original": 2,
+              "agent": 4
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s4",
+            "found_by": {
+              "original": 1,
+              "agent": 6
+            }
+          },
+          {
+            "unit": "va_dod_cpg_diabetes_2023:s59",
+            "found_by": {
+              "original": 8,
+              "agent": 1
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_clinicians_guide:s10",
+            "found_by": {
+              "original": 7,
+              "agent": 7
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s1",
+            "found_by": {
+              "agent": 2
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_clinicians_guide:s11",
+            "found_by": {
+              "original": 3
+            }
+          },
+          {
+            "unit": "va_dod_cpg_diabetes_2023:s64",
+            "found_by": {
+              "agent": 3
+            }
+          },
+          {
+            "unit": "va_dod_cpg_diabetes_2023:s79",
+            "found_by": {
+              "original": 4
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s14",
+            "found_by": {
+              "original": 5
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s12",
+            "found_by": {
+              "agent": 5
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_clinicians_guide:s31",
+            "found_by": {
+              "original": 6
+            }
+          },
+          {
+            "unit": "va_dod_cpg_diabetes_2023:s69",
+            "found_by": {
+              "agent": 8
+            }
+          }
+        ],
+        "hits": [
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s2",
+            "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+            "pages": [
+              3,
+              4
+            ],
+            "ranks": {
+              "original": 2,
+              "agent": 4
+            },
+            "scores": {
+              "original": 0.9753,
+              "agent": 0.9318
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s4",
+            "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+            "pages": [
+              5,
+              6
+            ],
+            "ranks": {
+              "original": 1,
+              "agent": 6
+            },
+            "scores": {
+              "original": 0.9832,
+              "agent": 0.9202
+            }
+          },
+          {
+            "unit": "va_dod_cpg_diabetes_2023:s59",
+            "doc_id": "va_dod_cpg_diabetes_2023",
+            "pages": [
+              58,
+              59
+            ],
+            "ranks": {
+              "original": 8,
+              "agent": 1
+            },
+            "scores": {
+              "original": 0.8262,
+              "agent": 0.9943
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_clinicians_guide:s10",
+            "doc_id": "va_pbm_t2dm_clinicians_guide",
+            "pages": [
+              11,
+              12
+            ],
+            "ranks": {
+              "original": 7,
+              "agent": 7
+            },
+            "scores": {
+              "original": 0.8892,
+              "agent": 0.9091
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s1",
+            "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+            "pages": [
+              3
+            ],
+            "ranks": {
+              "agent": 2
+            },
+            "scores": {
+              "agent": 0.9895
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_clinicians_guide:s11",
+            "doc_id": "va_pbm_t2dm_clinicians_guide",
+            "pages": [
+              12,
+              13
+            ],
+            "ranks": {
+              "original": 3
+            },
+            "scores": {
+              "original": 0.9491
+            }
+          },
+          {
+            "unit": "va_dod_cpg_diabetes_2023:s64",
+            "doc_id": "va_dod_cpg_diabetes_2023",
+            "pages": [
+              63,
+              64
+            ],
+            "ranks": {
+              "agent": 3
+            },
+            "scores": {
+              "agent": 0.9366
+            }
+          },
+          {
+            "unit": "va_dod_cpg_diabetes_2023:s79",
+            "doc_id": "va_dod_cpg_diabetes_2023",
+            "pages": [
+              73,
+              74
+            ],
+            "ranks": {
+              "original": 4
+            },
+            "scores": {
+              "original": 0.9478
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s14",
+            "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+            "pages": [
+              13,
+              14
+            ],
+            "ranks": {
+              "original": 5
+            },
+            "scores": {
+              "original": 0.9419
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s12",
+            "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+            "pages": [
+              10,
+              11,
+              12
+            ],
+            "ranks": {
+              "agent": 5
+            },
+            "scores": {
+              "agent": 0.9281
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_clinicians_guide:s31",
+            "doc_id": "va_pbm_t2dm_clinicians_guide",
+            "pages": [
+              22
+            ],
+            "ranks": {
+              "original": 6
+            },
+            "scores": {
+              "original": 0.9229
+            }
+          },
+          {
+            "unit": "va_dod_cpg_diabetes_2023:s69",
+            "doc_id": "va_dod_cpg_diabetes_2023",
+            "pages": [
+              67,
+              68
+            ],
+            "ranks": {
+              "agent": 8
+            },
+            "scores": {
+              "agent": 0.8756
+            }
+          }
+        ]
+      },
+      "t_start": 1.412
+    }
+  ],
+  "cited_evidence": {
+    "va_pbm_t2dm_pharmacotherapy_2025:p3": "va_pbm_t2dm_pharmacotherapy_2025 (VA, advisory, 2025-04)\nPharmacotherapy for Type 2 Diabetes Mellitus (T2DM) 2025: A VA Clinician's Summary (IB 10-1775) > Pharmacotherapy approach for type 2 diabetes > GLP-1 RAs\n[p 3]\nGLP-1 RAs are alternatives to SGLT2 inhibitors. For ASCVD, the benefits are comparable between the drug classes. Renal benefits are more limited for GLP-1 RAs and costs are higher. Considerations for selecting GLP-1 RA 1,2 :\n■ Lower rates of major adverse cardiovascular events including myocardial infarction, stroke, and cardiovascular death in patients with ASCVD using injectable semaglutide, liraglutide, and dulaglutide. 11-15,24-32\n■ A lack of evidence in lowering HF risk (neutral outcome) or decreasing HF hospitalizations. 11-16 GLP-1 RA (injectable semaglutide) improved quality of life in HF with preserved ejection fraction (HFpEF) and obesity. 33\n■ Tirzepatide, a GIP/GLP-1 RA, lowers risk of a composite death from cardiovascular causes or worsening heart failure in patients with HFpEF and obesity. 34\n■ Injectable semaglutide reduces risk of worsening renal function, 12 while liraglutide and dulaglutide reduce albuminuria. 11,13,32\n■ A greater potential for weight loss than SGLT2 inhibitors. 1,2 Weight loss can benefit glycemic control, may improve MASLD, and reduce medication burden.\nAtherosclerotic cardiovascular disease (ASCVD) is the leading cause of morbidity and mortality in patients with diabetes. 2\n[p 4]\nFigure 1. SGLT2 inhibitor and GLP-1 RA's role in therapy for cardiorenal benefits *\n1,13\n[Table: Figure 1. SGLT2 inhibitor and GLP-1 RA's role in therapy for cardiorenal benefits *] (PDF page 4)\nASCVD | • Use SGLT2 Inhibitor (empagliflozin) in T2DM and ASCVD or high risk of ASCVD • If a SGLT2 inhibitor cannot be used, use a GLP-1 RA (injectable semaglutide)\nHF | • Use SGLT2 inhibitor (empagliflozin) in addition to other GDMT for HFrEF, HFmEF, or HFpEF in patients with and without T2DM • GLP-1 RA (injectable semaglutide) improved quality of life in HFpEF and obesity; evidence does not show reduction in hospitalizations or mortality\nCKD | • Use SGLT2 inhibitor (empagliflozin) in T2DM and CKD. In those without T2DM, use SGLT2 inhibitor if eGFR ≥ 20 ml/min/1.73 m 2 and uACR > 200 mg/g, or eGFR 20-45 ml/min/1.73 m 2 and uACR < 200 mg/g - Use with maximally tolerated doses of ACE I or ARB • If SGLT2 inhibitor cannot be used in patients with T2DM and CKD, use GLP-1 RA\nTable note: *Before starting a SGLT2 inhibitor, ensure eGFR ≥ 20 mL/min/1.73 m 2 and continue until ESRD/dialysis. ASCVD: established cardiovascular disease (acute coronary syndrome, myocardial infarction [MI], stable or unstable angina, peripheral artery disease, stroke, or any revascularization procedure). High risk indicators of ASCVD: age ≥ 55 years with ≥ 2 risk factors (obesity, hypertension, smoking, dyslipidemia, or albuminuria). HF: includes HFrEF, HFmEF, HFpEF. CKD: eGFR < 60 mL/min/1.73 m 2 or uACR ≥ 30 mg/g.\n*Before starting a SGLT2 inhibitor, ensure eGFR ≥ 20 mL/min/1.73 m 2 and continue until ESRD/dialysis. ASCVD: established cardiovascular disease (acute coronary syndrome, myocardial infarction [MI], stable or unstable angina, peripheral artery disease, stroke, or any revascularization procedure). High risk indicators of ASCVD: age ≥ 55 years with ≥ 2 risk factors (obesity, hypertension, smoking, dyslipidemia, or albuminuria). HF: includes HFrEF, HFmEF, HFpEF. CKD: eGFR < 60 mL/min/1.73 m 2 or uACR ≥ 30 mg/g.\n\nva_pbm_t2dm_pharmacotherapy_2025 (VA, advisory, 2025-04)\nPharmacotherapy for Type 2 Diabetes Mellitus (T2DM) 2025: A VA Clinician's Summary (IB 10-1775) > Pharmacotherapy approach for type 2 diabetes > SGLT2 inhibitors\n[p 3]\nSGLT2 inhibitors and GLP-1 RAs are beneficial across multiple clinical conditions, including treatment of type 2 diabetes mellitus (T2DM), atherosclerotic cardiovascular disease (ASCVD), heart failure (HF), and chronic kidney disease (CKD). The efficacy of these agents extends beyond their glucose lowering effects. 1,2\nSGLT2 inhibitors are first-line agents for patients with ASCVD and T2DM, HF, and/or CKD. 1,2 Benefits are not related to glucose lowering and should be used regardless of HbA1c level. Considerations for selecting SGLT2 inhibitors:\n■ Empagliflozin and canagliflozin lower major adverse cardiovascular events, including myocardial infarction, stroke, and cardiovascular death in patients with ASCVD and T2DM. 3-13\n■ Empagliflozin, dapagliflozin, and sotagliflozin reduce the risk of hospitalization for heart failure or cardiovascular death in patients with heart failure with reduced, mid-range, or preserved ejection fraction (HFrEF, HFmEF, HFpEF). 13-19\n■ Empagliflozin, canagliflozin, and dapagliflozin reduce the risk of worsening renal function (worsening eGFR, end-stage kidney disease, or renal death). 6-13,20-23",
+    "va_pbm_t2dm_pharmacotherapy_2025:p5": "va_pbm_t2dm_pharmacotherapy_2025 (VA, advisory, 2025-04)\nPharmacotherapy for Type 2 Diabetes Mellitus (T2DM) 2025: A VA Clinician's Summary (IB 10-1775) > Pharmacotherapy approach for type 2 diabetes > Use a shared decision-making approach to determine optimal pharmacotherapy\n[p 5]\nConsider cardiorenal benefits when choosing therapy in Veterans with type 2 diabetes 9-31\nIn Veterans with T2DM, use a SGLT2 inhibitor first for patients with ASCVD, HF, or CKD and add metformin if additional glycemic control is needed. Metformin is beneficial for glycemic control and may reduce cardiovascular mortality and progression to ESRD. Consider combination empagliflozin/metformin tablets for patients taking both agents. If a sulfonylurea or DPP-4 inhibitor is being used in a patient with ASCVD, HF, or CKD, consider replacing the sulfonylurea or DPP-4 inhibitor with a SGLT2 inhibitor when HbA1c is in target range. In cases where HbA1c is not controlled, then add a SGLT2 inhibitor to existing therapy.\n[Figure, chart] Figure 2. Cardiac and renal benefits (PDF page 5). Machine-generated visual interpretation; status: machine-interpreted from the page image by a vision model; structure and OCR cross-check passed.\nChart type: grouped bar chart; x: Outcome composite (MACE composite, Heart failure composite, Kidney composite); y: Percent relative risk reduction; units: percent\nSeries SGLT2 inhibitors: MACE composite: -14; Heart failure composite: -31; Kidney composite: -45\nSeries GLP-1 RA: MACE composite: -13; Heart failure composite: -7; Kidney composite: -24\nSeries Sulfonylurea: MACE composite: 10; Heart failure composite: 23; Kidney composite: 4\nSeries DPP-4 inhibitors: MACE composite: -2; Heart failure composite: 0; Kidney composite: 4\nGrouped bar chart with y-axis from -50 to 30. Values are printed as data labels on the bars. A downward blue arrow at right is annotated: \"Negative numbers = reduction in risk\".\nFootnote: Caption references: 10-13,37-41\nMACE composite: major adverse cardiovascular events (nonfatal stroke, nonfatal MI, and cardiovascular death); HF composite: cardiovascular (CV) death and HF hospitalization; Kidney composite: end stage renal disease, eGFR < 10-15 mL/min/1.73 m 2 , or death from renal/CV causes. For ASCVD, use SGLT2 inhibitors empagliflozin or canagliflozin, and GLP-1 RA injectable semaglutide, liraglutide, or dulaglutide. For HF, use SGLT2 inhibitors empagliflozin, dapagliflozin, or sotagliflozin. For CKD, use SGLT2 inhibitors empagliflozin, canagliflozin, or dapagliflozin and GLP-1 RA injectable semaglutide (other GLP-1 RAs reduce albuminuria). (Bolded = formulary agent). DPP4-I = dipeptidyl peptidase 4 inhibitor. Negative numbers indicate a reduction in risk, therefore provide cardiorenal benefits.\nAfter addressing the cardiorenal benefits of medications, further adjustments are made based on whether further hemoglobin A1c lowering is needed. In patients who are overweight or obese, it is beneficial to consider medications that are weight neutral or may promote weight loss.\n[p 6]\nFigure 3.\nMedications are added or adjusted based on Veteran health needs and goals 1,2\nIf further hemoglobin A1c lowering is needed, select based on ability to lower A1c:\n[Figure, diagram] untitled in the image; see the section heading (PDF page 6). Machine-generated visual interpretation; status: machine-interpreted from the page image by a vision model; structure and OCR cross-check passed.\nA stepped, staircase-style diagram with three tiers rising from left to right, each topped by a chevron-shaped icon containing a concentric-circle target symbol. The bottom bar, labeled \"INTERMEDIATE\" (blue), spans the full width; the left step above it lists: \"• SGLT2 inhibitor • DPP4 inhibitor\". The middle bar, labeled \"HIGH\" (teal), sits on top of the intermediate bar under the middle and right steps; the middle step lists: \"• Metformin • Sulfonylurea* • TZD\". The top bar, labeled \"VERY HIGH\" (dark green), is under the right step, which lists: \"• GLP-1 RA† • Insulin*\". The asterisks and dagger are footnote markers whose explanations are not shown in the image.\nIf weight loss is needed with BMI ≥ 27 kg/m 2 ,\nselect based on ability of the medication to promote weight loss:\n[Figure, diagram] untitled in the image; see the section heading (PDF page 6). Machine-generated visual interpretation; status: machine-interpreted from the page image by a vision model; structure and OCR cross-check passed.\nA staircase diagram with four ascending steps, each topped by a target/bullseye icon on an arrow-shaped tab and a labeled band beneath. Step 1 (lowest, gray): bullets 'Insulin*', 'Sulfonylurea*', 'TZD'; band label 'MILD TO MODERATE WEIGHT GAIN'. Step 2 (gray): bullets 'Metformin', 'DPP-4 inhibitor'; band label 'NEUTRAL'. Step 3 (blue): bullet 'SGLT2 inhibitor'; band label 'INTERMEDIATE'. Step 4 (highest, dark teal): bullets 'GLP-1 RA†', 'GIP and GLP-1 RA†'; band label 'VERY HIGH'. The bands are layered so each higher category sits above the previous, suggesting increasing degree of weight benefit from left to right.\nFootnote: * marker on Insulin and Sulfonylurea (footnote text not shown in image)\nFootnote: † marker on GLP-1 RA and GIP and GLP-1 RA (footnote text not shown in image)\n*Use caution in elderly due to risk of hypoglycemia. † See VA PBM Formulary for criteria for use. https://www.va.gov/formularyadvisor/. See Table 1 for more details. HbA1c lowering: very high > 1.5%, high 1-1.5%, intermediate 0.5-1%. Weight loss: very high/high: 6-30 lb loss, intermediate: 3-5 lb loss, neutral: 2 lb or less loss or gain, mild to moderate gain: 3-8 lb.\nUse a SGLT2 inhibitor in patients with T2DM with ASCVD, HF, and/or CKD.",
+    "va_dod_cpg_diabetes_2023:p59": "va_dod_cpg_diabetes_2023 (VA, advisory, 2023-05)\nVA/DoD Clinical Practice Guideline for the Management of Type 2 Diabetes Mellitus (Version 6.0) > IX. Recommendations > E. Pharmacotherapy > Discussion\n[p 58]\nSince 2008, the Food and Drug Administration has required that CV outcome trials be conducted for all new agents approved for glycemic management to ensure CV safety. Select agents from two drug classes, the GLP-1 RAs and SGLT-2 inhibitors, have been shown to significantly reduce 3-point major adverse CV outcomes (3-point MACE, i.e., CV death, non-fatal myocardial infarction [MI], and non-fatal stroke) in patients with T2DM and established atherosclerotic cardiovascular disease (ASCVD).\nSeveral SRs evaluated these drug classes. Kristensen et al. (2019) found a 12% reduction in 3-point MACE with GLP-1 RA use (strength of evidence [SOE] high).(121) Of drugs available on the U.S. market today, liraglutide, dulaglutide, and injectable semaglutide were associated with significant CV benefit (see Table C-2).(121) Giugliano et al. (2020) and Sattar et al. (2021) reported similar effects.(122, 123) Bellastella et al. found that these agents reduced fatal and non-fatal stroke, with the most significant benefit seen with dulaglutide and semaglutide.(124) Giugliano et al. (2020) found that improved glycemic control might have contributed to the decrease in non-fatal stroke with GLP-1 RAs, but change in glycemia did not impact MI or mortality.(122) SGLT-2 inhibitor use similarly has resulted in a reduction in 3-point MACE as shown by McGuire et al. (2021) (SOE high); specific drugs available in the U.S. that have CV benefit include canagliflozin and empagliflozin.(125-127) Once again, please refer to the table for individual drug efficacy and adverse effects (Table C-2). Most of the included randomized trials were rated as very high quality, leading to SRs that were deemed good quality, except for Tian et al., which was rated as fair.(127) This guideline reviewed no evidence on the combination use of GLP-1 RAs with SGLT-2 inhibitors.\n[p 59]\nMost of the above trials included a majority of patients with established ASCVD (CV, cerebrovascular, or peripheral vascular disease), New York Heart Association class II or III HF, or CKD stage 3 or higher. Additionally, all the trials except EMPA-REG OUTCOME had some patients with high CV risk, which was variably defined including age >50-60 years, plus albuminuria or proteinuria, hypertension with left ventricular hypertrophy, or ankle/brachial index <0.9. Although the data supporting reduction of 3-point MACE in patients with known ASCVD is robust, data supporting major adverse CV events (MACE) benefit in patients at high risk of ASCVD is less strong. The REWIND trial included the greatest proportion of patients at high CV risk. In addition to the previous criteria, patients age 60 years or older with at least two of the following were included: tobacco use, dyslipidemia, hypertension, or abdominal obesity. Overall support for benefit in patients with high CV risk comes largely from smaller proportions of those in trials including both patients with and without known CVD (see details in Table C-2) and two SRs (Kristensen et al. 2019; Giugliano et al. 2020). The strongest support for use of GLP-1 RA in patients with high risk of ASCVD is based on the REWIND trial, which included more than 9,000 patients, of whom greater than two-thirds had no known ASCVD but instead were at high risk.(128)\nWhether these classes of drugs should be used as first-line therapy for T2DM or as add-on therapy to metformin in patients with ASCVD is unclear. The large randomized CV outcome trials looking at all these agents included 71-82% of patients on metformin as baseline therapy (see Table C-2). Whether future trials will be done to assess this question is unclear. What is clear is that for adults with T2DM and ASCVD, a GLP-1 RA or SGLT-2 inhibitor with proven CV benefits should be a part of the treatment regimen, regardless of HbA1C, to decrease the risk of MACE.\nBoth classes of agents have notable side effects as well as associated adverse events. Use of GLP-1 RAs is associated with significant gastrointestinal side effects, including nausea, vomiting, and diarrhea, but these often are mild and resolve over time; additionally, they can be modulated by appropriate patient selection (i.e., avoiding those with gastroparesis). A risk of cholelithiasis and acute cholecystitis increases slightly with dose and duration of treatment.(129) No increased risk of pancreatitis, pancreatic cancer, or hypoglycemia with GLP-1 RA use was noted.(121, 123) However, injectable semaglutide use is associated with a slightly increased risk of progression of diabetic eye complications because of, it is theorized, rapid improvement in glycemic control and is not a direct effect of the drug.(123) SGLT-2 inhibitor use has been associated with an increased risk of mycotic genital infections, but these are typically mild and easily treated.(125, 126) A slightly increased risk of diabetic ketoacidosis occurs, which can largely be mitigated with appropriate patient selection and education not to take when oral intake is diminished, the patient is feeling unwell, during acute illness, before surgery, or any combination of the foregoing.(125, 126) Silverii et al. (2019) found no increased risk of Fournier's gangrene with SGLT-2 inhibitor use,(109) although this finding does not rule out the possibility of this rare adverse event. Amputation risk does not appear to be increased for this class overall,(126) although a review of canagliflozin randomized trials(127) indicates that this specific agent might, indeed, be associated with increased risk and that perhaps that risk was mitigated in subsequent SGLT-2 inhibitor trials by avoiding these agents in patients with diabetic foot complications. Overall, for both drug classes, it appears that glycemic and CV benefits outweigh the risks, with the latter mitigate",
+    "va_dod_cpg_diabetes_2023:p68": "va_dod_cpg_diabetes_2023 (VA, advisory, 2023-05)\nVA/DoD Clinical Practice Guideline for the Management of Type 2 Diabetes Mellitus (Version 6.0) > IX. Recommendations > E. Pharmacotherapy > Discussion\n[p 67]\nEvidence from meta-regression analyses suggests that select medications reduced the risk of specific ASCVD and renal disease outcomes independently of changes in glucose control. Giugliano et al. (2020) assessed data from 15 RCTs using either SGLT-2 inhibitors, GLP-1 RAs, or DPP4 inhibitors and compared the achieved HbA1c to MACE, including non-fatal stroke, non-fatal MI, and CV death.(122) Although all outcomes were generally reduced by SGLT-2 inhibitor or GLP1-RA, the improvement in MACE, non-fatal MI, and CV death appeared to be independent of the HbA1c reduction. In contrast, the reduction in non-fatal stroke was related to the degree of HbA1c reduction. Chalmouka et al. (2022) performed a similar analysis of clinical trials of glucose lowering agents, including new trials with SLGT-2 inhibitors and GLP-1 RAs, examining 27 trials ranging from the Kumamoto study (1995) and the UKPDS (1998) through more recent studies.(138) The development of a composite renal endpoint (which included a doubling in serum creatinine, a decrease in eGFR by 30% or more, renal death, end-stage renal disease, renal transplantation, or dialysis) was not directly associated with HbA1c. In contrast, the development of macroalbuminuria was positively related to HbA1c, suggesting that improved glucose control decreased this specific renal endpoint. Of note, only the SGLT-2 inhibitors decreased the risk of worsening kidney function, although GLP-1 RAs and SLGT-2 inhibitors decreased the risk of macroalbuminuria. DPP4i's impacted neither outcome.\n[p 68]\nThe evidence for these two analyses is drawn from high-quality studies. However, as with any secondary data analysis, some limitations limit the generalizability of these results. Further, we need an underlying mechanistic understanding of why some outcomes are directly related to lower glycemia. In contrast, improvement in other outcomes appears to be independent of glycemic levels. Nonetheless, these data do raise the possibility that adding an agent with proven CV and renal benefits could still be useful for some patients, even if they have already achieved their target level of glycemic control.\nThere is likely large variation in patient preferences regarding this recommendation. This recommendation is most applicable to patients who attain adequate glycemic control with monotherapy (i.e., metformin) or combination therapy with agents other than an SGLT-2 inhibitor or a GLP-1 RA (e.g., sulfonylurea). Though the addition or substitution of an SGLT-2 inhibitor or a GLP-1 RA could improve CV and renal outcomes and could provide additional benefits (e.g., weight loss, lower BP, decreased hypoglycemia risk, or any combination of the foregoing), this maneuver might pose an extra medication burden on the patient. Further, GLP-1 RAs and SGLT-2 inhibitors both have discrete adverse event profiles. However, high-risk patients might opt for the addition or substitution of these agents into their regimen to decrease the risk of highstakes major CVD or renal outcomes, like CV death or worsening of renal function. Shared decision making regarding starting a new medication is needed to arrive at an appropriate treatment plan.\nThe Work Group systematically reviewed evidence related to this recommendation. (122, 138) Therefore, it is categorized as Reviewed, New-added. The Work Group's confidence in the quality of the evidence was low. The body of evidence had some limitations, namely the small number of meta-regression analyses that support this recommendation. Further, whether stratifying patients at high risk for certain outcomes (e.g., patients who have previously had an ASCVD event) would provide additional insights into the efficacy of GLP-1 RAs and SGLT-2 inhibitors to reduce outcomes is unclear. Thus, the Work Group made the following recommendation: In adults with type 2 diabetes mellitus who have cardiovascular disease or renal disease, we suggest that the addition of a sodium-glucose cotransporter-2 inhibitor or glucagon-like peptide-1 receptor agonist be considered, even if the patient has already achieved their individualized target range for glycemic control.\nMore research is needed into the underlying mechanisms by which GLP-1 RAs and SGLT-2 inhibitors might improve clinical outcomes independently of glucose control.",
+    "va_pbm_t2dm_clinicians_guide:p12": "va_pbm_t2dm_clinicians_guide (VA, advisory, 2020-05)\nA VA Clinician's Guide to Diabetes Management in Primary Care (IB 10-1402) > Type 2 Diabetes A VA Clinician’s Guide to Diabetes Management in Primary Care (2020) > Diabetes management > 3 Pharmacotherapy > Metformin is recommended as first-line therapy.\n[p 11]\nHas been in use for decades and is low cost.\nSafe to initiate in patients with moderate renal dysfunction (eGFR > 45 mL/min) and may continue metformin therapy in patients with eGFR 30-45 mL/min. 15 Monitoring is no longer based on serum creatinine levels.\nConsider referring to a clinical pharmacy specialist for drug therapy initiation and titration.\nSlow titration, taking metformin with food, or using an extended-release formulation can reduce or prevent GI upset and diarrhea.\nConsider metformin first for most Veterans with diabetes.\n[Figure, chart] 58% (PDF page 11). Machine-generated visual interpretation; status: machine-interpreted from the page image by a vision model; structure and OCR cross-check passed.\nChart type: donut/progress ring; x: ; y: ; units: %\nSeries : filled (green): 58%\nDonut-style progress ring with a dark green arc covering roughly 58% of the circle and a light gray remainder, with \"58%\" printed in large gray text at the center. A partial blue character is visible at the left edge, cut off by the crop.\nUnreadable or ambiguous (not interpreted): Cut-off blue text at left edge (appears to be '6' or part of a label)\nUnreadable or ambiguous (not interpreted): No label indicating what the 58% refers to is visible\nMetformin is recommended to be used first-line 1 st BUT\nOnly ~58% of patients are prescribed metformin first 16\nAfter metformin, use a patient-centered approach to review patient factors and preferences to determine the next medication to use. 16-23\nConsiderations include the following:\nCardiovascular and renal comorbidities\nRisk for side effects\nHypoglycemia risk\nPatient preferences\nImpact on weight\nCost\nAtherosclerotic cardiovascular disease (ASCVD) is the leading cause of morbidity and mortality in patients with diabetes.\nIf a patient has established ASCVD, heart failure (HF), and/or chronic kidney disease (CKD), select diabetes-lowering medications used as adjuncts to metformin that have proven benefits for these conditions. In addition, if the patient has a higher risk of hypoglycemia or weight gain, select medications taking these factors into account. See A VA Clinician's Quick Reference Guide to Diabetes Management in Primary Care (2020) for more information.\n[p 12]\n[Figure, flowchart] Figure 5. Selection of glucose-lowering medications in those with HbA1c above target (PDF page 12). Machine-generated visual interpretation; status: machine-interpreted from the page image by a vision model; not verified.\nBox n1 (start): Start lifestyle interventions + metformin -> if Does Veteran have ASCVD, HF, or CKD?*: box n2; if Does Veteran have ASCVD, HF, or CKD?*: box n3; if Does Veteran have ASCVD, HF, or CKD?*: box n4\nBox n2 (decision): ASCVD -> if Add second-line agent: box n5\nBox n3 (decision): CKD or HF -> if Add second-line agent: box n6\nBox n4 (decision): None -> if Add second-line agent: box n7\nBox n5 (action): SGLT-2† • empagliflozin • canagliflozin -> if If not effective or tolerated, add or substitute: box n8\nBox n6 (action): SGLT-2† • empagliflozin • canagliflozin • dapagliflozin -> if If not effective or tolerated, add or substitute: box n9\nBox n7 (action): DPP-4 or SGLT-2† or Sulfonylurea or TZD -> if If not effective or tolerated, add or substitute: box n10\nBox n8 (action): GLP-1† • inj. semaglutide • liraglutide • dulaglutide\nBox n9 (action): GLP-1† • inj. semaglutide • liraglutide • dulaglutide\nBox n10 (action): GLP-1†\nBox n11 (note): If HbA1c is > 9%, consider starting basal insulin at any step.\nDecision path: n1 -> [Does Veteran have ASCVD, HF, or CKD?*] n2 -> [Add second-line agent] n5 -> [If not effective or tolerated, add or substitute] n8\nDecision path: n1 -> [Does Veteran have ASCVD, HF, or CKD?*] n3 -> [Add second-line agent] n6 -> [If not effective or tolerated, add or substitute] n9\nDecision path: n1 -> [Does Veteran have ASCVD, HF, or CKD?*] n4 -> [Add second-line agent] n7 -> [If not effective or tolerated, add or substitute] n10\nDecision path: n11\nA bracket on the left spans from the start box to the GLP-1 row, labeled with the note about basal insulin.\nASCVD: indicators are age ≥ 55 years with coronary, carotid, or lower extremity artery stenosis > 50% or left ventricular hypertrophy (LVH).\nCKD: eGFR 30-60 mL/min/1.73m 2 or UACR > 30 mg/g, particularly UACR > 300 mg/g.\nHF: left ventricular ejection fraction < 45%.\nAgents shown to reduce ASCVD risk: SGLT-2 = Sodium-glucose co-transporter 2 inhibitor (empagliflozin, canagliflozin); GLP-1 = Glucagon-like peptide-1 agonist (injectable semaglutide, liraglutide, dulaglutide). GLP-1s have not been shown to lower heart failure risk (neutral outcome). Dapagliflozin has been shown to lower heart failure risk and CKD risk, but neutral for ASCVD.\n† Indicates referral to individual Criteria for Use. Do not combine a DPP-4 inhibitor with a GLP-1 agonist.\nNot shown in the figure are uncommonly-used agents (e.g., alpha-glucosidase inhibitors, meglitinides, pramlintide, inhaled insulin, etc.), but these may be considered in specific situations. Refer to Criteria for Use for pramlintide and inhaled insulin: www.pbm.va.gov\n\nva_pbm_t2dm_clinicians_guide (VA, advisory, 2020-05)\nA VA Clinician's Guide to Diabetes Management in Primary Care (IB 10-1402) > Type 2 Diabetes A VA Clinician’s Guide to Diabetes Management in Primary Care (2020) > Diabetes management > 3 Pharmacotherapy > Metformin is recommended as first-line therapy.\n[p 12]\nAfter metformin, in patients with ASCVD, HF, and/or CKD needing further glucose lowering, consider a SGLT-2. A GLP-1 can be used as an alternative for patients with ASCVD and/or CKD unable to use a SGLT-2.\n[p 13]\nFor all patients starting on medication, continue to "
+  },
+  "cited_evidence_parts": {
+    "va_pbm_t2dm_pharmacotherapy_2025:p3": [
+      "va_pbm_t2dm_pharmacotherapy_2025 (VA, advisory, 2025-04)\nPharmacotherapy for Type 2 Diabetes Mellitus (T2DM) 2025: A VA Clinician's Summary (IB 10-1775) > Pharmacotherapy approach for type 2 diabetes > GLP-1 RAs\n[p 3]\nGLP-1 RAs are alternatives to SGLT2 inhibitors. For ASCVD, the benefits are comparable between the drug classes. Renal benefits are more limited for GLP-1 RAs and costs are higher. Considerations for selecting GLP-1 RA 1,2 :\n■ Lower rates of major adverse cardiovascular events including myocardial infarction, stroke, and cardiovascular death in patients with ASCVD using injectable semaglutide, liraglutide, and dulaglutide. 11-15,24-32\n■ A lack of evidence in lowering HF risk (neutral outcome) or decreasing HF hospitalizations. 11-16 GLP-1 RA (injectable semaglutide) improved quality of life in HF with preserved ejection fraction (HFpEF) and obesity. 33\n■ Tirzepatide, a GIP/GLP-1 RA, lowers risk of a composite death from cardiovascular causes or worsening heart failure in patients with HFpEF and obesity. 34\n■ Injectable semaglutide reduces risk of worsening renal function, 12 while liraglutide and dulaglutide reduce albuminuria. 11,13,32\n■ A greater potential for weight loss than SGLT2 inhibitors. 1,2 Weight loss can benefit glycemic control, may improve MASLD, and reduce medication burden.\nAtherosclerotic cardiovascular disease (ASCVD) is the leading cause of morbidity and mortality in patients with diabetes. 2\n[p 4]\nFigure 1. SGLT2 inhibitor and GLP-1 RA's role in therapy for cardiorenal benefits *\n1,13\n[Table: Figure 1. SGLT2 inhibitor and GLP-1 RA's role in therapy for cardiorenal benefits *] (PDF page 4)\nASCVD | • Use SGLT2 Inhibitor (empagliflozin) in T2DM and ASCVD or high risk of ASCVD • If a SGLT2 inhibitor cannot be used, use a GLP-1 RA (injectable semaglutide)\nHF | • Use SGLT2 inhibitor (empagliflozin) in addition to other GDMT for HFrEF, HFmEF, or HFpEF in patients with and without T2DM • GLP-1 RA (injectable semaglutide) improved quality of life in HFpEF and obesity; evidence does not show reduction in hospitalizations or mortality\nCKD | • Use SGLT2 inhibitor (empagliflozin) in T2DM and CKD. In those without T2DM, use SGLT2 inhibitor if eGFR ≥ 20 ml/min/1.73 m 2 and uACR > 200 mg/g, or eGFR 20-45 ml/min/1.73 m 2 and uACR < 200 mg/g - Use with maximally tolerated doses of ACE I or ARB • If SGLT2 inhibitor cannot be used in patients with T2DM and CKD, use GLP-1 RA\nTable note: *Before starting a SGLT2 inhibitor, ensure eGFR ≥ 20 mL/min/1.73 m 2 and continue until ESRD/dialysis. ASCVD: established cardiovascular disease (acute coronary syndrome, myocardial infarction [MI], stable or unstable angina, peripheral artery disease, stroke, or any revascularization procedure). High risk indicators of ASCVD: age ≥ 55 years with ≥ 2 risk factors (obesity, hypertension, smoking, dyslipidemia, or albuminuria). HF: includes HFrEF, HFmEF, HFpEF. CKD: eGFR < 60 mL/min/1.73 m 2 or uACR ≥ 30 mg/g.\n*Before starting a SGLT2 inhibitor, ensure eGFR ≥ 20 mL/min/1.73 m 2 and continue until ESRD/dialysis. ASCVD: established cardiovascular disease (acute coronary syndrome, myocardial infarction [MI], stable or unstable angina, peripheral artery disease, stroke, or any revascularization procedure). High risk indicators of ASCVD: age ≥ 55 years with ≥ 2 risk factors (obesity, hypertension, smoking, dyslipidemia, or albuminuria). HF: includes HFrEF, HFmEF, HFpEF. CKD: eGFR < 60 mL/min/1.73 m 2 or uACR ≥ 30 mg/g.\n\nva_pbm_t2dm_pharmacotherapy_2025 (VA, advisory, 2025-04)\nPharmacotherapy for Type 2 Diabetes Mellitus (T2DM) 2025: A VA Clinician's Summary (IB 10-1775) > Pharmacotherapy approach for type 2 diabetes > SGLT2 inhibitors\n[p 3]\nSGLT2 inhibitors and GLP-1 RAs are beneficial across multiple clinical conditions, including treatment of type 2 diabetes mellitus (T2DM), atherosclerotic cardiovascular disease (ASCVD), heart failure (HF), and chronic kidney disease (CKD). The efficacy of these agents extends beyond their glucose lowering effects. 1,2\nSGLT2 inhibitors are first-line agents for patients with ASCVD and T2DM, HF, and/or CKD. 1,2 Benefits are not related to glucose lowering and should be used regardless of HbA1c level. Considerations for selecting SGLT2 inhibitors:\n■ Empagliflozin and canagliflozin lower major adverse cardiovascular events, including myocardial infarction, stroke, and cardiovascular death in patients with ASCVD and T2DM. 3-13\n■ Empagliflozin, dapagliflozin, and sotagliflozin reduce the risk of hospitalization for heart failure or cardiovascular death in patients with heart failure with reduced, mid-range, or preserved ejection fraction (HFrEF, HFmEF, HFpEF). 13-19\n■ Empagliflozin, canagliflozin, and dapagliflozin reduce the risk of worsening renal function (worsening eGFR, end-stage kidney disease, or renal death). 6-13,20-23"
+    ],
+    "va_pbm_t2dm_pharmacotherapy_2025:p5": [
+      "va_pbm_t2dm_pharmacotherapy_2025 (VA, advisory, 2025-04)\nPharmacotherapy for Type 2 Diabetes Mellitus (T2DM) 2025: A VA Clinician's Summary (IB 10-1775) > Pharmacotherapy approach for type 2 diabetes > Use a shared decision-making approach to determine optimal pharmacotherapy\n[p 5]\nConsider cardiorenal benefits when choosing therapy in Veterans with type 2 diabetes 9-31\nIn Veterans with T2DM, use a SGLT2 inhibitor first for patients with ASCVD, HF, or CKD and add metformin if additional glycemic control is needed. Metformin is beneficial for glycemic control and may reduce cardiovascular mortality and progression to ESRD. Consider combination empagliflozin/metformin tablets for patients taking both agents. If a sulfonylurea or DPP-4 inhibitor is being used in a patient with ASCVD, HF, or CKD, consider replacing the sulfonylurea or DPP-4 inhibitor with a SGLT2 inhibitor when HbA1c is in target range. In cases where HbA1c is not controlled, then add a SGLT2 inhibitor to existing therapy.\n[Figure, chart] Figure 2. Cardiac and renal benefits (PDF page 5). Machine-generated visual interpretation; status: machine-interpreted from the page image by a vision model; structure and OCR cross-check passed.\nChart type: grouped bar chart; x: Outcome composite (MACE composite, Heart failure composite, Kidney composite); y: Percent relative risk reduction; units: percent\nSeries SGLT2 inhibitors: MACE composite: -14; Heart failure composite: -31; Kidney composite: -45\nSeries GLP-1 RA: MACE composite: -13; Heart failure composite: -7; Kidney composite: -24\nSeries Sulfonylurea: MACE composite: 10; Heart failure composite: 23; Kidney composite: 4\nSeries DPP-4 inhibitors: MACE composite: -2; Heart failure composite: 0; Kidney composite: 4\nGrouped bar chart with y-axis from -50 to 30. Values are printed as data labels on the bars. A downward blue arrow at right is annotated: \"Negative numbers = reduction in risk\".\nFootnote: Caption references: 10-13,37-41\nMACE composite: major adverse cardiovascular events (nonfatal stroke, nonfatal MI, and cardiovascular death); HF composite: cardiovascular (CV) death and HF hospitalization; Kidney composite: end stage renal disease, eGFR < 10-15 mL/min/1.73 m 2 , or death from renal/CV causes. For ASCVD, use SGLT2 inhibitors empagliflozin or canagliflozin, and GLP-1 RA injectable semaglutide, liraglutide, or dulaglutide. For HF, use SGLT2 inhibitors empagliflozin, dapagliflozin, or sotagliflozin. For CKD, use SGLT2 inhibitors empagliflozin, canagliflozin, or dapagliflozin and GLP-1 RA injectable semaglutide (other GLP-1 RAs reduce albuminuria). (Bolded = formulary agent). DPP4-I = dipeptidyl peptidase 4 inhibitor. Negative numbers indicate a reduction in risk, therefore provide cardiorenal benefits.\nAfter addressing the cardiorenal benefits of medications, further adjustments are made based on whether further hemoglobin A1c lowering is needed. In patients who are overweight or obese, it is beneficial to consider medications that are weight neutral or may promote weight loss.\n[p 6]\nFigure 3.\nMedications are added or adjusted based on Veteran health needs and goals 1,2\nIf further hemoglobin A1c lowering is needed, select based on ability to lower A1c:\n[Figure, diagram] untitled in the image; see the section heading (PDF page 6). Machine-generated visual interpretation; status: machine-interpreted from the page image by a vision model; structure and OCR cross-check passed.\nA stepped, staircase-style diagram with three tiers rising from left to right, each topped by a chevron-shaped icon containing a concentric-circle target symbol. The bottom bar, labeled \"INTERMEDIATE\" (blue), spans the full width; the left step above it lists: \"• SGLT2 inhibitor • DPP4 inhibitor\". The middle bar, labeled \"HIGH\" (teal), sits on top of the intermediate bar under the middle and right steps; the middle step lists: \"• Metformin • Sulfonylurea* • TZD\". The top bar, labeled \"VERY HIGH\" (dark green), is under the right step, which lists: \"• GLP-1 RA† • Insulin*\". The asterisks and dagger are footnote markers whose explanations are not shown in the image.\nIf weight loss is needed with BMI ≥ 27 kg/m 2 ,\nselect based on ability of the medication to promote weight loss:\n[Figure, diagram] untitled in the image; see the section heading (PDF page 6). Machine-generated visual interpretation; status: machine-interpreted from the page image by a vision model; structure and OCR cross-check passed.\nA staircase diagram with four ascending steps, each topped by a target/bullseye icon on an arrow-shaped tab and a labeled band beneath. Step 1 (lowest, gray): bullets 'Insulin*', 'Sulfonylurea*', 'TZD'; band label 'MILD TO MODERATE WEIGHT GAIN'. Step 2 (gray): bullets 'Metformin', 'DPP-4 inhibitor'; band label 'NEUTRAL'. Step 3 (blue): bullet 'SGLT2 inhibitor'; band label 'INTERMEDIATE'. Step 4 (highest, dark teal): bullets 'GLP-1 RA†', 'GIP and GLP-1 RA†'; band label 'VERY HIGH'. The bands are layered so each higher category sits above the previous, suggesting increasing degree of weight benefit from left to right.\nFootnote: * marker on Insulin and Sulfonylurea (footnote text not shown in image)\nFootnote: † marker on GLP-1 RA and GIP and GLP-1 RA (footnote text not shown in image)\n*Use caution in elderly due to risk of hypoglycemia. † See VA PBM Formulary for criteria for use. https://www.va.gov/formularyadvisor/. See Table 1 for more details. HbA1c lowering: very high > 1.5%, high 1-1.5%, intermediate 0.5-1%. Weight loss: very high/high: 6-30 lb loss, intermediate: 3-5 lb loss, neutral: 2 lb or less loss or gain, mild to moderate gain: 3-8 lb.\nUse a SGLT2 inhibitor in patients with T2DM with ASCVD, HF, and/or CKD."
+    ],
+    "va_dod_cpg_diabetes_2023:p59": [
+      "va_dod_cpg_diabetes_2023 (VA, advisory, 2023-05)\nVA/DoD Clinical Practice Guideline for the Management of Type 2 Diabetes Mellitus (Version 6.0) > IX. Recommendations > E. Pharmacotherapy > Discussion\n[p 58]\nSince 2008, the Food and Drug Administration has required that CV outcome trials be conducted for all new agents approved for glycemic management to ensure CV safety. Select agents from two drug classes, the GLP-1 RAs and SGLT-2 inhibitors, have been shown to significantly reduce 3-point major adverse CV outcomes (3-point MACE, i.e., CV death, non-fatal myocardial infarction [MI], and non-fatal stroke) in patients with T2DM and established atherosclerotic cardiovascular disease (ASCVD).\nSeveral SRs evaluated these drug classes. Kristensen et al. (2019) found a 12% reduction in 3-point MACE with GLP-1 RA use (strength of evidence [SOE] high).(121) Of drugs available on the U.S. market today, liraglutide, dulaglutide, and injectable semaglutide were associated with significant CV benefit (see Table C-2).(121) Giugliano et al. (2020) and Sattar et al. (2021) reported similar effects.(122, 123) Bellastella et al. found that these agents reduced fatal and non-fatal stroke, with the most significant benefit seen with dulaglutide and semaglutide.(124) Giugliano et al. (2020) found that improved glycemic control might have contributed to the decrease in non-fatal stroke with GLP-1 RAs, but change in glycemia did not impact MI or mortality.(122) SGLT-2 inhibitor use similarly has resulted in a reduction in 3-point MACE as shown by McGuire et al. (2021) (SOE high); specific drugs available in the U.S. that have CV benefit include canagliflozin and empagliflozin.(125-127) Once again, please refer to the table for individual drug efficacy and adverse effects (Table C-2). Most of the included randomized trials were rated as very high quality, leading to SRs that were deemed good quality, except for Tian et al., which was rated as fair.(127) This guideline reviewed no evidence on the combination use of GLP-1 RAs with SGLT-2 inhibitors.\n[p 59]\nMost of the above trials included a majority of patients with established ASCVD (CV, cerebrovascular, or peripheral vascular disease), New York Heart Association class II or III HF, or CKD stage 3 or higher. Additionally, all the trials except EMPA-REG OUTCOME had some patients with high CV risk, which was variably defined including age >50-60 years, plus albuminuria or proteinuria, hypertension with left ventricular hypertrophy, or ankle/brachial index <0.9. Although the data supporting reduction of 3-point MACE in patients with known ASCVD is robust, data supporting major adverse CV events (MACE) benefit in patients at high risk of ASCVD is less strong. The REWIND trial included the greatest proportion of patients at high CV risk. In addition to the previous criteria, patients age 60 years or older with at least two of the following were included: tobacco use, dyslipidemia, hypertension, or abdominal obesity. Overall support for benefit in patients with high CV risk comes largely from smaller proportions of those in trials including both patients with and without known CVD (see details in Table C-2) and two SRs (Kristensen et al. 2019; Giugliano et al. 2020). The strongest support for use of GLP-1 RA in patients with high risk of ASCVD is based on the REWIND trial, which included more than 9,000 patients, of whom greater than two-thirds had no known ASCVD but instead were at high risk.(128)\nWhether these classes of drugs should be used as first-line therapy for T2DM or as add-on therapy to metformin in patients with ASCVD is unclear. The large randomized CV outcome trials looking at all these agents included 71-82% of patients on metformin as baseline therapy (see Table C-2). Whether future trials will be done to assess this question is unclear. What is clear is that for adults with T2DM and ASCVD, a GLP-1 RA or SGLT-2 inhibitor with proven CV benefits should be a part of the treatment regimen, regardless of HbA1C, to decrease the risk of MACE.\nBoth classes of agents have notable side effects as well as associated adverse events. Use of GLP-1 RAs is associated with significant gastrointestinal side effects, including nausea, vomiting, and diarrhea, but these often are mild and resolve over time; additionally, they can be modulated by appropriate patient selection (i.e., avoiding those with gastroparesis). A risk of cholelithiasis and acute cholecystitis increases slightly with dose and duration of treatment.(129) No increased risk of pancreatitis, pancreatic cancer, or hypoglycemia with GLP-1 RA use was noted.(121, 123) However, injectable semaglutide use is associated with a slightly increased risk of progression of diabetic eye complications because of, it is theorized, rapid improvement in glycemic control and is not a direct effect of the drug.(123) SGLT-2 inhibitor use has been associated with an increased risk of mycotic genital infections, but these are typically mild and easily treated.(125, 126) A slightly increased risk of diabetic ketoacidosis occurs, which can largely be mitigated with appropriate patient selection and education not to take when oral intake is diminished, the patient is feeling unwell, during acute illness, before surgery, or any combination of the foregoing.(125, 126) Silverii et al. (2019) found no increased risk of Fournier's gangrene with SGLT-2 inhibitor use,(109) although this finding does not rule out the possibility of this rare adverse event. Amputation risk does not appear to be increased for this class overall,(126) although a review of canagliflozin randomized trials(127) indicates that this specific agent might, indeed, be associated with increased risk and that perhaps that risk was mitigated in subsequent SGLT-2 inhibitor trials by avoiding these agents in patients with diabetic foot complications. Overall, for both drug classes, it appears that glycemic and CV benefits outweigh the risks, with the latter mitigate"
+    ],
+    "va_dod_cpg_diabetes_2023:p68": [
+      "va_dod_cpg_diabetes_2023 (VA, advisory, 2023-05)\nVA/DoD Clinical Practice Guideline for the Management of Type 2 Diabetes Mellitus (Version 6.0) > IX. Recommendations > E. Pharmacotherapy > Discussion\n[p 67]\nEvidence from meta-regression analyses suggests that select medications reduced the risk of specific ASCVD and renal disease outcomes independently of changes in glucose control. Giugliano et al. (2020) assessed data from 15 RCTs using either SGLT-2 inhibitors, GLP-1 RAs, or DPP4 inhibitors and compared the achieved HbA1c to MACE, including non-fatal stroke, non-fatal MI, and CV death.(122) Although all outcomes were generally reduced by SGLT-2 inhibitor or GLP1-RA, the improvement in MACE, non-fatal MI, and CV death appeared to be independent of the HbA1c reduction. In contrast, the reduction in non-fatal stroke was related to the degree of HbA1c reduction. Chalmouka et al. (2022) performed a similar analysis of clinical trials of glucose lowering agents, including new trials with SLGT-2 inhibitors and GLP-1 RAs, examining 27 trials ranging from the Kumamoto study (1995) and the UKPDS (1998) through more recent studies.(138) The development of a composite renal endpoint (which included a doubling in serum creatinine, a decrease in eGFR by 30% or more, renal death, end-stage renal disease, renal transplantation, or dialysis) was not directly associated with HbA1c. In contrast, the development of macroalbuminuria was positively related to HbA1c, suggesting that improved glucose control decreased this specific renal endpoint. Of note, only the SGLT-2 inhibitors decreased the risk of worsening kidney function, although GLP-1 RAs and SLGT-2 inhibitors decreased the risk of macroalbuminuria. DPP4i's impacted neither outcome.\n[p 68]\nThe evidence for these two analyses is drawn from high-quality studies. However, as with any secondary data analysis, some limitations limit the generalizability of these results. Further, we need an underlying mechanistic understanding of why some outcomes are directly related to lower glycemia. In contrast, improvement in other outcomes appears to be independent of glycemic levels. Nonetheless, these data do raise the possibility that adding an agent with proven CV and renal benefits could still be useful for some patients, even if they have already achieved their target level of glycemic control.\nThere is likely large variation in patient preferences regarding this recommendation. This recommendation is most applicable to patients who attain adequate glycemic control with monotherapy (i.e., metformin) or combination therapy with agents other than an SGLT-2 inhibitor or a GLP-1 RA (e.g., sulfonylurea). Though the addition or substitution of an SGLT-2 inhibitor or a GLP-1 RA could improve CV and renal outcomes and could provide additional benefits (e.g., weight loss, lower BP, decreased hypoglycemia risk, or any combination of the foregoing), this maneuver might pose an extra medication burden on the patient. Further, GLP-1 RAs and SGLT-2 inhibitors both have discrete adverse event profiles. However, high-risk patients might opt for the addition or substitution of these agents into their regimen to decrease the risk of highstakes major CVD or renal outcomes, like CV death or worsening of renal function. Shared decision making regarding starting a new medication is needed to arrive at an appropriate treatment plan.\nThe Work Group systematically reviewed evidence related to this recommendation. (122, 138) Therefore, it is categorized as Reviewed, New-added. The Work Group's confidence in the quality of the evidence was low. The body of evidence had some limitations, namely the small number of meta-regression analyses that support this recommendation. Further, whether stratifying patients at high risk for certain outcomes (e.g., patients who have previously had an ASCVD event) would provide additional insights into the efficacy of GLP-1 RAs and SGLT-2 inhibitors to reduce outcomes is unclear. Thus, the Work Group made the following recommendation: In adults with type 2 diabetes mellitus who have cardiovascular disease or renal disease, we suggest that the addition of a sodium-glucose cotransporter-2 inhibitor or glucagon-like peptide-1 receptor agonist be considered, even if the patient has already achieved their individualized target range for glycemic control.\nMore research is needed into the underlying mechanisms by which GLP-1 RAs and SGLT-2 inhibitors might improve clinical outcomes independently of glucose control."
+    ],
+    "va_pbm_t2dm_clinicians_guide:p12": [
+      "va_pbm_t2dm_clinicians_guide (VA, advisory, 2020-05)\nA VA Clinician's Guide to Diabetes Management in Primary Care (IB 10-1402) > Type 2 Diabetes A VA Clinician’s Guide to Diabetes Management in Primary Care (2020) > Diabetes management > 3 Pharmacotherapy > Metformin is recommended as first-line therapy.\n[p 11]\nHas been in use for decades and is low cost.\nSafe to initiate in patients with moderate renal dysfunction (eGFR > 45 mL/min) and may continue metformin therapy in patients with eGFR 30-45 mL/min. 15 Monitoring is no longer based on serum creatinine levels.\nConsider referring to a clinical pharmacy specialist for drug therapy initiation and titration.\nSlow titration, taking metformin with food, or using an extended-release formulation can reduce or prevent GI upset and diarrhea.\nConsider metformin first for most Veterans with diabetes.\n[Figure, chart] 58% (PDF page 11). Machine-generated visual interpretation; status: machine-interpreted from the page image by a vision model; structure and OCR cross-check passed.\nChart type: donut/progress ring; x: ; y: ; units: %\nSeries : filled (green): 58%\nDonut-style progress ring with a dark green arc covering roughly 58% of the circle and a light gray remainder, with \"58%\" printed in large gray text at the center. A partial blue character is visible at the left edge, cut off by the crop.\nUnreadable or ambiguous (not interpreted): Cut-off blue text at left edge (appears to be '6' or part of a label)\nUnreadable or ambiguous (not interpreted): No label indicating what the 58% refers to is visible\nMetformin is recommended to be used first-line 1 st BUT\nOnly ~58% of patients are prescribed metformin first 16\nAfter metformin, use a patient-centered approach to review patient factors and preferences to determine the next medication to use. 16-23\nConsiderations include the following:\nCardiovascular and renal comorbidities\nRisk for side effects\nHypoglycemia risk\nPatient preferences\nImpact on weight\nCost\nAtherosclerotic cardiovascular disease (ASCVD) is the leading cause of morbidity and mortality in patients with diabetes.\nIf a patient has established ASCVD, heart failure (HF), and/or chronic kidney disease (CKD), select diabetes-lowering medications used as adjuncts to metformin that have proven benefits for these conditions. In addition, if the patient has a higher risk of hypoglycemia or weight gain, select medications taking these factors into account. See A VA Clinician's Quick Reference Guide to Diabetes Management in Primary Care (2020) for more information.\n[p 12]\n[Figure, flowchart] Figure 5. Selection of glucose-lowering medications in those with HbA1c above target (PDF page 12). Machine-generated visual interpretation; status: machine-interpreted from the page image by a vision model; not verified.\nBox n1 (start): Start lifestyle interventions + metformin -> if Does Veteran have ASCVD, HF, or CKD?*: box n2; if Does Veteran have ASCVD, HF, or CKD?*: box n3; if Does Veteran have ASCVD, HF, or CKD?*: box n4\nBox n2 (decision): ASCVD -> if Add second-line agent: box n5\nBox n3 (decision): CKD or HF -> if Add second-line agent: box n6\nBox n4 (decision): None -> if Add second-line agent: box n7\nBox n5 (action): SGLT-2† • empagliflozin • canagliflozin -> if If not effective or tolerated, add or substitute: box n8\nBox n6 (action): SGLT-2† • empagliflozin • canagliflozin • dapagliflozin -> if If not effective or tolerated, add or substitute: box n9\nBox n7 (action): DPP-4 or SGLT-2† or Sulfonylurea or TZD -> if If not effective or tolerated, add or substitute: box n10\nBox n8 (action): GLP-1† • inj. semaglutide • liraglutide • dulaglutide\nBox n9 (action): GLP-1† • inj. semaglutide • liraglutide • dulaglutide\nBox n10 (action): GLP-1†\nBox n11 (note): If HbA1c is > 9%, consider starting basal insulin at any step.\nDecision path: n1 -> [Does Veteran have ASCVD, HF, or CKD?*] n2 -> [Add second-line agent] n5 -> [If not effective or tolerated, add or substitute] n8\nDecision path: n1 -> [Does Veteran have ASCVD, HF, or CKD?*] n3 -> [Add second-line agent] n6 -> [If not effective or tolerated, add or substitute] n9\nDecision path: n1 -> [Does Veteran have ASCVD, HF, or CKD?*] n4 -> [Add second-line agent] n7 -> [If not effective or tolerated, add or substitute] n10\nDecision path: n11\nA bracket on the left spans from the start box to the GLP-1 row, labeled with the note about basal insulin.\nASCVD: indicators are age ≥ 55 years with coronary, carotid, or lower extremity artery stenosis > 50% or left ventricular hypertrophy (LVH).\nCKD: eGFR 30-60 mL/min/1.73m 2 or UACR > 30 mg/g, particularly UACR > 300 mg/g.\nHF: left ventricular ejection fraction < 45%.\nAgents shown to reduce ASCVD risk: SGLT-2 = Sodium-glucose co-transporter 2 inhibitor (empagliflozin, canagliflozin); GLP-1 = Glucagon-like peptide-1 agonist (injectable semaglutide, liraglutide, dulaglutide). GLP-1s have not been shown to lower heart failure risk (neutral outcome). Dapagliflozin has been shown to lower heart failure risk and CKD risk, but neutral for ASCVD.\n† Indicates referral to individual Criteria for Use. Do not combine a DPP-4 inhibitor with a GLP-1 agonist.\nNot shown in the figure are uncommonly-used agents (e.g., alpha-glucosidase inhibitors, meglitinides, pramlintide, inhaled insulin, etc.), but these may be considered in specific situations. Refer to Criteria for Use for pramlintide and inhaled insulin: www.pbm.va.gov\n\nva_pbm_t2dm_clinicians_guide (VA, advisory, 2020-05)\nA VA Clinician's Guide to Diabetes Management in Primary Care (IB 10-1402) > Type 2 Diabetes A VA Clinician’s Guide to Diabetes Management in Primary Care (2020) > Diabetes management > 3 Pharmacotherapy > Metformin is recommended as first-line therapy.\n[p 12]\nAfter metformin, in patients with ASCVD, HF, and/or CKD needing further glucose lowering, consider a SGLT-2. A GLP-1 can be used as an alternative for patients with ASCVD and/or CKD unable to use a SGLT-2.\n[p 13]\nFor all patients starting on medication, continue to "
+    ]
+  },
+  "cost_note": "priced at the requested model's rates; a fallback hop bills at its own rates",
+  "request_id": "f5f017ec-a630-4922-b280-0e7340e8b83f",
+  "request_started_utc": "2026-10-18T03:43:05.812045+00:00",
+  "citation_check": {
+    "t_start": 29.448,
+    "duration_s": 0.015
+  },
+  "prices_per_mtok": {
+    "input": 2.0,
+    "output": 10.0,
+    "cache_read": 0.2,
+    "cache_write": 2.5
+  }
+}

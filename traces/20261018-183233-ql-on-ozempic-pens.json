@@ -1,0 +1,612 @@
+{
+  "question": "QL on Ozempic pens?",
+  "request_id": "6d5ded34-e3dc-43d2-95b9-459ae8c93dda",
+  "status": "answered",
+  "agent_status": "answered",
+  "assumption": "NY Medicaid",
+  "answer": "Assuming NY Medicaid: **Ozempic® pen is preferred** on the NYRx PDL under GLP-1 RAs for Type 2 Diabetes, and the row shows **no F/Q/D (QL) flag** for the pen. **Ozempic® tablets are separate and non-preferred**; no future effective-date marker is listed for either Ozempic row. The class has **CC**: confirm an FDA-approved/compendia-supported and Medicaid-covered indication; **PA is required with concurrent GLP-1 + DPP-IV use**. NYRx policy says preferred drugs/classes can still be subject to F/Q/D edits and system messaging may direct claim submission or prescriber referral, but these documents do **not** specify an Ozempic pen QL. F/Q/D questions may go to the NY Medicaid Clinical Call Center: **877-309-9493**.",
+  "citations": [
+    {
+      "doc_id": "ny_medicaid_pdl",
+      "page": 34,
+      "link": "https://newyork.fhsc.com/downloads/providers/NYRx_PDP_PDL.pdf#page=34",
+      "flag": null,
+      "locator": "ny_medicaid_pdl:p34"
+    },
+    {
+      "doc_id": "ny_medicaid_pharmacy_policy",
+      "page": 14,
+      "link": "https://www.emedny.org/ProviderManuals/Pharmacy/PDFS/Pharmacy_Policy_Guidelines.pdf#page=14",
+      "flag": null,
+      "locator": "ny_medicaid_pharmacy_policy:p14"
+    },
+    {
+      "doc_id": "ny_medicaid_pharmacy_policy",
+      "page": 15,
+      "link": "https://www.emedny.org/ProviderManuals/Pharmacy/PDFS/Pharmacy_Policy_Guidelines.pdf#page=15",
+      "flag": null,
+      "locator": "ny_medicaid_pharmacy_policy:p15"
+    }
+  ],
+  "conflicts_noted": [],
+  "flags": [
+    "completeness_pass"
+  ],
+  "needs_review": false,
+  "words": {
+    "displayed": 112,
+    "rendered": 112
+  },
+  "answered_by": "gpt-5.5-2026-04-23",
+  "provider": "openai",
+  "model": "gpt-5.5-2026-04-23",
+  "fallback_used": false,
+  "timing_s": {
+    "total": 14.012,
+    "search": 0.329,
+    "read_page": 0,
+    "list_documents": 0,
+    "lookups": 0.003,
+    "model_calls": [
+      2.503,
+      4.9,
+      6.275
+    ]
+  },
+  "lookups": 2,
+  "tokens": {
+    "input": 9792,
+    "output": 967,
+    "cache_read": 4480,
+    "cache_write": 0
+  },
+  "cost_usd": 0.08021,
+  "completeness": {
+    "ran": true,
+    "changed": true,
+    "added_words": 30,
+    "outcome": "replaced",
+    "duration_s": 6.275
+  },
+  "pages_seen": [
+    "ny_medicaid_pdl:p1",
+    "ny_medicaid_pdl:p17",
+    "ny_medicaid_pdl:p22",
+    "ny_medicaid_pdl:p23",
+    "ny_medicaid_pdl:p34",
+    "ny_medicaid_pdl:p36",
+    "ny_medicaid_pdl:p37",
+    "ny_medicaid_pdl:p69",
+    "ny_medicaid_pdl:p75",
+    "ny_medicaid_pharmacy_policy:p14",
+    "ny_medicaid_pharmacy_policy:p15"
+  ],
+  "trace_id": null,
+  "started_at": "2026-10-18T22:32:33+00:00",
+  "config": {
+    "primary": "gpt-5.5",
+    "fallback": "claude-sonnet-5-5",
+    "effort": "medium",
+    "search": {
+      "mode": "hybrid",
+      "rrf_k": 60,
+      "fusion_depth": 100,
+      "return_parents": true,
+      "rerank": null
+    },
+    "max_tool_calls": 6,
+    "deadline_s": 25,
+    "search_k": 8,
+    "min_lookups": 2,
+    "completeness_pass": true,
+    "completeness_min_remaining_s": 8
+  },
+  "structured_lookups": true,
+  "context": {},
+  "model_answer": "Assuming NY Medicaid: **Ozempic® pen is preferred** on the NYRx PDL under GLP-1 RAs for Type 2 Diabetes, and the row shows **no F/Q/D (QL) flag** for the pen. **Ozempic® tablets are separate and non-preferred**; no future effective-date marker is listed for either Ozempic row. The class has **CC**: confirm an FDA-approved/compendia-supported and Medicaid-covered indication; **PA is required with concurrent GLP-1 + DPP-IV use**. NYRx policy says preferred drugs/classes can still be subject to F/Q/D edits and system messaging may direct claim submission or prescriber referral, but these documents do **not** specify an Ozempic pen QL. F/Q/D questions may go to the NY Medicaid Clinical Call Center: **877-309-9493**.",
+  "model_citations": [
+    {
+      "doc_id": "ny_medicaid_pdl",
+      "page": 34,
+      "link": "https://newyork.fhsc.com/downloads/providers/NYRx_PDP_PDL.pdf#page=34",
+      "flag": null,
+      "locator": "ny_medicaid_pdl:p34"
+    },
+    {
+      "doc_id": "ny_medicaid_pharmacy_policy",
+      "page": 14,
+      "link": "https://www.emedny.org/ProviderManuals/Pharmacy/PDFS/Pharmacy_Policy_Guidelines.pdf#page=14",
+      "flag": null,
+      "locator": "ny_medicaid_pharmacy_policy:p14"
+    },
+    {
+      "doc_id": "ny_medicaid_pharmacy_policy",
+      "page": 15,
+      "link": "https://www.emedny.org/ProviderManuals/Pharmacy/PDFS/Pharmacy_Policy_Guidelines.pdf#page=15",
+      "flag": null,
+      "locator": "ny_medicaid_pharmacy_policy:p15"
+    }
+  ],
+  "first_submit": {
+    "status": "answered",
+    "assumption": "NY Medicaid",
+    "answer": "Assuming NY Medicaid: **Ozempic® pen is preferred** on the NYRx PDL under GLP-1 RAs for Type 2 Diabetes, and the row shows **no F/Q/D (QL) flag** for the pen. The PDL does list class **CC**: confirm an FDA-approved/compendia-supported and Medicaid-covered indication, and **PA is required if the patient is using a GLP-1 with a DPP-IV concurrently**. NYRx policy says preferred drugs/classes *can* still be subject to F/Q/D edits, but the documents here do **not** specify an Ozempic pen quantity limit.",
+    "citations": [
+      {
+        "doc_id": "ny_medicaid_pdl",
+        "page": 34,
+        "row": null
+      },
+      {
+        "doc_id": "ny_medicaid_pharmacy_policy",
+        "page": 14,
+        "row": null
+      }
+    ],
+    "conflicts_noted": []
+  },
+  "model_calls": [
+    {
+      "t_start": 0.0,
+      "duration_s": 2.503,
+      "requested_model": "gpt-5.5",
+      "served_model": "gpt-5.5-2026-04-23",
+      "provider": "openai",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 298,
+        "output": 143,
+        "cache_read": 1536,
+        "cache_write": 0
+      },
+      "cost_usd": 0.006548,
+      "response_id": "resp_00ce79be988cf2bf016ad548f41c0887d29e5d3458ccf24037",
+      "input_messages": [
+        {
+          "role": "user",
+          "text": "Today's date: 2026-10-18\n\nQuestion: QL on Ozempic pens?"
+        }
+      ],
+      "output": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "call_NTcm6YIP1KvCQhz2byhGLhFL",
+            "name": "lookup_ny_medicaid_drug",
+            "arguments": {
+              "drug": "Ozempic"
+            }
+          },
+          {
+            "id": "call_qwRCQ7SVfPqDZ8C9IePtfF9h",
+            "name": "search_documents",
+            "arguments": {
+              "program": "NY Medicaid",
+              "query": "Ozempic quantity limit QL F/Q/D semaglutide pens",
+              "k": 5
+            }
+          }
+        ]
+      }
+    },
+    {
+      "t_start": 2.835,
+      "duration_s": 4.9,
+      "requested_model": "gpt-5.5",
+      "served_model": "gpt-5.5-2026-04-23",
+      "provider": "openai",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 4539,
+        "output": 341,
+        "cache_read": 1536,
+        "cache_write": 0
+      },
+      "cost_usd": 0.033693,
+      "response_id": "resp_00ce79be988cf2bf016ad548f6ebec87d2974dba5e99497247",
+      "input_messages": [
+        {
+          "role": "tool",
+          "tool_results": [
+            {
+              "call_id": "call_NTcm6YIP1KvCQhz2byhGLhFL",
+              "is_error": false,
+              "content": "{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"Ozempic\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"multiple_matches\", \"classes\": [{\"drug_class\": \"Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes\", \"section\": \"VI. Endocrine and Metabolic Agents\", \"class_flags\": {\"CC\": \"Clinical Criteria: see the class's Coverage Parameters\"}, \"coverage_parameters\": \"CLINICAL CRITERIA (CC)\\nConfirm diagnosis of FDA-approved or compendia-supported\\nindication and Medicaid covered indication\\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently\", \"coverage_pages\": [34], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p34#row-7\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Ozempic® pen\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"name plus strength or dosage form\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-12\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Ozempic® tablets\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"name plus strength or dosage form\"}]}], \"note\": \"Several rows match. List the relevant ones, or state which one you assumed.\"}"
+            },
+            {
+              "call_id": "call_qwRCQ7SVfPqDZ8C9IePtfF9h",
+              "is_error": false,
+              "content": "[{\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34, \"program\": \"NY Medicaid\", \"authority\": \"binding\", \"date\": \"2026-09-14\", \"text\": \"NYRx Preferred Drug Program (PDP) Preferred Drug List > VI. Endocrine and Metabolic Agents > Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes (CC)\\n[p 34]\\nPreferred drugs: exenatide; Ozempic® pen; Trulicity®; Victoza® (BLTG)\\nNon-preferred drugs: liraglutide (gen Victoza® ); Mounjaro®; Ozempic® tablets; Rybelsus®; Soliqua®; Xultophy®\\nCoverage parameters: CLINICAL CRITERIA (CC)\\nConfirm diagnosis of FDA-approved or compendia-supported\\nindication and Medicaid covered indication\\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently\", \"pages\": [34], \"section\": \"VI. Endocrine and Metabolic Agents > Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes (CC)\"}, {\"doc_id\": \"ny_medicaid_pharmacy_policy\", \"page\": 14, \"program\": \"NY Medicaid\", \"authority\": \"binding\", \"date\": \"2026-09\", \"text\": \"NYRx Pharmacy Manual Policy Guidelines (Version 2026-3) > 1.0 General Pharmacy Policy > Frequency, Quantity and Duration (F/Q/D) Limits\\n[p 14]\\nPrescription, non-prescription drugs, and medical/surgical supplies may have fixed limits in the amount and/or frequency that can be dispensed. NY Medicaid considers Frequency, Quantity, and Duration (F/Q/D) recommendations made by the Drug Utilization Review (DUR) Board. Some of the drugs/drug classes affected by F/Q/D editing are also included in the Preferred Drug Program (PDP). Therefore, drugs/drug classes that have a preferred status can also be subject to F/Q/D editing.\\n[p 15]\\nPolicy Guidelines\\nNYRx\\nSystem messaging has been developed to help guide the pharmacists to appropriately submit the claim or to refer to the prescriber.\\nFor certain medical/surgical supplies, if the limit on an item is exceeded, prior approval must be requested with accompanying documentation as to why the limit needs to be exceeded. Quantity and frequency limits are available in the OTC and Supply Fee Schedule section of this manual. Questions on medical/surgical supplies may be referred to the Durable Medical Equipment unit at 800-342-3005. The following links have been provided as helpful resources for information on the PDP, F/Q/D and Step Therapy Programs: https://newyork.fhsc.com/ and http://www.health.ny.gov/health_care/medicaid/program/dur/index.htm. Questions on prescription Frequency, Quantity and Duration (F/Q/D) Limits may be referred to the NY Medicaid Clinical Call Center at: (877)309-9493.\", \"pages\": [14, 15], \"section\": \"1.0 General Pharmacy Policy > Frequency, Quantity and Duration (F/Q/D) Limits\"}, {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34, \"program\": \"NY Medicaid\", \"authority\": \"binding\", \"date\": \"2026-09-14\", \"text\": \"NYRx Preferred Drug Program (PDP) Preferred Drug List > VI. Endocrine and Metabolic Agents > Glucagon Agents\\n[p 34]\\nPreferred drugs: Baqsimi®; glucagon HCl emergency kit (Preferred as of 10/22/2026); glucagon vial; Gvoke® pen, syringe, vial (Preferred as of 10/22/2026); Zegalogue® pen, syringe\", \"pages\": [34], \"section\": \"VI. Endocrine and Metabolic Agents > Glucagon Agents\"}, {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 75, \"program\": \"NY Medicaid\", \"authority\": \"binding\", \"date\": \"2026-09-14\", \"text\": \"NYRx Preferred Drug Program (PDP) Preferred Drug List > NYS Medicaid NYRx Drug Utilization Review (DUR) Program > Step Therapy (ST) Parameters\\n[p 75]\\n[Table] (PDF page 75)\\nColumns: Drug / Class Name | Step Therapy (ST) Parameters | Frequency / Quantity / Duration (F/Q/D) Parameters | Additional / Alternate Parameter(s)\\nTopical Compounded Prescriptions |  |  | • Confirm diagnosis of FDA- approved or compendia- supported indication and Medicaid covered indication • For non-opioid pain management alternatives please visit: https://health.ny.gov/health_car e/medicaid/program/opioid_ma nagement/docs/non_opioid_alte rnatives_to_pain_management. pdf\\nsemaglutide (Wegovy ® ) |  | LIFETIME QUANTITY LIMIT: • Two treatment attem"
+            }
+          ]
+        }
+      ],
+      "output": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "call_7Xk0OcPY2O1wrlEG3B3JVIEG",
+            "name": "submit_answer",
+            "arguments": {
+              "status": "answered",
+              "assumption": "NY Medicaid",
+              "answer": "Assuming NY Medicaid: **Ozempic® pen is preferred** on the NYRx PDL under GLP-1 RAs for Type 2 Diabetes, and the row shows **no F/Q/D (QL) flag** for the pen. The PDL does list class **CC**: confirm an FDA-approved/compendia-supported and Medicaid-covered indication, and **PA is required if the patient is using a GLP-1 with a DPP-IV concurrently**. NYRx policy says preferred drugs/classes *can* still be subject to F/Q/D edits, but the documents here do **not** specify an Ozempic pen quantity limit.",
+              "citations": [
+                {
+                  "doc_id": "ny_medicaid_pdl",
+                  "page": 34,
+                  "row": null
+                },
+                {
+                  "doc_id": "ny_medicaid_pharmacy_policy",
+                  "page": 14,
+                  "row": null
+                }
+              ],
+              "conflicts_noted": []
+            }
+          }
+        ]
+      }
+    },
+    {
+      "t_start": 7.735,
+      "duration_s": 6.275,
+      "requested_model": "gpt-5.5",
+      "served_model": "gpt-5.5-2026-04-23",
+      "provider": "openai",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 4955,
+        "output": 483,
+        "cache_read": 1408,
+        "cache_write": 0
+      },
+      "cost_usd": 0.039969,
+      "response_id": "resp_00ce79be988cf2bf016ad548fbd0fc87d28f46d59a566b4efd",
+      "input_messages": [
+        {
+          "role": "tool",
+          "tool_results": [
+            {
+              "call_id": "call_7Xk0OcPY2O1wrlEG3B3JVIEG",
+              "is_error": false,
+              "content": "Answer received."
+            }
+          ]
+        },
+        {
+          "role": "user",
+          "text": "Completeness check. Compare your answer with the evidence the tools returned in this conversation. List, for yourself, any condition, quantity or day limit, exception, effective date, step of a process or alternative channel, older-version difference, or program distinction that the evidence states for this question and your answer omits. Then call submit_answer again: the same answer with those points added in one or two sentences each, each cited to the page or row that states it; if nothing is missing, resubmit the same answer unchanged. Do not add anything the evidence does not state; do not remove correct content; do not run more lookups."
+        }
+      ],
+      "output": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "call_XWYIi7ihdtfThfIQ45UTs4Px",
+            "name": "submit_answer",
+            "arguments": {
+              "status": "answered",
+              "assumption": "NY Medicaid",
+              "answer": "Assuming NY Medicaid: **Ozempic® pen is preferred** on the NYRx PDL under GLP-1 RAs for Type 2 Diabetes, and the row shows **no F/Q/D (QL) flag** for the pen. **Ozempic® tablets are separate and non-preferred**; no future effective-date marker is listed for either Ozempic row. The class has **CC**: confirm an FDA-approved/compendia-supported and Medicaid-covered indication; **PA is required with concurrent GLP-1 + DPP-IV use**. NYRx policy says preferred drugs/classes can still be subject to F/Q/D edits and system messaging may direct claim submission or prescriber referral, but these documents do **not** specify an Ozempic pen QL. F/Q/D questions may go to the NY Medicaid Clinical Call Center: **877-309-9493**.",
+              "citations": [
+                {
+                  "doc_id": "ny_medicaid_pdl",
+                  "page": 34,
+                  "row": null
+                },
+                {
+                  "doc_id": "ny_medicaid_pharmacy_policy",
+                  "page": 14,
+                  "row": null
+                },
+                {
+                  "doc_id": "ny_medicaid_pharmacy_policy",
+                  "page": 15,
+                  "row": null
+                }
+              ],
+              "conflicts_noted": []
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "lookup_ny_medicaid_drug",
+      "input": {
+        "drug": "Ozempic"
+      },
+      "duration_s": 0.003,
+      "is_error": false,
+      "pages": [
+        "ny_medicaid_pdl:p1",
+        "ny_medicaid_pdl:p34"
+      ],
+      "result": "{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"Ozempic\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"multiple_matches\", \"classes\": [{\"drug_class\": \"Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes\", \"section\": \"VI. Endocrine and Metabolic Agents\", \"class_flags\": {\"CC\": \"Clinical Criteria: see the class's Coverage Parameters\"}, \"coverage_parameters\": \"CLINICAL CRITERIA (CC)\\nConfirm diagnosis of FDA-approved or compendia-supported\\nindication and Medicaid covered indication\\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently\", \"coverage_pages\": [34], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p34#row-7\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Ozempic® pen\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"name plus strength or dosage form\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-12\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Ozempic® tablets\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"name plus strength or dosage form\"}]}], \"note\": \"Several rows match. List the relevant ones, or state which one you assumed.\"}",
+      "lookup": {
+        "result": "multiple_matches",
+        "rows": 2
+      },
+      "t_start": 2.504
+    },
+    {
+      "name": "search_documents",
+      "input": {
+        "program": "NY Medicaid",
+        "query": "Ozempic quantity limit QL F/Q/D semaglutide pens",
+        "k": 5
+      },
+      "duration_s": 0.329,
+      "is_error": false,
+      "pages": [
+        "ny_medicaid_pdl:p17",
+        "ny_medicaid_pdl:p22",
+        "ny_medicaid_pdl:p23",
+        "ny_medicaid_pdl:p34",
+        "ny_medicaid_pdl:p36",
+        "ny_medicaid_pdl:p37",
+        "ny_medicaid_pdl:p69",
+        "ny_medicaid_pdl:p75",
+        "ny_medicaid_pharmacy_policy:p14",
+        "ny_medicaid_pharmacy_policy:p15"
+      ],
+      "result": "[{\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34, \"program\": \"NY Medicaid\", \"authority\": \"binding\", \"date\": \"2026-09-14\", \"text\": \"NYRx Preferred Drug Program (PDP) Preferred Drug List > VI. Endocrine and Metabolic Agents > Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes (CC)\\n[p 34]\\nPreferred drugs: exenatide; Ozempic® pen; Trulicity®; Victoza® (BLTG)\\nNon-preferred drugs: liraglutide (gen Victoza® ); Mounjaro®; Ozempic® tablets; Rybelsus®; Soliqua®; Xultophy®\\nCoverage parameters: CLINICAL CRITERIA (CC)\\nConfirm diagnosis of FDA-approved or compendia-supported\\nindication and Medicaid covered indication\\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently\", \"pages\": [34], \"section\": \"VI. Endocrine and Metabolic Agents > Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes (CC)\"}, {\"doc_id\": \"ny_medicaid_pharmacy_policy\", \"page\": 14, \"program\": \"NY Medicaid\", \"authority\": \"binding\", \"date\": \"2026-09\", \"text\": \"NYRx Pharmacy Manual Policy Guidelines (Version 2026-3) > 1.0 General Pharmacy Policy > Frequency, Quantity and Duration (F/Q/D) Limits\\n[p 14]\\nPrescription, non-prescription drugs, and medical/surgical supplies may have fixed limits in the amount and/or frequency that can be dispensed. NY Medicaid considers Frequency, Quantity, and Duration (F/Q/D) recommendations made by the Drug Utilization Review (DUR) Board. Some of the drugs/drug classes affected by F/Q/D editing are also included in the Preferred Drug Program (PDP). Therefore, drugs/drug classes that have a preferred status can also be subject to F/Q/D editing.\\n[p 15]\\nPolicy Guidelines\\nNYRx\\nSystem messaging has been developed to help guide the pharmacists to appropriately submit the claim or to refer to the prescriber.\\nFor certain medical/surgical supplies, if the limit on an item is exceeded, prior approval must be requested with accompanying documentation as to why the limit needs to be exceeded. Quantity and frequency limits are available in the OTC and Supply Fee Schedule section of this manual. Questions on medical/surgical supplies may be referred to the Durable Medical Equipment unit at 800-342-3005. The following links have been provided as helpful resources for information on the PDP, F/Q/D and Step Therapy Programs: https://newyork.fhsc.com/ and http://www.health.ny.gov/health_care/medicaid/program/dur/index.htm. Questions on prescription Frequency, Quantity and Duration (F/Q/D) Limits may be referred to the NY Medicaid Clinical Call Center at: (877)309-9493.\", \"pages\": [14, 15], \"section\": \"1.0 General Pharmacy Policy > Frequency, Quantity and Duration (F/Q/D) Limits\"}, {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34, \"program\": \"NY Medicaid\", \"authority\": \"binding\", \"date\": \"2026-09-14\", \"text\": \"NYRx Preferred Drug Program (PDP) Preferred Drug List > VI. Endocrine and Metabolic Agents > Glucagon Agents\\n[p 34]\\nPreferred drugs: Baqsimi®; glucagon HCl emergency kit (Preferred as of 10/22/2026); glucagon vial; Gvoke® pen, syringe, vial (Preferred as of 10/22/2026); Zegalogue® pen, syringe\", \"pages\": [34], \"section\": \"VI. Endocrine and Metabolic Agents > Glucagon Agents\"}, {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 75, \"program\": \"NY Medicaid\", \"authority\": \"binding\", \"date\": \"2026-09-14\", \"text\": \"NYRx Preferred Drug Program (PDP) Preferred Drug List > NYS Medicaid NYRx Drug Utilization Review (DUR) Program > Step Therapy (ST) Parameters\\n[p 75]\\n[Table] (PDF page 75)\\nColumns: Drug / Class Name | Step Therapy (ST) Parameters | Frequency / Quantity / Duration (F/Q/D) Parameters | Additional / Alternate Parameter(s)\\nTopical Compounded Prescriptions |  |  | • Confirm diagnosis of FDA- approved or compendia- supported indication and Medicaid covered indication • For non-opioid pain management alternatives please visit: https://health.ny.gov/health_car e/medicaid/program/opioid_ma nagement/docs/non_opioid_alte rnatives_to_pain_management. pdf\\nsemaglutide (Wegovy ® ) |  | LIFETIME QUANTITY LIMIT: • Two treatment attem",
+      "search": {
+        "original_query": "QL on Ozempic pens?",
+        "agent_query": "Ozempic quantity limit QL F/Q/D semaglutide pens",
+        "executed": [
+          {
+            "source": "original",
+            "query": "QL on Ozempic pens?",
+            "program": "NY Medicaid",
+            "k": 5,
+            "seconds": 0.328,
+            "cached": false,
+            "results": 5
+          },
+          {
+            "source": "agent",
+            "query": "Ozempic quantity limit QL F/Q/D semaglutide pens",
+            "program": "NY Medicaid",
+            "k": 5,
+            "seconds": 0.327,
+            "cached": false,
+            "results": 5
+          }
+        ],
+        "duplicates_merged": 0,
+        "returned": 10,
+        "from_both": 0,
+        "from_original_only": 5,
+        "from_agent_only": 5,
+        "provenance": [
+          {
+            "unit": "ny_medicaid_pdl:s62",
+            "found_by": {
+              "original": 1
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s16",
+            "found_by": {
+              "agent": 1
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s61",
+            "found_by": {
+              "original": 2
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s131",
+            "found_by": {
+              "agent": 2
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s67",
+            "found_by": {
+              "original": 3
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s41",
+            "found_by": {
+              "agent": 3
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s66",
+            "found_by": {
+              "original": 4
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s33",
+            "found_by": {
+              "agent": 4
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s65",
+            "found_by": {
+              "original": 5
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s125",
+            "found_by": {
+              "agent": 5
+            }
+          }
+        ],
+        "hits": [
+          {
+            "unit": "ny_medicaid_pdl:s62",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              34
+            ],
+            "ranks": {
+              "original": 1
+            },
+            "scores": {
+              "original": 0.0325
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s16",
+            "doc_id": "ny_medicaid_pharmacy_policy",
+            "pages": [
+              14,
+              15
+            ],
+            "ranks": {
+              "agent": 1
+            },
+            "scores": {
+              "agent": 0.0315
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s61",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              34
+            ],
+            "ranks": {
+              "original": 2
+            },
+            "scores": {
+              "original": 0.0315
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s131",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              75
+            ],
+            "ranks": {
+              "agent": 2
+            },
+            "scores": {
+              "agent": 0.0313
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s67",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              37
+            ],
+            "ranks": {
+              "original": 3
+            },
+            "scores": {
+              "original": 0.0315
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s41",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              22,
+              23
+            ],
+            "ranks": {
+              "agent": 3
+            },
+            "scores": {
+              "agent": 0.0289
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s66",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              36
+            ],
+            "ranks": {
+              "original": 4
+            },
+            "scores": {
+              "original": 0.0313
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s33",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              17
+            ],
+            "ranks": {
+              "agent": 4
+            },
+            "scores": {
+              "agent": 0.0267
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s65",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              36
+            ],
+            "ranks": {
+              "original": 5
+            },
+            "scores": {
+              "original": 0.0308
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s125",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              69
+            ],
+            "ranks": {
+              "agent": 5
+            },
+            "scores": {
+              "agent": 0.0265
+            }
+          }
+        ]
+      },
+      "t_start": 2.506
+    }
+  ],
+  "cited_evidence": {
+    "ny_medicaid_pdl:p34": "{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"Ozempic\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"multiple_matches\", \"classes\": [{\"drug_class\": \"Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes\", \"section\": \"VI. Endocrine and Metabolic Agents\", \"class_flags\": {\"CC\": \"Clinical Criteria: see the class's Coverage Parameters\"}, \"coverage_parameters\": \"CLINICAL CRITERIA (CC)\\nConfirm diagnosis of FDA-approved or compendia-supported\\nindication and Medicaid covered indication\\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently\", \"coverage_pages\": [34], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p34#row-7\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Ozempic® pen\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"name plus strength or dosage form\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-12\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Ozempic® tablets\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"name plus strength or dosage form\"}]}], \"note\": \"Several rows match. List the relevant ones, or state which one you assumed.\"}\n\nny_medicaid_pdl (NY Medicaid, binding, 2026-09-14)\nNYRx Preferred Drug Program (PDP) Preferred Drug List > VI. Endocrine and Metabolic Agents > Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes (CC)\n[p 34]\nPreferred drugs: exenatide; Ozempic® pen; Trulicity®; Victoza® (BLTG)\nNon-preferred drugs: liraglutide (gen Victoza® ); Mounjaro®; Ozempic® tablets; Rybelsus®; Soliqua®; Xultophy®\nCoverage parameters: CLINICAL CRITERIA (CC)\nConfirm diagnosis of FDA-approved or compendia-supported\nindication and Medicaid covered indication\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently\n\nny_medicaid_pdl (NY Medicaid, binding, 2026-09-14)\nNYRx Preferred Drug Program (PDP) Preferred Drug List > VI. Endocrine and Metabolic Agents > Glucagon Agents\n[p 34]\nPreferred drugs: Baqsimi®; glucagon HCl emergency kit (Preferred as of 10/22/2026); glucagon vial; Gvoke® pen, syringe, vial (Preferred as of 10/22/2026); Zegalogue® pen, syringe",
+    "ny_medicaid_pharmacy_policy:p14": "ny_medicaid_pharmacy_policy (NY Medicaid, binding, 2026-09)\nNYRx Pharmacy Manual Policy Guidelines (Version 2026-3) > 1.0 General Pharmacy Policy > Frequency, Quantity and Duration (F/Q/D) Limits\n[p 14]\nPrescription, non-prescription drugs, and medical/surgical supplies may have fixed limits in the amount and/or frequency that can be dispensed. NY Medicaid considers Frequency, Quantity, and Duration (F/Q/D) recommendations made by the Drug Utilization Review (DUR) Board. Some of the drugs/drug classes affected by F/Q/D editing are also included in the Preferred Drug Program (PDP). Therefore, drugs/drug classes that have a preferred status can also be subject to F/Q/D editing.\n[p 15]\nPolicy Guidelines\nNYRx\nSystem messaging has been developed to help guide the pharmacists to appropriately submit the claim or to refer to the prescriber.\nFor certain medical/surgical supplies, if the limit on an item is exceeded, prior approval must be requested with accompanying documentation as to why the limit needs to be exceeded. Quantity and frequency limits are available in the OTC and Supply Fee Schedule section of this manual. Questions on medical/surgical supplies may be referred to the Durable Medical Equipment unit at 800-342-3005. The following links have been provided as helpful resources for information on the PDP, F/Q/D and Step Therapy Programs: https://newyork.fhsc.com/ and http://www.health.ny.gov/health_care/medicaid/program/dur/index.htm. Questions on prescription Frequency, Quantity and Duration (F/Q/D) Limits may be referred to the NY Medicaid Clinical Call Center at: (877)309-9493.",
+    "ny_medicaid_pharmacy_policy:p15": "ny_medicaid_pharmacy_policy (NY Medicaid, binding, 2026-09)\nNYRx Pharmacy Manual Policy Guidelines (Version 2026-3) > 1.0 General Pharmacy Policy > Frequency, Quantity and Duration (F/Q/D) Limits\n[p 14]\nPrescription, non-prescription drugs, and medical/surgical supplies may have fixed limits in the amount and/or frequency that can be dispensed. NY Medicaid considers Frequency, Quantity, and Duration (F/Q/D) recommendations made by the Drug Utilization Review (DUR) Board. Some of the drugs/drug classes affected by F/Q/D editing are also included in the Preferred Drug Program (PDP). Therefore, drugs/drug classes that have a preferred status can also be subject to F/Q/D editing.\n[p 15]\nPolicy Guidelines\nNYRx\nSystem messaging has been developed to help guide the pharmacists to appropriately submit the claim or to refer to the prescriber.\nFor certain medical/surgical supplies, if the limit on an item is exceeded, prior approval must be requested with accompanying documentation as to why the limit needs to be exceeded. Quantity and frequency limits are available in the OTC and Supply Fee Schedule section of this manual. Questions on medical/surgical supplies may be referred to the Durable Medical Equipment unit at 800-342-3005. The following links have been provided as helpful resources for information on the PDP, F/Q/D and Step Therapy Programs: https://newyork.fhsc.com/ and http://www.health.ny.gov/health_care/medicaid/program/dur/index.htm. Questions on prescription Frequency, Quantity and Duration (F/Q/D) Limits may be referred to the NY Medicaid Clinical Call Center at: (877)309-9493."
+  },
+  "cited_evidence_parts": {
+    "ny_medicaid_pdl:p34": [
+      "{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"Ozempic\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"multiple_matches\", \"classes\": [{\"drug_class\": \"Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes\", \"section\": \"VI. Endocrine and Metabolic Agents\", \"class_flags\": {\"CC\": \"Clinical Criteria: see the class's Coverage Parameters\"}, \"coverage_parameters\": \"CLINICAL CRITERIA (CC)\\nConfirm diagnosis of FDA-approved or compendia-supported\\nindication and Medicaid covered indication\\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently\", \"coverage_pages\": [34], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p34#row-7\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Ozempic® pen\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"name plus strength or dosage form\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-12\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Ozempic® tablets\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"name plus strength or dosage form\"}]}], \"note\": \"Several rows match. List the relevant ones, or state which one you assumed.\"}",
+      "ny_medicaid_pdl (NY Medicaid, binding, 2026-09-14)\nNYRx Preferred Drug Program (PDP) Preferred Drug List > VI. Endocrine and Metabolic Agents > Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes (CC)\n[p 34]\nPreferred drugs: exenatide; Ozempic® pen; Trulicity®; Victoza® (BLTG)\nNon-preferred drugs: liraglutide (gen Victoza® ); Mounjaro®; Ozempic® tablets; Rybelsus®; Soliqua®; Xultophy®\nCoverage parameters: CLINICAL CRITERIA (CC)\nConfirm diagnosis of FDA-approved or compendia-supported\nindication and Medicaid covered indication\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently\n\nny_medicaid_pdl (NY Medicaid, binding, 2026-09-14)\nNYRx Preferred Drug Program (PDP) Preferred Drug List > VI. Endocrine and Metabolic Agents > Glucagon Agents\n[p 34]\nPreferred drugs: Baqsimi®; glucagon HCl emergency kit (Preferred as of 10/22/2026); glucagon vial; Gvoke® pen, syringe, vial (Preferred as of 10/22/2026); Zegalogue® pen, syringe"
+    ],
+    "ny_medicaid_pharmacy_policy:p14": [
+      "ny_medicaid_pharmacy_policy (NY Medicaid, binding, 2026-09)\nNYRx Pharmacy Manual Policy Guidelines (Version 2026-3) > 1.0 General Pharmacy Policy > Frequency, Quantity and Duration (F/Q/D) Limits\n[p 14]\nPrescription, non-prescription drugs, and medical/surgical supplies may have fixed limits in the amount and/or frequency that can be dispensed. NY Medicaid considers Frequency, Quantity, and Duration (F/Q/D) recommendations made by the Drug Utilization Review (DUR) Board. Some of the drugs/drug classes affected by F/Q/D editing are also included in the Preferred Drug Program (PDP). Therefore, drugs/drug classes that have a preferred status can also be subject to F/Q/D editing.\n[p 15]\nPolicy Guidelines\nNYRx\nSystem messaging has been developed to help guide the pharmacists to appropriately submit the claim or to refer to the prescriber.\nFor certain medical/surgical supplies, if the limit on an item is exceeded, prior approval must be requested with accompanying documentation as to why the limit needs to be exceeded. Quantity and frequency limits are available in the OTC and Supply Fee Schedule section of this manual. Questions on medical/surgical supplies may be referred to the Durable Medical Equipment unit at 800-342-3005. The following links have been provided as helpful resources for information on the PDP, F/Q/D and Step Therapy Programs: https://newyork.fhsc.com/ and http://www.health.ny.gov/health_care/medicaid/program/dur/index.htm. Questions on prescription Frequency, Quantity and Duration (F/Q/D) Limits may be referred to the NY Medicaid Clinical Call Center at: (877)309-9493."
+    ],
+    "ny_medicaid_pharmacy_policy:p15": [
+      "ny_medicaid_pharmacy_policy (NY Medicaid, binding, 2026-09)\nNYRx Pharmacy Manual Policy Guidelines (Version 2026-3) > 1.0 General Pharmacy Policy > Frequency, Quantity and Duration (F/Q/D) Limits\n[p 14]\nPrescription, non-prescription drugs, and medical/surgical supplies may have fixed limits in the amount and/or frequency that can be dispensed. NY Medicaid considers Frequency, Quantity, and Duration (F/Q/D) recommendations made by the Drug Utilization Review (DUR) Board. Some of the drugs/drug classes affected by F/Q/D editing are also included in the Preferred Drug Program (PDP). Therefore, drugs/drug classes that have a preferred status can also be subject to F/Q/D editing.\n[p 15]\nPolicy Guidelines\nNYRx\nSystem messaging has been developed to help guide the pharmacists to appropriately submit the claim or to refer to the prescriber.\nFor certain medical/surgical supplies, if the limit on an item is exceeded, prior approval must be requested with accompanying documentation as to why the limit needs to be exceeded. Quantity and frequency limits are available in the OTC and Supply Fee Schedule section of this manual. Questions on medical/surgical supplies may be referred to the Durable Medical Equipment unit at 800-342-3005. The following links have been provided as helpful resources for information on the PDP, F/Q/D and Step Therapy Programs: https://newyork.fhsc.com/ and http://www.health.ny.gov/health_care/medicaid/program/dur/index.htm. Questions on prescription Frequency, Quantity and Duration (F/Q/D) Limits may be referred to the NY Medicaid Clinical Call Center at: (877)309-9493."
+    ]
+  },
+  "cost_note": "each call priced at its serving role's rates (llm.<role>.prices_per_mtok)",
+  "request_started_utc": "2026-10-18T22:32:19.971682+00:00",
+  "citation_check": {
+    "t_start": 14.01,
+    "duration_s": 0.001
+  }
+}

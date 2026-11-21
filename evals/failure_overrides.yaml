@@ -1,0 +1,6 @@
+# Failure classes set by hand: a golden question whose failure comes from an ambiguous question or
+# reference, not from the pipeline. run_eval.py applies these after the rule-based class, only to
+# questions that failed. Format:
+#   Q00:
+#     reason: one line on what makes the case ambiguous
+{}

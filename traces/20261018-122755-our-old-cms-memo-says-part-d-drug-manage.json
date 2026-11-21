@@ -1,0 +1,1254 @@
+{
+  "question": "Our old CMS memo says Part D drug management programs are optional and excludes buprenorphine for MAT. The newer sheet says every plan needs a DMP. Can the plan count this patient's Suboxone prescriber and pharmacy—and does that mean their OUD treatment should be blocked?",
+  "request_id": "9af4317c-4366-47ca-8717-99dda60c8698",
+  "status": "answered",
+  "agent_status": "answered",
+  "assumption": "Medicare Part D DMP; Suboxone is buprenorphine/naloxone for MAT/OUD.",
+  "answer": "For 2026, use the newer rule: **all Part D plans must have a DMP**. Yes, the plan **may count Suboxone** in OMS prescriber/pharmacy counts—CMS says all buprenorphine products, including MAT, count for opioid prescribers and dispensing pharmacies, but **not** for average daily MME. That does **not** mean OUD treatment should be blocked: buprenorphine for MAT is excluded from DMP FADs, and CMS’s pharmacist sheet says access to MAT such as buprenorphine **should not be impacted**. Any DMP limitation still requires case management, beneficiary notice/preference opportunity, and appeal rights.",
+  "citations": [
+    {
+      "doc_id": "cms_partd_dmp_guidance_2019",
+      "page": 1,
+      "link": "https://www.cms.gov/medicare/prescription-drug-coverage/prescriptiondrugcovcontra/downloads/2019-part-d-drug-management-program-policy-guidance-memo-november-20-2018-.pdf#page=1",
+      "flag": null,
+      "locator": "cms_partd_dmp_guidance_2019:p1"
+    },
+    {
+      "doc_id": "cms_partd_dmp_guidance_2019",
+      "page": 6,
+      "link": "https://www.cms.gov/medicare/prescription-drug-coverage/prescriptiondrugcovcontra/downloads/2019-part-d-drug-management-program-policy-guidance-memo-november-20-2018-.pdf#page=6",
+      "flag": null,
+      "locator": "cms_partd_dmp_guidance_2019:p6"
+    },
+    {
+      "doc_id": "cms_partd_dmp_guidance_2019",
+      "page": 7,
+      "link": "https://www.cms.gov/medicare/prescription-drug-coverage/prescriptiondrugcovcontra/downloads/2019-part-d-drug-management-program-policy-guidance-memo-november-20-2018-.pdf#page=7",
+      "flag": null,
+      "locator": "cms_partd_dmp_guidance_2019:p7"
+    },
+    {
+      "doc_id": "cms_partd_opioid_pharmacists_2022",
+      "page": 1,
+      "link": "https://www.cms.gov/files/document/medicare-part-d-opioid-policies-information-pharmacists-december-19-2022.pdf#page=1",
+      "flag": null,
+      "locator": "cms_partd_opioid_pharmacists_2022:p1"
+    },
+    {
+      "doc_id": "cms_partd_opioid_pharmacists_2022",
+      "page": 2,
+      "link": "https://www.cms.gov/files/document/medicare-part-d-opioid-policies-information-pharmacists-december-19-2022.pdf#page=2",
+      "flag": null,
+      "locator": "cms_partd_opioid_pharmacists_2022:p2"
+    }
+  ],
+  "conflicts_noted": [
+    "Apparent conflict: 2019 guidance says DMPs were voluntary under CARA for 2019, but the same guidance notes the SUPPORT Act requires all Part D sponsors to have a DMP for plan years beginning on/after 1/1/2022; the 2022 pharmacist sheet reflects the current requirement."
+  ],
+  "flags": [],
+  "needs_review": false,
+  "words": {
+    "displayed": 90,
+    "rendered": 90
+  },
+  "answered_by": "gpt-5.5-2026-04-23",
+  "provider": "openai",
+  "model": "gpt-5.5-2026-04-23",
+  "fallback_used": false,
+  "timing_s": {
+    "total": 23.482,
+    "search": 5.524,
+    "read_page": 0,
+    "list_documents": 0,
+    "lookups": 0,
+    "model_calls": [
+      2.628,
+      3.713,
+      11.615
+    ]
+  },
+  "lookups": 3,
+  "tokens": {
+    "input": 39411,
+    "output": 1243,
+    "cache_read": 29184,
+    "cache_write": 0
+  },
+  "cost_usd": 0.248937,
+  "pages_seen": [
+    "cms_partd_dmp_guidance_2019:p1",
+    "cms_partd_dmp_guidance_2019:p14",
+    "cms_partd_dmp_guidance_2019:p15",
+    "cms_partd_dmp_guidance_2019:p16",
+    "cms_partd_dmp_guidance_2019:p17",
+    "cms_partd_dmp_guidance_2019:p18",
+    "cms_partd_dmp_guidance_2019:p19",
+    "cms_partd_dmp_guidance_2019:p2",
+    "cms_partd_dmp_guidance_2019:p20",
+    "cms_partd_dmp_guidance_2019:p27",
+    "cms_partd_dmp_guidance_2019:p28",
+    "cms_partd_dmp_guidance_2019:p29",
+    "cms_partd_dmp_guidance_2019:p3",
+    "cms_partd_dmp_guidance_2019:p30",
+    "cms_partd_dmp_guidance_2019:p32",
+    "cms_partd_dmp_guidance_2019:p33",
+    "cms_partd_dmp_guidance_2019:p34",
+    "cms_partd_dmp_guidance_2019:p35",
+    "cms_partd_dmp_guidance_2019:p36",
+    "cms_partd_dmp_guidance_2019:p37",
+    "cms_partd_dmp_guidance_2019:p38",
+    "cms_partd_dmp_guidance_2019:p39",
+    "cms_partd_dmp_guidance_2019:p4",
+    "cms_partd_dmp_guidance_2019:p40",
+    "cms_partd_dmp_guidance_2019:p5",
+    "cms_partd_dmp_guidance_2019:p6",
+    "cms_partd_dmp_guidance_2019:p7",
+    "cms_partd_dmp_guidance_2019:p8",
+    "cms_partd_dmp_guidance_2019:p9",
+    "cms_partd_opioid_pharmacists_2022:p1",
+    "cms_partd_opioid_pharmacists_2022:p2"
+  ],
+  "trace_id": null,
+  "started_at": "2026-10-18T16:27:55+00:00",
+  "config": {
+    "primary": "gpt-5.5",
+    "fallback": "claude-sonnet-5-5",
+    "effort": "medium",
+    "search": {
+      "mode": "hybrid",
+      "rrf_k": 60,
+      "fusion_depth": 100,
+      "return_parents": true,
+      "rerank": {
+        "model": "BAAI/bge-reranker-base",
+        "depth": 20,
+        "timeout_s": 8
+      }
+    },
+    "max_tool_calls": 6,
+    "deadline_s": 25,
+    "search_k": 8
+  },
+  "structured_lookups": true,
+  "context": {},
+  "model_answer": "For 2026, use the newer rule: **all Part D plans must have a DMP**. Yes, the plan **may count Suboxone** in OMS prescriber/pharmacy counts—CMS says all buprenorphine products, including MAT, count for opioid prescribers and dispensing pharmacies, but **not** for average daily MME. That does **not** mean OUD treatment should be blocked: buprenorphine for MAT is excluded from DMP FADs, and CMS’s pharmacist sheet says access to MAT such as buprenorphine **should not be impacted**. Any DMP limitation still requires case management, beneficiary notice/preference opportunity, and appeal rights.",
+  "model_citations": [
+    {
+      "doc_id": "cms_partd_dmp_guidance_2019",
+      "page": 1,
+      "link": "https://www.cms.gov/medicare/prescription-drug-coverage/prescriptiondrugcovcontra/downloads/2019-part-d-drug-management-program-policy-guidance-memo-november-20-2018-.pdf#page=1",
+      "flag": null,
+      "locator": "cms_partd_dmp_guidance_2019:p1"
+    },
+    {
+      "doc_id": "cms_partd_dmp_guidance_2019",
+      "page": 6,
+      "link": "https://www.cms.gov/medicare/prescription-drug-coverage/prescriptiondrugcovcontra/downloads/2019-part-d-drug-management-program-policy-guidance-memo-november-20-2018-.pdf#page=6",
+      "flag": null,
+      "locator": "cms_partd_dmp_guidance_2019:p6"
+    },
+    {
+      "doc_id": "cms_partd_dmp_guidance_2019",
+      "page": 7,
+      "link": "https://www.cms.gov/medicare/prescription-drug-coverage/prescriptiondrugcovcontra/downloads/2019-part-d-drug-management-program-policy-guidance-memo-november-20-2018-.pdf#page=7",
+      "flag": null,
+      "locator": "cms_partd_dmp_guidance_2019:p7"
+    },
+    {
+      "doc_id": "cms_partd_opioid_pharmacists_2022",
+      "page": 1,
+      "link": "https://www.cms.gov/files/document/medicare-part-d-opioid-policies-information-pharmacists-december-19-2022.pdf#page=1",
+      "flag": null,
+      "locator": "cms_partd_opioid_pharmacists_2022:p1"
+    },
+    {
+      "doc_id": "cms_partd_opioid_pharmacists_2022",
+      "page": 2,
+      "link": "https://www.cms.gov/files/document/medicare-part-d-opioid-policies-information-pharmacists-december-19-2022.pdf#page=2",
+      "flag": null,
+      "locator": "cms_partd_opioid_pharmacists_2022:p2"
+    }
+  ],
+  "model_calls": [
+    {
+      "t_start": 0.0,
+      "duration_s": 2.628,
+      "requested_model": "gpt-5.5",
+      "served_model": "gpt-5.5-2026-04-23",
+      "provider": "openai",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 347,
+        "output": 138,
+        "cache_read": 1536,
+        "cache_write": 0
+      },
+      "cost_usd": 0.006643,
+      "response_id": "resp_093f9d91aaa59582016ad4f373b5f087d2819ee61725d03882",
+      "input_messages": [
+        {
+          "role": "user",
+          "text": "Today's date: 2026-10-18\n\nQuestion: Our old CMS memo says Part D drug management programs are optional and excludes buprenorphine for MAT. The newer sheet says every plan needs a DMP. Can the plan count this patient's Suboxone prescriber and pharmacy—and does that mean their OUD treatment should be blocked?"
+        }
+      ],
+      "output": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "call_8rxqtSjQRvEzN8YvdcTe0QxN",
+            "name": "search_documents",
+            "arguments": {
+              "program": "Medicare Part D",
+              "query": "drug management programs optional every plan needs a DMP buprenorphine MAT Suboxone prescriber pharmacy opioid use disorder should not limit access",
+              "k": 6
+            }
+          },
+          {
+            "id": "call_UBxxcSylW7kE1iefpIgDxF2O",
+            "name": "search_documents",
+            "arguments": {
+              "program": "Medicare Part D",
+              "query": "Frequently Asked Questions DMP buprenorphine MAT excluded sponsors must have drug management programs January 1 2022",
+              "k": 6
+            }
+          }
+        ]
+      }
+    },
+    {
+      "t_start": 5.913,
+      "duration_s": 3.713,
+      "requested_model": "gpt-5.5",
+      "served_model": "gpt-5.5-2026-04-23",
+      "provider": "openai",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 24846,
+        "output": 205,
+        "cache_read": 1536,
+        "cache_write": 0
+      },
+      "cost_usd": 0.131148,
+      "response_id": "resp_093f9d91aaa59582016ad4f379b02887d296c8f261408190eb",
+      "input_messages": [
+        {
+          "role": "tool",
+          "tool_results": [
+            {
+              "call_id": "call_8rxqtSjQRvEzN8YvdcTe0QxN",
+              "is_error": false,
+              "content": "[{\"doc_id\": \"cms_partd_opioid_pharmacists_2022\", \"page\": 2, \"program\": \"Medicare Part D\", \"authority\": \"summary_of_binding_policy\", \"date\": \"2022-12-19\", \"text\": \"Medicare Part D Opioid Policies: Information for Pharmacists > Drug Management Programs (DMPs)\\n[p 2]\\nAll Medicare Part D plans must have a DMP that limits access to opioids and/or benzodiazepines for enrollees considered by the plan to be at risk for prescription drug abuse or misuse. Enrollees are identified by opioid use involving multiple doctors and pharmacies or a recent history of opioid-related overdose, and undergo case management conducted by the plan with the enrollee's prescribers.\\nDMP limitations can include requiring the enrollee to obtain these medications from a specified prescriber and/or pharmacy, or implementing a enrollee-specific POS edit that limits the amount of these medications that will be covered. Before a limitation is implemented, the plan must give written notice to the enrollee, and an opportunity to tell the plan which prescribers or pharmacies they prefer to use or provide additional information that they think is relevant.\\nIf the plan decides to limit coverage under a DMP, the enrollee, their representative, or their prescriber have the right to appeal the plan's decision. Pharmacies are not expected to distribute the standardized CMS pharmacy notice Medicare Prescription Drug Coverage and Your Rights to the enrollee in response to a rejected claim due to a limitation under a DMP. The enrollee or prescriber should contact the plan for information on how to appeal.\", \"pages\": [2], \"section\": \"Medicare Part D Opioid Policies: Information for Pharmacists > Drug Management Programs (DMPs)\"}, {\"doc_id\": \"cms_partd_dmp_guidance_2019\", \"page\": 6, \"program\": \"Medicare Part D\", \"authority\": \"binding\", \"date\": \"2018-11-20\", \"text\": \"Part D Drug Management Program Policy Guidance (CY 2019) > III. FREQUENTLY ABUSED DRUGS (FADs) (42 CFR §423.100)\\n[p 6]\\nII. POTENTIAL AT-RISK BENEFICIARIES (PARBs) AND AT-RISK BENEFICIARIES (ARBs) (42 CFR §423.100)\\nA PARB is a beneficiary who meets the OMS criteria, or who was identified as a PARB by the sponsor of the beneficiary's immediately prior Part D plan under its DMP and such identification had not been terminated before disenrollment. (See below section, \\\"Overutilization Monitoring System (OMS) Criteria (Clinical Guidelines) / Estimated Program Size\\\").\\nFor purposes of this guidance, a PARB 1 refers to a beneficiary who meets the OMS criteria and is identified by CMS or a sponsor. A PARB 2 refers to a beneficiary about whom a new plan sponsor receives notice upon the beneficiary's enrollment through the MARx system that the beneficiary was identified as potentially at-risk by the immediately prior plan sponsor under its DMP, but a coverage limitation on FADs had not yet been implemented by the prior plan before the beneficiary disenrolled. (See below section, \\\"Limitations on Access to Coverage for FADs.\\\")\\nAn ARB is a beneficiary who meets the OMS criteria, is not exempted from DMPs, and is identified to be at-risk by their Part D plan sponsor under its DMP, or who was identified as an ARB by the sponsor of the beneficiary's immediately prior Part D plan under its DMP and such identification had not been terminated before disenrollment.\\nFor purposes of this guidance, an ARB 1 refers to a beneficiary who was identified as at-risk under their Part D plan's DMP. An ARB 2 refers to a beneficiary about whom a new plan sponsor receives notice upon the beneficiary's enrollment through MARx that the beneficiary was identified as at-risk by the immediately prior plan sponsor under its DMP and a coverage limitation(s) on FADs had been implemented by the prior plan before the beneficiary disenrolled.\\nSponsors receive notifications about PARB 2s and ARB 2s through MARx system. See below section, \\\"Data Disclosure.\\\"\\nA. Opioids and Benzodiazepines\\nOpioids (except buprenorphine for medication-assisted trea"
+            },
+            {
+              "call_id": "call_UBxxcSylW7kE1iefpIgDxF2O",
+              "is_error": false,
+              "content": "[{\"doc_id\": \"cms_partd_dmp_guidance_2019\", \"page\": 1, \"program\": \"Medicare Part D\", \"authority\": \"binding\", \"date\": \"2018-11-20\", \"text\": \"Part D Drug Management Program Policy Guidance (CY 2019) > Subject: Part D Drug Management Program Policy Guidance\\n[p 1]\\nDEPARTMENT OF HEALTH & HUMAN SERVICES\\n7500 Security Boulevard\\nBaltimore, Maryland 21244-1850\\n_________________________________________________________________\\nDate: November 20, 2018\\nTo: All Part D sponsors\\nFrom: Amy Larrick Chavez-Valdez Director, Medicare Drug Benefit and C&D Data Group\\nSection 704 of the Comprehensive Addiction and Recovery Act (CARA) of 2016 included provisions permitting Part D sponsors to establish drug management programs (DMPs) for beneficiaries at-risk for misuse or abuse of frequently abused drugs (FADs). In a final rule (CMS-4182-F) published in the Federal Register on April 16, 2018 (\\\"final rule\\\"), CMS established the framework under which Part D sponsors may implement a DMP. This memorandum is intended to provide comprehensive policy guidance for implementation of DMPs. This document incorporates the extensive guidance CMS provided for DMPs in the final rule and provides additional detail.\\nAlthough DMPs are voluntary under CARA, given the current national opioid epidemic and based on Part D sponsors' CY 2019 Opioid Template Submissions, we are pleased that most sponsors will implement DMPs in 2019. We also note that the SUPPORT for Patients and Communities Act, enacted on October 24, 2018, requires all Part D sponsors to have a DMP for plan years beginning on or after January 1, 2022.\\nUnder DMPs, Part D sponsors are required to communicate in writing with beneficiaries for whom they intend to limit access to FADs. CMS has developed and beneficiary-tested standardized notices for this purpose. Currently, these notices are pending approval at the Office of Management and Budget (OMB). Part D sponsors will be required to use these notices for their DMPs and may not develop their own. In the meantime, sponsors with DMPs in 2019 must implement their programs beginning January 1 and move forward with those aspects of the programs that can be completed without the notices. Once available, sponsors may issue notices and implement coverage limitations. Because CMS understands it may take some time for sponsors to update their systems with the approved notice language, sponsors will have up to 90 days following the release of the standardized notices to fully implement aspects of their programs requiring the notices.\\nIn practical terms, these circumstances mean that: 1) CMS will provide sponsors with quarterly Overutilization Monitoring System (OMS) reports of potential at-risk beneficiaries (PARBs); 2) sponsors may identify PARBs by applying the minimum or supplemental OMS criteria on their own; and 3) sponsors will engage in case management. We remind sponsors that the data CMS has previously shared publicly about impact of the Part D overutilization/OMS policy have demonstrated that the significant reduction in opioid overutilization in the program has been due mostly to case management, and to a much lesser extent, because of coverage limitations (e.g., beneficiary-specific POS claim edits). For OMS cases that are not resolved and in which sponsors intend to implement a coverage limitation on access to coverage of FADs to achieve resolution, sponsors may continue to respond to OMS that the cases are \\\"Initial Review In Progress.\\\" (See also the OMS technical guidance referenced below). Sponsors must not notify a beneficiary that they intend to implement a coverage limitation until the notices are released by CMS. 1\\n[p 2]\\nIn addition to the final rule, by the end of today, this implementation guidance and the 2019 OMS technical guidance for DMPs will be available on the CMS Part D Overutilization website at: https://www.cms.gov/Medicare/Prescription-Drugcoverage/PrescriptionDrugCovContra/RxUtilization.html.\\nThe updated MAPD Plan Com"
+            }
+          ]
+        }
+      ],
+      "output": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "call_yCePmUfoKcb54hriIxLTjc4l",
+            "name": "search_documents",
+            "arguments": {
+              "program": "Medicare Part D",
+              "query": "buprenorphine medication assisted treatment not included MME opioid safety edits Part D opioid policies pharmacists",
+              "k": 8
+            }
+          }
+        ]
+      }
+    },
+    {
+      "t_start": 11.866,
+      "duration_s": 11.615,
+      "requested_model": "gpt-5.5",
+      "served_model": "gpt-5.5-2026-04-23",
+      "provider": "openai",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 14218,
+        "output": 900,
+        "cache_read": 26112,
+        "cache_write": 0
+      },
+      "cost_usd": 0.111146,
+      "response_id": "resp_093f9d91aaa59582016ad4f37f872487d2a0efc38691ba6fec",
+      "input_messages": [
+        {
+          "role": "tool",
+          "tool_results": [
+            {
+              "call_id": "call_yCePmUfoKcb54hriIxLTjc4l",
+              "is_error": false,
+              "content": "[{\"doc_id\": \"cms_partd_opioid_pharmacists_2022\", \"page\": 2, \"program\": \"Medicare Part D\", \"authority\": \"summary_of_binding_policy\", \"date\": \"2022-12-19\", \"text\": \"Medicare Part D Opioid Policies: Information for Pharmacists > Drug Management Programs (DMPs)\\n[p 2]\\nAll Medicare Part D plans must have a DMP that limits access to opioids and/or benzodiazepines for enrollees considered by the plan to be at risk for prescription drug abuse or misuse. Enrollees are identified by opioid use involving multiple doctors and pharmacies or a recent history of opioid-related overdose, and undergo case management conducted by the plan with the enrollee's prescribers.\\nDMP limitations can include requiring the enrollee to obtain these medications from a specified prescriber and/or pharmacy, or implementing a enrollee-specific POS edit that limits the amount of these medications that will be covered. Before a limitation is implemented, the plan must give written notice to the enrollee, and an opportunity to tell the plan which prescribers or pharmacies they prefer to use or provide additional information that they think is relevant.\\nIf the plan decides to limit coverage under a DMP, the enrollee, their representative, or their prescriber have the right to appeal the plan's decision. Pharmacies are not expected to distribute the standardized CMS pharmacy notice Medicare Prescription Drug Coverage and Your Rights to the enrollee in response to a rejected claim due to a limitation under a DMP. The enrollee or prescriber should contact the plan for information on how to appeal.\", \"pages\": [2], \"section\": \"Medicare Part D Opioid Policies: Information for Pharmacists > Drug Management Programs (DMPs)\"}, {\"doc_id\": \"cms_partd_dmp_guidance_2019\", \"page\": 6, \"program\": \"Medicare Part D\", \"authority\": \"binding\", \"date\": \"2018-11-20\", \"text\": \"Part D Drug Management Program Policy Guidance (CY 2019) > III. FREQUENTLY ABUSED DRUGS (FADs) (42 CFR §423.100)\\n[p 6]\\nII. POTENTIAL AT-RISK BENEFICIARIES (PARBs) AND AT-RISK BENEFICIARIES (ARBs) (42 CFR §423.100)\\nA PARB is a beneficiary who meets the OMS criteria, or who was identified as a PARB by the sponsor of the beneficiary's immediately prior Part D plan under its DMP and such identification had not been terminated before disenrollment. (See below section, \\\"Overutilization Monitoring System (OMS) Criteria (Clinical Guidelines) / Estimated Program Size\\\").\\nFor purposes of this guidance, a PARB 1 refers to a beneficiary who meets the OMS criteria and is identified by CMS or a sponsor. A PARB 2 refers to a beneficiary about whom a new plan sponsor receives notice upon the beneficiary's enrollment through the MARx system that the beneficiary was identified as potentially at-risk by the immediately prior plan sponsor under its DMP, but a coverage limitation on FADs had not yet been implemented by the prior plan before the beneficiary disenrolled. (See below section, \\\"Limitations on Access to Coverage for FADs.\\\")\\nAn ARB is a beneficiary who meets the OMS criteria, is not exempted from DMPs, and is identified to be at-risk by their Part D plan sponsor under its DMP, or who was identified as an ARB by the sponsor of the beneficiary's immediately prior Part D plan under its DMP and such identification had not been terminated before disenrollment.\\nFor purposes of this guidance, an ARB 1 refers to a beneficiary who was identified as at-risk under their Part D plan's DMP. An ARB 2 refers to a beneficiary about whom a new plan sponsor receives notice upon the beneficiary's enrollment through MARx that the beneficiary was identified as at-risk by the immediately prior plan sponsor under its DMP and a coverage limitation(s) on FADs had been implemented by the prior plan before the beneficiary disenrolled.\\nSponsors receive notifications about PARB 2s and ARB 2s through MARx system. See below section, \\\"Data Disclosure.\\\"\\nA. Opioids and Benzodiazepines\\nOpioids (except buprenorphine for medication-assisted trea"
+            }
+          ]
+        }
+      ],
+      "output": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "call_teSQxWN0LIjjQwWWhP9CXdOQ",
+            "name": "submit_answer",
+            "arguments": {
+              "status": "answered",
+              "assumption": "Medicare Part D DMP; Suboxone is buprenorphine/naloxone for MAT/OUD.",
+              "answer": "For 2026, use the newer rule: **all Part D plans must have a DMP**. Yes, the plan **may count Suboxone** in OMS prescriber/pharmacy counts—CMS says all buprenorphine products, including MAT, count for opioid prescribers and dispensing pharmacies, but **not** for average daily MME. That does **not** mean OUD treatment should be blocked: buprenorphine for MAT is excluded from DMP FADs, and CMS’s pharmacist sheet says access to MAT such as buprenorphine **should not be impacted**. Any DMP limitation still requires case management, beneficiary notice/preference opportunity, and appeal rights.",
+              "citations": [
+                {
+                  "doc_id": "cms_partd_dmp_guidance_2019",
+                  "page": 1,
+                  "row": null
+                },
+                {
+                  "doc_id": "cms_partd_dmp_guidance_2019",
+                  "page": 6,
+                  "row": null
+                },
+                {
+                  "doc_id": "cms_partd_dmp_guidance_2019",
+                  "page": 7,
+                  "row": null
+                },
+                {
+                  "doc_id": "cms_partd_opioid_pharmacists_2022",
+                  "page": 1,
+                  "row": null
+                },
+                {
+                  "doc_id": "cms_partd_opioid_pharmacists_2022",
+                  "page": 2,
+                  "row": null
+                }
+              ],
+              "conflicts_noted": [
+                "Apparent conflict: 2019 guidance says DMPs were voluntary under CARA for 2019, but the same guidance notes the SUPPORT Act requires all Part D sponsors to have a DMP for plan years beginning on/after 1/1/2022; the 2022 pharmacist sheet reflects the current requirement."
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "search_documents",
+      "input": {
+        "program": "Medicare Part D",
+        "query": "drug management programs optional every plan needs a DMP buprenorphine MAT Suboxone prescriber pharmacy opioid use disorder should not limit access",
+        "k": 6
+      },
+      "duration_s": 2.219,
+      "is_error": false,
+      "pages": [
+        "cms_partd_dmp_guidance_2019:p1",
+        "cms_partd_dmp_guidance_2019:p16",
+        "cms_partd_dmp_guidance_2019:p17",
+        "cms_partd_dmp_guidance_2019:p18",
+        "cms_partd_dmp_guidance_2019:p19",
+        "cms_partd_dmp_guidance_2019:p2",
+        "cms_partd_dmp_guidance_2019:p20",
+        "cms_partd_dmp_guidance_2019:p27",
+        "cms_partd_dmp_guidance_2019:p28",
+        "cms_partd_dmp_guidance_2019:p29",
+        "cms_partd_dmp_guidance_2019:p3",
+        "cms_partd_dmp_guidance_2019:p30",
+        "cms_partd_dmp_guidance_2019:p32",
+        "cms_partd_dmp_guidance_2019:p33",
+        "cms_partd_dmp_guidance_2019:p34",
+        "cms_partd_dmp_guidance_2019:p4",
+        "cms_partd_dmp_guidance_2019:p5",
+        "cms_partd_dmp_guidance_2019:p6",
+        "cms_partd_dmp_guidance_2019:p7",
+        "cms_partd_dmp_guidance_2019:p8",
+        "cms_partd_dmp_guidance_2019:p9",
+        "cms_partd_opioid_pharmacists_2022:p2"
+      ],
+      "result": "[{\"doc_id\": \"cms_partd_opioid_pharmacists_2022\", \"page\": 2, \"program\": \"Medicare Part D\", \"authority\": \"summary_of_binding_policy\", \"date\": \"2022-12-19\", \"text\": \"Medicare Part D Opioid Policies: Information for Pharmacists > Drug Management Programs (DMPs)\\n[p 2]\\nAll Medicare Part D plans must have a DMP that limits access to opioids and/or benzodiazepines for enrollees considered by the plan to be at risk for prescription drug abuse or misuse. Enrollees are identified by opioid use involving multiple doctors and pharmacies or a recent history of opioid-related overdose, and undergo case management conducted by the plan with the enrollee's prescribers.\\nDMP limitations can include requiring the enrollee to obtain these medications from a specified prescriber and/or pharmacy, or implementing a enrollee-specific POS edit that limits the amount of these medications that will be covered. Before a limitation is implemented, the plan must give written notice to the enrollee, and an opportunity to tell the plan which prescribers or pharmacies they prefer to use or provide additional information that they think is relevant.\\nIf the plan decides to limit coverage under a DMP, the enrollee, their representative, or their prescriber have the right to appeal the plan's decision. Pharmacies are not expected to distribute the standardized CMS pharmacy notice Medicare Prescription Drug Coverage and Your Rights to the enrollee in response to a rejected claim due to a limitation under a DMP. The enrollee or prescriber should contact the plan for information on how to appeal.\", \"pages\": [2], \"section\": \"Medicare Part D Opioid Policies: Information for Pharmacists > Drug Management Programs (DMPs)\"}, {\"doc_id\": \"cms_partd_dmp_guidance_2019\", \"page\": 6, \"program\": \"Medicare Part D\", \"authority\": \"binding\", \"date\": \"2018-11-20\", \"text\": \"Part D Drug Management Program Policy Guidance (CY 2019) > III. FREQUENTLY ABUSED DRUGS (FADs) (42 CFR §423.100)\\n[p 6]\\nII. POTENTIAL AT-RISK BENEFICIARIES (PARBs) AND AT-RISK BENEFICIARIES (ARBs) (42 CFR §423.100)\\nA PARB is a beneficiary who meets the OMS criteria, or who was identified as a PARB by the sponsor of the beneficiary's immediately prior Part D plan under its DMP and such identification had not been terminated before disenrollment. (See below section, \\\"Overutilization Monitoring System (OMS) Criteria (Clinical Guidelines) / Estimated Program Size\\\").\\nFor purposes of this guidance, a PARB 1 refers to a beneficiary who meets the OMS criteria and is identified by CMS or a sponsor. A PARB 2 refers to a beneficiary about whom a new plan sponsor receives notice upon the beneficiary's enrollment through the MARx system that the beneficiary was identified as potentially at-risk by the immediately prior plan sponsor under its DMP, but a coverage limitation on FADs had not yet been implemented by the prior plan before the beneficiary disenrolled. (See below section, \\\"Limitations on Access to Coverage for FADs.\\\")\\nAn ARB is a beneficiary who meets the OMS criteria, is not exempted from DMPs, and is identified to be at-risk by their Part D plan sponsor under its DMP, or who was identified as an ARB by the sponsor of the beneficiary's immediately prior Part D plan under its DMP and such identification had not been terminated before disenrollment.\\nFor purposes of this guidance, an ARB 1 refers to a beneficiary who was identified as at-risk under their Part D plan's DMP. An ARB 2 refers to a beneficiary about whom a new plan sponsor receives notice upon the beneficiary's enrollment through MARx that the beneficiary was identified as at-risk by the immediately prior plan sponsor under its DMP and a coverage limitation(s) on FADs had been implemented by the prior plan before the beneficiary disenrolled.\\nSponsors receive notifications about PARB 2s and ARB 2s through MARx system. See below section, \\\"Data Disclosure.\\\"\\nA. Opioids and Benzodiazepines\\nOpioids (except buprenorphine for medication-assisted trea",
+      "search": {
+        "original_query": "Our old CMS memo says Part D drug management programs are optional and excludes buprenorphine for MAT. The newer sheet says every plan needs a DMP. Can the plan count this patient's Suboxone prescriber and pharmacy—and does that mean their OUD treatment should be blocked?",
+        "agent_query": "drug management programs optional every plan needs a DMP buprenorphine MAT Suboxone prescriber pharmacy opioid use disorder should not limit access",
+        "executed": [
+          {
+            "source": "original",
+            "query": "Our old CMS memo says Part D drug management programs are optional and excludes buprenorphine for MAT. The newer sheet says every plan needs a DMP. Can the plan count this patient's Suboxone prescriber and pharmacy—and does that mean their OUD treatment should be blocked?",
+            "program": "Medicare Part D",
+            "k": 6,
+            "seconds": 2.218,
+            "cached": false,
+            "results": 6
+          },
+          {
+            "source": "agent",
+            "query": "drug management programs optional every plan needs a DMP buprenorphine MAT Suboxone prescriber pharmacy opioid use disorder should not limit access",
+            "program": "Medicare Part D",
+            "k": 6,
+            "seconds": 1.202,
+            "cached": false,
+            "results": 6
+          }
+        ],
+        "duplicates_merged": 2,
+        "returned": 10,
+        "from_both": 2,
+        "from_original_only": 4,
+        "from_agent_only": 4,
+        "provenance": [
+          {
+            "unit": "cms_partd_opioid_pharmacists_2022:s2",
+            "found_by": {
+              "original": 1,
+              "agent": 1
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s3",
+            "found_by": {
+              "original": 4,
+              "agent": 3
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s0",
+            "found_by": {
+              "original": 2
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s4",
+            "found_by": {
+              "agent": 2
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s2",
+            "found_by": {
+              "original": 3
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s10",
+            "found_by": {
+              "agent": 4
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s17",
+            "found_by": {
+              "original": 5
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s15",
+            "found_by": {
+              "agent": 5
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s1",
+            "found_by": {
+              "original": 6
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s11",
+            "found_by": {
+              "agent": 6
+            }
+          }
+        ],
+        "hits": [
+          {
+            "unit": "cms_partd_opioid_pharmacists_2022:s2",
+            "doc_id": "cms_partd_opioid_pharmacists_2022",
+            "pages": [
+              2
+            ],
+            "ranks": {
+              "original": 1,
+              "agent": 1
+            },
+            "scores": {
+              "original": 0.3341,
+              "agent": 0.9138
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s3",
+            "doc_id": "cms_partd_dmp_guidance_2019",
+            "pages": [
+              6
+            ],
+            "ranks": {
+              "original": 4,
+              "agent": 3
+            },
+            "scores": {
+              "original": 0.0788,
+              "agent": 0.5253
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s0",
+            "doc_id": "cms_partd_dmp_guidance_2019",
+            "pages": [
+              1,
+              2,
+              3
+            ],
+            "ranks": {
+              "original": 2
+            },
+            "scores": {
+              "original": 0.0945
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s4",
+            "doc_id": "cms_partd_dmp_guidance_2019",
+            "pages": [
+              7,
+              8,
+              9
+            ],
+            "ranks": {
+              "agent": 2
+            },
+            "scores": {
+              "agent": 0.5596
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s2",
+            "doc_id": "cms_partd_dmp_guidance_2019",
+            "pages": [
+              5
+            ],
+            "ranks": {
+              "original": 3
+            },
+            "scores": {
+              "original": 0.0921
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s10",
+            "doc_id": "cms_partd_dmp_guidance_2019",
+            "pages": [
+              16,
+              17,
+              18
+            ],
+            "ranks": {
+              "agent": 4
+            },
+            "scores": {
+              "agent": 0.4524
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s17",
+            "doc_id": "cms_partd_dmp_guidance_2019",
+            "pages": [
+              32,
+              33,
+              34
+            ],
+            "ranks": {
+              "original": 5
+            },
+            "scores": {
+              "original": 0.0685
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s15",
+            "doc_id": "cms_partd_dmp_guidance_2019",
+            "pages": [
+              27,
+              28,
+              29,
+              30
+            ],
+            "ranks": {
+              "agent": 5
+            },
+            "scores": {
+              "agent": 0.2233
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s1",
+            "doc_id": "cms_partd_dmp_guidance_2019",
+            "pages": [
+              3,
+              4
+            ],
+            "ranks": {
+              "original": 6
+            },
+            "scores": {
+              "original": 0.0549
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s11",
+            "doc_id": "cms_partd_dmp_guidance_2019",
+            "pages": [
+              18,
+              19,
+              20
+            ],
+            "ranks": {
+              "agent": 6
+            },
+            "scores": {
+              "agent": 0.2114
+            }
+          }
+        ]
+      },
+      "t_start": 2.628
+    },
+    {
+      "name": "search_documents",
+      "input": {
+        "program": "Medicare Part D",
+        "query": "Frequently Asked Questions DMP buprenorphine MAT excluded sponsors must have drug management programs January 1 2022",
+        "k": 6
+      },
+      "duration_s": 1.066,
+      "is_error": false,
+      "pages": [
+        "cms_partd_dmp_guidance_2019:p1",
+        "cms_partd_dmp_guidance_2019:p14",
+        "cms_partd_dmp_guidance_2019:p15",
+        "cms_partd_dmp_guidance_2019:p16",
+        "cms_partd_dmp_guidance_2019:p2",
+        "cms_partd_dmp_guidance_2019:p3",
+        "cms_partd_dmp_guidance_2019:p32",
+        "cms_partd_dmp_guidance_2019:p33",
+        "cms_partd_dmp_guidance_2019:p34",
+        "cms_partd_dmp_guidance_2019:p35",
+        "cms_partd_dmp_guidance_2019:p36",
+        "cms_partd_dmp_guidance_2019:p37",
+        "cms_partd_dmp_guidance_2019:p38",
+        "cms_partd_dmp_guidance_2019:p39",
+        "cms_partd_dmp_guidance_2019:p4",
+        "cms_partd_dmp_guidance_2019:p40",
+        "cms_partd_dmp_guidance_2019:p5",
+        "cms_partd_dmp_guidance_2019:p6",
+        "cms_partd_opioid_pharmacists_2022:p2"
+      ],
+      "result": "[{\"doc_id\": \"cms_partd_dmp_guidance_2019\", \"page\": 1, \"program\": \"Medicare Part D\", \"authority\": \"binding\", \"date\": \"2018-11-20\", \"text\": \"Part D Drug Management Program Policy Guidance (CY 2019) > Subject: Part D Drug Management Program Policy Guidance\\n[p 1]\\nDEPARTMENT OF HEALTH & HUMAN SERVICES\\n7500 Security Boulevard\\nBaltimore, Maryland 21244-1850\\n_________________________________________________________________\\nDate: November 20, 2018\\nTo: All Part D sponsors\\nFrom: Amy Larrick Chavez-Valdez Director, Medicare Drug Benefit and C&D Data Group\\nSection 704 of the Comprehensive Addiction and Recovery Act (CARA) of 2016 included provisions permitting Part D sponsors to establish drug management programs (DMPs) for beneficiaries at-risk for misuse or abuse of frequently abused drugs (FADs). In a final rule (CMS-4182-F) published in the Federal Register on April 16, 2018 (\\\"final rule\\\"), CMS established the framework under which Part D sponsors may implement a DMP. This memorandum is intended to provide comprehensive policy guidance for implementation of DMPs. This document incorporates the extensive guidance CMS provided for DMPs in the final rule and provides additional detail.\\nAlthough DMPs are voluntary under CARA, given the current national opioid epidemic and based on Part D sponsors' CY 2019 Opioid Template Submissions, we are pleased that most sponsors will implement DMPs in 2019. We also note that the SUPPORT for Patients and Communities Act, enacted on October 24, 2018, requires all Part D sponsors to have a DMP for plan years beginning on or after January 1, 2022.\\nUnder DMPs, Part D sponsors are required to communicate in writing with beneficiaries for whom they intend to limit access to FADs. CMS has developed and beneficiary-tested standardized notices for this purpose. Currently, these notices are pending approval at the Office of Management and Budget (OMB). Part D sponsors will be required to use these notices for their DMPs and may not develop their own. In the meantime, sponsors with DMPs in 2019 must implement their programs beginning January 1 and move forward with those aspects of the programs that can be completed without the notices. Once available, sponsors may issue notices and implement coverage limitations. Because CMS understands it may take some time for sponsors to update their systems with the approved notice language, sponsors will have up to 90 days following the release of the standardized notices to fully implement aspects of their programs requiring the notices.\\nIn practical terms, these circumstances mean that: 1) CMS will provide sponsors with quarterly Overutilization Monitoring System (OMS) reports of potential at-risk beneficiaries (PARBs); 2) sponsors may identify PARBs by applying the minimum or supplemental OMS criteria on their own; and 3) sponsors will engage in case management. We remind sponsors that the data CMS has previously shared publicly about impact of the Part D overutilization/OMS policy have demonstrated that the significant reduction in opioid overutilization in the program has been due mostly to case management, and to a much lesser extent, because of coverage limitations (e.g., beneficiary-specific POS claim edits). For OMS cases that are not resolved and in which sponsors intend to implement a coverage limitation on access to coverage of FADs to achieve resolution, sponsors may continue to respond to OMS that the cases are \\\"Initial Review In Progress.\\\" (See also the OMS technical guidance referenced below). Sponsors must not notify a beneficiary that they intend to implement a coverage limitation until the notices are released by CMS. 1\\n[p 2]\\nIn addition to the final rule, by the end of today, this implementation guidance and the 2019 OMS technical guidance for DMPs will be available on the CMS Part D Overutilization website at: https://www.cms.gov/Medicare/Prescription-Drugcoverage/PrescriptionDrugCovContra/RxUtilization.html.\\nThe updated MAPD Plan Com",
+      "search": {
+        "original_query": "Our old CMS memo says Part D drug management programs are optional and excludes buprenorphine for MAT. The newer sheet says every plan needs a DMP. Can the plan count this patient's Suboxone prescriber and pharmacy—and does that mean their OUD treatment should be blocked?",
+        "agent_query": "Frequently Asked Questions DMP buprenorphine MAT excluded sponsors must have drug management programs January 1 2022",
+        "executed": [
+          {
+            "source": "original",
+            "query": "Our old CMS memo says Part D drug management programs are optional and excludes buprenorphine for MAT. The newer sheet says every plan needs a DMP. Can the plan count this patient's Suboxone prescriber and pharmacy—and does that mean their OUD treatment should be blocked?",
+            "program": "Medicare Part D",
+            "k": 6,
+            "seconds": 0.0,
+            "cached": true,
+            "results": 6
+          },
+          {
+            "source": "agent",
+            "query": "Frequently Asked Questions DMP buprenorphine MAT excluded sponsors must have drug management programs January 1 2022",
+            "program": "Medicare Part D",
+            "k": 6,
+            "seconds": 1.066,
+            "cached": false,
+            "results": 6
+          }
+        ],
+        "duplicates_merged": 2,
+        "returned": 10,
+        "from_both": 2,
+        "from_original_only": 4,
+        "from_agent_only": 4,
+        "provenance": [
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s0",
+            "found_by": {
+              "original": 2,
+              "agent": 1
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s17",
+            "found_by": {
+              "original": 5,
+              "agent": 2
+            }
+          },
+          {
+            "unit": "cms_partd_opioid_pharmacists_2022:s2",
+            "found_by": {
+              "original": 1
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s2",
+            "found_by": {
+              "original": 3
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s18",
+            "found_by": {
+              "agent": 3
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s3",
+            "found_by": {
+              "original": 4
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s19",
+            "found_by": {
+              "agent": 4
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s9",
+            "found_by": {
+              "agent": 5
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s1",
+            "found_by": {
+              "original": 6
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s20",
+            "found_by": {
+              "agent": 6
+            }
+          }
+        ],
+        "hits": [
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s0",
+            "doc_id": "cms_partd_dmp_guidance_2019",
+            "pages": [
+              1,
+              2,
+              3
+            ],
+            "ranks": {
+              "original": 2,
+              "agent": 1
+            },
+            "scores": {
+              "original": 0.0945,
+              "agent": 0.7918
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s17",
+            "doc_id": "cms_partd_dmp_guidance_2019",
+            "pages": [
+              32,
+              33,
+              34
+            ],
+            "ranks": {
+              "original": 5,
+              "agent": 2
+            },
+            "scores": {
+              "original": 0.0685,
+              "agent": 0.6962
+            }
+          },
+          {
+            "unit": "cms_partd_opioid_pharmacists_2022:s2",
+            "doc_id": "cms_partd_opioid_pharmacists_2022",
+            "pages": [
+              2
+            ],
+            "ranks": {
+              "original": 1
+            },
+            "scores": {
+              "original": 0.3341
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s2",
+            "doc_id": "cms_partd_dmp_guidance_2019",
+            "pages": [
+              5
+            ],
+            "ranks": {
+              "original": 3
+            },
+            "scores": {
+              "original": 0.0921
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s18",
+            "doc_id": "cms_partd_dmp_guidance_2019",
+            "pages": [
+              34,
+              35,
+              36
+            ],
+            "ranks": {
+              "agent": 3
+            },
+            "scores": {
+              "agent": 0.2857
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s3",
+            "doc_id": "cms_partd_dmp_guidance_2019",
+            "pages": [
+              6
+            ],
+            "ranks": {
+              "original": 4
+            },
+            "scores": {
+              "original": 0.0788
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s19",
+            "doc_id": "cms_partd_dmp_guidance_2019",
+            "pages": [
+              36,
+              37,
+              38
+            ],
+            "ranks": {
+              "agent": 4
+            },
+            "scores": {
+              "agent": 0.2169
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s9",
+            "doc_id": "cms_partd_dmp_guidance_2019",
+            "pages": [
+              14,
+              15,
+              16
+            ],
+            "ranks": {
+              "agent": 5
+            },
+            "scores": {
+              "agent": 0.1786
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s1",
+            "doc_id": "cms_partd_dmp_guidance_2019",
+            "pages": [
+              3,
+              4
+            ],
+            "ranks": {
+              "original": 6
+            },
+            "scores": {
+              "original": 0.0549
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s20",
+            "doc_id": "cms_partd_dmp_guidance_2019",
+            "pages": [
+              38,
+              39,
+              40
+            ],
+            "ranks": {
+              "agent": 6
+            },
+            "scores": {
+              "agent": 0.1457
+            }
+          }
+        ]
+      },
+      "t_start": 4.847
+    },
+    {
+      "name": "search_documents",
+      "input": {
+        "program": "Medicare Part D",
+        "query": "buprenorphine medication assisted treatment not included MME opioid safety edits Part D opioid policies pharmacists",
+        "k": 8
+      },
+      "duration_s": 2.239,
+      "is_error": false,
+      "pages": [
+        "cms_partd_dmp_guidance_2019:p1",
+        "cms_partd_dmp_guidance_2019:p16",
+        "cms_partd_dmp_guidance_2019:p17",
+        "cms_partd_dmp_guidance_2019:p18",
+        "cms_partd_dmp_guidance_2019:p2",
+        "cms_partd_dmp_guidance_2019:p27",
+        "cms_partd_dmp_guidance_2019:p28",
+        "cms_partd_dmp_guidance_2019:p29",
+        "cms_partd_dmp_guidance_2019:p3",
+        "cms_partd_dmp_guidance_2019:p30",
+        "cms_partd_dmp_guidance_2019:p32",
+        "cms_partd_dmp_guidance_2019:p33",
+        "cms_partd_dmp_guidance_2019:p34",
+        "cms_partd_dmp_guidance_2019:p36",
+        "cms_partd_dmp_guidance_2019:p37",
+        "cms_partd_dmp_guidance_2019:p38",
+        "cms_partd_dmp_guidance_2019:p4",
+        "cms_partd_dmp_guidance_2019:p5",
+        "cms_partd_dmp_guidance_2019:p6",
+        "cms_partd_dmp_guidance_2019:p7",
+        "cms_partd_dmp_guidance_2019:p8",
+        "cms_partd_dmp_guidance_2019:p9",
+        "cms_partd_opioid_pharmacists_2022:p1",
+        "cms_partd_opioid_pharmacists_2022:p2"
+      ],
+      "result": "[{\"doc_id\": \"cms_partd_opioid_pharmacists_2022\", \"page\": 2, \"program\": \"Medicare Part D\", \"authority\": \"summary_of_binding_policy\", \"date\": \"2022-12-19\", \"text\": \"Medicare Part D Opioid Policies: Information for Pharmacists > Drug Management Programs (DMPs)\\n[p 2]\\nAll Medicare Part D plans must have a DMP that limits access to opioids and/or benzodiazepines for enrollees considered by the plan to be at risk for prescription drug abuse or misuse. Enrollees are identified by opioid use involving multiple doctors and pharmacies or a recent history of opioid-related overdose, and undergo case management conducted by the plan with the enrollee's prescribers.\\nDMP limitations can include requiring the enrollee to obtain these medications from a specified prescriber and/or pharmacy, or implementing a enrollee-specific POS edit that limits the amount of these medications that will be covered. Before a limitation is implemented, the plan must give written notice to the enrollee, and an opportunity to tell the plan which prescribers or pharmacies they prefer to use or provide additional information that they think is relevant.\\nIf the plan decides to limit coverage under a DMP, the enrollee, their representative, or their prescriber have the right to appeal the plan's decision. Pharmacies are not expected to distribute the standardized CMS pharmacy notice Medicare Prescription Drug Coverage and Your Rights to the enrollee in response to a rejected claim due to a limitation under a DMP. The enrollee or prescriber should contact the plan for information on how to appeal.\", \"pages\": [2], \"section\": \"Medicare Part D Opioid Policies: Information for Pharmacists > Drug Management Programs (DMPs)\"}, {\"doc_id\": \"cms_partd_dmp_guidance_2019\", \"page\": 6, \"program\": \"Medicare Part D\", \"authority\": \"binding\", \"date\": \"2018-11-20\", \"text\": \"Part D Drug Management Program Policy Guidance (CY 2019) > III. FREQUENTLY ABUSED DRUGS (FADs) (42 CFR §423.100)\\n[p 6]\\nII. POTENTIAL AT-RISK BENEFICIARIES (PARBs) AND AT-RISK BENEFICIARIES (ARBs) (42 CFR §423.100)\\nA PARB is a beneficiary who meets the OMS criteria, or who was identified as a PARB by the sponsor of the beneficiary's immediately prior Part D plan under its DMP and such identification had not been terminated before disenrollment. (See below section, \\\"Overutilization Monitoring System (OMS) Criteria (Clinical Guidelines) / Estimated Program Size\\\").\\nFor purposes of this guidance, a PARB 1 refers to a beneficiary who meets the OMS criteria and is identified by CMS or a sponsor. A PARB 2 refers to a beneficiary about whom a new plan sponsor receives notice upon the beneficiary's enrollment through the MARx system that the beneficiary was identified as potentially at-risk by the immediately prior plan sponsor under its DMP, but a coverage limitation on FADs had not yet been implemented by the prior plan before the beneficiary disenrolled. (See below section, \\\"Limitations on Access to Coverage for FADs.\\\")\\nAn ARB is a beneficiary who meets the OMS criteria, is not exempted from DMPs, and is identified to be at-risk by their Part D plan sponsor under its DMP, or who was identified as an ARB by the sponsor of the beneficiary's immediately prior Part D plan under its DMP and such identification had not been terminated before disenrollment.\\nFor purposes of this guidance, an ARB 1 refers to a beneficiary who was identified as at-risk under their Part D plan's DMP. An ARB 2 refers to a beneficiary about whom a new plan sponsor receives notice upon the beneficiary's enrollment through MARx that the beneficiary was identified as at-risk by the immediately prior plan sponsor under its DMP and a coverage limitation(s) on FADs had been implemented by the prior plan before the beneficiary disenrolled.\\nSponsors receive notifications about PARB 2s and ARB 2s through MARx system. See below section, \\\"Data Disclosure.\\\"\\nA. Opioids and Benzodiazepines\\nOpioids (except buprenorphine for medication-assisted trea",
+      "search": {
+        "original_query": "Our old CMS memo says Part D drug management programs are optional and excludes buprenorphine for MAT. The newer sheet says every plan needs a DMP. Can the plan count this patient's Suboxone prescriber and pharmacy—and does that mean their OUD treatment should be blocked?",
+        "agent_query": "buprenorphine medication assisted treatment not included MME opioid safety edits Part D opioid policies pharmacists",
+        "executed": [
+          {
+            "source": "original",
+            "query": "Our old CMS memo says Part D drug management programs are optional and excludes buprenorphine for MAT. The newer sheet says every plan needs a DMP. Can the plan count this patient's Suboxone prescriber and pharmacy—and does that mean their OUD treatment should be blocked?",
+            "program": "Medicare Part D",
+            "k": 8,
+            "seconds": 2.238,
+            "cached": false,
+            "results": 8
+          },
+          {
+            "source": "agent",
+            "query": "buprenorphine medication assisted treatment not included MME opioid safety edits Part D opioid policies pharmacists",
+            "program": "Medicare Part D",
+            "k": 8,
+            "seconds": 1.204,
+            "cached": false,
+            "results": 8
+          }
+        ],
+        "duplicates_merged": 4,
+        "returned": 12,
+        "from_both": 4,
+        "from_original_only": 4,
+        "from_agent_only": 4,
+        "provenance": [
+          {
+            "unit": "cms_partd_opioid_pharmacists_2022:s2",
+            "found_by": {
+              "original": 1,
+              "agent": 7
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s3",
+            "found_by": {
+              "original": 4,
+              "agent": 4
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s1",
+            "found_by": {
+              "original": 6,
+              "agent": 6
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s10",
+            "found_by": {
+              "original": 7,
+              "agent": 8
+            }
+          },
+          {
+            "unit": "cms_partd_opioid_pharmacists_2022:s0",
+            "found_by": {
+              "agent": 1
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s0",
+            "found_by": {
+              "original": 2
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s4",
+            "found_by": {
+              "agent": 2
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s2",
+            "found_by": {
+              "original": 3
+            }
+          },
+          {
+            "unit": "cms_partd_opioid_pharmacists_2022:s1",
+            "found_by": {
+              "agent": 3
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s17",
+            "found_by": {
+              "original": 5
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s19",
+            "found_by": {
+              "agent": 5
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s15",
+            "found_by": {
+              "original": 8
+            }
+          }
+        ],
+        "hits": [
+          {
+            "unit": "cms_partd_opioid_pharmacists_2022:s2",
+            "doc_id": "cms_partd_opioid_pharmacists_2022",
+            "pages": [
+              2
+            ],
+            "ranks": {
+              "original": 1,
+              "agent": 7
+            },
+            "scores": {
+              "original": 0.3341,
+              "agent": 0.4543
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s3",
+            "doc_id": "cms_partd_dmp_guidance_2019",
+            "pages": [
+              6
+            ],
+            "ranks": {
+              "original": 4,
+              "agent": 4
+            },
+            "scores": {
+              "original": 0.0788,
+              "agent": 0.9263
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s1",
+            "doc_id": "cms_partd_dmp_guidance_2019",
+            "pages": [
+              3,
+              4
+            ],
+            "ranks": {
+              "original": 6,
+              "agent": 6
+            },
+            "scores": {
+              "original": 0.0549,
+              "agent": 0.5014
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s10",
+            "doc_id": "cms_partd_dmp_guidance_2019",
+            "pages": [
+              16,
+              17,
+              18
+            ],
+            "ranks": {
+              "original": 7,
+              "agent": 8
+            },
+            "scores": {
+              "original": 0.0376,
+              "agent": 0.4097
+            }
+          },
+          {
+            "unit": "cms_partd_opioid_pharmacists_2022:s0",
+            "doc_id": "cms_partd_opioid_pharmacists_2022",
+            "pages": [
+              1
+            ],
+            "ranks": {
+              "agent": 1
+            },
+            "scores": {
+              "agent": 0.9972
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s0",
+            "doc_id": "cms_partd_dmp_guidance_2019",
+            "pages": [
+              1,
+              2,
+              3
+            ],
+            "ranks": {
+              "original": 2
+            },
+            "scores": {
+              "original": 0.0945
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s4",
+            "doc_id": "cms_partd_dmp_guidance_2019",
+            "pages": [
+              7,
+              8,
+              9
+            ],
+            "ranks": {
+              "agent": 2
+            },
+            "scores": {
+              "agent": 0.9789
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s2",
+            "doc_id": "cms_partd_dmp_guidance_2019",
+            "pages": [
+              5
+            ],
+            "ranks": {
+              "original": 3
+            },
+            "scores": {
+              "original": 0.0921
+            }
+          },
+          {
+            "unit": "cms_partd_opioid_pharmacists_2022:s1",
+            "doc_id": "cms_partd_opioid_pharmacists_2022",
+            "pages": [
+              1,
+              2
+            ],
+            "ranks": {
+              "agent": 3
+            },
+            "scores": {
+              "agent": 0.9533
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s17",
+            "doc_id": "cms_partd_dmp_guidance_2019",
+            "pages": [
+              32,
+              33,
+              34
+            ],
+            "ranks": {
+              "original": 5
+            },
+            "scores": {
+              "original": 0.0685
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s19",
+            "doc_id": "cms_partd_dmp_guidance_2019",
+            "pages": [
+              36,
+              37,
+              38
+            ],
+            "ranks": {
+              "agent": 5
+            },
+            "scores": {
+              "agent": 0.8935
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s15",
+            "doc_id": "cms_partd_dmp_guidance_2019",
+            "pages": [
+              27,
+              28,
+              29,
+              30
+            ],
+            "ranks": {
+              "original": 8
+            },
+            "scores": {
+              "original": 0.025
+            }
+          }
+        ]
+      },
+      "t_start": 9.627
+    }
+  ],
+  "cited_evidence": {
+    "cms_partd_dmp_guidance_2019:p1": "cms_partd_dmp_guidance_2019 (Medicare Part D, binding, 2018-11-20)\nPart D Drug Management Program Policy Guidance (CY 2019) > Subject: Part D Drug Management Program Policy Guidance\n[p 1]\nDEPARTMENT OF HEALTH & HUMAN SERVICES\n7500 Security Boulevard\nBaltimore, Maryland 21244-1850\n_________________________________________________________________\nDate: November 20, 2018\nTo: All Part D sponsors\nFrom: Amy Larrick Chavez-Valdez Director, Medicare Drug Benefit and C&D Data Group\nSection 704 of the Comprehensive Addiction and Recovery Act (CARA) of 2016 included provisions permitting Part D sponsors to establish drug management programs (DMPs) for beneficiaries at-risk for misuse or abuse of frequently abused drugs (FADs). In a final rule (CMS-4182-F) published in the Federal Register on April 16, 2018 (\"final rule\"), CMS established the framework under which Part D sponsors may implement a DMP. This memorandum is intended to provide comprehensive policy guidance for implementation of DMPs. This document incorporates the extensive guidance CMS provided for DMPs in the final rule and provides additional detail.\nAlthough DMPs are voluntary under CARA, given the current national opioid epidemic and based on Part D sponsors' CY 2019 Opioid Template Submissions, we are pleased that most sponsors will implement DMPs in 2019. We also note that the SUPPORT for Patients and Communities Act, enacted on October 24, 2018, requires all Part D sponsors to have a DMP for plan years beginning on or after January 1, 2022.\nUnder DMPs, Part D sponsors are required to communicate in writing with beneficiaries for whom they intend to limit access to FADs. CMS has developed and beneficiary-tested standardized notices for this purpose. Currently, these notices are pending approval at the Office of Management and Budget (OMB). Part D sponsors will be required to use these notices for their DMPs and may not develop their own. In the meantime, sponsors with DMPs in 2019 must implement their programs beginning January 1 and move forward with those aspects of the programs that can be completed without the notices. Once available, sponsors may issue notices and implement coverage limitations. Because CMS understands it may take some time for sponsors to update their systems with the approved notice language, sponsors will have up to 90 days following the release of the standardized notices to fully implement aspects of their programs requiring the notices.\nIn practical terms, these circumstances mean that: 1) CMS will provide sponsors with quarterly Overutilization Monitoring System (OMS) reports of potential at-risk beneficiaries (PARBs); 2) sponsors may identify PARBs by applying the minimum or supplemental OMS criteria on their own; and 3) sponsors will engage in case management. We remind sponsors that the data CMS has previously shared publicly about impact of the Part D overutilization/OMS policy have demonstrated that the significant reduction in opioid overutilization in the program has been due mostly to case management, and to a much lesser extent, because of coverage limitations (e.g., beneficiary-specific POS claim edits). For OMS cases that are not resolved and in which sponsors intend to implement a coverage limitation on access to coverage of FADs to achieve resolution, sponsors may continue to respond to OMS that the cases are \"Initial Review In Progress.\" (See also the OMS technical guidance referenced below). Sponsors must not notify a beneficiary that they intend to implement a coverage limitation until the notices are released by CMS. 1\n[p 2]\nIn addition to the final rule, by the end of today, this implementation guidance and the 2019 OMS technical guidance for DMPs will be available on the CMS Part D Overutilization website at: https://www.cms.gov/Medicare/Prescription-Drugcoverage/PrescriptionDrugCovContra/RxUtilization.html.\nThe updated MAPD Plan Communications User Guide (PCUG), including technical guidance for submitting DMP information to the MARx system, will be released on or about November 30, 2018. Please reference the MAPD Plan Communications User Guide (PCUG) page for the updated Guide: https://www.cms.gov/Research-Statistics-Data-and-Systems/CMS-InformationTechnology/mapdhelpdesk/Plan_Communications_User_Guide.html. A link to the MAPD PCUG page will also be available on the CMS Part D Overutilization website once released.\nEnrollment guidance, including information on the special enrollment period (SEP) limitation, can be found at the following links: Medicare Managed Care Manual -\nhttp://www.cms.gov/Medicare/Eligibility-and-\nEnrollment/MedicareMangCareEligEnrol/index.html and Medicare Prescription Drug Benefit Manual - https://www.cms.gov/Medicare/Eligibility-and-\nEnrollment/MedicarePresDrugEligEnrol/index.html. Guidance concerning appeals of at-risk determinations will be provided in the Parts C & D Enrollee Grievances, Organization/Coverage Determinations, and Appeals Guidance.\nWe appreciate the diligent efforts of Part D sponsors to implement drug management programs in 2019. Questions about DMPs may be submitted to PartD_OM@cms.hhs.gov.\n1 Additionally, sponsors will not submit information concerning coverage limitations to the Medicare Advantage Prescription Drug (MARx) system until notification occurs, and therefore there can be no limitations on the use of the special enrollment period (SEP) for dually- or other low income subsidy (LIS)-eligible beneficiaries pursuant to DMPs until the notices become available.\n[p 3]\nPART D DRUG MANAGEMENT PROGRAMS\nNovember 20, 2018",
+    "cms_partd_dmp_guidance_2019:p6": "cms_partd_dmp_guidance_2019 (Medicare Part D, binding, 2018-11-20)\nPart D Drug Management Program Policy Guidance (CY 2019) > III. FREQUENTLY ABUSED DRUGS (FADs) (42 CFR §423.100)\n[p 6]\nII. POTENTIAL AT-RISK BENEFICIARIES (PARBs) AND AT-RISK BENEFICIARIES (ARBs) (42 CFR §423.100)\nA PARB is a beneficiary who meets the OMS criteria, or who was identified as a PARB by the sponsor of the beneficiary's immediately prior Part D plan under its DMP and such identification had not been terminated before disenrollment. (See below section, \"Overutilization Monitoring System (OMS) Criteria (Clinical Guidelines) / Estimated Program Size\").\nFor purposes of this guidance, a PARB 1 refers to a beneficiary who meets the OMS criteria and is identified by CMS or a sponsor. A PARB 2 refers to a beneficiary about whom a new plan sponsor receives notice upon the beneficiary's enrollment through the MARx system that the beneficiary was identified as potentially at-risk by the immediately prior plan sponsor under its DMP, but a coverage limitation on FADs had not yet been implemented by the prior plan before the beneficiary disenrolled. (See below section, \"Limitations on Access to Coverage for FADs.\")\nAn ARB is a beneficiary who meets the OMS criteria, is not exempted from DMPs, and is identified to be at-risk by their Part D plan sponsor under its DMP, or who was identified as an ARB by the sponsor of the beneficiary's immediately prior Part D plan under its DMP and such identification had not been terminated before disenrollment.\nFor purposes of this guidance, an ARB 1 refers to a beneficiary who was identified as at-risk under their Part D plan's DMP. An ARB 2 refers to a beneficiary about whom a new plan sponsor receives notice upon the beneficiary's enrollment through MARx that the beneficiary was identified as at-risk by the immediately prior plan sponsor under its DMP and a coverage limitation(s) on FADs had been implemented by the prior plan before the beneficiary disenrolled.\nSponsors receive notifications about PARB 2s and ARB 2s through MARx system. See below section, \"Data Disclosure.\"\nA. Opioids and Benzodiazepines\nOpioids (except buprenorphine for medication-assisted treatment (MAT) and injectables) and benzodiazepines are FADs for purposes of Part D DMPs for plan year 2019. This means that methadone for pain is included in the definition of a FAD for purposes of Part D DMPs. Please note that CMS uses prescriptions opioids, including all formulations of buprenorphine for pain and MAT, to determine opioid prescribers and opioid dispensing pharmacies in the OMS criteria. (See below section, \"Overutilization Monitoring System (OMS) Criteria (Clinical Guidelines) / Estimated Program Size\"). Please also consult final Medicare Parts C&D Call Letters for any changes in the drugs that CMS determines to be FADs for purposes of Part D DMPs for plan years 2020 and beyond.)\nB. Additional Information about Benzodiazepines\nIt is also important to note that the 2019 OMS criteria only consider opioid use, and not benzodiazepines, for purposes of identifying PARBs. However, CMS will continue to flag PARBs through OMS who have concurrent opioid and benzodiazepine use to assist sponsors in determining whether such use is an issue, and if so, addressing such use through their DMPs. This means that a beneficiary who is determined to be at-risk based on OMS criteria that look at the beneficiary's opioid use could have a coverage limitation applied under a DMP to both opioids and benzodiazepines to manage current and future concurrent use. For example, a sponsor could require an ARB to obtain both opioids and benzodiazepines from one selected pharmacy. (See next sections, \"Overutilization Monitoring System (Oms) Criteria (Clinical Guidelines) / Estimated Program Size\" and \"Requirements for Implementing Limitations on an ARB's Access to Coverage for FADs\").",
+    "cms_partd_dmp_guidance_2019:p7": "cms_partd_dmp_guidance_2019 (Medicare Part D, binding, 2018-11-20)\nPart D Drug Management Program Policy Guidance (CY 2019) > IV. OVERUTILIZATION MONITORING SYSTEM (OMS) CRITERIA (CLINICAL GUIDELINES) / ESTIMATED PROGRAM SIZE (42 CFR §§423.100 and 423.153(f)(16))\n[p 7]\nIt is possible for a sponsor to apply a limitation only on an ARB's access to coverage for benzodiazepines. CMS expects to see this happen rarely in practice, however, because the ARB would have to have met the OMS criteria, which look at opioid use that is potentially risky. Nevertheless, we acknowledge that prescriber agreement during case management could lead to such an outcome on occasion. For example, if no opioid prescriber agrees to a beneficiaryspecific POS claim edit for opioids, but all but one state they will no longer prescribe opioids to the beneficiary, then a limit on coverage of opioids may not be necessary. However, the benzodiazepine prescriber agrees to such an edit for benzodiazepines.\nIf a sponsor implements a coverage limitation for both opioids and benzodiazepines, the sponsor may have to permit the ARB to obtain FADs from more than one pharmacy and/or more than one prescriber in order to provide reasonable access. (See section further below, \"Reasonable Access Considerations.\")\nOMS refers to the system that reports PARBs to sponsors and which sponsors use to provide updates on each case to CMS. CMS uses the term \"OMS criteria\" instead of the statutory term \"clinical guidelines\" for purposes of describing the standards used to identify individuals to be included in DMPs. We will develop future OMS criteria through the annual Medicare Parts C&D Call Letter process which allows for stakeholder input by applying the standards in 42 CFR 423.153(f)(16). Therefore, please consult proposed and final Call letters for any changes in the OMS criteria and program size for plan years 2020 and beyond. Please also refer to the Section \"Data Disclosure\" below for information about OMS reports.\nA. OMS Criteria are not Dosing Limits\nThe OMS criteria identify the Part D beneficiaries whom CMS believes are at the highest risk of adverse events or overdose due to their level of opioid use and/or obtaining them from multiple prescribers/pharmacies. The OMS criteria are not to be used as a maximum threshold for prescribing opioids or meant to imply that a lower dosage is universally safe. Rather, in the absence of dosing limits in the FDA-approved labeling for opioids, we are using the Centers for Disease Control and Prevention (CDC) Guideline for Prescribing Opioids for Chronic Pain 2 to establish a threshold to identify PARBs who may benefit from better care coordination / closer monitoring and to create alignment between Government programs. Under DMPs, decisions about the amount of FADs an ARB should receive are made by the beneficiary's prescriber(s), and only in limited cases may the amount be set by the Part D sponsor through a beneficiary point-of-sale claim edit when no prescriber is responsive to the DMP's efforts to make clinical contact during case management. (See below sections, \"Case Management / Clinical Contact / Prescriber Verification\" and \"Requirements for Implementing Limitations on an ARB's Access to Coverage for FADs.\")\n[p 8]\nB. Minimum and Supplemental OMS Criteria\nThe OMS criteria and estimated program size for plan year 2019 are in Table 1. Part D sponsors may not vary the OMS criteria.\n2 See https://www.cdc.gov/drugoverdose/prescribing/guideline.html.\n[p 9]\nTABLE 1: 2019 CLINICAL GUIDELINES / OMS CRITERIA* FOR IDENTIFYING PARBs\n[Table] (PDF page 9)\nColumns: Minimum Criteria Applied (Sponsors with Drug Management Programs Must Review) | Impact to Part D Program\nUse of opioids with average daily MME > 90 mg for any duration during the most recent 6 months and either: 3+ opioid prescribers AND 3+ opioid dispensing pharmacies OR 5+ opioid prescribers (regardless of the number of opioid dispensing pharmacies) Prescribers associated with the same single Tax Identification Numbers (TIN) are counted as a single prescriber. Pharmacies with multiple locations that share real-time data are counted as one pharmacy. | 44,332 beneficiaries in 2017 (69.9% were LIS) Represents 0.10% of 45,218,211 Part D beneficiaries in 2017 LTC beneficiaries included in estimate but are exempt. Estimate does not include pharmacies grouped as one pharmacy; CMS does not have system capability.\nSupplemental Criteria Applied (Sponsors with Drug Management Programs May Review as Many as Manageable) | Impact to Part D Program\nUse of opioids (regardless of average daily MME) during the most recent 6 months and: 7+ opioid prescribers OR 7+ opioid dispensing pharmacies Prescribers associated with the same single Tax Identification Numbers (TIN) are counted as a single prescriber. Pharmacies with multiple locations that share real-time data are counted as one pharmacy. | 22,841** beneficiaries in 2017 (77.8% were LIS) Represents 0.05% of 45,218,211 Part D beneficiaries in 2017 LTC beneficiaries included in estimate but are exempt. Estimate does not include pharmacies grouped as one pharmacy; CMS does not have system capability.\nTable note: * Benzodiazepines are a FAD for purposes of Part D DMPs but are not a factor in these clinical guidelines/OMS criteria. Buprenorphine products are not used to determine the beneficiary's average daily MME. However, prescription opioids including all formulations of buprenorphine for pain and MAT, are used to determine opioid prescribers and opioid dispensing pharmacies under the minimum criteria. Similarly, sponsors must include all prescription opioids, including all buprenorphine products, to determine opioid prescribers and opioid dispensing pharmacies under the supplemental criteria.\nTable note: ** Note: A total of 25,480 beneficiaries met the supplemental criteria alone. The estimate is 22,841 beneficiaries after removing duplicate beneficiaries already identified by the minimum criteria.\n* Benz",
+    "cms_partd_opioid_pharmacists_2022:p1": "cms_partd_opioid_pharmacists_2022 (Medicare Part D, summary_of_binding_policy, 2022-12-19)\nMedicare Part D Opioid Policies: Information for Pharmacists\n[p 1]\nMedicare Part D opioid policies include safety edits when opioid prescriptions are dispensed at the pharmacy and drug management programs for Part D enrollees at risk for misuse or abuse of opioids and/or benzodiazepines.\nResidents of long-term care facilities, those in hospice care, enrollees receiving palliative or end-of-life care, and enrollees being treated for active cancer-related pain or sickle cell disease are exempt from these interventions. Enrollee access to medication-assisted treatment (MAT), such as buprenorphine, should not be impacted.\n\ncms_partd_opioid_pharmacists_2022 (Medicare Part D, summary_of_binding_policy, 2022-12-19)\nMedicare Part D Opioid Policies: Information for Pharmacists > Opioid Safety Edits\n[p 1]\nImportant Note(s):\nCMS expects Part D plan sponsors to have a mechanism in place which allows all opioid safety alerts, including hard edits, to be overridden at point of sale (POS) at the pharmacy based on information from the prescriber or otherwise known to the pharmacy that an enrollee is exempt.\nMorphine Milligram Equivalent (MME) thresholds and days supply limits are not prescribing limits. The enrollee or their prescriber can request an expedited or standard coverage determination from the plan for approval of higher amounts or a longer days supply. This can be done in advance of the prescription.\nOpioid Safety Edit\nPharmacist's Role\nOpioid care coordination edit at 90 morphine milligram equivalent (MME)\nProvide information to the plan for override if known to pharmacist that enrollee has an exemption (discussed above) or if prescriber has recently been consulted and the pharmacist has up to date clinical information. Overrides may be communicated at POS.\nÎ This edit triggers when an enrollee's cumulative MME per day across their opioid prescription(s) reaches or exceeds 90 MME.\nOutside of a known exclusion or the COVID-19 waiver, when the care coordination edit is triggered, consult with the enrollee's prescriber to confirm intent. The consultation should be consistent with current pharmacy practice to verify the prescription and to validate its clinical appropriateness. This is an opportunity to inform the prescriber of other opioid prescribers or increasing amounts of opioids.\nÎ Some plans have this alert only when the enrollee uses multiple opioid prescribers and/or opioid dispensing pharmacies.\nÎ If the pharmacist recently consulted with the prescriber and has up to date clinical information (e.g., Prescription Drug Monitoring Program (PDMP) system or other records), additional consultation with the prescriber is not expected.\nDocument the discussion and submit the appropriate override code. The documentation may include the date, time, name of prescriber, and brief note that the prescriber confirmed intent, did not confirm intent, provided information on enrollee exclusion, or could not be reached after 'X' number of attempts.\nÎ Due to the increased burden on the healthcare system as a result of the COVID-19 pandemic, plans may waive requirements for pharmacist consultation with the prescriber to confirm intent.\nIf the issue is not resolved at the POS and the prescription cannot be filled as written, distribute a copy of the standardized CMS pharmacy notice Medicare Prescription Drug Coverage and Your Rights to the enrollee.\n[p 2]\nOpioid Safety Edit\nPharmacist's Role\nOptional Hard Edit at 200 MME or more\nProvide information to the plan for override if known to pharmacist that enrollee has an exemption (discussed above). Overrides for exemptions from the safety edit may be communicated at POS with a transaction code or by contacting the plan directly.\nÎ Some plans may implement a hard edit when a enrollee's cumulative opioid daily dosage reaches 200 MME or more.\nIf the issue is not resolved at the POS and the prescription cannot be filled as written, distribute a copy of the standardized CMS pharmacy notice Medicare Prescription Drug Coverage and Your Rights to the enrollee.\nÎ Some plans have this alert only when the enrollee has multiple opioid prescribers and/or opioid dispensing pharmacies.\nSeven-day supply limit for opioid naïve enrollees (hard edit)\nProvide information to the plan for override if known to pharmacist that enrollee has an exemption (discussed above) or is currently taking opioids. Overrides may be communicated at POS with a transaction code or by contacting the plan directly.\nÎ Medicare Part D enrollees who have not filled an opioid prescription recently will be limited to a supply of 7 days or less.\nIf no override, enrollee may receive up to a 7 days supply or request a coverage determination for full days supply as written.\nÎ Subsequent prescriptions filled during the plan's review window (generally 60-90 days) will not be subject to the 7 days supply limit.\nIf the issue is not resolved at the POS and the prescription cannot be filled as written, including when the full days supply is not dispensed, distribute a copy of the standardized CMS pharmacy notice Medicare Prescription Drug Coverage and Your Rights to the enrollee.\nÎ This edit should not impact enrollees who already take opioids, but may occur for enrollees who enroll in a new plan that does not know their current prescription information.\nConcurrent opioid and benzodiazepine use or duplicative long-acting opioid therapy (soft edits)\nConduct additional safety review to determine if the enrollee's medication use is safe and clinically appropriate.\nÎ These soft edits will trigger when the enrollee is taking opioids and benzodiazepines concurrently or is taking multiple long-acting opioids.\nIf the issue is not resolved at the POS and the prescription cannot be filled as written, distribute a copy of the standardized CMS pharmacy notice Medicare Prescription Drug Coverage and Your Rights to the enrollee.",
+    "cms_partd_opioid_pharmacists_2022:p2": "cms_partd_opioid_pharmacists_2022 (Medicare Part D, summary_of_binding_policy, 2022-12-19)\nMedicare Part D Opioid Policies: Information for Pharmacists > Drug Management Programs (DMPs)\n[p 2]\nAll Medicare Part D plans must have a DMP that limits access to opioids and/or benzodiazepines for enrollees considered by the plan to be at risk for prescription drug abuse or misuse. Enrollees are identified by opioid use involving multiple doctors and pharmacies or a recent history of opioid-related overdose, and undergo case management conducted by the plan with the enrollee's prescribers.\nDMP limitations can include requiring the enrollee to obtain these medications from a specified prescriber and/or pharmacy, or implementing a enrollee-specific POS edit that limits the amount of these medications that will be covered. Before a limitation is implemented, the plan must give written notice to the enrollee, and an opportunity to tell the plan which prescribers or pharmacies they prefer to use or provide additional information that they think is relevant.\nIf the plan decides to limit coverage under a DMP, the enrollee, their representative, or their prescriber have the right to appeal the plan's decision. Pharmacies are not expected to distribute the standardized CMS pharmacy notice Medicare Prescription Drug Coverage and Your Rights to the enrollee in response to a rejected claim due to a limitation under a DMP. The enrollee or prescriber should contact the plan for information on how to appeal.\n\ncms_partd_opioid_pharmacists_2022 (Medicare Part D, summary_of_binding_policy, 2022-12-19)\nMedicare Part D Opioid Policies: Information for Pharmacists > Drug Management Programs (DMPs)\n[p 2]\nAll Medicare Part D plans must have a DMP that limits access to opioids and/or benzodiazepines for enrollees considered by the plan to be at risk for prescription drug abuse or misuse. Enrollees are identified by opioid use involving multiple doctors and pharmacies or a recent history of opioid-related overdose, and undergo case management conducted by the plan with the enrollee's prescribers.\nDMP limitations can include requiring the enrollee to obtain these medications from a specified prescriber and/or pharmacy, or implementing a enrollee-specific POS edit that limits the amount of these medications that will be covered. Before a limitation is implemented, the plan must give written notice to the enrollee, and an opportunity to tell the plan which prescribers or pharmacies they prefer to use or provide additional information that they think is relevant.\nIf the plan decides to limit coverage under a DMP, the enrollee, their representative, or their prescriber have the right to appeal the plan's decision. Pharmacies are not expected to distribute the standardized CMS pharmacy notice Medicare Prescription Drug Coverage and Your Rights to the enrollee in response to a rejected claim due to a limitation under a DMP. The enrollee or prescriber should contact the plan for information on how to appeal.\n\ncms_partd_opioid_pharmacists_2022 (Medicare Part D, summary_of_binding_policy, 2022-12-19)\nMedicare Part D Opioid Policies: Information for Pharmacists > Opioid Safety Edits\n[p 1]\nImportant Note(s):\nCMS expects Part D plan sponsors to have a mechanism in place which allows all opioid safety alerts, including hard edits, to be overridden at point of sale (POS) at the pharmacy based on information from the prescriber or otherwise known to the pharmacy that an enrollee is exempt.\nMorphine Milligram Equivalent (MME) thresholds and days supply limits are not prescribing limits. The enrollee or their prescriber can request an expedited or standard coverage determination from the plan for approval of higher amounts or a longer days supply. This can be done in advance of the prescription.\nOpioid Safety Edit\nPharmacist's Role\nOpioid care coordination edit at 90 morphine milligram equivalent (MME)\nProvide information to the plan for override if known to pharmacist that enrollee has an exemption (discussed above) or if prescriber has recently been consulted and the pharmacist has up to date clinical information. Overrides may be communicated at POS.\nÎ This edit triggers when an enrollee's cumulative MME per day across their opioid prescription(s) reaches or exceeds 90 MME.\nOutside of a known exclusion or the COVID-19 waiver, when the care coordination edit is triggered, consult with the enrollee's prescriber to confirm intent. The consultation should be consistent with current pharmacy practice to verify the prescription and to validate its clinical appropriateness. This is an opportunity to inform the prescriber of other opioid prescribers or increasing amounts of opioids.\nÎ Some plans have this alert only when the enrollee uses multiple opioid prescribers and/or opioid dispensing pharmacies.\nÎ If the pharmacist recently consulted with the prescriber and has up to date clinical information (e.g., Prescription Drug Monitoring Program (PDMP) system or other records), additional consultation with the prescriber is not expected.\nDocument the discussion and submit the appropriate override code. The documentation may include the date, time, name of prescriber, and brief note that the prescriber confirmed intent, did not confirm intent, provided information on enrollee exclusion, or could not be reached after 'X' number of attempts.\nÎ Due to the increased burden on the healthcare system as a result of the COVID-19 pandemic, plans may waive requirements for pharmacist consultation with the prescriber to confirm intent.\nIf the issue is not resolved at the POS and the prescription cannot be filled as written, distribute a copy of the standardized CMS pharmacy notice Medicare Prescription Drug Coverage and Your Rights to the enrollee.\n[p 2]\nOpioid Safety Edit\nPharmacist's Role\nOptional Hard Edit at 200 MME or more\nProvide information to the plan for override if known to pharmacist that enrollee has an exemption (discussed above). Overrides for"
+  },
+  "cited_evidence_parts": {
+    "cms_partd_dmp_guidance_2019:p1": [
+      "cms_partd_dmp_guidance_2019 (Medicare Part D, binding, 2018-11-20)\nPart D Drug Management Program Policy Guidance (CY 2019) > Subject: Part D Drug Management Program Policy Guidance\n[p 1]\nDEPARTMENT OF HEALTH & HUMAN SERVICES\n7500 Security Boulevard\nBaltimore, Maryland 21244-1850\n_________________________________________________________________\nDate: November 20, 2018\nTo: All Part D sponsors\nFrom: Amy Larrick Chavez-Valdez Director, Medicare Drug Benefit and C&D Data Group\nSection 704 of the Comprehensive Addiction and Recovery Act (CARA) of 2016 included provisions permitting Part D sponsors to establish drug management programs (DMPs) for beneficiaries at-risk for misuse or abuse of frequently abused drugs (FADs). In a final rule (CMS-4182-F) published in the Federal Register on April 16, 2018 (\"final rule\"), CMS established the framework under which Part D sponsors may implement a DMP. This memorandum is intended to provide comprehensive policy guidance for implementation of DMPs. This document incorporates the extensive guidance CMS provided for DMPs in the final rule and provides additional detail.\nAlthough DMPs are voluntary under CARA, given the current national opioid epidemic and based on Part D sponsors' CY 2019 Opioid Template Submissions, we are pleased that most sponsors will implement DMPs in 2019. We also note that the SUPPORT for Patients and Communities Act, enacted on October 24, 2018, requires all Part D sponsors to have a DMP for plan years beginning on or after January 1, 2022.\nUnder DMPs, Part D sponsors are required to communicate in writing with beneficiaries for whom they intend to limit access to FADs. CMS has developed and beneficiary-tested standardized notices for this purpose. Currently, these notices are pending approval at the Office of Management and Budget (OMB). Part D sponsors will be required to use these notices for their DMPs and may not develop their own. In the meantime, sponsors with DMPs in 2019 must implement their programs beginning January 1 and move forward with those aspects of the programs that can be completed without the notices. Once available, sponsors may issue notices and implement coverage limitations. Because CMS understands it may take some time for sponsors to update their systems with the approved notice language, sponsors will have up to 90 days following the release of the standardized notices to fully implement aspects of their programs requiring the notices.\nIn practical terms, these circumstances mean that: 1) CMS will provide sponsors with quarterly Overutilization Monitoring System (OMS) reports of potential at-risk beneficiaries (PARBs); 2) sponsors may identify PARBs by applying the minimum or supplemental OMS criteria on their own; and 3) sponsors will engage in case management. We remind sponsors that the data CMS has previously shared publicly about impact of the Part D overutilization/OMS policy have demonstrated that the significant reduction in opioid overutilization in the program has been due mostly to case management, and to a much lesser extent, because of coverage limitations (e.g., beneficiary-specific POS claim edits). For OMS cases that are not resolved and in which sponsors intend to implement a coverage limitation on access to coverage of FADs to achieve resolution, sponsors may continue to respond to OMS that the cases are \"Initial Review In Progress.\" (See also the OMS technical guidance referenced below). Sponsors must not notify a beneficiary that they intend to implement a coverage limitation until the notices are released by CMS. 1\n[p 2]\nIn addition to the final rule, by the end of today, this implementation guidance and the 2019 OMS technical guidance for DMPs will be available on the CMS Part D Overutilization website at: https://www.cms.gov/Medicare/Prescription-Drugcoverage/PrescriptionDrugCovContra/RxUtilization.html.\nThe updated MAPD Plan Communications User Guide (PCUG), including technical guidance for submitting DMP information to the MARx system, will be released on or about November 30, 2018. Please reference the MAPD Plan Communications User Guide (PCUG) page for the updated Guide: https://www.cms.gov/Research-Statistics-Data-and-Systems/CMS-InformationTechnology/mapdhelpdesk/Plan_Communications_User_Guide.html. A link to the MAPD PCUG page will also be available on the CMS Part D Overutilization website once released.\nEnrollment guidance, including information on the special enrollment period (SEP) limitation, can be found at the following links: Medicare Managed Care Manual -\nhttp://www.cms.gov/Medicare/Eligibility-and-\nEnrollment/MedicareMangCareEligEnrol/index.html and Medicare Prescription Drug Benefit Manual - https://www.cms.gov/Medicare/Eligibility-and-\nEnrollment/MedicarePresDrugEligEnrol/index.html. Guidance concerning appeals of at-risk determinations will be provided in the Parts C & D Enrollee Grievances, Organization/Coverage Determinations, and Appeals Guidance.\nWe appreciate the diligent efforts of Part D sponsors to implement drug management programs in 2019. Questions about DMPs may be submitted to PartD_OM@cms.hhs.gov.\n1 Additionally, sponsors will not submit information concerning coverage limitations to the Medicare Advantage Prescription Drug (MARx) system until notification occurs, and therefore there can be no limitations on the use of the special enrollment period (SEP) for dually- or other low income subsidy (LIS)-eligible beneficiaries pursuant to DMPs until the notices become available.\n[p 3]\nPART D DRUG MANAGEMENT PROGRAMS\nNovember 20, 2018"
+    ],
+    "cms_partd_dmp_guidance_2019:p6": [
+      "cms_partd_dmp_guidance_2019 (Medicare Part D, binding, 2018-11-20)\nPart D Drug Management Program Policy Guidance (CY 2019) > III. FREQUENTLY ABUSED DRUGS (FADs) (42 CFR §423.100)\n[p 6]\nII. POTENTIAL AT-RISK BENEFICIARIES (PARBs) AND AT-RISK BENEFICIARIES (ARBs) (42 CFR §423.100)\nA PARB is a beneficiary who meets the OMS criteria, or who was identified as a PARB by the sponsor of the beneficiary's immediately prior Part D plan under its DMP and such identification had not been terminated before disenrollment. (See below section, \"Overutilization Monitoring System (OMS) Criteria (Clinical Guidelines) / Estimated Program Size\").\nFor purposes of this guidance, a PARB 1 refers to a beneficiary who meets the OMS criteria and is identified by CMS or a sponsor. A PARB 2 refers to a beneficiary about whom a new plan sponsor receives notice upon the beneficiary's enrollment through the MARx system that the beneficiary was identified as potentially at-risk by the immediately prior plan sponsor under its DMP, but a coverage limitation on FADs had not yet been implemented by the prior plan before the beneficiary disenrolled. (See below section, \"Limitations on Access to Coverage for FADs.\")\nAn ARB is a beneficiary who meets the OMS criteria, is not exempted from DMPs, and is identified to be at-risk by their Part D plan sponsor under its DMP, or who was identified as an ARB by the sponsor of the beneficiary's immediately prior Part D plan under its DMP and such identification had not been terminated before disenrollment.\nFor purposes of this guidance, an ARB 1 refers to a beneficiary who was identified as at-risk under their Part D plan's DMP. An ARB 2 refers to a beneficiary about whom a new plan sponsor receives notice upon the beneficiary's enrollment through MARx that the beneficiary was identified as at-risk by the immediately prior plan sponsor under its DMP and a coverage limitation(s) on FADs had been implemented by the prior plan before the beneficiary disenrolled.\nSponsors receive notifications about PARB 2s and ARB 2s through MARx system. See below section, \"Data Disclosure.\"\nA. Opioids and Benzodiazepines\nOpioids (except buprenorphine for medication-assisted treatment (MAT) and injectables) and benzodiazepines are FADs for purposes of Part D DMPs for plan year 2019. This means that methadone for pain is included in the definition of a FAD for purposes of Part D DMPs. Please note that CMS uses prescriptions opioids, including all formulations of buprenorphine for pain and MAT, to determine opioid prescribers and opioid dispensing pharmacies in the OMS criteria. (See below section, \"Overutilization Monitoring System (OMS) Criteria (Clinical Guidelines) / Estimated Program Size\"). Please also consult final Medicare Parts C&D Call Letters for any changes in the drugs that CMS determines to be FADs for purposes of Part D DMPs for plan years 2020 and beyond.)\nB. Additional Information about Benzodiazepines\nIt is also important to note that the 2019 OMS criteria only consider opioid use, and not benzodiazepines, for purposes of identifying PARBs. However, CMS will continue to flag PARBs through OMS who have concurrent opioid and benzodiazepine use to assist sponsors in determining whether such use is an issue, and if so, addressing such use through their DMPs. This means that a beneficiary who is determined to be at-risk based on OMS criteria that look at the beneficiary's opioid use could have a coverage limitation applied under a DMP to both opioids and benzodiazepines to manage current and future concurrent use. For example, a sponsor could require an ARB to obtain both opioids and benzodiazepines from one selected pharmacy. (See next sections, \"Overutilization Monitoring System (Oms) Criteria (Clinical Guidelines) / Estimated Program Size\" and \"Requirements for Implementing Limitations on an ARB's Access to Coverage for FADs\")."
+    ],
+    "cms_partd_dmp_guidance_2019:p7": [
+      "cms_partd_dmp_guidance_2019 (Medicare Part D, binding, 2018-11-20)\nPart D Drug Management Program Policy Guidance (CY 2019) > IV. OVERUTILIZATION MONITORING SYSTEM (OMS) CRITERIA (CLINICAL GUIDELINES) / ESTIMATED PROGRAM SIZE (42 CFR §§423.100 and 423.153(f)(16))\n[p 7]\nIt is possible for a sponsor to apply a limitation only on an ARB's access to coverage for benzodiazepines. CMS expects to see this happen rarely in practice, however, because the ARB would have to have met the OMS criteria, which look at opioid use that is potentially risky. Nevertheless, we acknowledge that prescriber agreement during case management could lead to such an outcome on occasion. For example, if no opioid prescriber agrees to a beneficiaryspecific POS claim edit for opioids, but all but one state they will no longer prescribe opioids to the beneficiary, then a limit on coverage of opioids may not be necessary. However, the benzodiazepine prescriber agrees to such an edit for benzodiazepines.\nIf a sponsor implements a coverage limitation for both opioids and benzodiazepines, the sponsor may have to permit the ARB to obtain FADs from more than one pharmacy and/or more than one prescriber in order to provide reasonable access. (See section further below, \"Reasonable Access Considerations.\")\nOMS refers to the system that reports PARBs to sponsors and which sponsors use to provide updates on each case to CMS. CMS uses the term \"OMS criteria\" instead of the statutory term \"clinical guidelines\" for purposes of describing the standards used to identify individuals to be included in DMPs. We will develop future OMS criteria through the annual Medicare Parts C&D Call Letter process which allows for stakeholder input by applying the standards in 42 CFR 423.153(f)(16). Therefore, please consult proposed and final Call letters for any changes in the OMS criteria and program size for plan years 2020 and beyond. Please also refer to the Section \"Data Disclosure\" below for information about OMS reports.\nA. OMS Criteria are not Dosing Limits\nThe OMS criteria identify the Part D beneficiaries whom CMS believes are at the highest risk of adverse events or overdose due to their level of opioid use and/or obtaining them from multiple prescribers/pharmacies. The OMS criteria are not to be used as a maximum threshold for prescribing opioids or meant to imply that a lower dosage is universally safe. Rather, in the absence of dosing limits in the FDA-approved labeling for opioids, we are using the Centers for Disease Control and Prevention (CDC) Guideline for Prescribing Opioids for Chronic Pain 2 to establish a threshold to identify PARBs who may benefit from better care coordination / closer monitoring and to create alignment between Government programs. Under DMPs, decisions about the amount of FADs an ARB should receive are made by the beneficiary's prescriber(s), and only in limited cases may the amount be set by the Part D sponsor through a beneficiary point-of-sale claim edit when no prescriber is responsive to the DMP's efforts to make clinical contact during case management. (See below sections, \"Case Management / Clinical Contact / Prescriber Verification\" and \"Requirements for Implementing Limitations on an ARB's Access to Coverage for FADs.\")\n[p 8]\nB. Minimum and Supplemental OMS Criteria\nThe OMS criteria and estimated program size for plan year 2019 are in Table 1. Part D sponsors may not vary the OMS criteria.\n2 See https://www.cdc.gov/drugoverdose/prescribing/guideline.html.\n[p 9]\nTABLE 1: 2019 CLINICAL GUIDELINES / OMS CRITERIA* FOR IDENTIFYING PARBs\n[Table] (PDF page 9)\nColumns: Minimum Criteria Applied (Sponsors with Drug Management Programs Must Review) | Impact to Part D Program\nUse of opioids with average daily MME > 90 mg for any duration during the most recent 6 months and either: 3+ opioid prescribers AND 3+ opioid dispensing pharmacies OR 5+ opioid prescribers (regardless of the number of opioid dispensing pharmacies) Prescribers associated with the same single Tax Identification Numbers (TIN) are counted as a single prescriber. Pharmacies with multiple locations that share real-time data are counted as one pharmacy. | 44,332 beneficiaries in 2017 (69.9% were LIS) Represents 0.10% of 45,218,211 Part D beneficiaries in 2017 LTC beneficiaries included in estimate but are exempt. Estimate does not include pharmacies grouped as one pharmacy; CMS does not have system capability.\nSupplemental Criteria Applied (Sponsors with Drug Management Programs May Review as Many as Manageable) | Impact to Part D Program\nUse of opioids (regardless of average daily MME) during the most recent 6 months and: 7+ opioid prescribers OR 7+ opioid dispensing pharmacies Prescribers associated with the same single Tax Identification Numbers (TIN) are counted as a single prescriber. Pharmacies with multiple locations that share real-time data are counted as one pharmacy. | 22,841** beneficiaries in 2017 (77.8% were LIS) Represents 0.05% of 45,218,211 Part D beneficiaries in 2017 LTC beneficiaries included in estimate but are exempt. Estimate does not include pharmacies grouped as one pharmacy; CMS does not have system capability.\nTable note: * Benzodiazepines are a FAD for purposes of Part D DMPs but are not a factor in these clinical guidelines/OMS criteria. Buprenorphine products are not used to determine the beneficiary's average daily MME. However, prescription opioids including all formulations of buprenorphine for pain and MAT, are used to determine opioid prescribers and opioid dispensing pharmacies under the minimum criteria. Similarly, sponsors must include all prescription opioids, including all buprenorphine products, to determine opioid prescribers and opioid dispensing pharmacies under the supplemental criteria.\nTable note: ** Note: A total of 25,480 beneficiaries met the supplemental criteria alone. The estimate is 22,841 beneficiaries after removing duplicate beneficiaries already identified by the minimum criteria.\n* Benz"
+    ],
+    "cms_partd_opioid_pharmacists_2022:p1": [
+      "cms_partd_opioid_pharmacists_2022 (Medicare Part D, summary_of_binding_policy, 2022-12-19)\nMedicare Part D Opioid Policies: Information for Pharmacists\n[p 1]\nMedicare Part D opioid policies include safety edits when opioid prescriptions are dispensed at the pharmacy and drug management programs for Part D enrollees at risk for misuse or abuse of opioids and/or benzodiazepines.\nResidents of long-term care facilities, those in hospice care, enrollees receiving palliative or end-of-life care, and enrollees being treated for active cancer-related pain or sickle cell disease are exempt from these interventions. Enrollee access to medication-assisted treatment (MAT), such as buprenorphine, should not be impacted.\n\ncms_partd_opioid_pharmacists_2022 (Medicare Part D, summary_of_binding_policy, 2022-12-19)\nMedicare Part D Opioid Policies: Information for Pharmacists > Opioid Safety Edits\n[p 1]\nImportant Note(s):\nCMS expects Part D plan sponsors to have a mechanism in place which allows all opioid safety alerts, including hard edits, to be overridden at point of sale (POS) at the pharmacy based on information from the prescriber or otherwise known to the pharmacy that an enrollee is exempt.\nMorphine Milligram Equivalent (MME) thresholds and days supply limits are not prescribing limits. The enrollee or their prescriber can request an expedited or standard coverage determination from the plan for approval of higher amounts or a longer days supply. This can be done in advance of the prescription.\nOpioid Safety Edit\nPharmacist's Role\nOpioid care coordination edit at 90 morphine milligram equivalent (MME)\nProvide information to the plan for override if known to pharmacist that enrollee has an exemption (discussed above) or if prescriber has recently been consulted and the pharmacist has up to date clinical information. Overrides may be communicated at POS.\nÎ This edit triggers when an enrollee's cumulative MME per day across their opioid prescription(s) reaches or exceeds 90 MME.\nOutside of a known exclusion or the COVID-19 waiver, when the care coordination edit is triggered, consult with the enrollee's prescriber to confirm intent. The consultation should be consistent with current pharmacy practice to verify the prescription and to validate its clinical appropriateness. This is an opportunity to inform the prescriber of other opioid prescribers or increasing amounts of opioids.\nÎ Some plans have this alert only when the enrollee uses multiple opioid prescribers and/or opioid dispensing pharmacies.\nÎ If the pharmacist recently consulted with the prescriber and has up to date clinical information (e.g., Prescription Drug Monitoring Program (PDMP) system or other records), additional consultation with the prescriber is not expected.\nDocument the discussion and submit the appropriate override code. The documentation may include the date, time, name of prescriber, and brief note that the prescriber confirmed intent, did not confirm intent, provided information on enrollee exclusion, or could not be reached after 'X' number of attempts.\nÎ Due to the increased burden on the healthcare system as a result of the COVID-19 pandemic, plans may waive requirements for pharmacist consultation with the prescriber to confirm intent.\nIf the issue is not resolved at the POS and the prescription cannot be filled as written, distribute a copy of the standardized CMS pharmacy notice Medicare Prescription Drug Coverage and Your Rights to the enrollee.\n[p 2]\nOpioid Safety Edit\nPharmacist's Role\nOptional Hard Edit at 200 MME or more\nProvide information to the plan for override if known to pharmacist that enrollee has an exemption (discussed above). Overrides for exemptions from the safety edit may be communicated at POS with a transaction code or by contacting the plan directly.\nÎ Some plans may implement a hard edit when a enrollee's cumulative opioid daily dosage reaches 200 MME or more.\nIf the issue is not resolved at the POS and the prescription cannot be filled as written, distribute a copy of the standardized CMS pharmacy notice Medicare Prescription Drug Coverage and Your Rights to the enrollee.\nÎ Some plans have this alert only when the enrollee has multiple opioid prescribers and/or opioid dispensing pharmacies.\nSeven-day supply limit for opioid naïve enrollees (hard edit)\nProvide information to the plan for override if known to pharmacist that enrollee has an exemption (discussed above) or is currently taking opioids. Overrides may be communicated at POS with a transaction code or by contacting the plan directly.\nÎ Medicare Part D enrollees who have not filled an opioid prescription recently will be limited to a supply of 7 days or less.\nIf no override, enrollee may receive up to a 7 days supply or request a coverage determination for full days supply as written.\nÎ Subsequent prescriptions filled during the plan's review window (generally 60-90 days) will not be subject to the 7 days supply limit.\nIf the issue is not resolved at the POS and the prescription cannot be filled as written, including when the full days supply is not dispensed, distribute a copy of the standardized CMS pharmacy notice Medicare Prescription Drug Coverage and Your Rights to the enrollee.\nÎ This edit should not impact enrollees who already take opioids, but may occur for enrollees who enroll in a new plan that does not know their current prescription information.\nConcurrent opioid and benzodiazepine use or duplicative long-acting opioid therapy (soft edits)\nConduct additional safety review to determine if the enrollee's medication use is safe and clinically appropriate.\nÎ These soft edits will trigger when the enrollee is taking opioids and benzodiazepines concurrently or is taking multiple long-acting opioids.\nIf the issue is not resolved at the POS and the prescription cannot be filled as written, distribute a copy of the standardized CMS pharmacy notice Medicare Prescription Drug Coverage and Your Rights to the enrollee."
+    ],
+    "cms_partd_opioid_pharmacists_2022:p2": [
+      "cms_partd_opioid_pharmacists_2022 (Medicare Part D, summary_of_binding_policy, 2022-12-19)\nMedicare Part D Opioid Policies: Information for Pharmacists > Drug Management Programs (DMPs)\n[p 2]\nAll Medicare Part D plans must have a DMP that limits access to opioids and/or benzodiazepines for enrollees considered by the plan to be at risk for prescription drug abuse or misuse. Enrollees are identified by opioid use involving multiple doctors and pharmacies or a recent history of opioid-related overdose, and undergo case management conducted by the plan with the enrollee's prescribers.\nDMP limitations can include requiring the enrollee to obtain these medications from a specified prescriber and/or pharmacy, or implementing a enrollee-specific POS edit that limits the amount of these medications that will be covered. Before a limitation is implemented, the plan must give written notice to the enrollee, and an opportunity to tell the plan which prescribers or pharmacies they prefer to use or provide additional information that they think is relevant.\nIf the plan decides to limit coverage under a DMP, the enrollee, their representative, or their prescriber have the right to appeal the plan's decision. Pharmacies are not expected to distribute the standardized CMS pharmacy notice Medicare Prescription Drug Coverage and Your Rights to the enrollee in response to a rejected claim due to a limitation under a DMP. The enrollee or prescriber should contact the plan for information on how to appeal.",
+      "cms_partd_opioid_pharmacists_2022 (Medicare Part D, summary_of_binding_policy, 2022-12-19)\nMedicare Part D Opioid Policies: Information for Pharmacists > Drug Management Programs (DMPs)\n[p 2]\nAll Medicare Part D plans must have a DMP that limits access to opioids and/or benzodiazepines for enrollees considered by the plan to be at risk for prescription drug abuse or misuse. Enrollees are identified by opioid use involving multiple doctors and pharmacies or a recent history of opioid-related overdose, and undergo case management conducted by the plan with the enrollee's prescribers.\nDMP limitations can include requiring the enrollee to obtain these medications from a specified prescriber and/or pharmacy, or implementing a enrollee-specific POS edit that limits the amount of these medications that will be covered. Before a limitation is implemented, the plan must give written notice to the enrollee, and an opportunity to tell the plan which prescribers or pharmacies they prefer to use or provide additional information that they think is relevant.\nIf the plan decides to limit coverage under a DMP, the enrollee, their representative, or their prescriber have the right to appeal the plan's decision. Pharmacies are not expected to distribute the standardized CMS pharmacy notice Medicare Prescription Drug Coverage and Your Rights to the enrollee in response to a rejected claim due to a limitation under a DMP. The enrollee or prescriber should contact the plan for information on how to appeal.\n\ncms_partd_opioid_pharmacists_2022 (Medicare Part D, summary_of_binding_policy, 2022-12-19)\nMedicare Part D Opioid Policies: Information for Pharmacists > Opioid Safety Edits\n[p 1]\nImportant Note(s):\nCMS expects Part D plan sponsors to have a mechanism in place which allows all opioid safety alerts, including hard edits, to be overridden at point of sale (POS) at the pharmacy based on information from the prescriber or otherwise known to the pharmacy that an enrollee is exempt.\nMorphine Milligram Equivalent (MME) thresholds and days supply limits are not prescribing limits. The enrollee or their prescriber can request an expedited or standard coverage determination from the plan for approval of higher amounts or a longer days supply. This can be done in advance of the prescription.\nOpioid Safety Edit\nPharmacist's Role\nOpioid care coordination edit at 90 morphine milligram equivalent (MME)\nProvide information to the plan for override if known to pharmacist that enrollee has an exemption (discussed above) or if prescriber has recently been consulted and the pharmacist has up to date clinical information. Overrides may be communicated at POS.\nÎ This edit triggers when an enrollee's cumulative MME per day across their opioid prescription(s) reaches or exceeds 90 MME.\nOutside of a known exclusion or the COVID-19 waiver, when the care coordination edit is triggered, consult with the enrollee's prescriber to confirm intent. The consultation should be consistent with current pharmacy practice to verify the prescription and to validate its clinical appropriateness. This is an opportunity to inform the prescriber of other opioid prescribers or increasing amounts of opioids.\nÎ Some plans have this alert only when the enrollee uses multiple opioid prescribers and/or opioid dispensing pharmacies.\nÎ If the pharmacist recently consulted with the prescriber and has up to date clinical information (e.g., Prescription Drug Monitoring Program (PDMP) system or other records), additional consultation with the prescriber is not expected.\nDocument the discussion and submit the appropriate override code. The documentation may include the date, time, name of prescriber, and brief note that the prescriber confirmed intent, did not confirm intent, provided information on enrollee exclusion, or could not be reached after 'X' number of attempts.\nÎ Due to the increased burden on the healthcare system as a result of the COVID-19 pandemic, plans may waive requirements for pharmacist consultation with the prescriber to confirm intent.\nIf the issue is not resolved at the POS and the prescription cannot be filled as written, distribute a copy of the standardized CMS pharmacy notice Medicare Prescription Drug Coverage and Your Rights to the enrollee.\n[p 2]\nOpioid Safety Edit\nPharmacist's Role\nOptional Hard Edit at 200 MME or more\nProvide information to the plan for override if known to pharmacist that enrollee has an exemption (discussed above). Overrides for exemptions from the safety edit may be communicated at POS with a transaction code or by contacting the plan directly.\nÎ Some plans may implement a hard edit when a enrollee's cumulative opioid daily dosage reaches 200 MME or more.\nIf the issue is not resolved at the POS and the prescription cannot be filled as written, distribute a copy of the standardized CMS pharmacy notice Medicare Prescription Drug Coverage and Your Rights to the enrollee.\nÎ Some plans have this alert only when the enrollee has multiple opioid prescribers and/or opioid dispensing pharmacies.\nSeven-day supply limit for opioid naïve enrollees (hard edit)\nProvide information to the plan for override if known to pharmacist that enrollee has an exemption (discussed above) or is currently taking opioids. Overrides may be communicated at POS with a transaction code or by contacting the plan directly.\nÎ Medicare Part D enrollees who have not filled an opioid prescription recently will be limited to a supply of 7 days or less.\nIf no override, enrollee may receive up to a 7 days supply or request a coverage determination for full days supply as written.\nÎ Subsequent prescriptions filled during the plan's review window (generally 60-90 days) will not be subject to the 7 days supply limit.\nIf the issue is not resolved at the POS and the prescription cannot be filled as written, including when the full days supply is not dispensed, distribute a copy of the standardized CMS pharmacy notice Medicare Prescription Drug Coverage and"
+    ]
+  },
+  "cost_note": "each call priced at its serving role's rates (llm.<role>.prices_per_mtok)",
+  "request_started_utc": "2026-10-18T16:27:31.527058+00:00",
+  "citation_check": {
+    "t_start": 23.481,
+    "duration_s": 0.001
+  }
+}

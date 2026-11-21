@@ -1,0 +1,155 @@
+{
+  "question": "QL on Ozempic pens?",
+  "status": "answered",
+  "assumption": "Assuming NY Medicaid (coverage/QL question, no program named).",
+  "answer": "Assuming NY Medicaid: the NYRx PDL (revised 9/14/2026) lists **no quantity limit** for Ozempic pens.\n\n- Ozempic pen is in the GLP-1 RA (Type 2 DM) class, listed as preferred (the PDL's preferred/non-preferred status is marked \"as of 10/22/2026\", which is not yet in effect as of today, 10/14/2026).\n- The class has clinical criteria (CC) only: confirm a FDA-approved/compendia-supported and Medicaid-covered indication, and PA is required if the patient is on a GLP-1 plus a DPP-IV concurrently.\n- The only GLP-1-type lifetime QLs on the PDL are for Wegovy and Zepbound (two treatment attempts per lifetime).\n- Any plan-level pen-count or days-supply limit isn't in these documents.",
+  "citations": [
+    {
+      "doc_id": "ny_medicaid_pdl",
+      "page": 34,
+      "link": "https://newyork.fhsc.com/downloads/providers/NYRx_PDP_PDL.pdf#page=34",
+      "flag": null
+    },
+    {
+      "doc_id": "ny_medicaid_pdl",
+      "page": 75,
+      "link": "https://newyork.fhsc.com/downloads/providers/NYRx_PDP_PDL.pdf#page=75",
+      "flag": null
+    }
+  ],
+  "conflicts_noted": [],
+  "flags": [],
+  "answered_by": "claude-sonnet-5-5",
+  "fallback_used": false,
+  "timing_s": {
+    "total": 7.064,
+    "search": 0.139,
+    "search_cold": 0,
+    "search_warm": 0.139,
+    "read_page": 0,
+    "list_documents": 0,
+    "model_calls": [
+      2.11,
+      1.061,
+      3.754
+    ]
+  },
+  "index_warm_at_start": true,
+  "lookups": 2,
+  "tokens": {
+    "input": 8,
+    "output": 680,
+    "cache_read": 8695,
+    "cache_write": 11359
+  },
+  "cost_usd": 0.036952,
+  "pages_seen": [
+    "ny_medicaid_pdl:p23",
+    "ny_medicaid_pdl:p34",
+    "ny_medicaid_pdl:p36",
+    "ny_medicaid_pdl:p48",
+    "ny_medicaid_pdl:p65",
+    "ny_medicaid_pdl:p66",
+    "ny_medicaid_pdl:p69",
+    "ny_medicaid_pdl:p74",
+    "ny_medicaid_pdl:p75",
+    "va_dod_cpg_diabetes_2023:p129",
+    "va_dod_cpg_diabetes_2023:p131",
+    "va_dod_cpg_diabetes_2023:p137",
+    "va_dod_cpg_diabetes_2023:p161",
+    "va_dod_cpg_diabetes_2023:p80",
+    "va_pbm_t2dm_pharmacotherapy_2025:p14"
+  ],
+  "started_at": "2026-10-14T22:05:51+00:00",
+  "config": {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium",
+    "setup": "baseline",
+    "max_tool_calls": 6,
+    "deadline_s": 25,
+    "search_k": 8
+  },
+  "model_calls": [
+    {
+      "duration_s": 2.11,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 4,
+        "output": 91,
+        "cache_read": 0,
+        "cache_write": 2226
+      }
+    },
+    {
+      "duration_s": 1.061,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 2,
+        "output": 81,
+        "cache_read": 2226,
+        "cache_write": 4243
+      }
+    },
+    {
+      "duration_s": 3.754,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 2,
+        "output": 508,
+        "cache_read": 6469,
+        "cache_write": 4890
+      }
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "search_documents",
+      "input": {
+        "query": "Ozempic semaglutide pen quantity limit",
+        "program": "NY Medicaid"
+      },
+      "duration_s": 0.069,
+      "is_error": false,
+      "pages": [
+        "ny_medicaid_pdl:p75",
+        "ny_medicaid_pdl:p36",
+        "ny_medicaid_pdl:p74",
+        "ny_medicaid_pdl:p23",
+        "ny_medicaid_pdl:p65",
+        "ny_medicaid_pdl:p69",
+        "ny_medicaid_pdl:p66",
+        "ny_medicaid_pdl:p48"
+      ],
+      "index_loaded": true
+    },
+    {
+      "name": "search_documents",
+      "input": {
+        "query": "GLP-1 receptor agonists Ozempic semaglutide pen F/Q/D diabetes"
+      },
+      "duration_s": 0.07,
+      "is_error": false,
+      "pages": [
+        "va_dod_cpg_diabetes_2023:p137",
+        "ny_medicaid_pdl:p34",
+        "va_dod_cpg_diabetes_2023:p129",
+        "va_dod_cpg_diabetes_2023:p131",
+        "va_pbm_t2dm_pharmacotherapy_2025:p14",
+        "va_dod_cpg_diabetes_2023:p80",
+        "va_dod_cpg_diabetes_2023:p161",
+        "va_dod_cpg_diabetes_2023:p137"
+      ],
+      "index_loaded": true
+    }
+  ],
+  "cost_note": "priced at the requested model's rates; a fallback hop bills at its own rates"
+}

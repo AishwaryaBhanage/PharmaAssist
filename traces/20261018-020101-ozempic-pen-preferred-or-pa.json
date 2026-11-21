@@ -1,0 +1,129 @@
+{
+  "question": "Ozempic pen: preferred or PA?",
+  "status": "answered",
+  "assumption": "NY Medicaid (NYRx PDL), since no program was named.",
+  "answer": "Assuming NY Medicaid: **Ozempic pen is preferred** on the NYRx PDL (GLP-1 RAs – Type 2 Diabetes). The row has no PA flag and no effective-date marker, so the status is current as of today (10/18/2026).\n\nClass clinical criteria (CC) still apply:\n- Confirm an FDA-approved or compendia-supported, Medicaid-covered indication.\n- PA is required if the patient is on a GLP-1 and a DPP-4 inhibitor concurrently.\n\nFor comparison, **Ozempic tablets** are listed as non-preferred, so they need PA.",
+  "citations": [
+    {
+      "doc_id": "ny_medicaid_pdl",
+      "page": 34,
+      "link": "https://newyork.fhsc.com/downloads/providers/NYRx_PDP_PDL.pdf#page=34",
+      "flag": null,
+      "locator": "ny_medicaid_pdl:p34"
+    }
+  ],
+  "conflicts_noted": [],
+  "flags": [],
+  "needs_review": false,
+  "words": {
+    "displayed": 78,
+    "rendered": 78
+  },
+  "answered_by": "claude-sonnet-5-5",
+  "fallback_used": false,
+  "timing_s": {
+    "total": 4.713,
+    "search": 0,
+    "search_cold": 0,
+    "search_warm": 0,
+    "read_page": 0,
+    "list_documents": 0,
+    "model_calls": [
+      1.743,
+      2.966
+    ]
+  },
+  "index_warm_at_start": true,
+  "lookups": 1,
+  "tokens": {
+    "input": 6,
+    "output": 490,
+    "cache_read": 3585,
+    "cache_write": 4348
+  },
+  "cost_usd": 0.016499,
+  "pages_seen": [
+    "ny_medicaid_pdl:p1",
+    "ny_medicaid_pdl:p34"
+  ],
+  "started_at": "2026-10-18T06:01:01+00:00",
+  "config": {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium",
+    "setup": "docling_norerank_structured",
+    "max_tool_calls": 6,
+    "deadline_s": 25,
+    "search_k": 8
+  },
+  "structured_lookups": true,
+  "model_calls": [
+    {
+      "t_start": 0.0,
+      "duration_s": 1.743,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 4,
+        "output": 88,
+        "cache_read": 0,
+        "cache_write": 3585
+      }
+    },
+    {
+      "t_start": 1.747,
+      "duration_s": 2.966,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 2,
+        "output": 402,
+        "cache_read": 3585,
+        "cache_write": 763
+      }
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "lookup_ny_medicaid_drug",
+      "input": {
+        "drug": "Ozempic"
+      },
+      "duration_s": 0.004,
+      "is_error": false,
+      "pages": [
+        "ny_medicaid_pdl:p1",
+        "ny_medicaid_pdl:p34"
+      ],
+      "lookup": {
+        "result": "multiple_matches",
+        "rows": 2
+      },
+      "t_start": 1.743
+    }
+  ],
+  "cited_evidence": {
+    "ny_medicaid_pdl:p34": "{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"Ozempic\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"multiple_matches\", \"classes\": [{\"drug_class\": \"Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes\", \"section\": \"VI. Endocrine and Metabolic Agents\", \"class_flags\": {\"CC\": \"Clinical Criteria: see the class's Coverage Parameters\"}, \"coverage_parameters\": \"CLINICAL CRITERIA (CC)\\nConfirm diagnosis of FDA-approved or compendia-supported\\nindication and Medicaid covered indication\\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently\", \"coverage_pages\": [34], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p34#row-7\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Ozempic® pen\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"name plus strength or dosage form\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-12\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Ozempic® tablets\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"name plus strength or dosage form\"}]}], \"note\": \"Several rows match. List the relevant ones, or state which one you assumed.\"}"
+  },
+  "cited_evidence_parts": {
+    "ny_medicaid_pdl:p34": [
+      "{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"Ozempic\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"multiple_matches\", \"classes\": [{\"drug_class\": \"Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes\", \"section\": \"VI. Endocrine and Metabolic Agents\", \"class_flags\": {\"CC\": \"Clinical Criteria: see the class's Coverage Parameters\"}, \"coverage_parameters\": \"CLINICAL CRITERIA (CC)\\nConfirm diagnosis of FDA-approved or compendia-supported\\nindication and Medicaid covered indication\\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently\", \"coverage_pages\": [34], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p34#row-7\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Ozempic® pen\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"name plus strength or dosage form\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-12\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Ozempic® tablets\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"name plus strength or dosage form\"}]}], \"note\": \"Several rows match. List the relevant ones, or state which one you assumed.\"}"
+    ]
+  },
+  "cost_note": "priced at the requested model's rates; a fallback hop bills at its own rates",
+  "request_id": "ec77fdcc-e7dd-4ad2-a88c-84907c3fd1f3",
+  "request_started_utc": "2026-10-18T06:00:56.840080+00:00",
+  "citation_check": {
+    "t_start": 4.713,
+    "duration_s": 0.0
+  },
+  "prices_per_mtok": {
+    "input": 2.0,
+    "output": 10.0,
+    "cache_read": 0.2,
+    "cache_write": 2.5
+  }
+}

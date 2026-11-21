@@ -1,0 +1,420 @@
+{
+  "question": "The prescriber added mealtime insulin to this Veteran's basal insulin, but the DPP-4 is still on the refill list. Our older VA handout says continue it. Should I flag that for the pharmacist?",
+  "status": "answered",
+  "assumption": "Assuming the \"older VA handout\" is the 2020 VA Clinician's Guide (IB 10-1402) and the clinical question is VA guidance; the Veteran has T2DM.",
+  "answer": "Assuming VA T2DM guidance: **Yes, flag it for the pharmacist.**\n\n- The older handout (2020 Clinician's Guide, p17) says to continue metformin, DPP-4, SGLT-2 or GLP-1 when prandial insulin is added.\n- The newer 2025 VA Clinician's Summary (IB 10-1775, Fig. 6, p9) says to start prandial insulin and **discontinue sulfonylurea, meglitinides, and DPP-4 inhibitors**.\n- Both are advisory, so the more recent 2025 guidance takes precedence.\n\nThe refill isn't necessarily an error. The prescriber may have kept the DPP-4 deliberately, so the pharmacist should verify with the prescriber before the refill is processed. Also check that the Veteran isn't on a GLP-1 RA, because a DPP-4 shouldn't be combined with one.",
+  "citations": [
+    {
+      "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+      "page": 9,
+      "link": "https://www.pbm.va.gov/PBM/AcademicDetailingService/Documents/508/IB10-1775_PharmacotherapyforT2DM_P97221.pdf#page=9",
+      "flag": null,
+      "locator": "va_pbm_t2dm_pharmacotherapy_2025:p9"
+    },
+    {
+      "doc_id": "va_pbm_t2dm_clinicians_guide",
+      "page": 17,
+      "link": "https://www.pbm.va.gov/PBM/AcademicDetailingService/Documents/508/IB10-1402_Type2DiabetesCliniciansGuide_508Conformant.pdf#page=17",
+      "flag": null,
+      "locator": "va_pbm_t2dm_clinicians_guide:p17"
+    },
+    {
+      "doc_id": "va_pbm_t2dm_clinicians_guide",
+      "page": 12,
+      "link": "https://www.pbm.va.gov/PBM/AcademicDetailingService/Documents/508/IB10-1402_Type2DiabetesCliniciansGuide_508Conformant.pdf#page=12",
+      "flag": null,
+      "locator": "va_pbm_t2dm_clinicians_guide:p12"
+    }
+  ],
+  "conflicts_noted": [
+    "2020 Clinician's Guide (p17) says continue DPP-4 with prandial insulin; 2025 VA Clinician's Summary (p9) says discontinue. Both advisory clinical guidance, so the more recent 2025 document governs (rule 4)."
+  ],
+  "flags": [],
+  "needs_review": false,
+  "words": {
+    "displayed": 113,
+    "rendered": 113
+  },
+  "answered_by": "claude-sonnet-5-5",
+  "fallback_used": false,
+  "timing_s": {
+    "total": 6.952,
+    "search": 0.536,
+    "search_cold": 0,
+    "search_warm": 0.536,
+    "read_page": 0,
+    "list_documents": 0,
+    "model_calls": [
+      1.424,
+      4.992
+    ]
+  },
+  "index_warm_at_start": true,
+  "lookups": 1,
+  "tokens": {
+    "input": 6,
+    "output": 803,
+    "cache_read": 3638,
+    "cache_write": 21326
+  },
+  "cost_usd": 0.062085,
+  "pages_seen": [
+    "va_dod_cpg_diabetes_2023:p11",
+    "va_dod_cpg_diabetes_2023:p12",
+    "va_dod_cpg_diabetes_2023:p13",
+    "va_pbm_t2dm_clinicians_guide:p11",
+    "va_pbm_t2dm_clinicians_guide:p12",
+    "va_pbm_t2dm_clinicians_guide:p14",
+    "va_pbm_t2dm_clinicians_guide:p15",
+    "va_pbm_t2dm_clinicians_guide:p16",
+    "va_pbm_t2dm_clinicians_guide:p17",
+    "va_pbm_t2dm_pharmacotherapy_2025:p14",
+    "va_pbm_t2dm_pharmacotherapy_2025:p7",
+    "va_pbm_t2dm_pharmacotherapy_2025:p8",
+    "va_pbm_t2dm_pharmacotherapy_2025:p9"
+  ],
+  "started_at": "2026-10-18T05:54:05+00:00",
+  "config": {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium",
+    "setup": "docling_norerank_structured",
+    "max_tool_calls": 6,
+    "deadline_s": 25,
+    "search_k": 8
+  },
+  "structured_lookups": true,
+  "model_calls": [
+    {
+      "t_start": 0.0,
+      "duration_s": 1.424,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 4,
+        "output": 99,
+        "cache_read": 0,
+        "cache_write": 3638
+      }
+    },
+    {
+      "t_start": 1.96,
+      "duration_s": 4.992,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 2,
+        "output": 704,
+        "cache_read": 3638,
+        "cache_write": 17688
+      }
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "search_documents",
+      "input": {
+        "query": "discontinue DPP-4 inhibitor when starting prandial insulin basal-bolus",
+        "program": "VA"
+      },
+      "duration_s": 0.536,
+      "is_error": false,
+      "pages": [
+        "va_dod_cpg_diabetes_2023:p11",
+        "va_dod_cpg_diabetes_2023:p12",
+        "va_dod_cpg_diabetes_2023:p13",
+        "va_pbm_t2dm_clinicians_guide:p11",
+        "va_pbm_t2dm_clinicians_guide:p12",
+        "va_pbm_t2dm_clinicians_guide:p14",
+        "va_pbm_t2dm_clinicians_guide:p15",
+        "va_pbm_t2dm_clinicians_guide:p16",
+        "va_pbm_t2dm_clinicians_guide:p17",
+        "va_pbm_t2dm_pharmacotherapy_2025:p14",
+        "va_pbm_t2dm_pharmacotherapy_2025:p7",
+        "va_pbm_t2dm_pharmacotherapy_2025:p8",
+        "va_pbm_t2dm_pharmacotherapy_2025:p9"
+      ],
+      "index_loaded": true,
+      "search": {
+        "original_query": "The prescriber added mealtime insulin to this Veteran's basal insulin, but the DPP-4 is still on the refill list. Our older VA handout says continue it. Should I flag that for the pharmacist?",
+        "agent_query": "discontinue DPP-4 inhibitor when starting prandial insulin basal-bolus",
+        "executed": [
+          {
+            "source": "original",
+            "query": "The prescriber added mealtime insulin to this Veteran's basal insulin, but the DPP-4 is still on the refill list. Our older VA handout says continue it. Should I flag that for the pharmacist?",
+            "program": "VA",
+            "k": 8,
+            "seconds": 0.536,
+            "cached": false,
+            "results": 8
+          },
+          {
+            "source": "agent",
+            "query": "discontinue DPP-4 inhibitor when starting prandial insulin basal-bolus",
+            "program": "VA",
+            "k": 8,
+            "seconds": 0.284,
+            "cached": false,
+            "results": 8
+          }
+        ],
+        "duplicates_merged": 6,
+        "returned": 10,
+        "from_both": 6,
+        "from_original_only": 2,
+        "from_agent_only": 2,
+        "provenance": [
+          {
+            "unit": "va_pbm_t2dm_clinicians_guide:s16",
+            "found_by": {
+              "original": 1,
+              "agent": 1
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_clinicians_guide:s15",
+            "found_by": {
+              "original": 2,
+              "agent": 2
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s8",
+            "found_by": {
+              "original": 3,
+              "agent": 3
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_clinicians_guide:s14",
+            "found_by": {
+              "original": 4,
+              "agent": 4
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_clinicians_guide:s13",
+            "found_by": {
+              "original": 6,
+              "agent": 6
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_clinicians_guide:s10",
+            "found_by": {
+              "original": 7,
+              "agent": 8
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s6",
+            "found_by": {
+              "original": 5
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s7",
+            "found_by": {
+              "agent": 5
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s15",
+            "found_by": {
+              "agent": 7
+            }
+          },
+          {
+            "unit": "va_dod_cpg_diabetes_2023:s7",
+            "found_by": {
+              "original": 8
+            }
+          }
+        ],
+        "hits": [
+          {
+            "unit": "va_pbm_t2dm_clinicians_guide:s16",
+            "doc_id": "va_pbm_t2dm_clinicians_guide",
+            "pages": [
+              17
+            ],
+            "ranks": {
+              "original": 1,
+              "agent": 1
+            },
+            "scores": {
+              "original": 0.0328,
+              "agent": 0.0328
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_clinicians_guide:s15",
+            "doc_id": "va_pbm_t2dm_clinicians_guide",
+            "pages": [
+              16,
+              17
+            ],
+            "ranks": {
+              "original": 2,
+              "agent": 2
+            },
+            "scores": {
+              "original": 0.0323,
+              "agent": 0.0323
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s8",
+            "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+            "pages": [
+              8,
+              9
+            ],
+            "ranks": {
+              "original": 3,
+              "agent": 3
+            },
+            "scores": {
+              "original": 0.0305,
+              "agent": 0.0317
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_clinicians_guide:s14",
+            "doc_id": "va_pbm_t2dm_clinicians_guide",
+            "pages": [
+              14,
+              15
+            ],
+            "ranks": {
+              "original": 4,
+              "agent": 4
+            },
+            "scores": {
+              "original": 0.0284,
+              "agent": 0.0299
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_clinicians_guide:s13",
+            "doc_id": "va_pbm_t2dm_clinicians_guide",
+            "pages": [
+              14
+            ],
+            "ranks": {
+              "original": 6,
+              "agent": 6
+            },
+            "scores": {
+              "original": 0.0259,
+              "agent": 0.0249
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_clinicians_guide:s10",
+            "doc_id": "va_pbm_t2dm_clinicians_guide",
+            "pages": [
+              11,
+              12
+            ],
+            "ranks": {
+              "original": 7,
+              "agent": 8
+            },
+            "scores": {
+              "original": 0.0241,
+              "agent": 0.0228
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s6",
+            "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+            "pages": [
+              7
+            ],
+            "ranks": {
+              "original": 5
+            },
+            "scores": {
+              "original": 0.0268
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s7",
+            "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+            "pages": [
+              8
+            ],
+            "ranks": {
+              "agent": 5
+            },
+            "scores": {
+              "agent": 0.0252
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s15",
+            "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+            "pages": [
+              14
+            ],
+            "ranks": {
+              "agent": 7
+            },
+            "scores": {
+              "agent": 0.0232
+            }
+          },
+          {
+            "unit": "va_dod_cpg_diabetes_2023:s7",
+            "doc_id": "va_dod_cpg_diabetes_2023",
+            "pages": [
+              11,
+              12,
+              13
+            ],
+            "ranks": {
+              "original": 8
+            },
+            "scores": {
+              "original": 0.021
+            }
+          }
+        ]
+      },
+      "t_start": 1.424
+    }
+  ],
+  "cited_evidence": {
+    "va_pbm_t2dm_pharmacotherapy_2025:p9": "va_pbm_t2dm_pharmacotherapy_2025 (VA, advisory, 2025-04)\nPharmacotherapy for Type 2 Diabetes Mellitus (T2DM) 2025: A VA Clinician's Summary (IB 10-1775) > Initiating insulin > Prandial (mealtime) insulin1,2\n[p 8]\nPrandial (mealtime) insulin 1,2\nPrandial insulins include aspart, glulisine, lispro, and regular.\n■ Consider GLP-1 RA before adding prandial insulin if inadequate glycemic control on basal insulin and one or more oral agents. 47\n■ Add prandial insulin when coverage is needed for meals. Consider when HbA1c continues to be above goal, basal insulin dose is > 0.5 units/kg, or glucose readings are elevated after meals.\n■ Rapid acting insulins like aspart, glulisine, and lispro should be administered 0-15 minutes before meals and are preferred to insulin regular due to easier administration.\n■ Insulin regular should be administered 30 minutes before meals. The longer time of onset and duration may increase hypoglycemia risk. 48\n[p 9]\nFigure 6. Using prandial insulin\n[Figure, flowchart] untitled in the image; see the section heading (PDF page 9). Machine-generated visual interpretation; status: machine-interpreted from the page image by a vision model; structure and OCR cross-check passed.\nBox n1 (start): Starting prandial insulin • Start with one dose before the largest meal of the day. • Use in addition to basal insulin. • Begin with 4 units or 10% of basal dose. • Discontinue sulfonylurea, meglitinides, and DPP-4 I. -> if Home glucose* or HbA1c over target range: box n2\nBox n2 (action): Titrating prandial insulin • Increase dose by 1 to 2 units or 10 to 15% twice weekly • If having hypoglycemia, determine the cause (e.g., missed meal, exercise). - If no clear reason, lower dose by 10 to 20% -> if HbA1c over target range: box n3\nBox n3 (action): Adding prandial doses • Start with adding a second prandial dose and follow titration schedule • Recheck HbA1c in 3 months • If HbA1c still elevated, adjust regimen based on glucose patterns; consider adding a third prandial insulin dose\nDecision path: n1 -> [Home glucose* or HbA1c over target range] n2 -> [HbA1c over target range] n3\nUnreadable or ambiguous (not interpreted): Footnote text for the asterisk on 'Home glucose*' is not visible in the crop\n■ Insulin aspart protamine/insulin aspart 70/30 (Novolog 70/30) or insulin 70/30 NPH/REG (Novolin 70/30) - Note these are look-alike, sound-alike drugs.\n■ Need to have regular meal routines and not skip meals.\n■ Novolog 70/30 is preferred since it is administered 0-15 minutes before mealtime, while Novolin 70/30 is administered 30 minutes before eating.",
+    "va_pbm_t2dm_clinicians_guide:p17": "va_pbm_t2dm_clinicians_guide (VA, advisory, 2020-05)\nA VA Clinician's Guide to Diabetes Management in Primary Care (IB 10-1402) > Type 2 Diabetes A VA Clinician’s Guide to Diabetes Management in Primary Care (2020) > Initiating insulin > Adding prandial (meal-time insulin) 6 > CLINICAL PEARL\n[p 17]\nWhen basal insulin is added to existing therapy:\nWhen prandial insulin is added to basal insulin and existing therapy:\nContinue metformin, SGLT-2, GLP-1, DPP-4, and/or sulfonylurea.\nContinue metformin, DPP-4, SGLT-2, or GLP-1.\nDiscontinue sulfonylurea due to risk of hypoglycemia.\nTZD can be continued if patient does not have heart failure.\nIf hypoglycemia occurs, adjust the dose of prandial or basal insulin (based on readings and symptoms) before adjusting metformin, DPP-4, SGLT-2, or GLP-1.\nKeep in mind hypoglycemia risk. Reduce the dose of basal insulin if hypoglycemia occurs.\n\nva_pbm_t2dm_clinicians_guide (VA, advisory, 2020-05)\nA VA Clinician's Guide to Diabetes Management in Primary Care (IB 10-1402) … (2020) > Initiating insulin > Adding prandial (meal-time insulin) 6 > Figure 10. Types, frequency, and dosages of insulin should be individualized based on the following factors:\n[p 16]\n[Table: Figure 10. Types, frequency, and dosages of insulin should be individualized based on the following factors:] (PDF page 16)\nAge and weight | • Make slower adjustments in older patients. • Patients with obesity may need higher insulin doses due to insulin resistance.\nComorbid conditions and concomitant medications | Some conditions and medications can increase risk of hypoglycemia or decrease ability to recognize symptoms (e.g., chronic kidney disease, use of beta blockers, or dialysis). Dosing adjustments should be made slowly.\nPresence of autonomic neuropathy | Patients with autonomic neuropathy may not recognize hypoglycemic symptoms.\nAbility to monitor glucose levels and accurately inject insulin | Making the insulin regimen less complicated (e.g., basal only regimens) and using pen devices may be more beneficial in these patients.\nComplexity of management strategy | Some management strategies are more complex than others (e.g., number of injections, dosing based on carbohydrate intake). Consider mixed insulins to simplify regimen in appropriate patients.\nRisks of hypoglycemia versus benefits of tight control | It is important to weigh the risks and benefits when evaluating the management strategy.\nMagnitude and pattern of hypoglycemia | Dose changes should be made slowly and in small increments when patients have frequent hypoglycemia and/or if the magnitude of hypoglycemia is significant.\n[p 17]\n[Figure, text_image] Clinical Pearl: When basal insulin is added to existing therapy (PDF page 17). Machine-generated visual interpretation; status: machine-interpreted from the page image by a vision model; structure and OCR cross-check passed.\nA lavender callout box labeled \"CLINICAL PEARL\", with a gray sphere at its upper left corner and a purple stopwatch icon at the bottom. Text verbatim: \"CLINICAL PEARL. When basal insulin is added to existing therapy: • Continue metformin, SGLT-2, GLP-1, DPP-4, and/or sulfonylurea. • TZD can be continued if patient does not have heart failure. • Keep in mind hypoglycemia risk. Reduce the dose of basal insulin if hypoglycemia occurs.\"\n[Figure, text_image] Clinical Pearl: When prandial insulin is added to basal insulin and existing therapy (PDF page 17). Machine-generated visual interpretation; status: machine-interpreted from the page image by a vision model; structure and OCR cross-check passed.\nA peach-colored callout box with a gray sphere ornament at the top left and a crossed knife-and-fork icon at the bottom. Text verbatim: \"CLINICAL PEARL\" / \"When prandial insulin is added to basal insulin and existing therapy:\" / \"• Continue metformin, DPP-4, SGLT-2, or GLP-1.\" / \"• Discontinue sulfonylurea due to risk of hypoglycemia.\" / \"• If hypoglycemia occurs, adjust the dose of prandial or basal insulin (based on readings and symptoms) before adjusting metformin, DPP-4, SGLT-2, or GLP-1.\"",
+    "va_pbm_t2dm_clinicians_guide:p12": "va_pbm_t2dm_clinicians_guide (VA, advisory, 2020-05)\nA VA Clinician's Guide to Diabetes Management in Primary Care (IB 10-1402) > Type 2 Diabetes A VA Clinician’s Guide to Diabetes Management in Primary Care (2020) > Diabetes management > 3 Pharmacotherapy > Metformin is recommended as first-line therapy.\n[p 11]\nHas been in use for decades and is low cost.\nSafe to initiate in patients with moderate renal dysfunction (eGFR > 45 mL/min) and may continue metformin therapy in patients with eGFR 30-45 mL/min. 15 Monitoring is no longer based on serum creatinine levels.\nConsider referring to a clinical pharmacy specialist for drug therapy initiation and titration.\nSlow titration, taking metformin with food, or using an extended-release formulation can reduce or prevent GI upset and diarrhea.\nConsider metformin first for most Veterans with diabetes.\n[Figure, chart] 58% (PDF page 11). Machine-generated visual interpretation; status: machine-interpreted from the page image by a vision model; structure and OCR cross-check passed.\nChart type: donut/progress ring; x: ; y: ; units: %\nSeries : filled (green): 58%\nDonut-style progress ring with a dark green arc covering roughly 58% of the circle and a light gray remainder, with \"58%\" printed in large gray text at the center. A partial blue character is visible at the left edge, cut off by the crop.\nUnreadable or ambiguous (not interpreted): Cut-off blue text at left edge (appears to be '6' or part of a label)\nUnreadable or ambiguous (not interpreted): No label indicating what the 58% refers to is visible\nMetformin is recommended to be used first-line 1 st BUT\nOnly ~58% of patients are prescribed metformin first 16\nAfter metformin, use a patient-centered approach to review patient factors and preferences to determine the next medication to use. 16-23\nConsiderations include the following:\nCardiovascular and renal comorbidities\nRisk for side effects\nHypoglycemia risk\nPatient preferences\nImpact on weight\nCost\nAtherosclerotic cardiovascular disease (ASCVD) is the leading cause of morbidity and mortality in patients with diabetes.\nIf a patient has established ASCVD, heart failure (HF), and/or chronic kidney disease (CKD), select diabetes-lowering medications used as adjuncts to metformin that have proven benefits for these conditions. In addition, if the patient has a higher risk of hypoglycemia or weight gain, select medications taking these factors into account. See A VA Clinician's Quick Reference Guide to Diabetes Management in Primary Care (2020) for more information.\n[p 12]\n[Figure, flowchart] Figure 5. Selection of glucose-lowering medications in those with HbA1c above target (PDF page 12). Machine-generated visual interpretation; status: machine-interpreted from the page image by a vision model; not verified.\nBox n1 (start): Start lifestyle interventions + metformin -> if Does Veteran have ASCVD, HF, or CKD?*: box n2; if Does Veteran have ASCVD, HF, or CKD?*: box n3; if Does Veteran have ASCVD, HF, or CKD?*: box n4\nBox n2 (decision): ASCVD -> if Add second-line agent: box n5\nBox n3 (decision): CKD or HF -> if Add second-line agent: box n6\nBox n4 (decision): None -> if Add second-line agent: box n7\nBox n5 (action): SGLT-2† • empagliflozin • canagliflozin -> if If not effective or tolerated, add or substitute: box n8\nBox n6 (action): SGLT-2† • empagliflozin • canagliflozin • dapagliflozin -> if If not effective or tolerated, add or substitute: box n9\nBox n7 (action): DPP-4 or SGLT-2† or Sulfonylurea or TZD -> if If not effective or tolerated, add or substitute: box n10\nBox n8 (action): GLP-1† • inj. semaglutide • liraglutide • dulaglutide\nBox n9 (action): GLP-1† • inj. semaglutide • liraglutide • dulaglutide\nBox n10 (action): GLP-1†\nBox n11 (note): If HbA1c is > 9%, consider starting basal insulin at any step.\nDecision path: n1 -> [Does Veteran have ASCVD, HF, or CKD?*] n2 -> [Add second-line agent] n5 -> [If not effective or tolerated, add or substitute] n8\nDecision path: n1 -> [Does Veteran have ASCVD, HF, or CKD?*] n3 -> [Add second-line agent] n6 -> [If not effective or tolerated, add or substitute] n9\nDecision path: n1 -> [Does Veteran have ASCVD, HF, or CKD?*] n4 -> [Add second-line agent] n7 -> [If not effective or tolerated, add or substitute] n10\nDecision path: n11\nA bracket on the left spans from the start box to the GLP-1 row, labeled with the note about basal insulin.\nASCVD: indicators are age ≥ 55 years with coronary, carotid, or lower extremity artery stenosis > 50% or left ventricular hypertrophy (LVH).\nCKD: eGFR 30-60 mL/min/1.73m 2 or UACR > 30 mg/g, particularly UACR > 300 mg/g.\nHF: left ventricular ejection fraction < 45%.\nAgents shown to reduce ASCVD risk: SGLT-2 = Sodium-glucose co-transporter 2 inhibitor (empagliflozin, canagliflozin); GLP-1 = Glucagon-like peptide-1 agonist (injectable semaglutide, liraglutide, dulaglutide). GLP-1s have not been shown to lower heart failure risk (neutral outcome). Dapagliflozin has been shown to lower heart failure risk and CKD risk, but neutral for ASCVD.\n† Indicates referral to individual Criteria for Use. Do not combine a DPP-4 inhibitor with a GLP-1 agonist.\nNot shown in the figure are uncommonly-used agents (e.g., alpha-glucosidase inhibitors, meglitinides, pramlintide, inhaled insulin, etc.), but these may be considered in specific situations. Refer to Criteria for Use for pramlintide and inhaled insulin: www.pbm.va.gov"
+  },
+  "cited_evidence_parts": {
+    "va_pbm_t2dm_pharmacotherapy_2025:p9": [
+      "va_pbm_t2dm_pharmacotherapy_2025 (VA, advisory, 2025-04)\nPharmacotherapy for Type 2 Diabetes Mellitus (T2DM) 2025: A VA Clinician's Summary (IB 10-1775) > Initiating insulin > Prandial (mealtime) insulin1,2\n[p 8]\nPrandial (mealtime) insulin 1,2\nPrandial insulins include aspart, glulisine, lispro, and regular.\n■ Consider GLP-1 RA before adding prandial insulin if inadequate glycemic control on basal insulin and one or more oral agents. 47\n■ Add prandial insulin when coverage is needed for meals. Consider when HbA1c continues to be above goal, basal insulin dose is > 0.5 units/kg, or glucose readings are elevated after meals.\n■ Rapid acting insulins like aspart, glulisine, and lispro should be administered 0-15 minutes before meals and are preferred to insulin regular due to easier administration.\n■ Insulin regular should be administered 30 minutes before meals. The longer time of onset and duration may increase hypoglycemia risk. 48\n[p 9]\nFigure 6. Using prandial insulin\n[Figure, flowchart] untitled in the image; see the section heading (PDF page 9). Machine-generated visual interpretation; status: machine-interpreted from the page image by a vision model; structure and OCR cross-check passed.\nBox n1 (start): Starting prandial insulin • Start with one dose before the largest meal of the day. • Use in addition to basal insulin. • Begin with 4 units or 10% of basal dose. • Discontinue sulfonylurea, meglitinides, and DPP-4 I. -> if Home glucose* or HbA1c over target range: box n2\nBox n2 (action): Titrating prandial insulin • Increase dose by 1 to 2 units or 10 to 15% twice weekly • If having hypoglycemia, determine the cause (e.g., missed meal, exercise). - If no clear reason, lower dose by 10 to 20% -> if HbA1c over target range: box n3\nBox n3 (action): Adding prandial doses • Start with adding a second prandial dose and follow titration schedule • Recheck HbA1c in 3 months • If HbA1c still elevated, adjust regimen based on glucose patterns; consider adding a third prandial insulin dose\nDecision path: n1 -> [Home glucose* or HbA1c over target range] n2 -> [HbA1c over target range] n3\nUnreadable or ambiguous (not interpreted): Footnote text for the asterisk on 'Home glucose*' is not visible in the crop\n■ Insulin aspart protamine/insulin aspart 70/30 (Novolog 70/30) or insulin 70/30 NPH/REG (Novolin 70/30) - Note these are look-alike, sound-alike drugs.\n■ Need to have regular meal routines and not skip meals.\n■ Novolog 70/30 is preferred since it is administered 0-15 minutes before mealtime, while Novolin 70/30 is administered 30 minutes before eating."
+    ],
+    "va_pbm_t2dm_clinicians_guide:p17": [
+      "va_pbm_t2dm_clinicians_guide (VA, advisory, 2020-05)\nA VA Clinician's Guide to Diabetes Management in Primary Care (IB 10-1402) > Type 2 Diabetes A VA Clinician’s Guide to Diabetes Management in Primary Care (2020) > Initiating insulin > Adding prandial (meal-time insulin) 6 > CLINICAL PEARL\n[p 17]\nWhen basal insulin is added to existing therapy:\nWhen prandial insulin is added to basal insulin and existing therapy:\nContinue metformin, SGLT-2, GLP-1, DPP-4, and/or sulfonylurea.\nContinue metformin, DPP-4, SGLT-2, or GLP-1.\nDiscontinue sulfonylurea due to risk of hypoglycemia.\nTZD can be continued if patient does not have heart failure.\nIf hypoglycemia occurs, adjust the dose of prandial or basal insulin (based on readings and symptoms) before adjusting metformin, DPP-4, SGLT-2, or GLP-1.\nKeep in mind hypoglycemia risk. Reduce the dose of basal insulin if hypoglycemia occurs.\n\nva_pbm_t2dm_clinicians_guide (VA, advisory, 2020-05)\nA VA Clinician's Guide to Diabetes Management in Primary Care (IB 10-1402) … (2020) > Initiating insulin > Adding prandial (meal-time insulin) 6 > Figure 10. Types, frequency, and dosages of insulin should be individualized based on the following factors:\n[p 16]\n[Table: Figure 10. Types, frequency, and dosages of insulin should be individualized based on the following factors:] (PDF page 16)\nAge and weight | • Make slower adjustments in older patients. • Patients with obesity may need higher insulin doses due to insulin resistance.\nComorbid conditions and concomitant medications | Some conditions and medications can increase risk of hypoglycemia or decrease ability to recognize symptoms (e.g., chronic kidney disease, use of beta blockers, or dialysis). Dosing adjustments should be made slowly.\nPresence of autonomic neuropathy | Patients with autonomic neuropathy may not recognize hypoglycemic symptoms.\nAbility to monitor glucose levels and accurately inject insulin | Making the insulin regimen less complicated (e.g., basal only regimens) and using pen devices may be more beneficial in these patients.\nComplexity of management strategy | Some management strategies are more complex than others (e.g., number of injections, dosing based on carbohydrate intake). Consider mixed insulins to simplify regimen in appropriate patients.\nRisks of hypoglycemia versus benefits of tight control | It is important to weigh the risks and benefits when evaluating the management strategy.\nMagnitude and pattern of hypoglycemia | Dose changes should be made slowly and in small increments when patients have frequent hypoglycemia and/or if the magnitude of hypoglycemia is significant.\n[p 17]\n[Figure, text_image] Clinical Pearl: When basal insulin is added to existing therapy (PDF page 17). Machine-generated visual interpretation; status: machine-interpreted from the page image by a vision model; structure and OCR cross-check passed.\nA lavender callout box labeled \"CLINICAL PEARL\", with a gray sphere at its upper left corner and a purple stopwatch icon at the bottom. Text verbatim: \"CLINICAL PEARL. When basal insulin is added to existing therapy: • Continue metformin, SGLT-2, GLP-1, DPP-4, and/or sulfonylurea. • TZD can be continued if patient does not have heart failure. • Keep in mind hypoglycemia risk. Reduce the dose of basal insulin if hypoglycemia occurs.\"\n[Figure, text_image] Clinical Pearl: When prandial insulin is added to basal insulin and existing therapy (PDF page 17). Machine-generated visual interpretation; status: machine-interpreted from the page image by a vision model; structure and OCR cross-check passed.\nA peach-colored callout box with a gray sphere ornament at the top left and a crossed knife-and-fork icon at the bottom. Text verbatim: \"CLINICAL PEARL\" / \"When prandial insulin is added to basal insulin and existing therapy:\" / \"• Continue metformin, DPP-4, SGLT-2, or GLP-1.\" / \"• Discontinue sulfonylurea due to risk of hypoglycemia.\" / \"• If hypoglycemia occurs, adjust the dose of prandial or basal insulin (based on readings and symptoms) before adjusting metformin, DPP-4, SGLT-2, or GLP-1.\""
+    ],
+    "va_pbm_t2dm_clinicians_guide:p12": [
+      "va_pbm_t2dm_clinicians_guide (VA, advisory, 2020-05)\nA VA Clinician's Guide to Diabetes Management in Primary Care (IB 10-1402) > Type 2 Diabetes A VA Clinician’s Guide to Diabetes Management in Primary Care (2020) > Diabetes management > 3 Pharmacotherapy > Metformin is recommended as first-line therapy.\n[p 11]\nHas been in use for decades and is low cost.\nSafe to initiate in patients with moderate renal dysfunction (eGFR > 45 mL/min) and may continue metformin therapy in patients with eGFR 30-45 mL/min. 15 Monitoring is no longer based on serum creatinine levels.\nConsider referring to a clinical pharmacy specialist for drug therapy initiation and titration.\nSlow titration, taking metformin with food, or using an extended-release formulation can reduce or prevent GI upset and diarrhea.\nConsider metformin first for most Veterans with diabetes.\n[Figure, chart] 58% (PDF page 11). Machine-generated visual interpretation; status: machine-interpreted from the page image by a vision model; structure and OCR cross-check passed.\nChart type: donut/progress ring; x: ; y: ; units: %\nSeries : filled (green): 58%\nDonut-style progress ring with a dark green arc covering roughly 58% of the circle and a light gray remainder, with \"58%\" printed in large gray text at the center. A partial blue character is visible at the left edge, cut off by the crop.\nUnreadable or ambiguous (not interpreted): Cut-off blue text at left edge (appears to be '6' or part of a label)\nUnreadable or ambiguous (not interpreted): No label indicating what the 58% refers to is visible\nMetformin is recommended to be used first-line 1 st BUT\nOnly ~58% of patients are prescribed metformin first 16\nAfter metformin, use a patient-centered approach to review patient factors and preferences to determine the next medication to use. 16-23\nConsiderations include the following:\nCardiovascular and renal comorbidities\nRisk for side effects\nHypoglycemia risk\nPatient preferences\nImpact on weight\nCost\nAtherosclerotic cardiovascular disease (ASCVD) is the leading cause of morbidity and mortality in patients with diabetes.\nIf a patient has established ASCVD, heart failure (HF), and/or chronic kidney disease (CKD), select diabetes-lowering medications used as adjuncts to metformin that have proven benefits for these conditions. In addition, if the patient has a higher risk of hypoglycemia or weight gain, select medications taking these factors into account. See A VA Clinician's Quick Reference Guide to Diabetes Management in Primary Care (2020) for more information.\n[p 12]\n[Figure, flowchart] Figure 5. Selection of glucose-lowering medications in those with HbA1c above target (PDF page 12). Machine-generated visual interpretation; status: machine-interpreted from the page image by a vision model; not verified.\nBox n1 (start): Start lifestyle interventions + metformin -> if Does Veteran have ASCVD, HF, or CKD?*: box n2; if Does Veteran have ASCVD, HF, or CKD?*: box n3; if Does Veteran have ASCVD, HF, or CKD?*: box n4\nBox n2 (decision): ASCVD -> if Add second-line agent: box n5\nBox n3 (decision): CKD or HF -> if Add second-line agent: box n6\nBox n4 (decision): None -> if Add second-line agent: box n7\nBox n5 (action): SGLT-2† • empagliflozin • canagliflozin -> if If not effective or tolerated, add or substitute: box n8\nBox n6 (action): SGLT-2† • empagliflozin • canagliflozin • dapagliflozin -> if If not effective or tolerated, add or substitute: box n9\nBox n7 (action): DPP-4 or SGLT-2† or Sulfonylurea or TZD -> if If not effective or tolerated, add or substitute: box n10\nBox n8 (action): GLP-1† • inj. semaglutide • liraglutide • dulaglutide\nBox n9 (action): GLP-1† • inj. semaglutide • liraglutide • dulaglutide\nBox n10 (action): GLP-1†\nBox n11 (note): If HbA1c is > 9%, consider starting basal insulin at any step.\nDecision path: n1 -> [Does Veteran have ASCVD, HF, or CKD?*] n2 -> [Add second-line agent] n5 -> [If not effective or tolerated, add or substitute] n8\nDecision path: n1 -> [Does Veteran have ASCVD, HF, or CKD?*] n3 -> [Add second-line agent] n6 -> [If not effective or tolerated, add or substitute] n9\nDecision path: n1 -> [Does Veteran have ASCVD, HF, or CKD?*] n4 -> [Add second-line agent] n7 -> [If not effective or tolerated, add or substitute] n10\nDecision path: n11\nA bracket on the left spans from the start box to the GLP-1 row, labeled with the note about basal insulin.\nASCVD: indicators are age ≥ 55 years with coronary, carotid, or lower extremity artery stenosis > 50% or left ventricular hypertrophy (LVH).\nCKD: eGFR 30-60 mL/min/1.73m 2 or UACR > 30 mg/g, particularly UACR > 300 mg/g.\nHF: left ventricular ejection fraction < 45%.\nAgents shown to reduce ASCVD risk: SGLT-2 = Sodium-glucose co-transporter 2 inhibitor (empagliflozin, canagliflozin); GLP-1 = Glucagon-like peptide-1 agonist (injectable semaglutide, liraglutide, dulaglutide). GLP-1s have not been shown to lower heart failure risk (neutral outcome). Dapagliflozin has been shown to lower heart failure risk and CKD risk, but neutral for ASCVD.\n† Indicates referral to individual Criteria for Use. Do not combine a DPP-4 inhibitor with a GLP-1 agonist.\nNot shown in the figure are uncommonly-used agents (e.g., alpha-glucosidase inhibitors, meglitinides, pramlintide, inhaled insulin, etc.), but these may be considered in specific situations. Refer to Criteria for Use for pramlintide and inhaled insulin: www.pbm.va.gov"
+    ]
+  },
+  "cost_note": "priced at the requested model's rates; a fallback hop bills at its own rates",
+  "request_id": "0e1121b8-c537-47d4-8792-22d695cb814d",
+  "request_started_utc": "2026-10-18T05:53:58.237895+00:00",
+  "citation_check": {
+    "t_start": 6.952,
+    "duration_s": 0.0
+  },
+  "prices_per_mtok": {
+    "input": 2.0,
+    "output": 10.0,
+    "cache_read": 0.2,
+    "cache_write": 2.5
+  }
+}

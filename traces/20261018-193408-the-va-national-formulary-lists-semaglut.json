@@ -1,0 +1,230 @@
+{
+  "question": "The VA National Formulary lists semaglutide one way. My pt is on NY Medicaid. Is Ozempic covered for them?",
+  "request_id": "2630759c-000f-4a3c-8d34-1caa69309dc3",
+  "status": "answered",
+  "agent_status": "answered",
+  "assumption": "NY Medicaid/NYRx applies because the patient is on NY Medicaid; the VA National Formulary is not the controlling program.",
+  "answer": "Assuming NY Medicaid/NYRx: **Ozempic® pen is listed as preferred** in the GLP-1 receptor agonists – Type 2 Diabetes class. The returned PDL row has **no 10/22/2026 effective-date change marker**, so no future change is indicated for today, **2026-10-18**.\n\nCaveats:\n- The class has **CC**: confirm an FDA-approved/compendia-supported and Medicaid-covered indication.\n- **PA is required** if the patient is using a **GLP-1 + DPP-IV concurrently**.\n- A separate matched row lists **Ozempic® tablets as non-preferred**; non-preferred drugs require PA.\n- VA formulary status does **not** determine NYRx coverage.",
+  "citations": [
+    {
+      "doc_id": "ny_medicaid_pdl",
+      "page": 34,
+      "link": "https://newyork.fhsc.com/downloads/providers/NYRx_PDP_PDL.pdf#page=34",
+      "flag": null,
+      "locator": "ny_medicaid_pdl:p34"
+    },
+    {
+      "doc_id": "ny_medicaid_pdl",
+      "page": 1,
+      "link": "https://newyork.fhsc.com/downloads/providers/NYRx_PDP_PDL.pdf#page=1",
+      "flag": null,
+      "locator": "ny_medicaid_pdl:p1"
+    }
+  ],
+  "conflicts_noted": [],
+  "flags": [],
+  "needs_review": false,
+  "words": {
+    "displayed": 92,
+    "rendered": 92
+  },
+  "answered_by": "gpt-5.5-2026-04-23",
+  "provider": "openai",
+  "model": "gpt-5.5-2026-04-23",
+  "fallback_used": false,
+  "timing_s": {
+    "total": 13.389,
+    "search": 0,
+    "read_page": 0,
+    "list_documents": 0,
+    "lookups": 0.006,
+    "model_calls": [
+      4.405,
+      8.978
+    ]
+  },
+  "lookups": 1,
+  "tokens": {
+    "input": 1728,
+    "output": 851,
+    "cache_read": 3072,
+    "cache_write": 0
+  },
+  "cost_usd": 0.035706,
+  "completeness": null,
+  "pages_seen": [
+    "ny_medicaid_pdl:p1",
+    "ny_medicaid_pdl:p34"
+  ],
+  "trace_id": null,
+  "started_at": "2026-10-18T23:34:08+00:00",
+  "config": {
+    "primary": "gpt-5.5",
+    "fallback": "claude-sonnet-5-5",
+    "effort": "medium",
+    "search": {
+      "mode": "hybrid",
+      "rrf_k": 60,
+      "fusion_depth": 100,
+      "return_parents": true,
+      "rerank": null
+    },
+    "max_tool_calls": 6,
+    "deadline_s": 25,
+    "search_k": 8,
+    "min_lookups": 1,
+    "completeness_pass": false,
+    "completeness_min_remaining_s": 8
+  },
+  "structured_lookups": true,
+  "context": {},
+  "model_answer": "Assuming NY Medicaid/NYRx: **Ozempic® pen is listed as preferred** in the GLP-1 receptor agonists – Type 2 Diabetes class. The returned PDL row has **no 10/22/2026 effective-date change marker**, so no future change is indicated for today, **2026-10-18**.\n\nCaveats:\n- The class has **CC**: confirm an FDA-approved/compendia-supported and Medicaid-covered indication.\n- **PA is required** if the patient is using a **GLP-1 + DPP-IV concurrently**.\n- A separate matched row lists **Ozempic® tablets as non-preferred**; non-preferred drugs require PA.\n- VA formulary status does **not** determine NYRx coverage.",
+  "model_citations": [
+    {
+      "doc_id": "ny_medicaid_pdl",
+      "page": 34,
+      "link": "https://newyork.fhsc.com/downloads/providers/NYRx_PDP_PDL.pdf#page=34",
+      "flag": null,
+      "locator": "ny_medicaid_pdl:p34"
+    },
+    {
+      "doc_id": "ny_medicaid_pdl",
+      "page": 1,
+      "link": "https://newyork.fhsc.com/downloads/providers/NYRx_PDP_PDL.pdf#page=1",
+      "flag": null,
+      "locator": "ny_medicaid_pdl:p1"
+    }
+  ],
+  "first_submit": null,
+  "model_calls": [
+    {
+      "t_start": 0.0,
+      "duration_s": 4.405,
+      "requested_model": "gpt-5.5",
+      "served_model": "gpt-5.5-2026-04-23",
+      "provider": "openai",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 528,
+        "output": 247,
+        "cache_read": 1536,
+        "cache_write": 0
+      },
+      "cost_usd": 0.010818,
+      "response_id": "resp_097756bb71c3821d016ad55763515c87d28ba4f56a407addd3",
+      "input_messages": [
+        {
+          "role": "user",
+          "text": "Today's date: 2026-10-18\n\nQuestion: The VA National Formulary lists semaglutide one way. My pt is on NY Medicaid. Is Ozempic covered for them?"
+        }
+      ],
+      "output": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "call_7cYHVCf2ZPbFRKhN9nFB2yOG",
+            "name": "lookup_ny_medicaid_drug",
+            "arguments": {
+              "drug": "Ozempic"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "t_start": 4.41,
+      "duration_s": 8.978,
+      "requested_model": "gpt-5.5",
+      "served_model": "gpt-5.5-2026-04-23",
+      "provider": "openai",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 1200,
+        "output": 604,
+        "cache_read": 1536,
+        "cache_write": 0
+      },
+      "cost_usd": 0.024888,
+      "response_id": "resp_097756bb71c3821d016ad55767b8c887d2a579d98dcd1ad3c0",
+      "input_messages": [
+        {
+          "role": "tool",
+          "tool_results": [
+            {
+              "call_id": "call_7cYHVCf2ZPbFRKhN9nFB2yOG",
+              "is_error": false,
+              "content": "{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"Ozempic\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"multiple_matches\", \"classes\": [{\"drug_class\": \"Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes\", \"section\": \"VI. Endocrine and Metabolic Agents\", \"class_flags\": {\"CC\": \"Clinical Criteria: see the class's Coverage Parameters\"}, \"coverage_parameters\": \"CLINICAL CRITERIA (CC)\\nConfirm diagnosis of FDA-approved or compendia-supported\\nindication and Medicaid covered indication\\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently\", \"coverage_pages\": [34], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p34#row-7\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Ozempic® pen\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"name plus strength or dosage form\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-12\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Ozempic® tablets\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"name plus strength or dosage form\"}]}], \"note\": \"Several rows match. List the relevant ones, or state which one you assumed.\"}"
+            }
+          ]
+        }
+      ],
+      "output": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "call_IZVlEune1HxnoV5zZkN1eG2o",
+            "name": "submit_answer",
+            "arguments": {
+              "status": "answered",
+              "assumption": "NY Medicaid/NYRx applies because the patient is on NY Medicaid; the VA National Formulary is not the controlling program.",
+              "answer": "Assuming NY Medicaid/NYRx: **Ozempic® pen is listed as preferred** in the GLP-1 receptor agonists – Type 2 Diabetes class. The returned PDL row has **no 10/22/2026 effective-date change marker**, so no future change is indicated for today, **2026-10-18**.\n\nCaveats:\n- The class has **CC**: confirm an FDA-approved/compendia-supported and Medicaid-covered indication.\n- **PA is required** if the patient is using a **GLP-1 + DPP-IV concurrently**.\n- A separate matched row lists **Ozempic® tablets as non-preferred**; non-preferred drugs require PA.\n- VA formulary status does **not** determine NYRx coverage.",
+              "citations": [
+                {
+                  "doc_id": "ny_medicaid_pdl",
+                  "page": 34,
+                  "row": null
+                },
+                {
+                  "doc_id": "ny_medicaid_pdl",
+                  "page": 1,
+                  "row": null
+                }
+              ],
+              "conflicts_noted": []
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "lookup_ny_medicaid_drug",
+      "input": {
+        "drug": "Ozempic"
+      },
+      "duration_s": 0.006,
+      "is_error": false,
+      "pages": [
+        "ny_medicaid_pdl:p1",
+        "ny_medicaid_pdl:p34"
+      ],
+      "result": "{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"Ozempic\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"multiple_matches\", \"classes\": [{\"drug_class\": \"Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes\", \"section\": \"VI. Endocrine and Metabolic Agents\", \"class_flags\": {\"CC\": \"Clinical Criteria: see the class's Coverage Parameters\"}, \"coverage_parameters\": \"CLINICAL CRITERIA (CC)\\nConfirm diagnosis of FDA-approved or compendia-supported\\nindication and Medicaid covered indication\\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently\", \"coverage_pages\": [34], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p34#row-7\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Ozempic® pen\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"name plus strength or dosage form\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-12\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Ozempic® tablets\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"name plus strength or dosage form\"}]}], \"note\": \"Several rows match. List the relevant ones, or state which one you assumed.\"}",
+      "lookup": {
+        "result": "multiple_matches",
+        "rows": 2
+      },
+      "t_start": 4.405
+    }
+  ],
+  "cited_evidence": {
+    "ny_medicaid_pdl:p34": "{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"Ozempic\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"multiple_matches\", \"classes\": [{\"drug_class\": \"Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes\", \"section\": \"VI. Endocrine and Metabolic Agents\", \"class_flags\": {\"CC\": \"Clinical Criteria: see the class's Coverage Parameters\"}, \"coverage_parameters\": \"CLINICAL CRITERIA (CC)\\nConfirm diagnosis of FDA-approved or compendia-supported\\nindication and Medicaid covered indication\\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently\", \"coverage_pages\": [34], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p34#row-7\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Ozempic® pen\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"name plus strength or dosage form\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-12\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Ozempic® tablets\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"name plus strength or dosage form\"}]}], \"note\": \"Several rows match. List the relevant ones, or state which one you assumed.\"}",
+    "ny_medicaid_pdl:p1": "{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"Ozempic\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"multiple_matches\", \"classes\": [{\"drug_class\": \"Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes\", \"section\": \"VI. Endocrine and Metabolic Agents\", \"class_flags\": {\"CC\": \"Clinical Criteria: see the class's Coverage Parameters\"}, \"coverage_parameters\": \"CLINICAL CRITERIA (CC)\\nConfirm diagnosis of FDA-approved or compendia-supported\\nindication and Medicaid covered indication\\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently\", \"coverage_pages\": [34], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p34#row-7\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Ozempic® pen\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"name plus strength or dosage form\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-12\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Ozempic® tablets\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"name plus strength or dosage form\"}]}], \"note\": \"Several rows match. List the relevant ones, or state which one you assumed.\"}"
+  },
+  "cited_evidence_parts": {
+    "ny_medicaid_pdl:p34": [
+      "{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"Ozempic\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"multiple_matches\", \"classes\": [{\"drug_class\": \"Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes\", \"section\": \"VI. Endocrine and Metabolic Agents\", \"class_flags\": {\"CC\": \"Clinical Criteria: see the class's Coverage Parameters\"}, \"coverage_parameters\": \"CLINICAL CRITERIA (CC)\\nConfirm diagnosis of FDA-approved or compendia-supported\\nindication and Medicaid covered indication\\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently\", \"coverage_pages\": [34], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p34#row-7\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Ozempic® pen\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"name plus strength or dosage form\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-12\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Ozempic® tablets\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"name plus strength or dosage form\"}]}], \"note\": \"Several rows match. List the relevant ones, or state which one you assumed.\"}"
+    ],
+    "ny_medicaid_pdl:p1": [
+      "{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"Ozempic\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"multiple_matches\", \"classes\": [{\"drug_class\": \"Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes\", \"section\": \"VI. Endocrine and Metabolic Agents\", \"class_flags\": {\"CC\": \"Clinical Criteria: see the class's Coverage Parameters\"}, \"coverage_parameters\": \"CLINICAL CRITERIA (CC)\\nConfirm diagnosis of FDA-approved or compendia-supported\\nindication and Medicaid covered indication\\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently\", \"coverage_pages\": [34], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p34#row-7\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Ozempic® pen\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"name plus strength or dosage form\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-12\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Ozempic® tablets\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"name plus strength or dosage form\"}]}], \"note\": \"Several rows match. List the relevant ones, or state which one you assumed.\"}"
+    ]
+  },
+  "cost_note": "each call priced at its serving role's rates (llm.<role>.prices_per_mtok)",
+  "request_started_utc": "2026-10-18T23:33:55.143401+00:00",
+  "citation_check": {
+    "t_start": 13.388,
+    "duration_s": 0.001
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "question": "Does buprenorphine need a PA?",
+  "status": "answered",
+  "assumption": "NY Medicaid (NYRx), since the program wasn't named and this is a coverage/PA question.",
+  "answer": "Assuming NY Medicaid: **No PA for buprenorphine used for SUD** when prescribed per generally accepted national guidelines (PDL revised 9/14/2026, MAT Formulary).\n\n- Covered without PA: buprenorphine SL tablet, buprenorphine/naloxone tablet and film, Suboxone film, Zubsolv, plus Sublocade and Brixadi.\n- Quantity limits still apply. Buprenorphine SL: 8 tablets dispensed as a 2-day supply, max 32 mg/day. Buprenorphine/naloxone has its own limits, which I saw only in part, so check PDL p. 76.\n- If a PA is required for another drug, only the prescriber can request it. The pharmacist's only PA is the 72-hour emergency supply.\n\nThe documents don't address buprenorphine products for pain (e.g., patches) in what I retrieved.",
+  "citations": [
+    {
+      "doc_id": "ny_medicaid_pdl",
+      "page": 76,
+      "link": "https://newyork.fhsc.com/downloads/providers/NYRx_PDP_PDL.pdf#page=76",
+      "flag": null
+    },
+    {
+      "doc_id": "ny_medicaid_pharmacy_policy",
+      "page": 15,
+      "link": "https://www.emedny.org/ProviderManuals/Pharmacy/PDFS/Pharmacy_Policy_Guidelines.pdf#page=15",
+      "flag": null
+    }
+  ],
+  "conflicts_noted": [],
+  "flags": [],
+  "answered_by": "claude-sonnet-5-5",
+  "fallback_used": false,
+  "timing_s": {
+    "total": 6.192,
+    "search": 0.062,
+    "search_cold": 0,
+    "search_warm": 0.062,
+    "read_page": 0,
+    "list_documents": 0,
+    "model_calls": [
+      2.13,
+      4.0
+    ]
+  },
+  "index_warm_at_start": true,
+  "lookups": 1,
+  "tokens": {
+    "input": 6,
+    "output": 634,
+    "cache_read": 2228,
+    "cache_write": 7573
+  },
+  "cost_usd": 0.02573,
+  "pages_seen": [
+    "ny_medicaid_pdl:p1",
+    "ny_medicaid_pdl:p76",
+    "ny_medicaid_pharmacy_policy:p15",
+    "ny_medicaid_pharmacy_policy:p16",
+    "ny_medicaid_pharmacy_policy:p3",
+    "ny_medicaid_pharmacy_policy:p38"
+  ],
+  "started_at": "2026-10-14T22:07:32+00:00",
+  "config": {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium",
+    "setup": "baseline",
+    "max_tool_calls": 6,
+    "deadline_s": 25,
+    "search_k": 8
+  },
+  "model_calls": [
+    {
+      "duration_s": 2.13,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 4,
+        "output": 106,
+        "cache_read": 0,
+        "cache_write": 2228
+      }
+    },
+    {
+      "duration_s": 4.0,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 2,
+        "output": 528,
+        "cache_read": 2228,
+        "cache_write": 5345
+      }
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "search_documents",
+      "input": {
+        "query": "buprenorphine prior authorization",
+        "program": "NY Medicaid",
+        "k": 10
+      },
+      "duration_s": 0.062,
+      "is_error": false,
+      "pages": [
+        "ny_medicaid_pharmacy_policy:p15",
+        "ny_medicaid_pdl:p76",
+        "ny_medicaid_pharmacy_policy:p38",
+        "ny_medicaid_pharmacy_policy:p16",
+        "ny_medicaid_pharmacy_policy:p15",
+        "ny_medicaid_pharmacy_policy:p15",
+        "ny_medicaid_pharmacy_policy:p3",
+        "ny_medicaid_pdl:p1",
+        "ny_medicaid_pdl:p1",
+        "ny_medicaid_pharmacy_policy:p16"
+      ],
+      "index_loaded": true
+    }
+  ],
+  "cost_note": "priced at the requested model's rates; a fallback hop bills at its own rates"
+}

@@ -1,0 +1,101 @@
+{
+  "question": "What's the best amoxicillin dosing for pediatric ear infections?",
+  "status": "not_in_documents",
+  "assumption": null,
+  "answer": "The searchable documents don't cover this. They are VA/DoD diabetes and opioid guidance, Medicare Part D opioid policy, and NY Medicaid PDL and pharmacy policy. My search found nothing on amoxicillin dosing or on pediatric otitis media. I won't give a dose from general knowledge. Use a pediatric infectious disease reference, such as current AAP otitis media guidance or the product labeling, or ask the prescriber or your pharmacy's clinical resources.",
+  "citations": [],
+  "conflicts_noted": [],
+  "flags": [],
+  "answered_by": "claude-sonnet-5-5",
+  "fallback_used": false,
+  "timing_s": {
+    "total": 5.732,
+    "search": 0.059,
+    "search_cold": 0,
+    "search_warm": 0.059,
+    "read_page": 0,
+    "list_documents": 0,
+    "model_calls": [
+      1.541,
+      4.132
+    ]
+  },
+  "index_warm_at_start": true,
+  "lookups": 1,
+  "tokens": {
+    "input": 6,
+    "output": 376,
+    "cache_read": 2238,
+    "cache_write": 7402
+  },
+  "cost_usd": 0.022725,
+  "pages_seen": [
+    "va_dod_cpg_diabetes_2023:p121",
+    "va_dod_cpg_opioids_2022:p104",
+    "va_dod_cpg_opioids_2022:p107",
+    "va_dod_cpg_opioids_2022:p109",
+    "va_dod_cpg_opioids_2022:p111",
+    "va_dod_cpg_opioids_2022:p113",
+    "va_dod_cpg_opioids_2022:p118",
+    "va_dod_cpg_opioids_2022:p99"
+  ],
+  "started_at": "2026-10-14T22:08:17+00:00",
+  "config": {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium",
+    "setup": "baseline",
+    "max_tool_calls": 6,
+    "deadline_s": 25,
+    "search_k": 8
+  },
+  "model_calls": [
+    {
+      "duration_s": 1.541,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 4,
+        "output": 64,
+        "cache_read": 0,
+        "cache_write": 2238
+      }
+    },
+    {
+      "duration_s": 4.132,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 2,
+        "output": 312,
+        "cache_read": 2238,
+        "cache_write": 5164
+      }
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "search_documents",
+      "input": {
+        "query": "amoxicillin pediatric otitis media dosing"
+      },
+      "duration_s": 0.059,
+      "is_error": false,
+      "pages": [
+        "va_dod_cpg_diabetes_2023:p121",
+        "va_dod_cpg_opioids_2022:p104",
+        "va_dod_cpg_opioids_2022:p107",
+        "va_dod_cpg_opioids_2022:p111",
+        "va_dod_cpg_opioids_2022:p113",
+        "va_dod_cpg_opioids_2022:p99",
+        "va_dod_cpg_opioids_2022:p118",
+        "va_dod_cpg_opioids_2022:p109"
+      ],
+      "index_loaded": true
+    }
+  ],
+  "cost_note": "priced at the requested model's rates; a fallback hop bills at its own rates"
+}

@@ -1,0 +1,128 @@
+{
+  "question": "This Veteran has T2DM and established ASCVD, but their A1c is already at goal. Do we need to try metformin before starting an SGLT2, or can the prescriber start it for cardiovascular benefit?",
+  "status": "answered",
+  "assumption": "Assuming VA clinical guidance (Veteran); VA formulary status/criteria for use aren't available in the searchable documents.",
+  "answer": "Assuming VA guidance: **No metformin trial is required first.** The prescriber can start an SGLT2i for cardiovascular benefit.\n\n- The VA PBM T2DM guide (04/2025) calls SGLT2 inhibitors first-line in T2DM with ASCVD, HF, or CKD. It says to use them regardless of A1c, because the benefit isn't glucose-related.\n- It says to use an SGLT2i first in these patients and add metformin only if more glycemic control is needed. Empagliflozin is the agent it names for ASCVD.\n- If an SGLT2i can't be used, it says to use a GLP-1 RA (injectable semaglutide). Check eGFR is ≥20 before starting.\n- If the Veteran is on a sulfonylurea or DPP-4i with A1c in range, consider replacing it with the SGLT2i.\n- The VA/DoD CPG (2023) agrees: a GLP-1 RA or SGLT2i should be part of the regimen regardless of A1c.\n\nI couldn't check VA National Formulary status or restrictions for these drugs.",
+  "citations": [
+    {
+      "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+      "page": 3,
+      "link": "https://www.pbm.va.gov/PBM/AcademicDetailingService/Documents/508/IB10-1775_PharmacotherapyforT2DM_P97221.pdf#page=3",
+      "flag": null
+    },
+    {
+      "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+      "page": 5,
+      "link": "https://www.pbm.va.gov/PBM/AcademicDetailingService/Documents/508/IB10-1775_PharmacotherapyforT2DM_P97221.pdf#page=5",
+      "flag": null
+    },
+    {
+      "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+      "page": 4,
+      "link": "https://www.pbm.va.gov/PBM/AcademicDetailingService/Documents/508/IB10-1775_PharmacotherapyforT2DM_P97221.pdf#page=4",
+      "flag": null
+    },
+    {
+      "doc_id": "va_dod_cpg_diabetes_2023",
+      "page": 59,
+      "link": "https://www.healthquality.va.gov/guidelines/CD/diabetes/VADoD-Diabetes-CPG_Final_508.pdf#page=59",
+      "flag": null
+    }
+  ],
+  "conflicts_noted": [],
+  "flags": [],
+  "answered_by": "claude-sonnet-5-5",
+  "fallback_used": false,
+  "timing_s": {
+    "total": 13.908,
+    "search": 6.302,
+    "search_cold": 6.302,
+    "search_warm": 0,
+    "read_page": 0,
+    "list_documents": 0,
+    "model_calls": [
+      2.59,
+      5.008
+    ]
+  },
+  "index_warm_at_start": false,
+  "lookups": 1,
+  "tokens": {
+    "input": 6,
+    "output": 818,
+    "cache_read": 2283,
+    "cache_write": 7402
+  },
+  "cost_usd": 0.027154,
+  "pages_seen": [
+    "va_dod_cpg_diabetes_2023:p21",
+    "va_dod_cpg_diabetes_2023:p59",
+    "va_dod_cpg_diabetes_2023:p60",
+    "va_dod_cpg_diabetes_2023:p74",
+    "va_pbm_t2dm_pharmacotherapy_2025:p3",
+    "va_pbm_t2dm_pharmacotherapy_2025:p4",
+    "va_pbm_t2dm_pharmacotherapy_2025:p5",
+    "va_pbm_t2dm_pharmacotherapy_2025:p6"
+  ],
+  "started_at": "2026-10-14T22:00:55+00:00",
+  "config": {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium",
+    "setup": "baseline",
+    "max_tool_calls": 6,
+    "deadline_s": 25,
+    "search_k": 8
+  },
+  "model_calls": [
+    {
+      "duration_s": 2.59,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 4,
+        "output": 134,
+        "cache_read": 0,
+        "cache_write": 2283
+      }
+    },
+    {
+      "duration_s": 5.008,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 2,
+        "output": 684,
+        "cache_read": 2283,
+        "cache_write": 5119
+      }
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "search_documents",
+      "input": {
+        "query": "T2DM established ASCVD SGLT2 inhibitor or GLP-1 RA regardless of A1c, metformin not required first",
+        "program": "VA",
+        "k": 8
+      },
+      "duration_s": 6.302,
+      "is_error": false,
+      "pages": [
+        "va_pbm_t2dm_pharmacotherapy_2025:p4",
+        "va_dod_cpg_diabetes_2023:p59",
+        "va_pbm_t2dm_pharmacotherapy_2025:p3",
+        "va_pbm_t2dm_pharmacotherapy_2025:p5",
+        "va_dod_cpg_diabetes_2023:p74",
+        "va_pbm_t2dm_pharmacotherapy_2025:p6",
+        "va_dod_cpg_diabetes_2023:p60",
+        "va_dod_cpg_diabetes_2023:p21"
+      ],
+      "index_loaded": false
+    }
+  ],
+  "cost_note": "priced at the requested model's rates; a fallback hop bills at its own rates"
+}

@@ -1,0 +1,155 @@
+{
+  "question": "PBM lists a Butrans starting dose, but the CPG discourages opioid initiation. What applies to an opioid-naïve patient with chronic non-cancer pain?",
+  "status": "answered",
+  "assumption": "Assuming VA clinical guidance (PBM buprenorphine guide vs VA/DoD 2022 opioid CPG); the VA formulary/criteria for use isn't searchable, so Butrans formulary status isn't confirmed.",
+  "answer": "Assuming VA guidance: these don't truly conflict.\n\n- **CPG (2022, Rec 1):** Strong against initiating opioid therapy for chronic non-cancer pain. Non-opioid treatments come first. For a clinical question, the CPG governs whether to start.\n- **PBM guide (2021):** The 5 mcg/hr patch applies only if the prescriber decides opioids are warranted. It is dosing, not a recommendation to start. Change the patch every 7 days.\n- The CPG also says buprenorphine may be a first-line option over moderate/high-dose full agonists. It cautions that evidence in opioid-naïve patients is limited, and overdose is possible.\n\nSo an opioid-naïve patient needs a documented decision to start opioids. Butrans 5 mcg/hr is then the start dose. Butrans formulary criteria for use aren't available to me.",
+  "citations": [
+    {
+      "doc_id": "va_pbm_bup_chronic_pain",
+      "page": 2,
+      "link": "https://www.pbm.va.gov/PBM/AcademicDetailingService/Documents/Academic_Detailing_Educational_Material_Catalog/IB_1497_Provider_BupChronicPain.pdf#page=2",
+      "flag": null
+    },
+    {
+      "doc_id": "va_dod_cpg_opioids_2022",
+      "page": 33,
+      "link": "https://www.healthquality.va.gov/guidelines/Pain/cot/VADoDOpioidsCPG.pdf#page=33",
+      "flag": null
+    },
+    {
+      "doc_id": "va_dod_cpg_opioids_2022",
+      "page": 45,
+      "link": "https://www.healthquality.va.gov/guidelines/Pain/cot/VADoDOpioidsCPG.pdf#page=45",
+      "flag": null
+    },
+    {
+      "doc_id": "va_dod_cpg_opioids_2022",
+      "page": 104,
+      "link": "https://www.healthquality.va.gov/guidelines/Pain/cot/VADoDOpioidsCPG.pdf#page=104",
+      "flag": null
+    }
+  ],
+  "conflicts_noted": [
+    "Apparent conflict: PBM guide lists Butrans 5 mcg/hr for opioid-naïve vs CPG Rec 1 strong against initiating opioids. Not a true conflict: dosing guidance vs initiation recommendation; CPG governs the decision to start, PBM governs dose if started."
+  ],
+  "flags": [],
+  "answered_by": "claude-sonnet-5-5",
+  "fallback_used": false,
+  "timing_s": {
+    "total": 8.704,
+    "search": 0.098,
+    "search_cold": 0,
+    "search_warm": 0.098,
+    "read_page": 0,
+    "list_documents": 0,
+    "model_calls": [
+      2.458,
+      6.148
+    ]
+  },
+  "index_warm_at_start": true,
+  "lookups": 2,
+  "tokens": {
+    "input": 6,
+    "output": 912,
+    "cache_read": 2271,
+    "cache_write": 12589
+  },
+  "cost_usd": 0.041059,
+  "pages_seen": [
+    "va_dod_cpg_opioids_2022:p104",
+    "va_dod_cpg_opioids_2022:p105",
+    "va_dod_cpg_opioids_2022:p121",
+    "va_dod_cpg_opioids_2022:p125",
+    "va_dod_cpg_opioids_2022:p127",
+    "va_dod_cpg_opioids_2022:p129",
+    "va_dod_cpg_opioids_2022:p130",
+    "va_dod_cpg_opioids_2022:p33",
+    "va_dod_cpg_opioids_2022:p34",
+    "va_dod_cpg_opioids_2022:p39",
+    "va_dod_cpg_opioids_2022:p45",
+    "va_dod_cpg_opioids_2022:p51",
+    "va_pbm_bup_chronic_pain:p2",
+    "va_pbm_bup_chronic_pain:p4"
+  ],
+  "started_at": "2026-10-14T22:04:22+00:00",
+  "config": {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium",
+    "setup": "baseline",
+    "max_tool_calls": 6,
+    "deadline_s": 25,
+    "search_k": 8
+  },
+  "model_calls": [
+    {
+      "duration_s": 2.458,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 4,
+        "output": 185,
+        "cache_read": 0,
+        "cache_write": 2271
+      }
+    },
+    {
+      "duration_s": 6.148,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 2,
+        "output": 727,
+        "cache_read": 2271,
+        "cache_write": 10318
+      }
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "search_documents",
+      "input": {
+        "query": "Butrans buprenorphine transdermal starting dose opioid-naïve",
+        "program": "VA"
+      },
+      "duration_s": 0.077,
+      "is_error": false,
+      "pages": [
+        "va_pbm_bup_chronic_pain:p2",
+        "va_dod_cpg_opioids_2022:p104",
+        "va_pbm_bup_chronic_pain:p4",
+        "va_dod_cpg_opioids_2022:p121",
+        "va_dod_cpg_opioids_2022:p45",
+        "va_dod_cpg_opioids_2022:p45",
+        "va_dod_cpg_opioids_2022:p105",
+        "va_dod_cpg_opioids_2022:p104"
+      ],
+      "index_loaded": true
+    },
+    {
+      "name": "search_documents",
+      "input": {
+        "query": "suggest against initiating long-term opioid therapy chronic pain recommendation",
+        "program": "VA"
+      },
+      "duration_s": 0.021,
+      "is_error": false,
+      "pages": [
+        "va_dod_cpg_opioids_2022:p34",
+        "va_dod_cpg_opioids_2022:p127",
+        "va_dod_cpg_opioids_2022:p125",
+        "va_dod_cpg_opioids_2022:p129",
+        "va_dod_cpg_opioids_2022:p39",
+        "va_dod_cpg_opioids_2022:p51",
+        "va_dod_cpg_opioids_2022:p33",
+        "va_dod_cpg_opioids_2022:p130"
+      ],
+      "index_loaded": true
+    }
+  ],
+  "cost_note": "priced at the requested model's rates; a fallback hop bills at its own rates"
+}

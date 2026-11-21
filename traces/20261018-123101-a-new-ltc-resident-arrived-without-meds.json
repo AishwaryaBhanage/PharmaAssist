@@ -1,0 +1,547 @@
+{
+  "question": "A new LTC resident arrived without meds, and their first fill rejects with 01642. Which override applies?",
+  "request_id": "be084e4e-d2b8-4f87-9c66-03e5e0d2da9f",
+  "status": "answered",
+  "agent_status": "answered",
+  "assumption": "NY Medicaid (NYRx), because the question is an LTC claim/reject override and no other program was named.",
+  "answer": "Assuming NY Medicaid (NYRx): use the **New Patient Processing override**, not LOA.\n\n1. Confirm the dispensing pharmacy is an **LTC servicing pharmacy**.\n2. Confirm the member was recently admitted to an eligible LTC facility and eligibility returns **NH/N1–N9**.\n3. Confirm reject **01642** is “Early Fill Overuse” and this is the **first dispensing** after admission for the same drug/strength/directions.\n4. Submit **Reason for Service Code 439-E4 = NP** and **SCC 420-DK = 18**.\n\nDay supply is limited to **30 days**, unless short-cycle billing applies. If any condition is not met, call the Department.",
+  "citations": [
+    {
+      "doc_id": "ny_medicaid_pharmacy_policy",
+      "page": 9,
+      "link": "https://www.emedny.org/ProviderManuals/Pharmacy/PDFS/Pharmacy_Policy_Guidelines.pdf#page=9",
+      "flag": null,
+      "locator": "ny_medicaid_pharmacy_policy:p9"
+    }
+  ],
+  "conflicts_noted": [],
+  "flags": [],
+  "needs_review": false,
+  "words": {
+    "displayed": 97,
+    "rendered": 97
+  },
+  "answered_by": "gpt-5.5-2026-04-23",
+  "provider": "openai",
+  "model": "gpt-5.5-2026-04-23",
+  "fallback_used": false,
+  "timing_s": {
+    "total": 11.134,
+    "search": 2.393,
+    "read_page": 0.017,
+    "list_documents": 0,
+    "lookups": 0,
+    "model_calls": [
+      2.064,
+      3.122,
+      3.537
+    ]
+  },
+  "lookups": 2,
+  "tokens": {
+    "input": 9876,
+    "output": 474,
+    "cache_read": 12800,
+    "cache_write": 0
+  },
+  "cost_usd": 0.07,
+  "pages_seen": [
+    "ny_medicaid_pdl:p77",
+    "ny_medicaid_pdl:p78",
+    "ny_medicaid_pharmacy_policy:p10",
+    "ny_medicaid_pharmacy_policy:p11",
+    "ny_medicaid_pharmacy_policy:p14",
+    "ny_medicaid_pharmacy_policy:p25",
+    "ny_medicaid_pharmacy_policy:p26",
+    "ny_medicaid_pharmacy_policy:p27",
+    "ny_medicaid_pharmacy_policy:p32",
+    "ny_medicaid_pharmacy_policy:p37",
+    "ny_medicaid_pharmacy_policy:p38",
+    "ny_medicaid_pharmacy_policy:p39",
+    "ny_medicaid_pharmacy_policy:p40",
+    "ny_medicaid_pharmacy_policy:p41",
+    "ny_medicaid_pharmacy_policy:p6",
+    "ny_medicaid_pharmacy_policy:p7",
+    "ny_medicaid_pharmacy_policy:p8",
+    "ny_medicaid_pharmacy_policy:p9"
+  ],
+  "trace_id": null,
+  "started_at": "2026-10-18T16:31:01+00:00",
+  "config": {
+    "primary": "gpt-5.5",
+    "fallback": "claude-sonnet-5-5",
+    "effort": "medium",
+    "search": {
+      "mode": "hybrid",
+      "rrf_k": 60,
+      "fusion_depth": 100,
+      "return_parents": true,
+      "rerank": {
+        "model": "BAAI/bge-reranker-base",
+        "depth": 20,
+        "timeout_s": 8
+      }
+    },
+    "max_tool_calls": 6,
+    "deadline_s": 25,
+    "search_k": 8
+  },
+  "structured_lookups": true,
+  "context": {},
+  "model_answer": "Assuming NY Medicaid (NYRx): use the **New Patient Processing override**, not LOA.\n\n1. Confirm the dispensing pharmacy is an **LTC servicing pharmacy**.\n2. Confirm the member was recently admitted to an eligible LTC facility and eligibility returns **NH/N1–N9**.\n3. Confirm reject **01642** is “Early Fill Overuse” and this is the **first dispensing** after admission for the same drug/strength/directions.\n4. Submit **Reason for Service Code 439-E4 = NP** and **SCC 420-DK = 18**.\n\nDay supply is limited to **30 days**, unless short-cycle billing applies. If any condition is not met, call the Department.",
+  "model_citations": [
+    {
+      "doc_id": "ny_medicaid_pharmacy_policy",
+      "page": 9,
+      "link": "https://www.emedny.org/ProviderManuals/Pharmacy/PDFS/Pharmacy_Policy_Guidelines.pdf#page=9",
+      "flag": null,
+      "locator": "ny_medicaid_pharmacy_policy:p9"
+    }
+  ],
+  "model_calls": [
+    {
+      "t_start": 0.0,
+      "duration_s": 2.064,
+      "requested_model": "gpt-5.5",
+      "served_model": "gpt-5.5-2026-04-23",
+      "provider": "openai",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 312,
+        "output": 64,
+        "cache_read": 1536,
+        "cache_write": 0
+      },
+      "cost_usd": 0.004248,
+      "response_id": "resp_07d6af9afd835f71016ad4f43a3c7c87d2a2b489f543d4ff61",
+      "input_messages": [
+        {
+          "role": "user",
+          "text": "Today's date: 2026-10-18\n\nQuestion: A new LTC resident arrived without meds, and their first fill rejects with 01642. Which override applies?"
+        }
+      ],
+      "output": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "call_PFZu481ES6f0F49vHEag2hcD",
+            "name": "search_documents",
+            "arguments": {
+              "query": "01642 LTC resident arrived without meds first fill reject override",
+              "program": "NY Medicaid",
+              "k": 8
+            }
+          }
+        ]
+      }
+    },
+    {
+      "t_start": 4.457,
+      "duration_s": 3.122,
+      "requested_model": "gpt-5.5",
+      "served_model": "gpt-5.5-2026-04-23",
+      "provider": "openai",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 8399,
+        "output": 180,
+        "cache_read": 1536,
+        "cache_write": 0
+      },
+      "cost_usd": 0.048163,
+      "response_id": "resp_07d6af9afd835f71016ad4f43eaae087d288fc50dda62459b0",
+      "input_messages": [
+        {
+          "role": "tool",
+          "tool_results": [
+            {
+              "call_id": "call_PFZu481ES6f0F49vHEag2hcD",
+              "is_error": false,
+              "content": "[{\"doc_id\": \"ny_medicaid_pharmacy_policy\", \"page\": 8, \"program\": \"NY Medicaid\", \"authority\": \"binding\", \"date\": \"2026-09\", \"text\": \"NYRx Pharmacy Manual Policy Guidelines (Version 2026-3) > 1.0 General Pharmacy Policy > Refills\\n[p 8]\\nPer the State regulation, a prescription or fiscal order may not be refilled unless the prescriber has indicated the number of allowable refills on the order. Prescription drug, OTC drugs, and pharmacy dispensed supplies authorized by the prescriber with \\\"PRN\\\" refill equates to one refill.\\nAll refills of prescription drugs must be in accordance with federal and state laws and bear the same prescription number and written date of the original prescription. Refills of non-prescription drugs and medical/surgical supplies must also be appropriately referenced to the original order by the pharmacy.\\nA NYS Medicaid Member may obtain a refill in one of the following two ways:\\nThe Medicaid member or their designee may contact their pharmacy requesting a refill.\\nThe pharmacy may contact the Medicaid member to inquire if a refill is necessary, obtain consent if necessary, and then submit a claim for dispensing on their behalf.\\nEarly Refill\\nMembers are allowed to refill a prescription before the total amount of previous supply was used. A pharmacy claim will pay when more than 75 percent of the previously dispensed amount has been used, or up to a 10-day supply of medication is remaining of the cumulative amount that has been dispensed over the previous 90 days (the more stringent rule will apply). Therefore, members may refill their prescription(s) early, allowing for an ample supply of their medication(s) on hand.\\nEarly filling of more than the allowed amount for vacation or a temporary absence, as stated above, is not permissible.\\n[p 9]\\nPolicy Guidelines\\nNYRx\\nLong Term Care (LTC) Pharmacy Billing for Residents-Special Considerations\\nThe following two sections, New Patient and Leave of Absence, apply to Long Term Care Pharmacies servicing Medicaid members in a Private Skilled Nursing Facility, Public Skilled Nursing Facility, Private Health Related Facility, or Public Health Related Facility, when \\\"NH\\\" or, \\\"N1\\\", \\\"N2\\\", \\\"N3\\\", \\\"N4\\\", \\\"N5\\\", \\\"N6\\\", \\\"N7\\\", \\\"N8\\\", or \\\"N9\\\" returns on eligibility response. The following guidance is not intended for community pharmacies, or those servicing facility types not as described above. Community pharmacies, or those servicing facility types, not as described above should contact the Department for assistance with 'Early Fill Overuse' denials for members recently discharged from an LTC facility without their medication.\\nNew Patient\\nLTC pharmacies dispensing to Medicaid members who were newly admitted without their medications may use the New Patient Processing (NP) override when medically necessary when all the following conditions are met:\\nThe dispensing pharmacy is an LTC servicing pharmacy, and\\nThe member was recently admitted to a Private Skilled Nursing Facility, Public Skilled Nursing Facility, Private Health Related Facility, or Public Health Related Facility, when \\\"NH\\\" returns on eligibility response, and\\nThe claim denied for \\\"Early Fill Overuse\\\" edits \\\"01642\\\" or \\\"02242\\\" represents the first dispensing of a medication after the member's recent admittance to the LTC facility (as described above).\\nIf all conditions above are met, LTC pharmacists may override the \\\"Early Fill Overuse\\\" \\\"01642\\\" or \\\"02242\\\" denials by using a combination of Reason for Service Code \\\"NP\\\" (New Patient Processing) in the National Council for Prescription Drug Programs (NCPDP) field (439-E4), and Submission Clarification Code \\\"18\\\" (LTC Patient Admit/Readmit Indicator). Note: Day supply is limited to 30-days unless the medication is subject to short-cycle billing (see section Long Term Care Pharmacy Short Cycle Billing).\\nIf all three conditions are not met, the billing provider may call the Department for assistance.\\nThis override may not be"
+            }
+          ]
+        }
+      ],
+      "output": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "call_vJIiqp1NbmiOrZ8NxTTZ7o21",
+            "name": "read_page",
+            "arguments": {
+              "doc_id": "ny_medicaid_pharmacy_policy",
+              "page": 9
+            }
+          }
+        ]
+      }
+    },
+    {
+      "t_start": 7.597,
+      "duration_s": 3.537,
+      "requested_model": "gpt-5.5",
+      "served_model": "gpt-5.5-2026-04-23",
+      "provider": "openai",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 1165,
+        "output": 230,
+        "cache_read": 9728,
+        "cache_write": 0
+      },
+      "cost_usd": 0.017589,
+      "response_id": "resp_07d6af9afd835f71016ad4f441d48887d2a5a8792668b15259",
+      "input_messages": [
+        {
+          "role": "tool",
+          "tool_results": [
+            {
+              "call_id": "call_vJIiqp1NbmiOrZ8NxTTZ7o21",
+              "is_error": false,
+              "content": "ny_medicaid_pharmacy_policy page 9 (NY Medicaid, binding, 2026-09)\n\nPolicy Guidelines \nNYRx \n \n2026-3                                                     September 2026                                                                                8 \n \n \nLong Term Care (LTC) Pharmacy Billing for Residents-Special Considerations \nThe following two sections, New Patient and Leave of Absence, apply to Long Term Care Pharmacies servicing \nMedicaid members in a Private Skilled Nursing Facility, Public Skilled Nursing Facility, Private Health Related Facility, or \nPublic Health Related Facility, when \"NH\" or, “N1”, “N2”, “N3”, “N4”, “N5”, “N6”, “N7”, “N8”, or “N9” returns on eligibility \nresponse. The following guidance is not intended for community pharmacies, or those servicing facility types not as \ndescribed above. Community pharmacies, or those servicing facility types, not as described above should contact the \nDepartment for assistance with ‘Early Fill Overuse’ denials for members recently discharged from an LTC facility without \ntheir medication. \n \nNew Patient  \nLTC pharmacies dispensing to Medicaid members who were newly admitted without their medications may use the \nNew Patient Processing (NP) override when medically necessary when all the following conditions are met: \n• \nThe dispensing pharmacy is an LTC servicing pharmacy, and \n• \nThe member was recently admitted to a Private Skilled Nursing Facility, Public Skilled Nursing Facility, \nPrivate Health Related Facility, or Public Health Related Facility, when \"NH\" returns on eligibility response, \nand \n• \nThe claim denied for “Early Fill Overuse” edits “01642” or “02242\" represents the first dispensing of a \nmedication after the member’s recent admittance to the LTC facility (as described above). \n \nIf all conditions above are met, LTC pharmacists may override the “Early Fill Overuse” “01642” or “02242” denials by \nusing a combination of Reason for Service Code “NP” (New Patient Processing) in the National Council for Prescription \nDrug Programs (NCPDP) field (439-E4), and Submission Clarification Code “18” (LTC Patient Admit/Readmit Indicator).  \nNote: Day supply is limited to 30-days unless the medication is subject to short-cycle billing (see section Long Term \nCare Pharmacy Short Cycle Billing).  \n \nIf all three conditions are not met, the billing provider may call the Department for assistance.  \n \nThis override may not be used when the: \n• \nPharmacy is not an LTC-servicing pharmacy, or \n• \nMember is not a resident of a Private Skilled Nursing Facility, Public Skilled Nursing facility, Private Health \nRelated Facility, or Public Health Related Facility, when \"NH” does not return on eligibility response, or \n• \nMember is not a new resident to the facility, or \n• \nThe claim is not the first fill of the prescription for the same drug, strength, and directions by the LTC \npharmacy.  \n \nLeave of Absence \nLTC pharmacies may accommodate an LTC facility request for medication supply for a member leaving for a short \nabsence using one of these options:   \n• \nLTC pharmacy relabeling and repackaging dispensed medications for member use during their leave, or \n• \nLTC facility covers the cost for the additional supply of medication needed for the leave of absence, or  \n• \nLTC facility prepares for the absence by ensuring the medication supply is filled for a shorter supply before \nthe expected absence. \n \nIf the above or other options are not available, the LTC pharmacy may override the ‘Early Fill Overuse’ denial when \nthese four conditions are met:  \n• \nDispensing pharmacy is an LTC servicing pharmacy, and \n"
+            }
+          ]
+        }
+      ],
+      "output": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "call_rjgJTRC9SHmGExphM3EladDE",
+            "name": "submit_answer",
+            "arguments": {
+              "status": "answered",
+              "assumption": "NY Medicaid (NYRx), because the question is an LTC claim/reject override and no other program was named.",
+              "answer": "Assuming NY Medicaid (NYRx): use the **New Patient Processing override**, not LOA.\n\n1. Confirm the dispensing pharmacy is an **LTC servicing pharmacy**.\n2. Confirm the member was recently admitted to an eligible LTC facility and eligibility returns **NH/N1–N9**.\n3. Confirm reject **01642** is “Early Fill Overuse” and this is the **first dispensing** after admission for the same drug/strength/directions.\n4. Submit **Reason for Service Code 439-E4 = NP** and **SCC 420-DK = 18**.\n\nDay supply is limited to **30 days**, unless short-cycle billing applies. If any condition is not met, call the Department.",
+              "citations": [
+                {
+                  "doc_id": "ny_medicaid_pharmacy_policy",
+                  "page": 9,
+                  "row": null
+                }
+              ],
+              "conflicts_noted": []
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "search_documents",
+      "input": {
+        "query": "01642 LTC resident arrived without meds first fill reject override",
+        "program": "NY Medicaid",
+        "k": 8
+      },
+      "duration_s": 2.393,
+      "is_error": false,
+      "pages": [
+        "ny_medicaid_pdl:p77",
+        "ny_medicaid_pdl:p78",
+        "ny_medicaid_pharmacy_policy:p10",
+        "ny_medicaid_pharmacy_policy:p11",
+        "ny_medicaid_pharmacy_policy:p14",
+        "ny_medicaid_pharmacy_policy:p25",
+        "ny_medicaid_pharmacy_policy:p26",
+        "ny_medicaid_pharmacy_policy:p27",
+        "ny_medicaid_pharmacy_policy:p32",
+        "ny_medicaid_pharmacy_policy:p37",
+        "ny_medicaid_pharmacy_policy:p38",
+        "ny_medicaid_pharmacy_policy:p39",
+        "ny_medicaid_pharmacy_policy:p40",
+        "ny_medicaid_pharmacy_policy:p41",
+        "ny_medicaid_pharmacy_policy:p6",
+        "ny_medicaid_pharmacy_policy:p7",
+        "ny_medicaid_pharmacy_policy:p8",
+        "ny_medicaid_pharmacy_policy:p9"
+      ],
+      "result": "[{\"doc_id\": \"ny_medicaid_pharmacy_policy\", \"page\": 8, \"program\": \"NY Medicaid\", \"authority\": \"binding\", \"date\": \"2026-09\", \"text\": \"NYRx Pharmacy Manual Policy Guidelines (Version 2026-3) > 1.0 General Pharmacy Policy > Refills\\n[p 8]\\nPer the State regulation, a prescription or fiscal order may not be refilled unless the prescriber has indicated the number of allowable refills on the order. Prescription drug, OTC drugs, and pharmacy dispensed supplies authorized by the prescriber with \\\"PRN\\\" refill equates to one refill.\\nAll refills of prescription drugs must be in accordance with federal and state laws and bear the same prescription number and written date of the original prescription. Refills of non-prescription drugs and medical/surgical supplies must also be appropriately referenced to the original order by the pharmacy.\\nA NYS Medicaid Member may obtain a refill in one of the following two ways:\\nThe Medicaid member or their designee may contact their pharmacy requesting a refill.\\nThe pharmacy may contact the Medicaid member to inquire if a refill is necessary, obtain consent if necessary, and then submit a claim for dispensing on their behalf.\\nEarly Refill\\nMembers are allowed to refill a prescription before the total amount of previous supply was used. A pharmacy claim will pay when more than 75 percent of the previously dispensed amount has been used, or up to a 10-day supply of medication is remaining of the cumulative amount that has been dispensed over the previous 90 days (the more stringent rule will apply). Therefore, members may refill their prescription(s) early, allowing for an ample supply of their medication(s) on hand.\\nEarly filling of more than the allowed amount for vacation or a temporary absence, as stated above, is not permissible.\\n[p 9]\\nPolicy Guidelines\\nNYRx\\nLong Term Care (LTC) Pharmacy Billing for Residents-Special Considerations\\nThe following two sections, New Patient and Leave of Absence, apply to Long Term Care Pharmacies servicing Medicaid members in a Private Skilled Nursing Facility, Public Skilled Nursing Facility, Private Health Related Facility, or Public Health Related Facility, when \\\"NH\\\" or, \\\"N1\\\", \\\"N2\\\", \\\"N3\\\", \\\"N4\\\", \\\"N5\\\", \\\"N6\\\", \\\"N7\\\", \\\"N8\\\", or \\\"N9\\\" returns on eligibility response. The following guidance is not intended for community pharmacies, or those servicing facility types not as described above. Community pharmacies, or those servicing facility types, not as described above should contact the Department for assistance with 'Early Fill Overuse' denials for members recently discharged from an LTC facility without their medication.\\nNew Patient\\nLTC pharmacies dispensing to Medicaid members who were newly admitted without their medications may use the New Patient Processing (NP) override when medically necessary when all the following conditions are met:\\nThe dispensing pharmacy is an LTC servicing pharmacy, and\\nThe member was recently admitted to a Private Skilled Nursing Facility, Public Skilled Nursing Facility, Private Health Related Facility, or Public Health Related Facility, when \\\"NH\\\" returns on eligibility response, and\\nThe claim denied for \\\"Early Fill Overuse\\\" edits \\\"01642\\\" or \\\"02242\\\" represents the first dispensing of a medication after the member's recent admittance to the LTC facility (as described above).\\nIf all conditions above are met, LTC pharmacists may override the \\\"Early Fill Overuse\\\" \\\"01642\\\" or \\\"02242\\\" denials by using a combination of Reason for Service Code \\\"NP\\\" (New Patient Processing) in the National Council for Prescription Drug Programs (NCPDP) field (439-E4), and Submission Clarification Code \\\"18\\\" (LTC Patient Admit/Readmit Indicator). Note: Day supply is limited to 30-days unless the medication is subject to short-cycle billing (see section Long Term Care Pharmacy Short Cycle Billing).\\nIf all three conditions are not met, the billing provider may call the Department for assistance.\\nThis override may not be",
+      "search": {
+        "original_query": "A new LTC resident arrived without meds, and their first fill rejects with 01642. Which override applies?",
+        "agent_query": "01642 LTC resident arrived without meds first fill reject override",
+        "executed": [
+          {
+            "source": "original",
+            "query": "A new LTC resident arrived without meds, and their first fill rejects with 01642. Which override applies?",
+            "program": "NY Medicaid",
+            "k": 8,
+            "seconds": 2.392,
+            "cached": false,
+            "results": 8
+          },
+          {
+            "source": "agent",
+            "query": "01642 LTC resident arrived without meds first fill reject override",
+            "program": "NY Medicaid",
+            "k": 8,
+            "seconds": 1.379,
+            "cached": false,
+            "results": 8
+          }
+        ],
+        "duplicates_merged": 6,
+        "returned": 10,
+        "from_both": 6,
+        "from_original_only": 2,
+        "from_agent_only": 2,
+        "provenance": [
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s6",
+            "found_by": {
+              "original": 1,
+              "agent": 1
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s33",
+            "found_by": {
+              "original": 2,
+              "agent": 2
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s15",
+            "found_by": {
+              "original": 3,
+              "agent": 4
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s59",
+            "found_by": {
+              "original": 4,
+              "agent": 3
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s8",
+            "found_by": {
+              "original": 5,
+              "agent": 5
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s57",
+            "found_by": {
+              "original": 8,
+              "agent": 8
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s2",
+            "found_by": {
+              "original": 6
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s134",
+            "found_by": {
+              "agent": 6
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s4",
+            "found_by": {
+              "original": 7
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s46",
+            "found_by": {
+              "agent": 7
+            }
+          }
+        ],
+        "hits": [
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s6",
+            "doc_id": "ny_medicaid_pharmacy_policy",
+            "pages": [
+              8,
+              9,
+              10
+            ],
+            "ranks": {
+              "original": 1,
+              "agent": 1
+            },
+            "scores": {
+              "original": 0.9959,
+              "agent": 0.9669
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s33",
+            "doc_id": "ny_medicaid_pharmacy_policy",
+            "pages": [
+              25,
+              26,
+              27
+            ],
+            "ranks": {
+              "original": 2,
+              "agent": 2
+            },
+            "scores": {
+              "original": 0.1015,
+              "agent": 0.0121
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s15",
+            "doc_id": "ny_medicaid_pharmacy_policy",
+            "pages": [
+              14
+            ],
+            "ranks": {
+              "original": 3,
+              "agent": 4
+            },
+            "scores": {
+              "original": 0.0008,
+              "agent": 0.0011
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s59",
+            "doc_id": "ny_medicaid_pharmacy_policy",
+            "pages": [
+              40,
+              41
+            ],
+            "ranks": {
+              "original": 4,
+              "agent": 3
+            },
+            "scores": {
+              "original": 0.0006,
+              "agent": 0.0026
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s8",
+            "doc_id": "ny_medicaid_pharmacy_policy",
+            "pages": [
+              10,
+              11
+            ],
+            "ranks": {
+              "original": 5,
+              "agent": 5
+            },
+            "scores": {
+              "original": 0.0001,
+              "agent": 0.0008
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s57",
+            "doc_id": "ny_medicaid_pharmacy_policy",
+            "pages": [
+              37,
+              38,
+              39
+            ],
+            "ranks": {
+              "original": 8,
+              "agent": 8
+            },
+            "scores": {
+              "original": 0.0,
+              "agent": 0.0001
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s2",
+            "doc_id": "ny_medicaid_pharmacy_policy",
+            "pages": [
+              6
+            ],
+            "ranks": {
+              "original": 6
+            },
+            "scores": {
+              "original": 0.0001
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s134",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              77,
+              78
+            ],
+            "ranks": {
+              "agent": 6
+            },
+            "scores": {
+              "agent": 0.0002
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s4",
+            "doc_id": "ny_medicaid_pharmacy_policy",
+            "pages": [
+              7,
+              8
+            ],
+            "ranks": {
+              "original": 7
+            },
+            "scores": {
+              "original": 0.0
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s46",
+            "doc_id": "ny_medicaid_pharmacy_policy",
+            "pages": [
+              32
+            ],
+            "ranks": {
+              "agent": 7
+            },
+            "scores": {
+              "agent": 0.0001
+            }
+          }
+        ]
+      },
+      "t_start": 2.064
+    },
+    {
+      "name": "read_page",
+      "input": {
+        "doc_id": "ny_medicaid_pharmacy_policy",
+        "page": 9
+      },
+      "duration_s": 0.017,
+      "is_error": false,
+      "pages": [
+        "ny_medicaid_pharmacy_policy:p9"
+      ],
+      "result": "ny_medicaid_pharmacy_policy page 9 (NY Medicaid, binding, 2026-09)\n\nPolicy Guidelines \nNYRx \n \n2026-3                                                     September 2026                                                                                8 \n \n \nLong Term Care (LTC) Pharmacy Billing for Residents-Special Considerations \nThe following two sections, New Patient and Leave of Absence, apply to Long Term Care Pharmacies servicing \nMedicaid members in a Private Skilled Nursing Facility, Public Skilled Nursing Facility, Private Health Related Facility, or \nPublic Health Related Facility, when \"NH\" or, “N1”, “N2”, “N3”, “N4”, “N5”, “N6”, “N7”, “N8”, or “N9” returns on eligibility \nresponse. The following guidance is not intended for community pharmacies, or those servicing facility types not as \ndescribed above. Community pharmacies, or those servicing facility types, not as described above should contact the \nDepartment for assistance with ‘Early Fill Overuse’ denials for members recently discharged from an LTC facility without \ntheir medication. \n \nNew Patient  \nLTC pharmacies dispensing to Medicaid members who were newly admitted without their medications may use the \nNew Patient Processing (NP) override when medically necessary when all the following conditions are met: \n• \nThe dispensing pharmacy is an LTC servicing pharmacy, and \n• \nThe member was recently admitted to a Private Skilled Nursing Facility, Public Skilled Nursing Facility, \nPrivate Health Related Facility, or Public Health Related Facility, when \"NH\" returns on eligibility response, \nand \n• \nThe claim denied for “Early Fill Overuse” edits “01642” or “02242\" represents the first dispensing of a \nmedication after the member’s recent admittance to the LTC facility (as described above). \n \nIf all conditions above are met, LTC pharmacists may override the “Early Fill Overuse” “01642” or “02242” denials by \nusing a combination of Reason for Service Code “NP” (New Patient Processing) in the National Council for Prescription \nDrug Programs (NCPDP) field (439-E4), and Submission Clarification Code “18” (LTC Patient Admit/Readmit Indicator).  \nNote: Day supply is limited to 30-days unless the medication is subject to short-cycle billing (see section Long Term \nCare Pharmacy Short Cycle Billing).  \n \nIf all three conditions are not met, the billing provider may call the Department for assistance.  \n \nThis override may not be used when the: \n• \nPharmacy is not an LTC-servicing pharmacy, or \n• \nMember is not a resident of a Private Skilled Nursing Facility, Public Skilled Nursing facility, Private Health \nRelated Facility, or Public Health Related Facility, when \"NH” does not return on eligibility response, or \n• \nMember is not a new resident to the facility, or \n• \nThe claim is not the first fill of the prescription for the same drug, strength, and directions by the LTC \npharmacy.  \n \nLeave of Absence \nLTC pharmacies may accommodate an LTC facility request for medication supply for a member leaving for a short \nabsence using one of these options:   \n• \nLTC pharmacy relabeling and repackaging dispensed medications for member use during their leave, or \n• \nLTC facility covers the cost for the additional supply of medication needed for the leave of absence, or  \n• \nLTC facility prepares for the absence by ensuring the medication supply is filled for a shorter supply before \nthe expected absence. \n \nIf the above or other options are not available, the LTC pharmacy may override the ‘Early Fill Overuse’ denial when \nthese four conditions are met:  \n• \nDispensing pharmacy is an LTC servicing pharmacy, and \n",
+      "t_start": 7.579
+    }
+  ],
+  "cited_evidence": {
+    "ny_medicaid_pharmacy_policy:p9": "ny_medicaid_pharmacy_policy (NY Medicaid, binding, 2026-09)\nNYRx Pharmacy Manual Policy Guidelines (Version 2026-3) > 1.0 General Pharmacy Policy > Refills\n[p 8]\nPer the State regulation, a prescription or fiscal order may not be refilled unless the prescriber has indicated the number of allowable refills on the order. Prescription drug, OTC drugs, and pharmacy dispensed supplies authorized by the prescriber with \"PRN\" refill equates to one refill.\nAll refills of prescription drugs must be in accordance with federal and state laws and bear the same prescription number and written date of the original prescription. Refills of non-prescription drugs and medical/surgical supplies must also be appropriately referenced to the original order by the pharmacy.\nA NYS Medicaid Member may obtain a refill in one of the following two ways:\nThe Medicaid member or their designee may contact their pharmacy requesting a refill.\nThe pharmacy may contact the Medicaid member to inquire if a refill is necessary, obtain consent if necessary, and then submit a claim for dispensing on their behalf.\nEarly Refill\nMembers are allowed to refill a prescription before the total amount of previous supply was used. A pharmacy claim will pay when more than 75 percent of the previously dispensed amount has been used, or up to a 10-day supply of medication is remaining of the cumulative amount that has been dispensed over the previous 90 days (the more stringent rule will apply). Therefore, members may refill their prescription(s) early, allowing for an ample supply of their medication(s) on hand.\nEarly filling of more than the allowed amount for vacation or a temporary absence, as stated above, is not permissible.\n[p 9]\nPolicy Guidelines\nNYRx\nLong Term Care (LTC) Pharmacy Billing for Residents-Special Considerations\nThe following two sections, New Patient and Leave of Absence, apply to Long Term Care Pharmacies servicing Medicaid members in a Private Skilled Nursing Facility, Public Skilled Nursing Facility, Private Health Related Facility, or Public Health Related Facility, when \"NH\" or, \"N1\", \"N2\", \"N3\", \"N4\", \"N5\", \"N6\", \"N7\", \"N8\", or \"N9\" returns on eligibility response. The following guidance is not intended for community pharmacies, or those servicing facility types not as described above. Community pharmacies, or those servicing facility types, not as described above should contact the Department for assistance with 'Early Fill Overuse' denials for members recently discharged from an LTC facility without their medication.\nNew Patient\nLTC pharmacies dispensing to Medicaid members who were newly admitted without their medications may use the New Patient Processing (NP) override when medically necessary when all the following conditions are met:\nThe dispensing pharmacy is an LTC servicing pharmacy, and\nThe member was recently admitted to a Private Skilled Nursing Facility, Public Skilled Nursing Facility, Private Health Related Facility, or Public Health Related Facility, when \"NH\" returns on eligibility response, and\nThe claim denied for \"Early Fill Overuse\" edits \"01642\" or \"02242\" represents the first dispensing of a medication after the member's recent admittance to the LTC facility (as described above).\nIf all conditions above are met, LTC pharmacists may override the \"Early Fill Overuse\" \"01642\" or \"02242\" denials by using a combination of Reason for Service Code \"NP\" (New Patient Processing) in the National Council for Prescription Drug Programs (NCPDP) field (439-E4), and Submission Clarification Code \"18\" (LTC Patient Admit/Readmit Indicator). Note: Day supply is limited to 30-days unless the medication is subject to short-cycle billing (see section Long Term Care Pharmacy Short Cycle Billing).\nIf all three conditions are not met, the billing provider may call the Department for assistance.\nThis override may not be used when the:\nPharmacy is not an LTC-servicing pharmacy, or\nMember is not a resident of a Private Skilled Nursing Facility, Public Skilled Nursing facility, Private Health Related Facility, or Public Health Related Facility, when \"NH\" does not return on eligibility response, or\nMember is not a new resident to the facility, or\nThe claim is not the first fill of the prescription for the same drug, strength, and directions by the LTC pharmacy.\nLeave of Absence\nLTC pharmacies may accommodate an LTC facility request for medication supply for a member leaving for a short absence using one of these options:\nLTC pharmacy relabeling and repackaging dispensed medications for member use during their leave, or\nLTC facility covers the cost for the additional supply of medication needed for the leave of absence, or\nLTC facility prepares for the absence by ensuring the medication supply is filled for a shorter supply before the expected absence.\nIf the above or other options are not available, the LTC pharmacy may override the 'Early Fill Overuse' denial when these four conditions are met:\nDispensing pharmacy is an LTC servicing pharmacy, and\n[p 10]\nPolicy Guidelines\nNYRx\nMember is a current resident of a Private Skilled Nursing Facility, Public Skilled Nursing Facility, Private Health Related Facility, or Public Health Related Facility, when \"NH\" returns on eligibility response, and\nThe claim denied for \"Early Fill Overuse\" edits \"01642\" or \"02242\", and\nThe claim is limited to a 7-day maximum dispensed supply.\nIf all four conditions above are met, the LTC pharmacy may use a combination of Reason for Service Code (439-E4) \"AD\" (Additional Drug Needed), and a Submission Clarification Code (420-DK) of \"14\" (LTC Leave of Absence) to override the Early Fill Overuse edit. When using the Leave of Absence override, it is expected that the next regular fill date for the member will be later to account for the extra supply the member received for the leave. The pharmacy must maintain documentation, retrievable upon audit, of the use of the override, including but not limited to the facility's request for leave of absen"
+  },
+  "cited_evidence_parts": {
+    "ny_medicaid_pharmacy_policy:p9": [
+      "ny_medicaid_pharmacy_policy (NY Medicaid, binding, 2026-09)\nNYRx Pharmacy Manual Policy Guidelines (Version 2026-3) > 1.0 General Pharmacy Policy > Refills\n[p 8]\nPer the State regulation, a prescription or fiscal order may not be refilled unless the prescriber has indicated the number of allowable refills on the order. Prescription drug, OTC drugs, and pharmacy dispensed supplies authorized by the prescriber with \"PRN\" refill equates to one refill.\nAll refills of prescription drugs must be in accordance with federal and state laws and bear the same prescription number and written date of the original prescription. Refills of non-prescription drugs and medical/surgical supplies must also be appropriately referenced to the original order by the pharmacy.\nA NYS Medicaid Member may obtain a refill in one of the following two ways:\nThe Medicaid member or their designee may contact their pharmacy requesting a refill.\nThe pharmacy may contact the Medicaid member to inquire if a refill is necessary, obtain consent if necessary, and then submit a claim for dispensing on their behalf.\nEarly Refill\nMembers are allowed to refill a prescription before the total amount of previous supply was used. A pharmacy claim will pay when more than 75 percent of the previously dispensed amount has been used, or up to a 10-day supply of medication is remaining of the cumulative amount that has been dispensed over the previous 90 days (the more stringent rule will apply). Therefore, members may refill their prescription(s) early, allowing for an ample supply of their medication(s) on hand.\nEarly filling of more than the allowed amount for vacation or a temporary absence, as stated above, is not permissible.\n[p 9]\nPolicy Guidelines\nNYRx\nLong Term Care (LTC) Pharmacy Billing for Residents-Special Considerations\nThe following two sections, New Patient and Leave of Absence, apply to Long Term Care Pharmacies servicing Medicaid members in a Private Skilled Nursing Facility, Public Skilled Nursing Facility, Private Health Related Facility, or Public Health Related Facility, when \"NH\" or, \"N1\", \"N2\", \"N3\", \"N4\", \"N5\", \"N6\", \"N7\", \"N8\", or \"N9\" returns on eligibility response. The following guidance is not intended for community pharmacies, or those servicing facility types not as described above. Community pharmacies, or those servicing facility types, not as described above should contact the Department for assistance with 'Early Fill Overuse' denials for members recently discharged from an LTC facility without their medication.\nNew Patient\nLTC pharmacies dispensing to Medicaid members who were newly admitted without their medications may use the New Patient Processing (NP) override when medically necessary when all the following conditions are met:\nThe dispensing pharmacy is an LTC servicing pharmacy, and\nThe member was recently admitted to a Private Skilled Nursing Facility, Public Skilled Nursing Facility, Private Health Related Facility, or Public Health Related Facility, when \"NH\" returns on eligibility response, and\nThe claim denied for \"Early Fill Overuse\" edits \"01642\" or \"02242\" represents the first dispensing of a medication after the member's recent admittance to the LTC facility (as described above).\nIf all conditions above are met, LTC pharmacists may override the \"Early Fill Overuse\" \"01642\" or \"02242\" denials by using a combination of Reason for Service Code \"NP\" (New Patient Processing) in the National Council for Prescription Drug Programs (NCPDP) field (439-E4), and Submission Clarification Code \"18\" (LTC Patient Admit/Readmit Indicator). Note: Day supply is limited to 30-days unless the medication is subject to short-cycle billing (see section Long Term Care Pharmacy Short Cycle Billing).\nIf all three conditions are not met, the billing provider may call the Department for assistance.\nThis override may not be used when the:\nPharmacy is not an LTC-servicing pharmacy, or\nMember is not a resident of a Private Skilled Nursing Facility, Public Skilled Nursing facility, Private Health Related Facility, or Public Health Related Facility, when \"NH\" does not return on eligibility response, or\nMember is not a new resident to the facility, or\nThe claim is not the first fill of the prescription for the same drug, strength, and directions by the LTC pharmacy.\nLeave of Absence\nLTC pharmacies may accommodate an LTC facility request for medication supply for a member leaving for a short absence using one of these options:\nLTC pharmacy relabeling and repackaging dispensed medications for member use during their leave, or\nLTC facility covers the cost for the additional supply of medication needed for the leave of absence, or\nLTC facility prepares for the absence by ensuring the medication supply is filled for a shorter supply before the expected absence.\nIf the above or other options are not available, the LTC pharmacy may override the 'Early Fill Overuse' denial when these four conditions are met:\nDispensing pharmacy is an LTC servicing pharmacy, and\n[p 10]\nPolicy Guidelines\nNYRx\nMember is a current resident of a Private Skilled Nursing Facility, Public Skilled Nursing Facility, Private Health Related Facility, or Public Health Related Facility, when \"NH\" returns on eligibility response, and\nThe claim denied for \"Early Fill Overuse\" edits \"01642\" or \"02242\", and\nThe claim is limited to a 7-day maximum dispensed supply.\nIf all four conditions above are met, the LTC pharmacy may use a combination of Reason for Service Code (439-E4) \"AD\" (Additional Drug Needed), and a Submission Clarification Code (420-DK) of \"14\" (LTC Leave of Absence) to override the Early Fill Overuse edit. When using the Leave of Absence override, it is expected that the next regular fill date for the member will be later to account for the extra supply the member received for the leave. The pharmacy must maintain documentation, retrievable upon audit, of the use of the override, including but not limited to the facility's request for leave of absen",
+      "ny_medicaid_pharmacy_policy page 9 (NY Medicaid, binding, 2026-09)\n\nPolicy Guidelines \nNYRx \n \n2026-3                                                     September 2026                                                                                8 \n \n \nLong Term Care (LTC) Pharmacy Billing for Residents-Special Considerations \nThe following two sections, New Patient and Leave of Absence, apply to Long Term Care Pharmacies servicing \nMedicaid members in a Private Skilled Nursing Facility, Public Skilled Nursing Facility, Private Health Related Facility, or \nPublic Health Related Facility, when \"NH\" or, “N1”, “N2”, “N3”, “N4”, “N5”, “N6”, “N7”, “N8”, or “N9” returns on eligibility \nresponse. The following guidance is not intended for community pharmacies, or those servicing facility types not as \ndescribed above. Community pharmacies, or those servicing facility types, not as described above should contact the \nDepartment for assistance with ‘Early Fill Overuse’ denials for members recently discharged from an LTC facility without \ntheir medication. \n \nNew Patient  \nLTC pharmacies dispensing to Medicaid members who were newly admitted without their medications may use the \nNew Patient Processing (NP) override when medically necessary when all the following conditions are met: \n• \nThe dispensing pharmacy is an LTC servicing pharmacy, and \n• \nThe member was recently admitted to a Private Skilled Nursing Facility, Public Skilled Nursing Facility, \nPrivate Health Related Facility, or Public Health Related Facility, when \"NH\" returns on eligibility response, \nand \n• \nThe claim denied for “Early Fill Overuse” edits “01642” or “02242\" represents the first dispensing of a \nmedication after the member’s recent admittance to the LTC facility (as described above). \n \nIf all conditions above are met, LTC pharmacists may override the “Early Fill Overuse” “01642” or “02242” denials by \nusing a combination of Reason for Service Code “NP” (New Patient Processing) in the National Council for Prescription \nDrug Programs (NCPDP) field (439-E4), and Submission Clarification Code “18” (LTC Patient Admit/Readmit Indicator).  \nNote: Day supply is limited to 30-days unless the medication is subject to short-cycle billing (see section Long Term \nCare Pharmacy Short Cycle Billing).  \n \nIf all three conditions are not met, the billing provider may call the Department for assistance.  \n \nThis override may not be used when the: \n• \nPharmacy is not an LTC-servicing pharmacy, or \n• \nMember is not a resident of a Private Skilled Nursing Facility, Public Skilled Nursing facility, Private Health \nRelated Facility, or Public Health Related Facility, when \"NH” does not return on eligibility response, or \n• \nMember is not a new resident to the facility, or \n• \nThe claim is not the first fill of the prescription for the same drug, strength, and directions by the LTC \npharmacy.  \n \nLeave of Absence \nLTC pharmacies may accommodate an LTC facility request for medication supply for a member leaving for a short \nabsence using one of these options:   \n• \nLTC pharmacy relabeling and repackaging dispensed medications for member use during their leave, or \n• \nLTC facility covers the cost for the additional supply of medication needed for the leave of absence, or  \n• \nLTC facility prepares for the absence by ensuring the medication supply is filled for a shorter supply before \nthe expected absence. \n \nIf the above or other options are not available, the LTC pharmacy may override the ‘Early Fill Overuse’ denial when \nthese four conditions are met:  \n• \nDispensing pharmacy is an LTC servicing pharmacy, and \n"
+    ]
+  },
+  "cost_note": "each call priced at its serving role's rates (llm.<role>.prices_per_mtok)",
+  "request_started_utc": "2026-10-18T16:30:50.077724+00:00",
+  "citation_check": {
+    "t_start": 11.134,
+    "duration_s": 0.0
+  }
+}

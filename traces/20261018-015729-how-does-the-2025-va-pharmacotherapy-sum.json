@@ -1,0 +1,395 @@
+{
+  "question": "How does the 2025 VA pharmacotherapy summary say to start and titrate basal insulin, and what if hypoglycemia occurs?",
+  "status": "answered",
+  "assumption": "Assuming VA guidance (clinical question) from the 2025 VA T2DM Clinician's Summary (IB 10-1775); advisory, not binding.",
+  "answer": "Assuming VA 2025 T2DM summary (IB 10-1775, advisory):\n\n1. **Start:** one basal injection daily at bedtime. Glargine is preferred over NPH (less hypoglycemia). Initial dose is 10 units or 0.1–0.2 units/kg once daily.\n2. **Titrate:** set an FPG target range. Increase 10–15% weekly, or 2 units every 3 days, based on self-monitored FPG.\n3. **Hypoglycemia:** decrease the insulin dose by 10–20%.\n4. **Recurrent hypoglycemia despite dose adjustments:** trial glargine U300. If it continues, consider degludec (see criteria for use).\n\nIndividualize the regimen to Veteran-specific factors and glucose readings.",
+  "citations": [
+    {
+      "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+      "page": 8,
+      "link": "https://www.pbm.va.gov/PBM/AcademicDetailingService/Documents/508/IB10-1775_PharmacotherapyforT2DM_P97221.pdf#page=8",
+      "flag": null,
+      "locator": "va_pbm_t2dm_pharmacotherapy_2025:p8"
+    }
+  ],
+  "conflicts_noted": [],
+  "flags": [],
+  "needs_review": false,
+  "words": {
+    "displayed": 88,
+    "rendered": 88
+  },
+  "answered_by": "claude-sonnet-5-5",
+  "fallback_used": false,
+  "timing_s": {
+    "total": 5.555,
+    "search": 0.481,
+    "search_cold": 0,
+    "search_warm": 0.481,
+    "read_page": 0,
+    "list_documents": 0,
+    "model_calls": [
+      1.46,
+      3.614
+    ]
+  },
+  "index_warm_at_start": true,
+  "lookups": 1,
+  "tokens": {
+    "input": 6,
+    "output": 622,
+    "cache_read": 3616,
+    "cache_write": 16448
+  },
+  "cost_usd": 0.048075,
+  "pages_seen": [
+    "va_pbm_t2dm_clinicians_guide:p14",
+    "va_pbm_t2dm_clinicians_guide:p15",
+    "va_pbm_t2dm_clinicians_guide:p16",
+    "va_pbm_t2dm_clinicians_guide:p17",
+    "va_pbm_t2dm_pharmacotherapy_2025:p10",
+    "va_pbm_t2dm_pharmacotherapy_2025:p11",
+    "va_pbm_t2dm_pharmacotherapy_2025:p12",
+    "va_pbm_t2dm_pharmacotherapy_2025:p13",
+    "va_pbm_t2dm_pharmacotherapy_2025:p14",
+    "va_pbm_t2dm_pharmacotherapy_2025:p7",
+    "va_pbm_t2dm_pharmacotherapy_2025:p8",
+    "va_pbm_t2dm_pharmacotherapy_2025:p9"
+  ],
+  "started_at": "2026-10-18T05:57:29+00:00",
+  "config": {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium",
+    "setup": "docling_norerank_structured",
+    "max_tool_calls": 6,
+    "deadline_s": 25,
+    "search_k": 8
+  },
+  "structured_lookups": true,
+  "model_calls": [
+    {
+      "t_start": 0.0,
+      "duration_s": 1.46,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 4,
+        "output": 126,
+        "cache_read": 0,
+        "cache_write": 3616
+      }
+    },
+    {
+      "t_start": 1.941,
+      "duration_s": 3.614,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 2,
+        "output": 496,
+        "cache_read": 3616,
+        "cache_write": 12832
+      }
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "search_documents",
+      "input": {
+        "query": "basal insulin initiation titration units/kg hypoglycemia reduce dose pharmacotherapy summary",
+        "program": "VA",
+        "k": 8
+      },
+      "duration_s": 0.481,
+      "is_error": false,
+      "pages": [
+        "va_pbm_t2dm_clinicians_guide:p14",
+        "va_pbm_t2dm_clinicians_guide:p15",
+        "va_pbm_t2dm_clinicians_guide:p16",
+        "va_pbm_t2dm_clinicians_guide:p17",
+        "va_pbm_t2dm_pharmacotherapy_2025:p10",
+        "va_pbm_t2dm_pharmacotherapy_2025:p11",
+        "va_pbm_t2dm_pharmacotherapy_2025:p12",
+        "va_pbm_t2dm_pharmacotherapy_2025:p13",
+        "va_pbm_t2dm_pharmacotherapy_2025:p14",
+        "va_pbm_t2dm_pharmacotherapy_2025:p7",
+        "va_pbm_t2dm_pharmacotherapy_2025:p8",
+        "va_pbm_t2dm_pharmacotherapy_2025:p9"
+      ],
+      "index_loaded": true,
+      "search": {
+        "original_query": "How does the 2025 VA pharmacotherapy summary say to start and titrate basal insulin, and what if hypoglycemia occurs?",
+        "agent_query": "basal insulin initiation titration units/kg hypoglycemia reduce dose pharmacotherapy summary",
+        "executed": [
+          {
+            "source": "original",
+            "query": "How does the 2025 VA pharmacotherapy summary say to start and titrate basal insulin, and what if hypoglycemia occurs?",
+            "program": "VA",
+            "k": 8,
+            "seconds": 0.48,
+            "cached": false,
+            "results": 8
+          },
+          {
+            "source": "agent",
+            "query": "basal insulin initiation titration units/kg hypoglycemia reduce dose pharmacotherapy summary",
+            "program": "VA",
+            "k": 8,
+            "seconds": 0.291,
+            "cached": false,
+            "results": 8
+          }
+        ],
+        "duplicates_merged": 6,
+        "returned": 10,
+        "from_both": 6,
+        "from_original_only": 2,
+        "from_agent_only": 2,
+        "provenance": [
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s7",
+            "found_by": {
+              "original": 1,
+              "agent": 1
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_clinicians_guide:s13",
+            "found_by": {
+              "original": 2,
+              "agent": 3
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s8",
+            "found_by": {
+              "original": 5,
+              "agent": 2
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_clinicians_guide:s15",
+            "found_by": {
+              "original": 4,
+              "agent": 5
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_clinicians_guide:s14",
+            "found_by": {
+              "original": 6,
+              "agent": 4
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_clinicians_guide:s16",
+            "found_by": {
+              "original": 7,
+              "agent": 8
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s6",
+            "found_by": {
+              "original": 3
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s14",
+            "found_by": {
+              "agent": 6
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s12",
+            "found_by": {
+              "agent": 7
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s9",
+            "found_by": {
+              "original": 8
+            }
+          }
+        ],
+        "hits": [
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s7",
+            "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+            "pages": [
+              8
+            ],
+            "ranks": {
+              "original": 1,
+              "agent": 1
+            },
+            "scores": {
+              "original": 0.032,
+              "agent": 0.0328
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_clinicians_guide:s13",
+            "doc_id": "va_pbm_t2dm_clinicians_guide",
+            "pages": [
+              14
+            ],
+            "ranks": {
+              "original": 2,
+              "agent": 3
+            },
+            "scores": {
+              "original": 0.032,
+              "agent": 0.0304
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s8",
+            "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+            "pages": [
+              8,
+              9
+            ],
+            "ranks": {
+              "original": 5,
+              "agent": 2
+            },
+            "scores": {
+              "original": 0.0301,
+              "agent": 0.0308
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_clinicians_guide:s15",
+            "doc_id": "va_pbm_t2dm_clinicians_guide",
+            "pages": [
+              16,
+              17
+            ],
+            "ranks": {
+              "original": 4,
+              "agent": 5
+            },
+            "scores": {
+              "original": 0.0301,
+              "agent": 0.0292
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_clinicians_guide:s14",
+            "doc_id": "va_pbm_t2dm_clinicians_guide",
+            "pages": [
+              14,
+              15
+            ],
+            "ranks": {
+              "original": 6,
+              "agent": 4
+            },
+            "scores": {
+              "original": 0.0284,
+              "agent": 0.0295
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_clinicians_guide:s16",
+            "doc_id": "va_pbm_t2dm_clinicians_guide",
+            "pages": [
+              17
+            ],
+            "ranks": {
+              "original": 7,
+              "agent": 8
+            },
+            "scores": {
+              "original": 0.0275,
+              "agent": 0.0238
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s6",
+            "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+            "pages": [
+              7
+            ],
+            "ranks": {
+              "original": 3
+            },
+            "scores": {
+              "original": 0.0304
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s14",
+            "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+            "pages": [
+              13,
+              14
+            ],
+            "ranks": {
+              "agent": 6
+            },
+            "scores": {
+              "agent": 0.0256
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s12",
+            "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+            "pages": [
+              10,
+              11,
+              12
+            ],
+            "ranks": {
+              "agent": 7
+            },
+            "scores": {
+              "agent": 0.0256
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s9",
+            "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+            "pages": [
+              9
+            ],
+            "ranks": {
+              "original": 8
+            },
+            "scores": {
+              "original": 0.0262
+            }
+          }
+        ]
+      },
+      "t_start": 1.46
+    }
+  ],
+  "cited_evidence": {
+    "va_pbm_t2dm_pharmacotherapy_2025:p8": "va_pbm_t2dm_pharmacotherapy_2025 (VA, advisory, 2025-04)\nPharmacotherapy for Type 2 Diabetes Mellitus (T2DM) 2025: A VA Clinician's Summary (IB 10-1775) > Initiating insulin > Insulin selection\n[p 8]\nBasal insulin 1,2\nBasal insulins include NPH, glargine, and degludec.\n■ Start with a basal insulin and one injection daily at bedtime.\n■ NPH can cause more hypoglycemia than glargine, making glargine the preferred initial basal insulin. 43-45 Insulin glargine-yfgn (Semglee®) is a biosimilar to insulin glargine (Lantus®). See ADS Biologics/Biosimilar SharePoint for more information.\n■ Glargine 300 units/mL (or U300) is a concentrated version of glargine 100 units/mL (or U100). Glargine 300 units/mL and insulin degludec have a longer duration of action than glargine 100 units/mL (over 24 hours). Both are associated with less nocturnal and less severe hypoglycemia compared to glargine 100 units/mL. In patients with recurrent hypoglycemia, despite dosage adjustments, consider a trial of insulin glargine 300 units/mL. If hypoglycemia continues, consider switching to insulin degludec. 46 See criteria for use: https://www.va.gov/ formularyadvisor/.\n[Figure, flowchart] Figure 5. Using basal insulin*1,2 (PDF page 8). Machine-generated visual interpretation; status: machine-interpreted from the page image by a vision model; structure and OCR cross-check passed.\nBox n1 (start): Basal insulin Initial dose 10 units or 0.1 to 0.2 units/kg once daily -> if Set FPG target range: box n2\nBox n2 (action): Titrate basal insulin 10 to 15% weekly or 2 units every 3 days based on self-monitored FPG -> if If patient has hypoglycemia: box n3\nBox n3 (action): Decrease insulin Decrease insulin dose by 10 to 20%\nDecision path: n1 -> [Set FPG target range] n2 -> [If patient has hypoglycemia] n3\n*Individualize insulin regimen based on Veteran-specific factors and glucose measurements.\n\nva_pbm_t2dm_pharmacotherapy_2025 (VA, advisory, 2025-04)\nPharmacotherapy for Type 2 Diabetes Mellitus (T2DM) 2025: A VA Clinician's Summary (IB 10-1775) > Initiating insulin > Prandial (mealtime) insulin1,2\n[p 8]\nPrandial (mealtime) insulin 1,2\nPrandial insulins include aspart, glulisine, lispro, and regular.\n■ Consider GLP-1 RA before adding prandial insulin if inadequate glycemic control on basal insulin and one or more oral agents. 47\n■ Add prandial insulin when coverage is needed for meals. Consider when HbA1c continues to be above goal, basal insulin dose is > 0.5 units/kg, or glucose readings are elevated after meals.\n■ Rapid acting insulins like aspart, glulisine, and lispro should be administered 0-15 minutes before meals and are preferred to insulin regular due to easier administration.\n■ Insulin regular should be administered 30 minutes before meals. The longer time of onset and duration may increase hypoglycemia risk. 48\n[p 9]\nFigure 6. Using prandial insulin\n[Figure, flowchart] untitled in the image; see the section heading (PDF page 9). Machine-generated visual interpretation; status: machine-interpreted from the page image by a vision model; structure and OCR cross-check passed.\nBox n1 (start): Starting prandial insulin • Start with one dose before the largest meal of the day. • Use in addition to basal insulin. • Begin with 4 units or 10% of basal dose. • Discontinue sulfonylurea, meglitinides, and DPP-4 I. -> if Home glucose* or HbA1c over target range: box n2\nBox n2 (action): Titrating prandial insulin • Increase dose by 1 to 2 units or 10 to 15% twice weekly • If having hypoglycemia, determine the cause (e.g., missed meal, exercise). - If no clear reason, lower dose by 10 to 20% -> if HbA1c over target range: box n3\nBox n3 (action): Adding prandial doses • Start with adding a second prandial dose and follow titration schedule • Recheck HbA1c in 3 months • If HbA1c still elevated, adjust regimen based on glucose patterns; consider adding a third prandial insulin dose\nDecision path: n1 -> [Home glucose* or HbA1c over target range] n2 -> [HbA1c over target range] n3\nUnreadable or ambiguous (not interpreted): Footnote text for the asterisk on 'Home glucose*' is not visible in the crop\n■ Insulin aspart protamine/insulin aspart 70/30 (Novolog 70/30) or insulin 70/30 NPH/REG (Novolin 70/30) - Note these are look-alike, sound-alike drugs.\n■ Need to have regular meal routines and not skip meals.\n■ Novolog 70/30 is preferred since it is administered 0-15 minutes before mealtime, while Novolin 70/30 is administered 30 minutes before eating."
+  },
+  "cited_evidence_parts": {
+    "va_pbm_t2dm_pharmacotherapy_2025:p8": [
+      "va_pbm_t2dm_pharmacotherapy_2025 (VA, advisory, 2025-04)\nPharmacotherapy for Type 2 Diabetes Mellitus (T2DM) 2025: A VA Clinician's Summary (IB 10-1775) > Initiating insulin > Insulin selection\n[p 8]\nBasal insulin 1,2\nBasal insulins include NPH, glargine, and degludec.\n■ Start with a basal insulin and one injection daily at bedtime.\n■ NPH can cause more hypoglycemia than glargine, making glargine the preferred initial basal insulin. 43-45 Insulin glargine-yfgn (Semglee®) is a biosimilar to insulin glargine (Lantus®). See ADS Biologics/Biosimilar SharePoint for more information.\n■ Glargine 300 units/mL (or U300) is a concentrated version of glargine 100 units/mL (or U100). Glargine 300 units/mL and insulin degludec have a longer duration of action than glargine 100 units/mL (over 24 hours). Both are associated with less nocturnal and less severe hypoglycemia compared to glargine 100 units/mL. In patients with recurrent hypoglycemia, despite dosage adjustments, consider a trial of insulin glargine 300 units/mL. If hypoglycemia continues, consider switching to insulin degludec. 46 See criteria for use: https://www.va.gov/ formularyadvisor/.\n[Figure, flowchart] Figure 5. Using basal insulin*1,2 (PDF page 8). Machine-generated visual interpretation; status: machine-interpreted from the page image by a vision model; structure and OCR cross-check passed.\nBox n1 (start): Basal insulin Initial dose 10 units or 0.1 to 0.2 units/kg once daily -> if Set FPG target range: box n2\nBox n2 (action): Titrate basal insulin 10 to 15% weekly or 2 units every 3 days based on self-monitored FPG -> if If patient has hypoglycemia: box n3\nBox n3 (action): Decrease insulin Decrease insulin dose by 10 to 20%\nDecision path: n1 -> [Set FPG target range] n2 -> [If patient has hypoglycemia] n3\n*Individualize insulin regimen based on Veteran-specific factors and glucose measurements.\n\nva_pbm_t2dm_pharmacotherapy_2025 (VA, advisory, 2025-04)\nPharmacotherapy for Type 2 Diabetes Mellitus (T2DM) 2025: A VA Clinician's Summary (IB 10-1775) > Initiating insulin > Prandial (mealtime) insulin1,2\n[p 8]\nPrandial (mealtime) insulin 1,2\nPrandial insulins include aspart, glulisine, lispro, and regular.\n■ Consider GLP-1 RA before adding prandial insulin if inadequate glycemic control on basal insulin and one or more oral agents. 47\n■ Add prandial insulin when coverage is needed for meals. Consider when HbA1c continues to be above goal, basal insulin dose is > 0.5 units/kg, or glucose readings are elevated after meals.\n■ Rapid acting insulins like aspart, glulisine, and lispro should be administered 0-15 minutes before meals and are preferred to insulin regular due to easier administration.\n■ Insulin regular should be administered 30 minutes before meals. The longer time of onset and duration may increase hypoglycemia risk. 48\n[p 9]\nFigure 6. Using prandial insulin\n[Figure, flowchart] untitled in the image; see the section heading (PDF page 9). Machine-generated visual interpretation; status: machine-interpreted from the page image by a vision model; structure and OCR cross-check passed.\nBox n1 (start): Starting prandial insulin • Start with one dose before the largest meal of the day. • Use in addition to basal insulin. • Begin with 4 units or 10% of basal dose. • Discontinue sulfonylurea, meglitinides, and DPP-4 I. -> if Home glucose* or HbA1c over target range: box n2\nBox n2 (action): Titrating prandial insulin • Increase dose by 1 to 2 units or 10 to 15% twice weekly • If having hypoglycemia, determine the cause (e.g., missed meal, exercise). - If no clear reason, lower dose by 10 to 20% -> if HbA1c over target range: box n3\nBox n3 (action): Adding prandial doses • Start with adding a second prandial dose and follow titration schedule • Recheck HbA1c in 3 months • If HbA1c still elevated, adjust regimen based on glucose patterns; consider adding a third prandial insulin dose\nDecision path: n1 -> [Home glucose* or HbA1c over target range] n2 -> [HbA1c over target range] n3\nUnreadable or ambiguous (not interpreted): Footnote text for the asterisk on 'Home glucose*' is not visible in the crop\n■ Insulin aspart protamine/insulin aspart 70/30 (Novolog 70/30) or insulin 70/30 NPH/REG (Novolin 70/30) - Note these are look-alike, sound-alike drugs.\n■ Need to have regular meal routines and not skip meals.\n■ Novolog 70/30 is preferred since it is administered 0-15 minutes before mealtime, while Novolin 70/30 is administered 30 minutes before eating."
+    ]
+  },
+  "cost_note": "priced at the requested model's rates; a fallback hop bills at its own rates",
+  "request_id": "56868f2e-0a8a-429f-884d-e183a7e716f7",
+  "request_started_utc": "2026-10-18T05:57:23.924538+00:00",
+  "citation_check": {
+    "t_start": 5.555,
+    "duration_s": 0.0
+  },
+  "prices_per_mtok": {
+    "input": 2.0,
+    "output": 10.0,
+    "cache_read": 0.2,
+    "cache_write": 2.5
+  }
+}

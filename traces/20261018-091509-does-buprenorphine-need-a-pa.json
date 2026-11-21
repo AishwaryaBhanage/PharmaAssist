@@ -1,0 +1,494 @@
+{
+  "question": "Does buprenorphine need a PA?",
+  "request_id": "9d702538-b6d0-46e4-81ca-a585a590660b",
+  "status": "answered",
+  "agent_status": "answered",
+  "assumption": "Assuming NY Medicaid/NYRx because no program was named.",
+  "answer": "Assuming NY Medicaid/NYRx: **it depends on formulation/use.**\n\n- **Buprenorphine SL tablet for SUD/MAT:** PA **not required** when prescribed according to generally accepted SUD treatment guidelines. It has F/Q/D limits: up to **8 SL tablets as a 2-day supply**, max **32 mg/day**.\n- **Buprenorphine patch:** listed **preferred** under long-acting opioids, so no PDP PA just for non-preferred status, but opioid clinical criteria can trigger PA (e.g., opioid-naïve LA opioid initiation, ≥90 MME/day non-acute pain, concurrent benzo, etc.).\n- **Butrans/Belbuca:** non-preferred long-acting opioids → PA required.",
+  "citations": [
+    {
+      "doc_id": "ny_medicaid_pdl",
+      "page": 76,
+      "link": "https://newyork.fhsc.com/downloads/providers/NYRx_PDP_PDL.pdf#page=76",
+      "flag": null,
+      "locator": "ny_medicaid_pdl:p76"
+    },
+    {
+      "doc_id": "ny_medicaid_pdl",
+      "page": 5,
+      "link": "https://newyork.fhsc.com/downloads/providers/NYRx_PDP_PDL.pdf#page=5",
+      "flag": null,
+      "locator": "ny_medicaid_pdl:p5"
+    },
+    {
+      "doc_id": "ny_medicaid_pdl",
+      "page": 1,
+      "link": "https://newyork.fhsc.com/downloads/providers/NYRx_PDP_PDL.pdf#page=1",
+      "flag": null,
+      "locator": "ny_medicaid_pdl:p1"
+    }
+  ],
+  "conflicts_noted": [],
+  "flags": [],
+  "needs_review": false,
+  "words": {
+    "displayed": 86,
+    "rendered": 86
+  },
+  "answered_by": "gpt-5.5-2026-04-23",
+  "provider": "openai",
+  "model": "gpt-5.5-2026-04-23",
+  "fallback_used": false,
+  "timing_s": {
+    "total": 11.0,
+    "search": 0.362,
+    "read_page": 0,
+    "list_documents": 0,
+    "lookups": 0.007,
+    "model_calls": [
+      3.43,
+      7.2
+    ]
+  },
+  "lookups": 2,
+  "tokens": {
+    "input": 6099,
+    "output": 585,
+    "cache_read": 3072,
+    "cache_write": 0
+  },
+  "cost_usd": 0.049581,
+  "pages_seen": [
+    "ny_medicaid_pdl:p1",
+    "ny_medicaid_pdl:p2",
+    "ny_medicaid_pdl:p3",
+    "ny_medicaid_pdl:p5",
+    "ny_medicaid_pdl:p6",
+    "ny_medicaid_pdl:p66",
+    "ny_medicaid_pdl:p76",
+    "ny_medicaid_pdl:p85",
+    "ny_medicaid_pdl:p86",
+    "ny_medicaid_pharmacy_policy:p15",
+    "ny_medicaid_pharmacy_policy:p16"
+  ],
+  "trace_id": null,
+  "started_at": "2026-10-18T13:15:09+00:00",
+  "config": {
+    "primary": "gpt-5.5",
+    "fallback": "claude-sonnet-5-5",
+    "effort": "medium",
+    "search": {
+      "mode": "hybrid",
+      "rrf_k": 60,
+      "fusion_depth": 100,
+      "return_parents": true,
+      "rerank": null
+    },
+    "max_tool_calls": 6,
+    "deadline_s": 25,
+    "search_k": 8
+  },
+  "structured_lookups": true,
+  "context": {},
+  "model_answer": "Assuming NY Medicaid/NYRx: **it depends on formulation/use.**\n\n- **Buprenorphine SL tablet for SUD/MAT:** PA **not required** when prescribed according to generally accepted SUD treatment guidelines. It has F/Q/D limits: up to **8 SL tablets as a 2-day supply**, max **32 mg/day**.\n- **Buprenorphine patch:** listed **preferred** under long-acting opioids, so no PDP PA just for non-preferred status, but opioid clinical criteria can trigger PA (e.g., opioid-naïve LA opioid initiation, ≥90 MME/day non-acute pain, concurrent benzo, etc.).\n- **Butrans/Belbuca:** non-preferred long-acting opioids → PA required.",
+  "model_citations": [
+    {
+      "doc_id": "ny_medicaid_pdl",
+      "page": 76,
+      "link": "https://newyork.fhsc.com/downloads/providers/NYRx_PDP_PDL.pdf#page=76",
+      "flag": null,
+      "locator": "ny_medicaid_pdl:p76"
+    },
+    {
+      "doc_id": "ny_medicaid_pdl",
+      "page": 5,
+      "link": "https://newyork.fhsc.com/downloads/providers/NYRx_PDP_PDL.pdf#page=5",
+      "flag": null,
+      "locator": "ny_medicaid_pdl:p5"
+    },
+    {
+      "doc_id": "ny_medicaid_pdl",
+      "page": 1,
+      "link": "https://newyork.fhsc.com/downloads/providers/NYRx_PDP_PDL.pdf#page=1",
+      "flag": null,
+      "locator": "ny_medicaid_pdl:p1"
+    }
+  ],
+  "model_calls": [
+    {
+      "t_start": 0.0,
+      "duration_s": 3.43,
+      "requested_model": "gpt-5.5",
+      "served_model": "gpt-5.5-2026-04-23",
+      "provider": "openai",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 299,
+        "output": 146,
+        "cache_read": 1536,
+        "cache_write": 0
+      },
+      "cost_usd": 0.006643,
+      "response_id": "resp_023f8fdc386315fe016ad4c65316c087d2b219c05125a4e081",
+      "input_messages": [
+        {
+          "role": "user",
+          "text": "Today's date: 2026-10-18\n\nQuestion: Does buprenorphine need a PA?"
+        }
+      ],
+      "output": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "call_NTm5G9HrS5O9GlSMkXN6QAUL",
+            "name": "lookup_ny_medicaid_drug",
+            "arguments": {
+              "drug": "buprenorphine"
+            }
+          },
+          {
+            "id": "call_BIhpfGoZcUEIoN1Lbaw0vDT9",
+            "name": "search_documents",
+            "arguments": {
+              "query": "buprenorphine prior authorization PA NYRx MAT formulary",
+              "program": "NY Medicaid",
+              "k": 5
+            }
+          }
+        ]
+      }
+    },
+    {
+      "t_start": 3.799,
+      "duration_s": 7.2,
+      "requested_model": "gpt-5.5",
+      "served_model": "gpt-5.5-2026-04-23",
+      "provider": "openai",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 5800,
+        "output": 439,
+        "cache_read": 1536,
+        "cache_write": 0
+      },
+      "cost_usd": 0.042938,
+      "response_id": "resp_023f8fdc386315fe016ad4c656e35c87d2b841534f38506f6f",
+      "input_messages": [
+        {
+          "role": "tool",
+          "tool_results": [
+            {
+              "call_id": "call_NTm5G9HrS5O9GlSMkXN6QAUL",
+              "is_error": false,
+              "content": "{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"buprenorphine\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"exact_match\", \"classes\": [{\"drug_class\": \"Opioids – Long-Acting\", \"section\": \"I. Analgesics\", \"class_flags\": {\"CC\": \"Clinical Criteria: see the class's Coverage Parameters\"}, \"coverage_parameters\": \"CLINICAL CRITERIA (CC) *\\nLimited to a total of 4 opioid prescriptions every 30 days; Exemption\\nfor diagnosis of cancer, hospice or palliative care, or sickle cell\\ndisease\\nPA required for initiation of opioid therapy for patients on established\\nopioid dependence therapy\\nPA required for use if ≥ 90 MME (MME = morphine milligram\\nequivalents) of opioid per day for management of non-acute pain\\n(pain lasting > 7 days)\\nPA required for initiation of long-acting opioid therapy in opioid-naïve\\npatients.\\nPA required for any additional long-acting opioid prescription for\\npatients currently on long-acting opioid therapy.\\nPA required for initiation of opioid therapy in patients currently on\\nbenzodiazepine therapy\\nPA required for any codeine- or tramadol-containing products in pts\\n< 12 years\\nSTEP THERAPY (ST)\\nTramadol ER (tramadol naïve patients): Attempt treatment with IR\\nformulations before the following ER formulations: ConZip® , tramadol\\nER\\n*Exemption from requirements for diagnosis of cancer, sickle cell\\ndisease, or hospice or palliative care.\", \"coverage_pages\": [5, 6], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p5#row-10\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 5}, \"drug_name\": \"buprenorphine patch\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"name plus strength or dosage form\"}]}]}"
+            },
+            {
+              "call_id": "call_BIhpfGoZcUEIoN1Lbaw0vDT9",
+              "is_error": false,
+              "content": "[{\"doc_id\": \"ny_medicaid_pdl\", \"page\": 76, \"program\": \"NY Medicaid\", \"authority\": \"binding\", \"date\": \"2026-09-14\", \"text\": \"NYRx Preferred Drug Program (PDP) Preferred Drug List > Medication Assisted Treatment (MAT) Formulary\\n[p 76]\\n[Table] (PDF page 76)\\nColumns: **Prior authorization will not be required for medications used for the treatment of substance use disorder when prescribed according to generally accepted national professional guidelines for the treatment of a substance use disorder. ** | **Prior authorization will not be required for medications used for the treatment of substance use disorder when prescribed according to generally accepted national professional guidelines for the treatment of a substance use disorder. ** / Drugs | Coverage Parameters / Opioid Antagonists | Opioid Antagonists\\nKloxxado™ naloxone (syringe, vial, nasal spray) naloxone (nasal spray) OTC naltrexone Narcan ® (nasal spray) Narcan ® OTC Opvee ® Rextovy® Zimhi™ | \\nOpioid Dependence Agents - Injectable | Opioid Dependence Agents - Injectable\\nBrixadi™ Sublocade™ Vivitrol ® | \\nOpioid Dependence Agents - Oral/Transmucosal F/Q/D | Opioid Dependence Agents - Oral/Transmucosal F/Q/D\\nbuprenorphine (tablet) buprenorphine/naloxone (tablet) buprenorphine/naloxone (film) Suboxone ® (film) Zubsolv ® | QUANTITY LIMIT: • buprenorphine sublingual (SL): Eight tablets dispensed as a 2-day supply; not to exceed 32 mg per day • buprenorphine / naloxone tablet and film (Suboxone ® 2mg/0.5mg, Zubsolv ® 1.4mg/0.36mg, 0.7mg/0.18mg strength; Up to 12 sublingual tablets or films per day. • buprenorphine/naloxone tablet and film (Suboxone ® up to 4mg/1mg and 8mg/2mg strength, Zubsolv ® 2.9mg/0.71mg and 5.7mg/1.4mg strength; Four sublingual tablets or films per day; maximum of 120 tablets or films dispensed as a 30-day supply, not to exceed 32 mg-8 mg of Suboxone®, or its equivalent per day • buprenorphine/naloxone tablet: Suboxone ® 12mg/3mg, Zubsolv ® 8.6 mg/2.1 mg and Zubsolv ® 11.4 mg/2.9 mg strength: Maximum of 60 tablets dispensed as a 30-day supply RELATED CLINICAL CRITERIA (CC) • PA required for initiation of opioid therapy for patients established on opioid dependence therapy • PA required for initiation of a CNS stimulant for patients established on opioid dependence therapy\", \"pages\": [76], \"section\": \"Medication Assisted Treatment (MAT) Formulary\"}, {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 85, \"program\": \"NY Medicaid\", \"authority\": \"binding\", \"date\": \"2026-09-14\", \"text\": \"NYRx Preferred Drug Program (PDP) Preferred Drug List > NYRx Cost Optimization Program (Cost-Op)\\n[p 85]\\nIn December 2025, NYRx, the Medicaid Pharmacy Program initiated a cost optimization program. This program focuses on new formulations and dosages of older drug products that are disproportionately priced to other strengths of the same drug or similar drugs in the same drug class without any additional clinical benefit. Prescribers are encouraged to achieve the desired dose by using multiple or half of the lower cost strength or choosing the lower cost formulation (e.g., tablets versus capsules), or choosing a lower cost therapeutic comparable drug in the same drug class. If a prescriber has determined that one of these drugs is the only appropriate treatment for a Medicaid member, they may submit a letter of medical necessity and supporting documentation to the Department. The letter must accompany patient chart notes and peer reviewed medical literature that supports the use of the requested drug unit strength or dosage form. All required documents must be sent by fax at (518) 473-5508. A review will be conducted once all the listed information is received.\\nDrugs in the Cost-Op program that are also included in another NYRx, Medicaid Pharmacy Program will be identified with a \\\" MR\\\" after the drug. For example, Ibuprofen 300mg MR .\\nAdditional information and the current list of drugs in the Cost-op program can be found at https://www.emedny.org/info/NYRx_Cost_Optimization_Pr"
+            }
+          ]
+        }
+      ],
+      "output": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "call_IUnf3ir4dBuFCAxV0DPiRWf5",
+            "name": "submit_answer",
+            "arguments": {
+              "status": "answered",
+              "assumption": "Assuming NY Medicaid/NYRx because no program was named.",
+              "answer": "Assuming NY Medicaid/NYRx: **it depends on formulation/use.**\n\n- **Buprenorphine SL tablet for SUD/MAT:** PA **not required** when prescribed according to generally accepted SUD treatment guidelines. It has F/Q/D limits: up to **8 SL tablets as a 2-day supply**, max **32 mg/day**.\n- **Buprenorphine patch:** listed **preferred** under long-acting opioids, so no PDP PA just for non-preferred status, but opioid clinical criteria can trigger PA (e.g., opioid-naïve LA opioid initiation, ≥90 MME/day non-acute pain, concurrent benzo, etc.).\n- **Butrans/Belbuca:** non-preferred long-acting opioids → PA required.",
+              "citations": [
+                {
+                  "doc_id": "ny_medicaid_pdl",
+                  "page": 76,
+                  "row": null
+                },
+                {
+                  "doc_id": "ny_medicaid_pdl",
+                  "page": 5,
+                  "row": null
+                },
+                {
+                  "doc_id": "ny_medicaid_pdl",
+                  "page": 1,
+                  "row": null
+                }
+              ],
+              "conflicts_noted": []
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "lookup_ny_medicaid_drug",
+      "input": {
+        "drug": "buprenorphine"
+      },
+      "duration_s": 0.007,
+      "is_error": false,
+      "pages": [
+        "ny_medicaid_pdl:p1",
+        "ny_medicaid_pdl:p5",
+        "ny_medicaid_pdl:p6"
+      ],
+      "result": "{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"buprenorphine\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"exact_match\", \"classes\": [{\"drug_class\": \"Opioids – Long-Acting\", \"section\": \"I. Analgesics\", \"class_flags\": {\"CC\": \"Clinical Criteria: see the class's Coverage Parameters\"}, \"coverage_parameters\": \"CLINICAL CRITERIA (CC) *\\nLimited to a total of 4 opioid prescriptions every 30 days; Exemption\\nfor diagnosis of cancer, hospice or palliative care, or sickle cell\\ndisease\\nPA required for initiation of opioid therapy for patients on established\\nopioid dependence therapy\\nPA required for use if ≥ 90 MME (MME = morphine milligram\\nequivalents) of opioid per day for management of non-acute pain\\n(pain lasting > 7 days)\\nPA required for initiation of long-acting opioid therapy in opioid-naïve\\npatients.\\nPA required for any additional long-acting opioid prescription for\\npatients currently on long-acting opioid therapy.\\nPA required for initiation of opioid therapy in patients currently on\\nbenzodiazepine therapy\\nPA required for any codeine- or tramadol-containing products in pts\\n< 12 years\\nSTEP THERAPY (ST)\\nTramadol ER (tramadol naïve patients): Attempt treatment with IR\\nformulations before the following ER formulations: ConZip® , tramadol\\nER\\n*Exemption from requirements for diagnosis of cancer, sickle cell\\ndisease, or hospice or palliative care.\", \"coverage_pages\": [5, 6], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p5#row-10\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 5}, \"drug_name\": \"buprenorphine patch\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"name plus strength or dosage form\"}]}]}",
+      "lookup": {
+        "result": "exact_match",
+        "rows": 1
+      },
+      "t_start": 3.43
+    },
+    {
+      "name": "search_documents",
+      "input": {
+        "query": "buprenorphine prior authorization PA NYRx MAT formulary",
+        "program": "NY Medicaid",
+        "k": 5
+      },
+      "duration_s": 0.362,
+      "is_error": false,
+      "pages": [
+        "ny_medicaid_pdl:p1",
+        "ny_medicaid_pdl:p2",
+        "ny_medicaid_pdl:p3",
+        "ny_medicaid_pdl:p5",
+        "ny_medicaid_pdl:p6",
+        "ny_medicaid_pdl:p66",
+        "ny_medicaid_pdl:p76",
+        "ny_medicaid_pdl:p85",
+        "ny_medicaid_pdl:p86",
+        "ny_medicaid_pharmacy_policy:p15",
+        "ny_medicaid_pharmacy_policy:p16"
+      ],
+      "result": "[{\"doc_id\": \"ny_medicaid_pdl\", \"page\": 76, \"program\": \"NY Medicaid\", \"authority\": \"binding\", \"date\": \"2026-09-14\", \"text\": \"NYRx Preferred Drug Program (PDP) Preferred Drug List > Medication Assisted Treatment (MAT) Formulary\\n[p 76]\\n[Table] (PDF page 76)\\nColumns: **Prior authorization will not be required for medications used for the treatment of substance use disorder when prescribed according to generally accepted national professional guidelines for the treatment of a substance use disorder. ** | **Prior authorization will not be required for medications used for the treatment of substance use disorder when prescribed according to generally accepted national professional guidelines for the treatment of a substance use disorder. ** / Drugs | Coverage Parameters / Opioid Antagonists | Opioid Antagonists\\nKloxxado™ naloxone (syringe, vial, nasal spray) naloxone (nasal spray) OTC naltrexone Narcan ® (nasal spray) Narcan ® OTC Opvee ® Rextovy® Zimhi™ | \\nOpioid Dependence Agents - Injectable | Opioid Dependence Agents - Injectable\\nBrixadi™ Sublocade™ Vivitrol ® | \\nOpioid Dependence Agents - Oral/Transmucosal F/Q/D | Opioid Dependence Agents - Oral/Transmucosal F/Q/D\\nbuprenorphine (tablet) buprenorphine/naloxone (tablet) buprenorphine/naloxone (film) Suboxone ® (film) Zubsolv ® | QUANTITY LIMIT: • buprenorphine sublingual (SL): Eight tablets dispensed as a 2-day supply; not to exceed 32 mg per day • buprenorphine / naloxone tablet and film (Suboxone ® 2mg/0.5mg, Zubsolv ® 1.4mg/0.36mg, 0.7mg/0.18mg strength; Up to 12 sublingual tablets or films per day. • buprenorphine/naloxone tablet and film (Suboxone ® up to 4mg/1mg and 8mg/2mg strength, Zubsolv ® 2.9mg/0.71mg and 5.7mg/1.4mg strength; Four sublingual tablets or films per day; maximum of 120 tablets or films dispensed as a 30-day supply, not to exceed 32 mg-8 mg of Suboxone®, or its equivalent per day • buprenorphine/naloxone tablet: Suboxone ® 12mg/3mg, Zubsolv ® 8.6 mg/2.1 mg and Zubsolv ® 11.4 mg/2.9 mg strength: Maximum of 60 tablets dispensed as a 30-day supply RELATED CLINICAL CRITERIA (CC) • PA required for initiation of opioid therapy for patients established on opioid dependence therapy • PA required for initiation of a CNS stimulant for patients established on opioid dependence therapy\", \"pages\": [76], \"section\": \"Medication Assisted Treatment (MAT) Formulary\"}, {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 85, \"program\": \"NY Medicaid\", \"authority\": \"binding\", \"date\": \"2026-09-14\", \"text\": \"NYRx Preferred Drug Program (PDP) Preferred Drug List > NYRx Cost Optimization Program (Cost-Op)\\n[p 85]\\nIn December 2025, NYRx, the Medicaid Pharmacy Program initiated a cost optimization program. This program focuses on new formulations and dosages of older drug products that are disproportionately priced to other strengths of the same drug or similar drugs in the same drug class without any additional clinical benefit. Prescribers are encouraged to achieve the desired dose by using multiple or half of the lower cost strength or choosing the lower cost formulation (e.g., tablets versus capsules), or choosing a lower cost therapeutic comparable drug in the same drug class. If a prescriber has determined that one of these drugs is the only appropriate treatment for a Medicaid member, they may submit a letter of medical necessity and supporting documentation to the Department. The letter must accompany patient chart notes and peer reviewed medical literature that supports the use of the requested drug unit strength or dosage form. All required documents must be sent by fax at (518) 473-5508. A review will be conducted once all the listed information is received.\\nDrugs in the Cost-Op program that are also included in another NYRx, Medicaid Pharmacy Program will be identified with a \\\" MR\\\" after the drug. For example, Ibuprofen 300mg MR .\\nAdditional information and the current list of drugs in the Cost-op program can be found at https://www.emedny.org/info/NYRx_Cost_Optimization_Pr",
+      "search": {
+        "original_query": "Does buprenorphine need a PA?",
+        "agent_query": "buprenorphine prior authorization PA NYRx MAT formulary",
+        "executed": [
+          {
+            "source": "original",
+            "query": "Does buprenorphine need a PA?",
+            "program": "NY Medicaid",
+            "k": 5,
+            "seconds": 0.362,
+            "cached": false,
+            "results": 5
+          },
+          {
+            "source": "agent",
+            "query": "buprenorphine prior authorization PA NYRx MAT formulary",
+            "program": "NY Medicaid",
+            "k": 5,
+            "seconds": 0.259,
+            "cached": false,
+            "results": 5
+          }
+        ],
+        "duplicates_merged": 2,
+        "returned": 8,
+        "from_both": 2,
+        "from_original_only": 3,
+        "from_agent_only": 3,
+        "provenance": [
+          {
+            "unit": "ny_medicaid_pdl:s133",
+            "found_by": {
+              "original": 4,
+              "agent": 1
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s145",
+            "found_by": {
+              "original": 2,
+              "agent": 5
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s3",
+            "found_by": {
+              "original": 1
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s18",
+            "found_by": {
+              "agent": 2
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s4",
+            "found_by": {
+              "original": 3
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s1",
+            "found_by": {
+              "agent": 3
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s19",
+            "found_by": {
+              "agent": 4
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s122",
+            "found_by": {
+              "original": 5
+            }
+          }
+        ],
+        "hits": [
+          {
+            "unit": "ny_medicaid_pdl:s133",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              76
+            ],
+            "ranks": {
+              "original": 4,
+              "agent": 1
+            },
+            "scores": {
+              "original": 0.0291,
+              "agent": 0.0313
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s145",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              85,
+              86
+            ],
+            "ranks": {
+              "original": 2,
+              "agent": 5
+            },
+            "scores": {
+              "original": 0.0305,
+              "agent": 0.0285
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s3",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              5
+            ],
+            "ranks": {
+              "original": 1
+            },
+            "scores": {
+              "original": 0.0315
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s18",
+            "doc_id": "ny_medicaid_pharmacy_policy",
+            "pages": [
+              15
+            ],
+            "ranks": {
+              "agent": 2
+            },
+            "scores": {
+              "agent": 0.0303
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s4",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              6
+            ],
+            "ranks": {
+              "original": 3
+            },
+            "scores": {
+              "original": 0.0304
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s1",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              1,
+              2,
+              3
+            ],
+            "ranks": {
+              "agent": 3
+            },
+            "scores": {
+              "agent": 0.03
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s19",
+            "doc_id": "ny_medicaid_pharmacy_policy",
+            "pages": [
+              15,
+              16
+            ],
+            "ranks": {
+              "agent": 4
+            },
+            "scores": {
+              "agent": 0.0288
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s122",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              66
+            ],
+            "ranks": {
+              "original": 5
+            },
+            "scores": {
+              "original": 0.0283
+            }
+          }
+        ]
+      },
+      "t_start": 3.437
+    }
+  ],
+  "cited_evidence": {
+    "ny_medicaid_pdl:p76": "ny_medicaid_pdl (NY Medicaid, binding, 2026-09-14)\nNYRx Preferred Drug Program (PDP) Preferred Drug List > Medication Assisted Treatment (MAT) Formulary\n[p 76]\n[Table] (PDF page 76)\nColumns: **Prior authorization will not be required for medications used for the treatment of substance use disorder when prescribed according to generally accepted national professional guidelines for the treatment of a substance use disorder. ** | **Prior authorization will not be required for medications used for the treatment of substance use disorder when prescribed according to generally accepted national professional guidelines for the treatment of a substance use disorder. ** / Drugs | Coverage Parameters / Opioid Antagonists | Opioid Antagonists\nKloxxado™ naloxone (syringe, vial, nasal spray) naloxone (nasal spray) OTC naltrexone Narcan ® (nasal spray) Narcan ® OTC Opvee ® Rextovy® Zimhi™ | \nOpioid Dependence Agents - Injectable | Opioid Dependence Agents - Injectable\nBrixadi™ Sublocade™ Vivitrol ® | \nOpioid Dependence Agents - Oral/Transmucosal F/Q/D | Opioid Dependence Agents - Oral/Transmucosal F/Q/D\nbuprenorphine (tablet) buprenorphine/naloxone (tablet) buprenorphine/naloxone (film) Suboxone ® (film) Zubsolv ® | QUANTITY LIMIT: • buprenorphine sublingual (SL): Eight tablets dispensed as a 2-day supply; not to exceed 32 mg per day • buprenorphine / naloxone tablet and film (Suboxone ® 2mg/0.5mg, Zubsolv ® 1.4mg/0.36mg, 0.7mg/0.18mg strength; Up to 12 sublingual tablets or films per day. • buprenorphine/naloxone tablet and film (Suboxone ® up to 4mg/1mg and 8mg/2mg strength, Zubsolv ® 2.9mg/0.71mg and 5.7mg/1.4mg strength; Four sublingual tablets or films per day; maximum of 120 tablets or films dispensed as a 30-day supply, not to exceed 32 mg-8 mg of Suboxone®, or its equivalent per day • buprenorphine/naloxone tablet: Suboxone ® 12mg/3mg, Zubsolv ® 8.6 mg/2.1 mg and Zubsolv ® 11.4 mg/2.9 mg strength: Maximum of 60 tablets dispensed as a 30-day supply RELATED CLINICAL CRITERIA (CC) • PA required for initiation of opioid therapy for patients established on opioid dependence therapy • PA required for initiation of a CNS stimulant for patients established on opioid dependence therapy",
+    "ny_medicaid_pdl:p5": "{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"buprenorphine\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"exact_match\", \"classes\": [{\"drug_class\": \"Opioids – Long-Acting\", \"section\": \"I. Analgesics\", \"class_flags\": {\"CC\": \"Clinical Criteria: see the class's Coverage Parameters\"}, \"coverage_parameters\": \"CLINICAL CRITERIA (CC) *\\nLimited to a total of 4 opioid prescriptions every 30 days; Exemption\\nfor diagnosis of cancer, hospice or palliative care, or sickle cell\\ndisease\\nPA required for initiation of opioid therapy for patients on established\\nopioid dependence therapy\\nPA required for use if ≥ 90 MME (MME = morphine milligram\\nequivalents) of opioid per day for management of non-acute pain\\n(pain lasting > 7 days)\\nPA required for initiation of long-acting opioid therapy in opioid-naïve\\npatients.\\nPA required for any additional long-acting opioid prescription for\\npatients currently on long-acting opioid therapy.\\nPA required for initiation of opioid therapy in patients currently on\\nbenzodiazepine therapy\\nPA required for any codeine- or tramadol-containing products in pts\\n< 12 years\\nSTEP THERAPY (ST)\\nTramadol ER (tramadol naïve patients): Attempt treatment with IR\\nformulations before the following ER formulations: ConZip® , tramadol\\nER\\n*Exemption from requirements for diagnosis of cancer, sickle cell\\ndisease, or hospice or palliative care.\", \"coverage_pages\": [5, 6], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p5#row-10\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 5}, \"drug_name\": \"buprenorphine patch\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"name plus strength or dosage form\"}]}]}\n\nny_medicaid_pdl (NY Medicaid, binding, 2026-09-14)\nNYRx Preferred Drug Program (PDP) Preferred Drug List > I. Analgesics > Opioids – Long-Acting (CC)\n[p 5]\nPreferred drugs: buprenorphine patch; fentanyl patch (12 mcg, 25 mcg, 50 mcg, 75 mcg, 100 mcg); morphine sulfate ER tablet)\nNon-preferred drugs: Belbuca®; Butrans®; ConZip® (ST); fentanyl patch (37.5 mcg, 62.5 mcg, 87.5 mcg); hydrocodone ER; hydrocodone ER (gen Hysingla ER); hydromorphone ER; Hysingla® ER; morphine ER capsule (gen Avinza); morphine ER capsule (gen Kadian); MS Contin®; oxycodone ER; Oxycontin®; oxymorphone ER; tramadol ER (ST)\nCoverage parameters: CLINICAL CRITERIA (CC) *\nLimited to a total of 4 opioid prescriptions every 30 days; Exemption\nfor diagnosis of cancer, hospice or palliative care, or sickle cell\ndisease\nPA required for initiation of opioid therapy for patients on established\nopioid dependence therapy\nPA required for use if ≥ 90 MME (MME = morphine milligram\nequivalents) of opioid per day for management of non-acute pain\n(pain lasting > 7 days)\nPA required for initiation of long-acting opioid therapy in opioid-naïve\npatients.\nPA required for any additional long-acting opioid prescription for\npatients currently on long-acting opioid therapy.\nPA required for initiation of opioid therapy in patients currently on\nbenzodiazepine therapy\nPA required for any codeine- or tramadol-containing products in pts\n< 12 years\nSTEP THERAPY (ST)\nTramadol ER (tramadol naïve patients): Attempt treatment with IR\nformulations before the following ER formulations: ConZip® , tramadol\nER\n*Exemption from requirements for diagnosis of cancer, sickle cell\ndisease, or hospice or palliative care.",
+    "ny_medicaid_pdl:p1": "{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"buprenorphine\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"exact_match\", \"classes\": [{\"drug_class\": \"Opioids – Long-Acting\", \"section\": \"I. Analgesics\", \"class_flags\": {\"CC\": \"Clinical Criteria: see the class's Coverage Parameters\"}, \"coverage_parameters\": \"CLINICAL CRITERIA (CC) *\\nLimited to a total of 4 opioid prescriptions every 30 days; Exemption\\nfor diagnosis of cancer, hospice or palliative care, or sickle cell\\ndisease\\nPA required for initiation of opioid therapy for patients on established\\nopioid dependence therapy\\nPA required for use if ≥ 90 MME (MME = morphine milligram\\nequivalents) of opioid per day for management of non-acute pain\\n(pain lasting > 7 days)\\nPA required for initiation of long-acting opioid therapy in opioid-naïve\\npatients.\\nPA required for any additional long-acting opioid prescription for\\npatients currently on long-acting opioid therapy.\\nPA required for initiation of opioid therapy in patients currently on\\nbenzodiazepine therapy\\nPA required for any codeine- or tramadol-containing products in pts\\n< 12 years\\nSTEP THERAPY (ST)\\nTramadol ER (tramadol naïve patients): Attempt treatment with IR\\nformulations before the following ER formulations: ConZip® , tramadol\\nER\\n*Exemption from requirements for diagnosis of cancer, sickle cell\\ndisease, or hospice or palliative care.\", \"coverage_pages\": [5, 6], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p5#row-10\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 5}, \"drug_name\": \"buprenorphine patch\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"name plus strength or dosage form\"}]}]}\n\nny_medicaid_pdl (NY Medicaid, binding, 2026-09-14)\nNYRx Preferred Drug Program (PDP) Preferred Drug List > NYRx, the Medicaid Drug Program\n[p 1]\nElectronic prior authorizations are now accepted by NYRx, the Medicaid Drug Program via CoverMyMeds®. Consider this alternative option as an effective and efficient way to request a PA other than by phone or by fax. For more information, contact NYRx Education & Outreach at NYRxEO@primetherapeutics.com\nThe PDP promotes the use of less expensive, equally effective drugs when medically appropriate through a Preferred Drug List (PDL). All drugs currently covered by NYRx, the Medicaid Drug Program, remain available under the PDP and the determination of preferred and non-preferred drugs does not prohibit a prescriber from obtaining any of the medications covered under Medicaid.\nNon-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise.\nPreferred drugs that require PA are indicated by footnote.\nSpecific Clinical, Frequency/Quantity/Duration, Step Therapy criteria are listed in column at the right.\nNote: Not all drugs covered by NYRx are subject to programs included in this document. For a complete list of drugs covered by NYRx see the Medicaid Pharmacy List of Reimbursable Drugs\nThe CDRP is aimed at ensuring specific drugs are utilized in a medically appropriate manner. Under the CDRP, certain drugs require PA because there may be specific safety issues, public health concerns, the potential for fraud and abuse, or the potential for significant overuse and misuse.\nThe DUR helps to ensure that prescriptions for outpatient drugs are appropriate, medically necessary, and not likely to result in adverse medical consequences. This program uses professional medical protocols and computer technology and claims processing to assist in the management of data regarding the prescribing and dispensing of prescriptions. Frequency/Quantity/Duration (F/Q/D) Program and Step Therapy parameters are implemented to ensure clinically appropriate and cost-effective use of these drugs and drug classes.\nPA will not be required for medications used for the treatment of substance use disorder prescribed according to generally accepted national professional guidelines for the treatment of a substance use disorder.\nThe Brand Less Than Generic Program is a cost containment initiative which promotes the use of certain multi-source brand name drugs when the cost of the brand name drug is less expensive than the generic equivalent. This program is in conformance with State Education Law, which intends that patients receive the lower cost alternative.\nFor more information on NYRx, the Medicaid Drug Program: http://www.health.ny.gov/health_care/medicaid/program/pharmacy.htm To contact the NYRx Clinical Call Center please call 1-877-309-9493\nTo download a copy of the Prior Authorization fax form go to https://newyork.fhsc.com/providers/PA_forms.asp\nDisclaimer: Branded generics are included with the single generic name listing; they are not listed as separate agents.\n[p 2]\nNYRx, the Medicaid Drug Program Preferred Drug List\nState law excludes Medicaid coverage of brand name drugs that have a Federal Food and Drug Administration (FDA) approved A-rated generic equivalent unless a PA is obtained. Drugs subject to the Preferred Drug Program (PDP), Clinical Drug Review Program (CDRP), and/or the Brand Less Than Generic (BLTG) Program are not subject to the Mandatory Generic Program.\nDose optimization can reduce prescription costs by reducing the number of pills a patient needs to take each day. The Department has identified drugs to be included in this program, the majority of which have FDA approval for once-a-day dosing, have multiple strengths available in correlating increments at similar costs and are currently being utilized above the recommended dosing frequency.\nThe Cost Optimization Program focuses on new formulations and dosages of older drug products that are disproportionately priced to other str"
+  },
+  "cited_evidence_parts": {
+    "ny_medicaid_pdl:p76": [
+      "ny_medicaid_pdl (NY Medicaid, binding, 2026-09-14)\nNYRx Preferred Drug Program (PDP) Preferred Drug List > Medication Assisted Treatment (MAT) Formulary\n[p 76]\n[Table] (PDF page 76)\nColumns: **Prior authorization will not be required for medications used for the treatment of substance use disorder when prescribed according to generally accepted national professional guidelines for the treatment of a substance use disorder. ** | **Prior authorization will not be required for medications used for the treatment of substance use disorder when prescribed according to generally accepted national professional guidelines for the treatment of a substance use disorder. ** / Drugs | Coverage Parameters / Opioid Antagonists | Opioid Antagonists\nKloxxado™ naloxone (syringe, vial, nasal spray) naloxone (nasal spray) OTC naltrexone Narcan ® (nasal spray) Narcan ® OTC Opvee ® Rextovy® Zimhi™ | \nOpioid Dependence Agents - Injectable | Opioid Dependence Agents - Injectable\nBrixadi™ Sublocade™ Vivitrol ® | \nOpioid Dependence Agents - Oral/Transmucosal F/Q/D | Opioid Dependence Agents - Oral/Transmucosal F/Q/D\nbuprenorphine (tablet) buprenorphine/naloxone (tablet) buprenorphine/naloxone (film) Suboxone ® (film) Zubsolv ® | QUANTITY LIMIT: • buprenorphine sublingual (SL): Eight tablets dispensed as a 2-day supply; not to exceed 32 mg per day • buprenorphine / naloxone tablet and film (Suboxone ® 2mg/0.5mg, Zubsolv ® 1.4mg/0.36mg, 0.7mg/0.18mg strength; Up to 12 sublingual tablets or films per day. • buprenorphine/naloxone tablet and film (Suboxone ® up to 4mg/1mg and 8mg/2mg strength, Zubsolv ® 2.9mg/0.71mg and 5.7mg/1.4mg strength; Four sublingual tablets or films per day; maximum of 120 tablets or films dispensed as a 30-day supply, not to exceed 32 mg-8 mg of Suboxone®, or its equivalent per day • buprenorphine/naloxone tablet: Suboxone ® 12mg/3mg, Zubsolv ® 8.6 mg/2.1 mg and Zubsolv ® 11.4 mg/2.9 mg strength: Maximum of 60 tablets dispensed as a 30-day supply RELATED CLINICAL CRITERIA (CC) • PA required for initiation of opioid therapy for patients established on opioid dependence therapy • PA required for initiation of a CNS stimulant for patients established on opioid dependence therapy"
+    ],
+    "ny_medicaid_pdl:p5": [
+      "{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"buprenorphine\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"exact_match\", \"classes\": [{\"drug_class\": \"Opioids – Long-Acting\", \"section\": \"I. Analgesics\", \"class_flags\": {\"CC\": \"Clinical Criteria: see the class's Coverage Parameters\"}, \"coverage_parameters\": \"CLINICAL CRITERIA (CC) *\\nLimited to a total of 4 opioid prescriptions every 30 days; Exemption\\nfor diagnosis of cancer, hospice or palliative care, or sickle cell\\ndisease\\nPA required for initiation of opioid therapy for patients on established\\nopioid dependence therapy\\nPA required for use if ≥ 90 MME (MME = morphine milligram\\nequivalents) of opioid per day for management of non-acute pain\\n(pain lasting > 7 days)\\nPA required for initiation of long-acting opioid therapy in opioid-naïve\\npatients.\\nPA required for any additional long-acting opioid prescription for\\npatients currently on long-acting opioid therapy.\\nPA required for initiation of opioid therapy in patients currently on\\nbenzodiazepine therapy\\nPA required for any codeine- or tramadol-containing products in pts\\n< 12 years\\nSTEP THERAPY (ST)\\nTramadol ER (tramadol naïve patients): Attempt treatment with IR\\nformulations before the following ER formulations: ConZip® , tramadol\\nER\\n*Exemption from requirements for diagnosis of cancer, sickle cell\\ndisease, or hospice or palliative care.\", \"coverage_pages\": [5, 6], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p5#row-10\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 5}, \"drug_name\": \"buprenorphine patch\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"name plus strength or dosage form\"}]}]}",
+      "ny_medicaid_pdl (NY Medicaid, binding, 2026-09-14)\nNYRx Preferred Drug Program (PDP) Preferred Drug List > I. Analgesics > Opioids – Long-Acting (CC)\n[p 5]\nPreferred drugs: buprenorphine patch; fentanyl patch (12 mcg, 25 mcg, 50 mcg, 75 mcg, 100 mcg); morphine sulfate ER tablet)\nNon-preferred drugs: Belbuca®; Butrans®; ConZip® (ST); fentanyl patch (37.5 mcg, 62.5 mcg, 87.5 mcg); hydrocodone ER; hydrocodone ER (gen Hysingla ER); hydromorphone ER; Hysingla® ER; morphine ER capsule (gen Avinza); morphine ER capsule (gen Kadian); MS Contin®; oxycodone ER; Oxycontin®; oxymorphone ER; tramadol ER (ST)\nCoverage parameters: CLINICAL CRITERIA (CC) *\nLimited to a total of 4 opioid prescriptions every 30 days; Exemption\nfor diagnosis of cancer, hospice or palliative care, or sickle cell\ndisease\nPA required for initiation of opioid therapy for patients on established\nopioid dependence therapy\nPA required for use if ≥ 90 MME (MME = morphine milligram\nequivalents) of opioid per day for management of non-acute pain\n(pain lasting > 7 days)\nPA required for initiation of long-acting opioid therapy in opioid-naïve\npatients.\nPA required for any additional long-acting opioid prescription for\npatients currently on long-acting opioid therapy.\nPA required for initiation of opioid therapy in patients currently on\nbenzodiazepine therapy\nPA required for any codeine- or tramadol-containing products in pts\n< 12 years\nSTEP THERAPY (ST)\nTramadol ER (tramadol naïve patients): Attempt treatment with IR\nformulations before the following ER formulations: ConZip® , tramadol\nER\n*Exemption from requirements for diagnosis of cancer, sickle cell\ndisease, or hospice or palliative care."
+    ],
+    "ny_medicaid_pdl:p1": [
+      "{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"buprenorphine\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"exact_match\", \"classes\": [{\"drug_class\": \"Opioids – Long-Acting\", \"section\": \"I. Analgesics\", \"class_flags\": {\"CC\": \"Clinical Criteria: see the class's Coverage Parameters\"}, \"coverage_parameters\": \"CLINICAL CRITERIA (CC) *\\nLimited to a total of 4 opioid prescriptions every 30 days; Exemption\\nfor diagnosis of cancer, hospice or palliative care, or sickle cell\\ndisease\\nPA required for initiation of opioid therapy for patients on established\\nopioid dependence therapy\\nPA required for use if ≥ 90 MME (MME = morphine milligram\\nequivalents) of opioid per day for management of non-acute pain\\n(pain lasting > 7 days)\\nPA required for initiation of long-acting opioid therapy in opioid-naïve\\npatients.\\nPA required for any additional long-acting opioid prescription for\\npatients currently on long-acting opioid therapy.\\nPA required for initiation of opioid therapy in patients currently on\\nbenzodiazepine therapy\\nPA required for any codeine- or tramadol-containing products in pts\\n< 12 years\\nSTEP THERAPY (ST)\\nTramadol ER (tramadol naïve patients): Attempt treatment with IR\\nformulations before the following ER formulations: ConZip® , tramadol\\nER\\n*Exemption from requirements for diagnosis of cancer, sickle cell\\ndisease, or hospice or palliative care.\", \"coverage_pages\": [5, 6], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p5#row-10\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 5}, \"drug_name\": \"buprenorphine patch\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"name plus strength or dosage form\"}]}]}",
+      "ny_medicaid_pdl (NY Medicaid, binding, 2026-09-14)\nNYRx Preferred Drug Program (PDP) Preferred Drug List > NYRx, the Medicaid Drug Program\n[p 1]\nElectronic prior authorizations are now accepted by NYRx, the Medicaid Drug Program via CoverMyMeds®. Consider this alternative option as an effective and efficient way to request a PA other than by phone or by fax. For more information, contact NYRx Education & Outreach at NYRxEO@primetherapeutics.com\nThe PDP promotes the use of less expensive, equally effective drugs when medically appropriate through a Preferred Drug List (PDL). All drugs currently covered by NYRx, the Medicaid Drug Program, remain available under the PDP and the determination of preferred and non-preferred drugs does not prohibit a prescriber from obtaining any of the medications covered under Medicaid.\nNon-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise.\nPreferred drugs that require PA are indicated by footnote.\nSpecific Clinical, Frequency/Quantity/Duration, Step Therapy criteria are listed in column at the right.\nNote: Not all drugs covered by NYRx are subject to programs included in this document. For a complete list of drugs covered by NYRx see the Medicaid Pharmacy List of Reimbursable Drugs\nThe CDRP is aimed at ensuring specific drugs are utilized in a medically appropriate manner. Under the CDRP, certain drugs require PA because there may be specific safety issues, public health concerns, the potential for fraud and abuse, or the potential for significant overuse and misuse.\nThe DUR helps to ensure that prescriptions for outpatient drugs are appropriate, medically necessary, and not likely to result in adverse medical consequences. This program uses professional medical protocols and computer technology and claims processing to assist in the management of data regarding the prescribing and dispensing of prescriptions. Frequency/Quantity/Duration (F/Q/D) Program and Step Therapy parameters are implemented to ensure clinically appropriate and cost-effective use of these drugs and drug classes.\nPA will not be required for medications used for the treatment of substance use disorder prescribed according to generally accepted national professional guidelines for the treatment of a substance use disorder.\nThe Brand Less Than Generic Program is a cost containment initiative which promotes the use of certain multi-source brand name drugs when the cost of the brand name drug is less expensive than the generic equivalent. This program is in conformance with State Education Law, which intends that patients receive the lower cost alternative.\nFor more information on NYRx, the Medicaid Drug Program: http://www.health.ny.gov/health_care/medicaid/program/pharmacy.htm To contact the NYRx Clinical Call Center please call 1-877-309-9493\nTo download a copy of the Prior Authorization fax form go to https://newyork.fhsc.com/providers/PA_forms.asp\nDisclaimer: Branded generics are included with the single generic name listing; they are not listed as separate agents.\n[p 2]\nNYRx, the Medicaid Drug Program Preferred Drug List\nState law excludes Medicaid coverage of brand name drugs that have a Federal Food and Drug Administration (FDA) approved A-rated generic equivalent unless a PA is obtained. Drugs subject to the Preferred Drug Program (PDP), Clinical Drug Review Program (CDRP), and/or the Brand Less Than Generic (BLTG) Program are not subject to the Mandatory Generic Program.\nDose optimization can reduce prescription costs by reducing the number of pills a patient needs to take each day. The Department has identified drugs to be included in this program, the majority of which have FDA approval for once-a-day dosing, have multiple strengths available in correlating increments at similar costs and are currently being utilized above the recommended dosing frequency.\nThe Cost Optimization Program focuses on new formulations and dosages of older drug products that are disproportionately priced to other strengths of the same drug or similar drugs in the same drug class without any additional clinical benefit. This program can reduce prescription costs by encouraging the use of multiple or half of the lower cost strength, or choosing the lower cost formulation (e.g., tablets versus capsules), or choosing a lower cost therapeutic comparable drug in the same drug class.\n[p 3]\nNYRx, the Medicaid Drug Program Preferred Drug List"
+    ]
+  },
+  "cost_note": "each call priced at its serving role's rates (llm.<role>.prices_per_mtok)",
+  "request_started_utc": "2026-10-18T13:14:58.942380+00:00",
+  "citation_check": {
+    "t_start": 10.999,
+    "duration_s": 0.001
+  }
+}

@@ -1,0 +1,425 @@
+{
+  "question": "What's the copay tier for Trulicity?",
+  "request_id": "5fb8df6a-3689-48d2-ad4f-1fc965971941",
+  "status": "answered",
+  "agent_status": "answered",
+  "assumption": "NY Medicaid (program not named; defaulted for a coverage/copay question).",
+  "answer": "Assuming **NY Medicaid/NYRx**: **Trulicity® is a preferred brand** on the NYRx PDL in the GLP-1 receptor agonist class. NYRx copay policy sets **$1.00** for **preferred brand-name drugs**. \n\nSo the copay tier/amount is **$1.00**, unless the member or service is copay-exempt or the member has met the quarterly copay maximum. The PDL also notes GLP-1 clinical criteria and PA only if the patient is using a GLP-1 and DPP-IV concurrently.",
+  "citations": [
+    {
+      "doc_id": "ny_medicaid_pdl",
+      "page": 34,
+      "link": "https://newyork.fhsc.com/downloads/providers/NYRx_PDP_PDL.pdf#page=34",
+      "flag": null,
+      "locator": "ny_medicaid_pdl:p34"
+    },
+    {
+      "doc_id": "ny_medicaid_pharmacy_policy",
+      "page": 41,
+      "link": "https://www.emedny.org/ProviderManuals/Pharmacy/PDFS/Pharmacy_Policy_Guidelines.pdf#page=41",
+      "flag": null,
+      "locator": "ny_medicaid_pharmacy_policy:p41"
+    }
+  ],
+  "conflicts_noted": [],
+  "flags": [],
+  "needs_review": false,
+  "words": {
+    "displayed": 72,
+    "rendered": 72
+  },
+  "answered_by": "gpt-5.5-2026-04-23",
+  "provider": "openai",
+  "model": "gpt-5.5-2026-04-23",
+  "fallback_used": false,
+  "timing_s": {
+    "total": 8.881,
+    "search": 2.131,
+    "read_page": 0,
+    "list_documents": 0,
+    "lookups": 0.005,
+    "model_calls": [
+      2.538,
+      4.206
+    ]
+  },
+  "lookups": 2,
+  "tokens": {
+    "input": 4373,
+    "output": 411,
+    "cache_read": 3072,
+    "cache_write": 0
+  },
+  "cost_usd": 0.035731,
+  "pages_seen": [
+    "ny_medicaid_pdl:p1",
+    "ny_medicaid_pdl:p34",
+    "ny_medicaid_pdl:p77",
+    "ny_medicaid_pdl:p78",
+    "ny_medicaid_pharmacy_policy:p16",
+    "ny_medicaid_pharmacy_policy:p17",
+    "ny_medicaid_pharmacy_policy:p28",
+    "ny_medicaid_pharmacy_policy:p29",
+    "ny_medicaid_pharmacy_policy:p41",
+    "ny_medicaid_pharmacy_policy:p42",
+    "ny_medicaid_pharmacy_policy:p43"
+  ],
+  "trace_id": null,
+  "started_at": "2026-10-18T16:39:49+00:00",
+  "config": {
+    "primary": "gpt-5.5",
+    "fallback": "claude-sonnet-5-5",
+    "effort": "medium",
+    "search": {
+      "mode": "hybrid",
+      "rrf_k": 60,
+      "fusion_depth": 100,
+      "return_parents": true,
+      "rerank": {
+        "model": "BAAI/bge-reranker-base",
+        "depth": 20,
+        "timeout_s": 8
+      }
+    },
+    "max_tool_calls": 6,
+    "deadline_s": 25,
+    "search_k": 8
+  },
+  "structured_lookups": true,
+  "context": {},
+  "model_answer": "Assuming **NY Medicaid/NYRx**: **Trulicity® is a preferred brand** on the NYRx PDL in the GLP-1 receptor agonist class. NYRx copay policy sets **$1.00** for **preferred brand-name drugs**. \n\nSo the copay tier/amount is **$1.00**, unless the member or service is copay-exempt or the member has met the quarterly copay maximum. The PDL also notes GLP-1 clinical criteria and PA only if the patient is using a GLP-1 and DPP-IV concurrently.",
+  "model_citations": [
+    {
+      "doc_id": "ny_medicaid_pdl",
+      "page": 34,
+      "link": "https://newyork.fhsc.com/downloads/providers/NYRx_PDP_PDL.pdf#page=34",
+      "flag": null,
+      "locator": "ny_medicaid_pdl:p34"
+    },
+    {
+      "doc_id": "ny_medicaid_pharmacy_policy",
+      "page": 41,
+      "link": "https://www.emedny.org/ProviderManuals/Pharmacy/PDFS/Pharmacy_Policy_Guidelines.pdf#page=41",
+      "flag": null,
+      "locator": "ny_medicaid_pharmacy_policy:p41"
+    }
+  ],
+  "model_calls": [
+    {
+      "t_start": 0.0,
+      "duration_s": 2.538,
+      "requested_model": "gpt-5.5",
+      "served_model": "gpt-5.5-2026-04-23",
+      "provider": "openai",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 300,
+        "output": 117,
+        "cache_read": 1536,
+        "cache_write": 0
+      },
+      "cost_usd": 0.005778,
+      "response_id": "resp_0609c277f3f32907016ad4f64d1ea887d2853e3615d1f79cec",
+      "input_messages": [
+        {
+          "role": "user",
+          "text": "Today's date: 2026-10-18\n\nQuestion: What's the copay tier for Trulicity?"
+        }
+      ],
+      "output": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "call_bU4G1GUMEPXS6jAJOcCZfEWl",
+            "name": "lookup_ny_medicaid_drug",
+            "arguments": {
+              "drug": "Trulicity"
+            }
+          },
+          {
+            "id": "call_17SP3HVHMK902h9uAcDyXRTC",
+            "name": "search_documents",
+            "arguments": {
+              "query": "Trulicity copay tier copayment",
+              "program": "NY Medicaid",
+              "k": 5
+            }
+          }
+        ]
+      }
+    },
+    {
+      "t_start": 4.674,
+      "duration_s": 4.206,
+      "requested_model": "gpt-5.5",
+      "served_model": "gpt-5.5-2026-04-23",
+      "provider": "openai",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 4073,
+        "output": 294,
+        "cache_read": 1536,
+        "cache_write": 0
+      },
+      "cost_usd": 0.029953,
+      "response_id": "resp_0609c277f3f32907016ad4f651c0a887d28fd9ae12972f1464",
+      "input_messages": [
+        {
+          "role": "tool",
+          "tool_results": [
+            {
+              "call_id": "call_bU4G1GUMEPXS6jAJOcCZfEWl",
+              "is_error": false,
+              "content": "{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"Trulicity\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"exact_match\", \"classes\": [{\"drug_class\": \"Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes\", \"section\": \"VI. Endocrine and Metabolic Agents\", \"class_flags\": {\"CC\": \"Clinical Criteria: see the class's Coverage Parameters\"}, \"coverage_parameters\": \"CLINICAL CRITERIA (CC)\\nConfirm diagnosis of FDA-approved or compendia-supported\\nindication and Medicaid covered indication\\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently\", \"coverage_pages\": [34], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p34#row-8\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Trulicity®\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"exact name\"}]}]}"
+            },
+            {
+              "call_id": "call_17SP3HVHMK902h9uAcDyXRTC",
+              "is_error": false,
+              "content": "[{\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34, \"program\": \"NY Medicaid\", \"authority\": \"binding\", \"date\": \"2026-09-14\", \"text\": \"NYRx Preferred Drug Program (PDP) Preferred Drug List > VI. Endocrine and Metabolic Agents > Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes (CC)\\n[p 34]\\nPreferred drugs: exenatide; Ozempic® pen; Trulicity®; Victoza® (BLTG)\\nNon-preferred drugs: liraglutide (gen Victoza® ); Mounjaro®; Ozempic® tablets; Rybelsus®; Soliqua®; Xultophy®\\nCoverage parameters: CLINICAL CRITERIA (CC)\\nConfirm diagnosis of FDA-approved or compendia-supported\\nindication and Medicaid covered indication\\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently\", \"pages\": [34], \"section\": \"VI. Endocrine and Metabolic Agents > Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes (CC)\"}, {\"doc_id\": \"ny_medicaid_pharmacy_policy\", \"page\": 41, \"program\": \"NY Medicaid\", \"authority\": \"binding\", \"date\": \"2026-09\", \"text\": \"NYRx Pharmacy Manual Policy Guidelines (Version 2026-3) > 4.0 Basis of Payment > Co-payments for Drugs and Medical Supplies\\n[p 41]\\nThe New York State Medicaid Program charges co-payments for many drug and medical supply items.\\nHealth care providers have an obligation to provide services and goods regardless of a Medicaid member's ability to pay co-payments:\\nPharmacy providers may not refuse services to otherwise eligible Medicaid members who cannot afford to pay the co-payment, per Social Security Act (SSA) § 1916 and Title 18 NYCRR § 360-7.12. Refusing to provide services is an unacceptable practice.\\no Providers may attempt to collect outstanding copayments through methods such as requesting the copayment each time the member is provided with services or goods, sending bills or any other legal means.\\n[p 42]\\nPolicy Guidelines\\nNYRx\\nPharmacy providers must not reduce the amount charged on a Medicaid claim by the copayment that is collected from a Medicaid member. Each claim that requires a co-payment will have the co-payment automatically deducted from the final payment when the claim is approved for payment.\\nProviders cannot offer gifts or cash per SSA § 1128A (a)(5), Title 18 NYCRR § 515.2, and Rules of the Board of Regents §29.1. It is not permissible for providers to:\\no Providers cannot make offers where it is likely to influence the enrollee's selection of a provider of Medicaid items or services. Note: NYRx allows for the provision of an item or device to a NYRx member or enrollee which is directly related to the administration of medication for that person (e.g., medicine cup, dosing spoons, or pill organizer).\\no Providers cannot proactively waive copays. Copays may be waived only as provided on a case-bycase basis per the financial need by request of the individual member or enrollee.\\nMedicaid Co-payments:\\nSome Medicaid members become eligible for Medicaid by spending part of their monthly income on medical care. Since co-payments paid or incurred can be used toward satisfying the spend-down (overage) in the following month, itemized bills or receipts for co-payments should be provided to members when requested.\\nThere is a maximum amount per Medicaid member for all co-payments incurred per year and is calculated on a quarterly basis. The co-payment year starts April 1 and ends March 31. When a member reaches the quarterly co-pay maximum, they will receive a letter confirming the date on which the co-pay maximum was met and exempting the member from a co-payment until the end of the current co-payment quarter.\\nCo-payment amounts are as follows:\\no $3.00 for non-preferred Brand Name Drugs.\\no $1.00 for Generic Drugs, preferred Brand Name Drugs, and Brand Drugs included in the Brand Less Than Generic Drugs Program.\\no $0.50 for Non-Prescription (over the counter) Drugs.\\no $1.00 for Medical/Sickroom Supplies.\\nCo-payment is not required for certain members and service categories which include:\\no Family planning (birth control) services including birth contr"
+            }
+          ]
+        }
+      ],
+      "output": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "call_40hNBxESMYP5m4UnkJG5U2Ap",
+            "name": "submit_answer",
+            "arguments": {
+              "status": "answered",
+              "assumption": "NY Medicaid (program not named; defaulted for a coverage/copay question).",
+              "answer": "Assuming **NY Medicaid/NYRx**: **Trulicity® is a preferred brand** on the NYRx PDL in the GLP-1 receptor agonist class. NYRx copay policy sets **$1.00** for **preferred brand-name drugs**. \n\nSo the copay tier/amount is **$1.00**, unless the member or service is copay-exempt or the member has met the quarterly copay maximum. The PDL also notes GLP-1 clinical criteria and PA only if the patient is using a GLP-1 and DPP-IV concurrently.",
+              "citations": [
+                {
+                  "doc_id": "ny_medicaid_pdl",
+                  "page": 34,
+                  "row": null
+                },
+                {
+                  "doc_id": "ny_medicaid_pharmacy_policy",
+                  "page": 41,
+                  "row": null
+                }
+              ],
+              "conflicts_noted": []
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "lookup_ny_medicaid_drug",
+      "input": {
+        "drug": "Trulicity"
+      },
+      "duration_s": 0.005,
+      "is_error": false,
+      "pages": [
+        "ny_medicaid_pdl:p1",
+        "ny_medicaid_pdl:p34"
+      ],
+      "result": "{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"Trulicity\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"exact_match\", \"classes\": [{\"drug_class\": \"Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes\", \"section\": \"VI. Endocrine and Metabolic Agents\", \"class_flags\": {\"CC\": \"Clinical Criteria: see the class's Coverage Parameters\"}, \"coverage_parameters\": \"CLINICAL CRITERIA (CC)\\nConfirm diagnosis of FDA-approved or compendia-supported\\nindication and Medicaid covered indication\\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently\", \"coverage_pages\": [34], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p34#row-8\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Trulicity®\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"exact name\"}]}]}",
+      "lookup": {
+        "result": "exact_match",
+        "rows": 1
+      },
+      "t_start": 2.538
+    },
+    {
+      "name": "search_documents",
+      "input": {
+        "query": "Trulicity copay tier copayment",
+        "program": "NY Medicaid",
+        "k": 5
+      },
+      "duration_s": 2.131,
+      "is_error": false,
+      "pages": [
+        "ny_medicaid_pdl:p34",
+        "ny_medicaid_pdl:p77",
+        "ny_medicaid_pdl:p78",
+        "ny_medicaid_pharmacy_policy:p16",
+        "ny_medicaid_pharmacy_policy:p17",
+        "ny_medicaid_pharmacy_policy:p28",
+        "ny_medicaid_pharmacy_policy:p29",
+        "ny_medicaid_pharmacy_policy:p41",
+        "ny_medicaid_pharmacy_policy:p42",
+        "ny_medicaid_pharmacy_policy:p43"
+      ],
+      "result": "[{\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34, \"program\": \"NY Medicaid\", \"authority\": \"binding\", \"date\": \"2026-09-14\", \"text\": \"NYRx Preferred Drug Program (PDP) Preferred Drug List > VI. Endocrine and Metabolic Agents > Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes (CC)\\n[p 34]\\nPreferred drugs: exenatide; Ozempic® pen; Trulicity®; Victoza® (BLTG)\\nNon-preferred drugs: liraglutide (gen Victoza® ); Mounjaro®; Ozempic® tablets; Rybelsus®; Soliqua®; Xultophy®\\nCoverage parameters: CLINICAL CRITERIA (CC)\\nConfirm diagnosis of FDA-approved or compendia-supported\\nindication and Medicaid covered indication\\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently\", \"pages\": [34], \"section\": \"VI. Endocrine and Metabolic Agents > Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes (CC)\"}, {\"doc_id\": \"ny_medicaid_pharmacy_policy\", \"page\": 41, \"program\": \"NY Medicaid\", \"authority\": \"binding\", \"date\": \"2026-09\", \"text\": \"NYRx Pharmacy Manual Policy Guidelines (Version 2026-3) > 4.0 Basis of Payment > Co-payments for Drugs and Medical Supplies\\n[p 41]\\nThe New York State Medicaid Program charges co-payments for many drug and medical supply items.\\nHealth care providers have an obligation to provide services and goods regardless of a Medicaid member's ability to pay co-payments:\\nPharmacy providers may not refuse services to otherwise eligible Medicaid members who cannot afford to pay the co-payment, per Social Security Act (SSA) § 1916 and Title 18 NYCRR § 360-7.12. Refusing to provide services is an unacceptable practice.\\no Providers may attempt to collect outstanding copayments through methods such as requesting the copayment each time the member is provided with services or goods, sending bills or any other legal means.\\n[p 42]\\nPolicy Guidelines\\nNYRx\\nPharmacy providers must not reduce the amount charged on a Medicaid claim by the copayment that is collected from a Medicaid member. Each claim that requires a co-payment will have the co-payment automatically deducted from the final payment when the claim is approved for payment.\\nProviders cannot offer gifts or cash per SSA § 1128A (a)(5), Title 18 NYCRR § 515.2, and Rules of the Board of Regents §29.1. It is not permissible for providers to:\\no Providers cannot make offers where it is likely to influence the enrollee's selection of a provider of Medicaid items or services. Note: NYRx allows for the provision of an item or device to a NYRx member or enrollee which is directly related to the administration of medication for that person (e.g., medicine cup, dosing spoons, or pill organizer).\\no Providers cannot proactively waive copays. Copays may be waived only as provided on a case-bycase basis per the financial need by request of the individual member or enrollee.\\nMedicaid Co-payments:\\nSome Medicaid members become eligible for Medicaid by spending part of their monthly income on medical care. Since co-payments paid or incurred can be used toward satisfying the spend-down (overage) in the following month, itemized bills or receipts for co-payments should be provided to members when requested.\\nThere is a maximum amount per Medicaid member for all co-payments incurred per year and is calculated on a quarterly basis. The co-payment year starts April 1 and ends March 31. When a member reaches the quarterly co-pay maximum, they will receive a letter confirming the date on which the co-pay maximum was met and exempting the member from a co-payment until the end of the current co-payment quarter.\\nCo-payment amounts are as follows:\\no $3.00 for non-preferred Brand Name Drugs.\\no $1.00 for Generic Drugs, preferred Brand Name Drugs, and Brand Drugs included in the Brand Less Than Generic Drugs Program.\\no $0.50 for Non-Prescription (over the counter) Drugs.\\no $1.00 for Medical/Sickroom Supplies.\\nCo-payment is not required for certain members and service categories which include:\\no Family planning (birth control) services including birth contr",
+      "search": {
+        "original_query": "What's the copay tier for Trulicity?",
+        "agent_query": "Trulicity copay tier copayment",
+        "executed": [
+          {
+            "source": "original",
+            "query": "What's the copay tier for Trulicity?",
+            "program": "NY Medicaid",
+            "k": 5,
+            "seconds": 1.199,
+            "cached": false,
+            "results": 5
+          },
+          {
+            "source": "agent",
+            "query": "Trulicity copay tier copayment",
+            "program": "NY Medicaid",
+            "k": 5,
+            "seconds": 2.129,
+            "cached": false,
+            "results": 5
+          }
+        ],
+        "duplicates_merged": 5,
+        "returned": 5,
+        "from_both": 5,
+        "from_original_only": 0,
+        "from_agent_only": 0,
+        "provenance": [
+          {
+            "unit": "ny_medicaid_pdl:s62",
+            "found_by": {
+              "original": 1,
+              "agent": 1
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s61",
+            "found_by": {
+              "original": 2,
+              "agent": 2
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s36",
+            "found_by": {
+              "original": 3,
+              "agent": 3
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s134",
+            "found_by": {
+              "original": 4,
+              "agent": 5
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s22",
+            "found_by": {
+              "original": 5,
+              "agent": 4
+            }
+          }
+        ],
+        "hits": [
+          {
+            "unit": "ny_medicaid_pdl:s62",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              34
+            ],
+            "ranks": {
+              "original": 1,
+              "agent": 1
+            },
+            "scores": {
+              "original": 0.0086,
+              "agent": 0.0136
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s61",
+            "doc_id": "ny_medicaid_pharmacy_policy",
+            "pages": [
+              41,
+              42,
+              43
+            ],
+            "ranks": {
+              "original": 2,
+              "agent": 2
+            },
+            "scores": {
+              "original": 0.0004,
+              "agent": 0.0065
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s36",
+            "doc_id": "ny_medicaid_pharmacy_policy",
+            "pages": [
+              28,
+              29
+            ],
+            "ranks": {
+              "original": 3,
+              "agent": 3
+            },
+            "scores": {
+              "original": 0.0001,
+              "agent": 0.0025
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s134",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              77,
+              78
+            ],
+            "ranks": {
+              "original": 4,
+              "agent": 5
+            },
+            "scores": {
+              "original": 0.0,
+              "agent": 0.0019
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s22",
+            "doc_id": "ny_medicaid_pharmacy_policy",
+            "pages": [
+              16,
+              17
+            ],
+            "ranks": {
+              "original": 5,
+              "agent": 4
+            },
+            "scores": {
+              "original": 0.0,
+              "agent": 0.0023
+            }
+          }
+        ]
+      },
+      "t_start": 2.543
+    }
+  ],
+  "cited_evidence": {
+    "ny_medicaid_pdl:p34": "{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"Trulicity\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"exact_match\", \"classes\": [{\"drug_class\": \"Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes\", \"section\": \"VI. Endocrine and Metabolic Agents\", \"class_flags\": {\"CC\": \"Clinical Criteria: see the class's Coverage Parameters\"}, \"coverage_parameters\": \"CLINICAL CRITERIA (CC)\\nConfirm diagnosis of FDA-approved or compendia-supported\\nindication and Medicaid covered indication\\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently\", \"coverage_pages\": [34], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p34#row-8\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Trulicity®\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"exact name\"}]}]}\n\nny_medicaid_pdl (NY Medicaid, binding, 2026-09-14)\nNYRx Preferred Drug Program (PDP) Preferred Drug List > VI. Endocrine and Metabolic Agents > Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes (CC)\n[p 34]\nPreferred drugs: exenatide; Ozempic® pen; Trulicity®; Victoza® (BLTG)\nNon-preferred drugs: liraglutide (gen Victoza® ); Mounjaro®; Ozempic® tablets; Rybelsus®; Soliqua®; Xultophy®\nCoverage parameters: CLINICAL CRITERIA (CC)\nConfirm diagnosis of FDA-approved or compendia-supported\nindication and Medicaid covered indication\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently",
+    "ny_medicaid_pharmacy_policy:p41": "ny_medicaid_pharmacy_policy (NY Medicaid, binding, 2026-09)\nNYRx Pharmacy Manual Policy Guidelines (Version 2026-3) > 4.0 Basis of Payment > Co-payments for Drugs and Medical Supplies\n[p 41]\nThe New York State Medicaid Program charges co-payments for many drug and medical supply items.\nHealth care providers have an obligation to provide services and goods regardless of a Medicaid member's ability to pay co-payments:\nPharmacy providers may not refuse services to otherwise eligible Medicaid members who cannot afford to pay the co-payment, per Social Security Act (SSA) § 1916 and Title 18 NYCRR § 360-7.12. Refusing to provide services is an unacceptable practice.\no Providers may attempt to collect outstanding copayments through methods such as requesting the copayment each time the member is provided with services or goods, sending bills or any other legal means.\n[p 42]\nPolicy Guidelines\nNYRx\nPharmacy providers must not reduce the amount charged on a Medicaid claim by the copayment that is collected from a Medicaid member. Each claim that requires a co-payment will have the co-payment automatically deducted from the final payment when the claim is approved for payment.\nProviders cannot offer gifts or cash per SSA § 1128A (a)(5), Title 18 NYCRR § 515.2, and Rules of the Board of Regents §29.1. It is not permissible for providers to:\no Providers cannot make offers where it is likely to influence the enrollee's selection of a provider of Medicaid items or services. Note: NYRx allows for the provision of an item or device to a NYRx member or enrollee which is directly related to the administration of medication for that person (e.g., medicine cup, dosing spoons, or pill organizer).\no Providers cannot proactively waive copays. Copays may be waived only as provided on a case-bycase basis per the financial need by request of the individual member or enrollee.\nMedicaid Co-payments:\nSome Medicaid members become eligible for Medicaid by spending part of their monthly income on medical care. Since co-payments paid or incurred can be used toward satisfying the spend-down (overage) in the following month, itemized bills or receipts for co-payments should be provided to members when requested.\nThere is a maximum amount per Medicaid member for all co-payments incurred per year and is calculated on a quarterly basis. The co-payment year starts April 1 and ends March 31. When a member reaches the quarterly co-pay maximum, they will receive a letter confirming the date on which the co-pay maximum was met and exempting the member from a co-payment until the end of the current co-payment quarter.\nCo-payment amounts are as follows:\no $3.00 for non-preferred Brand Name Drugs.\no $1.00 for Generic Drugs, preferred Brand Name Drugs, and Brand Drugs included in the Brand Less Than Generic Drugs Program.\no $0.50 for Non-Prescription (over the counter) Drugs.\no $1.00 for Medical/Sickroom Supplies.\nCo-payment is not required for certain members and service categories which include:\no Family planning (birth control) services including birth control pills, emergency contraception, and condoms.\no FDA-approved drugs to treat tuberculosis.\no FDA-approved drugs to treat mental illness (psychotropic drugs).\no Medicaid members younger than 21 years old.\no Medicaid members during pregnancy and for the two months after the month in which the pregnancy ends.\no Residents of Adult Care Facilities licensed by the New York State Department of Health (DOH).\no Residents of nursing homes.\no Residents of Intermediate Care Facilities for the Developmentally Disabled (ICF/DD).\no Residents of Office of Mental Health (OMH) or Office of Persons with Developmental Disabilities (OPWDD) certified residences.\no Members in Comprehensive Medicaid Case Management (CMCM) or Service Coordination Programs.\no Members in OMH or OPWDD Home and Community Based Services (HCBS) Waiver Programs. and\no Members in a DOH HCBS Waiver Program for Persons with Traumatic Brain Injury (TBI).\no Members with incomes below 100 percent of the federal poverty level.\no Members in Hospice.\no American Indians and Alaska Natives who have ever received a service from the Indian Health Service, tribal health programs or under contract health services referral.\n[p 43]\nPolicy Guidelines\nNYRx"
+  },
+  "cited_evidence_parts": {
+    "ny_medicaid_pdl:p34": [
+      "{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"Trulicity\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"exact_match\", \"classes\": [{\"drug_class\": \"Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes\", \"section\": \"VI. Endocrine and Metabolic Agents\", \"class_flags\": {\"CC\": \"Clinical Criteria: see the class's Coverage Parameters\"}, \"coverage_parameters\": \"CLINICAL CRITERIA (CC)\\nConfirm diagnosis of FDA-approved or compendia-supported\\nindication and Medicaid covered indication\\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently\", \"coverage_pages\": [34], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p34#row-8\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Trulicity®\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"exact name\"}]}]}",
+      "ny_medicaid_pdl (NY Medicaid, binding, 2026-09-14)\nNYRx Preferred Drug Program (PDP) Preferred Drug List > VI. Endocrine and Metabolic Agents > Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes (CC)\n[p 34]\nPreferred drugs: exenatide; Ozempic® pen; Trulicity®; Victoza® (BLTG)\nNon-preferred drugs: liraglutide (gen Victoza® ); Mounjaro®; Ozempic® tablets; Rybelsus®; Soliqua®; Xultophy®\nCoverage parameters: CLINICAL CRITERIA (CC)\nConfirm diagnosis of FDA-approved or compendia-supported\nindication and Medicaid covered indication\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently"
+    ],
+    "ny_medicaid_pharmacy_policy:p41": [
+      "ny_medicaid_pharmacy_policy (NY Medicaid, binding, 2026-09)\nNYRx Pharmacy Manual Policy Guidelines (Version 2026-3) > 4.0 Basis of Payment > Co-payments for Drugs and Medical Supplies\n[p 41]\nThe New York State Medicaid Program charges co-payments for many drug and medical supply items.\nHealth care providers have an obligation to provide services and goods regardless of a Medicaid member's ability to pay co-payments:\nPharmacy providers may not refuse services to otherwise eligible Medicaid members who cannot afford to pay the co-payment, per Social Security Act (SSA) § 1916 and Title 18 NYCRR § 360-7.12. Refusing to provide services is an unacceptable practice.\no Providers may attempt to collect outstanding copayments through methods such as requesting the copayment each time the member is provided with services or goods, sending bills or any other legal means.\n[p 42]\nPolicy Guidelines\nNYRx\nPharmacy providers must not reduce the amount charged on a Medicaid claim by the copayment that is collected from a Medicaid member. Each claim that requires a co-payment will have the co-payment automatically deducted from the final payment when the claim is approved for payment.\nProviders cannot offer gifts or cash per SSA § 1128A (a)(5), Title 18 NYCRR § 515.2, and Rules of the Board of Regents §29.1. It is not permissible for providers to:\no Providers cannot make offers where it is likely to influence the enrollee's selection of a provider of Medicaid items or services. Note: NYRx allows for the provision of an item or device to a NYRx member or enrollee which is directly related to the administration of medication for that person (e.g., medicine cup, dosing spoons, or pill organizer).\no Providers cannot proactively waive copays. Copays may be waived only as provided on a case-bycase basis per the financial need by request of the individual member or enrollee.\nMedicaid Co-payments:\nSome Medicaid members become eligible for Medicaid by spending part of their monthly income on medical care. Since co-payments paid or incurred can be used toward satisfying the spend-down (overage) in the following month, itemized bills or receipts for co-payments should be provided to members when requested.\nThere is a maximum amount per Medicaid member for all co-payments incurred per year and is calculated on a quarterly basis. The co-payment year starts April 1 and ends March 31. When a member reaches the quarterly co-pay maximum, they will receive a letter confirming the date on which the co-pay maximum was met and exempting the member from a co-payment until the end of the current co-payment quarter.\nCo-payment amounts are as follows:\no $3.00 for non-preferred Brand Name Drugs.\no $1.00 for Generic Drugs, preferred Brand Name Drugs, and Brand Drugs included in the Brand Less Than Generic Drugs Program.\no $0.50 for Non-Prescription (over the counter) Drugs.\no $1.00 for Medical/Sickroom Supplies.\nCo-payment is not required for certain members and service categories which include:\no Family planning (birth control) services including birth control pills, emergency contraception, and condoms.\no FDA-approved drugs to treat tuberculosis.\no FDA-approved drugs to treat mental illness (psychotropic drugs).\no Medicaid members younger than 21 years old.\no Medicaid members during pregnancy and for the two months after the month in which the pregnancy ends.\no Residents of Adult Care Facilities licensed by the New York State Department of Health (DOH).\no Residents of nursing homes.\no Residents of Intermediate Care Facilities for the Developmentally Disabled (ICF/DD).\no Residents of Office of Mental Health (OMH) or Office of Persons with Developmental Disabilities (OPWDD) certified residences.\no Members in Comprehensive Medicaid Case Management (CMCM) or Service Coordination Programs.\no Members in OMH or OPWDD Home and Community Based Services (HCBS) Waiver Programs. and\no Members in a DOH HCBS Waiver Program for Persons with Traumatic Brain Injury (TBI).\no Members with incomes below 100 percent of the federal poverty level.\no Members in Hospice.\no American Indians and Alaska Natives who have ever received a service from the Indian Health Service, tribal health programs or under contract health services referral.\n[p 43]\nPolicy Guidelines\nNYRx"
+    ]
+  },
+  "cost_note": "each call priced at its serving role's rates (llm.<role>.prices_per_mtok)",
+  "request_started_utc": "2026-10-18T16:39:40.957885+00:00",
+  "citation_check": {
+    "t_start": 8.88,
+    "duration_s": 0.001
+  }
+}

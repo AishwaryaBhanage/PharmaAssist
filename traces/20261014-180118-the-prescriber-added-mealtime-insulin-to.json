@@ -1,0 +1,120 @@
+{
+  "question": "The prescriber added mealtime insulin to this Veteran's basal insulin, but the DPP-4 is still on the refill list. Our older VA handout says continue it. Should I flag that for the pharmacist?",
+  "status": "answered",
+  "assumption": "Assuming VA guidance for a Veteran with type 2 diabetes; the \"older handout\" is the 2020 VA PBM T2DM Clinician's Guide.",
+  "answer": "Assuming VA T2DM guidance: **yes, flag it for the pharmacist.**\n\n- The 2020 clinician's guide (the older handout) says to continue metformin, DPP-4, SGLT-2 or GLP-1 when prandial insulin is added to basal insulin.\n- The newer VA PBM pharmacotherapy guidance (04/2025) says that when starting prandial insulin, you should discontinue the sulfonylurea, meglitinide **and DPP-4 inhibitor**.\n- The 2025 guidance is the more recent, so it governs. Both are advisory, and the prescriber makes the final decision.\n\nDon't stop the DPP-4 yourself. Ask the pharmacist to confirm with the prescriber whether continuing it was intended.",
+  "citations": [
+    {
+      "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+      "page": 9,
+      "link": "https://www.pbm.va.gov/PBM/AcademicDetailingService/Documents/508/IB10-1775_PharmacotherapyforT2DM_P97221.pdf#page=9",
+      "flag": null
+    },
+    {
+      "doc_id": "va_pbm_t2dm_clinicians_guide",
+      "page": 17,
+      "link": "https://www.pbm.va.gov/PBM/AcademicDetailingService/Documents/508/IB10-1402_Type2DiabetesCliniciansGuide_508Conformant.pdf#page=17",
+      "flag": null
+    }
+  ],
+  "conflicts_noted": [
+    "2020 Clinician's Guide (continue DPP-4 with prandial insulin) vs 2025 pharmacotherapy guidance (discontinue DPP-4 I): both VA advisory clinical guidance; resolved by rule 4, more recent (2025) over older."
+  ],
+  "flags": [],
+  "answered_by": "claude-sonnet-5-5",
+  "fallback_used": false,
+  "timing_s": {
+    "total": 8.769,
+    "search": 0.128,
+    "search_cold": 0,
+    "search_warm": 0.128,
+    "read_page": 0,
+    "list_documents": 0,
+    "model_calls": [
+      3.348,
+      5.292
+    ]
+  },
+  "index_warm_at_start": true,
+  "lookups": 1,
+  "tokens": {
+    "input": 6,
+    "output": 732,
+    "cache_read": 2283,
+    "cache_write": 8318
+  },
+  "cost_usd": 0.028584,
+  "pages_seen": [
+    "va_pbm_t2dm_clinicians_guide:p13",
+    "va_pbm_t2dm_clinicians_guide:p14",
+    "va_pbm_t2dm_clinicians_guide:p15",
+    "va_pbm_t2dm_clinicians_guide:p17",
+    "va_pbm_t2dm_clinicians_guide:p19",
+    "va_pbm_t2dm_pharmacotherapy_2025:p15",
+    "va_pbm_t2dm_pharmacotherapy_2025:p8",
+    "va_pbm_t2dm_pharmacotherapy_2025:p9"
+  ],
+  "started_at": "2026-10-14T22:01:18+00:00",
+  "config": {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium",
+    "setup": "baseline",
+    "max_tool_calls": 6,
+    "deadline_s": 25,
+    "search_k": 8
+  },
+  "model_calls": [
+    {
+      "duration_s": 3.348,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 4,
+        "output": 123,
+        "cache_read": 0,
+        "cache_write": 2283
+      }
+    },
+    {
+      "duration_s": 5.292,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 2,
+        "output": 609,
+        "cache_read": 2283,
+        "cache_write": 6035
+      }
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "search_documents",
+      "input": {
+        "query": "discontinue DPP-4 inhibitor when starting mealtime prandial insulin basal insulin",
+        "program": "VA",
+        "k": 10
+      },
+      "duration_s": 0.128,
+      "is_error": false,
+      "pages": [
+        "va_pbm_t2dm_clinicians_guide:p17",
+        "va_pbm_t2dm_pharmacotherapy_2025:p9",
+        "va_pbm_t2dm_pharmacotherapy_2025:p8",
+        "va_pbm_t2dm_clinicians_guide:p15",
+        "va_pbm_t2dm_clinicians_guide:p13",
+        "va_pbm_t2dm_clinicians_guide:p14",
+        "va_pbm_t2dm_pharmacotherapy_2025:p15",
+        "va_pbm_t2dm_pharmacotherapy_2025:p8",
+        "va_pbm_t2dm_clinicians_guide:p19",
+        "va_pbm_t2dm_pharmacotherapy_2025:p9"
+      ],
+      "index_loaded": true
+    }
+  ],
+  "cost_note": "priced at the requested model's rates; a fallback hop bills at its own rates"
+}

@@ -1,0 +1,147 @@
+{
+  "question": "Got reject 22 on a Victoza claim, what now?",
+  "status": "answered",
+  "assumption": "Assuming NY Medicaid (NYRx) and that \"reject 22\" is the NCPDP code for missing/invalid DAW code.",
+  "answer": "Assuming NY Medicaid: NCPDP reject 22 = missing/invalid DAW code. Victoza® is a BLTG (Brand Less Than Generic) preferred GLP-1 on the PDL, and the generic liraglutide is non-preferred.\n\n1. Resubmit with **DAW 9** (substitution allowed by prescriber, plan requests brand). Don't send DAW 1.\n2. Use DAW 1 only if the prescriber wrote \"Brand Medically Necessary\" on the Rx and DAW 1 is on the claim.\n3. If it then rejects for PA, note the clinical criteria: PA is required if the patient is also on a DPP-4 inhibitor. The prescriber must request the PA. If you can't reach the prescriber, you can get a 72-hour emergency supply PA.\n\nThe PDL I read is revised 9/14/2026. It notes some preferred-status changes effective 10/22/2026, but I didn't see one specific to Victoza.",
+  "citations": [
+    {
+      "doc_id": "ny_medicaid_pdl",
+      "page": 78,
+      "link": "https://newyork.fhsc.com/downloads/providers/NYRx_PDP_PDL.pdf#page=78",
+      "flag": null
+    },
+    {
+      "doc_id": "ny_medicaid_pdl",
+      "page": 34,
+      "link": "https://newyork.fhsc.com/downloads/providers/NYRx_PDP_PDL.pdf#page=34",
+      "flag": null
+    },
+    {
+      "doc_id": "ny_medicaid_pharmacy_policy",
+      "page": 15,
+      "link": "https://www.emedny.org/ProviderManuals/Pharmacy/PDFS/Pharmacy_Policy_Guidelines.pdf#page=15",
+      "flag": null
+    }
+  ],
+  "conflicts_noted": [],
+  "flags": [],
+  "answered_by": "claude-sonnet-5-5",
+  "fallback_used": false,
+  "timing_s": {
+    "total": 6.988,
+    "search": 0.083,
+    "search_cold": 0,
+    "search_warm": 0.083,
+    "read_page": 0,
+    "list_documents": 0,
+    "model_calls": [
+      2.781,
+      4.123
+    ]
+  },
+  "index_warm_at_start": true,
+  "lookups": 2,
+  "tokens": {
+    "input": 6,
+    "output": 814,
+    "cache_read": 2234,
+    "cache_write": 11599
+  },
+  "cost_usd": 0.037596,
+  "pages_seen": [
+    "cms_partd_dmp_guidance_2019:p37",
+    "ny_medicaid_pdl:p33",
+    "ny_medicaid_pdl:p34",
+    "ny_medicaid_pdl:p36",
+    "ny_medicaid_pdl:p37",
+    "ny_medicaid_pdl:p46",
+    "ny_medicaid_pdl:p60",
+    "ny_medicaid_pdl:p78",
+    "ny_medicaid_pharmacy_policy:p15",
+    "ny_medicaid_pharmacy_policy:p26",
+    "ny_medicaid_pharmacy_policy:p27",
+    "ny_medicaid_pharmacy_policy:p38",
+    "ny_medicaid_pharmacy_policy:p40",
+    "ny_medicaid_pharmacy_policy:p6",
+    "ny_medicaid_pharmacy_policy:p9"
+  ],
+  "started_at": "2026-10-14T22:06:42+00:00",
+  "config": {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium",
+    "setup": "baseline",
+    "max_tool_calls": 6,
+    "deadline_s": 25,
+    "search_k": 8
+  },
+  "model_calls": [
+    {
+      "duration_s": 2.781,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 4,
+        "output": 223,
+        "cache_read": 0,
+        "cache_write": 2234
+      }
+    },
+    {
+      "duration_s": 4.123,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 2,
+        "output": 591,
+        "cache_read": 2234,
+        "cache_write": 9365
+      }
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "search_documents",
+      "input": {
+        "query": "reject code 22 Victoza claim denial"
+      },
+      "duration_s": 0.065,
+      "is_error": false,
+      "pages": [
+        "cms_partd_dmp_guidance_2019:p37",
+        "ny_medicaid_pharmacy_policy:p26",
+        "ny_medicaid_pdl:p78",
+        "ny_medicaid_pharmacy_policy:p38",
+        "ny_medicaid_pharmacy_policy:p9",
+        "ny_medicaid_pharmacy_policy:p27",
+        "ny_medicaid_pharmacy_policy:p6",
+        "ny_medicaid_pharmacy_policy:p40"
+      ],
+      "index_loaded": true
+    },
+    {
+      "name": "search_documents",
+      "input": {
+        "query": "Victoza liraglutide prior authorization GLP-1 preferred",
+        "program": "NY Medicaid"
+      },
+      "duration_s": 0.018,
+      "is_error": false,
+      "pages": [
+        "ny_medicaid_pdl:p34",
+        "ny_medicaid_pdl:p36",
+        "ny_medicaid_pdl:p33",
+        "ny_medicaid_pdl:p60",
+        "ny_medicaid_pdl:p37",
+        "ny_medicaid_pharmacy_policy:p15",
+        "ny_medicaid_pdl:p33",
+        "ny_medicaid_pdl:p46"
+      ],
+      "index_loaded": true
+    }
+  ],
+  "cost_note": "priced at the requested model's rates; a fallback hop bills at its own rates"
+}

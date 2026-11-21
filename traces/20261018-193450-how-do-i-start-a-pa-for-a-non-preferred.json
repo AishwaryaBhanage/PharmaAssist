@@ -1,0 +1,979 @@
+{
+  "question": "How do I start a PA for a non-preferred drug for an NY Medicaid pt: who do I contact and what form?",
+  "request_id": "2eee4a2f-4ba2-45ed-921a-0861f036e589",
+  "status": "answered",
+  "agent_status": "answered",
+  "assumption": null,
+  "answer": "**NY Medicaid/NYRx:** non-preferred PDL drugs require PA unless the PDL says otherwise.\n\n1. **Prescriber route:** have the prescriber or their authorized agent contact the **NYRx Clinical Call Center: 1-877-309-9493**.\n2. **Fax form:** download the **NYRx Prior Authorization fax form** at **https://newyork.fhsc.com/providers/PA_forms.asp**.\n3. **ePA option:** NYRx accepts ePA via **CoverMyMeds**; a Medicaid-enrolled pharmacy may start the case for the prescriber to complete/submit.\n4. **Do not submit as the dispensing pharmacy** unless it’s a **72-hour emergency supply** request when the prescriber can’t be reached; pharmacists not employed by the prescriber are not authorized agents.",
+  "citations": [
+    {
+      "doc_id": "ny_medicaid_pdl",
+      "page": 1,
+      "link": "https://newyork.fhsc.com/downloads/providers/NYRx_PDP_PDL.pdf#page=1",
+      "flag": null,
+      "locator": "ny_medicaid_pdl:p1"
+    },
+    {
+      "doc_id": "ny_medicaid_pharmacy_policy",
+      "page": 15,
+      "link": "https://www.emedny.org/ProviderManuals/Pharmacy/PDFS/Pharmacy_Policy_Guidelines.pdf#page=15",
+      "flag": null,
+      "locator": "ny_medicaid_pharmacy_policy:p15"
+    },
+    {
+      "doc_id": "ny_medicaid_pharmacy_policy",
+      "page": 16,
+      "link": "https://www.emedny.org/ProviderManuals/Pharmacy/PDFS/Pharmacy_Policy_Guidelines.pdf#page=16",
+      "flag": null,
+      "locator": "ny_medicaid_pharmacy_policy:p16"
+    }
+  ],
+  "conflicts_noted": [],
+  "flags": [],
+  "needs_review": false,
+  "words": {
+    "displayed": 96,
+    "rendered": 96
+  },
+  "answered_by": "gpt-5.5-2026-04-23",
+  "provider": "openai",
+  "model": "gpt-5.5-2026-04-23",
+  "fallback_used": false,
+  "timing_s": {
+    "total": 12.13,
+    "search": 0.665,
+    "read_page": 0.043,
+    "list_documents": 0,
+    "lookups": 0,
+    "model_calls": [
+      2.073,
+      4.094,
+      5.254
+    ]
+  },
+  "lookups": 5,
+  "tokens": {
+    "input": 16747,
+    "output": 705,
+    "cache_read": 17920,
+    "cache_write": 0
+  },
+  "cost_usd": 0.113845,
+  "completeness": null,
+  "pages_seen": [
+    "ny_medicaid_pdl:p1",
+    "ny_medicaid_pdl:p2",
+    "ny_medicaid_pdl:p3",
+    "ny_medicaid_pdl:p61",
+    "ny_medicaid_pdl:p62",
+    "ny_medicaid_pdl:p77",
+    "ny_medicaid_pdl:p78",
+    "ny_medicaid_pdl:p79",
+    "ny_medicaid_pdl:p85",
+    "ny_medicaid_pdl:p86",
+    "ny_medicaid_pharmacy_policy:p15",
+    "ny_medicaid_pharmacy_policy:p16",
+    "ny_medicaid_pharmacy_policy:p28",
+    "ny_medicaid_pharmacy_policy:p29",
+    "ny_medicaid_pharmacy_policy:p30",
+    "ny_medicaid_pharmacy_policy:p31",
+    "ny_medicaid_pharmacy_policy:p37",
+    "ny_medicaid_pharmacy_policy:p38",
+    "ny_medicaid_pharmacy_policy:p39"
+  ],
+  "trace_id": null,
+  "started_at": "2026-10-18T23:34:50+00:00",
+  "config": {
+    "primary": "gpt-5.5",
+    "fallback": "claude-sonnet-5-5",
+    "effort": "medium",
+    "search": {
+      "mode": "hybrid",
+      "rrf_k": 60,
+      "fusion_depth": 100,
+      "return_parents": true,
+      "rerank": null
+    },
+    "max_tool_calls": 6,
+    "deadline_s": 25,
+    "search_k": 8,
+    "min_lookups": 1,
+    "completeness_pass": false,
+    "completeness_min_remaining_s": 8
+  },
+  "structured_lookups": true,
+  "context": {},
+  "model_answer": "**NY Medicaid/NYRx:** non-preferred PDL drugs require PA unless the PDL says otherwise.\n\n1. **Prescriber route:** have the prescriber or their authorized agent contact the **NYRx Clinical Call Center: 1-877-309-9493**.\n2. **Fax form:** download the **NYRx Prior Authorization fax form** at **https://newyork.fhsc.com/providers/PA_forms.asp**.\n3. **ePA option:** NYRx accepts ePA via **CoverMyMeds**; a Medicaid-enrolled pharmacy may start the case for the prescriber to complete/submit.\n4. **Do not submit as the dispensing pharmacy** unless it’s a **72-hour emergency supply** request when the prescriber can’t be reached; pharmacists not employed by the prescriber are not authorized agents.",
+  "model_citations": [
+    {
+      "doc_id": "ny_medicaid_pdl",
+      "page": 1,
+      "link": "https://newyork.fhsc.com/downloads/providers/NYRx_PDP_PDL.pdf#page=1",
+      "flag": null,
+      "locator": "ny_medicaid_pdl:p1"
+    },
+    {
+      "doc_id": "ny_medicaid_pharmacy_policy",
+      "page": 15,
+      "link": "https://www.emedny.org/ProviderManuals/Pharmacy/PDFS/Pharmacy_Policy_Guidelines.pdf#page=15",
+      "flag": null,
+      "locator": "ny_medicaid_pharmacy_policy:p15"
+    },
+    {
+      "doc_id": "ny_medicaid_pharmacy_policy",
+      "page": 16,
+      "link": "https://www.emedny.org/ProviderManuals/Pharmacy/PDFS/Pharmacy_Policy_Guidelines.pdf#page=16",
+      "flag": null,
+      "locator": "ny_medicaid_pharmacy_policy:p16"
+    }
+  ],
+  "first_submit": null,
+  "model_calls": [
+    {
+      "t_start": 0.0,
+      "duration_s": 2.073,
+      "requested_model": "gpt-5.5",
+      "served_model": "gpt-5.5-2026-04-23",
+      "provider": "openai",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 525,
+        "output": 123,
+        "cache_read": 1536,
+        "cache_write": 0
+      },
+      "cost_usd": 0.007083,
+      "response_id": "resp_058fb3d2b037f8c5016ad5578e761487d28209910b1bca82ac",
+      "input_messages": [
+        {
+          "role": "user",
+          "text": "Today's date: 2026-10-18\n\nQuestion: How do I start a PA for a non-preferred drug for an NY Medicaid pt: who do I contact and what form?"
+        }
+      ],
+      "output": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "call_O7org6YdSrfB6wIX7zLwK0Pn",
+            "name": "search_documents",
+            "arguments": {
+              "query": "NYRx non-preferred drug prior authorization contact form Preferred Drug Program PA form phone fax",
+              "program": "NY Medicaid",
+              "k": 8
+            }
+          },
+          {
+            "id": "call_38kAnu3UXor70HV7X9urkdKt",
+            "name": "search_documents",
+            "arguments": {
+              "query": "How to request prior authorization NYRx Preferred Drug Program non-preferred drug contact form",
+              "program": "NY Medicaid",
+              "k": 8
+            }
+          }
+        ]
+      }
+    },
+    {
+      "t_start": 2.739,
+      "duration_s": 4.094,
+      "requested_model": "gpt-5.5",
+      "served_model": "gpt-5.5-2026-04-23",
+      "provider": "openai",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 13603,
+        "output": 211,
+        "cache_read": 1536,
+        "cache_write": 0
+      },
+      "cost_usd": 0.075113,
+      "response_id": "resp_058fb3d2b037f8c5016ad55791138c87d2b942a1d93f306079",
+      "input_messages": [
+        {
+          "role": "tool",
+          "tool_results": [
+            {
+              "call_id": "call_O7org6YdSrfB6wIX7zLwK0Pn",
+              "is_error": false,
+              "content": "[{\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1, \"program\": \"NY Medicaid\", \"authority\": \"binding\", \"date\": \"2026-09-14\", \"text\": \"NYRx Preferred Drug Program (PDP) Preferred Drug List > NYRx, the Medicaid Drug Program\\n[p 1]\\nElectronic prior authorizations are now accepted by NYRx, the Medicaid Drug Program via CoverMyMeds®. Consider this alternative option as an effective and efficient way to request a PA other than by phone or by fax. For more information, contact NYRx Education & Outreach at NYRxEO@primetherapeutics.com\\nThe PDP promotes the use of less expensive, equally effective drugs when medically appropriate through a Preferred Drug List (PDL). All drugs currently covered by NYRx, the Medicaid Drug Program, remain available under the PDP and the determination of preferred and non-preferred drugs does not prohibit a prescriber from obtaining any of the medications covered under Medicaid.\\nNon-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise.\\nPreferred drugs that require PA are indicated by footnote.\\nSpecific Clinical, Frequency/Quantity/Duration, Step Therapy criteria are listed in column at the right.\\nNote: Not all drugs covered by NYRx are subject to programs included in this document. For a complete list of drugs covered by NYRx see the Medicaid Pharmacy List of Reimbursable Drugs\\nThe CDRP is aimed at ensuring specific drugs are utilized in a medically appropriate manner. Under the CDRP, certain drugs require PA because there may be specific safety issues, public health concerns, the potential for fraud and abuse, or the potential for significant overuse and misuse.\\nThe DUR helps to ensure that prescriptions for outpatient drugs are appropriate, medically necessary, and not likely to result in adverse medical consequences. This program uses professional medical protocols and computer technology and claims processing to assist in the management of data regarding the prescribing and dispensing of prescriptions. Frequency/Quantity/Duration (F/Q/D) Program and Step Therapy parameters are implemented to ensure clinically appropriate and cost-effective use of these drugs and drug classes.\\nPA will not be required for medications used for the treatment of substance use disorder prescribed according to generally accepted national professional guidelines for the treatment of a substance use disorder.\\nThe Brand Less Than Generic Program is a cost containment initiative which promotes the use of certain multi-source brand name drugs when the cost of the brand name drug is less expensive than the generic equivalent. This program is in conformance with State Education Law, which intends that patients receive the lower cost alternative.\\nFor more information on NYRx, the Medicaid Drug Program: http://www.health.ny.gov/health_care/medicaid/program/pharmacy.htm To contact the NYRx Clinical Call Center please call 1-877-309-9493\\nTo download a copy of the Prior Authorization fax form go to https://newyork.fhsc.com/providers/PA_forms.asp\\nDisclaimer: Branded generics are included with the single generic name listing; they are not listed as separate agents.\\n[p 2]\\nNYRx, the Medicaid Drug Program Preferred Drug List\\nState law excludes Medicaid coverage of brand name drugs that have a Federal Food and Drug Administration (FDA) approved A-rated generic equivalent unless a PA is obtained. Drugs subject to the Preferred Drug Program (PDP), Clinical Drug Review Program (CDRP), and/or the Brand Less Than Generic (BLTG) Program are not subject to the Mandatory Generic Program.\\nDose optimization can reduce prescription costs by reducing the number of pills a patient needs to take each day. The Department has identified drugs to be included in this program, the majority of which have FDA approval for once-a-day dosing, have multiple strengths available in correlating increments at similar costs and are currently being utilized above the recommended dosing frequency.\\nThe Cost Optimization Program "
+            },
+            {
+              "call_id": "call_38kAnu3UXor70HV7X9urkdKt",
+              "is_error": false,
+              "content": "[{\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1, \"program\": \"NY Medicaid\", \"authority\": \"binding\", \"date\": \"2026-09-14\", \"text\": \"NYRx Preferred Drug Program (PDP) Preferred Drug List > NYRx, the Medicaid Drug Program\\n[p 1]\\nElectronic prior authorizations are now accepted by NYRx, the Medicaid Drug Program via CoverMyMeds®. Consider this alternative option as an effective and efficient way to request a PA other than by phone or by fax. For more information, contact NYRx Education & Outreach at NYRxEO@primetherapeutics.com\\nThe PDP promotes the use of less expensive, equally effective drugs when medically appropriate through a Preferred Drug List (PDL). All drugs currently covered by NYRx, the Medicaid Drug Program, remain available under the PDP and the determination of preferred and non-preferred drugs does not prohibit a prescriber from obtaining any of the medications covered under Medicaid.\\nNon-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise.\\nPreferred drugs that require PA are indicated by footnote.\\nSpecific Clinical, Frequency/Quantity/Duration, Step Therapy criteria are listed in column at the right.\\nNote: Not all drugs covered by NYRx are subject to programs included in this document. For a complete list of drugs covered by NYRx see the Medicaid Pharmacy List of Reimbursable Drugs\\nThe CDRP is aimed at ensuring specific drugs are utilized in a medically appropriate manner. Under the CDRP, certain drugs require PA because there may be specific safety issues, public health concerns, the potential for fraud and abuse, or the potential for significant overuse and misuse.\\nThe DUR helps to ensure that prescriptions for outpatient drugs are appropriate, medically necessary, and not likely to result in adverse medical consequences. This program uses professional medical protocols and computer technology and claims processing to assist in the management of data regarding the prescribing and dispensing of prescriptions. Frequency/Quantity/Duration (F/Q/D) Program and Step Therapy parameters are implemented to ensure clinically appropriate and cost-effective use of these drugs and drug classes.\\nPA will not be required for medications used for the treatment of substance use disorder prescribed according to generally accepted national professional guidelines for the treatment of a substance use disorder.\\nThe Brand Less Than Generic Program is a cost containment initiative which promotes the use of certain multi-source brand name drugs when the cost of the brand name drug is less expensive than the generic equivalent. This program is in conformance with State Education Law, which intends that patients receive the lower cost alternative.\\nFor more information on NYRx, the Medicaid Drug Program: http://www.health.ny.gov/health_care/medicaid/program/pharmacy.htm To contact the NYRx Clinical Call Center please call 1-877-309-9493\\nTo download a copy of the Prior Authorization fax form go to https://newyork.fhsc.com/providers/PA_forms.asp\\nDisclaimer: Branded generics are included with the single generic name listing; they are not listed as separate agents.\\n[p 2]\\nNYRx, the Medicaid Drug Program Preferred Drug List\\nState law excludes Medicaid coverage of brand name drugs that have a Federal Food and Drug Administration (FDA) approved A-rated generic equivalent unless a PA is obtained. Drugs subject to the Preferred Drug Program (PDP), Clinical Drug Review Program (CDRP), and/or the Brand Less Than Generic (BLTG) Program are not subject to the Mandatory Generic Program.\\nDose optimization can reduce prescription costs by reducing the number of pills a patient needs to take each day. The Department has identified drugs to be included in this program, the majority of which have FDA approval for once-a-day dosing, have multiple strengths available in correlating increments at similar costs and are currently being utilized above the recommended dosing frequency.\\nThe Cost Optimization Program "
+            }
+          ]
+        }
+      ],
+      "output": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "call_BMfpN6QAezN5tjEor56vnsFm",
+            "name": "read_page",
+            "arguments": {
+              "doc_id": "ny_medicaid_pdl",
+              "page": 1
+            }
+          },
+          {
+            "id": "call_9YjXKxnsfQ4Tj2FcyscZHSN0",
+            "name": "read_page",
+            "arguments": {
+              "doc_id": "ny_medicaid_pharmacy_policy",
+              "page": 15
+            }
+          },
+          {
+            "id": "call_74fXNhHLgJ0eabT9cM5JH2Ug",
+            "name": "read_page",
+            "arguments": {
+              "doc_id": "ny_medicaid_pharmacy_policy",
+              "page": 16
+            }
+          }
+        ]
+      }
+    },
+    {
+      "t_start": 6.876,
+      "duration_s": 5.254,
+      "requested_model": "gpt-5.5",
+      "served_model": "gpt-5.5-2026-04-23",
+      "provider": "openai",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 2619,
+        "output": 371,
+        "cache_read": 14848,
+        "cache_write": 0
+      },
+      "cost_usd": 0.031649,
+      "response_id": "resp_058fb3d2b037f8c5016ad55795364887d2bde7b35792343a20",
+      "input_messages": [
+        {
+          "role": "tool",
+          "tool_results": [
+            {
+              "call_id": "call_BMfpN6QAezN5tjEor56vnsFm",
+              "is_error": false,
+              "content": "ny_medicaid_pdl page 1 (NY Medicaid, binding, 2026-09-14)\n\nRevised: September 14, 2026 \nNYRx, the Medicaid Drug Program \nFor more information on NYRx, the Medicaid Drug Program: http://www.health.ny.gov/health_care/medicaid/program/pharmacy.htm \nTo contact the NYRx Clinical Call Center please call 1-877-309-9493 \nTo download a copy of the Prior Authorization fax form go to https://newyork.fhsc.com/providers/PA_forms.asp \nDisclaimer: Branded generics are included with the single generic name listing; they are not listed as separate agents. \n1 \n \nOVERVIEW OF CONTENTS \nElectronic prior authorizations are now accepted by NYRx, the Medicaid Drug Program via CoverMyMeds®. Consider this alternative option as an \neffective and efficient way to request a PA other than by phone or by fax. For more information, contact NYRx Education & Outreach \nat NYRxEO@primetherapeutics.com  \nPreferred Drug Program (PDP) (Pages 4–59) \n \nThe PDP promotes the use of less expensive, equally effective drugs when medically appropriate through a Preferred Drug List (PDL). All drugs \ncurrently covered by NYRx, the Medicaid Drug Program, remain available under the PDP and the determination of preferred and non-preferred \ndrugs does not prohibit a prescriber from obtaining any of the medications covered under Medicaid. \n• \nNon-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. \n• \nPreferred drugs that require PA are indicated by footnote. \n• \nSpecific Clinical, Frequency/Quantity/Duration, Step Therapy criteria are listed in column at the right. \nNote: Not all drugs covered by NYRx are subject to programs included in this document. For a complete list of drugs covered by NYRx see the \nMedicaid Pharmacy List of Reimbursable Drugs \nClinical Drug Review Program (CDRP) (Page 60) \n \nThe CDRP is aimed at ensuring specific drugs are utilized in a medically appropriate manner. Under the CDRP, certain drugs require PA because \nthere may be specific safety issues, public health concerns, the potential for fraud and abuse, or the potential for significant overuse and misuse. \nDrug Utilization Review (DUR) Program (Pages 61–74) \n \nThe DUR helps to ensure that prescriptions for outpatient drugs are appropriate, medically necessary, and not likely to result in adverse medical \nconsequences. This program uses professional medical protocols and computer technology and claims processing to assist in the management of \ndata regarding the prescribing and dispensing of prescriptions. Frequency/Quantity/Duration (F/Q/D) Program and Step Therapy parameters are \nimplemented to ensure clinically appropriate and cost-effective use of these drugs and drug classes. \nMedication Assisted Treatment (MAT) Formulary (Page 75) \n \nPA will not be required for medications used for the treatment of substance use disorder prescribed according to generally accepted national \nprofessional guidelines for the treatment of a substance use disorder. \nBrand Less Than Generic (BLTG) Program (Pages 76–77) \n \nThe Brand Less Than Generic Program is a cost containment initiative which promotes the use of certain multi-source brand name drugs when the \ncost of the brand name drug is less expensive than the generic equivalent. This program is in conformance with State Education Law, which intends \nthat patients receive the lower cost alternative. \n"
+            },
+            {
+              "call_id": "call_9YjXKxnsfQ4Tj2FcyscZHSN0",
+              "is_error": false,
+              "content": "ny_medicaid_pharmacy_policy page 15 (NY Medicaid, binding, 2026-09)\n\nPolicy Guidelines \nNYRx \n \n2026-3                                                     September 2026                                                                                14 \n \n  \nSystem messaging has been developed to help guide the pharmacists to appropriately submit the claim or to refer to \nthe prescriber.  \n  \nFor certain medical/surgical supplies, if the limit on an item is exceeded, prior approval must be requested with \naccompanying documentation as to why the limit needs to be exceeded.  Quantity and frequency limits are available in \nthe OTC and Supply Fee Schedule section of this manual. Questions on medical/surgical supplies may be referred to \nthe Durable Medical Equipment unit at 800-342-3005. The following links have been provided as helpful resources for \ninformation on the PDP, F/Q/D and Step Therapy Programs:  https://newyork.fhsc.com/  and \nhttp://www.health.ny.gov/health_care/medicaid/program/dur/index.htm. Questions on prescription Frequency, \nQuantity and Duration (F/Q/D) Limits may be referred to the NY Medicaid Clinical Call Center at: (877)309-9493. \n \nGeneric Drug Substitution Policy \n \nAll Medicaid pharmacy providers must comply with all State requirements adopted pursuant to NY State drug \nsubstitution laws.  Additionally, because of the Medicaid Mandatory Generic Drug Program, prior authorization must \nbe obtained for most brand-name drugs with an “A-rated” generic equivalent before dispensing.   \n \nPrior Authorization Programs \n \nThe Medicaid program requires prior authorization (PA) for certain drugs under the following programs:   \n• \nPreferred Drug Program (PDP)  \n• \nBrand When Less Than Generic Program (BLTG)  \n• \nDose Optimization Initiative \n• \nClinical Drug Review Program (CDRP)  \n• \nDrug Utilization Review (DUR) Program  \n• \nMandatory Generic Drug Program (MGDP) \n \nPrescribers may need to obtain prior authorizations for certain drugs.  Only prescribers or their authorized agent may \nsubmit a request for prior authorization.  Third party requests are prohibited: prescribers may not contract with or \nassign authority to dispensing pharmacists, manufacturers, or other persons or companies to initiate their PA requests. \nGeneral information on the prescription drug prior authorizations, including the above programs, can be found at the \nfollowing website: https://newyork.fhsc.com.  \n  \nNote: If a prior authorization number has not been obtained by the prescriber and the pharmacist is unable to reach \nthe prescriber, the pharmacist may obtain a prior authorization for up to a 72-hour emergency supply for any drug \nthat requires prior authorization, subject to state laws and Medicaid restrictions. The pharmacist is expected to follow \nup with the prescriber to determine future needs. \n \nPharmacy Program information is available on the Medicaid Pharmacy Program website at: \nhttps://www.health.ny.gov/health_care/medicaid/program/pharmacy.htm.  \n \nElectronic Prior Authorization (ePA) \n \nThe Medicaid program accepts electronic prior authorization (ePA) requests via CoverMyMeds. Medicaid enrolled \npharmacy providers who utilize CoverMyMeds can initiate medication ePA requests on behalf of the member for \ncompletion by the prescriber. CoverMyMeds will direct the case to the prescriber’s queue and prompt them to \ncomplete and submit the ePA to NYRx. CoverMyMeds prompts prescribers to answer required clinical questions that \n"
+            },
+            {
+              "call_id": "call_74fXNhHLgJ0eabT9cM5JH2Ug",
+              "is_error": false,
+              "content": "ny_medicaid_pharmacy_policy page 16 (NY Medicaid, binding, 2026-09)\n\nPolicy Guidelines \nNYRx \n \n2026-3                                                     September 2026                                                                                15 \n \ncan offer real-time approvals if clinical criteria are met. Medicaid enrolled prescribers can electronically submit prior \nauthorization requests, upload supporting documents, and track request status in real time.  Only prescribers or their \nauthorized agent may submit a request for prior authorization. Pharmacists who are not employed by the prescriber’s \noffice are not authorized agents.  \n \nThe CoverMyMeds website is available here: Prior Authorization Forms | CoverMyMeds. \n \nFor additional information visit the NYRx Education and Outreach (E&O) website or contact the E&O call center. The \nE&O Call Center is available by phone at 1-833-967-7310 or by email at NYRxEO@primetherapeutics.com from 8:00 \nAM to 5:00 PM ET, Monday through Friday, excluding holidays. \n \nPAXPRESS \n \nMedicaid enrolled prescribers can initiate prior authorization requests using a web-based application.  PAXpress is a \nweb-based pharmacy PA request/response application accessible from the eMedNY website at \nhttps://www.emedny.org  as well as the NY Medicaid Pharmacy Prior Authorization Program website at:  \nhttps://newyork.fhsc.com/.  \n  \nThe PAXpress website provides a single point of entry for prescriber access to announcements, documents, and quick \nlinks to important program information. A user manual is accessible from the eMedNY website and provides \ninformation for using the PAXpress application:   \nhttps://www.emedny.org/info/paxpress/PAXpress_User_Manual.pdf.  \n \nPharmacists are not authorized to submit for a Prior Authorization except for the 72-hour emergency supply as \nmentioned above. \n \nPharmacists as Immunizers \n \nReimbursement is provided to Medicaid enrolled pharmacies for vaccines and anaphylaxis agents administered by a \ncertified pharmacist or a certified pharmacy intern under the supervision of a certified pharmacist within the scope of \ntheir practice within all Medicaid polices. A link to the latest billing information can be found on the following website \nunder “Pharmacists as Immunizers”: https://www.health.ny.gov/health_care/medicaid/program/phar_immun_fact.htm.   \n \nPharmacists Administering Mental Health or Substance Abuse Treatment Injections at the Pharmacy \n \nRegistered pharmacists, certified by the NYS Education Department, may administer a long-acting injectable (LAI) \napproved by the Food and Drug Administration for the treatment of mental health or substance abuse based on a \npatient specific prescription or order after the initial injection was provided in the practitioner’s office.  \n \nPolicy \n• \nThe certified pharmacist must confirm the initial injection has been given by the practitioner and the \nmember is ready for maintenance therapy.  \n• \nThe member or member’s representative must consent to the administration by a certified pharmacist.  \n• \nThe pharmacy must provide a private area for the administration.  \n• \nThe certified pharmacist must notify the member’s prescriber of the drug administration, and if there were \nadverse reactions or any side effects.  \n \n \n"
+            }
+          ]
+        }
+      ],
+      "output": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "call_sV1tdZv4CYVAQOD8PRc4pSjp",
+            "name": "submit_answer",
+            "arguments": {
+              "status": "answered",
+              "assumption": null,
+              "answer": "**NY Medicaid/NYRx:** non-preferred PDL drugs require PA unless the PDL says otherwise.\n\n1. **Prescriber route:** have the prescriber or their authorized agent contact the **NYRx Clinical Call Center: 1-877-309-9493**.\n2. **Fax form:** download the **NYRx Prior Authorization fax form** at **https://newyork.fhsc.com/providers/PA_forms.asp**.\n3. **ePA option:** NYRx accepts ePA via **CoverMyMeds**; a Medicaid-enrolled pharmacy may start the case for the prescriber to complete/submit.\n4. **Do not submit as the dispensing pharmacy** unless it’s a **72-hour emergency supply** request when the prescriber can’t be reached; pharmacists not employed by the prescriber are not authorized agents.",
+              "citations": [
+                {
+                  "doc_id": "ny_medicaid_pdl",
+                  "page": 1,
+                  "row": null
+                },
+                {
+                  "doc_id": "ny_medicaid_pharmacy_policy",
+                  "page": 15,
+                  "row": null
+                },
+                {
+                  "doc_id": "ny_medicaid_pharmacy_policy",
+                  "page": 16,
+                  "row": null
+                }
+              ],
+              "conflicts_noted": []
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "search_documents",
+      "input": {
+        "query": "NYRx non-preferred drug prior authorization contact form Preferred Drug Program PA form phone fax",
+        "program": "NY Medicaid",
+        "k": 8
+      },
+      "duration_s": 0.285,
+      "is_error": false,
+      "pages": [
+        "ny_medicaid_pdl:p1",
+        "ny_medicaid_pdl:p2",
+        "ny_medicaid_pdl:p3",
+        "ny_medicaid_pdl:p61",
+        "ny_medicaid_pdl:p77",
+        "ny_medicaid_pdl:p78",
+        "ny_medicaid_pdl:p79",
+        "ny_medicaid_pdl:p85",
+        "ny_medicaid_pdl:p86",
+        "ny_medicaid_pharmacy_policy:p15",
+        "ny_medicaid_pharmacy_policy:p16",
+        "ny_medicaid_pharmacy_policy:p28",
+        "ny_medicaid_pharmacy_policy:p29",
+        "ny_medicaid_pharmacy_policy:p30",
+        "ny_medicaid_pharmacy_policy:p31",
+        "ny_medicaid_pharmacy_policy:p37",
+        "ny_medicaid_pharmacy_policy:p38",
+        "ny_medicaid_pharmacy_policy:p39"
+      ],
+      "result": "[{\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1, \"program\": \"NY Medicaid\", \"authority\": \"binding\", \"date\": \"2026-09-14\", \"text\": \"NYRx Preferred Drug Program (PDP) Preferred Drug List > NYRx, the Medicaid Drug Program\\n[p 1]\\nElectronic prior authorizations are now accepted by NYRx, the Medicaid Drug Program via CoverMyMeds®. Consider this alternative option as an effective and efficient way to request a PA other than by phone or by fax. For more information, contact NYRx Education & Outreach at NYRxEO@primetherapeutics.com\\nThe PDP promotes the use of less expensive, equally effective drugs when medically appropriate through a Preferred Drug List (PDL). All drugs currently covered by NYRx, the Medicaid Drug Program, remain available under the PDP and the determination of preferred and non-preferred drugs does not prohibit a prescriber from obtaining any of the medications covered under Medicaid.\\nNon-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise.\\nPreferred drugs that require PA are indicated by footnote.\\nSpecific Clinical, Frequency/Quantity/Duration, Step Therapy criteria are listed in column at the right.\\nNote: Not all drugs covered by NYRx are subject to programs included in this document. For a complete list of drugs covered by NYRx see the Medicaid Pharmacy List of Reimbursable Drugs\\nThe CDRP is aimed at ensuring specific drugs are utilized in a medically appropriate manner. Under the CDRP, certain drugs require PA because there may be specific safety issues, public health concerns, the potential for fraud and abuse, or the potential for significant overuse and misuse.\\nThe DUR helps to ensure that prescriptions for outpatient drugs are appropriate, medically necessary, and not likely to result in adverse medical consequences. This program uses professional medical protocols and computer technology and claims processing to assist in the management of data regarding the prescribing and dispensing of prescriptions. Frequency/Quantity/Duration (F/Q/D) Program and Step Therapy parameters are implemented to ensure clinically appropriate and cost-effective use of these drugs and drug classes.\\nPA will not be required for medications used for the treatment of substance use disorder prescribed according to generally accepted national professional guidelines for the treatment of a substance use disorder.\\nThe Brand Less Than Generic Program is a cost containment initiative which promotes the use of certain multi-source brand name drugs when the cost of the brand name drug is less expensive than the generic equivalent. This program is in conformance with State Education Law, which intends that patients receive the lower cost alternative.\\nFor more information on NYRx, the Medicaid Drug Program: http://www.health.ny.gov/health_care/medicaid/program/pharmacy.htm To contact the NYRx Clinical Call Center please call 1-877-309-9493\\nTo download a copy of the Prior Authorization fax form go to https://newyork.fhsc.com/providers/PA_forms.asp\\nDisclaimer: Branded generics are included with the single generic name listing; they are not listed as separate agents.\\n[p 2]\\nNYRx, the Medicaid Drug Program Preferred Drug List\\nState law excludes Medicaid coverage of brand name drugs that have a Federal Food and Drug Administration (FDA) approved A-rated generic equivalent unless a PA is obtained. Drugs subject to the Preferred Drug Program (PDP), Clinical Drug Review Program (CDRP), and/or the Brand Less Than Generic (BLTG) Program are not subject to the Mandatory Generic Program.\\nDose optimization can reduce prescription costs by reducing the number of pills a patient needs to take each day. The Department has identified drugs to be included in this program, the majority of which have FDA approval for once-a-day dosing, have multiple strengths available in correlating increments at similar costs and are currently being utilized above the recommended dosing frequency.\\nThe Cost Optimization Program ",
+      "search": {
+        "original_query": "How do I start a PA for a non-preferred drug for an NY Medicaid pt: who do I contact and what form?",
+        "agent_query": "NYRx non-preferred drug prior authorization contact form Preferred Drug Program PA form phone fax",
+        "executed": [
+          {
+            "source": "original",
+            "query": "How do I start a PA for a non-preferred drug for an NY Medicaid pt: who do I contact and what form?",
+            "program": "NY Medicaid",
+            "k": 8,
+            "seconds": 0.258,
+            "cached": false,
+            "results": 8
+          },
+          {
+            "source": "agent",
+            "query": "NYRx non-preferred drug prior authorization contact form Preferred Drug Program PA form phone fax",
+            "program": "NY Medicaid",
+            "k": 8,
+            "seconds": 0.284,
+            "cached": false,
+            "results": 8
+          }
+        ],
+        "duplicates_merged": 5,
+        "returned": 11,
+        "from_both": 5,
+        "from_original_only": 3,
+        "from_agent_only": 3,
+        "provenance": [
+          {
+            "unit": "ny_medicaid_pdl:s1",
+            "found_by": {
+              "original": 1,
+              "agent": 1
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s145",
+            "found_by": {
+              "original": 3,
+              "agent": 3
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s135",
+            "found_by": {
+              "original": 2,
+              "agent": 5
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s18",
+            "found_by": {
+              "original": 5,
+              "agent": 2
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s117",
+            "found_by": {
+              "original": 4,
+              "agent": 4
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s43",
+            "found_by": {
+              "original": 6
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s19",
+            "found_by": {
+              "agent": 6
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s57",
+            "found_by": {
+              "original": 7
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s36",
+            "found_by": {
+              "agent": 7
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s39",
+            "found_by": {
+              "original": 8
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s134",
+            "found_by": {
+              "agent": 8
+            }
+          }
+        ],
+        "hits": [
+          {
+            "unit": "ny_medicaid_pdl:s1",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              1,
+              2,
+              3
+            ],
+            "ranks": {
+              "original": 1,
+              "agent": 1
+            },
+            "scores": {
+              "original": 0.0323,
+              "agent": 0.0328
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s145",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              85,
+              86
+            ],
+            "ranks": {
+              "original": 3,
+              "agent": 3
+            },
+            "scores": {
+              "original": 0.0299,
+              "agent": 0.03
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s135",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              79
+            ],
+            "ranks": {
+              "original": 2,
+              "agent": 5
+            },
+            "scores": {
+              "original": 0.0301,
+              "agent": 0.0275
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s18",
+            "doc_id": "ny_medicaid_pharmacy_policy",
+            "pages": [
+              15
+            ],
+            "ranks": {
+              "original": 5,
+              "agent": 2
+            },
+            "scores": {
+              "original": 0.0275,
+              "agent": 0.0315
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s117",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              61
+            ],
+            "ranks": {
+              "original": 4,
+              "agent": 4
+            },
+            "scores": {
+              "original": 0.0292,
+              "agent": 0.0299
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s43",
+            "doc_id": "ny_medicaid_pharmacy_policy",
+            "pages": [
+              30,
+              31
+            ],
+            "ranks": {
+              "original": 6
+            },
+            "scores": {
+              "original": 0.0269
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s19",
+            "doc_id": "ny_medicaid_pharmacy_policy",
+            "pages": [
+              15,
+              16
+            ],
+            "ranks": {
+              "agent": 6
+            },
+            "scores": {
+              "agent": 0.027
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s57",
+            "doc_id": "ny_medicaid_pharmacy_policy",
+            "pages": [
+              37,
+              38,
+              39
+            ],
+            "ranks": {
+              "original": 7
+            },
+            "scores": {
+              "original": 0.0249
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s36",
+            "doc_id": "ny_medicaid_pharmacy_policy",
+            "pages": [
+              28,
+              29
+            ],
+            "ranks": {
+              "agent": 7
+            },
+            "scores": {
+              "agent": 0.0258
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s39",
+            "doc_id": "ny_medicaid_pharmacy_policy",
+            "pages": [
+              29,
+              30
+            ],
+            "ranks": {
+              "original": 8
+            },
+            "scores": {
+              "original": 0.0235
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s134",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              77,
+              78
+            ],
+            "ranks": {
+              "agent": 8
+            },
+            "scores": {
+              "agent": 0.0257
+            }
+          }
+        ]
+      },
+      "t_start": 2.073
+    },
+    {
+      "name": "search_documents",
+      "input": {
+        "query": "How to request prior authorization NYRx Preferred Drug Program non-preferred drug contact form",
+        "program": "NY Medicaid",
+        "k": 8
+      },
+      "duration_s": 0.38,
+      "is_error": false,
+      "pages": [
+        "ny_medicaid_pdl:p1",
+        "ny_medicaid_pdl:p2",
+        "ny_medicaid_pdl:p3",
+        "ny_medicaid_pdl:p61",
+        "ny_medicaid_pdl:p62",
+        "ny_medicaid_pdl:p77",
+        "ny_medicaid_pdl:p78",
+        "ny_medicaid_pdl:p79",
+        "ny_medicaid_pdl:p85",
+        "ny_medicaid_pdl:p86",
+        "ny_medicaid_pharmacy_policy:p15",
+        "ny_medicaid_pharmacy_policy:p16",
+        "ny_medicaid_pharmacy_policy:p29",
+        "ny_medicaid_pharmacy_policy:p30",
+        "ny_medicaid_pharmacy_policy:p31",
+        "ny_medicaid_pharmacy_policy:p37",
+        "ny_medicaid_pharmacy_policy:p38",
+        "ny_medicaid_pharmacy_policy:p39"
+      ],
+      "result": "[{\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1, \"program\": \"NY Medicaid\", \"authority\": \"binding\", \"date\": \"2026-09-14\", \"text\": \"NYRx Preferred Drug Program (PDP) Preferred Drug List > NYRx, the Medicaid Drug Program\\n[p 1]\\nElectronic prior authorizations are now accepted by NYRx, the Medicaid Drug Program via CoverMyMeds®. Consider this alternative option as an effective and efficient way to request a PA other than by phone or by fax. For more information, contact NYRx Education & Outreach at NYRxEO@primetherapeutics.com\\nThe PDP promotes the use of less expensive, equally effective drugs when medically appropriate through a Preferred Drug List (PDL). All drugs currently covered by NYRx, the Medicaid Drug Program, remain available under the PDP and the determination of preferred and non-preferred drugs does not prohibit a prescriber from obtaining any of the medications covered under Medicaid.\\nNon-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise.\\nPreferred drugs that require PA are indicated by footnote.\\nSpecific Clinical, Frequency/Quantity/Duration, Step Therapy criteria are listed in column at the right.\\nNote: Not all drugs covered by NYRx are subject to programs included in this document. For a complete list of drugs covered by NYRx see the Medicaid Pharmacy List of Reimbursable Drugs\\nThe CDRP is aimed at ensuring specific drugs are utilized in a medically appropriate manner. Under the CDRP, certain drugs require PA because there may be specific safety issues, public health concerns, the potential for fraud and abuse, or the potential for significant overuse and misuse.\\nThe DUR helps to ensure that prescriptions for outpatient drugs are appropriate, medically necessary, and not likely to result in adverse medical consequences. This program uses professional medical protocols and computer technology and claims processing to assist in the management of data regarding the prescribing and dispensing of prescriptions. Frequency/Quantity/Duration (F/Q/D) Program and Step Therapy parameters are implemented to ensure clinically appropriate and cost-effective use of these drugs and drug classes.\\nPA will not be required for medications used for the treatment of substance use disorder prescribed according to generally accepted national professional guidelines for the treatment of a substance use disorder.\\nThe Brand Less Than Generic Program is a cost containment initiative which promotes the use of certain multi-source brand name drugs when the cost of the brand name drug is less expensive than the generic equivalent. This program is in conformance with State Education Law, which intends that patients receive the lower cost alternative.\\nFor more information on NYRx, the Medicaid Drug Program: http://www.health.ny.gov/health_care/medicaid/program/pharmacy.htm To contact the NYRx Clinical Call Center please call 1-877-309-9493\\nTo download a copy of the Prior Authorization fax form go to https://newyork.fhsc.com/providers/PA_forms.asp\\nDisclaimer: Branded generics are included with the single generic name listing; they are not listed as separate agents.\\n[p 2]\\nNYRx, the Medicaid Drug Program Preferred Drug List\\nState law excludes Medicaid coverage of brand name drugs that have a Federal Food and Drug Administration (FDA) approved A-rated generic equivalent unless a PA is obtained. Drugs subject to the Preferred Drug Program (PDP), Clinical Drug Review Program (CDRP), and/or the Brand Less Than Generic (BLTG) Program are not subject to the Mandatory Generic Program.\\nDose optimization can reduce prescription costs by reducing the number of pills a patient needs to take each day. The Department has identified drugs to be included in this program, the majority of which have FDA approval for once-a-day dosing, have multiple strengths available in correlating increments at similar costs and are currently being utilized above the recommended dosing frequency.\\nThe Cost Optimization Program ",
+      "search": {
+        "original_query": "How do I start a PA for a non-preferred drug for an NY Medicaid pt: who do I contact and what form?",
+        "agent_query": "How to request prior authorization NYRx Preferred Drug Program non-preferred drug contact form",
+        "executed": [
+          {
+            "source": "original",
+            "query": "How do I start a PA for a non-preferred drug for an NY Medicaid pt: who do I contact and what form?",
+            "program": "NY Medicaid",
+            "k": 8,
+            "seconds": 0.0,
+            "cached": true,
+            "results": 8
+          },
+          {
+            "source": "agent",
+            "query": "How to request prior authorization NYRx Preferred Drug Program non-preferred drug contact form",
+            "program": "NY Medicaid",
+            "k": 8,
+            "seconds": 0.38,
+            "cached": false,
+            "results": 8
+          }
+        ],
+        "duplicates_merged": 5,
+        "returned": 11,
+        "from_both": 5,
+        "from_original_only": 3,
+        "from_agent_only": 3,
+        "provenance": [
+          {
+            "unit": "ny_medicaid_pdl:s1",
+            "found_by": {
+              "original": 1,
+              "agent": 2
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s18",
+            "found_by": {
+              "original": 5,
+              "agent": 1
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s145",
+            "found_by": {
+              "original": 3,
+              "agent": 3
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s135",
+            "found_by": {
+              "original": 2,
+              "agent": 5
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s117",
+            "found_by": {
+              "original": 4,
+              "agent": 4
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s43",
+            "found_by": {
+              "original": 6
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s19",
+            "found_by": {
+              "agent": 6
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s57",
+            "found_by": {
+              "original": 7
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s134",
+            "found_by": {
+              "agent": 7
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s39",
+            "found_by": {
+              "original": 8
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s118",
+            "found_by": {
+              "agent": 8
+            }
+          }
+        ],
+        "hits": [
+          {
+            "unit": "ny_medicaid_pdl:s1",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              1,
+              2,
+              3
+            ],
+            "ranks": {
+              "original": 1,
+              "agent": 2
+            },
+            "scores": {
+              "original": 0.0323,
+              "agent": 0.0325
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s18",
+            "doc_id": "ny_medicaid_pharmacy_policy",
+            "pages": [
+              15
+            ],
+            "ranks": {
+              "original": 5,
+              "agent": 1
+            },
+            "scores": {
+              "original": 0.0275,
+              "agent": 0.0325
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s145",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              85,
+              86
+            ],
+            "ranks": {
+              "original": 3,
+              "agent": 3
+            },
+            "scores": {
+              "original": 0.0299,
+              "agent": 0.0293
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s135",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              79
+            ],
+            "ranks": {
+              "original": 2,
+              "agent": 5
+            },
+            "scores": {
+              "original": 0.0301,
+              "agent": 0.028
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s117",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              61
+            ],
+            "ranks": {
+              "original": 4,
+              "agent": 4
+            },
+            "scores": {
+              "original": 0.0292,
+              "agent": 0.0292
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s43",
+            "doc_id": "ny_medicaid_pharmacy_policy",
+            "pages": [
+              30,
+              31
+            ],
+            "ranks": {
+              "original": 6
+            },
+            "scores": {
+              "original": 0.0269
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s19",
+            "doc_id": "ny_medicaid_pharmacy_policy",
+            "pages": [
+              15,
+              16
+            ],
+            "ranks": {
+              "agent": 6
+            },
+            "scores": {
+              "agent": 0.028
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s57",
+            "doc_id": "ny_medicaid_pharmacy_policy",
+            "pages": [
+              37,
+              38,
+              39
+            ],
+            "ranks": {
+              "original": 7
+            },
+            "scores": {
+              "original": 0.0249
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s134",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              77,
+              78
+            ],
+            "ranks": {
+              "agent": 7
+            },
+            "scores": {
+              "agent": 0.027
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s39",
+            "doc_id": "ny_medicaid_pharmacy_policy",
+            "pages": [
+              29,
+              30
+            ],
+            "ranks": {
+              "original": 8
+            },
+            "scores": {
+              "original": 0.0235
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s118",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              62
+            ],
+            "ranks": {
+              "agent": 8
+            },
+            "scores": {
+              "agent": 0.025
+            }
+          }
+        ]
+      },
+      "t_start": 2.359
+    },
+    {
+      "name": "read_page",
+      "input": {
+        "doc_id": "ny_medicaid_pdl",
+        "page": 1
+      },
+      "duration_s": 0.025,
+      "is_error": false,
+      "pages": [
+        "ny_medicaid_pdl:p1"
+      ],
+      "result": "ny_medicaid_pdl page 1 (NY Medicaid, binding, 2026-09-14)\n\nRevised: September 14, 2026 \nNYRx, the Medicaid Drug Program \nFor more information on NYRx, the Medicaid Drug Program: http://www.health.ny.gov/health_care/medicaid/program/pharmacy.htm \nTo contact the NYRx Clinical Call Center please call 1-877-309-9493 \nTo download a copy of the Prior Authorization fax form go to https://newyork.fhsc.com/providers/PA_forms.asp \nDisclaimer: Branded generics are included with the single generic name listing; they are not listed as separate agents. \n1 \n \nOVERVIEW OF CONTENTS \nElectronic prior authorizations are now accepted by NYRx, the Medicaid Drug Program via CoverMyMeds®. Consider this alternative option as an \neffective and efficient way to request a PA other than by phone or by fax. For more information, contact NYRx Education & Outreach \nat NYRxEO@primetherapeutics.com  \nPreferred Drug Program (PDP) (Pages 4–59) \n \nThe PDP promotes the use of less expensive, equally effective drugs when medically appropriate through a Preferred Drug List (PDL). All drugs \ncurrently covered by NYRx, the Medicaid Drug Program, remain available under the PDP and the determination of preferred and non-preferred \ndrugs does not prohibit a prescriber from obtaining any of the medications covered under Medicaid. \n• \nNon-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. \n• \nPreferred drugs that require PA are indicated by footnote. \n• \nSpecific Clinical, Frequency/Quantity/Duration, Step Therapy criteria are listed in column at the right. \nNote: Not all drugs covered by NYRx are subject to programs included in this document. For a complete list of drugs covered by NYRx see the \nMedicaid Pharmacy List of Reimbursable Drugs \nClinical Drug Review Program (CDRP) (Page 60) \n \nThe CDRP is aimed at ensuring specific drugs are utilized in a medically appropriate manner. Under the CDRP, certain drugs require PA because \nthere may be specific safety issues, public health concerns, the potential for fraud and abuse, or the potential for significant overuse and misuse. \nDrug Utilization Review (DUR) Program (Pages 61–74) \n \nThe DUR helps to ensure that prescriptions for outpatient drugs are appropriate, medically necessary, and not likely to result in adverse medical \nconsequences. This program uses professional medical protocols and computer technology and claims processing to assist in the management of \ndata regarding the prescribing and dispensing of prescriptions. Frequency/Quantity/Duration (F/Q/D) Program and Step Therapy parameters are \nimplemented to ensure clinically appropriate and cost-effective use of these drugs and drug classes. \nMedication Assisted Treatment (MAT) Formulary (Page 75) \n \nPA will not be required for medications used for the treatment of substance use disorder prescribed according to generally accepted national \nprofessional guidelines for the treatment of a substance use disorder. \nBrand Less Than Generic (BLTG) Program (Pages 76–77) \n \nThe Brand Less Than Generic Program is a cost containment initiative which promotes the use of certain multi-source brand name drugs when the \ncost of the brand name drug is less expensive than the generic equivalent. This program is in conformance with State Education Law, which intends \nthat patients receive the lower cost alternative. \n",
+      "t_start": 6.833
+    },
+    {
+      "name": "read_page",
+      "input": {
+        "doc_id": "ny_medicaid_pharmacy_policy",
+        "page": 15
+      },
+      "duration_s": 0.013,
+      "is_error": false,
+      "pages": [
+        "ny_medicaid_pharmacy_policy:p15"
+      ],
+      "result": "ny_medicaid_pharmacy_policy page 15 (NY Medicaid, binding, 2026-09)\n\nPolicy Guidelines \nNYRx \n \n2026-3                                                     September 2026                                                                                14 \n \n  \nSystem messaging has been developed to help guide the pharmacists to appropriately submit the claim or to refer to \nthe prescriber.  \n  \nFor certain medical/surgical supplies, if the limit on an item is exceeded, prior approval must be requested with \naccompanying documentation as to why the limit needs to be exceeded.  Quantity and frequency limits are available in \nthe OTC and Supply Fee Schedule section of this manual. Questions on medical/surgical supplies may be referred to \nthe Durable Medical Equipment unit at 800-342-3005. The following links have been provided as helpful resources for \ninformation on the PDP, F/Q/D and Step Therapy Programs:  https://newyork.fhsc.com/  and \nhttp://www.health.ny.gov/health_care/medicaid/program/dur/index.htm. Questions on prescription Frequency, \nQuantity and Duration (F/Q/D) Limits may be referred to the NY Medicaid Clinical Call Center at: (877)309-9493. \n \nGeneric Drug Substitution Policy \n \nAll Medicaid pharmacy providers must comply with all State requirements adopted pursuant to NY State drug \nsubstitution laws.  Additionally, because of the Medicaid Mandatory Generic Drug Program, prior authorization must \nbe obtained for most brand-name drugs with an “A-rated” generic equivalent before dispensing.   \n \nPrior Authorization Programs \n \nThe Medicaid program requires prior authorization (PA) for certain drugs under the following programs:   \n• \nPreferred Drug Program (PDP)  \n• \nBrand When Less Than Generic Program (BLTG)  \n• \nDose Optimization Initiative \n• \nClinical Drug Review Program (CDRP)  \n• \nDrug Utilization Review (DUR) Program  \n• \nMandatory Generic Drug Program (MGDP) \n \nPrescribers may need to obtain prior authorizations for certain drugs.  Only prescribers or their authorized agent may \nsubmit a request for prior authorization.  Third party requests are prohibited: prescribers may not contract with or \nassign authority to dispensing pharmacists, manufacturers, or other persons or companies to initiate their PA requests. \nGeneral information on the prescription drug prior authorizations, including the above programs, can be found at the \nfollowing website: https://newyork.fhsc.com.  \n  \nNote: If a prior authorization number has not been obtained by the prescriber and the pharmacist is unable to reach \nthe prescriber, the pharmacist may obtain a prior authorization for up to a 72-hour emergency supply for any drug \nthat requires prior authorization, subject to state laws and Medicaid restrictions. The pharmacist is expected to follow \nup with the prescriber to determine future needs. \n \nPharmacy Program information is available on the Medicaid Pharmacy Program website at: \nhttps://www.health.ny.gov/health_care/medicaid/program/pharmacy.htm.  \n \nElectronic Prior Authorization (ePA) \n \nThe Medicaid program accepts electronic prior authorization (ePA) requests via CoverMyMeds. Medicaid enrolled \npharmacy providers who utilize CoverMyMeds can initiate medication ePA requests on behalf of the member for \ncompletion by the prescriber. CoverMyMeds will direct the case to the prescriber’s queue and prompt them to \ncomplete and submit the ePA to NYRx. CoverMyMeds prompts prescribers to answer required clinical questions that \n",
+      "t_start": 6.857
+    },
+    {
+      "name": "read_page",
+      "input": {
+        "doc_id": "ny_medicaid_pharmacy_policy",
+        "page": 16
+      },
+      "duration_s": 0.005,
+      "is_error": false,
+      "pages": [
+        "ny_medicaid_pharmacy_policy:p16"
+      ],
+      "result": "ny_medicaid_pharmacy_policy page 16 (NY Medicaid, binding, 2026-09)\n\nPolicy Guidelines \nNYRx \n \n2026-3                                                     September 2026                                                                                15 \n \ncan offer real-time approvals if clinical criteria are met. Medicaid enrolled prescribers can electronically submit prior \nauthorization requests, upload supporting documents, and track request status in real time.  Only prescribers or their \nauthorized agent may submit a request for prior authorization. Pharmacists who are not employed by the prescriber’s \noffice are not authorized agents.  \n \nThe CoverMyMeds website is available here: Prior Authorization Forms | CoverMyMeds. \n \nFor additional information visit the NYRx Education and Outreach (E&O) website or contact the E&O call center. The \nE&O Call Center is available by phone at 1-833-967-7310 or by email at NYRxEO@primetherapeutics.com from 8:00 \nAM to 5:00 PM ET, Monday through Friday, excluding holidays. \n \nPAXPRESS \n \nMedicaid enrolled prescribers can initiate prior authorization requests using a web-based application.  PAXpress is a \nweb-based pharmacy PA request/response application accessible from the eMedNY website at \nhttps://www.emedny.org  as well as the NY Medicaid Pharmacy Prior Authorization Program website at:  \nhttps://newyork.fhsc.com/.  \n  \nThe PAXpress website provides a single point of entry for prescriber access to announcements, documents, and quick \nlinks to important program information. A user manual is accessible from the eMedNY website and provides \ninformation for using the PAXpress application:   \nhttps://www.emedny.org/info/paxpress/PAXpress_User_Manual.pdf.  \n \nPharmacists are not authorized to submit for a Prior Authorization except for the 72-hour emergency supply as \nmentioned above. \n \nPharmacists as Immunizers \n \nReimbursement is provided to Medicaid enrolled pharmacies for vaccines and anaphylaxis agents administered by a \ncertified pharmacist or a certified pharmacy intern under the supervision of a certified pharmacist within the scope of \ntheir practice within all Medicaid polices. A link to the latest billing information can be found on the following website \nunder “Pharmacists as Immunizers”: https://www.health.ny.gov/health_care/medicaid/program/phar_immun_fact.htm.   \n \nPharmacists Administering Mental Health or Substance Abuse Treatment Injections at the Pharmacy \n \nRegistered pharmacists, certified by the NYS Education Department, may administer a long-acting injectable (LAI) \napproved by the Food and Drug Administration for the treatment of mental health or substance abuse based on a \npatient specific prescription or order after the initial injection was provided in the practitioner’s office.  \n \nPolicy \n• \nThe certified pharmacist must confirm the initial injection has been given by the practitioner and the \nmember is ready for maintenance therapy.  \n• \nThe member or member’s representative must consent to the administration by a certified pharmacist.  \n• \nThe pharmacy must provide a private area for the administration.  \n• \nThe certified pharmacist must notify the member’s prescriber of the drug administration, and if there were \nadverse reactions or any side effects.  \n \n \n",
+      "t_start": 6.87
+    }
+  ],
+  "cited_evidence": {
+    "ny_medicaid_pdl:p1": "ny_medicaid_pdl (NY Medicaid, binding, 2026-09-14)\nNYRx Preferred Drug Program (PDP) Preferred Drug List > NYRx, the Medicaid Drug Program\n[p 1]\nElectronic prior authorizations are now accepted by NYRx, the Medicaid Drug Program via CoverMyMeds®. Consider this alternative option as an effective and efficient way to request a PA other than by phone or by fax. For more information, contact NYRx Education & Outreach at NYRxEO@primetherapeutics.com\nThe PDP promotes the use of less expensive, equally effective drugs when medically appropriate through a Preferred Drug List (PDL). All drugs currently covered by NYRx, the Medicaid Drug Program, remain available under the PDP and the determination of preferred and non-preferred drugs does not prohibit a prescriber from obtaining any of the medications covered under Medicaid.\nNon-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise.\nPreferred drugs that require PA are indicated by footnote.\nSpecific Clinical, Frequency/Quantity/Duration, Step Therapy criteria are listed in column at the right.\nNote: Not all drugs covered by NYRx are subject to programs included in this document. For a complete list of drugs covered by NYRx see the Medicaid Pharmacy List of Reimbursable Drugs\nThe CDRP is aimed at ensuring specific drugs are utilized in a medically appropriate manner. Under the CDRP, certain drugs require PA because there may be specific safety issues, public health concerns, the potential for fraud and abuse, or the potential for significant overuse and misuse.\nThe DUR helps to ensure that prescriptions for outpatient drugs are appropriate, medically necessary, and not likely to result in adverse medical consequences. This program uses professional medical protocols and computer technology and claims processing to assist in the management of data regarding the prescribing and dispensing of prescriptions. Frequency/Quantity/Duration (F/Q/D) Program and Step Therapy parameters are implemented to ensure clinically appropriate and cost-effective use of these drugs and drug classes.\nPA will not be required for medications used for the treatment of substance use disorder prescribed according to generally accepted national professional guidelines for the treatment of a substance use disorder.\nThe Brand Less Than Generic Program is a cost containment initiative which promotes the use of certain multi-source brand name drugs when the cost of the brand name drug is less expensive than the generic equivalent. This program is in conformance with State Education Law, which intends that patients receive the lower cost alternative.\nFor more information on NYRx, the Medicaid Drug Program: http://www.health.ny.gov/health_care/medicaid/program/pharmacy.htm To contact the NYRx Clinical Call Center please call 1-877-309-9493\nTo download a copy of the Prior Authorization fax form go to https://newyork.fhsc.com/providers/PA_forms.asp\nDisclaimer: Branded generics are included with the single generic name listing; they are not listed as separate agents.\n[p 2]\nNYRx, the Medicaid Drug Program Preferred Drug List\nState law excludes Medicaid coverage of brand name drugs that have a Federal Food and Drug Administration (FDA) approved A-rated generic equivalent unless a PA is obtained. Drugs subject to the Preferred Drug Program (PDP), Clinical Drug Review Program (CDRP), and/or the Brand Less Than Generic (BLTG) Program are not subject to the Mandatory Generic Program.\nDose optimization can reduce prescription costs by reducing the number of pills a patient needs to take each day. The Department has identified drugs to be included in this program, the majority of which have FDA approval for once-a-day dosing, have multiple strengths available in correlating increments at similar costs and are currently being utilized above the recommended dosing frequency.\nThe Cost Optimization Program focuses on new formulations and dosages of older drug products that are disproportionately priced to other strengths of the same drug or similar drugs in the same drug class without any additional clinical benefit. This program can reduce prescription costs by encouraging the use of multiple or half of the lower cost strength, or choosing the lower cost formulation (e.g., tablets versus capsules), or choosing a lower cost therapeutic comparable drug in the same drug class.\n[p 3]\nNYRx, the Medicaid Drug Program Preferred Drug List\n\nny_medicaid_pdl page 1 (NY Medicaid, binding, 2026-09-14)\n\nRevised: September 14, 2026 \nNYRx, the Medicaid Drug Program \nFor more information on NYRx, the Medicaid Drug Program: http://www.health.ny.gov/health_care/medicaid/program/pharmacy.htm \nTo contact the NYRx Clinical Call Center please call 1-877-309-9493 \nTo download a copy of the Prior Authorization fax form go to https://newyork.fhsc.com/providers/PA_forms.asp \nDisclaimer: Branded generics are included with the single generic name listing; they are not listed as separate agents. \n1 \n \nOVERVIEW OF CONTENTS \nElectronic prior authorizations are now accepted by NYRx, the Medicaid Drug Program via CoverMyMeds®. Consider this alternative option as an \neffective and efficient way to request a PA other than by phone or by fax. For more information, contact NYRx Education & Outreach \nat NYRxEO@primetherapeutics.com  \nPreferred Drug Program (PDP) (Pages 4–59) \n \nThe PDP promotes the use of less expensive, equally effective drugs when medically appropriate through a Preferred Drug List (PDL). All drugs \ncurrently covered by NYRx, the Medicaid Drug Program, remain available under the PDP and the determination of preferred and non-preferred \ndrugs does not prohibit a prescriber from obtaining any of the medications covered under Medicaid. \n• \nNon-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. \n• \nPreferred drugs that require PA are indicated by footnote. \n• \nSpecific Clinical, Frequency/Quantity/Duration, Step Therapy criteria are lis",
+    "ny_medicaid_pharmacy_policy:p15": "ny_medicaid_pharmacy_policy (NY Medicaid, binding, 2026-09)\nNYRx Pharmacy Manual Policy Guidelines (Version 2026-3) > 1.0 General Pharmacy Policy > Prior Authorization Programs\n[p 15]\nThe Medicaid program requires prior authorization (PA) for certain drugs under the following programs:\nPreferred Drug Program (PDP)\nBrand When Less Than Generic Program (BLTG)\nDose Optimization Initiative\nClinical Drug Review Program (CDRP)\nDrug Utilization Review (DUR) Program\nMandatory Generic Drug Program (MGDP)\nPrescribers may need to obtain prior authorizations for certain drugs. Only prescribers or their authorized agent may submit a request for prior authorization. Third party requests are prohibited: prescribers may not contract with or assign authority to dispensing pharmacists, manufacturers, or other persons or companies to initiate their PA requests. General information on the prescription drug prior authorizations, including the above programs, can be found at the following website: https://newyork.fhsc.com.\nNote: If a prior authorization number has not been obtained by the prescriber and the pharmacist is unable to reach the prescriber, the pharmacist may obtain a prior authorization for up to a 72-hour emergency supply for any drug that requires prior authorization, subject to state laws and Medicaid restrictions. The pharmacist is expected to follow up with the prescriber to determine future needs.\nPharmacy Program information is available on the Medicaid Pharmacy Program website at: https://www.health.ny.gov/health_care/medicaid/program/pharmacy.htm.\n\nny_medicaid_pharmacy_policy (NY Medicaid, binding, 2026-09)\nNYRx Pharmacy Manual Policy Guidelines (Version 2026-3) > 1.0 General Pharmacy Policy > Electronic Prior Authorization (ePA)\n[p 15]\nThe Medicaid program accepts electronic prior authorization (ePA) requests via CoverMyMeds. Medicaid enrolled pharmacy providers who utilize CoverMyMeds can initiate medication ePA requests on behalf of the member for completion by the prescriber. CoverMyMeds will direct the case to the prescriber's queue and prompt them to complete and submit the ePA to NYRx. CoverMyMeds prompts prescribers to answer required clinical questions that\n[p 16]\nPolicy Guidelines\nNYRx\ncan offer real-time approvals if clinical criteria are met. Medicaid enrolled prescribers can electronically submit prior authorization requests, upload supporting documents, and track request status in real time. Only prescribers or their authorized agent may submit a request for prior authorization. Pharmacists who are not employed by the prescriber's office are not authorized agents.\nThe CoverMyMeds website is available here: Prior Authorization Forms | CoverMyMeds.\nFor additional information visit the NYRx Education and Outreach (E&O) website or contact the E&O call center. The E&O Call Center is available by phone at 1-833-967-7310 or by email at NYRxEO@primetherapeutics.com from 8:00 AM to 5:00 PM ET, Monday through Friday, excluding holidays.\n\nny_medicaid_pharmacy_policy page 15 (NY Medicaid, binding, 2026-09)\n\nPolicy Guidelines \nNYRx \n \n2026-3                                                     September 2026                                                                                14 \n \n  \nSystem messaging has been developed to help guide the pharmacists to appropriately submit the claim or to refer to \nthe prescriber.  \n  \nFor certain medical/surgical supplies, if the limit on an item is exceeded, prior approval must be requested with \naccompanying documentation as to why the limit needs to be exceeded.  Quantity and frequency limits are available in \nthe OTC and Supply Fee Schedule section of this manual. Questions on medical/surgical supplies may be referred to \nthe Durable Medical Equipment unit at 800-342-3005. The following links have been provided as helpful resources for \ninformation on the PDP, F/Q/D and Step Therapy Programs:  https://newyork.fhsc.com/  and \nhttp://www.health.ny.gov/health_care/medicaid/program/dur/index.htm. Questions on prescription Frequency, \nQuantity and Duration (F/Q/D) Limits may be referred to the NY Medicaid Clinical Call Center at: (877)309-9493. \n \nGeneric Drug Substitution Policy \n \nAll Medicaid pharmacy providers must comply with all State requirements adopted pursuant to NY State drug \nsubstitution laws.  Additionally, because of the Medicaid Mandatory Generic Drug Program, prior authorization must \nbe obtained for most brand-name drugs with an “A-rated” generic equivalent before dispensing.   \n \nPrior Authorization Programs \n \nThe Medicaid program requires prior authorization (PA) for certain drugs under the following programs:   \n• \nPreferred Drug Program (PDP)  \n• \nBrand When Less Than Generic Program (BLTG)  \n• \nDose Optimization Initiative \n• \nClinical Drug Review Program (CDRP)  \n• \nDrug Utilization Review (DUR) Program  \n• \nMandatory Generic Drug Program (MGDP) \n \nPrescribers may need to obtain prior authorizations for certain drugs.  Only prescribers or their authorized agent may \nsubmit a request for prior authorization.  Third party requests are prohibited: prescribers may not contract with or \nassign authority to dispensing pharmacists, manufacturers, or other persons or companies to initiate their PA requests. \nGeneral information on the prescription drug prior authorizations, including the above programs, can be found at the \nfollowing website: https://newyork.fhsc.com.  \n  \nNote: If a prior authorization number has not been obtained by the prescriber and the pharmacist is unable to reach \nthe prescriber, the pharmacist may obtain a prior authorization for up to a 72-hour emergency supply for any drug \nthat requires prior authorization, subject to state laws and Medicaid restrictions. The pharmacist is expected to follow \nup with the prescriber to determine future needs. \n \nPharmacy Program information is available on the Medicaid Pharmacy Program website at: \nhttps://www.health.ny.gov/health_care/medicaid/program/pharmacy.htm.  ",
+    "ny_medicaid_pharmacy_policy:p16": "ny_medicaid_pharmacy_policy (NY Medicaid, binding, 2026-09)\nNYRx Pharmacy Manual Policy Guidelines (Version 2026-3) > 1.0 General Pharmacy Policy > Electronic Prior Authorization (ePA)\n[p 15]\nThe Medicaid program accepts electronic prior authorization (ePA) requests via CoverMyMeds. Medicaid enrolled pharmacy providers who utilize CoverMyMeds can initiate medication ePA requests on behalf of the member for completion by the prescriber. CoverMyMeds will direct the case to the prescriber's queue and prompt them to complete and submit the ePA to NYRx. CoverMyMeds prompts prescribers to answer required clinical questions that\n[p 16]\nPolicy Guidelines\nNYRx\ncan offer real-time approvals if clinical criteria are met. Medicaid enrolled prescribers can electronically submit prior authorization requests, upload supporting documents, and track request status in real time. Only prescribers or their authorized agent may submit a request for prior authorization. Pharmacists who are not employed by the prescriber's office are not authorized agents.\nThe CoverMyMeds website is available here: Prior Authorization Forms | CoverMyMeds.\nFor additional information visit the NYRx Education and Outreach (E&O) website or contact the E&O call center. The E&O Call Center is available by phone at 1-833-967-7310 or by email at NYRxEO@primetherapeutics.com from 8:00 AM to 5:00 PM ET, Monday through Friday, excluding holidays.\n\nny_medicaid_pharmacy_policy page 16 (NY Medicaid, binding, 2026-09)\n\nPolicy Guidelines \nNYRx \n \n2026-3                                                     September 2026                                                                                15 \n \ncan offer real-time approvals if clinical criteria are met. Medicaid enrolled prescribers can electronically submit prior \nauthorization requests, upload supporting documents, and track request status in real time.  Only prescribers or their \nauthorized agent may submit a request for prior authorization. Pharmacists who are not employed by the prescriber’s \noffice are not authorized agents.  \n \nThe CoverMyMeds website is available here: Prior Authorization Forms | CoverMyMeds. \n \nFor additional information visit the NYRx Education and Outreach (E&O) website or contact the E&O call center. The \nE&O Call Center is available by phone at 1-833-967-7310 or by email at NYRxEO@primetherapeutics.com from 8:00 \nAM to 5:00 PM ET, Monday through Friday, excluding holidays. \n \nPAXPRESS \n \nMedicaid enrolled prescribers can initiate prior authorization requests using a web-based application.  PAXpress is a \nweb-based pharmacy PA request/response application accessible from the eMedNY website at \nhttps://www.emedny.org  as well as the NY Medicaid Pharmacy Prior Authorization Program website at:  \nhttps://newyork.fhsc.com/.  \n  \nThe PAXpress website provides a single point of entry for prescriber access to announcements, documents, and quick \nlinks to important program information. A user manual is accessible from the eMedNY website and provides \ninformation for using the PAXpress application:   \nhttps://www.emedny.org/info/paxpress/PAXpress_User_Manual.pdf.  \n \nPharmacists are not authorized to submit for a Prior Authorization except for the 72-hour emergency supply as \nmentioned above. \n \nPharmacists as Immunizers \n \nReimbursement is provided to Medicaid enrolled pharmacies for vaccines and anaphylaxis agents administered by a \ncertified pharmacist or a certified pharmacy intern under the supervision of a certified pharmacist within the scope of \ntheir practice within all Medicaid polices. A link to the latest billing information can be found on the following website \nunder “Pharmacists as Immunizers”: https://www.health.ny.gov/health_care/medicaid/program/phar_immun_fact.htm.   \n \nPharmacists Administering Mental Health or Substance Abuse Treatment Injections at the Pharmacy \n \nRegistered pharmacists, certified by the NYS Education Department, may administer a long-acting injectable (LAI) \napproved by the Food and Drug Administration for the treatment of mental health or substance abuse based on a \npatient specific prescription or order after the initial injection was provided in the practitioner’s office.  \n \nPolicy \n• \nThe certified pharmacist must confirm the initial injection has been given by the practitioner and the \nmember is ready for maintenance therapy.  \n• \nThe member or member’s representative must consent to the administration by a certified pharmacist.  \n• \nThe pharmacy must provide a private area for the administration.  \n• \nThe certified pharmacist must notify the member’s prescriber of the drug administration, and if there were \nadverse reactions or any side effects.  \n \n \n"
+  },
+  "cited_evidence_parts": {
+    "ny_medicaid_pdl:p1": [
+      "ny_medicaid_pdl (NY Medicaid, binding, 2026-09-14)\nNYRx Preferred Drug Program (PDP) Preferred Drug List > NYRx, the Medicaid Drug Program\n[p 1]\nElectronic prior authorizations are now accepted by NYRx, the Medicaid Drug Program via CoverMyMeds®. Consider this alternative option as an effective and efficient way to request a PA other than by phone or by fax. For more information, contact NYRx Education & Outreach at NYRxEO@primetherapeutics.com\nThe PDP promotes the use of less expensive, equally effective drugs when medically appropriate through a Preferred Drug List (PDL). All drugs currently covered by NYRx, the Medicaid Drug Program, remain available under the PDP and the determination of preferred and non-preferred drugs does not prohibit a prescriber from obtaining any of the medications covered under Medicaid.\nNon-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise.\nPreferred drugs that require PA are indicated by footnote.\nSpecific Clinical, Frequency/Quantity/Duration, Step Therapy criteria are listed in column at the right.\nNote: Not all drugs covered by NYRx are subject to programs included in this document. For a complete list of drugs covered by NYRx see the Medicaid Pharmacy List of Reimbursable Drugs\nThe CDRP is aimed at ensuring specific drugs are utilized in a medically appropriate manner. Under the CDRP, certain drugs require PA because there may be specific safety issues, public health concerns, the potential for fraud and abuse, or the potential for significant overuse and misuse.\nThe DUR helps to ensure that prescriptions for outpatient drugs are appropriate, medically necessary, and not likely to result in adverse medical consequences. This program uses professional medical protocols and computer technology and claims processing to assist in the management of data regarding the prescribing and dispensing of prescriptions. Frequency/Quantity/Duration (F/Q/D) Program and Step Therapy parameters are implemented to ensure clinically appropriate and cost-effective use of these drugs and drug classes.\nPA will not be required for medications used for the treatment of substance use disorder prescribed according to generally accepted national professional guidelines for the treatment of a substance use disorder.\nThe Brand Less Than Generic Program is a cost containment initiative which promotes the use of certain multi-source brand name drugs when the cost of the brand name drug is less expensive than the generic equivalent. This program is in conformance with State Education Law, which intends that patients receive the lower cost alternative.\nFor more information on NYRx, the Medicaid Drug Program: http://www.health.ny.gov/health_care/medicaid/program/pharmacy.htm To contact the NYRx Clinical Call Center please call 1-877-309-9493\nTo download a copy of the Prior Authorization fax form go to https://newyork.fhsc.com/providers/PA_forms.asp\nDisclaimer: Branded generics are included with the single generic name listing; they are not listed as separate agents.\n[p 2]\nNYRx, the Medicaid Drug Program Preferred Drug List\nState law excludes Medicaid coverage of brand name drugs that have a Federal Food and Drug Administration (FDA) approved A-rated generic equivalent unless a PA is obtained. Drugs subject to the Preferred Drug Program (PDP), Clinical Drug Review Program (CDRP), and/or the Brand Less Than Generic (BLTG) Program are not subject to the Mandatory Generic Program.\nDose optimization can reduce prescription costs by reducing the number of pills a patient needs to take each day. The Department has identified drugs to be included in this program, the majority of which have FDA approval for once-a-day dosing, have multiple strengths available in correlating increments at similar costs and are currently being utilized above the recommended dosing frequency.\nThe Cost Optimization Program focuses on new formulations and dosages of older drug products that are disproportionately priced to other strengths of the same drug or similar drugs in the same drug class without any additional clinical benefit. This program can reduce prescription costs by encouraging the use of multiple or half of the lower cost strength, or choosing the lower cost formulation (e.g., tablets versus capsules), or choosing a lower cost therapeutic comparable drug in the same drug class.\n[p 3]\nNYRx, the Medicaid Drug Program Preferred Drug List",
+      "ny_medicaid_pdl page 1 (NY Medicaid, binding, 2026-09-14)\n\nRevised: September 14, 2026 \nNYRx, the Medicaid Drug Program \nFor more information on NYRx, the Medicaid Drug Program: http://www.health.ny.gov/health_care/medicaid/program/pharmacy.htm \nTo contact the NYRx Clinical Call Center please call 1-877-309-9493 \nTo download a copy of the Prior Authorization fax form go to https://newyork.fhsc.com/providers/PA_forms.asp \nDisclaimer: Branded generics are included with the single generic name listing; they are not listed as separate agents. \n1 \n \nOVERVIEW OF CONTENTS \nElectronic prior authorizations are now accepted by NYRx, the Medicaid Drug Program via CoverMyMeds®. Consider this alternative option as an \neffective and efficient way to request a PA other than by phone or by fax. For more information, contact NYRx Education & Outreach \nat NYRxEO@primetherapeutics.com  \nPreferred Drug Program (PDP) (Pages 4–59) \n \nThe PDP promotes the use of less expensive, equally effective drugs when medically appropriate through a Preferred Drug List (PDL). All drugs \ncurrently covered by NYRx, the Medicaid Drug Program, remain available under the PDP and the determination of preferred and non-preferred \ndrugs does not prohibit a prescriber from obtaining any of the medications covered under Medicaid. \n• \nNon-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. \n• \nPreferred drugs that require PA are indicated by footnote. \n• \nSpecific Clinical, Frequency/Quantity/Duration, Step Therapy criteria are listed in column at the right. \nNote: Not all drugs covered by NYRx are subject to programs included in this document. For a complete list of drugs covered by NYRx see the \nMedicaid Pharmacy List of Reimbursable Drugs \nClinical Drug Review Program (CDRP) (Page 60) \n \nThe CDRP is aimed at ensuring specific drugs are utilized in a medically appropriate manner. Under the CDRP, certain drugs require PA because \nthere may be specific safety issues, public health concerns, the potential for fraud and abuse, or the potential for significant overuse and misuse. \nDrug Utilization Review (DUR) Program (Pages 61–74) \n \nThe DUR helps to ensure that prescriptions for outpatient drugs are appropriate, medically necessary, and not likely to result in adverse medical \nconsequences. This program uses professional medical protocols and computer technology and claims processing to assist in the management of \ndata regarding the prescribing and dispensing of prescriptions. Frequency/Quantity/Duration (F/Q/D) Program and Step Therapy parameters are \nimplemented to ensure clinically appropriate and cost-effective use of these drugs and drug classes. \nMedication Assisted Treatment (MAT) Formulary (Page 75) \n \nPA will not be required for medications used for the treatment of substance use disorder prescribed according to generally accepted national \nprofessional guidelines for the treatment of a substance use disorder. \nBrand Less Than Generic (BLTG) Program (Pages 76–77) \n \nThe Brand Less Than Generic Program is a cost containment initiative which promotes the use of certain multi-source brand name drugs when the \ncost of the brand name drug is less expensive than the generic equivalent. This program is in conformance with State Education Law, which intends \nthat patients receive the lower cost alternative. \n"
+    ],
+    "ny_medicaid_pharmacy_policy:p15": [
+      "ny_medicaid_pharmacy_policy (NY Medicaid, binding, 2026-09)\nNYRx Pharmacy Manual Policy Guidelines (Version 2026-3) > 1.0 General Pharmacy Policy > Prior Authorization Programs\n[p 15]\nThe Medicaid program requires prior authorization (PA) for certain drugs under the following programs:\nPreferred Drug Program (PDP)\nBrand When Less Than Generic Program (BLTG)\nDose Optimization Initiative\nClinical Drug Review Program (CDRP)\nDrug Utilization Review (DUR) Program\nMandatory Generic Drug Program (MGDP)\nPrescribers may need to obtain prior authorizations for certain drugs. Only prescribers or their authorized agent may submit a request for prior authorization. Third party requests are prohibited: prescribers may not contract with or assign authority to dispensing pharmacists, manufacturers, or other persons or companies to initiate their PA requests. General information on the prescription drug prior authorizations, including the above programs, can be found at the following website: https://newyork.fhsc.com.\nNote: If a prior authorization number has not been obtained by the prescriber and the pharmacist is unable to reach the prescriber, the pharmacist may obtain a prior authorization for up to a 72-hour emergency supply for any drug that requires prior authorization, subject to state laws and Medicaid restrictions. The pharmacist is expected to follow up with the prescriber to determine future needs.\nPharmacy Program information is available on the Medicaid Pharmacy Program website at: https://www.health.ny.gov/health_care/medicaid/program/pharmacy.htm.\n\nny_medicaid_pharmacy_policy (NY Medicaid, binding, 2026-09)\nNYRx Pharmacy Manual Policy Guidelines (Version 2026-3) > 1.0 General Pharmacy Policy > Electronic Prior Authorization (ePA)\n[p 15]\nThe Medicaid program accepts electronic prior authorization (ePA) requests via CoverMyMeds. Medicaid enrolled pharmacy providers who utilize CoverMyMeds can initiate medication ePA requests on behalf of the member for completion by the prescriber. CoverMyMeds will direct the case to the prescriber's queue and prompt them to complete and submit the ePA to NYRx. CoverMyMeds prompts prescribers to answer required clinical questions that\n[p 16]\nPolicy Guidelines\nNYRx\ncan offer real-time approvals if clinical criteria are met. Medicaid enrolled prescribers can electronically submit prior authorization requests, upload supporting documents, and track request status in real time. Only prescribers or their authorized agent may submit a request for prior authorization. Pharmacists who are not employed by the prescriber's office are not authorized agents.\nThe CoverMyMeds website is available here: Prior Authorization Forms | CoverMyMeds.\nFor additional information visit the NYRx Education and Outreach (E&O) website or contact the E&O call center. The E&O Call Center is available by phone at 1-833-967-7310 or by email at NYRxEO@primetherapeutics.com from 8:00 AM to 5:00 PM ET, Monday through Friday, excluding holidays.",
+      "ny_medicaid_pharmacy_policy page 15 (NY Medicaid, binding, 2026-09)\n\nPolicy Guidelines \nNYRx \n \n2026-3                                                     September 2026                                                                                14 \n \n  \nSystem messaging has been developed to help guide the pharmacists to appropriately submit the claim or to refer to \nthe prescriber.  \n  \nFor certain medical/surgical supplies, if the limit on an item is exceeded, prior approval must be requested with \naccompanying documentation as to why the limit needs to be exceeded.  Quantity and frequency limits are available in \nthe OTC and Supply Fee Schedule section of this manual. Questions on medical/surgical supplies may be referred to \nthe Durable Medical Equipment unit at 800-342-3005. The following links have been provided as helpful resources for \ninformation on the PDP, F/Q/D and Step Therapy Programs:  https://newyork.fhsc.com/  and \nhttp://www.health.ny.gov/health_care/medicaid/program/dur/index.htm. Questions on prescription Frequency, \nQuantity and Duration (F/Q/D) Limits may be referred to the NY Medicaid Clinical Call Center at: (877)309-9493. \n \nGeneric Drug Substitution Policy \n \nAll Medicaid pharmacy providers must comply with all State requirements adopted pursuant to NY State drug \nsubstitution laws.  Additionally, because of the Medicaid Mandatory Generic Drug Program, prior authorization must \nbe obtained for most brand-name drugs with an “A-rated” generic equivalent before dispensing.   \n \nPrior Authorization Programs \n \nThe Medicaid program requires prior authorization (PA) for certain drugs under the following programs:   \n• \nPreferred Drug Program (PDP)  \n• \nBrand When Less Than Generic Program (BLTG)  \n• \nDose Optimization Initiative \n• \nClinical Drug Review Program (CDRP)  \n• \nDrug Utilization Review (DUR) Program  \n• \nMandatory Generic Drug Program (MGDP) \n \nPrescribers may need to obtain prior authorizations for certain drugs.  Only prescribers or their authorized agent may \nsubmit a request for prior authorization.  Third party requests are prohibited: prescribers may not contract with or \nassign authority to dispensing pharmacists, manufacturers, or other persons or companies to initiate their PA requests. \nGeneral information on the prescription drug prior authorizations, including the above programs, can be found at the \nfollowing website: https://newyork.fhsc.com.  \n  \nNote: If a prior authorization number has not been obtained by the prescriber and the pharmacist is unable to reach \nthe prescriber, the pharmacist may obtain a prior authorization for up to a 72-hour emergency supply for any drug \nthat requires prior authorization, subject to state laws and Medicaid restrictions. The pharmacist is expected to follow \nup with the prescriber to determine future needs. \n \nPharmacy Program information is available on the Medicaid Pharmacy Program website at: \nhttps://www.health.ny.gov/health_care/medicaid/program/pharmacy.htm.  \n \nElectronic Prior Authorization (ePA) \n \nThe Medicaid program accepts electronic prior authorization (ePA) requests via CoverMyMeds. Medicaid enrolled \npharmacy providers who utilize CoverMyMeds can initiate medication ePA requests on behalf of the member for \ncompletion by the prescriber. CoverMyMeds will direct the case to the prescriber’s queue and prompt them to \ncomplete and submit the ePA to NYRx. CoverMyMeds prompts prescribers to answer required clinical questions that \n"
+    ],
+    "ny_medicaid_pharmacy_policy:p16": [
+      "ny_medicaid_pharmacy_policy (NY Medicaid, binding, 2026-09)\nNYRx Pharmacy Manual Policy Guidelines (Version 2026-3) > 1.0 General Pharmacy Policy > Electronic Prior Authorization (ePA)\n[p 15]\nThe Medicaid program accepts electronic prior authorization (ePA) requests via CoverMyMeds. Medicaid enrolled pharmacy providers who utilize CoverMyMeds can initiate medication ePA requests on behalf of the member for completion by the prescriber. CoverMyMeds will direct the case to the prescriber's queue and prompt them to complete and submit the ePA to NYRx. CoverMyMeds prompts prescribers to answer required clinical questions that\n[p 16]\nPolicy Guidelines\nNYRx\ncan offer real-time approvals if clinical criteria are met. Medicaid enrolled prescribers can electronically submit prior authorization requests, upload supporting documents, and track request status in real time. Only prescribers or their authorized agent may submit a request for prior authorization. Pharmacists who are not employed by the prescriber's office are not authorized agents.\nThe CoverMyMeds website is available here: Prior Authorization Forms | CoverMyMeds.\nFor additional information visit the NYRx Education and Outreach (E&O) website or contact the E&O call center. The E&O Call Center is available by phone at 1-833-967-7310 or by email at NYRxEO@primetherapeutics.com from 8:00 AM to 5:00 PM ET, Monday through Friday, excluding holidays.",
+      "ny_medicaid_pharmacy_policy page 16 (NY Medicaid, binding, 2026-09)\n\nPolicy Guidelines \nNYRx \n \n2026-3                                                     September 2026                                                                                15 \n \ncan offer real-time approvals if clinical criteria are met. Medicaid enrolled prescribers can electronically submit prior \nauthorization requests, upload supporting documents, and track request status in real time.  Only prescribers or their \nauthorized agent may submit a request for prior authorization. Pharmacists who are not employed by the prescriber’s \noffice are not authorized agents.  \n \nThe CoverMyMeds website is available here: Prior Authorization Forms | CoverMyMeds. \n \nFor additional information visit the NYRx Education and Outreach (E&O) website or contact the E&O call center. The \nE&O Call Center is available by phone at 1-833-967-7310 or by email at NYRxEO@primetherapeutics.com from 8:00 \nAM to 5:00 PM ET, Monday through Friday, excluding holidays. \n \nPAXPRESS \n \nMedicaid enrolled prescribers can initiate prior authorization requests using a web-based application.  PAXpress is a \nweb-based pharmacy PA request/response application accessible from the eMedNY website at \nhttps://www.emedny.org  as well as the NY Medicaid Pharmacy Prior Authorization Program website at:  \nhttps://newyork.fhsc.com/.  \n  \nThe PAXpress website provides a single point of entry for prescriber access to announcements, documents, and quick \nlinks to important program information. A user manual is accessible from the eMedNY website and provides \ninformation for using the PAXpress application:   \nhttps://www.emedny.org/info/paxpress/PAXpress_User_Manual.pdf.  \n \nPharmacists are not authorized to submit for a Prior Authorization except for the 72-hour emergency supply as \nmentioned above. \n \nPharmacists as Immunizers \n \nReimbursement is provided to Medicaid enrolled pharmacies for vaccines and anaphylaxis agents administered by a \ncertified pharmacist or a certified pharmacy intern under the supervision of a certified pharmacist within the scope of \ntheir practice within all Medicaid polices. A link to the latest billing information can be found on the following website \nunder “Pharmacists as Immunizers”: https://www.health.ny.gov/health_care/medicaid/program/phar_immun_fact.htm.   \n \nPharmacists Administering Mental Health or Substance Abuse Treatment Injections at the Pharmacy \n \nRegistered pharmacists, certified by the NYS Education Department, may administer a long-acting injectable (LAI) \napproved by the Food and Drug Administration for the treatment of mental health or substance abuse based on a \npatient specific prescription or order after the initial injection was provided in the practitioner’s office.  \n \nPolicy \n• \nThe certified pharmacist must confirm the initial injection has been given by the practitioner and the \nmember is ready for maintenance therapy.  \n• \nThe member or member’s representative must consent to the administration by a certified pharmacist.  \n• \nThe pharmacy must provide a private area for the administration.  \n• \nThe certified pharmacist must notify the member’s prescriber of the drug administration, and if there were \nadverse reactions or any side effects.  \n \n \n"
+    ]
+  },
+  "cost_note": "each call priced at its serving role's rates (llm.<role>.prices_per_mtok)",
+  "request_started_utc": "2026-10-18T23:34:38.193384+00:00",
+  "citation_check": {
+    "t_start": 12.13,
+    "duration_s": 0.0
+  }
+}

@@ -1,0 +1,809 @@
+{
+  "question": "Ozempic pen is preferred, but the patient takes Januvia and has commercial insurance. Do we need PA, and who gets billed first?",
+  "request_id": "ca2953b2-3759-4d22-b4a2-4742000da5a0",
+  "status": "answered",
+  "agent_status": "answered",
+  "assumption": "Assuming NY Medicaid/NYRx secondary to the patient’s commercial insurance.",
+  "answer": "Assuming NY Medicaid/NYRx secondary to commercial insurance: **yes, NYRx PA is triggered if Ozempic pen is used while the patient is still on Januvia.** Ozempic® pen is **preferred** on the GLP-1 PDL, and Januvia® is **preferred** in DPP-4s, but both classes list CC: **PA required for concurrent GLP-1 + DPP-4 use**. These statuses are current for today (PDL dated 9/14/2026).\n\n**Billing:** bill the **commercial plan first**. Medicaid is payer of last resort; a NYRx PA does **not** bypass the TPL requirement. Submit NYRx only after commercial adjudication/denial/payment info is available and retained.",
+  "citations": [
+    {
+      "doc_id": "ny_medicaid_pdl",
+      "page": 34,
+      "link": "https://newyork.fhsc.com/downloads/providers/NYRx_PDP_PDL.pdf#page=34",
+      "flag": null,
+      "locator": "ny_medicaid_pdl:p34"
+    },
+    {
+      "doc_id": "ny_medicaid_pdl",
+      "page": 33,
+      "link": "https://newyork.fhsc.com/downloads/providers/NYRx_PDP_PDL.pdf#page=33",
+      "flag": null,
+      "locator": "ny_medicaid_pdl:p33"
+    },
+    {
+      "doc_id": "ny_medicaid_pharmacy_policy",
+      "page": 17,
+      "link": "https://www.emedny.org/ProviderManuals/Pharmacy/PDFS/Pharmacy_Policy_Guidelines.pdf#page=17",
+      "flag": null,
+      "locator": "ny_medicaid_pharmacy_policy:p17"
+    },
+    {
+      "doc_id": "ny_medicaid_pharmacy_policy",
+      "page": 18,
+      "link": "https://www.emedny.org/ProviderManuals/Pharmacy/PDFS/Pharmacy_Policy_Guidelines.pdf#page=18",
+      "flag": null,
+      "locator": "ny_medicaid_pharmacy_policy:p18"
+    }
+  ],
+  "conflicts_noted": [],
+  "flags": [],
+  "needs_review": false,
+  "words": {
+    "displayed": 94,
+    "rendered": 94
+  },
+  "answered_by": "gpt-5.5-2026-04-23",
+  "provider": "openai",
+  "model": "gpt-5.5-2026-04-23",
+  "fallback_used": false,
+  "timing_s": {
+    "total": 14.706,
+    "search": 3.246,
+    "read_page": 0,
+    "list_documents": 0,
+    "lookups": 0.011,
+    "model_calls": [
+      3.883,
+      7.565
+    ]
+  },
+  "lookups": 4,
+  "tokens": {
+    "input": 12471,
+    "output": 713,
+    "cache_read": 3072,
+    "cache_write": 0
+  },
+  "cost_usd": 0.085281,
+  "pages_seen": [
+    "ny_medicaid_pdl:p1",
+    "ny_medicaid_pdl:p18",
+    "ny_medicaid_pdl:p2",
+    "ny_medicaid_pdl:p3",
+    "ny_medicaid_pdl:p33",
+    "ny_medicaid_pdl:p34",
+    "ny_medicaid_pdl:p71",
+    "ny_medicaid_pdl:p77",
+    "ny_medicaid_pdl:p78",
+    "ny_medicaid_pharmacy_policy:p15",
+    "ny_medicaid_pharmacy_policy:p17",
+    "ny_medicaid_pharmacy_policy:p18",
+    "ny_medicaid_pharmacy_policy:p19",
+    "ny_medicaid_pharmacy_policy:p20",
+    "ny_medicaid_pharmacy_policy:p32",
+    "ny_medicaid_pharmacy_policy:p33",
+    "ny_medicaid_pharmacy_policy:p43"
+  ],
+  "trace_id": null,
+  "started_at": "2026-10-18T16:29:26+00:00",
+  "config": {
+    "primary": "gpt-5.5",
+    "fallback": "claude-sonnet-5-5",
+    "effort": "medium",
+    "search": {
+      "mode": "hybrid",
+      "rrf_k": 60,
+      "fusion_depth": 100,
+      "return_parents": true,
+      "rerank": {
+        "model": "BAAI/bge-reranker-base",
+        "depth": 20,
+        "timeout_s": 8
+      }
+    },
+    "max_tool_calls": 6,
+    "deadline_s": 25,
+    "search_k": 8
+  },
+  "structured_lookups": true,
+  "context": {},
+  "model_answer": "Assuming NY Medicaid/NYRx secondary to commercial insurance: **yes, NYRx PA is triggered if Ozempic pen is used while the patient is still on Januvia.** Ozempic® pen is **preferred** on the GLP-1 PDL, and Januvia® is **preferred** in DPP-4s, but both classes list CC: **PA required for concurrent GLP-1 + DPP-4 use**. These statuses are current for today (PDL dated 9/14/2026).\n\n**Billing:** bill the **commercial plan first**. Medicaid is payer of last resort; a NYRx PA does **not** bypass the TPL requirement. Submit NYRx only after commercial adjudication/denial/payment info is available and retained.",
+  "model_citations": [
+    {
+      "doc_id": "ny_medicaid_pdl",
+      "page": 34,
+      "link": "https://newyork.fhsc.com/downloads/providers/NYRx_PDP_PDL.pdf#page=34",
+      "flag": null,
+      "locator": "ny_medicaid_pdl:p34"
+    },
+    {
+      "doc_id": "ny_medicaid_pdl",
+      "page": 33,
+      "link": "https://newyork.fhsc.com/downloads/providers/NYRx_PDP_PDL.pdf#page=33",
+      "flag": null,
+      "locator": "ny_medicaid_pdl:p33"
+    },
+    {
+      "doc_id": "ny_medicaid_pharmacy_policy",
+      "page": 17,
+      "link": "https://www.emedny.org/ProviderManuals/Pharmacy/PDFS/Pharmacy_Policy_Guidelines.pdf#page=17",
+      "flag": null,
+      "locator": "ny_medicaid_pharmacy_policy:p17"
+    },
+    {
+      "doc_id": "ny_medicaid_pharmacy_policy",
+      "page": 18,
+      "link": "https://www.emedny.org/ProviderManuals/Pharmacy/PDFS/Pharmacy_Policy_Guidelines.pdf#page=18",
+      "flag": null,
+      "locator": "ny_medicaid_pharmacy_policy:p18"
+    }
+  ],
+  "model_calls": [
+    {
+      "t_start": 0.0,
+      "duration_s": 3.883,
+      "requested_model": "gpt-5.5",
+      "served_model": "gpt-5.5-2026-04-23",
+      "provider": "openai",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 319,
+        "output": 202,
+        "cache_read": 1536,
+        "cache_write": 0
+      },
+      "cost_usd": 0.008423,
+      "response_id": "resp_0e889d5e222a6e0a016ad4f3d7a46087d287b0737125051b5f",
+      "input_messages": [
+        {
+          "role": "user",
+          "text": "Today's date: 2026-10-18\n\nQuestion: Ozempic pen is preferred, but the patient takes Januvia and has commercial insurance. Do we need PA, and who gets billed first?"
+        }
+      ],
+      "output": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "call_2UHVEuw6N0UbaWTlHjdU3VbA",
+            "name": "lookup_ny_medicaid_drug",
+            "arguments": {
+              "drug": "Ozempic"
+            }
+          },
+          {
+            "id": "call_lE4VZC5HRoiCWBFw6Yyzb5rk",
+            "name": "lookup_ny_medicaid_drug",
+            "arguments": {
+              "drug": "Januvia"
+            }
+          },
+          {
+            "id": "call_6gX4EzHmORSeAOhLehEh1tHN",
+            "name": "search_documents",
+            "arguments": {
+              "program": "NY Medicaid",
+              "query": "commercial insurance bill primary NYRx third party liability other insurance coordination of benefits",
+              "k": 5
+            }
+          },
+          {
+            "id": "call_eNS8ZcfopXR7ihJOzkdZOjmp",
+            "name": "search_documents",
+            "arguments": {
+              "program": "NY Medicaid",
+              "query": "Ozempic Januvia Preferred Drug List GLP-1 DPP-4 step therapy prior authorization",
+              "k": 5
+            }
+          }
+        ]
+      }
+    },
+    {
+      "t_start": 7.14,
+      "duration_s": 7.565,
+      "requested_model": "gpt-5.5",
+      "served_model": "gpt-5.5-2026-04-23",
+      "provider": "openai",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 12152,
+        "output": 511,
+        "cache_read": 1536,
+        "cache_write": 0
+      },
+      "cost_usd": 0.076858,
+      "response_id": "resp_0e889d5e222a6e0a016ad4f3dec79087d2824038e31fa1ffd6",
+      "input_messages": [
+        {
+          "role": "tool",
+          "tool_results": [
+            {
+              "call_id": "call_2UHVEuw6N0UbaWTlHjdU3VbA",
+              "is_error": false,
+              "content": "{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"Ozempic\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"multiple_matches\", \"classes\": [{\"drug_class\": \"Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes\", \"section\": \"VI. Endocrine and Metabolic Agents\", \"class_flags\": {\"CC\": \"Clinical Criteria: see the class's Coverage Parameters\"}, \"coverage_parameters\": \"CLINICAL CRITERIA (CC)\\nConfirm diagnosis of FDA-approved or compendia-supported\\nindication and Medicaid covered indication\\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently\", \"coverage_pages\": [34], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p34#row-7\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Ozempic® pen\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"name plus strength or dosage form\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-12\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Ozempic® tablets\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"name plus strength or dosage form\"}]}], \"note\": \"Several rows match. List the relevant ones, or state which one you assumed.\"}"
+            },
+            {
+              "call_id": "call_lE4VZC5HRoiCWBFw6Yyzb5rk",
+              "is_error": false,
+              "content": "{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"Januvia\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"multiple_matches\", \"classes\": [{\"drug_class\": \"Dipeptidyl Peptidase-4 (DPP-4) Inhibitors\", \"section\": \"VI. Endocrine and Metabolic Agents\", \"class_flags\": {\"CC\": \"Clinical Criteria: see the class's Coverage Parameters\"}, \"coverage_parameters\": \"CLINICAL CRITERIA (CC)\\nPA required for patients utilizing a DPP-4 and GLP-1 concurrently\\nDOSE OPTIMIZATION (DO)\\nSee Dose Optimization Chart for affected strengths\", \"coverage_pages\": [33], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p33#row-14\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 33}, \"drug_name\": \"Januvia®\", \"listed_as\": \"preferred\", \"flags\": {\"DO\": \"Dose Optimization Program (PDL pages 80–84)\", \"BLTG\": \"Brand Less Than Generic Program (PDL pages 77–78)\"}, \"matched_on\": \"exact name\"}, {\"row_id\": \"ny_medicaid_pdl#p33#row-25\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 33}, \"drug_name\": \"sitagliptin (gen Januvia® )\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"generic of Januvia (stated in the PDL as '(gen ...)')\"}]}], \"note\": \"Several rows match (1 by exact name). List the relevant ones, or state which one you assumed.\"}"
+            },
+            {
+              "call_id": "call_6gX4EzHmORSeAOhLehEh1tHN",
+              "is_error": false,
+              "content": "[{\"doc_id\": \"ny_medicaid_pdl\", \"page\": 18, \"program\": \"NY Medicaid\", \"authority\": \"binding\", \"date\": \"2026-09-14\", \"text\": \"NYRx Preferred Drug Program (PDP) Preferred Drug List > IV. Central Nervous System > Antipsychotics – Second Generation (CC, ST)\\n[p 18]\\nPreferred drugs: aripiprazole tablet (DO); asenapine (gen Saphris® ); clozapine; lurasidone (gen Latuda® ); olanzapine tablet (DO); olanzapine ODT (DO); paliperidone ER (DO); quetiapine (F/Q/D); quetiapine ER (F/Q/D, DO); risperidone tablet, solution; Vraylar® (DO); ziprasidone capsule\\nNon-preferred drugs: Abilify® tablet (DO); aripiprazole solution; aripiprazole ODT; Caplyta™; clozapine ODT; Clozaril®; Cobenfy™ capsule, starter pack; Fanapt®; Geodon®; Invega® (DO); Latuda® (DO); Lybalvi®; Nuplazid®; olanzapine / fluoxetine; Opipza™; Rexulti® (DO); Risperdal®; risperidone ODT; Saphris®; Secuado®; Seroquel® (F/Q/D); Seroquel XR® (DO, F/Q/D); Versacloz®; Zyprexa® (DO); Zyprexa® Zydis\\nCoverage parameters: DOSE OPTIMIZATION (DO)\\nSee Dose Optimization Chart for affected drugs and strengths\\nCLINICAL CRITERIA (CC)\\nConfirm diagnosis of FDA-approved or compendia-supported\\nindication and Medicaid covered indication\\nClinical editing will allow patients currently stabilized on a non-\\npreferred agent to continue to receive that agent without PA\\nPA is required when an oral SGA is utilized above the highest MDD\\naccording to FDA labeling.\\nPA is required for patients less than 21 years of age when there is\\nconcurrent use of 2 or more different oral antipsychotics for greater\\nthan 90 days .\\nPA is required for patients 21 years of age or older when 3 or more\\ndifferent oral second-generation antipsychotics are used for more than\\n180 days.\\nPA is required for initial prescription for patients younger than the\\ndrug-specific minimum age as indicated below:\\naripiprazole (Abilify® , Opipza™) 6 years\\nasenapine (Saphris® ) 10 years\\nasenapine (Secuado® ) 18 years\\nbrexpiprazole (Rexulti® ) 13 years\\ncariprazine (Vraylar® ) 10 years\\nclozapine (Clozaril® , Versacloz® ) 12 years\\niloperidone (Fanapt® ) 18 years\\nlumateperone (Caplyta™) 18 years\\nlurasidone HCl (Latuda® ) 10 years\\nolanzapine (Zyprexa® ) 10 years\\nolanzapine / fluoxetine (Symbyax®) 10 years\\nolanzapine / samidorphan (Lybalvi® ) 18 years\\npaliperidone ER (Invega® ) 12 years\\naripiprazole (Abilify® , Opipza™)\\n6 years\\nasenapine (Saphris® )\\n10 years\\nasenapine (Secuado® )\\n18 years\\nbrexpiprazole (Rexulti® )\\n13 years\\ncariprazine (Vraylar® )\\n10 years\\nclozapine (Clozaril® , Versacloz® )\\n12 years\\niloperidone (Fanapt® )\\n18 years\\nlumateperone (Caplyta™)\\n18 years\\nlurasidone HCl (Latuda® )\\n10 years\\nolanzapine (Zyprexa® )\\n10 years\\nolanzapine / fluoxetine (Symbyax®)\\n10 years\\nolanzapine / samidorphan (Lybalvi® )\\n18 years\\npaliperidone ER (Invega® )\\n12 years\\npimavanserin (Nuplazid® ) 18 years\\nquetiapine fum. (Seroquel® , Seroquel XR® ) 10 years\\nrisperidone (Risperdal® ) 5 years\\nxanomeline-trospium (Cobenfy™ ) 18 years\\nziprasidone HCl (Geodon® ) 10 years\\nRequire confirmation of diagnosis that supports the concurrent use of\\na Second Generation Antipsychotic and a CNS Stimulant for patients\\n< 18 years of age\\nSTEP THERAPY (ST)\\nFor all Second Generation Antipsychotics used in the treatment of\\nMajor Depressive Disorder in the absence of other psychiatric\\ncomorbidities, trial with at least two different antidepressant agents is\\nrequired\\nolanzapine / fluoxetine: When prescribing for the treatment of major\\ndepressive disorder (MDD) in the absence of other psychiatric\\ncomorbidities, trial with at least one different antidepressant agent is\\nrequired\\nVraylar® : for indications other than MDD, trial of a preferred generic is\\nrequired\\nFREQUENCY/QUANTITY/DURATION (F/Q/D)\\nquetiapine/quetiapine ER (Seroquel® /Seroquel XR® ): Minimum 50\\nmg/day\\nquetiapine (Seroquel® ): Maximum 3 units/day, 90 units/30 days\\nquetiapine ER (Seroquel XR® ): 50mg tablets: maximum 2 units/day,\\n60 units/30 days\\npimavanserin "
+            },
+            {
+              "call_id": "call_eNS8ZcfopXR7ihJOzkdZOjmp",
+              "is_error": false,
+              "content": "[{\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34, \"program\": \"NY Medicaid\", \"authority\": \"binding\", \"date\": \"2026-09-14\", \"text\": \"NYRx Preferred Drug Program (PDP) Preferred Drug List > VI. Endocrine and Metabolic Agents > Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes (CC)\\n[p 34]\\nPreferred drugs: exenatide; Ozempic® pen; Trulicity®; Victoza® (BLTG)\\nNon-preferred drugs: liraglutide (gen Victoza® ); Mounjaro®; Ozempic® tablets; Rybelsus®; Soliqua®; Xultophy®\\nCoverage parameters: CLINICAL CRITERIA (CC)\\nConfirm diagnosis of FDA-approved or compendia-supported\\nindication and Medicaid covered indication\\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently\", \"pages\": [34], \"section\": \"VI. Endocrine and Metabolic Agents > Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes (CC)\"}, {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 33, \"program\": \"NY Medicaid\", \"authority\": \"binding\", \"date\": \"2026-09-14\", \"text\": \"NYRx Preferred Drug Program (PDP) Preferred Drug List > VI. Endocrine and Metabolic Agents > Dipeptidyl Peptidase-4 (DPP-4) Inhibitors (CC)\\n[p 33]\\nPreferred drugs: alogliptin; alogliptin/metformin; Glyxambi®; Janumet® (BLTG); Janumet® XR; Januvia® (DO, BLTG); Jentadueto®; Jentadueto® XR; Kazano®; Nesina®; Tradjenta®\\nNon-preferred drugs: alogliptin/pioglitazone (gen Oseni® ); Brynovin®; dapagliflozin/saxagliptin (gen Qtern® ); saxagliptin (gen Onglyza® ); saxagliptin/metformin; sitagliptin (gen Januvia® ); sitagliptin (gen Zituvio™ ); sitagliptin/metformin (gen Janumet® ); sitagliptin/metformin (gen Zituvimet); sitagliptin/metformin ER (gen Zituvimet XR); Steglujan®; Zituvimet; Zituvimet XR; Zituvio™\\nCoverage parameters: CLINICAL CRITERIA (CC)\\nPA required for patients utilizing a DPP-4 and GLP-1 concurrently\\nDOSE OPTIMIZATION (DO)\\nSee Dose Optimization Chart for affected strengths\", \"pages\": [33], \"section\": \"VI. Endocrine and Metabolic Agents > Dipeptidyl Peptidase-4 (DPP-4) Inhibitors (CC)\"}, {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1, \"program\": \"NY Medicaid\", \"authority\": \"binding\", \"date\": \"2026-09-14\", \"text\": \"NYRx Preferred Drug Program (PDP) Preferred Drug List > NYRx, the Medicaid Drug Program\\n[p 1]\\nElectronic prior authorizations are now accepted by NYRx, the Medicaid Drug Program via CoverMyMeds®. Consider this alternative option as an effective and efficient way to request a PA other than by phone or by fax. For more information, contact NYRx Education & Outreach at NYRxEO@primetherapeutics.com\\nThe PDP promotes the use of less expensive, equally effective drugs when medically appropriate through a Preferred Drug List (PDL). All drugs currently covered by NYRx, the Medicaid Drug Program, remain available under the PDP and the determination of preferred and non-preferred drugs does not prohibit a prescriber from obtaining any of the medications covered under Medicaid.\\nNon-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise.\\nPreferred drugs that require PA are indicated by footnote.\\nSpecific Clinical, Frequency/Quantity/Duration, Step Therapy criteria are listed in column at the right.\\nNote: Not all drugs covered by NYRx are subject to programs included in this document. For a complete list of drugs covered by NYRx see the Medicaid Pharmacy List of Reimbursable Drugs\\nThe CDRP is aimed at ensuring specific drugs are utilized in a medically appropriate manner. Under the CDRP, certain drugs require PA because there may be specific safety issues, public health concerns, the potential for fraud and abuse, or the potential for significant overuse and misuse.\\nThe DUR helps to ensure that prescriptions for outpatient drugs are appropriate, medically necessary, and not likely to result in adverse medical consequences. This program uses professional medical protocols and computer technology and claims processing to assist in the management of data regarding the prescribing and dispensing of prescriptions. Frequency/Quantity/Duration"
+            }
+          ]
+        }
+      ],
+      "output": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "call_bHMoOXXMR8cqS20GAhWQ5UCQ",
+            "name": "submit_answer",
+            "arguments": {
+              "status": "answered",
+              "assumption": "Assuming NY Medicaid/NYRx secondary to the patient’s commercial insurance.",
+              "answer": "Assuming NY Medicaid/NYRx secondary to commercial insurance: **yes, NYRx PA is triggered if Ozempic pen is used while the patient is still on Januvia.** Ozempic® pen is **preferred** on the GLP-1 PDL, and Januvia® is **preferred** in DPP-4s, but both classes list CC: **PA required for concurrent GLP-1 + DPP-4 use**. These statuses are current for today (PDL dated 9/14/2026).\n\n**Billing:** bill the **commercial plan first**. Medicaid is payer of last resort; a NYRx PA does **not** bypass the TPL requirement. Submit NYRx only after commercial adjudication/denial/payment info is available and retained.",
+              "citations": [
+                {
+                  "doc_id": "ny_medicaid_pdl",
+                  "page": 34,
+                  "row": null
+                },
+                {
+                  "doc_id": "ny_medicaid_pdl",
+                  "page": 33,
+                  "row": null
+                },
+                {
+                  "doc_id": "ny_medicaid_pharmacy_policy",
+                  "page": 17,
+                  "row": null
+                },
+                {
+                  "doc_id": "ny_medicaid_pharmacy_policy",
+                  "page": 18,
+                  "row": null
+                }
+              ],
+              "conflicts_noted": []
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "lookup_ny_medicaid_drug",
+      "input": {
+        "drug": "Ozempic"
+      },
+      "duration_s": 0.007,
+      "is_error": false,
+      "pages": [
+        "ny_medicaid_pdl:p1",
+        "ny_medicaid_pdl:p34"
+      ],
+      "result": "{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"Ozempic\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"multiple_matches\", \"classes\": [{\"drug_class\": \"Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes\", \"section\": \"VI. Endocrine and Metabolic Agents\", \"class_flags\": {\"CC\": \"Clinical Criteria: see the class's Coverage Parameters\"}, \"coverage_parameters\": \"CLINICAL CRITERIA (CC)\\nConfirm diagnosis of FDA-approved or compendia-supported\\nindication and Medicaid covered indication\\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently\", \"coverage_pages\": [34], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p34#row-7\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Ozempic® pen\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"name plus strength or dosage form\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-12\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Ozempic® tablets\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"name plus strength or dosage form\"}]}], \"note\": \"Several rows match. List the relevant ones, or state which one you assumed.\"}",
+      "lookup": {
+        "result": "multiple_matches",
+        "rows": 2
+      },
+      "t_start": 3.883
+    },
+    {
+      "name": "lookup_ny_medicaid_drug",
+      "input": {
+        "drug": "Januvia"
+      },
+      "duration_s": 0.004,
+      "is_error": false,
+      "pages": [
+        "ny_medicaid_pdl:p1",
+        "ny_medicaid_pdl:p33"
+      ],
+      "result": "{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"Januvia\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"multiple_matches\", \"classes\": [{\"drug_class\": \"Dipeptidyl Peptidase-4 (DPP-4) Inhibitors\", \"section\": \"VI. Endocrine and Metabolic Agents\", \"class_flags\": {\"CC\": \"Clinical Criteria: see the class's Coverage Parameters\"}, \"coverage_parameters\": \"CLINICAL CRITERIA (CC)\\nPA required for patients utilizing a DPP-4 and GLP-1 concurrently\\nDOSE OPTIMIZATION (DO)\\nSee Dose Optimization Chart for affected strengths\", \"coverage_pages\": [33], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p33#row-14\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 33}, \"drug_name\": \"Januvia®\", \"listed_as\": \"preferred\", \"flags\": {\"DO\": \"Dose Optimization Program (PDL pages 80–84)\", \"BLTG\": \"Brand Less Than Generic Program (PDL pages 77–78)\"}, \"matched_on\": \"exact name\"}, {\"row_id\": \"ny_medicaid_pdl#p33#row-25\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 33}, \"drug_name\": \"sitagliptin (gen Januvia® )\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"generic of Januvia (stated in the PDL as '(gen ...)')\"}]}], \"note\": \"Several rows match (1 by exact name). List the relevant ones, or state which one you assumed.\"}",
+      "lookup": {
+        "result": "multiple_matches",
+        "rows": 2
+      },
+      "t_start": 3.89
+    },
+    {
+      "name": "search_documents",
+      "input": {
+        "program": "NY Medicaid",
+        "query": "commercial insurance bill primary NYRx third party liability other insurance coordination of benefits",
+        "k": 5
+      },
+      "duration_s": 2.141,
+      "is_error": false,
+      "pages": [
+        "ny_medicaid_pdl:p1",
+        "ny_medicaid_pdl:p18",
+        "ny_medicaid_pdl:p2",
+        "ny_medicaid_pdl:p3",
+        "ny_medicaid_pdl:p33",
+        "ny_medicaid_pdl:p34",
+        "ny_medicaid_pdl:p71",
+        "ny_medicaid_pharmacy_policy:p17",
+        "ny_medicaid_pharmacy_policy:p18",
+        "ny_medicaid_pharmacy_policy:p19",
+        "ny_medicaid_pharmacy_policy:p20",
+        "ny_medicaid_pharmacy_policy:p32",
+        "ny_medicaid_pharmacy_policy:p33",
+        "ny_medicaid_pharmacy_policy:p43"
+      ],
+      "result": "[{\"doc_id\": \"ny_medicaid_pdl\", \"page\": 18, \"program\": \"NY Medicaid\", \"authority\": \"binding\", \"date\": \"2026-09-14\", \"text\": \"NYRx Preferred Drug Program (PDP) Preferred Drug List > IV. Central Nervous System > Antipsychotics – Second Generation (CC, ST)\\n[p 18]\\nPreferred drugs: aripiprazole tablet (DO); asenapine (gen Saphris® ); clozapine; lurasidone (gen Latuda® ); olanzapine tablet (DO); olanzapine ODT (DO); paliperidone ER (DO); quetiapine (F/Q/D); quetiapine ER (F/Q/D, DO); risperidone tablet, solution; Vraylar® (DO); ziprasidone capsule\\nNon-preferred drugs: Abilify® tablet (DO); aripiprazole solution; aripiprazole ODT; Caplyta™; clozapine ODT; Clozaril®; Cobenfy™ capsule, starter pack; Fanapt®; Geodon®; Invega® (DO); Latuda® (DO); Lybalvi®; Nuplazid®; olanzapine / fluoxetine; Opipza™; Rexulti® (DO); Risperdal®; risperidone ODT; Saphris®; Secuado®; Seroquel® (F/Q/D); Seroquel XR® (DO, F/Q/D); Versacloz®; Zyprexa® (DO); Zyprexa® Zydis\\nCoverage parameters: DOSE OPTIMIZATION (DO)\\nSee Dose Optimization Chart for affected drugs and strengths\\nCLINICAL CRITERIA (CC)\\nConfirm diagnosis of FDA-approved or compendia-supported\\nindication and Medicaid covered indication\\nClinical editing will allow patients currently stabilized on a non-\\npreferred agent to continue to receive that agent without PA\\nPA is required when an oral SGA is utilized above the highest MDD\\naccording to FDA labeling.\\nPA is required for patients less than 21 years of age when there is\\nconcurrent use of 2 or more different oral antipsychotics for greater\\nthan 90 days .\\nPA is required for patients 21 years of age or older when 3 or more\\ndifferent oral second-generation antipsychotics are used for more than\\n180 days.\\nPA is required for initial prescription for patients younger than the\\ndrug-specific minimum age as indicated below:\\naripiprazole (Abilify® , Opipza™) 6 years\\nasenapine (Saphris® ) 10 years\\nasenapine (Secuado® ) 18 years\\nbrexpiprazole (Rexulti® ) 13 years\\ncariprazine (Vraylar® ) 10 years\\nclozapine (Clozaril® , Versacloz® ) 12 years\\niloperidone (Fanapt® ) 18 years\\nlumateperone (Caplyta™) 18 years\\nlurasidone HCl (Latuda® ) 10 years\\nolanzapine (Zyprexa® ) 10 years\\nolanzapine / fluoxetine (Symbyax®) 10 years\\nolanzapine / samidorphan (Lybalvi® ) 18 years\\npaliperidone ER (Invega® ) 12 years\\naripiprazole (Abilify® , Opipza™)\\n6 years\\nasenapine (Saphris® )\\n10 years\\nasenapine (Secuado® )\\n18 years\\nbrexpiprazole (Rexulti® )\\n13 years\\ncariprazine (Vraylar® )\\n10 years\\nclozapine (Clozaril® , Versacloz® )\\n12 years\\niloperidone (Fanapt® )\\n18 years\\nlumateperone (Caplyta™)\\n18 years\\nlurasidone HCl (Latuda® )\\n10 years\\nolanzapine (Zyprexa® )\\n10 years\\nolanzapine / fluoxetine (Symbyax®)\\n10 years\\nolanzapine / samidorphan (Lybalvi® )\\n18 years\\npaliperidone ER (Invega® )\\n12 years\\npimavanserin (Nuplazid® ) 18 years\\nquetiapine fum. (Seroquel® , Seroquel XR® ) 10 years\\nrisperidone (Risperdal® ) 5 years\\nxanomeline-trospium (Cobenfy™ ) 18 years\\nziprasidone HCl (Geodon® ) 10 years\\nRequire confirmation of diagnosis that supports the concurrent use of\\na Second Generation Antipsychotic and a CNS Stimulant for patients\\n< 18 years of age\\nSTEP THERAPY (ST)\\nFor all Second Generation Antipsychotics used in the treatment of\\nMajor Depressive Disorder in the absence of other psychiatric\\ncomorbidities, trial with at least two different antidepressant agents is\\nrequired\\nolanzapine / fluoxetine: When prescribing for the treatment of major\\ndepressive disorder (MDD) in the absence of other psychiatric\\ncomorbidities, trial with at least one different antidepressant agent is\\nrequired\\nVraylar® : for indications other than MDD, trial of a preferred generic is\\nrequired\\nFREQUENCY/QUANTITY/DURATION (F/Q/D)\\nquetiapine/quetiapine ER (Seroquel® /Seroquel XR® ): Minimum 50\\nmg/day\\nquetiapine (Seroquel® ): Maximum 3 units/day, 90 units/30 days\\nquetiapine ER (Seroquel XR® ): 50mg tablets: maximum 2 units/day,\\n60 units/30 days\\npimavanserin ",
+      "search": {
+        "original_query": "Ozempic pen is preferred, but the patient takes Januvia and has commercial insurance. Do we need PA, and who gets billed first?",
+        "agent_query": "commercial insurance bill primary NYRx third party liability other insurance coordination of benefits",
+        "executed": [
+          {
+            "source": "original",
+            "query": "Ozempic pen is preferred, but the patient takes Januvia and has commercial insurance. Do we need PA, and who gets billed first?",
+            "program": "NY Medicaid",
+            "k": 5,
+            "seconds": 2.14,
+            "cached": false,
+            "results": 5
+          },
+          {
+            "source": "agent",
+            "query": "commercial insurance bill primary NYRx third party liability other insurance coordination of benefits",
+            "program": "NY Medicaid",
+            "k": 5,
+            "seconds": 1.194,
+            "cached": false,
+            "results": 5
+          }
+        ],
+        "duplicates_merged": 0,
+        "returned": 10,
+        "from_both": 0,
+        "from_original_only": 5,
+        "from_agent_only": 5,
+        "provenance": [
+          {
+            "unit": "ny_medicaid_pdl:s35",
+            "found_by": {
+              "original": 1
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s24",
+            "found_by": {
+              "agent": 1
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s62",
+            "found_by": {
+              "original": 2
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s25",
+            "found_by": {
+              "agent": 2
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s1",
+            "found_by": {
+              "original": 3
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s26",
+            "found_by": {
+              "agent": 3
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s60",
+            "found_by": {
+              "original": 4
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s48",
+            "found_by": {
+              "agent": 4
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s127",
+            "found_by": {
+              "original": 5
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s63",
+            "found_by": {
+              "agent": 5
+            }
+          }
+        ],
+        "hits": [
+          {
+            "unit": "ny_medicaid_pdl:s35",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              18
+            ],
+            "ranks": {
+              "original": 1
+            },
+            "scores": {
+              "original": 0.0329
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s24",
+            "doc_id": "ny_medicaid_pharmacy_policy",
+            "pages": [
+              17,
+              18
+            ],
+            "ranks": {
+              "agent": 1
+            },
+            "scores": {
+              "agent": 0.8585
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s62",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              34
+            ],
+            "ranks": {
+              "original": 2
+            },
+            "scores": {
+              "original": 0.0274
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s25",
+            "doc_id": "ny_medicaid_pharmacy_policy",
+            "pages": [
+              18
+            ],
+            "ranks": {
+              "agent": 2
+            },
+            "scores": {
+              "agent": 0.0773
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s1",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              1,
+              2,
+              3
+            ],
+            "ranks": {
+              "original": 3
+            },
+            "scores": {
+              "original": 0.0244
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s26",
+            "doc_id": "ny_medicaid_pharmacy_policy",
+            "pages": [
+              18,
+              19,
+              20
+            ],
+            "ranks": {
+              "agent": 3
+            },
+            "scores": {
+              "agent": 0.0096
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s60",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              33
+            ],
+            "ranks": {
+              "original": 4
+            },
+            "scores": {
+              "original": 0.0167
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s48",
+            "doc_id": "ny_medicaid_pharmacy_policy",
+            "pages": [
+              32,
+              33
+            ],
+            "ranks": {
+              "agent": 4
+            },
+            "scores": {
+              "agent": 0.0092
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s127",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              71
+            ],
+            "ranks": {
+              "original": 5
+            },
+            "scores": {
+              "original": 0.013
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s63",
+            "doc_id": "ny_medicaid_pharmacy_policy",
+            "pages": [
+              43
+            ],
+            "ranks": {
+              "agent": 5
+            },
+            "scores": {
+              "agent": 0.0064
+            }
+          }
+        ]
+      },
+      "t_start": 3.894
+    },
+    {
+      "name": "search_documents",
+      "input": {
+        "program": "NY Medicaid",
+        "query": "Ozempic Januvia Preferred Drug List GLP-1 DPP-4 step therapy prior authorization",
+        "k": 5
+      },
+      "duration_s": 1.105,
+      "is_error": false,
+      "pages": [
+        "ny_medicaid_pdl:p1",
+        "ny_medicaid_pdl:p18",
+        "ny_medicaid_pdl:p2",
+        "ny_medicaid_pdl:p3",
+        "ny_medicaid_pdl:p33",
+        "ny_medicaid_pdl:p34",
+        "ny_medicaid_pdl:p71",
+        "ny_medicaid_pdl:p77",
+        "ny_medicaid_pdl:p78",
+        "ny_medicaid_pharmacy_policy:p15"
+      ],
+      "result": "[{\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34, \"program\": \"NY Medicaid\", \"authority\": \"binding\", \"date\": \"2026-09-14\", \"text\": \"NYRx Preferred Drug Program (PDP) Preferred Drug List > VI. Endocrine and Metabolic Agents > Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes (CC)\\n[p 34]\\nPreferred drugs: exenatide; Ozempic® pen; Trulicity®; Victoza® (BLTG)\\nNon-preferred drugs: liraglutide (gen Victoza® ); Mounjaro®; Ozempic® tablets; Rybelsus®; Soliqua®; Xultophy®\\nCoverage parameters: CLINICAL CRITERIA (CC)\\nConfirm diagnosis of FDA-approved or compendia-supported\\nindication and Medicaid covered indication\\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently\", \"pages\": [34], \"section\": \"VI. Endocrine and Metabolic Agents > Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes (CC)\"}, {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 33, \"program\": \"NY Medicaid\", \"authority\": \"binding\", \"date\": \"2026-09-14\", \"text\": \"NYRx Preferred Drug Program (PDP) Preferred Drug List > VI. Endocrine and Metabolic Agents > Dipeptidyl Peptidase-4 (DPP-4) Inhibitors (CC)\\n[p 33]\\nPreferred drugs: alogliptin; alogliptin/metformin; Glyxambi®; Janumet® (BLTG); Janumet® XR; Januvia® (DO, BLTG); Jentadueto®; Jentadueto® XR; Kazano®; Nesina®; Tradjenta®\\nNon-preferred drugs: alogliptin/pioglitazone (gen Oseni® ); Brynovin®; dapagliflozin/saxagliptin (gen Qtern® ); saxagliptin (gen Onglyza® ); saxagliptin/metformin; sitagliptin (gen Januvia® ); sitagliptin (gen Zituvio™ ); sitagliptin/metformin (gen Janumet® ); sitagliptin/metformin (gen Zituvimet); sitagliptin/metformin ER (gen Zituvimet XR); Steglujan®; Zituvimet; Zituvimet XR; Zituvio™\\nCoverage parameters: CLINICAL CRITERIA (CC)\\nPA required for patients utilizing a DPP-4 and GLP-1 concurrently\\nDOSE OPTIMIZATION (DO)\\nSee Dose Optimization Chart for affected strengths\", \"pages\": [33], \"section\": \"VI. Endocrine and Metabolic Agents > Dipeptidyl Peptidase-4 (DPP-4) Inhibitors (CC)\"}, {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1, \"program\": \"NY Medicaid\", \"authority\": \"binding\", \"date\": \"2026-09-14\", \"text\": \"NYRx Preferred Drug Program (PDP) Preferred Drug List > NYRx, the Medicaid Drug Program\\n[p 1]\\nElectronic prior authorizations are now accepted by NYRx, the Medicaid Drug Program via CoverMyMeds®. Consider this alternative option as an effective and efficient way to request a PA other than by phone or by fax. For more information, contact NYRx Education & Outreach at NYRxEO@primetherapeutics.com\\nThe PDP promotes the use of less expensive, equally effective drugs when medically appropriate through a Preferred Drug List (PDL). All drugs currently covered by NYRx, the Medicaid Drug Program, remain available under the PDP and the determination of preferred and non-preferred drugs does not prohibit a prescriber from obtaining any of the medications covered under Medicaid.\\nNon-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise.\\nPreferred drugs that require PA are indicated by footnote.\\nSpecific Clinical, Frequency/Quantity/Duration, Step Therapy criteria are listed in column at the right.\\nNote: Not all drugs covered by NYRx are subject to programs included in this document. For a complete list of drugs covered by NYRx see the Medicaid Pharmacy List of Reimbursable Drugs\\nThe CDRP is aimed at ensuring specific drugs are utilized in a medically appropriate manner. Under the CDRP, certain drugs require PA because there may be specific safety issues, public health concerns, the potential for fraud and abuse, or the potential for significant overuse and misuse.\\nThe DUR helps to ensure that prescriptions for outpatient drugs are appropriate, medically necessary, and not likely to result in adverse medical consequences. This program uses professional medical protocols and computer technology and claims processing to assist in the management of data regarding the prescribing and dispensing of prescriptions. Frequency/Quantity/Duration",
+      "search": {
+        "original_query": "Ozempic pen is preferred, but the patient takes Januvia and has commercial insurance. Do we need PA, and who gets billed first?",
+        "agent_query": "Ozempic Januvia Preferred Drug List GLP-1 DPP-4 step therapy prior authorization",
+        "executed": [
+          {
+            "source": "original",
+            "query": "Ozempic pen is preferred, but the patient takes Januvia and has commercial insurance. Do we need PA, and who gets billed first?",
+            "program": "NY Medicaid",
+            "k": 5,
+            "seconds": 0.0,
+            "cached": true,
+            "results": 5
+          },
+          {
+            "source": "agent",
+            "query": "Ozempic Januvia Preferred Drug List GLP-1 DPP-4 step therapy prior authorization",
+            "program": "NY Medicaid",
+            "k": 5,
+            "seconds": 1.104,
+            "cached": false,
+            "results": 5
+          }
+        ],
+        "duplicates_merged": 3,
+        "returned": 7,
+        "from_both": 3,
+        "from_original_only": 2,
+        "from_agent_only": 2,
+        "provenance": [
+          {
+            "unit": "ny_medicaid_pdl:s62",
+            "found_by": {
+              "original": 2,
+              "agent": 2
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s60",
+            "found_by": {
+              "original": 4,
+              "agent": 1
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s1",
+            "found_by": {
+              "original": 3,
+              "agent": 3
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s35",
+            "found_by": {
+              "original": 1
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s134",
+            "found_by": {
+              "agent": 4
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s127",
+            "found_by": {
+              "original": 5
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s18",
+            "found_by": {
+              "agent": 5
+            }
+          }
+        ],
+        "hits": [
+          {
+            "unit": "ny_medicaid_pdl:s62",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              34
+            ],
+            "ranks": {
+              "original": 2,
+              "agent": 2
+            },
+            "scores": {
+              "original": 0.0274,
+              "agent": 0.6818
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s60",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              33
+            ],
+            "ranks": {
+              "original": 4,
+              "agent": 1
+            },
+            "scores": {
+              "original": 0.0167,
+              "agent": 0.8014
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s1",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              1,
+              2,
+              3
+            ],
+            "ranks": {
+              "original": 3,
+              "agent": 3
+            },
+            "scores": {
+              "original": 0.0244,
+              "agent": 0.2442
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s35",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              18
+            ],
+            "ranks": {
+              "original": 1
+            },
+            "scores": {
+              "original": 0.0329
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s134",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              77,
+              78
+            ],
+            "ranks": {
+              "agent": 4
+            },
+            "scores": {
+              "agent": 0.1094
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s127",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              71
+            ],
+            "ranks": {
+              "original": 5
+            },
+            "scores": {
+              "original": 0.013
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s18",
+            "doc_id": "ny_medicaid_pharmacy_policy",
+            "pages": [
+              15
+            ],
+            "ranks": {
+              "agent": 5
+            },
+            "scores": {
+              "agent": 0.0379
+            }
+          }
+        ]
+      },
+      "t_start": 6.035
+    }
+  ],
+  "cited_evidence": {
+    "ny_medicaid_pdl:p34": "{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"Ozempic\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"multiple_matches\", \"classes\": [{\"drug_class\": \"Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes\", \"section\": \"VI. Endocrine and Metabolic Agents\", \"class_flags\": {\"CC\": \"Clinical Criteria: see the class's Coverage Parameters\"}, \"coverage_parameters\": \"CLINICAL CRITERIA (CC)\\nConfirm diagnosis of FDA-approved or compendia-supported\\nindication and Medicaid covered indication\\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently\", \"coverage_pages\": [34], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p34#row-7\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Ozempic® pen\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"name plus strength or dosage form\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-12\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Ozempic® tablets\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"name plus strength or dosage form\"}]}], \"note\": \"Several rows match. List the relevant ones, or state which one you assumed.\"}\n\nny_medicaid_pdl (NY Medicaid, binding, 2026-09-14)\nNYRx Preferred Drug Program (PDP) Preferred Drug List > VI. Endocrine and Metabolic Agents > Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes (CC)\n[p 34]\nPreferred drugs: exenatide; Ozempic® pen; Trulicity®; Victoza® (BLTG)\nNon-preferred drugs: liraglutide (gen Victoza® ); Mounjaro®; Ozempic® tablets; Rybelsus®; Soliqua®; Xultophy®\nCoverage parameters: CLINICAL CRITERIA (CC)\nConfirm diagnosis of FDA-approved or compendia-supported\nindication and Medicaid covered indication\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently",
+    "ny_medicaid_pdl:p33": "{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"Januvia\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"multiple_matches\", \"classes\": [{\"drug_class\": \"Dipeptidyl Peptidase-4 (DPP-4) Inhibitors\", \"section\": \"VI. Endocrine and Metabolic Agents\", \"class_flags\": {\"CC\": \"Clinical Criteria: see the class's Coverage Parameters\"}, \"coverage_parameters\": \"CLINICAL CRITERIA (CC)\\nPA required for patients utilizing a DPP-4 and GLP-1 concurrently\\nDOSE OPTIMIZATION (DO)\\nSee Dose Optimization Chart for affected strengths\", \"coverage_pages\": [33], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p33#row-14\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 33}, \"drug_name\": \"Januvia®\", \"listed_as\": \"preferred\", \"flags\": {\"DO\": \"Dose Optimization Program (PDL pages 80–84)\", \"BLTG\": \"Brand Less Than Generic Program (PDL pages 77–78)\"}, \"matched_on\": \"exact name\"}, {\"row_id\": \"ny_medicaid_pdl#p33#row-25\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 33}, \"drug_name\": \"sitagliptin (gen Januvia® )\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"generic of Januvia (stated in the PDL as '(gen ...)')\"}]}], \"note\": \"Several rows match (1 by exact name). List the relevant ones, or state which one you assumed.\"}\n\nny_medicaid_pdl (NY Medicaid, binding, 2026-09-14)\nNYRx Preferred Drug Program (PDP) Preferred Drug List > VI. Endocrine and Metabolic Agents > Dipeptidyl Peptidase-4 (DPP-4) Inhibitors (CC)\n[p 33]\nPreferred drugs: alogliptin; alogliptin/metformin; Glyxambi®; Janumet® (BLTG); Janumet® XR; Januvia® (DO, BLTG); Jentadueto®; Jentadueto® XR; Kazano®; Nesina®; Tradjenta®\nNon-preferred drugs: alogliptin/pioglitazone (gen Oseni® ); Brynovin®; dapagliflozin/saxagliptin (gen Qtern® ); saxagliptin (gen Onglyza® ); saxagliptin/metformin; sitagliptin (gen Januvia® ); sitagliptin (gen Zituvio™ ); sitagliptin/metformin (gen Janumet® ); sitagliptin/metformin (gen Zituvimet); sitagliptin/metformin ER (gen Zituvimet XR); Steglujan®; Zituvimet; Zituvimet XR; Zituvio™\nCoverage parameters: CLINICAL CRITERIA (CC)\nPA required for patients utilizing a DPP-4 and GLP-1 concurrently\nDOSE OPTIMIZATION (DO)\nSee Dose Optimization Chart for affected strengths",
+    "ny_medicaid_pharmacy_policy:p17": "ny_medicaid_pharmacy_policy (NY Medicaid, binding, 2026-09)\nNYRx Pharmacy Manual Policy Guidelines (Version 2026-3) > 1.0 General Pharmacy Policy > Third Party Liability\n[p 17]\nFederal regulations require that all available resources be used before Medicaid considers payment. Medicaid regulations at 18NYCRR §540.6(e) require a provider to pursue any available other coverage prior to submitting a claim to Medicaid. If there is a responsible third party who should be paying for the Medicaid member's health benefits as primary payor, that responsible third party must pay first. Failure to obtain prior authorization does not overcome the responsibility of the primary payor.\nClaims for members with other coverage will be denied at point of service with National Council for Prescription Drug Programs (NCPDP) response code/message \"717- Client Has Other Insurance\". Through coordination of benefits, Medicaid will pay the patient responsibility for a correctly submitted Medicaid coverable claim or will pay up to the Medicaid allowed amount for a drug in a class specifically excluded from being covered under the Third-Party Liability Plan (TPL) including Medicare.\nClaims submitted to NYS Medicaid with a \"no reimbursement\" from any TPL must correctly be submitted. Pharmacy providers who receive a \"no TPL reimbursement\" must ensure that the claim was adjudicated within the TPL's claim process requirements. This includes submitting the claim under the appropriate coverage benefit, medical or pharmacy, such as with the Healthcare Common Procedure Coding System (HCPCS) or by the National Drug Code (NDC). Additionally, pharmacies not contracted with the member's TPL Plan may need to attempt an override with the plan, or enroll with the plan, or advise the member and prescriber of the need to change dispensing to a network pharmacy.\n[p 18]\nPolicy Guidelines\nNYRx\nIt is the responsibility of the prescriber to prescribe, according to the plan's formulary, and to pursue any claim issues such as, but not limited to:\nNecessary prior authorizations or appeals, or\nPrescription alternatives (for a non-formulary or non-preferred drug) or\nNecessary changes (quantity or day supply, etc.) or\nSelecting an in-network pharmacy that is agreeable to the member, or\nBilling the appropriate benefit (medical vs. pharmacy or HCPCS vs NDC).\nPharmacies have a corresponding responsibility to submit claims to a Medicaid member's other coverage per the plan's requirements before submitting the claim to Medicaid. Pharmacies that have difficulty in billing a plan should advise the prescriber and member of potential delays and options for resolution. If the claim issues are resolved, the pharmacy may then resubmit the claim to Medicaid after the claim is properly adjudicated with the TPL. Submitting a TPL covered claim that bypasses the TPL's responsibility of payment is considered fraudulent billing and is subject to audit. Reminder: Providers must retain evidence that the responsible TPL denied the claim, other TPL responses where applicable, and payment information was retained, for a minimum of six years following the date of Medicaid payment.\nNOTE:\nThe Medicaid payment must be accepted as payment in full.\nObtaining a clinical PA from the Prime Therapeutics State Government Solutions Call Center does not negate the requirement to obtain payment from responsible third-party payor.",
+    "ny_medicaid_pharmacy_policy:p18": "ny_medicaid_pharmacy_policy (NY Medicaid, binding, 2026-09)\nNYRx Pharmacy Manual Policy Guidelines (Version 2026-3) > 1.0 General Pharmacy Policy > Third Party Liability\n[p 17]\nFederal regulations require that all available resources be used before Medicaid considers payment. Medicaid regulations at 18NYCRR §540.6(e) require a provider to pursue any available other coverage prior to submitting a claim to Medicaid. If there is a responsible third party who should be paying for the Medicaid member's health benefits as primary payor, that responsible third party must pay first. Failure to obtain prior authorization does not overcome the responsibility of the primary payor.\nClaims for members with other coverage will be denied at point of service with National Council for Prescription Drug Programs (NCPDP) response code/message \"717- Client Has Other Insurance\". Through coordination of benefits, Medicaid will pay the patient responsibility for a correctly submitted Medicaid coverable claim or will pay up to the Medicaid allowed amount for a drug in a class specifically excluded from being covered under the Third-Party Liability Plan (TPL) including Medicare.\nClaims submitted to NYS Medicaid with a \"no reimbursement\" from any TPL must correctly be submitted. Pharmacy providers who receive a \"no TPL reimbursement\" must ensure that the claim was adjudicated within the TPL's claim process requirements. This includes submitting the claim under the appropriate coverage benefit, medical or pharmacy, such as with the Healthcare Common Procedure Coding System (HCPCS) or by the National Drug Code (NDC). Additionally, pharmacies not contracted with the member's TPL Plan may need to attempt an override with the plan, or enroll with the plan, or advise the member and prescriber of the need to change dispensing to a network pharmacy.\n[p 18]\nPolicy Guidelines\nNYRx\nIt is the responsibility of the prescriber to prescribe, according to the plan's formulary, and to pursue any claim issues such as, but not limited to:\nNecessary prior authorizations or appeals, or\nPrescription alternatives (for a non-formulary or non-preferred drug) or\nNecessary changes (quantity or day supply, etc.) or\nSelecting an in-network pharmacy that is agreeable to the member, or\nBilling the appropriate benefit (medical vs. pharmacy or HCPCS vs NDC).\nPharmacies have a corresponding responsibility to submit claims to a Medicaid member's other coverage per the plan's requirements before submitting the claim to Medicaid. Pharmacies that have difficulty in billing a plan should advise the prescriber and member of potential delays and options for resolution. If the claim issues are resolved, the pharmacy may then resubmit the claim to Medicaid after the claim is properly adjudicated with the TPL. Submitting a TPL covered claim that bypasses the TPL's responsibility of payment is considered fraudulent billing and is subject to audit. Reminder: Providers must retain evidence that the responsible TPL denied the claim, other TPL responses where applicable, and payment information was retained, for a minimum of six years following the date of Medicaid payment.\nNOTE:\nThe Medicaid payment must be accepted as payment in full.\nObtaining a clinical PA from the Prime Therapeutics State Government Solutions Call Center does not negate the requirement to obtain payment from responsible third-party payor.\n\nny_medicaid_pharmacy_policy (NY Medicaid, binding, 2026-09)\nNYRx Pharmacy Manual Policy Guidelines (Version 2026-3) > 1.0 General Pharmacy Policy > Workers’ Compensation and Coordination of Benefits\n[p 18]\nIf a member has a work-related injury, for which they have an open Workers' Compensation case, Workers' compensation coverage must be utilized prior to billing the NYRx Medicaid Pharmacy Program.\nIf the drug claim is NOT related to a member's Workers' Compensation case, such as a maintenance medication for an unrelated chronic condition, NYRx may be billed as the primary payer with an Eligibility Clarification Code of \"2\" in field 309-C9. Medicaid is the payer of last resort, and providers must ensure all other responsible payers are included on the claim, if applicable.\nThe Workers' Compensation Board can be accessed here: https://www.wcb.ny.gov/content/main/hcpp/hcpp.jsp.\n\nny_medicaid_pharmacy_policy (NY Medicaid, binding, 2026-09)\nNYRx Pharmacy Manual Policy Guidelines (Version 2026-3) > 1.0 General Pharmacy Policy > Medicare/Medicaid Reimbursement\n[p 18]\nPharmacies enrolled in the Medicaid Program as a billing provider are required to demonstrate participation in the Medicare Program. Medicaid pharmacy enrollment information can be accessed online at: https://www.emedny.org/info/ProviderEnrollment/index.aspx.\nAnalogous to TPL in the section above, Medicare benefits must also be maximized prior to billing Medicaid. Services covered by both Medicare and Medicaid must first be billed to Medicare (See below for Parts A, B, D).\nIt is the pharmacy's responsibility:\nTo bill the appropriate Medicare benefit.\nTo notify both the member and the prescriber of any needed authorizations or changes the Medicare Plan requires.\n[p 19]\nPolicy Guidelines\nNYRx\nPharmacy providers can bill Medicaid only after payment information is received from Medicare. Pharmacy providers may not circumvent Medicare billing procedures for a Medicare covered member and must bill by the Healthcare Common Procedure Coding System (HCPCS) or by the National Drug Code (NDC) as the Medicare Plan requires. For audit purposes, payment information must be retained for a minimum of six years following the date of payment.\nMedicare Part A\nMedicare Part A covers inpatient care, including critical-access hospitals, and skilled nursing facilities (not custodial or long-term care). It also covers hospice care and some home health care. Members must meet certain conditions to receive these benefits.\nMedicare Part B\nMedicare Part B covers doctors' services, outpatient care and some other medical servic"
+  },
+  "cited_evidence_parts": {
+    "ny_medicaid_pdl:p34": [
+      "{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"Ozempic\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"multiple_matches\", \"classes\": [{\"drug_class\": \"Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes\", \"section\": \"VI. Endocrine and Metabolic Agents\", \"class_flags\": {\"CC\": \"Clinical Criteria: see the class's Coverage Parameters\"}, \"coverage_parameters\": \"CLINICAL CRITERIA (CC)\\nConfirm diagnosis of FDA-approved or compendia-supported\\nindication and Medicaid covered indication\\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently\", \"coverage_pages\": [34], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p34#row-7\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Ozempic® pen\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"name plus strength or dosage form\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-12\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Ozempic® tablets\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"name plus strength or dosage form\"}]}], \"note\": \"Several rows match. List the relevant ones, or state which one you assumed.\"}",
+      "ny_medicaid_pdl (NY Medicaid, binding, 2026-09-14)\nNYRx Preferred Drug Program (PDP) Preferred Drug List > VI. Endocrine and Metabolic Agents > Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes (CC)\n[p 34]\nPreferred drugs: exenatide; Ozempic® pen; Trulicity®; Victoza® (BLTG)\nNon-preferred drugs: liraglutide (gen Victoza® ); Mounjaro®; Ozempic® tablets; Rybelsus®; Soliqua®; Xultophy®\nCoverage parameters: CLINICAL CRITERIA (CC)\nConfirm diagnosis of FDA-approved or compendia-supported\nindication and Medicaid covered indication\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently"
+    ],
+    "ny_medicaid_pdl:p33": [
+      "{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"Januvia\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"multiple_matches\", \"classes\": [{\"drug_class\": \"Dipeptidyl Peptidase-4 (DPP-4) Inhibitors\", \"section\": \"VI. Endocrine and Metabolic Agents\", \"class_flags\": {\"CC\": \"Clinical Criteria: see the class's Coverage Parameters\"}, \"coverage_parameters\": \"CLINICAL CRITERIA (CC)\\nPA required for patients utilizing a DPP-4 and GLP-1 concurrently\\nDOSE OPTIMIZATION (DO)\\nSee Dose Optimization Chart for affected strengths\", \"coverage_pages\": [33], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p33#row-14\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 33}, \"drug_name\": \"Januvia®\", \"listed_as\": \"preferred\", \"flags\": {\"DO\": \"Dose Optimization Program (PDL pages 80–84)\", \"BLTG\": \"Brand Less Than Generic Program (PDL pages 77–78)\"}, \"matched_on\": \"exact name\"}, {\"row_id\": \"ny_medicaid_pdl#p33#row-25\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 33}, \"drug_name\": \"sitagliptin (gen Januvia® )\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"generic of Januvia (stated in the PDL as '(gen ...)')\"}]}], \"note\": \"Several rows match (1 by exact name). List the relevant ones, or state which one you assumed.\"}",
+      "ny_medicaid_pdl (NY Medicaid, binding, 2026-09-14)\nNYRx Preferred Drug Program (PDP) Preferred Drug List > VI. Endocrine and Metabolic Agents > Dipeptidyl Peptidase-4 (DPP-4) Inhibitors (CC)\n[p 33]\nPreferred drugs: alogliptin; alogliptin/metformin; Glyxambi®; Janumet® (BLTG); Janumet® XR; Januvia® (DO, BLTG); Jentadueto®; Jentadueto® XR; Kazano®; Nesina®; Tradjenta®\nNon-preferred drugs: alogliptin/pioglitazone (gen Oseni® ); Brynovin®; dapagliflozin/saxagliptin (gen Qtern® ); saxagliptin (gen Onglyza® ); saxagliptin/metformin; sitagliptin (gen Januvia® ); sitagliptin (gen Zituvio™ ); sitagliptin/metformin (gen Janumet® ); sitagliptin/metformin (gen Zituvimet); sitagliptin/metformin ER (gen Zituvimet XR); Steglujan®; Zituvimet; Zituvimet XR; Zituvio™\nCoverage parameters: CLINICAL CRITERIA (CC)\nPA required for patients utilizing a DPP-4 and GLP-1 concurrently\nDOSE OPTIMIZATION (DO)\nSee Dose Optimization Chart for affected strengths"
+    ],
+    "ny_medicaid_pharmacy_policy:p17": [
+      "ny_medicaid_pharmacy_policy (NY Medicaid, binding, 2026-09)\nNYRx Pharmacy Manual Policy Guidelines (Version 2026-3) > 1.0 General Pharmacy Policy > Third Party Liability\n[p 17]\nFederal regulations require that all available resources be used before Medicaid considers payment. Medicaid regulations at 18NYCRR §540.6(e) require a provider to pursue any available other coverage prior to submitting a claim to Medicaid. If there is a responsible third party who should be paying for the Medicaid member's health benefits as primary payor, that responsible third party must pay first. Failure to obtain prior authorization does not overcome the responsibility of the primary payor.\nClaims for members with other coverage will be denied at point of service with National Council for Prescription Drug Programs (NCPDP) response code/message \"717- Client Has Other Insurance\". Through coordination of benefits, Medicaid will pay the patient responsibility for a correctly submitted Medicaid coverable claim or will pay up to the Medicaid allowed amount for a drug in a class specifically excluded from being covered under the Third-Party Liability Plan (TPL) including Medicare.\nClaims submitted to NYS Medicaid with a \"no reimbursement\" from any TPL must correctly be submitted. Pharmacy providers who receive a \"no TPL reimbursement\" must ensure that the claim was adjudicated within the TPL's claim process requirements. This includes submitting the claim under the appropriate coverage benefit, medical or pharmacy, such as with the Healthcare Common Procedure Coding System (HCPCS) or by the National Drug Code (NDC). Additionally, pharmacies not contracted with the member's TPL Plan may need to attempt an override with the plan, or enroll with the plan, or advise the member and prescriber of the need to change dispensing to a network pharmacy.\n[p 18]\nPolicy Guidelines\nNYRx\nIt is the responsibility of the prescriber to prescribe, according to the plan's formulary, and to pursue any claim issues such as, but not limited to:\nNecessary prior authorizations or appeals, or\nPrescription alternatives (for a non-formulary or non-preferred drug) or\nNecessary changes (quantity or day supply, etc.) or\nSelecting an in-network pharmacy that is agreeable to the member, or\nBilling the appropriate benefit (medical vs. pharmacy or HCPCS vs NDC).\nPharmacies have a corresponding responsibility to submit claims to a Medicaid member's other coverage per the plan's requirements before submitting the claim to Medicaid. Pharmacies that have difficulty in billing a plan should advise the prescriber and member of potential delays and options for resolution. If the claim issues are resolved, the pharmacy may then resubmit the claim to Medicaid after the claim is properly adjudicated with the TPL. Submitting a TPL covered claim that bypasses the TPL's responsibility of payment is considered fraudulent billing and is subject to audit. Reminder: Providers must retain evidence that the responsible TPL denied the claim, other TPL responses where applicable, and payment information was retained, for a minimum of six years following the date of Medicaid payment.\nNOTE:\nThe Medicaid payment must be accepted as payment in full.\nObtaining a clinical PA from the Prime Therapeutics State Government Solutions Call Center does not negate the requirement to obtain payment from responsible third-party payor."
+    ],
+    "ny_medicaid_pharmacy_policy:p18": [
+      "ny_medicaid_pharmacy_policy (NY Medicaid, binding, 2026-09)\nNYRx Pharmacy Manual Policy Guidelines (Version 2026-3) > 1.0 General Pharmacy Policy > Third Party Liability\n[p 17]\nFederal regulations require that all available resources be used before Medicaid considers payment. Medicaid regulations at 18NYCRR §540.6(e) require a provider to pursue any available other coverage prior to submitting a claim to Medicaid. If there is a responsible third party who should be paying for the Medicaid member's health benefits as primary payor, that responsible third party must pay first. Failure to obtain prior authorization does not overcome the responsibility of the primary payor.\nClaims for members with other coverage will be denied at point of service with National Council for Prescription Drug Programs (NCPDP) response code/message \"717- Client Has Other Insurance\". Through coordination of benefits, Medicaid will pay the patient responsibility for a correctly submitted Medicaid coverable claim or will pay up to the Medicaid allowed amount for a drug in a class specifically excluded from being covered under the Third-Party Liability Plan (TPL) including Medicare.\nClaims submitted to NYS Medicaid with a \"no reimbursement\" from any TPL must correctly be submitted. Pharmacy providers who receive a \"no TPL reimbursement\" must ensure that the claim was adjudicated within the TPL's claim process requirements. This includes submitting the claim under the appropriate coverage benefit, medical or pharmacy, such as with the Healthcare Common Procedure Coding System (HCPCS) or by the National Drug Code (NDC). Additionally, pharmacies not contracted with the member's TPL Plan may need to attempt an override with the plan, or enroll with the plan, or advise the member and prescriber of the need to change dispensing to a network pharmacy.\n[p 18]\nPolicy Guidelines\nNYRx\nIt is the responsibility of the prescriber to prescribe, according to the plan's formulary, and to pursue any claim issues such as, but not limited to:\nNecessary prior authorizations or appeals, or\nPrescription alternatives (for a non-formulary or non-preferred drug) or\nNecessary changes (quantity or day supply, etc.) or\nSelecting an in-network pharmacy that is agreeable to the member, or\nBilling the appropriate benefit (medical vs. pharmacy or HCPCS vs NDC).\nPharmacies have a corresponding responsibility to submit claims to a Medicaid member's other coverage per the plan's requirements before submitting the claim to Medicaid. Pharmacies that have difficulty in billing a plan should advise the prescriber and member of potential delays and options for resolution. If the claim issues are resolved, the pharmacy may then resubmit the claim to Medicaid after the claim is properly adjudicated with the TPL. Submitting a TPL covered claim that bypasses the TPL's responsibility of payment is considered fraudulent billing and is subject to audit. Reminder: Providers must retain evidence that the responsible TPL denied the claim, other TPL responses where applicable, and payment information was retained, for a minimum of six years following the date of Medicaid payment.\nNOTE:\nThe Medicaid payment must be accepted as payment in full.\nObtaining a clinical PA from the Prime Therapeutics State Government Solutions Call Center does not negate the requirement to obtain payment from responsible third-party payor.\n\nny_medicaid_pharmacy_policy (NY Medicaid, binding, 2026-09)\nNYRx Pharmacy Manual Policy Guidelines (Version 2026-3) > 1.0 General Pharmacy Policy > Workers’ Compensation and Coordination of Benefits\n[p 18]\nIf a member has a work-related injury, for which they have an open Workers' Compensation case, Workers' compensation coverage must be utilized prior to billing the NYRx Medicaid Pharmacy Program.\nIf the drug claim is NOT related to a member's Workers' Compensation case, such as a maintenance medication for an unrelated chronic condition, NYRx may be billed as the primary payer with an Eligibility Clarification Code of \"2\" in field 309-C9. Medicaid is the payer of last resort, and providers must ensure all other responsible payers are included on the claim, if applicable.\nThe Workers' Compensation Board can be accessed here: https://www.wcb.ny.gov/content/main/hcpp/hcpp.jsp.\n\nny_medicaid_pharmacy_policy (NY Medicaid, binding, 2026-09)\nNYRx Pharmacy Manual Policy Guidelines (Version 2026-3) > 1.0 General Pharmacy Policy > Medicare/Medicaid Reimbursement\n[p 18]\nPharmacies enrolled in the Medicaid Program as a billing provider are required to demonstrate participation in the Medicare Program. Medicaid pharmacy enrollment information can be accessed online at: https://www.emedny.org/info/ProviderEnrollment/index.aspx.\nAnalogous to TPL in the section above, Medicare benefits must also be maximized prior to billing Medicaid. Services covered by both Medicare and Medicaid must first be billed to Medicare (See below for Parts A, B, D).\nIt is the pharmacy's responsibility:\nTo bill the appropriate Medicare benefit.\nTo notify both the member and the prescriber of any needed authorizations or changes the Medicare Plan requires.\n[p 19]\nPolicy Guidelines\nNYRx\nPharmacy providers can bill Medicaid only after payment information is received from Medicare. Pharmacy providers may not circumvent Medicare billing procedures for a Medicare covered member and must bill by the Healthcare Common Procedure Coding System (HCPCS) or by the National Drug Code (NDC) as the Medicare Plan requires. For audit purposes, payment information must be retained for a minimum of six years following the date of payment.\nMedicare Part A\nMedicare Part A covers inpatient care, including critical-access hospitals, and skilled nursing facilities (not custodial or long-term care). It also covers hospice care and some home health care. Members must meet certain conditions to receive these benefits.\nMedicare Part B\nMedicare Part B covers doctors' services, outpatient care and some other medical servic"
+    ]
+  },
+  "cost_note": "each call priced at its serving role's rates (llm.<role>.prices_per_mtok)",
+  "request_started_utc": "2026-10-18T16:29:11.497635+00:00",
+  "citation_check": {
+    "t_start": 14.705,
+    "duration_s": 0.001
+  }
+}

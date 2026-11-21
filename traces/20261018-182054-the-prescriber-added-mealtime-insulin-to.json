@@ -1,0 +1,706 @@
+{
+  "question": "The prescriber added mealtime insulin to this Veteran's basal insulin, but the DPP-4 is still on the refill list. Our older VA handout says continue it. Should I flag that for the pharmacist?",
+  "request_id": "64654a76-db8e-4958-9b26-08f558e220a6",
+  "status": "answered",
+  "agent_status": "answered",
+  "assumption": "VA clinical guidance for T2DM insulin intensification in a Veteran on basal insulin with newly added prandial/mealtime insulin.",
+  "answer": "Yes—flag it for the pharmacist. The newer VA 2025 clinician summary says that when **starting prandial insulin** in addition to basal insulin, the regimen should **discontinue sulfonylurea, meglitinides, and DPP-4 inhibitors**. The older 2020 VA guide did say to **continue DPP-4** when prandial insulin is added, so your handout is not imagined—it is superseded/conflicting guidance. Since both are VA advisory clinical guidance on the same point, use the **more recent 2025** document for the clinical flag. Also note the 2025 page says to **ensure adherence** and review that all medications are being used correctly before changing therapy; that supports pharmacist review rather than an automatic refill-list deletion by tech staff.",
+  "citations": [
+    {
+      "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+      "page": 9,
+      "link": "https://www.pbm.va.gov/PBM/AcademicDetailingService/Documents/508/IB10-1775_PharmacotherapyforT2DM_P97221.pdf#page=9",
+      "flag": null,
+      "locator": "va_pbm_t2dm_pharmacotherapy_2025:p9"
+    },
+    {
+      "doc_id": "va_pbm_t2dm_clinicians_guide",
+      "page": 17,
+      "link": "https://www.pbm.va.gov/PBM/AcademicDetailingService/Documents/508/IB10-1402_Type2DiabetesCliniciansGuide_508Conformant.pdf#page=17",
+      "flag": null,
+      "locator": "va_pbm_t2dm_clinicians_guide:p17"
+    }
+  ],
+  "conflicts_noted": [
+    "VA 2020 guide says continue DPP-4 when prandial insulin is added; VA 2025 clinician summary says discontinue DPP-4 I. Same program and clinical topic, so more recent 2025 guidance controls."
+  ],
+  "flags": [
+    "completeness_pass"
+  ],
+  "needs_review": false,
+  "words": {
+    "displayed": 111,
+    "rendered": 111
+  },
+  "answered_by": "gpt-5.5-2026-04-23",
+  "provider": "openai",
+  "model": "gpt-5.5-2026-04-23",
+  "fallback_used": false,
+  "timing_s": {
+    "total": 17.198,
+    "search": 0.564,
+    "read_page": 0.041,
+    "list_documents": 0,
+    "lookups": 0,
+    "model_calls": [
+      1.911,
+      2.072,
+      1.507,
+      5.883,
+      5.219
+    ]
+  },
+  "lookups": 3,
+  "tokens": {
+    "input": 25024,
+    "output": 1072,
+    "cache_read": 28032,
+    "cache_write": 0
+  },
+  "cost_usd": 0.171296,
+  "completeness": {
+    "ran": true,
+    "changed": true,
+    "added_words": 34,
+    "outcome": "replaced",
+    "duration_s": 5.219
+  },
+  "pages_seen": [
+    "va_pbm_t2dm_clinicians_guide:p13",
+    "va_pbm_t2dm_clinicians_guide:p14",
+    "va_pbm_t2dm_clinicians_guide:p15",
+    "va_pbm_t2dm_clinicians_guide:p16",
+    "va_pbm_t2dm_clinicians_guide:p17",
+    "va_pbm_t2dm_pharmacotherapy_2025:p10",
+    "va_pbm_t2dm_pharmacotherapy_2025:p11",
+    "va_pbm_t2dm_pharmacotherapy_2025:p12",
+    "va_pbm_t2dm_pharmacotherapy_2025:p14",
+    "va_pbm_t2dm_pharmacotherapy_2025:p7",
+    "va_pbm_t2dm_pharmacotherapy_2025:p8",
+    "va_pbm_t2dm_pharmacotherapy_2025:p9"
+  ],
+  "trace_id": null,
+  "started_at": "2026-10-18T22:20:54+00:00",
+  "config": {
+    "primary": "gpt-5.5",
+    "fallback": "claude-sonnet-5-5",
+    "effort": "medium",
+    "search": {
+      "mode": "hybrid",
+      "rrf_k": 60,
+      "fusion_depth": 100,
+      "return_parents": true,
+      "rerank": null
+    },
+    "max_tool_calls": 6,
+    "deadline_s": 25,
+    "search_k": 8,
+    "min_lookups": 2,
+    "completeness_pass": true,
+    "completeness_min_remaining_s": 8
+  },
+  "structured_lookups": true,
+  "context": {},
+  "model_answer": "Yes—flag it for the pharmacist. The newer VA 2025 clinician summary says that when **starting prandial insulin** in addition to basal insulin, the regimen should **discontinue sulfonylurea, meglitinides, and DPP-4 inhibitors**. The older 2020 VA guide did say to **continue DPP-4** when prandial insulin is added, so your handout is not imagined—it is superseded/conflicting guidance. Since both are VA advisory clinical guidance on the same point, use the **more recent 2025** document for the clinical flag. Also note the 2025 page says to **ensure adherence** and review that all medications are being used correctly before changing therapy; that supports pharmacist review rather than an automatic refill-list deletion by tech staff.",
+  "model_citations": [
+    {
+      "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+      "page": 9,
+      "link": "https://www.pbm.va.gov/PBM/AcademicDetailingService/Documents/508/IB10-1775_PharmacotherapyforT2DM_P97221.pdf#page=9",
+      "flag": null,
+      "locator": "va_pbm_t2dm_pharmacotherapy_2025:p9"
+    },
+    {
+      "doc_id": "va_pbm_t2dm_clinicians_guide",
+      "page": 17,
+      "link": "https://www.pbm.va.gov/PBM/AcademicDetailingService/Documents/508/IB10-1402_Type2DiabetesCliniciansGuide_508Conformant.pdf#page=17",
+      "flag": null,
+      "locator": "va_pbm_t2dm_clinicians_guide:p17"
+    }
+  ],
+  "first_submit": {
+    "status": "answered",
+    "assumption": "VA clinical guidance for T2DM insulin intensification in a Veteran on basal insulin with newly added prandial/mealtime insulin.",
+    "answer": "Yes—flag it for the pharmacist. The newer VA 2025 clinician summary says that when **starting prandial insulin** in addition to basal insulin, the regimen should **discontinue sulfonylurea, meglitinides, and DPP-4 inhibitors**. The older 2020 VA guide did say to **continue DPP-4** when prandial insulin is added, so your handout is not imagined—it is superseded/conflicting guidance. Since both are VA advisory clinical guidance on the same point, use the **more recent 2025** document for the clinical flag.",
+    "citations": [
+      {
+        "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+        "page": 9,
+        "row": null
+      },
+      {
+        "doc_id": "va_pbm_t2dm_clinicians_guide",
+        "page": 17,
+        "row": null
+      }
+    ],
+    "conflicts_noted": [
+      "VA 2020 guide says continue DPP-4 when prandial insulin is added; VA 2025 clinician summary says discontinue DPP-4 I. Same program and clinical topic, so more recent 2025 guidance controls."
+    ]
+  },
+  "model_calls": [
+    {
+      "t_start": 0.0,
+      "duration_s": 1.911,
+      "requested_model": "gpt-5.5",
+      "served_model": "gpt-5.5-2026-04-23",
+      "provider": "openai",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 334,
+        "output": 72,
+        "cache_read": 1536,
+        "cache_write": 0
+      },
+      "cost_usd": 0.004598,
+      "response_id": "resp_0a128722d06cd692016ad54635376087d298562745921b6b10",
+      "input_messages": [
+        {
+          "role": "user",
+          "text": "Today's date: 2026-10-18\n\nQuestion: The prescriber added mealtime insulin to this Veteran's basal insulin, but the DPP-4 is still on the refill list. Our older VA handout says continue it. Should I flag that for the pharmacist?"
+        }
+      ],
+      "output": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "call_JXo0DJNbVp8JcdvlZcr7CqUk",
+            "name": "search_documents",
+            "arguments": {
+              "program": "VA",
+              "query": "DPP-4 continue when prandial mealtime insulin added basal insulin discontinue",
+              "k": 8
+            }
+          }
+        ]
+      }
+    },
+    {
+      "t_start": 2.476,
+      "duration_s": 2.072,
+      "requested_model": "gpt-5.5",
+      "served_model": "gpt-5.5-2026-04-23",
+      "provider": "openai",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 10412,
+        "output": 95,
+        "cache_read": 1536,
+        "cache_write": 0
+      },
+      "cost_usd": 0.055678,
+      "response_id": "resp_0a128722d06cd692016ad54637924487d2ba47fd2d1b937e86",
+      "input_messages": [
+        {
+          "role": "tool",
+          "tool_results": [
+            {
+              "call_id": "call_JXo0DJNbVp8JcdvlZcr7CqUk",
+              "is_error": false,
+              "content": "[{\"doc_id\": \"va_pbm_t2dm_clinicians_guide\", \"page\": 17, \"program\": \"VA\", \"authority\": \"advisory\", \"date\": \"2020-05\", \"text\": \"A VA Clinician's Guide to Diabetes Management in Primary Care (IB 10-1402) > Type 2 Diabetes A VA Clinician’s Guide to Diabetes Management in Primary Care (2020) > Initiating insulin > Adding prandial (meal-time insulin) 6 > CLINICAL PEARL\\n[p 17]\\nWhen basal insulin is added to existing therapy:\\nWhen prandial insulin is added to basal insulin and existing therapy:\\nContinue metformin, SGLT-2, GLP-1, DPP-4, and/or sulfonylurea.\\nContinue metformin, DPP-4, SGLT-2, or GLP-1.\\nDiscontinue sulfonylurea due to risk of hypoglycemia.\\nTZD can be continued if patient does not have heart failure.\\nIf hypoglycemia occurs, adjust the dose of prandial or basal insulin (based on readings and symptoms) before adjusting metformin, DPP-4, SGLT-2, or GLP-1.\\nKeep in mind hypoglycemia risk. Reduce the dose of basal insulin if hypoglycemia occurs.\", \"pages\": [17], \"section\": \"Type 2 Diabetes A VA Clinician’s Guide to Diabetes Management in Primary Care (2020) > Initiating insulin > Adding prandial (meal-time insulin) 6 > CLINICAL PEARL\"}, {\"doc_id\": \"va_pbm_t2dm_clinicians_guide\", \"page\": 16, \"program\": \"VA\", \"authority\": \"advisory\", \"date\": \"2020-05\", \"text\": \"A VA Clinician's Guide to Diabetes Management in Primary Care (IB 10-1402) … (2020) > Initiating insulin > Adding prandial (meal-time insulin) 6 > Figure 10. Types, frequency, and dosages of insulin should be individualized based on the following factors:\\n[p 16]\\n[Table: Figure 10. Types, frequency, and dosages of insulin should be individualized based on the following factors:] (PDF page 16)\\nAge and weight | • Make slower adjustments in older patients. • Patients with obesity may need higher insulin doses due to insulin resistance.\\nComorbid conditions and concomitant medications | Some conditions and medications can increase risk of hypoglycemia or decrease ability to recognize symptoms (e.g., chronic kidney disease, use of beta blockers, or dialysis). Dosing adjustments should be made slowly.\\nPresence of autonomic neuropathy | Patients with autonomic neuropathy may not recognize hypoglycemic symptoms.\\nAbility to monitor glucose levels and accurately inject insulin | Making the insulin regimen less complicated (e.g., basal only regimens) and using pen devices may be more beneficial in these patients.\\nComplexity of management strategy | Some management strategies are more complex than others (e.g., number of injections, dosing based on carbohydrate intake). Consider mixed insulins to simplify regimen in appropriate patients.\\nRisks of hypoglycemia versus benefits of tight control | It is important to weigh the risks and benefits when evaluating the management strategy.\\nMagnitude and pattern of hypoglycemia | Dose changes should be made slowly and in small increments when patients have frequent hypoglycemia and/or if the magnitude of hypoglycemia is significant.\\n[p 17]\\n[Figure, text_image] Clinical Pearl: When basal insulin is added to existing therapy (PDF page 17). Machine-generated visual interpretation; status: machine-interpreted from the page image by a vision model; structure and OCR cross-check passed.\\nA lavender callout box labeled \\\"CLINICAL PEARL\\\", with a gray sphere at its upper left corner and a purple stopwatch icon at the bottom. Text verbatim: \\\"CLINICAL PEARL. When basal insulin is added to existing therapy: • Continue metformin, SGLT-2, GLP-1, DPP-4, and/or sulfonylurea. • TZD can be continued if patient does not have heart failure. • Keep in mind hypoglycemia risk. Reduce the dose of basal insulin if hypoglycemia occurs.\\\"\\n[Figure, text_image] Clinical Pearl: When prandial insulin is added to basal insulin and existing therapy (PDF page 17). Machine-generated visual interpretation; status: machine-interpreted from the page image by a vision model; structure and OCR cross-check passed.\\nA peach-colored callout box with a gray sphere or"
+            }
+          ]
+        }
+      ],
+      "output": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "call_ngldwUGcQcM1ATHAcX8yol6W",
+            "name": "read_page",
+            "arguments": {
+              "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+              "page": 9
+            }
+          }
+        ]
+      }
+    },
+    {
+      "t_start": 4.564,
+      "duration_s": 1.507,
+      "requested_model": "gpt-5.5",
+      "served_model": "gpt-5.5-2026-04-23",
+      "provider": "openai",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 920,
+        "output": 49,
+        "cache_read": 11776,
+        "cache_write": 0
+      },
+      "cost_usd": 0.011958,
+      "response_id": "resp_0a128722d06cd692016ad54639bdf087d2b5a14d042e8c3f7f",
+      "input_messages": [
+        {
+          "role": "tool",
+          "tool_results": [
+            {
+              "call_id": "call_ngldwUGcQcM1ATHAcX8yol6W",
+              "is_error": false,
+              "content": "va_pbm_t2dm_pharmacotherapy_2025 page 9 (VA, advisory, 2025-04)\n\n \n \n \n \n \n \n \n \n \n \n \nFigure 6.  \nUsing prandial insulin  \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \nStarting prandial \ninsulin \n• Start with one \ndose before the \nlargest meal of \nthe day. \n• Use in addition to \nbasal insulin. \n• Begin with 4 units\nor 10% of basal \ndose. \n• Discontinue\nsulfonylurea, \nmeglitinides, and \nDPP-4 I. \nHome \nglucose* \nor HbA1c \nover \ntarget\nrange \nTitrating prandial \ninsulin \n• Increase dose by \n1 to 2 units or 10 \nto 15% twice \nweekly \n• If having \nhypoglycemia, \ndetermine the \ncause (e.g., \nmissed meal, \nexercise). \n- If no clear \nreason, lower \ndose by 10 to 20% \nHbA1c \nover \ntarget \nrange \n \nAdding prandial \ndoses \n• Start with adding \na second prandial \ndose and follow \ntitration schedule \n• Recheck HbA1c in \n3 months \n• If HbA1c still\nelevated, adjust \nregimen based on \nglucose patterns; \nconsider adding a \nthird prandial \ninsulin dose \n*Post-prandial glucose or next premeal glucose over target range. Adjust prandial insulin based on patterns.\nConsider using a pre-mixed insulin if the Veteran is having difficulty with multiple injections.1,2,49 \n■Insulin aspart protamine/insulin aspart 70/30 (Novolog 70/30) or insulin 70/30 NPH/REG \n(Novolin 70/30) – Note these are look-alike, sound-alike drugs. \n■Need to have regular meal routines and not skip meals. \n■Novolog 70/30 is preferred since it is administered 0–15 minutes before mealtime, while \nNovolin 70/30 is administered 30 minutes before eating. \nEnsure patient adherence before changing therapy. \nProvide instructions and demonstrate proper technique for insulin and other injectable products. \nReview all medications to ensure they are being used correctly before considering dose \nadjustments or changes in therapy. \nSee VA Instructional Videos in the Veteran Health Library. How to Give Yourself a \nSubcutaneous Injection, How to Use Your Insulin Pen, How to Use Your GLP-1 Agonist Pen. \nDiabetes Self-Management Education and Support (DSMES) \nDSMES should be offered:1,2 \n■At diagnosis, annually, or when not meeting treatment goals. \n■When complicating factors develop, or transitions in life and care occur. \n■VA DSMES Resources: Diabetes Self-Management Education and Support (DSMES) - \nNutrition and Food Services (va.gov). \n7\n  \n"
+            }
+          ]
+        }
+      ],
+      "output": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "call_FZIQG0OT3PPmiRsZqEsLSdRH",
+            "name": "read_page",
+            "arguments": {
+              "doc_id": "va_pbm_t2dm_clinicians_guide",
+              "page": 17
+            }
+          }
+        ]
+      }
+    },
+    {
+      "t_start": 6.095,
+      "duration_s": 5.883,
+      "requested_model": "gpt-5.5",
+      "served_model": "gpt-5.5-2026-04-23",
+      "provider": "openai",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 1336,
+        "output": 385,
+        "cache_read": 11776,
+        "cache_write": 0
+      },
+      "cost_usd": 0.024118,
+      "response_id": "resp_0a128722d06cd692016ad5463b446887d2b1ed3fffd194f19d",
+      "input_messages": [
+        {
+          "role": "tool",
+          "tool_results": [
+            {
+              "call_id": "call_FZIQG0OT3PPmiRsZqEsLSdRH",
+              "is_error": false,
+              "content": "va_pbm_t2dm_clinicians_guide page 17 (VA, advisory, 2020-05)\n\nU.S. DEPARTMENT OF VETERANS AFFAIRS\n15\nEnsure patient adherence before \nchanging therapy. \n✓  Provide instructions and demonstrate proper \ntechnique for insulin and other products \nadministered by injection. \n✓  Review each medication, taken orally and/or \nby injection, to ensure patient is taking them \ncorrectly before considering dose adjustments \nand/or changing therapy. \n✓  See VA Instructional Videos in the Veteran \nHealth Library. How to Give Yourself a \nSubcutaneous Injection: www.youtube.com/\nwatch?v=wXjQHAxopzk \nCLINICAL PEARL \nWhen basal insulin is added \nto existing therapy:  \nCLINICAL PEARL \nWhen prandial insulin is added to \nbasal insulin and existing therapy:  \n• Continue metformin, SGLT-2, \nGLP-1, DPP-4, and/or \nsulfonylurea. \n• TZD can be continued if patient \ndoes not have heart failure. \n• Keep in mind hypoglycemia risk. \nReduce the dose of basal insulin \nif hypoglycemia occurs.  \n• Continue metformin, DPP-4, \nSGLT-2, or GLP-1. \n• Discontinue sulfonylurea due to \nrisk of hypoglycemia. \n• If hypoglycemia occurs, adjust \nthe dose of prandial or basal \ninsulin (based on readings and \nsymptoms) before adjusting \nmetformin, DPP-4, SGLT-2, \nor GLP-1. \n"
+            }
+          ]
+        }
+      ],
+      "output": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "call_3EvuweUCQMBRmImI9a7enk9O",
+            "name": "submit_answer",
+            "arguments": {
+              "status": "answered",
+              "assumption": "VA clinical guidance for T2DM insulin intensification in a Veteran on basal insulin with newly added prandial/mealtime insulin.",
+              "answer": "Yes—flag it for the pharmacist. The newer VA 2025 clinician summary says that when **starting prandial insulin** in addition to basal insulin, the regimen should **discontinue sulfonylurea, meglitinides, and DPP-4 inhibitors**. The older 2020 VA guide did say to **continue DPP-4** when prandial insulin is added, so your handout is not imagined—it is superseded/conflicting guidance. Since both are VA advisory clinical guidance on the same point, use the **more recent 2025** document for the clinical flag.",
+              "citations": [
+                {
+                  "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+                  "page": 9,
+                  "row": null
+                },
+                {
+                  "doc_id": "va_pbm_t2dm_clinicians_guide",
+                  "page": 17,
+                  "row": null
+                }
+              ],
+              "conflicts_noted": [
+                "VA 2020 guide says continue DPP-4 when prandial insulin is added; VA 2025 clinician summary says discontinue DPP-4 I. Same program and clinical topic, so more recent 2025 guidance controls."
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "t_start": 11.978,
+      "duration_s": 5.219,
+      "requested_model": "gpt-5.5",
+      "served_model": "gpt-5.5-2026-04-23",
+      "provider": "openai",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 12022,
+        "output": 471,
+        "cache_read": 1408,
+        "cache_write": 0
+      },
+      "cost_usd": 0.074944,
+      "response_id": "resp_0a128722d06cd692016ad54641136487d28035e94351eea502",
+      "input_messages": [
+        {
+          "role": "tool",
+          "tool_results": [
+            {
+              "call_id": "call_3EvuweUCQMBRmImI9a7enk9O",
+              "is_error": false,
+              "content": "Answer received."
+            }
+          ]
+        },
+        {
+          "role": "user",
+          "text": "Completeness check. Compare your answer with the evidence the tools returned in this conversation. List, for yourself, any condition, quantity or day limit, exception, effective date, step of a process or alternative channel, older-version difference, or program distinction that the evidence states for this question and your answer omits. Then call submit_answer again: the same answer with those points added in one or two sentences each, each cited to the page or row that states it; if nothing is missing, resubmit the same answer unchanged. Do not add anything the evidence does not state; do not remove correct content; do not run more lookups."
+        }
+      ],
+      "output": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "call_46TEHgh6YUtTEpgQK47o07eA",
+            "name": "submit_answer",
+            "arguments": {
+              "status": "answered",
+              "assumption": "VA clinical guidance for T2DM insulin intensification in a Veteran on basal insulin with newly added prandial/mealtime insulin.",
+              "answer": "Yes—flag it for the pharmacist. The newer VA 2025 clinician summary says that when **starting prandial insulin** in addition to basal insulin, the regimen should **discontinue sulfonylurea, meglitinides, and DPP-4 inhibitors**. The older 2020 VA guide did say to **continue DPP-4** when prandial insulin is added, so your handout is not imagined—it is superseded/conflicting guidance. Since both are VA advisory clinical guidance on the same point, use the **more recent 2025** document for the clinical flag. Also note the 2025 page says to **ensure adherence** and review that all medications are being used correctly before changing therapy; that supports pharmacist review rather than an automatic refill-list deletion by tech staff.",
+              "citations": [
+                {
+                  "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+                  "page": 9,
+                  "row": null
+                },
+                {
+                  "doc_id": "va_pbm_t2dm_clinicians_guide",
+                  "page": 17,
+                  "row": null
+                }
+              ],
+              "conflicts_noted": [
+                "VA 2020 guide says continue DPP-4 when prandial insulin is added; VA 2025 clinician summary says discontinue DPP-4 I. Same program and clinical topic, so more recent 2025 guidance controls."
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "search_documents",
+      "input": {
+        "program": "VA",
+        "query": "DPP-4 continue when prandial mealtime insulin added basal insulin discontinue",
+        "k": 8
+      },
+      "duration_s": 0.564,
+      "is_error": false,
+      "pages": [
+        "va_pbm_t2dm_clinicians_guide:p13",
+        "va_pbm_t2dm_clinicians_guide:p14",
+        "va_pbm_t2dm_clinicians_guide:p15",
+        "va_pbm_t2dm_clinicians_guide:p16",
+        "va_pbm_t2dm_clinicians_guide:p17",
+        "va_pbm_t2dm_pharmacotherapy_2025:p10",
+        "va_pbm_t2dm_pharmacotherapy_2025:p11",
+        "va_pbm_t2dm_pharmacotherapy_2025:p12",
+        "va_pbm_t2dm_pharmacotherapy_2025:p14",
+        "va_pbm_t2dm_pharmacotherapy_2025:p7",
+        "va_pbm_t2dm_pharmacotherapy_2025:p8",
+        "va_pbm_t2dm_pharmacotherapy_2025:p9"
+      ],
+      "result": "[{\"doc_id\": \"va_pbm_t2dm_clinicians_guide\", \"page\": 17, \"program\": \"VA\", \"authority\": \"advisory\", \"date\": \"2020-05\", \"text\": \"A VA Clinician's Guide to Diabetes Management in Primary Care (IB 10-1402) > Type 2 Diabetes A VA Clinician’s Guide to Diabetes Management in Primary Care (2020) > Initiating insulin > Adding prandial (meal-time insulin) 6 > CLINICAL PEARL\\n[p 17]\\nWhen basal insulin is added to existing therapy:\\nWhen prandial insulin is added to basal insulin and existing therapy:\\nContinue metformin, SGLT-2, GLP-1, DPP-4, and/or sulfonylurea.\\nContinue metformin, DPP-4, SGLT-2, or GLP-1.\\nDiscontinue sulfonylurea due to risk of hypoglycemia.\\nTZD can be continued if patient does not have heart failure.\\nIf hypoglycemia occurs, adjust the dose of prandial or basal insulin (based on readings and symptoms) before adjusting metformin, DPP-4, SGLT-2, or GLP-1.\\nKeep in mind hypoglycemia risk. Reduce the dose of basal insulin if hypoglycemia occurs.\", \"pages\": [17], \"section\": \"Type 2 Diabetes A VA Clinician’s Guide to Diabetes Management in Primary Care (2020) > Initiating insulin > Adding prandial (meal-time insulin) 6 > CLINICAL PEARL\"}, {\"doc_id\": \"va_pbm_t2dm_clinicians_guide\", \"page\": 16, \"program\": \"VA\", \"authority\": \"advisory\", \"date\": \"2020-05\", \"text\": \"A VA Clinician's Guide to Diabetes Management in Primary Care (IB 10-1402) … (2020) > Initiating insulin > Adding prandial (meal-time insulin) 6 > Figure 10. Types, frequency, and dosages of insulin should be individualized based on the following factors:\\n[p 16]\\n[Table: Figure 10. Types, frequency, and dosages of insulin should be individualized based on the following factors:] (PDF page 16)\\nAge and weight | • Make slower adjustments in older patients. • Patients with obesity may need higher insulin doses due to insulin resistance.\\nComorbid conditions and concomitant medications | Some conditions and medications can increase risk of hypoglycemia or decrease ability to recognize symptoms (e.g., chronic kidney disease, use of beta blockers, or dialysis). Dosing adjustments should be made slowly.\\nPresence of autonomic neuropathy | Patients with autonomic neuropathy may not recognize hypoglycemic symptoms.\\nAbility to monitor glucose levels and accurately inject insulin | Making the insulin regimen less complicated (e.g., basal only regimens) and using pen devices may be more beneficial in these patients.\\nComplexity of management strategy | Some management strategies are more complex than others (e.g., number of injections, dosing based on carbohydrate intake). Consider mixed insulins to simplify regimen in appropriate patients.\\nRisks of hypoglycemia versus benefits of tight control | It is important to weigh the risks and benefits when evaluating the management strategy.\\nMagnitude and pattern of hypoglycemia | Dose changes should be made slowly and in small increments when patients have frequent hypoglycemia and/or if the magnitude of hypoglycemia is significant.\\n[p 17]\\n[Figure, text_image] Clinical Pearl: When basal insulin is added to existing therapy (PDF page 17). Machine-generated visual interpretation; status: machine-interpreted from the page image by a vision model; structure and OCR cross-check passed.\\nA lavender callout box labeled \\\"CLINICAL PEARL\\\", with a gray sphere at its upper left corner and a purple stopwatch icon at the bottom. Text verbatim: \\\"CLINICAL PEARL. When basal insulin is added to existing therapy: • Continue metformin, SGLT-2, GLP-1, DPP-4, and/or sulfonylurea. • TZD can be continued if patient does not have heart failure. • Keep in mind hypoglycemia risk. Reduce the dose of basal insulin if hypoglycemia occurs.\\\"\\n[Figure, text_image] Clinical Pearl: When prandial insulin is added to basal insulin and existing therapy (PDF page 17). Machine-generated visual interpretation; status: machine-interpreted from the page image by a vision model; structure and OCR cross-check passed.\\nA peach-colored callout box with a gray sphere or",
+      "search": {
+        "original_query": "The prescriber added mealtime insulin to this Veteran's basal insulin, but the DPP-4 is still on the refill list. Our older VA handout says continue it. Should I flag that for the pharmacist?",
+        "agent_query": "DPP-4 continue when prandial mealtime insulin added basal insulin discontinue",
+        "executed": [
+          {
+            "source": "original",
+            "query": "The prescriber added mealtime insulin to this Veteran's basal insulin, but the DPP-4 is still on the refill list. Our older VA handout says continue it. Should I flag that for the pharmacist?",
+            "program": "VA",
+            "k": 8,
+            "seconds": 0.564,
+            "cached": false,
+            "results": 8
+          },
+          {
+            "source": "agent",
+            "query": "DPP-4 continue when prandial mealtime insulin added basal insulin discontinue",
+            "program": "VA",
+            "k": 8,
+            "seconds": 0.429,
+            "cached": false,
+            "results": 8
+          }
+        ],
+        "duplicates_merged": 6,
+        "returned": 10,
+        "from_both": 6,
+        "from_original_only": 2,
+        "from_agent_only": 2,
+        "provenance": [
+          {
+            "unit": "va_pbm_t2dm_clinicians_guide:s16",
+            "found_by": {
+              "original": 1,
+              "agent": 1
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_clinicians_guide:s15",
+            "found_by": {
+              "original": 2,
+              "agent": 2
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s8",
+            "found_by": {
+              "original": 3,
+              "agent": 3
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_clinicians_guide:s14",
+            "found_by": {
+              "original": 4,
+              "agent": 4
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_clinicians_guide:s13",
+            "found_by": {
+              "original": 5,
+              "agent": 6
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s7",
+            "found_by": {
+              "original": 7,
+              "agent": 5
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s12",
+            "found_by": {
+              "original": 6
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s15",
+            "found_by": {
+              "agent": 7
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s6",
+            "found_by": {
+              "original": 8
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_clinicians_guide:s12",
+            "found_by": {
+              "agent": 8
+            }
+          }
+        ],
+        "hits": [
+          {
+            "unit": "va_pbm_t2dm_clinicians_guide:s16",
+            "doc_id": "va_pbm_t2dm_clinicians_guide",
+            "pages": [
+              17
+            ],
+            "ranks": {
+              "original": 1,
+              "agent": 1
+            },
+            "scores": {
+              "original": 0.0328,
+              "agent": 0.0328
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_clinicians_guide:s15",
+            "doc_id": "va_pbm_t2dm_clinicians_guide",
+            "pages": [
+              16,
+              17
+            ],
+            "ranks": {
+              "original": 2,
+              "agent": 2
+            },
+            "scores": {
+              "original": 0.032,
+              "agent": 0.032
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s8",
+            "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+            "pages": [
+              8,
+              9
+            ],
+            "ranks": {
+              "original": 3,
+              "agent": 3
+            },
+            "scores": {
+              "original": 0.0299,
+              "agent": 0.0311
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_clinicians_guide:s14",
+            "doc_id": "va_pbm_t2dm_clinicians_guide",
+            "pages": [
+              14,
+              15
+            ],
+            "ranks": {
+              "original": 4,
+              "agent": 4
+            },
+            "scores": {
+              "original": 0.0297,
+              "agent": 0.031
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_clinicians_guide:s13",
+            "doc_id": "va_pbm_t2dm_clinicians_guide",
+            "pages": [
+              14
+            ],
+            "ranks": {
+              "original": 5,
+              "agent": 6
+            },
+            "scores": {
+              "original": 0.0264,
+              "agent": 0.0249
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s7",
+            "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+            "pages": [
+              8
+            ],
+            "ranks": {
+              "original": 7,
+              "agent": 5
+            },
+            "scores": {
+              "original": 0.0248,
+              "agent": 0.0277
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s12",
+            "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+            "pages": [
+              10,
+              11,
+              12
+            ],
+            "ranks": {
+              "original": 6
+            },
+            "scores": {
+              "original": 0.0253
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s15",
+            "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+            "pages": [
+              14
+            ],
+            "ranks": {
+              "agent": 7
+            },
+            "scores": {
+              "agent": 0.0202
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s6",
+            "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+            "pages": [
+              7
+            ],
+            "ranks": {
+              "original": 8
+            },
+            "scores": {
+              "original": 0.0236
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_clinicians_guide:s12",
+            "doc_id": "va_pbm_t2dm_clinicians_guide",
+            "pages": [
+              13
+            ],
+            "ranks": {
+              "agent": 8
+            },
+            "scores": {
+              "agent": 0.0197
+            }
+          }
+        ]
+      },
+      "t_start": 1.911
+    },
+    {
+      "name": "read_page",
+      "input": {
+        "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+        "page": 9
+      },
+      "duration_s": 0.017,
+      "is_error": false,
+      "pages": [
+        "va_pbm_t2dm_pharmacotherapy_2025:p9"
+      ],
+      "result": "va_pbm_t2dm_pharmacotherapy_2025 page 9 (VA, advisory, 2025-04)\n\n \n \n \n \n \n \n \n \n \n \n \nFigure 6.  \nUsing prandial insulin  \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \nStarting prandial \ninsulin \n• Start with one \ndose before the \nlargest meal of \nthe day. \n• Use in addition to \nbasal insulin. \n• Begin with 4 units\nor 10% of basal \ndose. \n• Discontinue\nsulfonylurea, \nmeglitinides, and \nDPP-4 I. \nHome \nglucose* \nor HbA1c \nover \ntarget\nrange \nTitrating prandial \ninsulin \n• Increase dose by \n1 to 2 units or 10 \nto 15% twice \nweekly \n• If having \nhypoglycemia, \ndetermine the \ncause (e.g., \nmissed meal, \nexercise). \n- If no clear \nreason, lower \ndose by 10 to 20% \nHbA1c \nover \ntarget \nrange \n \nAdding prandial \ndoses \n• Start with adding \na second prandial \ndose and follow \ntitration schedule \n• Recheck HbA1c in \n3 months \n• If HbA1c still\nelevated, adjust \nregimen based on \nglucose patterns; \nconsider adding a \nthird prandial \ninsulin dose \n*Post-prandial glucose or next premeal glucose over target range. Adjust prandial insulin based on patterns.\nConsider using a pre-mixed insulin if the Veteran is having difficulty with multiple injections.1,2,49 \n■Insulin aspart protamine/insulin aspart 70/30 (Novolog 70/30) or insulin 70/30 NPH/REG \n(Novolin 70/30) – Note these are look-alike, sound-alike drugs. \n■Need to have regular meal routines and not skip meals. \n■Novolog 70/30 is preferred since it is administered 0–15 minutes before mealtime, while \nNovolin 70/30 is administered 30 minutes before eating. \nEnsure patient adherence before changing therapy. \nProvide instructions and demonstrate proper technique for insulin and other injectable products. \nReview all medications to ensure they are being used correctly before considering dose \nadjustments or changes in therapy. \nSee VA Instructional Videos in the Veteran Health Library. How to Give Yourself a \nSubcutaneous Injection, How to Use Your Insulin Pen, How to Use Your GLP-1 Agonist Pen. \nDiabetes Self-Management Education and Support (DSMES) \nDSMES should be offered:1,2 \n■At diagnosis, annually, or when not meeting treatment goals. \n■When complicating factors develop, or transitions in life and care occur. \n■VA DSMES Resources: Diabetes Self-Management Education and Support (DSMES) - \nNutrition and Food Services (va.gov). \n7\n  \n",
+      "t_start": 4.547
+    },
+    {
+      "name": "read_page",
+      "input": {
+        "doc_id": "va_pbm_t2dm_clinicians_guide",
+        "page": 17
+      },
+      "duration_s": 0.024,
+      "is_error": false,
+      "pages": [
+        "va_pbm_t2dm_clinicians_guide:p17"
+      ],
+      "result": "va_pbm_t2dm_clinicians_guide page 17 (VA, advisory, 2020-05)\n\nU.S. DEPARTMENT OF VETERANS AFFAIRS\n15\nEnsure patient adherence before \nchanging therapy. \n✓  Provide instructions and demonstrate proper \ntechnique for insulin and other products \nadministered by injection. \n✓  Review each medication, taken orally and/or \nby injection, to ensure patient is taking them \ncorrectly before considering dose adjustments \nand/or changing therapy. \n✓  See VA Instructional Videos in the Veteran \nHealth Library. How to Give Yourself a \nSubcutaneous Injection: www.youtube.com/\nwatch?v=wXjQHAxopzk \nCLINICAL PEARL \nWhen basal insulin is added \nto existing therapy:  \nCLINICAL PEARL \nWhen prandial insulin is added to \nbasal insulin and existing therapy:  \n• Continue metformin, SGLT-2, \nGLP-1, DPP-4, and/or \nsulfonylurea. \n• TZD can be continued if patient \ndoes not have heart failure. \n• Keep in mind hypoglycemia risk. \nReduce the dose of basal insulin \nif hypoglycemia occurs.  \n• Continue metformin, DPP-4, \nSGLT-2, or GLP-1. \n• Discontinue sulfonylurea due to \nrisk of hypoglycemia. \n• If hypoglycemia occurs, adjust \nthe dose of prandial or basal \ninsulin (based on readings and \nsymptoms) before adjusting \nmetformin, DPP-4, SGLT-2, \nor GLP-1. \n",
+      "t_start": 6.071
+    }
+  ],
+  "cited_evidence": {
+    "va_pbm_t2dm_pharmacotherapy_2025:p9": "va_pbm_t2dm_pharmacotherapy_2025 (VA, advisory, 2025-04)\nPharmacotherapy for Type 2 Diabetes Mellitus (T2DM) 2025: A VA Clinician's Summary (IB 10-1775) > Initiating insulin > Prandial (mealtime) insulin1,2\n[p 8]\nPrandial (mealtime) insulin 1,2\nPrandial insulins include aspart, glulisine, lispro, and regular.\n■ Consider GLP-1 RA before adding prandial insulin if inadequate glycemic control on basal insulin and one or more oral agents. 47\n■ Add prandial insulin when coverage is needed for meals. Consider when HbA1c continues to be above goal, basal insulin dose is > 0.5 units/kg, or glucose readings are elevated after meals.\n■ Rapid acting insulins like aspart, glulisine, and lispro should be administered 0-15 minutes before meals and are preferred to insulin regular due to easier administration.\n■ Insulin regular should be administered 30 minutes before meals. The longer time of onset and duration may increase hypoglycemia risk. 48\n[p 9]\nFigure 6. Using prandial insulin\n[Figure, flowchart] untitled in the image; see the section heading (PDF page 9). Machine-generated visual interpretation; status: machine-interpreted from the page image by a vision model; structure and OCR cross-check passed.\nBox n1 (start): Starting prandial insulin • Start with one dose before the largest meal of the day. • Use in addition to basal insulin. • Begin with 4 units or 10% of basal dose. • Discontinue sulfonylurea, meglitinides, and DPP-4 I. -> if Home glucose* or HbA1c over target range: box n2\nBox n2 (action): Titrating prandial insulin • Increase dose by 1 to 2 units or 10 to 15% twice weekly • If having hypoglycemia, determine the cause (e.g., missed meal, exercise). - If no clear reason, lower dose by 10 to 20% -> if HbA1c over target range: box n3\nBox n3 (action): Adding prandial doses • Start with adding a second prandial dose and follow titration schedule • Recheck HbA1c in 3 months • If HbA1c still elevated, adjust regimen based on glucose patterns; consider adding a third prandial insulin dose\nDecision path: n1 -> [Home glucose* or HbA1c over target range] n2 -> [HbA1c over target range] n3\nUnreadable or ambiguous (not interpreted): Footnote text for the asterisk on 'Home glucose*' is not visible in the crop\n■ Insulin aspart protamine/insulin aspart 70/30 (Novolog 70/30) or insulin 70/30 NPH/REG (Novolin 70/30) - Note these are look-alike, sound-alike drugs.\n■ Need to have regular meal routines and not skip meals.\n■ Novolog 70/30 is preferred since it is administered 0-15 minutes before mealtime, while Novolin 70/30 is administered 30 minutes before eating.\n\nva_pbm_t2dm_pharmacotherapy_2025 page 9 (VA, advisory, 2025-04)\n\n \n \n \n \n \n \n \n \n \n \n \nFigure 6.  \nUsing prandial insulin  \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \nStarting prandial \ninsulin \n• Start with one \ndose before the \nlargest meal of \nthe day. \n• Use in addition to \nbasal insulin. \n• Begin with 4 units\nor 10% of basal \ndose. \n• Discontinue\nsulfonylurea, \nmeglitinides, and \nDPP-4 I. \nHome \nglucose* \nor HbA1c \nover \ntarget\nrange \nTitrating prandial \ninsulin \n• Increase dose by \n1 to 2 units or 10 \nto 15% twice \nweekly \n• If having \nhypoglycemia, \ndetermine the \ncause (e.g., \nmissed meal, \nexercise). \n- If no clear \nreason, lower \ndose by 10 to 20% \nHbA1c \nover \ntarget \nrange \n \nAdding prandial \ndoses \n• Start with adding \na second prandial \ndose and follow \ntitration schedule \n• Recheck HbA1c in \n3 months \n• If HbA1c still\nelevated, adjust \nregimen based on \nglucose patterns; \nconsider adding a \nthird prandial \ninsulin dose \n*Post-prandial glucose or next premeal glucose over target range. Adjust prandial insulin based on patterns.\nConsider using a pre-mixed insulin if the Veteran is having difficulty with multiple injections.1,2,49 \n■Insulin aspart protamine/insulin aspart 70/30 (Novolog 70/30) or insulin 70/30 NPH/REG \n(Novolin 70/30) – Note these are look-alike, sound-alike drugs. \n■Need to have regular meal routines and not skip meals. \n■Novolog 70/30 is preferred since it is administered 0–15 minutes before mealtime, while \nNovolin 70/30 is administered 30 minutes before eating. \nEnsure patient adherence before changing therapy. \nProvide instructions and demonstrate proper technique for insulin and other injectable products. \nReview all medications to ensure they are being used correctly before considering dose \nadjustments or changes in therapy. \nSee VA Instructional Videos in the Veteran Health Library. How to Give Yourself a \nSubcutaneous Injection, How to Use Your Insulin Pen, How to Use Your GLP-1 Agonist Pen. \nDiabetes Self-Management Education and Support (DSMES) \nDSMES should be offered:1,2 \n■At diagnosis, annually, or when not meeting treatment goals. \n■When complicating factors develop, or transitions in life and care occur. \n■VA DSMES Resources: Diabetes Self-Management Education and Support (DSMES) - \nNutrition and Food Services (va.gov). \n7\n  \n",
+    "va_pbm_t2dm_clinicians_guide:p17": "va_pbm_t2dm_clinicians_guide (VA, advisory, 2020-05)\nA VA Clinician's Guide to Diabetes Management in Primary Care (IB 10-1402) > Type 2 Diabetes A VA Clinician’s Guide to Diabetes Management in Primary Care (2020) > Initiating insulin > Adding prandial (meal-time insulin) 6 > CLINICAL PEARL\n[p 17]\nWhen basal insulin is added to existing therapy:\nWhen prandial insulin is added to basal insulin and existing therapy:\nContinue metformin, SGLT-2, GLP-1, DPP-4, and/or sulfonylurea.\nContinue metformin, DPP-4, SGLT-2, or GLP-1.\nDiscontinue sulfonylurea due to risk of hypoglycemia.\nTZD can be continued if patient does not have heart failure.\nIf hypoglycemia occurs, adjust the dose of prandial or basal insulin (based on readings and symptoms) before adjusting metformin, DPP-4, SGLT-2, or GLP-1.\nKeep in mind hypoglycemia risk. Reduce the dose of basal insulin if hypoglycemia occurs.\n\nva_pbm_t2dm_clinicians_guide (VA, advisory, 2020-05)\nA VA Clinician's Guide to Diabetes Management in Primary Care (IB 10-1402) … (2020) > Initiating insulin > Adding prandial (meal-time insulin) 6 > Figure 10. Types, frequency, and dosages of insulin should be individualized based on the following factors:\n[p 16]\n[Table: Figure 10. Types, frequency, and dosages of insulin should be individualized based on the following factors:] (PDF page 16)\nAge and weight | • Make slower adjustments in older patients. • Patients with obesity may need higher insulin doses due to insulin resistance.\nComorbid conditions and concomitant medications | Some conditions and medications can increase risk of hypoglycemia or decrease ability to recognize symptoms (e.g., chronic kidney disease, use of beta blockers, or dialysis). Dosing adjustments should be made slowly.\nPresence of autonomic neuropathy | Patients with autonomic neuropathy may not recognize hypoglycemic symptoms.\nAbility to monitor glucose levels and accurately inject insulin | Making the insulin regimen less complicated (e.g., basal only regimens) and using pen devices may be more beneficial in these patients.\nComplexity of management strategy | Some management strategies are more complex than others (e.g., number of injections, dosing based on carbohydrate intake). Consider mixed insulins to simplify regimen in appropriate patients.\nRisks of hypoglycemia versus benefits of tight control | It is important to weigh the risks and benefits when evaluating the management strategy.\nMagnitude and pattern of hypoglycemia | Dose changes should be made slowly and in small increments when patients have frequent hypoglycemia and/or if the magnitude of hypoglycemia is significant.\n[p 17]\n[Figure, text_image] Clinical Pearl: When basal insulin is added to existing therapy (PDF page 17). Machine-generated visual interpretation; status: machine-interpreted from the page image by a vision model; structure and OCR cross-check passed.\nA lavender callout box labeled \"CLINICAL PEARL\", with a gray sphere at its upper left corner and a purple stopwatch icon at the bottom. Text verbatim: \"CLINICAL PEARL. When basal insulin is added to existing therapy: • Continue metformin, SGLT-2, GLP-1, DPP-4, and/or sulfonylurea. • TZD can be continued if patient does not have heart failure. • Keep in mind hypoglycemia risk. Reduce the dose of basal insulin if hypoglycemia occurs.\"\n[Figure, text_image] Clinical Pearl: When prandial insulin is added to basal insulin and existing therapy (PDF page 17). Machine-generated visual interpretation; status: machine-interpreted from the page image by a vision model; structure and OCR cross-check passed.\nA peach-colored callout box with a gray sphere ornament at the top left and a crossed knife-and-fork icon at the bottom. Text verbatim: \"CLINICAL PEARL\" / \"When prandial insulin is added to basal insulin and existing therapy:\" / \"• Continue metformin, DPP-4, SGLT-2, or GLP-1.\" / \"• Discontinue sulfonylurea due to risk of hypoglycemia.\" / \"• If hypoglycemia occurs, adjust the dose of prandial or basal insulin (based on readings and symptoms) before adjusting metformin, DPP-4, SGLT-2, or GLP-1.\"\n\nva_pbm_t2dm_clinicians_guide page 17 (VA, advisory, 2020-05)\n\nU.S. DEPARTMENT OF VETERANS AFFAIRS\n15\nEnsure patient adherence before \nchanging therapy. \n✓  Provide instructions and demonstrate proper \ntechnique for insulin and other products \nadministered by injection. \n✓  Review each medication, taken orally and/or \nby injection, to ensure patient is taking them \ncorrectly before considering dose adjustments \nand/or changing therapy. \n✓  See VA Instructional Videos in the Veteran \nHealth Library. How to Give Yourself a \nSubcutaneous Injection: www.youtube.com/\nwatch?v=wXjQHAxopzk \nCLINICAL PEARL \nWhen basal insulin is added \nto existing therapy:  \nCLINICAL PEARL \nWhen prandial insulin is added to \nbasal insulin and existing therapy:  \n• Continue metformin, SGLT-2, \nGLP-1, DPP-4, and/or \nsulfonylurea. \n• TZD can be continued if patient \ndoes not have heart failure. \n• Keep in mind hypoglycemia risk. \nReduce the dose of basal insulin \nif hypoglycemia occurs.  \n• Continue metformin, DPP-4, \nSGLT-2, or GLP-1. \n• Discontinue sulfonylurea due to \nrisk of hypoglycemia. \n• If hypoglycemia occurs, adjust \nthe dose of prandial or basal \ninsulin (based on readings and \nsymptoms) before adjusting \nmetformin, DPP-4, SGLT-2, \nor GLP-1. \n"
+  },
+  "cited_evidence_parts": {
+    "va_pbm_t2dm_pharmacotherapy_2025:p9": [
+      "va_pbm_t2dm_pharmacotherapy_2025 (VA, advisory, 2025-04)\nPharmacotherapy for Type 2 Diabetes Mellitus (T2DM) 2025: A VA Clinician's Summary (IB 10-1775) > Initiating insulin > Prandial (mealtime) insulin1,2\n[p 8]\nPrandial (mealtime) insulin 1,2\nPrandial insulins include aspart, glulisine, lispro, and regular.\n■ Consider GLP-1 RA before adding prandial insulin if inadequate glycemic control on basal insulin and one or more oral agents. 47\n■ Add prandial insulin when coverage is needed for meals. Consider when HbA1c continues to be above goal, basal insulin dose is > 0.5 units/kg, or glucose readings are elevated after meals.\n■ Rapid acting insulins like aspart, glulisine, and lispro should be administered 0-15 minutes before meals and are preferred to insulin regular due to easier administration.\n■ Insulin regular should be administered 30 minutes before meals. The longer time of onset and duration may increase hypoglycemia risk. 48\n[p 9]\nFigure 6. Using prandial insulin\n[Figure, flowchart] untitled in the image; see the section heading (PDF page 9). Machine-generated visual interpretation; status: machine-interpreted from the page image by a vision model; structure and OCR cross-check passed.\nBox n1 (start): Starting prandial insulin • Start with one dose before the largest meal of the day. • Use in addition to basal insulin. • Begin with 4 units or 10% of basal dose. • Discontinue sulfonylurea, meglitinides, and DPP-4 I. -> if Home glucose* or HbA1c over target range: box n2\nBox n2 (action): Titrating prandial insulin • Increase dose by 1 to 2 units or 10 to 15% twice weekly • If having hypoglycemia, determine the cause (e.g., missed meal, exercise). - If no clear reason, lower dose by 10 to 20% -> if HbA1c over target range: box n3\nBox n3 (action): Adding prandial doses • Start with adding a second prandial dose and follow titration schedule • Recheck HbA1c in 3 months • If HbA1c still elevated, adjust regimen based on glucose patterns; consider adding a third prandial insulin dose\nDecision path: n1 -> [Home glucose* or HbA1c over target range] n2 -> [HbA1c over target range] n3\nUnreadable or ambiguous (not interpreted): Footnote text for the asterisk on 'Home glucose*' is not visible in the crop\n■ Insulin aspart protamine/insulin aspart 70/30 (Novolog 70/30) or insulin 70/30 NPH/REG (Novolin 70/30) - Note these are look-alike, sound-alike drugs.\n■ Need to have regular meal routines and not skip meals.\n■ Novolog 70/30 is preferred since it is administered 0-15 minutes before mealtime, while Novolin 70/30 is administered 30 minutes before eating.",
+      "va_pbm_t2dm_pharmacotherapy_2025 page 9 (VA, advisory, 2025-04)\n\n \n \n \n \n \n \n \n \n \n \n \nFigure 6.  \nUsing prandial insulin  \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \nStarting prandial \ninsulin \n• Start with one \ndose before the \nlargest meal of \nthe day. \n• Use in addition to \nbasal insulin. \n• Begin with 4 units\nor 10% of basal \ndose. \n• Discontinue\nsulfonylurea, \nmeglitinides, and \nDPP-4 I. \nHome \nglucose* \nor HbA1c \nover \ntarget\nrange \nTitrating prandial \ninsulin \n• Increase dose by \n1 to 2 units or 10 \nto 15% twice \nweekly \n• If having \nhypoglycemia, \ndetermine the \ncause (e.g., \nmissed meal, \nexercise). \n- If no clear \nreason, lower \ndose by 10 to 20% \nHbA1c \nover \ntarget \nrange \n \nAdding prandial \ndoses \n• Start with adding \na second prandial \ndose and follow \ntitration schedule \n• Recheck HbA1c in \n3 months \n• If HbA1c still\nelevated, adjust \nregimen based on \nglucose patterns; \nconsider adding a \nthird prandial \ninsulin dose \n*Post-prandial glucose or next premeal glucose over target range. Adjust prandial insulin based on patterns.\nConsider using a pre-mixed insulin if the Veteran is having difficulty with multiple injections.1,2,49 \n■Insulin aspart protamine/insulin aspart 70/30 (Novolog 70/30) or insulin 70/30 NPH/REG \n(Novolin 70/30) – Note these are look-alike, sound-alike drugs. \n■Need to have regular meal routines and not skip meals. \n■Novolog 70/30 is preferred since it is administered 0–15 minutes before mealtime, while \nNovolin 70/30 is administered 30 minutes before eating. \nEnsure patient adherence before changing therapy. \nProvide instructions and demonstrate proper technique for insulin and other injectable products. \nReview all medications to ensure they are being used correctly before considering dose \nadjustments or changes in therapy. \nSee VA Instructional Videos in the Veteran Health Library. How to Give Yourself a \nSubcutaneous Injection, How to Use Your Insulin Pen, How to Use Your GLP-1 Agonist Pen. \nDiabetes Self-Management Education and Support (DSMES) \nDSMES should be offered:1,2 \n■At diagnosis, annually, or when not meeting treatment goals. \n■When complicating factors develop, or transitions in life and care occur. \n■VA DSMES Resources: Diabetes Self-Management Education and Support (DSMES) - \nNutrition and Food Services (va.gov). \n7\n  \n"
+    ],
+    "va_pbm_t2dm_clinicians_guide:p17": [
+      "va_pbm_t2dm_clinicians_guide (VA, advisory, 2020-05)\nA VA Clinician's Guide to Diabetes Management in Primary Care (IB 10-1402) > Type 2 Diabetes A VA Clinician’s Guide to Diabetes Management in Primary Care (2020) > Initiating insulin > Adding prandial (meal-time insulin) 6 > CLINICAL PEARL\n[p 17]\nWhen basal insulin is added to existing therapy:\nWhen prandial insulin is added to basal insulin and existing therapy:\nContinue metformin, SGLT-2, GLP-1, DPP-4, and/or sulfonylurea.\nContinue metformin, DPP-4, SGLT-2, or GLP-1.\nDiscontinue sulfonylurea due to risk of hypoglycemia.\nTZD can be continued if patient does not have heart failure.\nIf hypoglycemia occurs, adjust the dose of prandial or basal insulin (based on readings and symptoms) before adjusting metformin, DPP-4, SGLT-2, or GLP-1.\nKeep in mind hypoglycemia risk. Reduce the dose of basal insulin if hypoglycemia occurs.\n\nva_pbm_t2dm_clinicians_guide (VA, advisory, 2020-05)\nA VA Clinician's Guide to Diabetes Management in Primary Care (IB 10-1402) … (2020) > Initiating insulin > Adding prandial (meal-time insulin) 6 > Figure 10. Types, frequency, and dosages of insulin should be individualized based on the following factors:\n[p 16]\n[Table: Figure 10. Types, frequency, and dosages of insulin should be individualized based on the following factors:] (PDF page 16)\nAge and weight | • Make slower adjustments in older patients. • Patients with obesity may need higher insulin doses due to insulin resistance.\nComorbid conditions and concomitant medications | Some conditions and medications can increase risk of hypoglycemia or decrease ability to recognize symptoms (e.g., chronic kidney disease, use of beta blockers, or dialysis). Dosing adjustments should be made slowly.\nPresence of autonomic neuropathy | Patients with autonomic neuropathy may not recognize hypoglycemic symptoms.\nAbility to monitor glucose levels and accurately inject insulin | Making the insulin regimen less complicated (e.g., basal only regimens) and using pen devices may be more beneficial in these patients.\nComplexity of management strategy | Some management strategies are more complex than others (e.g., number of injections, dosing based on carbohydrate intake). Consider mixed insulins to simplify regimen in appropriate patients.\nRisks of hypoglycemia versus benefits of tight control | It is important to weigh the risks and benefits when evaluating the management strategy.\nMagnitude and pattern of hypoglycemia | Dose changes should be made slowly and in small increments when patients have frequent hypoglycemia and/or if the magnitude of hypoglycemia is significant.\n[p 17]\n[Figure, text_image] Clinical Pearl: When basal insulin is added to existing therapy (PDF page 17). Machine-generated visual interpretation; status: machine-interpreted from the page image by a vision model; structure and OCR cross-check passed.\nA lavender callout box labeled \"CLINICAL PEARL\", with a gray sphere at its upper left corner and a purple stopwatch icon at the bottom. Text verbatim: \"CLINICAL PEARL. When basal insulin is added to existing therapy: • Continue metformin, SGLT-2, GLP-1, DPP-4, and/or sulfonylurea. • TZD can be continued if patient does not have heart failure. • Keep in mind hypoglycemia risk. Reduce the dose of basal insulin if hypoglycemia occurs.\"\n[Figure, text_image] Clinical Pearl: When prandial insulin is added to basal insulin and existing therapy (PDF page 17). Machine-generated visual interpretation; status: machine-interpreted from the page image by a vision model; structure and OCR cross-check passed.\nA peach-colored callout box with a gray sphere ornament at the top left and a crossed knife-and-fork icon at the bottom. Text verbatim: \"CLINICAL PEARL\" / \"When prandial insulin is added to basal insulin and existing therapy:\" / \"• Continue metformin, DPP-4, SGLT-2, or GLP-1.\" / \"• Discontinue sulfonylurea due to risk of hypoglycemia.\" / \"• If hypoglycemia occurs, adjust the dose of prandial or basal insulin (based on readings and symptoms) before adjusting metformin, DPP-4, SGLT-2, or GLP-1.\"",
+      "va_pbm_t2dm_clinicians_guide page 17 (VA, advisory, 2020-05)\n\nU.S. DEPARTMENT OF VETERANS AFFAIRS\n15\nEnsure patient adherence before \nchanging therapy. \n✓  Provide instructions and demonstrate proper \ntechnique for insulin and other products \nadministered by injection. \n✓  Review each medication, taken orally and/or \nby injection, to ensure patient is taking them \ncorrectly before considering dose adjustments \nand/or changing therapy. \n✓  See VA Instructional Videos in the Veteran \nHealth Library. How to Give Yourself a \nSubcutaneous Injection: www.youtube.com/\nwatch?v=wXjQHAxopzk \nCLINICAL PEARL \nWhen basal insulin is added \nto existing therapy:  \nCLINICAL PEARL \nWhen prandial insulin is added to \nbasal insulin and existing therapy:  \n• Continue metformin, SGLT-2, \nGLP-1, DPP-4, and/or \nsulfonylurea. \n• TZD can be continued if patient \ndoes not have heart failure. \n• Keep in mind hypoglycemia risk. \nReduce the dose of basal insulin \nif hypoglycemia occurs.  \n• Continue metformin, DPP-4, \nSGLT-2, or GLP-1. \n• Discontinue sulfonylurea due to \nrisk of hypoglycemia. \n• If hypoglycemia occurs, adjust \nthe dose of prandial or basal \ninsulin (based on readings and \nsymptoms) before adjusting \nmetformin, DPP-4, SGLT-2, \nor GLP-1. \n"
+    ]
+  },
+  "cost_note": "each call priced at its serving role's rates (llm.<role>.prices_per_mtok)",
+  "request_started_utc": "2026-10-18T22:20:37.002389+00:00",
+  "citation_check": {
+    "t_start": 17.198,
+    "duration_s": 0.0
+  }
+}

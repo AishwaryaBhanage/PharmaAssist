@@ -1,0 +1,190 @@
+{
+  "question": "For OUD with chronic pain, can buprenorphine continue long term, can doses be split, and what monitoring is needed?",
+  "status": "answered",
+  "assumption": "Assuming VA clinical guidance (clinical question, no program named).",
+  "answer": "Assuming VA guidance:\n\n- **Long term:** The VA/DoD 2022 CPG doesn't set a stop date. It suggests buprenorphine over full agonists for daily opioids (weak for). Bup/naloxone may be the preferred opioid for comorbid pain and OUD. The CPG found insufficient evidence to favor methadone, buprenorphine or XR-naltrexone for OUD with chronic pain.\n- **Splitting:** Yes. For patients on bup or bup/naloxone for OUD, the 24-hr dose can be split BID or TID for pain. Doses up to 16–24 mg/day in divided doses are allowed if needed.\n- **Monitoring (VA PBM, 2021):** Check at baseline and at least annually. Check more often at initiation or with unexpected results. Items:\n  - PEG pain score\n  - PDMP\n  - UDS\n  - Renal/hepatic function\n  - Suicide screen\n  - Naloxone and overdose education\n  - ECG if at QTc risk\n\nPain and OUD prescribing requires a DEA-X waivered clinician, and the Rx should say \"for pain management.\"",
+  "citations": [
+    {
+      "doc_id": "va_dod_cpg_opioids_2022",
+      "page": 105,
+      "link": "https://www.healthquality.va.gov/guidelines/Pain/cot/VADoDOpioidsCPG.pdf#page=105",
+      "flag": null
+    },
+    {
+      "doc_id": "va_dod_cpg_opioids_2022",
+      "page": 106,
+      "link": "https://www.healthquality.va.gov/guidelines/Pain/cot/VADoDOpioidsCPG.pdf#page=106",
+      "flag": null
+    },
+    {
+      "doc_id": "va_dod_cpg_opioids_2022",
+      "page": 33,
+      "link": "https://www.healthquality.va.gov/guidelines/Pain/cot/VADoDOpioidsCPG.pdf#page=33",
+      "flag": null
+    },
+    {
+      "doc_id": "va_pbm_bup_chronic_pain",
+      "page": 4,
+      "link": "https://www.pbm.va.gov/PBM/AcademicDetailingService/Documents/Academic_Detailing_Educational_Material_Catalog/IB_1497_Provider_BupChronicPain.pdf#page=4",
+      "flag": null
+    },
+    {
+      "doc_id": "va_pbm_bup_chronic_pain",
+      "page": 3,
+      "link": "https://www.pbm.va.gov/PBM/AcademicDetailingService/Documents/Academic_Detailing_Educational_Material_Catalog/IB_1497_Provider_BupChronicPain.pdf#page=3",
+      "flag": null
+    }
+  ],
+  "conflicts_noted": [],
+  "flags": [],
+  "answered_by": "claude-sonnet-5-5",
+  "fallback_used": false,
+  "timing_s": {
+    "total": 10.817,
+    "search": 0.063,
+    "search_cold": 0,
+    "search_warm": 0.063,
+    "read_page": 0.027,
+    "list_documents": 0,
+    "model_calls": [
+      2.249,
+      1.534,
+      1.566,
+      5.377
+    ]
+  },
+  "index_warm_at_start": true,
+  "lookups": 3,
+  "tokens": {
+    "input": 10,
+    "output": 1006,
+    "cache_read": 21069,
+    "cache_write": 13243
+  },
+  "cost_usd": 0.047401,
+  "pages_seen": [
+    "va_dod_cpg_opioids_2022:p104",
+    "va_dod_cpg_opioids_2022:p105",
+    "va_dod_cpg_opioids_2022:p106",
+    "va_dod_cpg_opioids_2022:p130",
+    "va_dod_cpg_opioids_2022:p169",
+    "va_dod_cpg_opioids_2022:p33",
+    "va_dod_cpg_opioids_2022:p44",
+    "va_pbm_bup_chronic_pain:p1",
+    "va_pbm_bup_chronic_pain:p3",
+    "va_pbm_bup_chronic_pain:p4"
+  ],
+  "started_at": "2026-10-14T22:03:12+00:00",
+  "config": {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium",
+    "setup": "baseline",
+    "max_tool_calls": 6,
+    "deadline_s": 25,
+    "search_k": 8
+  },
+  "model_calls": [
+    {
+      "duration_s": 2.249,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 4,
+        "output": 119,
+        "cache_read": 0,
+        "cache_write": 2254
+      }
+    },
+    {
+      "duration_s": 1.534,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 2,
+        "output": 115,
+        "cache_read": 2254,
+        "cache_write": 6314
+      }
+    },
+    {
+      "duration_s": 1.566,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 2,
+        "output": 85,
+        "cache_read": 8568,
+        "cache_write": 1679
+      }
+    },
+    {
+      "duration_s": 5.377,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 2,
+        "output": 687,
+        "cache_read": 10247,
+        "cache_write": 2996
+      }
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "search_documents",
+      "input": {
+        "query": "buprenorphine opioid use disorder chronic pain long-term split dosing monitoring",
+        "program": "VA",
+        "k": 10
+      },
+      "duration_s": 0.063,
+      "is_error": false,
+      "pages": [
+        "va_dod_cpg_opioids_2022:p104",
+        "va_pbm_bup_chronic_pain:p1",
+        "va_dod_cpg_opioids_2022:p105",
+        "va_pbm_bup_chronic_pain:p4",
+        "va_dod_cpg_opioids_2022:p106",
+        "va_dod_cpg_opioids_2022:p44",
+        "va_dod_cpg_opioids_2022:p130",
+        "va_dod_cpg_opioids_2022:p105",
+        "va_dod_cpg_opioids_2022:p33",
+        "va_dod_cpg_opioids_2022:p169"
+      ],
+      "index_loaded": true
+    },
+    {
+      "name": "read_page",
+      "input": {
+        "doc_id": "va_pbm_bup_chronic_pain",
+        "page": 3
+      },
+      "duration_s": 0.013,
+      "is_error": false,
+      "pages": [
+        "va_pbm_bup_chronic_pain:p3"
+      ]
+    },
+    {
+      "name": "read_page",
+      "input": {
+        "doc_id": "va_pbm_bup_chronic_pain",
+        "page": 4
+      },
+      "duration_s": 0.014,
+      "is_error": false,
+      "pages": [
+        "va_pbm_bup_chronic_pain:p4"
+      ]
+    }
+  ],
+  "cost_note": "priced at the requested model's rates; a fallback hop bills at its own rates"
+}

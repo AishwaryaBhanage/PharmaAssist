@@ -1,0 +1,112 @@
+{
+  "question": "After prescriber approval, what code clears a Part D 90-MME alert? Do our documents specify one?",
+  "status": "answered",
+  "assumption": "Assuming Medicare Part D (90-MME care coordination edit).",
+  "answer": "Assuming Medicare Part D: **No, the documents don't specify a code.** The CMS pharmacist guide (12/19/2022) says to consult the prescriber, document the discussion (date, time, prescriber name, brief note), and \"submit the appropriate override code.\" It doesn't name the code, such as an NCPDP DUR/PPS value. It also says plans must allow POS overrides of all opioid alerts, and that overrides for exemptions go \"with a transaction code or by contacting the plan directly.\"\n\nGet the exact code from the plan's payer sheet or the plan itself. No specific value appears in these documents.\n\nIf a recent prescriber consult and current PDMP data are already in hand, repeat consultation isn't expected.",
+  "citations": [
+    {
+      "doc_id": "cms_partd_opioid_pharmacists_2022",
+      "page": 1,
+      "link": "https://www.cms.gov/files/document/medicare-part-d-opioid-policies-information-pharmacists-december-19-2022.pdf#page=1",
+      "flag": null
+    },
+    {
+      "doc_id": "cms_partd_opioid_pharmacists_2022",
+      "page": 2,
+      "link": "https://www.cms.gov/files/document/medicare-part-d-opioid-policies-information-pharmacists-december-19-2022.pdf#page=2",
+      "flag": null
+    }
+  ],
+  "conflicts_noted": [],
+  "flags": [],
+  "answered_by": "claude-sonnet-5-5",
+  "fallback_used": false,
+  "timing_s": {
+    "total": 6.883,
+    "search": 0.062,
+    "search_cold": 0,
+    "search_warm": 0.062,
+    "read_page": 0,
+    "list_documents": 0,
+    "model_calls": [
+      2.203,
+      4.618
+    ]
+  },
+  "index_warm_at_start": true,
+  "lookups": 1,
+  "tokens": {
+    "input": 6,
+    "output": 582,
+    "cache_read": 2248,
+    "cache_write": 6985
+  },
+  "cost_usd": 0.023744,
+  "pages_seen": [
+    "cms_partd_dmp_guidance_2019:p37",
+    "cms_partd_dmp_guidance_2019:p9",
+    "cms_partd_opioid_pharmacists_2022:p1",
+    "cms_partd_opioid_pharmacists_2022:p2"
+  ],
+  "started_at": "2026-10-14T22:04:01+00:00",
+  "config": {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium",
+    "setup": "baseline",
+    "max_tool_calls": 6,
+    "deadline_s": 25,
+    "search_k": 8
+  },
+  "model_calls": [
+    {
+      "duration_s": 2.203,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 4,
+        "output": 118,
+        "cache_read": 0,
+        "cache_write": 2248
+      }
+    },
+    {
+      "duration_s": 4.618,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 2,
+        "output": 464,
+        "cache_read": 2248,
+        "cache_write": 4737
+      }
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "search_documents",
+      "input": {
+        "query": "90 MME opioid safety edit pharmacist override submission clarification code",
+        "program": "Medicare Part D",
+        "k": 8
+      },
+      "duration_s": 0.062,
+      "is_error": false,
+      "pages": [
+        "cms_partd_opioid_pharmacists_2022:p1",
+        "cms_partd_opioid_pharmacists_2022:p2",
+        "cms_partd_dmp_guidance_2019:p37",
+        "cms_partd_opioid_pharmacists_2022:p1",
+        "cms_partd_dmp_guidance_2019:p37",
+        "cms_partd_opioid_pharmacists_2022:p2",
+        "cms_partd_dmp_guidance_2019:p37",
+        "cms_partd_dmp_guidance_2019:p9"
+      ],
+      "index_loaded": true
+    }
+  ],
+  "cost_note": "priced at the requested model's rates; a fallback hop bills at its own rates"
+}

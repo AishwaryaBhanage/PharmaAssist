@@ -1,0 +1,147 @@
+{
+  "question": "Our old CMS memo says Part D drug management programs are optional and excludes buprenorphine for MAT. The newer sheet says every plan needs a DMP. Can the plan count this patient's Suboxone prescriber and pharmacy—and does that mean their OUD treatment should be blocked?",
+  "status": "answered",
+  "assumption": "Medicare Part D (DMP question); the 2018 CMS memo is the \"old\" memo and the 12/2022 pharmacist sheet is the \"newer\" one.",
+  "answer": "Assuming Medicare Part D:\n\n1. **Counting:** Yes. For OMS minimum and supplemental criteria, the plan counts all prescription opioids, including all buprenorphine products for MAT, when identifying opioid prescribers and pharmacies. Buprenorphine is not counted toward average MME.\n2. **Blocking:** No. Buprenorphine for MAT is not a frequently abused drug (FAD) for DMP purposes, so a DMP limit (prescriber/pharmacy lock-in or beneficiary-specific POS edit) shouldn't restrict Suboxone. The 2022 sheet says MAT access should not be impacted.\n3. **\"Optional\":** The memo's text calls the DMP provisions voluntary, but it also says CMS expects all sponsors to implement DMPs. The newer sheet is consistent with that.\n4. **Process:** A plan limit requires written notice and appeal rights. For rejects, contact the plan.",
+  "citations": [
+    {
+      "doc_id": "cms_partd_dmp_guidance_2019",
+      "page": 9,
+      "link": "https://www.cms.gov/medicare/prescription-drug-coverage/prescriptiondrugcovcontra/downloads/2019-part-d-drug-management-program-policy-guidance-memo-november-20-2018-.pdf#page=9",
+      "flag": null
+    },
+    {
+      "doc_id": "cms_partd_dmp_guidance_2019",
+      "page": 6,
+      "link": "https://www.cms.gov/medicare/prescription-drug-coverage/prescriptiondrugcovcontra/downloads/2019-part-d-drug-management-program-policy-guidance-memo-november-20-2018-.pdf#page=6",
+      "flag": null
+    },
+    {
+      "doc_id": "cms_partd_dmp_guidance_2019",
+      "page": 32,
+      "link": "https://www.cms.gov/medicare/prescription-drug-coverage/prescriptiondrugcovcontra/downloads/2019-part-d-drug-management-program-policy-guidance-memo-november-20-2018-.pdf#page=32",
+      "flag": null
+    },
+    {
+      "doc_id": "cms_partd_opioid_pharmacists_2022",
+      "page": 1,
+      "link": "https://www.cms.gov/files/document/medicare-part-d-opioid-policies-information-pharmacists-december-19-2022.pdf#page=1",
+      "flag": null
+    },
+    {
+      "doc_id": "cms_partd_opioid_pharmacists_2022",
+      "page": 2,
+      "link": "https://www.cms.gov/files/document/medicare-part-d-opioid-policies-information-pharmacists-december-19-2022.pdf#page=2",
+      "flag": null
+    }
+  ],
+  "conflicts_noted": [
+    "Apparent conflict: 2018 memo calls DMP provisions 'voluntary' (PACE FAQ) yet expects all sponsors to implement DMPs in 2019; 2022 CMS sheet treats DMPs as standard. Not a true conflict on buprenorphine: both exclude MAT buprenorphine from FADs/limits while still counting it for prescriber/pharmacy identification."
+  ],
+  "flags": [],
+  "answered_by": "claude-sonnet-5-5",
+  "fallback_used": false,
+  "timing_s": {
+    "total": 7.885,
+    "search": 0.077,
+    "search_cold": 0,
+    "search_warm": 0.077,
+    "read_page": 0,
+    "list_documents": 0.0,
+    "model_calls": [
+      2.56,
+      5.248
+    ]
+  },
+  "index_warm_at_start": true,
+  "lookups": 2,
+  "tokens": {
+    "input": 6,
+    "output": 957,
+    "cache_read": 2311,
+    "cache_write": 9982
+  },
+  "cost_usd": 0.034999,
+  "pages_seen": [
+    "cms_partd_dmp_guidance_2019:p12",
+    "cms_partd_dmp_guidance_2019:p13",
+    "cms_partd_dmp_guidance_2019:p14",
+    "cms_partd_dmp_guidance_2019:p32",
+    "cms_partd_dmp_guidance_2019:p33",
+    "cms_partd_dmp_guidance_2019:p35",
+    "cms_partd_dmp_guidance_2019:p6",
+    "cms_partd_dmp_guidance_2019:p9",
+    "cms_partd_opioid_pharmacists_2022:p1",
+    "cms_partd_opioid_pharmacists_2022:p2"
+  ],
+  "started_at": "2026-10-14T22:01:59+00:00",
+  "config": {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium",
+    "setup": "baseline",
+    "max_tool_calls": 6,
+    "deadline_s": 25,
+    "search_k": 8
+  },
+  "model_calls": [
+    {
+      "duration_s": 2.56,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 4,
+        "output": 158,
+        "cache_read": 0,
+        "cache_write": 2311
+      }
+    },
+    {
+      "duration_s": 5.248,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 2,
+        "output": 799,
+        "cache_read": 2311,
+        "cache_write": 7671
+      }
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "search_documents",
+      "input": {
+        "query": "drug management program buprenorphine MAT exempt; plans required to have DMP; prescriber pharmacy lock-in",
+        "program": "Medicare Part D",
+        "k": 10
+      },
+      "duration_s": 0.077,
+      "is_error": false,
+      "pages": [
+        "cms_partd_opioid_pharmacists_2022:p1",
+        "cms_partd_dmp_guidance_2019:p9",
+        "cms_partd_dmp_guidance_2019:p13",
+        "cms_partd_dmp_guidance_2019:p14",
+        "cms_partd_dmp_guidance_2019:p33",
+        "cms_partd_opioid_pharmacists_2022:p2",
+        "cms_partd_dmp_guidance_2019:p12",
+        "cms_partd_dmp_guidance_2019:p6",
+        "cms_partd_dmp_guidance_2019:p35",
+        "cms_partd_dmp_guidance_2019:p32"
+      ],
+      "index_loaded": true
+    },
+    {
+      "name": "list_documents",
+      "input": {},
+      "duration_s": 0.0,
+      "is_error": false,
+      "pages": []
+    }
+  ],
+  "cost_note": "priced at the requested model's rates; a fallback hop bills at its own rates"
+}

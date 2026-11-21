@@ -1,0 +1,263 @@
+{
+  "question": "The VA National Formulary lists semaglutide one way. My pt is on NY Medicaid. Is Ozempic covered for them?",
+  "request_id": "5b3ed7b1-8ced-4780-a704-745ad08058c6",
+  "status": "answered",
+  "agent_status": "answered",
+  "assumption": "Assuming NY Medicaid controls because the patient is on NY Medicaid; the VA National Formulary does not determine NYRx coverage.",
+  "answer": "Assuming NY Medicaid: **Ozempic® pen is covered on the NYRx PDL as preferred** in the GLP-1 RA–Type 2 Diabetes class. The class has **CC**: confirm an FDA-approved/compendia-supported and Medicaid-covered indication; **PA is required if the patient is using a GLP-1 with a DPP-IV concurrently**.  \n\nCaution: the PDL also lists **Ozempic® tablets as non-preferred**; non-preferred drugs require PA. If your patient is on standard Ozempic injection/pen, use the **preferred pen** row. VA lists semaglutide injection as PA-F, but that is not controlling for NY Medicaid.",
+  "citations": [
+    {
+      "doc_id": "ny_medicaid_pdl",
+      "page": 34,
+      "link": "https://newyork.fhsc.com/downloads/providers/NYRx_PDP_PDL.pdf#page=34",
+      "flag": null,
+      "locator": "ny_medicaid_pdl:p34"
+    },
+    {
+      "doc_id": "va_national_formulary_2026_09",
+      "page": null,
+      "link": "https://www.pbm.va.gov/PBM/nationalformulary/VA_National_Formulary_SEPT_2026.xlsx",
+      "flag": null,
+      "locator": "va_national_formulary_2026_09:r1697",
+      "row": 1697
+    }
+  ],
+  "conflicts_noted": [],
+  "flags": [],
+  "needs_review": false,
+  "words": {
+    "displayed": 87,
+    "rendered": 87
+  },
+  "answered_by": "gpt-5.5-2026-04-23",
+  "provider": "openai",
+  "model": "gpt-5.5-2026-04-23",
+  "fallback_used": false,
+  "timing_s": {
+    "total": 8.719,
+    "search": 0,
+    "read_page": 0,
+    "list_documents": 0,
+    "lookups": 0.01,
+    "model_calls": [
+      2.529,
+      6.179
+    ]
+  },
+  "lookups": 2,
+  "tokens": {
+    "input": 1731,
+    "output": 563,
+    "cache_read": 3072,
+    "cache_write": 0
+  },
+  "cost_usd": 0.027081,
+  "pages_seen": [
+    "ny_medicaid_pdl:p1",
+    "ny_medicaid_pdl:p34",
+    "va_national_formulary_2026_09:r16",
+    "va_national_formulary_2026_09:r1697",
+    "va_national_formulary_2026_09:r7",
+    "va_national_formulary_2026_09:r9"
+  ],
+  "trace_id": null,
+  "started_at": "2026-10-18T13:10:45+00:00",
+  "config": {
+    "primary": "gpt-5.5",
+    "fallback": "claude-sonnet-5-5",
+    "effort": "medium",
+    "search": {
+      "mode": "hybrid",
+      "rrf_k": 60,
+      "fusion_depth": 100,
+      "return_parents": true,
+      "rerank": null
+    },
+    "max_tool_calls": 6,
+    "deadline_s": 25,
+    "search_k": 8
+  },
+  "structured_lookups": true,
+  "context": {},
+  "model_answer": "Assuming NY Medicaid: **Ozempic® pen is covered on the NYRx PDL as preferred** in the GLP-1 RA–Type 2 Diabetes class. The class has **CC**: confirm an FDA-approved/compendia-supported and Medicaid-covered indication; **PA is required if the patient is using a GLP-1 with a DPP-IV concurrently**.  \n\nCaution: the PDL also lists **Ozempic® tablets as non-preferred**; non-preferred drugs require PA. If your patient is on standard Ozempic injection/pen, use the **preferred pen** row. VA lists semaglutide injection as PA-F, but that is not controlling for NY Medicaid.",
+  "model_citations": [
+    {
+      "doc_id": "ny_medicaid_pdl",
+      "page": 34,
+      "link": "https://newyork.fhsc.com/downloads/providers/NYRx_PDP_PDL.pdf#page=34",
+      "flag": null,
+      "locator": "ny_medicaid_pdl:p34"
+    },
+    {
+      "doc_id": "va_national_formulary_2026_09",
+      "page": null,
+      "link": "https://www.pbm.va.gov/PBM/nationalformulary/VA_National_Formulary_SEPT_2026.xlsx",
+      "flag": null,
+      "locator": "va_national_formulary_2026_09:r1697",
+      "row": 1697
+    }
+  ],
+  "model_calls": [
+    {
+      "t_start": 0.0,
+      "duration_s": 2.529,
+      "requested_model": "gpt-5.5",
+      "served_model": "gpt-5.5-2026-04-23",
+      "provider": "openai",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 319,
+        "output": 126,
+        "cache_read": 1536,
+        "cache_write": 0
+      },
+      "cost_usd": 0.006143,
+      "response_id": "resp_0ef66d047bd808ec016ad4c54cda2c87d2aa8b33004ceafc45",
+      "input_messages": [
+        {
+          "role": "user",
+          "text": "Today's date: 2026-10-18\n\nQuestion: The VA National Formulary lists semaglutide one way. My pt is on NY Medicaid. Is Ozempic covered for them?"
+        }
+      ],
+      "output": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "call_L15JzFlaPm4RPR4MKgCqB5rN",
+            "name": "lookup_ny_medicaid_drug",
+            "arguments": {
+              "drug": "Ozempic"
+            }
+          },
+          {
+            "id": "call_qn8wzKFv6omXt64BRSajxdqb",
+            "name": "lookup_va_formulary",
+            "arguments": {
+              "drug": "semaglutide"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "t_start": 2.539,
+      "duration_s": 6.179,
+      "requested_model": "gpt-5.5",
+      "served_model": "gpt-5.5-2026-04-23",
+      "provider": "openai",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 1412,
+        "output": 437,
+        "cache_read": 1536,
+        "cache_write": 0
+      },
+      "cost_usd": 0.020938,
+      "response_id": "resp_0ef66d047bd808ec016ad4c54f66d087d29034bd2bffe4acc2",
+      "input_messages": [
+        {
+          "role": "tool",
+          "tool_results": [
+            {
+              "call_id": "call_L15JzFlaPm4RPR4MKgCqB5rN",
+              "is_error": false,
+              "content": "{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"Ozempic\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"multiple_matches\", \"classes\": [{\"drug_class\": \"Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes\", \"section\": \"VI. Endocrine and Metabolic Agents\", \"class_flags\": {\"CC\": \"Clinical Criteria: see the class's Coverage Parameters\"}, \"coverage_parameters\": \"CLINICAL CRITERIA (CC)\\nConfirm diagnosis of FDA-approved or compendia-supported\\nindication and Medicaid covered indication\\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently\", \"coverage_pages\": [34], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p34#row-7\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Ozempic® pen\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"name plus strength or dosage form\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-12\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Ozempic® tablets\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"name plus strength or dosage form\"}]}], \"note\": \"Several rows match. List the relevant ones, or state which one you assumed.\"}"
+            },
+            {
+              "call_id": "call_qn8wzKFv6omXt64BRSajxdqb",
+              "is_error": false,
+              "content": "{\"source\": \"VA National Formulary, sheet Formulary (header row 16)\", \"query\": {\"drug\": \"semaglutide\", \"dosage_form\": null}, \"rule\": {\"cite\": {\"doc_id\": \"va_national_formulary_2026_09\", \"row\": 7}, \"text\": \"The VANF is dosage form specific.  If a specific dosage form is not listed, the specific product in question should be considered non-formulary (although other dosage forms of that molecular entity may be included as formulary).  Dosage forms such as TAB and CAP, ORAL are considered immediate release.  Sustained release products are listed individually.  Formulary products may also be available in many dosage forms and strengths.  In the case of products with multiple dosage forms and strengths, not all forms and strengths need to be stocked.  Facilities should make those dosages available that are necessary to meet their patient needs.”\"}, \"pa_levels\": {\"cite\": {\"doc_id\": \"va_national_formulary_2026_09\", \"row\": 9}, \"text\": \"PA- There are three levels of Prior Authorization\\n• Prior Authorization-National (PA-N) refers to medications that are formulary, but require prior approval at the national level before dispensing.\\n• Prior Authorization-VISN (PA-V) refers to medications that are formulary, but require prior approval at the VISN level before dispensing.\\n• Prior Authorization-Facility (PA-F) refers to medications that are formulary, but require prior approval at the facility level before dispensing.\\nPrior Authorization is used to insure that the medication is appropriate for each individual Veteran.\"}, \"result\": \"exact_match\", \"rows\": [{\"row_id\": \"va_national_formulary_2026_09#Formulary#row-1697\", \"cite\": {\"doc_id\": \"va_national_formulary_2026_09\", \"row\": 1697}, \"sheet\": \"Formulary\", \"row\": 1697, \"matched_on\": \"generic name\", \"VA Class\": \"HS509\", \"Restriction\": \"PA-F\", \"Generic\": \"SEMAGLUTIDE (EQV-OZEMPIC)\", \"Dosage Form\": \"INJ,SOLN\", \"Comments\": \"\", \"U/E Formulary\": \"\", \"Clinical Guidance\": \"Criteria\", \"Restriction meaning\": \"PA-F: prior authorization required (see row 9)\"}]}"
+            }
+          ]
+        }
+      ],
+      "output": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "call_jG3xxEXjOQFCtCVOvdoyqTGY",
+            "name": "submit_answer",
+            "arguments": {
+              "status": "answered",
+              "assumption": "Assuming NY Medicaid controls because the patient is on NY Medicaid; the VA National Formulary does not determine NYRx coverage.",
+              "answer": "Assuming NY Medicaid: **Ozempic® pen is covered on the NYRx PDL as preferred** in the GLP-1 RA–Type 2 Diabetes class. The class has **CC**: confirm an FDA-approved/compendia-supported and Medicaid-covered indication; **PA is required if the patient is using a GLP-1 with a DPP-IV concurrently**.  \n\nCaution: the PDL also lists **Ozempic® tablets as non-preferred**; non-preferred drugs require PA. If your patient is on standard Ozempic injection/pen, use the **preferred pen** row. VA lists semaglutide injection as PA-F, but that is not controlling for NY Medicaid.",
+              "citations": [
+                {
+                  "doc_id": "ny_medicaid_pdl",
+                  "page": 34,
+                  "row": null
+                },
+                {
+                  "doc_id": "va_national_formulary_2026_09",
+                  "page": null,
+                  "row": 1697
+                }
+              ],
+              "conflicts_noted": []
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "lookup_ny_medicaid_drug",
+      "input": {
+        "drug": "Ozempic"
+      },
+      "duration_s": 0.006,
+      "is_error": false,
+      "pages": [
+        "ny_medicaid_pdl:p1",
+        "ny_medicaid_pdl:p34"
+      ],
+      "result": "{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"Ozempic\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"multiple_matches\", \"classes\": [{\"drug_class\": \"Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes\", \"section\": \"VI. Endocrine and Metabolic Agents\", \"class_flags\": {\"CC\": \"Clinical Criteria: see the class's Coverage Parameters\"}, \"coverage_parameters\": \"CLINICAL CRITERIA (CC)\\nConfirm diagnosis of FDA-approved or compendia-supported\\nindication and Medicaid covered indication\\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently\", \"coverage_pages\": [34], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p34#row-7\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Ozempic® pen\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"name plus strength or dosage form\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-12\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Ozempic® tablets\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"name plus strength or dosage form\"}]}], \"note\": \"Several rows match. List the relevant ones, or state which one you assumed.\"}",
+      "lookup": {
+        "result": "multiple_matches",
+        "rows": 2
+      },
+      "t_start": 2.529
+    },
+    {
+      "name": "lookup_va_formulary",
+      "input": {
+        "drug": "semaglutide"
+      },
+      "duration_s": 0.004,
+      "is_error": false,
+      "pages": [
+        "va_national_formulary_2026_09:r16",
+        "va_national_formulary_2026_09:r1697",
+        "va_national_formulary_2026_09:r7",
+        "va_national_formulary_2026_09:r9"
+      ],
+      "result": "{\"source\": \"VA National Formulary, sheet Formulary (header row 16)\", \"query\": {\"drug\": \"semaglutide\", \"dosage_form\": null}, \"rule\": {\"cite\": {\"doc_id\": \"va_national_formulary_2026_09\", \"row\": 7}, \"text\": \"The VANF is dosage form specific.  If a specific dosage form is not listed, the specific product in question should be considered non-formulary (although other dosage forms of that molecular entity may be included as formulary).  Dosage forms such as TAB and CAP, ORAL are considered immediate release.  Sustained release products are listed individually.  Formulary products may also be available in many dosage forms and strengths.  In the case of products with multiple dosage forms and strengths, not all forms and strengths need to be stocked.  Facilities should make those dosages available that are necessary to meet their patient needs.”\"}, \"pa_levels\": {\"cite\": {\"doc_id\": \"va_national_formulary_2026_09\", \"row\": 9}, \"text\": \"PA- There are three levels of Prior Authorization\\n• Prior Authorization-National (PA-N) refers to medications that are formulary, but require prior approval at the national level before dispensing.\\n• Prior Authorization-VISN (PA-V) refers to medications that are formulary, but require prior approval at the VISN level before dispensing.\\n• Prior Authorization-Facility (PA-F) refers to medications that are formulary, but require prior approval at the facility level before dispensing.\\nPrior Authorization is used to insure that the medication is appropriate for each individual Veteran.\"}, \"result\": \"exact_match\", \"rows\": [{\"row_id\": \"va_national_formulary_2026_09#Formulary#row-1697\", \"cite\": {\"doc_id\": \"va_national_formulary_2026_09\", \"row\": 1697}, \"sheet\": \"Formulary\", \"row\": 1697, \"matched_on\": \"generic name\", \"VA Class\": \"HS509\", \"Restriction\": \"PA-F\", \"Generic\": \"SEMAGLUTIDE (EQV-OZEMPIC)\", \"Dosage Form\": \"INJ,SOLN\", \"Comments\": \"\", \"U/E Formulary\": \"\", \"Clinical Guidance\": \"Criteria\", \"Restriction meaning\": \"PA-F: prior authorization required (see row 9)\"}]}",
+      "lookup": {
+        "result": "exact_match",
+        "rows": 1
+      },
+      "t_start": 2.535
+    }
+  ],
+  "cited_evidence": {
+    "ny_medicaid_pdl:p34": "{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"Ozempic\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"multiple_matches\", \"classes\": [{\"drug_class\": \"Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes\", \"section\": \"VI. Endocrine and Metabolic Agents\", \"class_flags\": {\"CC\": \"Clinical Criteria: see the class's Coverage Parameters\"}, \"coverage_parameters\": \"CLINICAL CRITERIA (CC)\\nConfirm diagnosis of FDA-approved or compendia-supported\\nindication and Medicaid covered indication\\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently\", \"coverage_pages\": [34], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p34#row-7\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Ozempic® pen\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"name plus strength or dosage form\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-12\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Ozempic® tablets\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"name plus strength or dosage form\"}]}], \"note\": \"Several rows match. List the relevant ones, or state which one you assumed.\"}",
+    "va_national_formulary_2026_09:r1697": "{\"source\": \"VA National Formulary, sheet Formulary (header row 16)\", \"query\": {\"drug\": \"semaglutide\", \"dosage_form\": null}, \"rule\": {\"cite\": {\"doc_id\": \"va_national_formulary_2026_09\", \"row\": 7}, \"text\": \"The VANF is dosage form specific.  If a specific dosage form is not listed, the specific product in question should be considered non-formulary (although other dosage forms of that molecular entity may be included as formulary).  Dosage forms such as TAB and CAP, ORAL are considered immediate release.  Sustained release products are listed individually.  Formulary products may also be available in many dosage forms and strengths.  In the case of products with multiple dosage forms and strengths, not all forms and strengths need to be stocked.  Facilities should make those dosages available that are necessary to meet their patient needs.”\"}, \"pa_levels\": {\"cite\": {\"doc_id\": \"va_national_formulary_2026_09\", \"row\": 9}, \"text\": \"PA- There are three levels of Prior Authorization\\n• Prior Authorization-National (PA-N) refers to medications that are formulary, but require prior approval at the national level before dispensing.\\n• Prior Authorization-VISN (PA-V) refers to medications that are formulary, but require prior approval at the VISN level before dispensing.\\n• Prior Authorization-Facility (PA-F) refers to medications that are formulary, but require prior approval at the facility level before dispensing.\\nPrior Authorization is used to insure that the medication is appropriate for each individual Veteran.\"}, \"result\": \"exact_match\", \"rows\": [{\"row_id\": \"va_national_formulary_2026_09#Formulary#row-1697\", \"cite\": {\"doc_id\": \"va_national_formulary_2026_09\", \"row\": 1697}, \"sheet\": \"Formulary\", \"row\": 1697, \"matched_on\": \"generic name\", \"VA Class\": \"HS509\", \"Restriction\": \"PA-F\", \"Generic\": \"SEMAGLUTIDE (EQV-OZEMPIC)\", \"Dosage Form\": \"INJ,SOLN\", \"Comments\": \"\", \"U/E Formulary\": \"\", \"Clinical Guidance\": \"Criteria\", \"Restriction meaning\": \"PA-F: prior authorization required (see row 9)\"}]}"
+  },
+  "cited_evidence_parts": {
+    "ny_medicaid_pdl:p34": [
+      "{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"Ozempic\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"multiple_matches\", \"classes\": [{\"drug_class\": \"Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes\", \"section\": \"VI. Endocrine and Metabolic Agents\", \"class_flags\": {\"CC\": \"Clinical Criteria: see the class's Coverage Parameters\"}, \"coverage_parameters\": \"CLINICAL CRITERIA (CC)\\nConfirm diagnosis of FDA-approved or compendia-supported\\nindication and Medicaid covered indication\\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently\", \"coverage_pages\": [34], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p34#row-7\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Ozempic® pen\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"name plus strength or dosage form\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-12\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Ozempic® tablets\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"name plus strength or dosage form\"}]}], \"note\": \"Several rows match. List the relevant ones, or state which one you assumed.\"}"
+    ],
+    "va_national_formulary_2026_09:r1697": [
+      "{\"source\": \"VA National Formulary, sheet Formulary (header row 16)\", \"query\": {\"drug\": \"semaglutide\", \"dosage_form\": null}, \"rule\": {\"cite\": {\"doc_id\": \"va_national_formulary_2026_09\", \"row\": 7}, \"text\": \"The VANF is dosage form specific.  If a specific dosage form is not listed, the specific product in question should be considered non-formulary (although other dosage forms of that molecular entity may be included as formulary).  Dosage forms such as TAB and CAP, ORAL are considered immediate release.  Sustained release products are listed individually.  Formulary products may also be available in many dosage forms and strengths.  In the case of products with multiple dosage forms and strengths, not all forms and strengths need to be stocked.  Facilities should make those dosages available that are necessary to meet their patient needs.”\"}, \"pa_levels\": {\"cite\": {\"doc_id\": \"va_national_formulary_2026_09\", \"row\": 9}, \"text\": \"PA- There are three levels of Prior Authorization\\n• Prior Authorization-National (PA-N) refers to medications that are formulary, but require prior approval at the national level before dispensing.\\n• Prior Authorization-VISN (PA-V) refers to medications that are formulary, but require prior approval at the VISN level before dispensing.\\n• Prior Authorization-Facility (PA-F) refers to medications that are formulary, but require prior approval at the facility level before dispensing.\\nPrior Authorization is used to insure that the medication is appropriate for each individual Veteran.\"}, \"result\": \"exact_match\", \"rows\": [{\"row_id\": \"va_national_formulary_2026_09#Formulary#row-1697\", \"cite\": {\"doc_id\": \"va_national_formulary_2026_09\", \"row\": 1697}, \"sheet\": \"Formulary\", \"row\": 1697, \"matched_on\": \"generic name\", \"VA Class\": \"HS509\", \"Restriction\": \"PA-F\", \"Generic\": \"SEMAGLUTIDE (EQV-OZEMPIC)\", \"Dosage Form\": \"INJ,SOLN\", \"Comments\": \"\", \"U/E Formulary\": \"\", \"Clinical Guidance\": \"Criteria\", \"Restriction meaning\": \"PA-F: prior authorization required (see row 9)\"}]}"
+    ]
+  },
+  "cost_note": "each call priced at its serving role's rates (llm.<role>.prices_per_mtok)",
+  "request_started_utc": "2026-10-18T13:10:36.696275+00:00",
+  "citation_check": {
+    "t_start": 8.718,
+    "duration_s": 0.001
+  }
+}

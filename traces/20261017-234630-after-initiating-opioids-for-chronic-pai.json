@@ -1,0 +1,425 @@
+{
+  "question": "After initiating opioids for chronic pain, when should the first reevaluation happen, and if the patient is stable without added risk factors, how often should they be reassessed?",
+  "status": "answered",
+  "assumption": "Assuming VA/DoD clinical guidance (clinical question, no program named).",
+  "answer": "Assuming VA/DoD guidance:\n\n1. **First reevaluation:** ≤30 days after initiating opioids (Strong for). The algorithm suggests 1–4 weeks, adjusted for risk factors, and not later than 30 days. The initial Rx is short, e.g., 1 week.\n2. **Stable patient, no added risk factors:** reassess every 1–3 months. Reassess sooner if risk factors emerge.\n3. The guideline's discussion treats every-90-days (CDC) as a reasonable starting point. It notes there is no evidence that any one interval is superior, so individualize.\n\nHigher-risk patients need a shorter prescribing interval and more intensive risk mitigation.",
+  "citations": [
+    {
+      "doc_id": "va_dod_cpg_opioids_2022",
+      "page": 26,
+      "link": "https://www.healthquality.va.gov/guidelines/Pain/cot/VADoDOpioidsCPG.pdf#page=26",
+      "flag": null,
+      "locator": "va_dod_cpg_opioids_2022:p26"
+    },
+    {
+      "doc_id": "va_dod_cpg_opioids_2022",
+      "page": 48,
+      "link": "https://www.healthquality.va.gov/guidelines/Pain/cot/VADoDOpioidsCPG.pdf#page=48",
+      "flag": null,
+      "locator": "va_dod_cpg_opioids_2022:p48"
+    },
+    {
+      "doc_id": "va_dod_cpg_opioids_2022",
+      "page": 61,
+      "link": "https://www.healthquality.va.gov/guidelines/Pain/cot/VADoDOpioidsCPG.pdf#page=61",
+      "flag": null,
+      "locator": "va_dod_cpg_opioids_2022:p61"
+    },
+    {
+      "doc_id": "va_dod_cpg_opioids_2022",
+      "page": 62,
+      "link": "https://www.healthquality.va.gov/guidelines/Pain/cot/VADoDOpioidsCPG.pdf#page=62",
+      "flag": null,
+      "locator": "va_dod_cpg_opioids_2022:p62"
+    }
+  ],
+  "conflicts_noted": [
+    "Apparent difference: algorithm says reassess in 1–3 months, while the discussion cites the CDC 90-day interval. Not a true conflict; 90 days is the upper end of the 1–3 month range."
+  ],
+  "flags": [],
+  "needs_review": false,
+  "words": {
+    "displayed": 91,
+    "rendered": 91
+  },
+  "answered_by": "claude-sonnet-5-5",
+  "fallback_used": false,
+  "timing_s": {
+    "total": 13.345,
+    "search": 7.374,
+    "search_cold": 0,
+    "search_warm": 7.374,
+    "read_page": 0,
+    "list_documents": 0,
+    "model_calls": [
+      1.422,
+      4.545
+    ]
+  },
+  "index_warm_at_start": true,
+  "lookups": 1,
+  "tokens": {
+    "input": 6,
+    "output": 686,
+    "cache_read": 3621,
+    "cache_write": 23321
+  },
+  "cost_usd": 0.065899,
+  "pages_seen": [
+    "va_dod_cpg_opioids_2022:p125",
+    "va_dod_cpg_opioids_2022:p126",
+    "va_dod_cpg_opioids_2022:p154",
+    "va_dod_cpg_opioids_2022:p155",
+    "va_dod_cpg_opioids_2022:p156",
+    "va_dod_cpg_opioids_2022:p157",
+    "va_dod_cpg_opioids_2022:p26",
+    "va_dod_cpg_opioids_2022:p33",
+    "va_dod_cpg_opioids_2022:p34",
+    "va_dod_cpg_opioids_2022:p48",
+    "va_dod_cpg_opioids_2022:p49",
+    "va_dod_cpg_opioids_2022:p50",
+    "va_dod_cpg_opioids_2022:p51",
+    "va_dod_cpg_opioids_2022:p52",
+    "va_dod_cpg_opioids_2022:p60",
+    "va_dod_cpg_opioids_2022:p61",
+    "va_dod_cpg_opioids_2022:p62"
+  ],
+  "started_at": "2026-10-18T03:46:30+00:00",
+  "config": {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium",
+    "setup": "docling_rerank_structured",
+    "max_tool_calls": 6,
+    "deadline_s": 25,
+    "search_k": 8
+  },
+  "structured_lookups": true,
+  "model_calls": [
+    {
+      "t_start": 0.004,
+      "duration_s": 1.422,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 4,
+        "output": 84,
+        "cache_read": 0,
+        "cache_write": 3621
+      }
+    },
+    {
+      "t_start": 8.8,
+      "duration_s": 4.545,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 2,
+        "output": 602,
+        "cache_read": 3621,
+        "cache_write": 19700
+      }
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "search_documents",
+      "input": {
+        "query": "reevaluate patients after initiating opioid therapy for chronic pain within weeks; stable patients reassess every months"
+      },
+      "duration_s": 7.374,
+      "is_error": false,
+      "pages": [
+        "va_dod_cpg_opioids_2022:p125",
+        "va_dod_cpg_opioids_2022:p126",
+        "va_dod_cpg_opioids_2022:p154",
+        "va_dod_cpg_opioids_2022:p155",
+        "va_dod_cpg_opioids_2022:p156",
+        "va_dod_cpg_opioids_2022:p157",
+        "va_dod_cpg_opioids_2022:p26",
+        "va_dod_cpg_opioids_2022:p33",
+        "va_dod_cpg_opioids_2022:p34",
+        "va_dod_cpg_opioids_2022:p48",
+        "va_dod_cpg_opioids_2022:p49",
+        "va_dod_cpg_opioids_2022:p50",
+        "va_dod_cpg_opioids_2022:p51",
+        "va_dod_cpg_opioids_2022:p52",
+        "va_dod_cpg_opioids_2022:p60",
+        "va_dod_cpg_opioids_2022:p61",
+        "va_dod_cpg_opioids_2022:p62"
+      ],
+      "index_loaded": true,
+      "search": {
+        "original_query": "After initiating opioids for chronic pain, when should the first reevaluation happen, and if the patient is stable without added risk factors, how often should they be reassessed?",
+        "agent_query": "reevaluate patients after initiating opioid therapy for chronic pain within weeks; stable patients reassess every months",
+        "executed": [
+          {
+            "source": "original",
+            "query": "After initiating opioids for chronic pain, when should the first reevaluation happen, and if the patient is stable without added risk factors, how often should they be reassessed?",
+            "program": null,
+            "k": 8,
+            "seconds": 4.344,
+            "cached": false,
+            "results": 8
+          },
+          {
+            "source": "agent",
+            "query": "reevaluate patients after initiating opioid therapy for chronic pain within weeks; stable patients reassess every months",
+            "program": null,
+            "k": 8,
+            "seconds": 7.342,
+            "cached": false,
+            "results": 8
+          }
+        ],
+        "duplicates_merged": 7,
+        "returned": 9,
+        "from_both": 7,
+        "from_original_only": 1,
+        "from_agent_only": 1,
+        "provenance": [
+          {
+            "unit": "va_dod_cpg_opioids_2022:s44",
+            "found_by": {
+              "original": 1,
+              "agent": 3
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s116",
+            "found_by": {
+              "original": 2,
+              "agent": 2
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s20",
+            "found_by": {
+              "original": 4,
+              "agent": 1
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s95",
+            "found_by": {
+              "original": 3,
+              "agent": 7
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s51",
+            "found_by": {
+              "original": 7,
+              "agent": 4
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s52",
+            "found_by": {
+              "original": 5,
+              "agent": 8
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s34",
+            "found_by": {
+              "original": 8,
+              "agent": 6
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s45",
+            "found_by": {
+              "agent": 5
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s117",
+            "found_by": {
+              "original": 6
+            }
+          }
+        ],
+        "hits": [
+          {
+            "unit": "va_dod_cpg_opioids_2022:s44",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              48,
+              49,
+              50
+            ],
+            "ranks": {
+              "original": 1,
+              "agent": 3
+            },
+            "scores": {
+              "original": 0.9944,
+              "agent": 0.9728
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s116",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              154
+            ],
+            "ranks": {
+              "original": 2,
+              "agent": 2
+            },
+            "scores": {
+              "original": 0.9844,
+              "agent": 0.9759
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s20",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              26
+            ],
+            "ranks": {
+              "original": 4,
+              "agent": 1
+            },
+            "scores": {
+              "original": 0.9511,
+              "agent": 0.9787
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s95",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              125,
+              126
+            ],
+            "ranks": {
+              "original": 3,
+              "agent": 7
+            },
+            "scores": {
+              "original": 0.9834,
+              "agent": 0.9297
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s51",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              60,
+              61
+            ],
+            "ranks": {
+              "original": 7,
+              "agent": 4
+            },
+            "scores": {
+              "original": 0.9272,
+              "agent": 0.9683
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s52",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              62
+            ],
+            "ranks": {
+              "original": 5,
+              "agent": 8
+            },
+            "scores": {
+              "original": 0.9462,
+              "agent": 0.8987
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s34",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              33,
+              34
+            ],
+            "ranks": {
+              "original": 8,
+              "agent": 6
+            },
+            "scores": {
+              "original": 0.9148,
+              "agent": 0.938
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s45",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              50,
+              51,
+              52
+            ],
+            "ranks": {
+              "agent": 5
+            },
+            "scores": {
+              "agent": 0.9656
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s117",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              155,
+              156,
+              157
+            ],
+            "ranks": {
+              "original": 6
+            },
+            "scores": {
+              "original": 0.931
+            }
+          }
+        ]
+      },
+      "t_start": 1.426
+    }
+  ],
+  "cited_evidence": {
+    "va_dod_cpg_opioids_2022:p26": "va_dod_cpg_opioids_2022 (VA, advisory, 2022-05)\nVA/DoD Clinical Practice Guideline for the Use of Opioids in the Management of Chronic Pain (Version 4.0) > VIII. Algorithm > B. Module B: Initiation of Treatment with Opioids\n[p 26]\n[Figure, flowchart] untitled in the image; see the section heading (PDF page 26). Machine-generated visual interpretation; status: machine-interpreted from the page image by a vision model; compared box by box against the page image (not clinician-verified).\nBox 18 (start): Candidate for opioids with consent (begin a trial in conjunction with comprehensive pain care plan) -> then box 19\nBox 19 (action): Initiate opioids using the following approach: • Use short duration (e.g., 1-week initial prescription) • Plan to reevaluate at 30 days or fewer • Use lowest effective dose, recognizing that no dose is completely safe ▪ A strategy of escalating dose to achieve benefit increases risk (see Sidebar L) and has not been shown to improve function • Long-acting opioids should not be prescribed for opioid-naïve individuals (see Recommendation 11 and Appendix D) • Consider alternatives to methadone and transdermal fentanyl (see Appendix D) • Assess improvement in pain and functional status and adverse effects • Complete risk mitigation strategies (see Sidebar E) • Provide medication and overdose education, offer naloxone prescription -> then box 20\nBox 20 (action): Reevaluation as needed clinically and based on patient risk factors (e.g., 1-4 weeks after initiation of opioids, not later than 30 days) • Assess: ▪ Function, pain, risks, and benefits of opioids ▪ Adverse effects ▪ Adherence to treatment plan ▪ Complications or co-occurring conditions (e.g., medical, behavioral health, and/or SUD) ▪ Patient preference • Complete risk mitigation strategies (see Sidebar E) • Review and optimize comprehensive pain care plan (e.g., non-opioid treatments, self-management strategies) -> then box 21\nBox 21 (decision): Does the patient want to continue opioid therapy? -> if No: box 22; if Yes: box 23\nBox 22 (action): • Taper to discontinuation (consult Module C if needed) • Manage with non-opioid modalities\nBox 23 (decision): Is there clinically meaningful improvement in function and pain that outweighs risks? -> if No: box 22; if Yes: box 24\nBox 24 (decision): Is the patient sufficiently medically and behaviorally stable to continue opioid medication? -> if No: box 25; if Yes: box 26\nBox 25 (action): Provide medical and/or behavioral health treatment to stabilize as indicated; consider tapering opioids to discontinuation (consult Module C)\nBox 26 (decision): Are there factors that increase risks of opioids (e.g., non-adherence, co-occurring conditions, indications of OUD)? -> if Yes: box 27; if No: box 28\nBox 27 (action): Consider one or more of the following: • Shortening prescribing interval • Intensifying risk mitigation strategies (see Sidebar E) • Referring to interdisciplinary care • Consulting with or referring to specialty care • Switching to partial agonist opioids • See VA/DoD SUD CPG if there are indications of OUD* -> then box 29\nBox 28 (action): Reassess in 1-3 months or more frequently as determined by patient risk factors (see Sidebar G) -> then box 20\nBox 29 (decision): Are there indications to discontinue or taper? (see Sidebar F) -> if No: box 28; if Yes: box 30\nBox 30 (end): Taper to reduced dose or taper to discontinuation; proceed to Module C\nDecision path: 18 -> 19 -> 20 -> 21 -> [No] 22\nDecision path: 18 -> 19 -> 20 -> 21 -> [Yes] 23 -> [No] 22\nDecision path: 18 -> 19 -> 20 -> 21 -> [Yes] 23 -> [Yes] 24 -> [No] 25\nDecision path: 18 -> 19 -> 20 -> 21 -> [Yes] 23 -> [Yes] 24 -> [Yes] 26 -> [Yes] 27 -> 29 -> [No] 28 -> back to box 20\nDecision path: 18 -> 19 -> 20 -> 21 -> [Yes] 23 -> [Yes] 24 -> [Yes] 26 -> [Yes] 27 -> 29 -> [Yes] 30\nDecision path: 18 -> 19 -> 20 -> 21 -> [Yes] 23 -> [Yes] 24 -> [Yes] 26 -> [No] 28 -> back to box 20\nAbbreviations: OUD: opioid use disorder; SUD: substance use disorders; VA/DoD SUD CPG: VA/DoD Clinical Practice Guideline for the Management of Substance Use Disorders",
+    "va_dod_cpg_opioids_2022:p48": "va_dod_cpg_opioids_2022 (VA, advisory, 2022-05)\nVA/DoD Clinical Practice Guideline for the Use of Opioids in the Management of Chronic Pain (Version 4.0) > IX. Recommendations > B.Dose, Duration, and Taper of Opioids > a.Dose and Duration\n[p 48]\nThe Work Group systematically reviewed evidence related to Recommendation 7 (120, 129, 130, 132-134) and considered the assessment of the evidence put forth in the 2017 VA/DoD Opioids CPG.(116-119, 140, 174) Therefore, this is a Reviewed, Amended recommendation. The Work Group's confidence in the quality of the evidence was low, but the adverse outcomes related to this recommendation are potentially catastrophic. The body of evidence had some limitations (e.g., multivariate analysis could not adjust for all potential confounders and the true incidence of OUD was underestimated since they only captured OUD that was treated with methadone or buprenorphine/naloxone). The potential benefits of opioid dose reduction or tapering to discontinuation outweighed the potential harms related to opioid misuse, the development of treated OUD, and the risk for overdose death. There is some variation in patient values and preferences regarding this recommendation. The Work Group noted that patients that have been on high dose opioids for some time may be hesitant to reduce their dose. The tapering process also presents some inherent challenges to both patients and some providers. Considering GRADE guidelines: 15, which states, \"A strong recommendation may be warranted…when low quality evidence suggests benefit in a life-threatening situation,\" the Work Group decided upon a Strong for recommendation for Recommendation 7.(136)\n[p 49]\nThe Work Group systematically reviewed evidence related to Recommendation 8 (120, 129, 130, 132-134) and considered the assessment of the evidence put forth in the 2017 VA/DoD Opioids CPG.(116-119, 140, 174) Therefore, this is a Reviewed, New-replaced recommendation. The Work Group's confidence in the quality of the evidence was low, but the adverse outcomes related to this recommendation are potentially catastrophic (in the form of OUD and/or drug overdose). The body of evidence had some limitations (e.g., multivariate analysis could not adjust for all potential confounders and the true incidence of OUD was underestimated since they only captured OUD that was treated with methadone or buprenorphine/naloxone). The potential benefits of prescribing the lowest opioid dosage outweighed the potential harms. Patients should be reevaluated for patient-specific risks and benefits and monitored for AEs including OUD and overdose if an increase in the opioid dose is contemplated. Generally, higher doses are associated with greater harms. Patient values and preferences were somewhat varied because there is some variation in patients who have already been on higher doses of opioids. Considering GRADE guidelines: 15, which states, \"A strong recommendation may be warranted…when low quality evidence suggests benefit in a life-threatening situation,\" the Work Group decided upon a Strong for recommendation for Recommendation 8.(136)\nRecommendation\nWhen prescribing opioids, we recommend the shortest duration as indicated. (Strong for |Reviewed, New-replaced)\nAfter initiating opioid therapy, we recommend reevaluation at 30 days or fewer and frequent follow-up visits, if opioids are to be continued.\n(Strong for |Reviewed, New-replaced)\nDiscussion\nEvidence suggests that a longer duration of opioids is associated with a higher risk of being treated for OUD and a higher risk of fatal opioid overdose.(129, 132, 137, 140, 142)\nA large retrospective cohort study by Papadomanolakis-Pakis et al. (2021) provided moderate quality evidence that a higher total days' supply of opioids was associated with a higher risk of being treated for OUD.(132) This study, comprised of opioid-naïve individuals who initiated prescription opioids for noncancer pain, investigated the time to treated OUD with a maximum follow-up of 57 months. The incidence of treated OUD within the study period was 86 cases per 100,000 person-years, but the authors noted that the prevalence of treated OUD was likely lower than OUD in general. In addition to dosage, a higher total days' supply of opioids was associated with a higher risk of treated OUD. Compared to a total supply of 1 - 2 days, individuals who received 11 - 29 days of opioids had a higher risk for treated OUD (HR 1.55, 95% CI: 1.33, 1.80). Risk increased further with ≥30 days of opioids (HR 2.19, 95% CI: 1.82, 2.63). Of note, no such association was documented for a supply from 3 - 10 days.(132)\nA retrospective cohort study by Garg et al. (2017) assessed the critical outcome of opioid overdose deaths in relation to the duration of treatment with opioids.(129) This study, which was conducted among Medicaid patients with non-cancer pain, found that patients with 31 - 89 cumulative days of opioid use were four times more likely to have an opioid-related death than patients with ≤30 cumulative days of use (aHR 4.3, 95% CI: 2.7, 6.9). Risks increased further for 90 - 179 days (aHR 7.2, 95% CI: 4.6, 11.4) and 181 - 365 days (aHR 14.0, 95% CI: 9.0, 21.7). At >730 cumulative days of opioid use, the risk of opioid overdose death was over 20 times the risk in patients with ≤30 days of use (aHR 23.7, 95% CI: 13.9, 40.5).(129)\n[p 50]\nPrior to initiating opioids as part of a comprehensive pain care plan, an individualized assessment of potential opioid-related harms relative to potential benefits must be completed. After initiating opioids, subsequent follow-up visits allow for the review and adjustment of the pain care plan, including the use of opioids if continuation is indicated. The Work Group recommends reevaluation and initial follow-up at 30 days or fewer, as clinically indicated, if opioids are to be continued. This timeline was chosen based on the significantly increased risk for OUD and fatal overdose with opioid use extending beyond 3",
+    "va_dod_cpg_opioids_2022:p61": "va_dod_cpg_opioids_2022 (VA, advisory, 2022-05)\nVA/DoD Clinical Practice Guideline for the Use of Opioids in the Management of Chronic Pain (Version 4.0) > IX. Recommendations > C. Screening, Assessment, and Evaluation\n[p 60]\nThe Work Group systematically reviewed evidence related to this recommendation.(120, 130-132, 138, 145, 152, 194, 196) Therefore, this is a Reviewed, New-added recommendation. The Work Group's confidence in the quality of the evidence was very low. The body of evidence had some limitations, including its composition of primarily retrospective cohort studies of varying strength. The potential benefits of screening for behavioral health conditions (e.g., improved outcomes of reduction of opioid misuse, reduced overdose, and reduction in suicidal death) outweighed the potential harms (e.g., increased utilization of potentially strained behavioral health system and patient discomfort with a behavioral health diagnosis). Patient values and preferences were largely varied because some patients may carry stigma regarding behavioral health diagnoses. Although the Work Group's confidence in the quality of the evidence was very low, the adverse outcomes related to forgoing assessment are potentially catastrophic (in the form of OUD, drug misuse, and/or drug overdose), in support of a Strong for. Considering GRADE guidelines: 15, which states, \"A strong recommendation may be warranted…when low quality evidence suggests benefit in a life-threatening situation,\" the Work Group decided upon a Strong for recommendation.(136)\nRecommendation\nFor patients with acute pain when opioids are being considered, we suggest screening for pain catastrophizing and co-occurring behavioral health conditions to identify those at higher risk for negative outcomes.\n(Weak for | Reviewed, New-added)\nDiscussion\nEvidence suggests that patients with acute pain and co-occurring behavioral health conditions are at increased risk for opioid dependence, overdose, mortality, and potentially obtaining inappropriate prescriptions. Shah et al. (2017) found that in a retrospective cohort study of over 600,000 patients undergoing urological surgery who are prescribed postoperative opioids, those with a history of depression were at an increased risk (OR: 2.41) of opioid dependence or overdose.(197) In a retrospective matched cohort study of over 13,000 trauma patients compared with 70,000 non-trauma patients, Von Oelreich et al. (2020) found that risk of mortality was increased with a history of psychiatric comorbidity (HR: 1.47) or substance use (HR: 2.06) (psychiatric comorbidity was defined as the presence of a diagnosis in ICD-10 groups F20 - F99 and substance abuse as a diagnosis in F10 - F19).(198) In a retrospective population-based study evaluating over 15,000 opioid-naïve patients undergoing surgical management of facial fracture, Lapidus et al. (2020) found that comorbidities such as prior substance use (OR: 1.504) and behavioral health disorder (OR: 1.504) were found to be significantly associated with obtaining potentially inappropriate prescriptions.(199) In a retrospective cohort study of over 68,000 patients, Abraham et al. (2020) found that in patients diagnosed with acute pain who were prescribed opioids, a history of a psychiatric disorder (OR: 1.83), OUD (OR: 2.17), non-opioid drug use disorder (OR: 1.10), or combination of alcohol or drug use disorder (OR: 1.30) was associated with increased risk of filling inappropriate opioid prescriptions.(145)\nTwo smaller prospective cohort studies demonstrated that catastrophizing or anticipation of pain lasting longer than one week was associated with persistent pain.(200, 201)\n[p 61]\nIn reviewing the retrospective studies evaluating the association between co-occurring behavioral health conditions and negative outcomes, the Work Group determined there were no other specific harms studied outside of those outlined above.\nThere is likely large variability regarding patient preferences in being screened for co-occurring behavioral health conditions and/or catastrophizing. Some patients will be resistant to screening, while others may feel it is a routine part of care. For patients within the DoD, there are potential career implications for positive screening for co-occurring behavioral health conditions. The minor burdens associated with screening are related to resource utilization, with providers being required to take more time to complete screening and the necessity to follow-up on positive screens/results. The Work Group determined that the benefits of reducing mortality, overdose, opioid dependence or inappropriate prescriptions outweighs the potential burdens.\nThe Work Group systematically reviewed evidence related to this recommendation.(145, 197-201) Therefore, this is a Reviewed, New-added recommendation. The Work Group's confidence in the quality of the evidence was very low. The body of evidence had some limitations including most studies being retrospective or retrospective cohort studies (145, 197-199) related to evaluation of co-occurring behavioral health conditions and their association with negative outcomes. Additionally, none of the studies evaluated the impact of treatment for co-occurring behavioral health conditions and potential for reduced risk. The studies evaluating catastrophizing (200, 201) had small sample sizes which was a limitation as well. The potential benefits of screening for co-occurring behavioral health conditions or catastrophizing and thereby potentially reducing risk of mortality, overdose, opioid dependence or potentially inappropriate prescriptions outweighed the potential burdens which the group felt to be small. Patient values and preferences were largely varied because some patients may be resistant to screening, subgroups such as DoD patients may be concerned about career implications for positive screening while other patients may have no concerns regarding the screening questions. Thus, the Work Group deci",
+    "va_dod_cpg_opioids_2022:p62": "va_dod_cpg_opioids_2022 (VA, advisory, 2022-05)\nVA/DoD Clinical Practice Guideline for the Use of Opioids in the Management of Chronic Pain (Version 4.0) > IX. Recommendations > C. Screening, Assessment, and Evaluation\n[p 62]\nTo understand how risk factors can be mitigated, the Work Group looked at associations between demographic factors and opioid-related factors with any time points or intervals shown to mitigate risks for adverse outcomes. Risks of harm may be elevated at certain age points (see Recommendation 2), sex, (129, 132, 138, 144) socioeconomic status, (132, 144) dose (see Recommendations 7 and 8), (120, 129, 130, 132-134) opioid formulation, (129, 132, 138, 202) and with use of other prescriptions (see Recommendation 6).(129, 130, 132, 138)\nRisk factors may lead to the critical outcomes of OUD, non-medical opioid use, inappropriate opioid prescription, drug overdose, opioid misuse, fatal opioid overdose, or death by intentional overdose.(120, 129-133, 138, 144, 145) As potential outcomes from these events can be catastrophic, the harms of failing to identify risk factors are significant.\nTo discover changes in an individual patient's risk factors, periodic reassessment is reasonable, but no evidence exists to identify the appropriate time frame for reassessment and clinical decision making that balances risks and benefits of continued opioid therapy. The timeframe for reassessment should be individualized based on individual patient risks. The Work Group proposes utilizing the CDC guidance of reevaluation every 90 days as a starting point, although some patients may need more frequent reevaluation of risks and benefits. This may capture changes within an individual's health presentation or lifestyle that would identify a risk not previously known or present (for example, a newly diagnosed behavioral health condition or evidence of SUD). See Module A in the algorithm for more information on reassessment. When considering assessment and reevaluation, pain is not identified as a fifth vital sign in this CPG.\nSome variability is expected among patients in terms of their acceptance of follow up for ongoing evaluation of risk. Additional appointments may be appreciated by some or a nuisance to others. The burden of attending in-person appointments may be challenging but telehealth opportunities may provide a method of reducing that burden for a subset of the patient population. Other implications include increased use of provider time for reassessments, concern about the geographically underserved including those with unstable housing, transportation, or technology (for telehealth). Some high risk populations may require more frequent follow up.\nIn balancing the risks and benefits of this recommendation, the Work Group feels the benefits of periodic reassessment slightly outweigh the risks, as the risks of not completing periodic reassessment are substantial and could lead to potentially catastrophic outcomes. These factors affected the strength of this recommendation.\nThe Work Group systematically reviewed evidence related to this recommendation.(120, 129-134, 138, 144, 145, 202) Therefore, this is a Reviewed, New-replaced recommendation. The Work Group's confidence in the quality of the evidence was low. The body of evidence had limitations including applicability (there are a lack of studies to directly answer the question about appropriate periodicity of reassessment to mitigate risk). The potential harms of OUD, non-medical opioid use, inappropriate opioid prescription, drug overdose, opioid misuse, fatal opioid overdose, and death by intentional overdose (120,"
+  },
+  "cited_evidence_parts": {
+    "va_dod_cpg_opioids_2022:p26": [
+      "va_dod_cpg_opioids_2022 (VA, advisory, 2022-05)\nVA/DoD Clinical Practice Guideline for the Use of Opioids in the Management of Chronic Pain (Version 4.0) > VIII. Algorithm > B. Module B: Initiation of Treatment with Opioids\n[p 26]\n[Figure, flowchart] untitled in the image; see the section heading (PDF page 26). Machine-generated visual interpretation; status: machine-interpreted from the page image by a vision model; compared box by box against the page image (not clinician-verified).\nBox 18 (start): Candidate for opioids with consent (begin a trial in conjunction with comprehensive pain care plan) -> then box 19\nBox 19 (action): Initiate opioids using the following approach: • Use short duration (e.g., 1-week initial prescription) • Plan to reevaluate at 30 days or fewer • Use lowest effective dose, recognizing that no dose is completely safe ▪ A strategy of escalating dose to achieve benefit increases risk (see Sidebar L) and has not been shown to improve function • Long-acting opioids should not be prescribed for opioid-naïve individuals (see Recommendation 11 and Appendix D) • Consider alternatives to methadone and transdermal fentanyl (see Appendix D) • Assess improvement in pain and functional status and adverse effects • Complete risk mitigation strategies (see Sidebar E) • Provide medication and overdose education, offer naloxone prescription -> then box 20\nBox 20 (action): Reevaluation as needed clinically and based on patient risk factors (e.g., 1-4 weeks after initiation of opioids, not later than 30 days) • Assess: ▪ Function, pain, risks, and benefits of opioids ▪ Adverse effects ▪ Adherence to treatment plan ▪ Complications or co-occurring conditions (e.g., medical, behavioral health, and/or SUD) ▪ Patient preference • Complete risk mitigation strategies (see Sidebar E) • Review and optimize comprehensive pain care plan (e.g., non-opioid treatments, self-management strategies) -> then box 21\nBox 21 (decision): Does the patient want to continue opioid therapy? -> if No: box 22; if Yes: box 23\nBox 22 (action): • Taper to discontinuation (consult Module C if needed) • Manage with non-opioid modalities\nBox 23 (decision): Is there clinically meaningful improvement in function and pain that outweighs risks? -> if No: box 22; if Yes: box 24\nBox 24 (decision): Is the patient sufficiently medically and behaviorally stable to continue opioid medication? -> if No: box 25; if Yes: box 26\nBox 25 (action): Provide medical and/or behavioral health treatment to stabilize as indicated; consider tapering opioids to discontinuation (consult Module C)\nBox 26 (decision): Are there factors that increase risks of opioids (e.g., non-adherence, co-occurring conditions, indications of OUD)? -> if Yes: box 27; if No: box 28\nBox 27 (action): Consider one or more of the following: • Shortening prescribing interval • Intensifying risk mitigation strategies (see Sidebar E) • Referring to interdisciplinary care • Consulting with or referring to specialty care • Switching to partial agonist opioids • See VA/DoD SUD CPG if there are indications of OUD* -> then box 29\nBox 28 (action): Reassess in 1-3 months or more frequently as determined by patient risk factors (see Sidebar G) -> then box 20\nBox 29 (decision): Are there indications to discontinue or taper? (see Sidebar F) -> if No: box 28; if Yes: box 30\nBox 30 (end): Taper to reduced dose or taper to discontinuation; proceed to Module C\nDecision path: 18 -> 19 -> 20 -> 21 -> [No] 22\nDecision path: 18 -> 19 -> 20 -> 21 -> [Yes] 23 -> [No] 22\nDecision path: 18 -> 19 -> 20 -> 21 -> [Yes] 23 -> [Yes] 24 -> [No] 25\nDecision path: 18 -> 19 -> 20 -> 21 -> [Yes] 23 -> [Yes] 24 -> [Yes] 26 -> [Yes] 27 -> 29 -> [No] 28 -> back to box 20\nDecision path: 18 -> 19 -> 20 -> 21 -> [Yes] 23 -> [Yes] 24 -> [Yes] 26 -> [Yes] 27 -> 29 -> [Yes] 30\nDecision path: 18 -> 19 -> 20 -> 21 -> [Yes] 23 -> [Yes] 24 -> [Yes] 26 -> [No] 28 -> back to box 20\nAbbreviations: OUD: opioid use disorder; SUD: substance use disorders; VA/DoD SUD CPG: VA/DoD Clinical Practice Guideline for the Management of Substance Use Disorders"
+    ],
+    "va_dod_cpg_opioids_2022:p48": [
+      "va_dod_cpg_opioids_2022 (VA, advisory, 2022-05)\nVA/DoD Clinical Practice Guideline for the Use of Opioids in the Management of Chronic Pain (Version 4.0) > IX. Recommendations > B.Dose, Duration, and Taper of Opioids > a.Dose and Duration\n[p 48]\nThe Work Group systematically reviewed evidence related to Recommendation 7 (120, 129, 130, 132-134) and considered the assessment of the evidence put forth in the 2017 VA/DoD Opioids CPG.(116-119, 140, 174) Therefore, this is a Reviewed, Amended recommendation. The Work Group's confidence in the quality of the evidence was low, but the adverse outcomes related to this recommendation are potentially catastrophic. The body of evidence had some limitations (e.g., multivariate analysis could not adjust for all potential confounders and the true incidence of OUD was underestimated since they only captured OUD that was treated with methadone or buprenorphine/naloxone). The potential benefits of opioid dose reduction or tapering to discontinuation outweighed the potential harms related to opioid misuse, the development of treated OUD, and the risk for overdose death. There is some variation in patient values and preferences regarding this recommendation. The Work Group noted that patients that have been on high dose opioids for some time may be hesitant to reduce their dose. The tapering process also presents some inherent challenges to both patients and some providers. Considering GRADE guidelines: 15, which states, \"A strong recommendation may be warranted…when low quality evidence suggests benefit in a life-threatening situation,\" the Work Group decided upon a Strong for recommendation for Recommendation 7.(136)\n[p 49]\nThe Work Group systematically reviewed evidence related to Recommendation 8 (120, 129, 130, 132-134) and considered the assessment of the evidence put forth in the 2017 VA/DoD Opioids CPG.(116-119, 140, 174) Therefore, this is a Reviewed, New-replaced recommendation. The Work Group's confidence in the quality of the evidence was low, but the adverse outcomes related to this recommendation are potentially catastrophic (in the form of OUD and/or drug overdose). The body of evidence had some limitations (e.g., multivariate analysis could not adjust for all potential confounders and the true incidence of OUD was underestimated since they only captured OUD that was treated with methadone or buprenorphine/naloxone). The potential benefits of prescribing the lowest opioid dosage outweighed the potential harms. Patients should be reevaluated for patient-specific risks and benefits and monitored for AEs including OUD and overdose if an increase in the opioid dose is contemplated. Generally, higher doses are associated with greater harms. Patient values and preferences were somewhat varied because there is some variation in patients who have already been on higher doses of opioids. Considering GRADE guidelines: 15, which states, \"A strong recommendation may be warranted…when low quality evidence suggests benefit in a life-threatening situation,\" the Work Group decided upon a Strong for recommendation for Recommendation 8.(136)\nRecommendation\nWhen prescribing opioids, we recommend the shortest duration as indicated. (Strong for |Reviewed, New-replaced)\nAfter initiating opioid therapy, we recommend reevaluation at 30 days or fewer and frequent follow-up visits, if opioids are to be continued.\n(Strong for |Reviewed, New-replaced)\nDiscussion\nEvidence suggests that a longer duration of opioids is associated with a higher risk of being treated for OUD and a higher risk of fatal opioid overdose.(129, 132, 137, 140, 142)\nA large retrospective cohort study by Papadomanolakis-Pakis et al. (2021) provided moderate quality evidence that a higher total days' supply of opioids was associated with a higher risk of being treated for OUD.(132) This study, comprised of opioid-naïve individuals who initiated prescription opioids for noncancer pain, investigated the time to treated OUD with a maximum follow-up of 57 months. The incidence of treated OUD within the study period was 86 cases per 100,000 person-years, but the authors noted that the prevalence of treated OUD was likely lower than OUD in general. In addition to dosage, a higher total days' supply of opioids was associated with a higher risk of treated OUD. Compared to a total supply of 1 - 2 days, individuals who received 11 - 29 days of opioids had a higher risk for treated OUD (HR 1.55, 95% CI: 1.33, 1.80). Risk increased further with ≥30 days of opioids (HR 2.19, 95% CI: 1.82, 2.63). Of note, no such association was documented for a supply from 3 - 10 days.(132)\nA retrospective cohort study by Garg et al. (2017) assessed the critical outcome of opioid overdose deaths in relation to the duration of treatment with opioids.(129) This study, which was conducted among Medicaid patients with non-cancer pain, found that patients with 31 - 89 cumulative days of opioid use were four times more likely to have an opioid-related death than patients with ≤30 cumulative days of use (aHR 4.3, 95% CI: 2.7, 6.9). Risks increased further for 90 - 179 days (aHR 7.2, 95% CI: 4.6, 11.4) and 181 - 365 days (aHR 14.0, 95% CI: 9.0, 21.7). At >730 cumulative days of opioid use, the risk of opioid overdose death was over 20 times the risk in patients with ≤30 days of use (aHR 23.7, 95% CI: 13.9, 40.5).(129)\n[p 50]\nPrior to initiating opioids as part of a comprehensive pain care plan, an individualized assessment of potential opioid-related harms relative to potential benefits must be completed. After initiating opioids, subsequent follow-up visits allow for the review and adjustment of the pain care plan, including the use of opioids if continuation is indicated. The Work Group recommends reevaluation and initial follow-up at 30 days or fewer, as clinically indicated, if opioids are to be continued. This timeline was chosen based on the significantly increased risk for OUD and fatal overdose with opioid use extending beyond 3"
+    ],
+    "va_dod_cpg_opioids_2022:p61": [
+      "va_dod_cpg_opioids_2022 (VA, advisory, 2022-05)\nVA/DoD Clinical Practice Guideline for the Use of Opioids in the Management of Chronic Pain (Version 4.0) > IX. Recommendations > C. Screening, Assessment, and Evaluation\n[p 60]\nThe Work Group systematically reviewed evidence related to this recommendation.(120, 130-132, 138, 145, 152, 194, 196) Therefore, this is a Reviewed, New-added recommendation. The Work Group's confidence in the quality of the evidence was very low. The body of evidence had some limitations, including its composition of primarily retrospective cohort studies of varying strength. The potential benefits of screening for behavioral health conditions (e.g., improved outcomes of reduction of opioid misuse, reduced overdose, and reduction in suicidal death) outweighed the potential harms (e.g., increased utilization of potentially strained behavioral health system and patient discomfort with a behavioral health diagnosis). Patient values and preferences were largely varied because some patients may carry stigma regarding behavioral health diagnoses. Although the Work Group's confidence in the quality of the evidence was very low, the adverse outcomes related to forgoing assessment are potentially catastrophic (in the form of OUD, drug misuse, and/or drug overdose), in support of a Strong for. Considering GRADE guidelines: 15, which states, \"A strong recommendation may be warranted…when low quality evidence suggests benefit in a life-threatening situation,\" the Work Group decided upon a Strong for recommendation.(136)\nRecommendation\nFor patients with acute pain when opioids are being considered, we suggest screening for pain catastrophizing and co-occurring behavioral health conditions to identify those at higher risk for negative outcomes.\n(Weak for | Reviewed, New-added)\nDiscussion\nEvidence suggests that patients with acute pain and co-occurring behavioral health conditions are at increased risk for opioid dependence, overdose, mortality, and potentially obtaining inappropriate prescriptions. Shah et al. (2017) found that in a retrospective cohort study of over 600,000 patients undergoing urological surgery who are prescribed postoperative opioids, those with a history of depression were at an increased risk (OR: 2.41) of opioid dependence or overdose.(197) In a retrospective matched cohort study of over 13,000 trauma patients compared with 70,000 non-trauma patients, Von Oelreich et al. (2020) found that risk of mortality was increased with a history of psychiatric comorbidity (HR: 1.47) or substance use (HR: 2.06) (psychiatric comorbidity was defined as the presence of a diagnosis in ICD-10 groups F20 - F99 and substance abuse as a diagnosis in F10 - F19).(198) In a retrospective population-based study evaluating over 15,000 opioid-naïve patients undergoing surgical management of facial fracture, Lapidus et al. (2020) found that comorbidities such as prior substance use (OR: 1.504) and behavioral health disorder (OR: 1.504) were found to be significantly associated with obtaining potentially inappropriate prescriptions.(199) In a retrospective cohort study of over 68,000 patients, Abraham et al. (2020) found that in patients diagnosed with acute pain who were prescribed opioids, a history of a psychiatric disorder (OR: 1.83), OUD (OR: 2.17), non-opioid drug use disorder (OR: 1.10), or combination of alcohol or drug use disorder (OR: 1.30) was associated with increased risk of filling inappropriate opioid prescriptions.(145)\nTwo smaller prospective cohort studies demonstrated that catastrophizing or anticipation of pain lasting longer than one week was associated with persistent pain.(200, 201)\n[p 61]\nIn reviewing the retrospective studies evaluating the association between co-occurring behavioral health conditions and negative outcomes, the Work Group determined there were no other specific harms studied outside of those outlined above.\nThere is likely large variability regarding patient preferences in being screened for co-occurring behavioral health conditions and/or catastrophizing. Some patients will be resistant to screening, while others may feel it is a routine part of care. For patients within the DoD, there are potential career implications for positive screening for co-occurring behavioral health conditions. The minor burdens associated with screening are related to resource utilization, with providers being required to take more time to complete screening and the necessity to follow-up on positive screens/results. The Work Group determined that the benefits of reducing mortality, overdose, opioid dependence or inappropriate prescriptions outweighs the potential burdens.\nThe Work Group systematically reviewed evidence related to this recommendation.(145, 197-201) Therefore, this is a Reviewed, New-added recommendation. The Work Group's confidence in the quality of the evidence was very low. The body of evidence had some limitations including most studies being retrospective or retrospective cohort studies (145, 197-199) related to evaluation of co-occurring behavioral health conditions and their association with negative outcomes. Additionally, none of the studies evaluated the impact of treatment for co-occurring behavioral health conditions and potential for reduced risk. The studies evaluating catastrophizing (200, 201) had small sample sizes which was a limitation as well. The potential benefits of screening for co-occurring behavioral health conditions or catastrophizing and thereby potentially reducing risk of mortality, overdose, opioid dependence or potentially inappropriate prescriptions outweighed the potential burdens which the group felt to be small. Patient values and preferences were largely varied because some patients may be resistant to screening, subgroups such as DoD patients may be concerned about career implications for positive screening while other patients may have no concerns regarding the screening questions. Thus, the Work Group deci"
+    ],
+    "va_dod_cpg_opioids_2022:p62": [
+      "va_dod_cpg_opioids_2022 (VA, advisory, 2022-05)\nVA/DoD Clinical Practice Guideline for the Use of Opioids in the Management of Chronic Pain (Version 4.0) > IX. Recommendations > C. Screening, Assessment, and Evaluation\n[p 62]\nTo understand how risk factors can be mitigated, the Work Group looked at associations between demographic factors and opioid-related factors with any time points or intervals shown to mitigate risks for adverse outcomes. Risks of harm may be elevated at certain age points (see Recommendation 2), sex, (129, 132, 138, 144) socioeconomic status, (132, 144) dose (see Recommendations 7 and 8), (120, 129, 130, 132-134) opioid formulation, (129, 132, 138, 202) and with use of other prescriptions (see Recommendation 6).(129, 130, 132, 138)\nRisk factors may lead to the critical outcomes of OUD, non-medical opioid use, inappropriate opioid prescription, drug overdose, opioid misuse, fatal opioid overdose, or death by intentional overdose.(120, 129-133, 138, 144, 145) As potential outcomes from these events can be catastrophic, the harms of failing to identify risk factors are significant.\nTo discover changes in an individual patient's risk factors, periodic reassessment is reasonable, but no evidence exists to identify the appropriate time frame for reassessment and clinical decision making that balances risks and benefits of continued opioid therapy. The timeframe for reassessment should be individualized based on individual patient risks. The Work Group proposes utilizing the CDC guidance of reevaluation every 90 days as a starting point, although some patients may need more frequent reevaluation of risks and benefits. This may capture changes within an individual's health presentation or lifestyle that would identify a risk not previously known or present (for example, a newly diagnosed behavioral health condition or evidence of SUD). See Module A in the algorithm for more information on reassessment. When considering assessment and reevaluation, pain is not identified as a fifth vital sign in this CPG.\nSome variability is expected among patients in terms of their acceptance of follow up for ongoing evaluation of risk. Additional appointments may be appreciated by some or a nuisance to others. The burden of attending in-person appointments may be challenging but telehealth opportunities may provide a method of reducing that burden for a subset of the patient population. Other implications include increased use of provider time for reassessments, concern about the geographically underserved including those with unstable housing, transportation, or technology (for telehealth). Some high risk populations may require more frequent follow up.\nIn balancing the risks and benefits of this recommendation, the Work Group feels the benefits of periodic reassessment slightly outweigh the risks, as the risks of not completing periodic reassessment are substantial and could lead to potentially catastrophic outcomes. These factors affected the strength of this recommendation.\nThe Work Group systematically reviewed evidence related to this recommendation.(120, 129-134, 138, 144, 145, 202) Therefore, this is a Reviewed, New-replaced recommendation. The Work Group's confidence in the quality of the evidence was low. The body of evidence had limitations including applicability (there are a lack of studies to directly answer the question about appropriate periodicity of reassessment to mitigate risk). The potential harms of OUD, non-medical opioid use, inappropriate opioid prescription, drug overdose, opioid misuse, fatal opioid overdose, and death by intentional overdose (120,"
+    ]
+  },
+  "cost_note": "priced at the requested model's rates; a fallback hop bills at its own rates",
+  "request_id": "9982f65b-3cde-416c-a49a-0f51c70cac7f",
+  "request_started_utc": "2026-10-18T03:46:17.292154+00:00",
+  "citation_check": {
+    "t_start": 13.345,
+    "duration_s": 0.0
+  },
+  "prices_per_mtok": {
+    "input": 2.0,
+    "output": 10.0,
+    "cache_read": 0.2,
+    "cache_write": 2.5
+  }
+}

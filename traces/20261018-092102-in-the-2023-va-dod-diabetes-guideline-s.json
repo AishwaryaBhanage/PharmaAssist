@@ -1,0 +1,384 @@
+{
+  "question": "In the 2023 VA/DoD diabetes guideline's recommendation table, what are the strength and category of the recommendation on real-time continuous glucose monitoring for insulin-treated adults?",
+  "request_id": "b3cb1653-d0b8-4e65-8214-d47a65a61309",
+  "status": "answered",
+  "agent_status": "answered",
+  "assumption": "VA clinical guidance (2023 VA/DoD Type 2 Diabetes CPG recommendation/evidence table).",
+  "answer": "Assuming VA clinical guidance: In the 2023 VA/DoD diabetes guideline table, the real-time CGM recommendation is **Recommendation 11**: for insulin-treated adults with T2DM not achieving glycemic goals, VA/DoD **suggests** real-time CGM to decrease hypoglycemia and improve HbA1c.\n\n- **2023 strength:** **Weak for**\n- **Recommendation category:** **Reviewed, New-added**\n- **2017 strength:** **Not applicable**",
+  "citations": [
+    {
+      "doc_id": "va_dod_cpg_diabetes_2023",
+      "page": 111,
+      "link": "https://www.healthquality.va.gov/guidelines/CD/diabetes/VADoD-Diabetes-CPG_Final_508.pdf#page=111",
+      "flag": null,
+      "locator": "va_dod_cpg_diabetes_2023:p111"
+    }
+  ],
+  "conflicts_noted": [],
+  "flags": [],
+  "needs_review": false,
+  "words": {
+    "displayed": 53,
+    "rendered": 53
+  },
+  "answered_by": "gpt-5.5-2026-04-23",
+  "provider": "openai",
+  "model": "gpt-5.5-2026-04-23",
+  "fallback_used": false,
+  "timing_s": {
+    "total": 5.372,
+    "search": 0.272,
+    "read_page": 0,
+    "list_documents": 0,
+    "lookups": 0,
+    "model_calls": [
+      1.368,
+      3.73
+    ]
+  },
+  "lookups": 1,
+  "tokens": {
+    "input": 7688,
+    "output": 310,
+    "cache_read": 3072,
+    "cache_write": 0
+  },
+  "cost_usd": 0.049276,
+  "pages_seen": [
+    "va_dod_cpg_diabetes_2023:p109",
+    "va_dod_cpg_diabetes_2023:p110",
+    "va_dod_cpg_diabetes_2023:p111",
+    "va_dod_cpg_diabetes_2023:p112",
+    "va_dod_cpg_diabetes_2023:p113",
+    "va_dod_cpg_diabetes_2023:p114",
+    "va_dod_cpg_diabetes_2023:p115",
+    "va_dod_cpg_diabetes_2023:p116",
+    "va_dod_cpg_diabetes_2023:p117",
+    "va_dod_cpg_diabetes_2023:p15",
+    "va_dod_cpg_diabetes_2023:p16"
+  ],
+  "trace_id": null,
+  "started_at": "2026-10-18T13:21:02+00:00",
+  "config": {
+    "primary": "gpt-5.5",
+    "fallback": "claude-sonnet-5-5",
+    "effort": "medium",
+    "search": {
+      "mode": "hybrid",
+      "rrf_k": 60,
+      "fusion_depth": 100,
+      "return_parents": true,
+      "rerank": null
+    },
+    "max_tool_calls": 6,
+    "deadline_s": 25,
+    "search_k": 8
+  },
+  "structured_lookups": true,
+  "context": {},
+  "model_answer": "Assuming VA clinical guidance: In the 2023 VA/DoD diabetes guideline table, the real-time CGM recommendation is **Recommendation 11**: for insulin-treated adults with T2DM not achieving glycemic goals, VA/DoD **suggests** real-time CGM to decrease hypoglycemia and improve HbA1c.\n\n- **2023 strength:** **Weak for**\n- **Recommendation category:** **Reviewed, New-added**\n- **2017 strength:** **Not applicable**",
+  "model_citations": [
+    {
+      "doc_id": "va_dod_cpg_diabetes_2023",
+      "page": 111,
+      "link": "https://www.healthquality.va.gov/guidelines/CD/diabetes/VADoD-Diabetes-CPG_Final_508.pdf#page=111",
+      "flag": null,
+      "locator": "va_dod_cpg_diabetes_2023:p111"
+    }
+  ],
+  "model_calls": [
+    {
+      "t_start": 0.0,
+      "duration_s": 1.368,
+      "requested_model": "gpt-5.5",
+      "served_model": "gpt-5.5-2026-04-23",
+      "provider": "openai",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 325,
+        "output": 61,
+        "cache_read": 1536,
+        "cache_write": 0
+      },
+      "cost_usd": 0.004223,
+      "response_id": "resp_06557130f0bf9e42016ad4c7b9628487d2b34a340211fd165d",
+      "input_messages": [
+        {
+          "role": "user",
+          "text": "Today's date: 2026-10-18\n\nQuestion: In the 2023 VA/DoD diabetes guideline's recommendation table, what are the strength and category of the recommendation on real-time continuous glucose monitoring for insulin-treated adults?"
+        }
+      ],
+      "output": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "call_RxisQ0j8H8RZkf1Du7ZU5YHt",
+            "name": "search_documents",
+            "arguments": {
+              "program": "VA",
+              "query": "2023 VA DoD diabetes guideline recommendation table real-time continuous glucose monitoring insulin-treated adults strength category recommendation",
+              "k": 5
+            }
+          }
+        ]
+      }
+    },
+    {
+      "t_start": 1.64,
+      "duration_s": 3.73,
+      "requested_model": "gpt-5.5",
+      "served_model": "gpt-5.5-2026-04-23",
+      "provider": "openai",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 7363,
+        "output": 249,
+        "cache_read": 1536,
+        "cache_write": 0
+      },
+      "cost_usd": 0.045053,
+      "response_id": "resp_06557130f0bf9e42016ad4c7bb071487d2a2f3f0efb78ee088",
+      "input_messages": [
+        {
+          "role": "tool",
+          "tool_results": [
+            {
+              "call_id": "call_RxisQ0j8H8RZkf1Du7ZU5YHt",
+              "is_error": false,
+              "content": "[{\"doc_id\": \"va_dod_cpg_diabetes_2023\", \"page\": 111, \"program\": \"VA\", \"authority\": \"advisory\", \"date\": \"2023-05\", \"text\": \"VA/DoD Clinical Practice Guideline for the Management of Type 2 Diabetes Mellitus (Version 6.0) > Appendix E: Evidence Table\\n[p 111]\\n[Table] (PDF page 111)\\nColumns: Recommendation | 2017 Strength of Recommendation | Evidence | 2023 Strength of Recommendation | Recommendation Category\\n11. In insulin-treated adults with type 2 diabetes mellitus who are not achieving glycemic goals, we suggest real-time continuous glucose monitoring to decrease hypoglycemia and improve HbA1c. | Not applicable | (92, 95-97) Additional References: (96, 97, 164, 165) | Weak for | Reviewed, New-added\\n12. For adults with type 2 diabetes mellitus, we suggest a Mediterranean style diet to improve glycemic control, body weight, and hypertension. | Strong for | (99, 100) Additional References: (101, 102, 103, 104) | Weak for | Reviewed, New-replaced\\n13. For adults with type 2 diabetes mellitus, we suggest a nutrition intervention strategy providing 13-50% of their total daily caloric intake from carbohydrates for diabetes management. | Strong for | (100, 103, 105-108) Additional Reference: (34) | Weak for | Reviewed, New-replaced\\n14. For adults with type 2 diabetes mellitus, we suggest a vegetarian dietary pattern for glycemic control and weight loss. | Not applicable | (103) | Weak for | Reviewed, New-added\\n15. For adults with type 2 diabetes mellitus, we suggest against intermittent fasting. | Not applicable | (111, 112) | Weak against | Reviewed, New-added\\n16. In adults with type 2 diabetes mellitus, we suggest regular physical activity to improve glycemic control, including but not limited to aerobic exercise, resistance training, or tai chi. | Not applicable | (113, 114, 116) Additional Reference: (115) | Weak for | Reviewed, New-added\\n17. In adults with stress related to type 2 diabetes mellitus, we suggest offering a mindfulness- based stress reduction program for short-term improvement. | Not applicable | (117-119) Additional Reference: (120) | Weak for | Reviewed, New-added\\n18. For adults with type 2 diabetes mellitus and diabetes distress, there is insufficient evidence to recommend for or against the use of acupuncture, biofeedback, hypnosis, guided imagery, massage therapy, yoga, or tai chi to improve outcomes. | Not applicable | (117-119) Additional Reference: (120) | Neither for nor against | Reviewed, New-added\\n[p 112]\\n[Table] (PDF page 112)\\nColumns: Recommendation | 2017 Strength of Recommendation | Evidence | 2023 Strength of Recommendation | Recommendation Category\\n19. For adults with type 2 diabetes mellitus with atherosclerotic cardiovascular disease, we recommend glucagon-like peptide-1 receptor agonists or sodium-glucose cotransporter-2 inhibitors with proven cardiovascular benefits to decrease the risk of major adverse cardiovascular events. | Not applicable | (121-127) Additional References: (128, 129) | Strong for | Reviewed, New-added\\n20. For adults with type 2 diabetes mellitus at high risk of atherosclerotic cardiovascular disease (i.e., chronic kidney disease, left ventricular hypertrophy, heart failure), we suggest glucagon- like peptide-1 receptor agonists or sodium- glucose cotransporter-2 inhibitors with proven cardiovascular benefits to decrease the risk of major adverse cardiovascular events. | Not applicable | (121-127) Additional References: (128, 142, 166-168) | Weak for | Reviewed, New- added\\n21. For adults with type 2 diabetes mellitus and heart failure, we recommend a sodium-glucose cotransporter-2 inhibitor to prevent hospital admissions for heart failure. | Not applicable | (109, 123, 126, 138) Additional References: (130-135) | Strong for | Reviewed, New-added\\n22. For adults with type 2 diabetes mellitus and chronic kidney disease, we recommend sodium- glucose cotransporter-2 inhibitors with proven renal protection to improve renal outcomes. | Not applicable | (109, 125-127"
+            }
+          ]
+        }
+      ],
+      "output": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "call_7HgpWa2cdaxAilYDNtYnQJ0r",
+            "name": "submit_answer",
+            "arguments": {
+              "status": "answered",
+              "assumption": "VA clinical guidance (2023 VA/DoD Type 2 Diabetes CPG recommendation/evidence table).",
+              "answer": "Assuming VA clinical guidance: In the 2023 VA/DoD diabetes guideline table, the real-time CGM recommendation is **Recommendation 11**: for insulin-treated adults with T2DM not achieving glycemic goals, VA/DoD **suggests** real-time CGM to decrease hypoglycemia and improve HbA1c.\n\n- **2023 strength:** **Weak for**\n- **Recommendation category:** **Reviewed, New-added**\n- **2017 strength:** **Not applicable**",
+              "citations": [
+                {
+                  "doc_id": "va_dod_cpg_diabetes_2023",
+                  "page": 111,
+                  "row": null
+                }
+              ],
+              "conflicts_noted": []
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "search_documents",
+      "input": {
+        "program": "VA",
+        "query": "2023 VA DoD diabetes guideline recommendation table real-time continuous glucose monitoring insulin-treated adults strength category recommendation",
+        "k": 5
+      },
+      "duration_s": 0.272,
+      "is_error": false,
+      "pages": [
+        "va_dod_cpg_diabetes_2023:p109",
+        "va_dod_cpg_diabetes_2023:p110",
+        "va_dod_cpg_diabetes_2023:p111",
+        "va_dod_cpg_diabetes_2023:p112",
+        "va_dod_cpg_diabetes_2023:p113",
+        "va_dod_cpg_diabetes_2023:p114",
+        "va_dod_cpg_diabetes_2023:p115",
+        "va_dod_cpg_diabetes_2023:p116",
+        "va_dod_cpg_diabetes_2023:p117",
+        "va_dod_cpg_diabetes_2023:p15",
+        "va_dod_cpg_diabetes_2023:p16"
+      ],
+      "result": "[{\"doc_id\": \"va_dod_cpg_diabetes_2023\", \"page\": 111, \"program\": \"VA\", \"authority\": \"advisory\", \"date\": \"2023-05\", \"text\": \"VA/DoD Clinical Practice Guideline for the Management of Type 2 Diabetes Mellitus (Version 6.0) > Appendix E: Evidence Table\\n[p 111]\\n[Table] (PDF page 111)\\nColumns: Recommendation | 2017 Strength of Recommendation | Evidence | 2023 Strength of Recommendation | Recommendation Category\\n11. In insulin-treated adults with type 2 diabetes mellitus who are not achieving glycemic goals, we suggest real-time continuous glucose monitoring to decrease hypoglycemia and improve HbA1c. | Not applicable | (92, 95-97) Additional References: (96, 97, 164, 165) | Weak for | Reviewed, New-added\\n12. For adults with type 2 diabetes mellitus, we suggest a Mediterranean style diet to improve glycemic control, body weight, and hypertension. | Strong for | (99, 100) Additional References: (101, 102, 103, 104) | Weak for | Reviewed, New-replaced\\n13. For adults with type 2 diabetes mellitus, we suggest a nutrition intervention strategy providing 13-50% of their total daily caloric intake from carbohydrates for diabetes management. | Strong for | (100, 103, 105-108) Additional Reference: (34) | Weak for | Reviewed, New-replaced\\n14. For adults with type 2 diabetes mellitus, we suggest a vegetarian dietary pattern for glycemic control and weight loss. | Not applicable | (103) | Weak for | Reviewed, New-added\\n15. For adults with type 2 diabetes mellitus, we suggest against intermittent fasting. | Not applicable | (111, 112) | Weak against | Reviewed, New-added\\n16. In adults with type 2 diabetes mellitus, we suggest regular physical activity to improve glycemic control, including but not limited to aerobic exercise, resistance training, or tai chi. | Not applicable | (113, 114, 116) Additional Reference: (115) | Weak for | Reviewed, New-added\\n17. In adults with stress related to type 2 diabetes mellitus, we suggest offering a mindfulness- based stress reduction program for short-term improvement. | Not applicable | (117-119) Additional Reference: (120) | Weak for | Reviewed, New-added\\n18. For adults with type 2 diabetes mellitus and diabetes distress, there is insufficient evidence to recommend for or against the use of acupuncture, biofeedback, hypnosis, guided imagery, massage therapy, yoga, or tai chi to improve outcomes. | Not applicable | (117-119) Additional Reference: (120) | Neither for nor against | Reviewed, New-added\\n[p 112]\\n[Table] (PDF page 112)\\nColumns: Recommendation | 2017 Strength of Recommendation | Evidence | 2023 Strength of Recommendation | Recommendation Category\\n19. For adults with type 2 diabetes mellitus with atherosclerotic cardiovascular disease, we recommend glucagon-like peptide-1 receptor agonists or sodium-glucose cotransporter-2 inhibitors with proven cardiovascular benefits to decrease the risk of major adverse cardiovascular events. | Not applicable | (121-127) Additional References: (128, 129) | Strong for | Reviewed, New-added\\n20. For adults with type 2 diabetes mellitus at high risk of atherosclerotic cardiovascular disease (i.e., chronic kidney disease, left ventricular hypertrophy, heart failure), we suggest glucagon- like peptide-1 receptor agonists or sodium- glucose cotransporter-2 inhibitors with proven cardiovascular benefits to decrease the risk of major adverse cardiovascular events. | Not applicable | (121-127) Additional References: (128, 142, 166-168) | Weak for | Reviewed, New- added\\n21. For adults with type 2 diabetes mellitus and heart failure, we recommend a sodium-glucose cotransporter-2 inhibitor to prevent hospital admissions for heart failure. | Not applicable | (109, 123, 126, 138) Additional References: (130-135) | Strong for | Reviewed, New-added\\n22. For adults with type 2 diabetes mellitus and chronic kidney disease, we recommend sodium- glucose cotransporter-2 inhibitors with proven renal protection to improve renal outcomes. | Not applicable | (109, 125-127",
+      "search": {
+        "original_query": "In the 2023 VA/DoD diabetes guideline's recommendation table, what are the strength and category of the recommendation on real-time continuous glucose monitoring for insulin-treated adults?",
+        "agent_query": "2023 VA DoD diabetes guideline recommendation table real-time continuous glucose monitoring insulin-treated adults strength category recommendation",
+        "executed": [
+          {
+            "source": "original",
+            "query": "In the 2023 VA/DoD diabetes guideline's recommendation table, what are the strength and category of the recommendation on real-time continuous glucose monitoring for insulin-treated adults?",
+            "program": "VA",
+            "k": 5,
+            "seconds": 0.261,
+            "cached": false,
+            "results": 5
+          },
+          {
+            "source": "agent",
+            "query": "2023 VA DoD diabetes guideline recommendation table real-time continuous glucose monitoring insulin-treated adults strength category recommendation",
+            "program": "VA",
+            "k": 5,
+            "seconds": 0.271,
+            "cached": false,
+            "results": 5
+          }
+        ],
+        "duplicates_merged": 4,
+        "returned": 6,
+        "from_both": 4,
+        "from_original_only": 1,
+        "from_agent_only": 1,
+        "provenance": [
+          {
+            "unit": "va_dod_cpg_diabetes_2023:s107",
+            "found_by": {
+              "original": 1,
+              "agent": 2
+            }
+          },
+          {
+            "unit": "va_dod_cpg_diabetes_2023:s108",
+            "found_by": {
+              "original": 2,
+              "agent": 1
+            }
+          },
+          {
+            "unit": "va_dod_cpg_diabetes_2023:s10",
+            "found_by": {
+              "original": 3,
+              "agent": 3
+            }
+          },
+          {
+            "unit": "va_dod_cpg_diabetes_2023:s106",
+            "found_by": {
+              "original": 4,
+              "agent": 4
+            }
+          },
+          {
+            "unit": "va_dod_cpg_diabetes_2023:s11",
+            "found_by": {
+              "original": 5
+            }
+          },
+          {
+            "unit": "va_dod_cpg_diabetes_2023:s109",
+            "found_by": {
+              "agent": 5
+            }
+          }
+        ],
+        "hits": [
+          {
+            "unit": "va_dod_cpg_diabetes_2023:s107",
+            "doc_id": "va_dod_cpg_diabetes_2023",
+            "pages": [
+              111,
+              112,
+              113
+            ],
+            "ranks": {
+              "original": 1,
+              "agent": 2
+            },
+            "scores": {
+              "original": 0.032,
+              "agent": 0.0274
+            }
+          },
+          {
+            "unit": "va_dod_cpg_diabetes_2023:s108",
+            "doc_id": "va_dod_cpg_diabetes_2023",
+            "pages": [
+              114,
+              115
+            ],
+            "ranks": {
+              "original": 2,
+              "agent": 1
+            },
+            "scores": {
+              "original": 0.031,
+              "agent": 0.0311
+            }
+          },
+          {
+            "unit": "va_dod_cpg_diabetes_2023:s10",
+            "doc_id": "va_dod_cpg_diabetes_2023",
+            "pages": [
+              15
+            ],
+            "ranks": {
+              "original": 3,
+              "agent": 3
+            },
+            "scores": {
+              "original": 0.0277,
+              "agent": 0.0271
+            }
+          },
+          {
+            "unit": "va_dod_cpg_diabetes_2023:s106",
+            "doc_id": "va_dod_cpg_diabetes_2023",
+            "pages": [
+              109,
+              110
+            ],
+            "ranks": {
+              "original": 4,
+              "agent": 4
+            },
+            "scores": {
+              "original": 0.0269,
+              "agent": 0.027
+            }
+          },
+          {
+            "unit": "va_dod_cpg_diabetes_2023:s11",
+            "doc_id": "va_dod_cpg_diabetes_2023",
+            "pages": [
+              16
+            ],
+            "ranks": {
+              "original": 5
+            },
+            "scores": {
+              "original": 0.0245
+            }
+          },
+          {
+            "unit": "va_dod_cpg_diabetes_2023:s109",
+            "doc_id": "va_dod_cpg_diabetes_2023",
+            "pages": [
+              116,
+              117
+            ],
+            "ranks": {
+              "agent": 5
+            },
+            "scores": {
+              "agent": 0.0255
+            }
+          }
+        ]
+      },
+      "t_start": 1.368
+    }
+  ],
+  "cited_evidence": {
+    "va_dod_cpg_diabetes_2023:p111": "va_dod_cpg_diabetes_2023 (VA, advisory, 2023-05)\nVA/DoD Clinical Practice Guideline for the Management of Type 2 Diabetes Mellitus (Version 6.0) > Appendix E: Evidence Table\n[p 111]\n[Table] (PDF page 111)\nColumns: Recommendation | 2017 Strength of Recommendation | Evidence | 2023 Strength of Recommendation | Recommendation Category\n11. In insulin-treated adults with type 2 diabetes mellitus who are not achieving glycemic goals, we suggest real-time continuous glucose monitoring to decrease hypoglycemia and improve HbA1c. | Not applicable | (92, 95-97) Additional References: (96, 97, 164, 165) | Weak for | Reviewed, New-added\n12. For adults with type 2 diabetes mellitus, we suggest a Mediterranean style diet to improve glycemic control, body weight, and hypertension. | Strong for | (99, 100) Additional References: (101, 102, 103, 104) | Weak for | Reviewed, New-replaced\n13. For adults with type 2 diabetes mellitus, we suggest a nutrition intervention strategy providing 13-50% of their total daily caloric intake from carbohydrates for diabetes management. | Strong for | (100, 103, 105-108) Additional Reference: (34) | Weak for | Reviewed, New-replaced\n14. For adults with type 2 diabetes mellitus, we suggest a vegetarian dietary pattern for glycemic control and weight loss. | Not applicable | (103) | Weak for | Reviewed, New-added\n15. For adults with type 2 diabetes mellitus, we suggest against intermittent fasting. | Not applicable | (111, 112) | Weak against | Reviewed, New-added\n16. In adults with type 2 diabetes mellitus, we suggest regular physical activity to improve glycemic control, including but not limited to aerobic exercise, resistance training, or tai chi. | Not applicable | (113, 114, 116) Additional Reference: (115) | Weak for | Reviewed, New-added\n17. In adults with stress related to type 2 diabetes mellitus, we suggest offering a mindfulness- based stress reduction program for short-term improvement. | Not applicable | (117-119) Additional Reference: (120) | Weak for | Reviewed, New-added\n18. For adults with type 2 diabetes mellitus and diabetes distress, there is insufficient evidence to recommend for or against the use of acupuncture, biofeedback, hypnosis, guided imagery, massage therapy, yoga, or tai chi to improve outcomes. | Not applicable | (117-119) Additional Reference: (120) | Neither for nor against | Reviewed, New-added\n[p 112]\n[Table] (PDF page 112)\nColumns: Recommendation | 2017 Strength of Recommendation | Evidence | 2023 Strength of Recommendation | Recommendation Category\n19. For adults with type 2 diabetes mellitus with atherosclerotic cardiovascular disease, we recommend glucagon-like peptide-1 receptor agonists or sodium-glucose cotransporter-2 inhibitors with proven cardiovascular benefits to decrease the risk of major adverse cardiovascular events. | Not applicable | (121-127) Additional References: (128, 129) | Strong for | Reviewed, New-added\n20. For adults with type 2 diabetes mellitus at high risk of atherosclerotic cardiovascular disease (i.e., chronic kidney disease, left ventricular hypertrophy, heart failure), we suggest glucagon- like peptide-1 receptor agonists or sodium- glucose cotransporter-2 inhibitors with proven cardiovascular benefits to decrease the risk of major adverse cardiovascular events. | Not applicable | (121-127) Additional References: (128, 142, 166-168) | Weak for | Reviewed, New- added\n21. For adults with type 2 diabetes mellitus and heart failure, we recommend a sodium-glucose cotransporter-2 inhibitor to prevent hospital admissions for heart failure. | Not applicable | (109, 123, 126, 138) Additional References: (130-135) | Strong for | Reviewed, New-added\n22. For adults with type 2 diabetes mellitus and chronic kidney disease, we recommend sodium- glucose cotransporter-2 inhibitors with proven renal protection to improve renal outcomes. | Not applicable | (109, 125-127, 138) | Strong for | Reviewed, New-added\n23. For adults with type 2 diabetes mellitus and chronic kidney disease who are not good candidates for a sodium-glucose cotransporter-2 inhibitor, we recommend a glucagon-like peptide-1 receptor agonist with proven renal protection to improve macroalbuminuria. | Not applicable | (121, 123, 138, 141) Additional References: (140) (142) | Strong for | Reviewed, New-added\n[p 113]\n[Table] (PDF page 113)\nColumns: Recommendation | 2017 Strength of Recommendation | Evidence | 2023 Strength of Recommendation | Recommendation Category\n24. In adults with type 2 diabetes mellitus who have cardiovascular disease or renal disease, we suggest that the addition of a sodium-glucose cotransporter-2 inhibitor or glucagon-like peptide-1 receptor agonist be considered, even if the patient has already achieved their individualized target range for glycemic control. | Not applicable | (122, 138) | Weak for | Reviewed, New-Added\n25. In adults with type 2 diabetes mellitus, especially those 65 years and older, we suggest prioritizing drug classes other than insulin, sulfonylureas, or meglitinides to minimize the risk of hypoglycemia, if glycemic control can be achieved with other treatments. | Not applicable | (146-151) Additional References: (143-145) | Weak for | Reviewed, New-added\n26. In adults with type 2 diabetes mellitus who have co-occurring cognitive impairment or risk of falls, there is insufficient evidence to recommend for or against specific treatment strategies for glucose lowering to reduce the risk of harms. | Not applicable | Additional References: (143-145) | Neither for nor against | Reviewed, New-added"
+  },
+  "cited_evidence_parts": {
+    "va_dod_cpg_diabetes_2023:p111": [
+      "va_dod_cpg_diabetes_2023 (VA, advisory, 2023-05)\nVA/DoD Clinical Practice Guideline for the Management of Type 2 Diabetes Mellitus (Version 6.0) > Appendix E: Evidence Table\n[p 111]\n[Table] (PDF page 111)\nColumns: Recommendation | 2017 Strength of Recommendation | Evidence | 2023 Strength of Recommendation | Recommendation Category\n11. In insulin-treated adults with type 2 diabetes mellitus who are not achieving glycemic goals, we suggest real-time continuous glucose monitoring to decrease hypoglycemia and improve HbA1c. | Not applicable | (92, 95-97) Additional References: (96, 97, 164, 165) | Weak for | Reviewed, New-added\n12. For adults with type 2 diabetes mellitus, we suggest a Mediterranean style diet to improve glycemic control, body weight, and hypertension. | Strong for | (99, 100) Additional References: (101, 102, 103, 104) | Weak for | Reviewed, New-replaced\n13. For adults with type 2 diabetes mellitus, we suggest a nutrition intervention strategy providing 13-50% of their total daily caloric intake from carbohydrates for diabetes management. | Strong for | (100, 103, 105-108) Additional Reference: (34) | Weak for | Reviewed, New-replaced\n14. For adults with type 2 diabetes mellitus, we suggest a vegetarian dietary pattern for glycemic control and weight loss. | Not applicable | (103) | Weak for | Reviewed, New-added\n15. For adults with type 2 diabetes mellitus, we suggest against intermittent fasting. | Not applicable | (111, 112) | Weak against | Reviewed, New-added\n16. In adults with type 2 diabetes mellitus, we suggest regular physical activity to improve glycemic control, including but not limited to aerobic exercise, resistance training, or tai chi. | Not applicable | (113, 114, 116) Additional Reference: (115) | Weak for | Reviewed, New-added\n17. In adults with stress related to type 2 diabetes mellitus, we suggest offering a mindfulness- based stress reduction program for short-term improvement. | Not applicable | (117-119) Additional Reference: (120) | Weak for | Reviewed, New-added\n18. For adults with type 2 diabetes mellitus and diabetes distress, there is insufficient evidence to recommend for or against the use of acupuncture, biofeedback, hypnosis, guided imagery, massage therapy, yoga, or tai chi to improve outcomes. | Not applicable | (117-119) Additional Reference: (120) | Neither for nor against | Reviewed, New-added\n[p 112]\n[Table] (PDF page 112)\nColumns: Recommendation | 2017 Strength of Recommendation | Evidence | 2023 Strength of Recommendation | Recommendation Category\n19. For adults with type 2 diabetes mellitus with atherosclerotic cardiovascular disease, we recommend glucagon-like peptide-1 receptor agonists or sodium-glucose cotransporter-2 inhibitors with proven cardiovascular benefits to decrease the risk of major adverse cardiovascular events. | Not applicable | (121-127) Additional References: (128, 129) | Strong for | Reviewed, New-added\n20. For adults with type 2 diabetes mellitus at high risk of atherosclerotic cardiovascular disease (i.e., chronic kidney disease, left ventricular hypertrophy, heart failure), we suggest glucagon- like peptide-1 receptor agonists or sodium- glucose cotransporter-2 inhibitors with proven cardiovascular benefits to decrease the risk of major adverse cardiovascular events. | Not applicable | (121-127) Additional References: (128, 142, 166-168) | Weak for | Reviewed, New- added\n21. For adults with type 2 diabetes mellitus and heart failure, we recommend a sodium-glucose cotransporter-2 inhibitor to prevent hospital admissions for heart failure. | Not applicable | (109, 123, 126, 138) Additional References: (130-135) | Strong for | Reviewed, New-added\n22. For adults with type 2 diabetes mellitus and chronic kidney disease, we recommend sodium- glucose cotransporter-2 inhibitors with proven renal protection to improve renal outcomes. | Not applicable | (109, 125-127, 138) | Strong for | Reviewed, New-added\n23. For adults with type 2 diabetes mellitus and chronic kidney disease who are not good candidates for a sodium-glucose cotransporter-2 inhibitor, we recommend a glucagon-like peptide-1 receptor agonist with proven renal protection to improve macroalbuminuria. | Not applicable | (121, 123, 138, 141) Additional References: (140) (142) | Strong for | Reviewed, New-added\n[p 113]\n[Table] (PDF page 113)\nColumns: Recommendation | 2017 Strength of Recommendation | Evidence | 2023 Strength of Recommendation | Recommendation Category\n24. In adults with type 2 diabetes mellitus who have cardiovascular disease or renal disease, we suggest that the addition of a sodium-glucose cotransporter-2 inhibitor or glucagon-like peptide-1 receptor agonist be considered, even if the patient has already achieved their individualized target range for glycemic control. | Not applicable | (122, 138) | Weak for | Reviewed, New-Added\n25. In adults with type 2 diabetes mellitus, especially those 65 years and older, we suggest prioritizing drug classes other than insulin, sulfonylureas, or meglitinides to minimize the risk of hypoglycemia, if glycemic control can be achieved with other treatments. | Not applicable | (146-151) Additional References: (143-145) | Weak for | Reviewed, New-added\n26. In adults with type 2 diabetes mellitus who have co-occurring cognitive impairment or risk of falls, there is insufficient evidence to recommend for or against specific treatment strategies for glucose lowering to reduce the risk of harms. | Not applicable | Additional References: (143-145) | Neither for nor against | Reviewed, New-added"
+    ]
+  },
+  "cost_note": "each call priced at its serving role's rates (llm.<role>.prices_per_mtok)",
+  "request_started_utc": "2026-10-18T13:20:57.218678+00:00",
+  "citation_check": {
+    "t_start": 5.371,
+    "duration_s": 0.001
+  }
+}

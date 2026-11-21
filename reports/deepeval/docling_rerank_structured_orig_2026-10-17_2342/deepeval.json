@@ -1,0 +1,832 @@
+{
+  "run": "docling_rerank_structured_orig_2026-10-17_2342",
+  "run_dir": "reports/evals/docling_rerank_structured_orig_2026-10-17_2342",
+  "golden": "evals/golden.jsonl",
+  "judge": "claude-sonnet-5-5",
+  "deepeval_version": "4.3.1",
+  "scored_at": "2026-10-18 18:50",
+  "n": 20,
+  "n_requested": 20,
+  "elapsed_s": 104.0,
+  "cost_usd": 1.8466,
+  "cost_estimated_metrics": 0,
+  "context_sources": {
+    "trace.cited_evidence": 19,
+    "none (abstention)": 1
+  },
+  "metrics": {
+    "groundedness": "FaithfulnessMetric(threshold=0.5)",
+    "truthfulness": "HallucinationMetric(threshold=0.5).score (deepeval 4.3.1: share of context passages the answer agrees with; contradicted_share = 1 - score)",
+    "relevancy": "AnswerRelevancyMetric(threshold=0.5)",
+    "accuracy": "GEval(name='accuracy', criteria=..., params=[input, actual_output, expected_output], threshold=0.5)"
+  },
+  "accuracy_criteria": "Compare the actual output with the expected output for a pharmacy staff question; score 1 when every fact the expected output states is present and correct in the actual output, 0.5 when the main conclusion is right but a stated condition, limit, date, program or process step is missing, 0 when the conclusion is wrong or contradicts the expected output; extra correct detail is not penalised",
+  "means": {
+    "accuracy": 0.625,
+    "accuracy_n": 20,
+    "truthfulness": 0.963,
+    "truthfulness_n": 19,
+    "groundedness": 1.0,
+    "groundedness_n": 19,
+    "relevancy": 0.958,
+    "relevancy_n": 20
+  },
+  "questions": [
+    {
+      "id": "Q01",
+      "status": "answered",
+      "context_source": "trace.cited_evidence",
+      "n_context": 5,
+      "judge": "claude-sonnet-5-5",
+      "scores": {
+        "accuracy": 0.8,
+        "relevancy": 1.0,
+        "truthfulness": 0.8,
+        "contradicted_share": 0.2,
+        "groundedness": 1.0
+      },
+      "reasons": {
+        "accuracy": "The main conclusion is correct: metformin is not required first, and the prescriber can start the SGLT2 for cardiovascular benefit. The Actual Output also covers most of the Expected Output's details. The 2025 PBM guide makes SGLT2 inhibitors first-line in T2DM with ASCVD, HF or CKD regardless of HbA1c, with metformin added only if more glycemic control is needed. The 2023 CPG supports a GLP-1 RA or SGLT2 with proven CV benefit. Empagliflozin and canagliflozin are named for ASCVD. The older 2020 guide is described as metformin first, then SGLT2. It omits the CPG's 'Rec 19' reference and the caveat that clinical recommendation does not guarantee formulary coverage, both of which are in the Expected Output. It also omits the 2020 guide's detail that an SGLT2 is added only when further glucose lowering is needed. The eGFR ≥20 check is extra and not contradictory. The statement that the 2020 guide is 'superseded' is a slight addition.",
+        "relevancy": "The score is 1.00 because the actual output stayed fully on topic. It directly addressed whether metformin must be tried before an SGLT2 inhibitor in a Veteran with T2DM and established ASCVD whose A1c is already at goal. There were no irrelevant statements. Great job staying focused on the question!",
+        "truthfulness": "The score is 0.80 because the output agrees with most of the contexts. It matches the 2025 VA PBM summary, which makes SGLT2 inhibitors first-line for T2DM with ASCVD, HF, or CKD regardless of HbA1c, and it repeats the eGFR ≥ 20 requirement. It also matches the 2023 VA/DoD CPG and does not contradict the other context. The score is not higher because the output conflicts with the 2020 VA PBM guide, which recommends metformin first-line. The output says metformin first is not required and calls that guidance superseded, which the context never states.",
+        "groundedness": "The score is 1.00 because there are no contradictions between the actual output and the retrieval context. Every claim is fully supported by the provided information. Great work staying accurate and grounded!"
+      },
+      "skipped": {},
+      "errors": {},
+      "timings_s": {
+        "accuracy": 5.32,
+        "relevancy": 6.01,
+        "truthfulness": 11.61,
+        "groundedness": 23.76
+      },
+      "cost_usd": 0.14659,
+      "question": "This Veteran has T2DM and established ASCVD, but their A1c is already at goal. Do we need to try metformin before starting an SGLT2, or can the prescriber start it for cardiovascular benefit?",
+      "answer": "Assuming VA: **No, metformin first isn't required.** The prescriber can start an SGLT2 for cardiovascular benefit.\n\n- The 2025 VA PBM summary (04/2025) calls SGLT2 inhibitors first-line in T2DM with ASCVD, HF, or CKD. It says to use them regardless of HbA1c, with metformin added if more glycemic control is needed.\n- The 2023 VA/DoD CPG says a GLP-1 RA or SGLT2 with proven CV benefit should be part of the regimen regardless of HbA1c. Of the SGLT2s, those with ASCVD benefit are empagliflozin and canagliflozin.\n- Check eGFR ≥20 before starting.\n- The 2020 PBM guide (metformin first, then SGLT2) is older and superseded.",
+      "expected_answer": "The prescriber can start the SGLT2 now. The 2025 PBM guide (more recent) makes SGLT2 inhibitors first-line for T2DM with ASCVD, HF or CKD regardless of HbA1c, adding metformin only if more glycemic control is needed; empagliflozin or canagliflozin for ASCVD. The 2023 CPG (Rec 19) supports a GLP-1 RA or SGLT2i with proven CV benefit. The older 2020 guide uses a metformin-first sequence and adds an SGLT2 only when further glucose lowering is needed. Clinical recommendation does not guarantee formulary coverage.",
+      "harness": {
+        "accuracy": "correct",
+        "groundedness": "0.778",
+        "claims_supported": "7",
+        "claims_partial": "1",
+        "claims_unsupported": "1",
+        "judge_reason": "Concludes the SGLT2 can start now regardless of A1c per the 2025 guide, names empagliflozin/canagliflozin, and notes the older 2020 guide's metformin-first sequence."
+      }
+    },
+    {
+      "id": "Q02",
+      "status": "answered",
+      "context_source": "trace.cited_evidence",
+      "n_context": 3,
+      "judge": "claude-sonnet-5-5",
+      "scores": {
+        "accuracy": 1.0,
+        "truthfulness": 1.0,
+        "contradicted_share": 0.0,
+        "relevancy": 1.0,
+        "groundedness": 1.0
+      },
+      "reasons": {
+        "accuracy": "The conclusion matches the Expected Output: flag it to the pharmacist. The Actual Output also includes every listed fact. It cites the 2025 PBM guide (Figure 6) saying to discontinue sulfonylureas, meglitinides and DPP-4 inhibitors when prandial insulin is added to basal. It cites the 2020 guide saying to continue metformin, DPP-4, SGLT-2 or GLP-1. It states that the newer guide governs. It routes the issue to the pharmacist and prescriber for reconciliation, and tells the staff member not to stop or deny the DPP-4 independently. The extras (page number, IB number, advisory status, GLP-1 RA combination check) are correct and do not contradict the Expected Output.",
+        "truthfulness": "The score is 1.00 because the output has no contradictions with the contexts. It correctly reports the 2025 VA PBM Figure 6 guidance (add prandial insulin to basal insulin and stop sulfonylurea, meglitinides, and DPP-4 inhibitors). It also matches the 2020 Clinician's Guide, which says to continue metformin, DPP-4, SGLT-2, or GLP-1 when prandial insulin is added. It follows Table 1's advice to avoid combining a DPP-4 inhibitor with a GLP-1 RA. It also correctly describes both documents as advisory.",
+        "relevancy": "The score is 1.00 because the response stayed fully on topic, addressing whether to flag the continued DPP-4 inhibitor to the pharmacist after mealtime insulin was added to basal insulin. There were no irrelevant statements. Nice work staying focused on the question.",
+        "groundedness": "The score is 1.00 because there are no contradictions between the actual output and the retrieval context. Every claim in the output is supported by the source material. Keep up the great work!"
+      },
+      "skipped": {},
+      "errors": {},
+      "timings_s": {
+        "accuracy": 5.18,
+        "truthfulness": 6.67,
+        "relevancy": 7.53,
+        "groundedness": 20.03
+      },
+      "cost_usd": 0.10391,
+      "question": "The prescriber added mealtime insulin to this Veteran's basal insulin, but the DPP-4 is still on the refill list. Our older VA handout says continue it. Should I flag that for the pharmacist?",
+      "answer": "Assuming VA clinical guidance: **yes, flag it to the pharmacist.**\n\n- The older handout (2020 Clinician's Guide, p17) says to continue metformin, DPP-4, SGLT-2 or GLP-1 when prandial insulin is added.\n- The newer VA PBM summary (IB 10-1775, April 2025, Figure 6) says to start prandial insulin and **discontinue sulfonylurea, meglitinides, and DPP-4 I**.\n- The 2025 summary is newer, so it governs here. Both documents are advisory, not binding policy.\n\nDon't stop or refill-deny the DPP-4 yourself. The pharmacist should contact the prescriber to confirm whether the DPP-4 is intentionally continued. Also check whether the Veteran is on a GLP-1 RA, because the guidance says not to combine it with a DPP-4.",
+      "expected_answer": "Yes, flag it. The 2025 PBM guide (Figure 6) says to discontinue sulfonylureas, meglitinides and DPP-4 inhibitors when prandial insulin is started on top of basal. The 2020 guide's clinical pearl says to continue metformin, DPP-4, SGLT-2 or GLP-1 when prandial insulin is added. The newer guide applies; route to the pharmacist/prescriber for reconciliation. A technician should not discontinue therapy independently.",
+      "harness": {
+        "accuracy": "correct",
+        "groundedness": "1.0",
+        "claims_supported": "5",
+        "claims_partial": "0",
+        "claims_unsupported": "0",
+        "judge_reason": "Matches reference: flag it, 2025 Figure 6 discontinues DPP-4 with prandial insulin, newer guide governs, technician shouldn't discontinue independently. Page citation difference is minor."
+      }
+    },
+    {
+      "id": "Q03",
+      "status": "answered",
+      "context_source": "trace.cited_evidence",
+      "n_context": 4,
+      "judge": "claude-sonnet-5-5",
+      "scores": {
+        "accuracy": 1.0,
+        "truthfulness": 1.0,
+        "contradicted_share": 0.0,
+        "relevancy": 1.0,
+        "groundedness": 1.0
+      },
+      "reasons": {
+        "accuracy": "The main conclusion matches the Expected Output: the Rx is not automatically excessive, and the 24 mg VA figure is advisory rather than a true conflict. The Actual Output also covers each required fact. It states that the Rx is 4 films/day, #120 per 30 days, at the NYRx limit of 32/8 mg/day. It says no PA is needed for SUD meds prescribed per national guidelines. It notes that the VA's 24 mg is a usual maximum and that higher doses are allowed with careful monitoring and documented rationale. It also says the patch (Butrans) is a chronic-pain product and not an interchangeable OUD substitute. The one omission is the example reasons for higher doses (uncontrolled withdrawal or cravings), which is minor. The extra detail on the 20 mcg/hr patch maximum and on contacting the prescriber is correct and does not contradict anything.",
+        "truthfulness": "The score is 1.00 because the output fully aligns with the contexts and has no contradictions. It correctly states the NYRx MAT limits for Suboxone 8/2 mg film (four films per day, 120 per 30 days, 32 mg-8 mg per day) and that no prior authorization is needed. It matches the VA OUD guide on 24 mg as a usual maximum, with higher doses allowed under monitoring and documented rationale. It also correctly describes the Butrans patch as a chronic pain product (max 20 mcg/hour, not approved for OUD) and the VA formulary's buprenorphine patch as having no restriction.",
+        "relevancy": "The score is 1.00 because the response stayed fully on topic. It addressed whether 32 mg/day (four 8/2 mg films) is automatically excessive given the VA 24 mg guidance versus the NYRx 32 mg limit, and it addressed whether the buprenorphine patch could be substituted. No irrelevant statements were found. Nice work.",
+        "groundedness": "The score is 1.00 because there are no contradictions between the actual output and the retrieval context. Every claim in the output is supported by the source material. Great job keeping it accurate!"
+      },
+      "skipped": {},
+      "errors": {},
+      "timings_s": {
+        "accuracy": 5.47,
+        "truthfulness": 7.88,
+        "relevancy": 9.34,
+        "groundedness": 24.15
+      },
+      "cost_usd": 0.11721,
+      "question": "We received Suboxone 8/2 mg films, four daily, quantity 120 for 30 days, for OUD. The VA guide says the usual maximum is 24 mg, but NYRx lists up to 32 mg. Is this automatically excessive—and could we substitute the buprenorphine patch on the VA formulary?",
+      "answer": "Assuming NY Medicaid: **not automatically excessive.**\n\n- NYRx MAT formulary (F/Q/D): Suboxone 8/2 mg film allows 4 films/day, max 120 per 30 days, up to 32 mg-8 mg/day. This Rx (4/day, #120/30 DS) is at the limit, not over it. PA isn't required for SUD meds prescribed per national guidelines.\n- The VA guide's 24 mg is a \"usual\" max. It says higher doses may be used with careful monitoring and documented rationale. That's advisory, not a conflict.\n- **Patch substitution: no.** The VA formulary lists buprenorphine patch with no restriction. But the patch (Butrans) is labeled for chronic pain, not OUD, and max 20 mcg/hr. It isn't an equivalent. A change would need a new prescriber decision. Contact the prescriber if you have clinical concerns.",
+      "expected_answer": "Not automatically excessive, and not a true conflict: one is a clinical usual maximum, the other a quantity ceiling. The Rx is 32/8 mg/day. VA lists a usual max of 24 mg/day; higher doses may be used (e.g., uncontrolled withdrawal or cravings) with careful monitoring and documented rationale. NYRx caps 8/2 mg films at 4/day, 120 per 30 days, ≤32/8 mg/day, and MAT needs no PA when prescribed per national guidelines, so the Rx fits. The VA formulary buprenorphine patch is a chronic-pain product (Butrans), not an interchangeable OUD substitute.",
+      "harness": {
+        "accuracy": "correct",
+        "groundedness": "1.0",
+        "claims_supported": "9",
+        "claims_partial": "0",
+        "claims_unsupported": "0",
+        "judge_reason": "Matches reference: 32 mg within NYRx limits, VA 24 mg is a usual max with monitoring/documentation, and the patch is a chronic-pain product, not an OUD substitute."
+      }
+    },
+    {
+      "id": "Q04",
+      "status": "answered",
+      "context_source": "trace.cited_evidence",
+      "n_context": 5,
+      "judge": "claude-sonnet-5-5",
+      "scores": {
+        "relevancy": 1.0,
+        "truthfulness": 1.0,
+        "contradicted_share": 0.0,
+        "accuracy": 1.0,
+        "groundedness": 1.0
+      },
+      "reasons": {
+        "relevancy": "The score is 1.00 because the response stayed fully on topic. It addressed the conflict between the old CMS memo and the newer sheet, whether the plan can count the patient's Suboxone prescriber and pharmacy, and whether that means OUD treatment should be blocked. No irrelevant statements were found, so there is nothing to lower the score. Nice work staying focused on the question.",
+        "truthfulness": "The score is 1.00 because the output fully aligns with the contexts and has no contradictions. It correctly states that Part D plans must have a DMP, that notice and case management come before any limit, that buprenorphine counts toward opioid prescriber and pharmacy criteria but not average daily MME, and that MAT access should not be affected.",
+        "accuracy": "The main conclusion matches the Expected Output: yes, the plan can count the Suboxone prescriber and pharmacy, and no, OUD treatment should not be blocked. Every fact in the Expected Output is present and correct. DMPs are mandatory for plan years starting 1/1/2022 under the SUPPORT Act, and the older memo itself notes this, so the two documents do not conflict. All buprenorphine, including MAT, counts toward opioid prescribers and pharmacies under the OMS criteria. Buprenorphine is excluded only from the MME calculation. MAT buprenorphine is not a FAD, and CMS says MAT access should not be affected. The extra detail on case management, notices and prescriber agreement is accurate and does not contradict anything. The response also describes the memo as voluntary under CARA, which is consistent with the input.",
+        "groundedness": "The score is 1.00 because there are no contradictions between the actual output and the retrieval context. Every claim in the output is supported by the source material. Great work keeping it accurate and grounded!"
+      },
+      "skipped": {},
+      "errors": {},
+      "timings_s": {
+        "relevancy": 7.21,
+        "truthfulness": 7.85,
+        "accuracy": 7.88,
+        "groundedness": 27.13
+      },
+      "cost_usd": 0.13004,
+      "question": "Our old CMS memo says Part D drug management programs are optional and excludes buprenorphine for MAT. The newer sheet says every plan needs a DMP. Can the plan count this patient's Suboxone prescriber and pharmacy—and does that mean their OUD treatment should be blocked?",
+      "answer": "Assuming Medicare Part D:\n\n- **Optional vs. required:** Not a true conflict. The 2018 memo (CY2019) says DMPs are voluntary under CARA, but it also notes the SUPPORT Act requires all sponsors to have a DMP for plan years starting 1/1/2022. The newer 2022 pharmacist sheet reflects this, so every plan must have a DMP.\n- **Counting Suboxone prescriber and pharmacy:** Yes. For the OMS criteria, all buprenorphine, including MAT, counts toward opioid prescribers and dispensing pharmacies. Buprenorphine is excluded only from the MME calculation.\n- **Blocking OUD treatment:** No. Buprenorphine for MAT isn't a frequently abused drug (FAD) under the DMP, so a DMP limit shouldn't apply to it. CMS says MAT access should not be affected. The plan must still run case management, send notices and get prescriber agreement before any limit on other opioids.",
+      "expected_answer": "Yes to counting, no to blocking. DMPs are now mandatory: the 2022 sheet says all Part D plans must have one, and the 2019 memo itself notes the SUPPORT Act requires DMPs for plan years from 1/1/2022, so the versions agree. Under the 2019 OMS criteria, all buprenorphine (pain and MAT) counts toward opioid prescribers and pharmacies, but buprenorphine is excluded from average daily MME, and MAT buprenorphine is not a frequently abused drug (FAD). Counting does not justify blocking MAT; CMS says MAT access should not be impacted.",
+      "harness": {
+        "accuracy": "correct",
+        "groundedness": "0.75",
+        "claims_supported": "6",
+        "claims_partial": "2",
+        "claims_unsupported": "0",
+        "judge_reason": "Matches reference: DMPs mandatory from 2022 (no true conflict), buprenorphine counts for prescribers/pharmacies but excluded from MME, MAT not FAD and not blocked."
+      }
+    },
+    {
+      "id": "Q05",
+      "status": "answered",
+      "context_source": "trace.cited_evidence",
+      "n_context": 5,
+      "judge": "claude-sonnet-5-5",
+      "scores": {
+        "accuracy": 0.5,
+        "relevancy": 1.0,
+        "truthfulness": 1.0,
+        "contradicted_share": 0.0,
+        "groundedness": 1.0
+      },
+      "reasons": {
+        "accuracy": "The main conclusion is correct: don't bill NYRx, because Medicaid doesn't cover Part D drug classes for full-benefit duals and bypassing the primary payer is fraudulent billing. It also covers telling the plan the patient is on opioids, requesting a POS override or calling the plan, seeking a coverage determination from the prescriber, and giving the CMS notice 'Medicare Prescription Drug Coverage and Your Rights.' However, it omits the explicit option to dispense up to 7 days when there is no override. It mentions dispensing less than the full days' supply only in the context of the notice, not as a resolution step. Because this process step is missing, the response is incomplete. The added 717 reject and exemption details are not contradictory.",
+        "relevancy": "The score is 1.00 because the response stayed fully on topic, addressing the rejected opioid refill for a dual-eligible patient who just changed Part D plans, and whether NYRx can be billed. There were no irrelevant statements, so nothing lowered the score. Nice work staying focused on the question.",
+        "truthfulness": "The score is 1.00 because the actual output fully aligns with the contexts and there are no contradictions. It matches the CMS pharmacist guidance on the 7-day opioid-naïve edit, POS overrides, expedited coverage determinations, and the required CMS notice. It also matches the NY Medicaid policy that Part D must be billed first and that Medicaid does not cover Part D drug classes for full-benefit duals. It is consistent with the Third Party Liability rules on the 717 rejection code and on fraudulent billing when the primary payor is bypassed.",
+        "groundedness": "The score is 1.00 because there are no contradictions between the actual output and the retrieval context. Every claim in the output is supported by the source material. Keep up the great work!"
+      },
+      "skipped": {},
+      "errors": {},
+      "timings_s": {
+        "accuracy": 5.42,
+        "relevancy": 6.33,
+        "truthfulness": 10.31,
+        "groundedness": 22.48
+      },
+      "cost_usd": 0.13191,
+      "question": "This patient has Medicare and NY Medicaid, takes opioids regularly, and just changed Part D plans. Their 30-day refill rejects for the opioid-naïve seven-day limit. Can we bill NYRx instead, or how do we resolve the claim?",
+      "answer": "Assuming a full-benefit dual: **don't bill NYRx.** Medicaid doesn't cover Part D drug classes for these members. Billing Medicaid to bypass Part D is treated as fraudulent billing, and any Medicaid claim would reject 717 for other insurance.\n\nTo resolve the claim:\n1. This edit is expected for new-plan enrollees whose history the plan doesn't have. CMS says it shouldn't affect people already taking opioids.\n2. Tell the new plan the patient is currently on opioids. Use the POS override transaction code, or call the plan. Add any exemption you know of, such as hospice, cancer pain, or LTC.\n3. If it isn't fixed at POS, the prescriber or patient can request a coverage determination, which can be expedited.\n4. If you can't fill as written, including when you dispense less than the full days' supply, give the patient the CMS notice \"Medicare Prescription Drug Coverage and Your Rights.\"\n5. Keep records of the Part D denial or response.",
+      "expected_answer": "Don't bill NYRx. For full-benefit dual eligibles, Medicaid does not cover drug classes covered by Part D, and bypassing the primary payer is fraudulent billing. Resolve with Part D:\n1. Tell the plan the patient is currently taking opioids (the new plan may lack the history) and request an override at POS or by calling the plan.\n2. If there's no override, dispense up to 7 days or have the prescriber request a coverage determination for the full supply.\n3. If unresolved at POS, give the patient the CMS notice 'Medicare Prescription Drug Coverage and Your Rights.'",
+      "harness": {
+        "accuracy": "correct",
+        "groundedness": "0.778",
+        "claims_supported": "7",
+        "claims_partial": "1",
+        "claims_unsupported": "1",
+        "judge_reason": "Says don't bill NYRx (fraudulent bypass), plan override for current opioid user, coverage determination, and CMS notice; partial-fill option is implied."
+      }
+    },
+    {
+      "id": "Q06",
+      "status": "answered",
+      "context_source": "trace.cited_evidence",
+      "n_context": 4,
+      "judge": "claude-sonnet-5-5",
+      "scores": {
+        "accuracy": 0.5,
+        "truthfulness": 1.0,
+        "contradicted_share": 0.0,
+        "relevancy": 1.0,
+        "groundedness": 1.0
+      },
+      "reasons": {
+        "accuracy": "The main conclusion is correct. The response says to bill the commercial plan first, that Medicaid is payer of last resort, and that a PA is expected because the NYRx GLP-1 and DPP-4 classes require PA for concurrent use. It also says a Medicaid PA does not override the primary payer, and that NYRx is billed after the TPL. It omits the VA guidance advising against the GLP-1 + DPP-4 combination and the recommendation for a pharmacist medication review, which are expected facts. Because one expected fact is missing, the score is capped at the partial level. The extra details (NCPDP 717, 6-year record retention) are correct and not penalized.",
+        "truthfulness": "The score is 1.00 because the actual output has no contradictions with the contexts. It correctly states that Ozempic pen and Januvia are preferred, that PA is required for concurrent GLP-1 and DPP-4 use, and that Medicaid is payer of last resort. It also correctly covers the NCPDP 717 denial and the 6-year record retention. Omitted details, such as the DO/BLTG flags, Ozempic tablets and Workers' Compensation, are lack of detail rather than contradictions.",
+        "relevancy": "The score is 1.00 because the output contained no irrelevant statements and stayed focused on the question about whether prior authorization is needed for Ozempic and who is billed first for a patient on Januvia with commercial insurance. Great job staying on topic!",
+        "groundedness": "The score is 1.00 because there are no contradictions between the actual output and the retrieval context. Every claim in the output is supported by the source material. Great work keeping it accurate!"
+      },
+      "skipped": {},
+      "errors": {},
+      "timings_s": {
+        "accuracy": 6.27,
+        "truthfulness": 6.38,
+        "relevancy": 6.81,
+        "groundedness": 17.39
+      },
+      "cost_usd": 0.09706,
+      "question": "Ozempic pen is preferred, but the patient takes Januvia and has commercial insurance. Do we need PA, and who gets billed first?",
+      "answer": "Assuming NY Medicaid with commercial as primary:\n\n1. **Bill the commercial plan first.** Medicaid is payer of last resort. Without a TPL claim, Medicaid denies with NCPDP 717 (Client Has Other Insurance). The commercial plan's rules apply, including its own PA.\n2. **Then bill NYRx** for the patient responsibility. Keep proof of the TPL denial or payment for 6 years.\n3. **Medicaid PA:** Ozempic pen and Januvia are both preferred. The GLP-1 and DPP-4 class criteria require PA for concurrent use. Expect a PA on the Medicaid claim unless the Januvia is stopped. A Medicaid PA doesn't override the primary payer's responsibility.\n\nThe PDL doesn't say whether the concurrent-use edit applies when the commercial plan paid first.",
+      "expected_answer": "Yes, PA is needed. Ozempic pen is preferred, but the NYRx GLP-1 and DPP-4 classes both require PA for concurrent GLP-1 + DPP-4 use. VA guidance separately advises avoiding the combination, so recommend a pharmacist medication review. Bill the commercial insurer first: Medicaid is payer of last resort, and an NYRx clinical PA doesn't waive the third-party billing requirement. Bill NYRx only after the TPL adjudicates.",
+      "harness": {
+        "accuracy": "partial",
+        "groundedness": "1.0",
+        "claims_supported": "11",
+        "claims_partial": "0",
+        "claims_unsupported": "0",
+        "judge_reason": "Correctly requires PA for concurrent GLP-1/DPP-4 use and bills commercial before NYRx, but omits the VA advice to avoid the combination and the recommended pharmacist medication review."
+      }
+    },
+    {
+      "id": "Q07",
+      "status": "answered",
+      "context_source": "trace.cited_evidence",
+      "n_context": 5,
+      "judge": "claude-sonnet-5-5",
+      "scores": {
+        "accuracy": 0.5,
+        "relevancy": 1.0,
+        "truthfulness": 1.0,
+        "contradicted_share": 0.0,
+        "groundedness": 1.0
+      },
+      "reasons": {
+        "accuracy": "The main conclusion matches the Expected Output: yes to long-term use, yes to splitting the dose BID or TID for analgesia, and yes to monitoring. It also correctly says discontinuation should be a collaborative decision and not follow a return to non-prescribed opioid use. However, several expected facts are missing. The monitoring list omits withdrawal/cravings (COWS), CBC, and infectious disease testing. It does not state the CPG's finding of insufficient evidence to favor any one MOUD for co-occurring pain, and it instead suggests buprenorphine/naloxone may be preferred. Extra items such as the C-SSRS suicide screen and the CNS depressant caution are acceptable. Because required conditions and process steps are missing, the response is only partly complete.",
+        "relevancy": "The score is 1.00 because the response stayed fully on topic. It addressed all three parts of the question: continuing buprenorphine long term for OUD with chronic pain, splitting doses, and the monitoring needed. No irrelevant statements were found, so there is nothing to lower the score. Nicely done!",
+        "truthfulness": "The score is 1.00 because the output fully aligns with the context and has no contradictions. It correctly describes OUD as a chronic disease, says medication should not be stopped for a return to non-prescribed opioid use, and says buprenorphine/naloxone can be split BID/TID for pain. Its monitoring list (PDMP, urine drug screen, PEG, renal/hepatic function, C-SSRS, ECG for QTc, naloxone) and its monitoring schedule (baseline, at least annually, more often during initiation or after unexpected results) also match the context. The extra CNS depressant caution is not in the context but does not contradict it.",
+        "groundedness": "The score is 1.00 because there are no contradictions between the actual output and the retrieval context. Every claim in the output is supported by the source material. Keep up the great work!"
+      },
+      "skipped": {},
+      "errors": {},
+      "timings_s": {
+        "accuracy": 4.97,
+        "relevancy": 7.98,
+        "truthfulness": 9.01,
+        "groundedness": 20.71
+      },
+      "cost_usd": 0.12903,
+      "question": "For OUD with chronic pain, can buprenorphine continue long term, can doses be split, and what monitoring is needed?",
+      "answer": "Assuming VA guidance:\n\n- **Long term:** Yes. OUD is chronic; MOUD is often continued indefinitely. Stop only after collaborative discussion, and don't stop it for return to non-prescribed opioid use. Buprenorphine/naloxone may be the preferred opioid when pain and OUD coexist.\n- **Splitting:** Yes. Divide the current 24-hour dose BID or TID for analgesia. The guidance doesn't give a different total dose for pain.\n- **Monitoring:** Check at baseline, then at least annually. Check more often at initiation or after unexpected results.\n  - PDMP and UDS\n  - Pain score (PEG) and psychological/substance-use assessment\n  - Renal and hepatic function\n  - Suicide screen (C-SSRS)\n  - ECG if QTc risk\n  - Naloxone and overdose education\n  - Caution with CNS depressants",
+      "expected_answer": "Yes to all three. OUD is chronic, and buprenorphine is often continued indefinitely; discontinuation is a collaborative decision and shouldn't happen on return to non-prescribed opioid use. With co-occurring pain, consider dividing the daily dose BID or TID for analgesia. Monitor at baseline, at least annually and more often during initiation: withdrawal/cravings (COWS), pain (e.g., PEG), PDMP, UDS, CBC, renal/hepatic function, infectious disease testing, ECG if at QTc risk. Offer overdose education and naloxone. The CPG finds insufficient evidence to favor any one MOUD for co-occurring pain.",
+      "harness": {
+        "accuracy": "partial",
+        "groundedness": "0.923",
+        "claims_supported": "12",
+        "claims_partial": "0",
+        "claims_unsupported": "1",
+        "judge_reason": "All three conclusions are right, but it says buprenorphine 'may be preferred' for co-occurring pain, contradicting the CPG's insufficient evidence. It also omits COWS, CBC and infectious disease testing."
+      }
+    },
+    {
+      "id": "Q08",
+      "status": "answered",
+      "context_source": "trace.cited_evidence",
+      "n_context": 2,
+      "judge": "claude-sonnet-5-5",
+      "scores": {
+        "accuracy": 1.0,
+        "truthfulness": 1.0,
+        "contradicted_share": 0.0,
+        "relevancy": 1.0,
+        "groundedness": 1.0
+      },
+      "reasons": {
+        "accuracy": "The main conclusion is correct and matches the Expected Output: use the New Patient Processing override with Reason for Service Code NP in field 439-E4 plus Submission Clarification Code 18 (LTC admit/readmit). All three conditions are present: the pharmacy is the LTC servicing pharmacy, eligibility returns 'NH', and this is the first fill after admission. The 30-day supply limit, the short-cycle billing exception, and the instruction to call the Department when a condition isn't met are all stated accurately. The extra detail about the Leave of Absence override (AD plus SCC 14, 7-day maximum) and the NY Medicaid assumption is correct and doesn't contradict anything, so it isn't penalized.",
+        "truthfulness": "The score is 1.00 because the actual output fully aligns with the contexts and has no contradictions. It correctly describes the New Patient Processing override (NP/18 codes, LTC servicing pharmacy, 'NH' eligibility response, first fill after admission, 30-day limit, and exclusions). It also correctly says the Leave of Absence override (AD/14, 7-day maximum) does not fit a new admission.",
+        "relevancy": "The score is 1.00 because there were no irrelevant statements in the actual output. Every part of the response directly addressed the question about which override applies when a new LTC resident arrives without meds and the first fill rejects with 01642. Great job staying focused and on topic!",
+        "groundedness": "The score is 1.00 because there are no contradictions between the actual output and the retrieval context. Every claim in the output is supported by the source material. Great work keeping it accurate!"
+      },
+      "skipped": {},
+      "errors": {},
+      "timings_s": {
+        "accuracy": 4.28,
+        "truthfulness": 6.07,
+        "relevancy": 7.24,
+        "groundedness": 14.94
+      },
+      "cost_usd": 0.08745,
+      "question": "A new LTC resident arrived without meds, and their first fill rejects with 01642. Which override applies?",
+      "answer": "Assuming NY Medicaid: use the **New Patient Processing override**, not the Leave of Absence one.\n\n1. Confirm that you are the LTC servicing pharmacy. Confirm the eligibility response returns \"NH\". Confirm the claim is the first fill of that drug, strength and directions after admission.\n2. Resubmit with Reason for Service Code (439-E4) = **NP**. Also send Submission Clarification Code (420-DK) = **18** (LTC admit/readmit).\n3. Limit the day supply to 30 days, unless the drug is subject to short-cycle billing.\n\nDon't use this override if you're a community pharmacy, the resident isn't new, or it isn't the first fill. If any of those apply, call the Department. The same 01642 denial also has a Leave of Absence override (AD plus SCC 14, 7-day maximum). That one doesn't fit a new admission.",
+      "expected_answer": "Assuming the conditions are met, use New Patient Processing: Reason for Service Code 'NP' in NCPDP field 439-E4 plus Submission Clarification Code '18' (LTC Patient Admit/Readmit). All three conditions must hold:\n1. You are an LTC-servicing pharmacy.\n2. The member was recently admitted to a qualifying SNF/HRF ('NH' on eligibility).\n3. This is the first dispensing after admission.\nDay supply is limited to 30 days unless short-cycle billing applies. If a condition isn't met, call the Department.",
+      "harness": {
+        "accuracy": "correct",
+        "groundedness": "1.0",
+        "claims_supported": "9",
+        "claims_partial": "0",
+        "claims_unsupported": "0",
+        "judge_reason": "Gives NP in 439-E4 plus SCC 18, lists the three conditions (LTC pharmacy, NH status, first fill), the 30-day limit, and the call-the-Department fallback."
+      }
+    },
+    {
+      "id": "Q09",
+      "status": "answered",
+      "context_source": "trace.cited_evidence",
+      "n_context": 2,
+      "judge": "claude-sonnet-5-5",
+      "scores": {
+        "accuracy": 1.0,
+        "truthfulness": 1.0,
+        "contradicted_share": 0.0,
+        "relevancy": 1.0,
+        "groundedness": 1.0
+      },
+      "reasons": {
+        "accuracy": "The Actual Output reaches the same main conclusion as the Expected Output: the documents name no specific code. It includes every process step from the Expected Output: consult the prescriber unless there was a recent consult with current information, document the date, time, prescriber and outcome, and submit the appropriate override code at POS. It also says to get the exact code from the plan's payer sheet or by calling the plan, which matches 'get the code from the plan's instructions.' The extra details, such as the PDMP example, the NCPDP DUR/PPS mention, and the CMS-10147 notice, do not contradict the Expected Output or the Input. The 'assuming Medicare Part D' framing is also consistent with the question.",
+        "truthfulness": "The score is 1.00 because there are no contradictions between the actual output and the contexts. The output accurately describes the opioid safety edit guidance: consulting the prescriber, documenting, submitting the override code, overriding at POS, and giving the CMS notice. Its statement that no specific override code is named is consistent with the contexts. The 'CMS-10147' form number is not in the context but does not contradict it. Leaving out the Drug Management Program details is a lack of detail, not a contradiction.",
+        "relevancy": "The score is 1.00 because the response stayed fully on topic. It addressed both the question about which code clears a Part D 90-MME alert after prescriber approval and whether the documents specify one, with no irrelevant statements. Nice work staying focused!",
+        "groundedness": "The score is 1.00 because there are no contradictions between the actual output and the retrieval context. Every claim in the output is supported by the source material. Keep up the great work!"
+      },
+      "skipped": {},
+      "errors": {},
+      "timings_s": {
+        "accuracy": 5.08,
+        "truthfulness": 6.39,
+        "relevancy": 7.35,
+        "groundedness": 12.05
+      },
+      "cost_usd": 0.07937,
+      "question": "After prescriber approval, what code clears a Part D 90-MME alert? Do our documents specify one?",
+      "answer": "Assuming Medicare Part D: **No, the documents don't name a specific code.**\n\nThe CMS pharmacist guidance says to:\n1. Consult the prescriber to confirm intent. This isn't needed if you recently consulted and have current clinical information, such as PDMP records.\n2. Document the discussion. This can include date, time, prescriber name, and the outcome (confirmed intent, didn't confirm, gave exclusion information, or couldn't be reached after X attempts).\n3. \"Submit the appropriate override code.\" Overrides can be sent at POS.\n\nThe documents don't list an NCPDP DUR/PPS value (reason/professional service/result code). Use the plan's payer sheet or call the plan for the exact code. If the claim still rejects and you can't fill it as written, give the enrollee the CMS-10147 notice.",
+      "expected_answer": "The documents don't give a specific code. The CMS sheet describes the process for the 90 MME care coordination edit: consult the prescriber to confirm intent (unless recently consulted with up-to-date info), document date, time, prescriber and outcome, then 'submit the appropriate override code' at POS. It never names a numeric code. Get the code from the plan's instructions; don't guess.",
+      "harness": {
+        "accuracy": "correct",
+        "groundedness": "0.857",
+        "claims_supported": "6",
+        "claims_partial": "1",
+        "claims_unsupported": "0",
+        "judge_reason": "States no specific code in documents, describes override process (consult, document, submit override code), and directs to plan for exact code, matching reference."
+      }
+    },
+    {
+      "id": "Q10",
+      "status": "answered",
+      "context_source": "trace.cited_evidence",
+      "n_context": 5,
+      "judge": "claude-sonnet-5-5",
+      "scores": {
+        "accuracy": 0.5,
+        "relevancy": 1.0,
+        "truthfulness": 1.0,
+        "contradicted_share": 0.0,
+        "groundedness": 1.0
+      },
+      "reasons": {
+        "accuracy": "The main conclusion is correct. The Actual Output says there is no true conflict, that CPG Rec 1 is a strong recommendation against initiating opioids for chronic non-cancer pain, and that Rec 5 (buprenorphine over full agonists) applies only to patients already on daily opioids. It also treats the PBM Butrans 5 mcg/hr start as dosing information for when a prescriber still chooses to use it, not as a recommendation to start. However, it omits the Expected Output's point that the PBM itself prefers non-opioid medications plus non-pharmacologic care, and considers buprenorphine only when opioid treatment is indicated. It credits the non-opioid-first idea to the CPG only and never mentions non-pharmacologic care. The extra detail (titration limits, PADR, REMS CE, 30-day reevaluation) is not penalised. Because a required PBM element is missing, the score is partial.",
+        "relevancy": "The score is 1.00 because the response stayed fully on topic. It addressed the conflict between the PBM's listed Butrans starting dose and the CPG's discouragement of opioid initiation in an opioid-naïve patient with chronic non-cancer pain, and it contained no irrelevant statements. Nice work staying focused and on point!",
+        "truthfulness": "The score is 1.00 because the output fully aligns with the context and no contradictions were found. It correctly reflects the strong recommendation against starting opioid therapy for chronic non-cancer pain, with non-opioid options first. It also matches the buprenorphine recommendations (Rec 5, 7, 9, 10) and the Butrans dosing details: 5 mcg/hr start, 7-day patch, titration no sooner than every 72 hours, and a 20 mcg/hr maximum. It also correctly notes that Rec 5 does not address opioid-naïve patients.",
+        "groundedness": "The score is 1.00 because there are no contradictions between the actual output and the retrieval context. Every claim is fully supported by the provided information. Great work staying accurate and grounded!"
+      },
+      "skipped": {},
+      "errors": {},
+      "timings_s": {
+        "accuracy": 7.12,
+        "relevancy": 8.55,
+        "truthfulness": 10.17,
+        "groundedness": 25.36
+      },
+      "cost_usd": 0.14857,
+      "question": "PBM lists a Butrans starting dose, but the CPG discourages opioid initiation. What applies to an opioid-naïve patient with chronic non-cancer pain?",
+      "answer": "Assuming VA: the two documents don't truly conflict. One gives dosing, the other gives the decision to start.\n\n- **CPG (2022):** Rec 1 is a Strong-against on initiating opioids for chronic non-cancer pain. Non-opioid options come first. Rec 5 (buprenorphine over full agonists) applies to patients already on daily opioids. It doesn't cover opioid-naïve patients.\n- **PBM IB 10-1497 (2021):** If the prescriber still decides to use Butrans in an opioid-naïve patient, the start is 5 mcg/hr, changed every 7 days. Titrate no sooner than every 72 hr, to a max of 20 mcg/hr. PADR and the opioid REMS CE are required.\n- **Also from the CPG:** use the lowest dose and the shortest duration, and reevaluate within 30 days.\n\nNeither document says Butrans is acceptable to start in this patient. That is a prescriber decision.",
+      "expected_answer": "The CPG applies: Recommendation 1 recommends against initiating opioid therapy for chronic non-cancer pain (strong against). There's no real conflict. The PBM Butrans table (5 mcg/h for opioid-naïve) is dosing information for when opioids are already indicated, not a recommendation to start. PBM itself says non-opioid medications plus non-pharmacologic care are preferred, and buprenorphine is considered only when opioid treatment is indicated. Recommendation 5 (buprenorphine over full agonists) covers patients already on daily opioids.",
+      "harness": {
+        "accuracy": "correct",
+        "groundedness": "0.8",
+        "claims_supported": "8",
+        "claims_partial": "1",
+        "claims_unsupported": "1",
+        "judge_reason": "Says there is no conflict, cites Rec 1 strong-against, treats the Butrans dose as dosing only, and limits Rec 5 to daily users. It omits PBM's own non-opioid preference statement."
+      }
+    },
+    {
+      "id": "Q11",
+      "status": "answered",
+      "context_source": "trace.cited_evidence",
+      "n_context": 1,
+      "judge": "claude-sonnet-5-5",
+      "scores": {
+        "truthfulness": 1.0,
+        "contradicted_share": 0.0,
+        "accuracy": 0.05,
+        "groundedness": 1.0,
+        "relevancy": 1.0
+      },
+      "reasons": {
+        "truthfulness": "The score is 1.00 because the actual output fully aligns with the contexts and there are no contradictions. It correctly states that the Ozempic pen is preferred, has no PA flag, and is in the GLP-1 RA Type 2 Diabetes class. It also accurately repeats the class clinical criteria and the PA requirement for concurrent GLP-1 and DPP-IV use. Finally, it notes that Ozempic tablets are a separate non-preferred row. The date remark is not addressed by the context, but it does not contradict it.",
+        "accuracy": "The main conclusion is correct. Under NY Medicaid (NYRx), the Ozempic pen is preferred on the PDL in the GLP-1 RA Type 2 Diabetes class, with no PA flag. The Actual Output also covers the clinical criteria (an FDA-approved or compendia-supported, Medicaid-covered indication) and the PA requirement for concurrent GLP-1 and DPP-IV use. It correctly notes that Ozempic tablets are non-preferred. However, it omits several Expected Output facts. It does not list the other preferred GLP-1s (Trulicity, Victoza/BLTG, exenatide). It does not say that Rybelsus and Mounjaro are non-preferred. It does not state that there is no PDP prior authorization. It also does not name T2DM as the indication. The statement about a date-less status applying today (10/17/2026) is odd extra detail.",
+        "groundedness": "The score is 1.00 because there are no contradictions between the actual output and the retrieval context. Every claim is fully supported by the provided information. Great work keeping the response accurate and grounded!",
+        "relevancy": "The score is 1.00 because the actual output had no irrelevant statements and addressed the question about whether the Ozempic pen is preferred or requires prior authorization. Great job staying focused and on topic!"
+      },
+      "skipped": {},
+      "errors": {},
+      "timings_s": {
+        "truthfulness": 4.28,
+        "accuracy": 5.39,
+        "groundedness": 7.35,
+        "relevancy": 8.84
+      },
+      "cost_usd": 0.04871,
+      "question": "Ozempic pen: preferred or PA?",
+      "answer": "Assuming NY Medicaid: **Ozempic pen is preferred** on the NYRx PDL (GLP-1 RAs – Type 2 Diabetes). No PA flag, and no effective-date marker, is on the row. The only date-less status applies today (10/17/2026).\n\n- Class clinical criteria (CC) still apply: confirm an FDA-approved/compendia-supported and Medicaid-covered indication.\n- PA is required if the patient is on a GLP-1 and a DPP-IV inhibitor concurrently.\n- Note: Ozempic **tablets** is a separate row and is **non-preferred** (PA required).",
+      "expected_answer": "Assuming NY Medicaid (NYRx): Ozempic pen is preferred on the PDL (GLP-1 RA – Type 2 Diabetes), so there's no PDP prior authorization. Clinical criteria still apply: the claim needs an FDA-approved or compendia-supported, Medicaid-covered indication (T2DM), and PA is required if the patient is on a DPP-4 concurrently. Other preferred GLP-1s are Trulicity, Victoza (BLTG) and exenatide; Ozempic tablets, Rybelsus and Mounjaro are non-preferred.",
+      "harness": {
+        "accuracy": "correct",
+        "groundedness": "0.833",
+        "claims_supported": "5",
+        "claims_partial": "1",
+        "claims_unsupported": "0",
+        "judge_reason": "States NY Medicaid assumption, Ozempic pen preferred, clinical criteria including covered indication and PA for concurrent DPP-4; omitting other preferred agents is minor."
+      }
+    },
+    {
+      "id": "Q12",
+      "status": "answered",
+      "context_source": "trace.cited_evidence",
+      "n_context": 1,
+      "judge": "claude-sonnet-5-5",
+      "scores": {
+        "truthfulness": 1.0,
+        "contradicted_share": 0.0,
+        "relevancy": 1.0,
+        "accuracy": 0.5,
+        "groundedness": 1.0
+      },
+      "reasons": {
+        "truthfulness": "The score is 1.00 because the output matches the context and nothing contradicts it. It correctly lists the Ozempic pen as preferred with no row flags and the Ozempic tablets as non-preferred, so 'PA required' for the tablets is consistent. It also reports the class Clinical Criteria accurately, including the PA requirement for concurrent GLP-1 and DPP-IV use. It states its assumptions (NY Medicaid, T2DM) and lists both matching rows, as the context's note asks.",
+        "relevancy": "The score is 1.00 because the response stayed fully on topic. It addressed whether Ozempic is covered for a patient on NY Medicaid, and it contained no irrelevant statements. Nice work staying focused on the question.",
+        "accuracy": "The main conclusion matches: Ozempic pen is covered for an NY Medicaid patient under the NYRx PDL, as a preferred product. The Actual Output also correctly includes the clinical criteria (Medicaid-covered indication, PA with concurrent DPP-IV use) and that Ozempic tablets are non-preferred. It also says VA formulary status is irrelevant to NYRx. However, it omits that the VA National Formulary lists semaglutide as PA-F with criteria for use. It also never says explicitly that the two documents are not in conflict because they cover different programs. Because some Expected Output facts are missing or incomplete, it gets partial credit.",
+        "groundedness": "The score is 1.00 because there are no contradictions between the actual output and the retrieval context. Every claim in the output is supported by the source material. Keep up the great work!"
+      },
+      "skipped": {},
+      "errors": {},
+      "timings_s": {
+        "truthfulness": 5.53,
+        "relevancy": 6.11,
+        "accuracy": 6.64,
+        "groundedness": 7.12
+      },
+      "cost_usd": 0.05254,
+      "question": "The VA National Formulary lists semaglutide one way. My pt is on NY Medicaid. Is Ozempic covered for them?",
+      "answer": "Assuming NY Medicaid (NYRx PDL), T2DM use: yes, the pen is covered.\n\n| Product | PDL status |\n|---|---|\n| Ozempic pen | Preferred (no PA/ST flags on the row) |\n| Ozempic tablets | Non-preferred (PA required) |\n\n- The class has Clinical Criteria (CC): confirm an FDA-approved or compendia-supported, Medicaid-covered indication.\n- PA is required if the patient is using a GLP-1 and a DPP-IV inhibitor concurrently.\n- No effective-date markers appear on these rows, so I found no pending change as of 10/17/2026.\n- The VA formulary status is irrelevant to NYRx.",
+      "expected_answer": "Yes. For an NY Medicaid patient, the NYRx PDL governs: Ozempic pen is preferred, subject to clinical criteria (Medicaid-covered indication, and PA if used with a DPP-4). Ozempic tablets are non-preferred. The VA National Formulary lists semaglutide (Ozempic) as PA-F with criteria for use, but that applies only to VA patients and doesn't affect NYRx coverage. This isn't a conflict, because the documents cover different programs.",
+      "harness": {
+        "accuracy": "correct",
+        "groundedness": "0.833",
+        "claims_supported": "5",
+        "claims_partial": "1",
+        "claims_unsupported": "0",
+        "judge_reason": "Matches reference: Ozempic pen preferred with clinical criteria (covered indication, PA with DPP-4), tablets non-preferred, VA formulary irrelevant to NYRx."
+      }
+    },
+    {
+      "id": "Q13",
+      "status": "answered",
+      "context_source": "trace.cited_evidence",
+      "n_context": 4,
+      "judge": "claude-sonnet-5-5",
+      "scores": {
+        "accuracy": 0.5,
+        "truthfulness": 1.0,
+        "contradicted_share": 0.0,
+        "relevancy": 1.0,
+        "groundedness": 1.0
+      },
+      "reasons": {
+        "accuracy": "The main conclusion matches the Expected Output: only the prescriber or their authorized agent can request the PA, and pharmacists are not authorized agents. The Actual Output also covers the Clinical Call Center number (1-877-309-9493, 24/7), PAXpress with ePACES, CoverMyMeds ePA that the pharmacy can start and the prescriber completes, and the 72-hour emergency supply through the call center. However, it gives the fax form location as a general PA forms page (newyork.fhsc.com/providers/PA_forms.asp) and says no form number is named. It never identifies the specific Standard PA fax form (NYRx_PDP_PA_Fax_Standardized.pdf), so that fact is incomplete. This is the form the Input asks for. It also does not say that the prescriber is the one who calls the call center, though this is implied. Because the form is incomplete, it gets partial credit.",
+        "truthfulness": "The score is 1.00 because the actual output matches the contexts on every point and has no contradictions. It correctly gives the NYRx Clinical Call Center number, the PA fax form URL, and CoverMyMeds as an electronic PA option. It also correctly says the call center is open 24/7, PAXpress requires an ePACES account, and a 72-hour emergency supply is available. It states that only the prescriber or their authorized agent may request a PA, and that pharmacists not employed by the prescriber's office are not authorized agents.",
+        "relevancy": "The score is 1.00 because the response stayed fully on topic. It addressed how to start a prior authorization for a non-preferred drug for an NY Medicaid patient, including who to contact and which form to use, and it contained no irrelevant statements. Great job staying focused!",
+        "groundedness": "The score is 1.00 because there are no contradictions between the actual output and the retrieval context. Every claim in the output is supported by the source material. Great work keeping the response accurate and faithful!"
+      },
+      "skipped": {},
+      "errors": {},
+      "timings_s": {
+        "accuracy": 5.34,
+        "truthfulness": 6.56,
+        "relevancy": 7.05,
+        "groundedness": 15.85
+      },
+      "cost_usd": 0.09329,
+      "question": "How do I start a PA for a non-preferred drug for an NY Medicaid pt: who do I contact and what form?",
+      "answer": "Assuming NYRx FFS: the prescriber or their authorized agent must request the PA. Pharmacists not employed by the prescriber's office aren't authorized agents, and third-party requests are prohibited.\n\n1. **Call:** the NYRx Clinical Call Center (Prime Therapeutics) at 1-877-309-9493, open 24/7.\n2. **Fax:** use the PA fax form at https://newyork.fhsc.com/providers/PA_forms.asp. The documents don't name a form number.\n3. **Electronic:** the prescriber can use CoverMyMeds ePA, or PAXpress with an ePACES account. As the pharmacy, you can start a CoverMyMeds ePA, and it routes to the prescriber to complete.\n4. **Emergency:** if the prescriber is unreachable, call the Clinical Call Center for a 72-hour emergency supply.",
+      "expected_answer": "Only the prescriber (or their authorized agent) can request the PA; pharmacists aren't authorized agents. Routes:\n1. Prescriber calls the Clinical Call Center, 1-877-309-9493 (24/7).\n2. PAXpress web application (prescribers with e-PACES).\n3. ePA via CoverMyMeds: the pharmacy can initiate, and the prescriber completes and submits.\n4. The Standard PA fax form: newyork.fhsc.com/downloads/providers/NYRx_PDP_PA_Fax_Standardized.pdf.\nIf the prescriber can't be reached, the pharmacist can get a 72-hour emergency supply via the call center.",
+      "harness": {
+        "accuracy": "partial",
+        "groundedness": "0.9",
+        "claims_supported": "9",
+        "claims_partial": "1",
+        "claims_unsupported": "0",
+        "judge_reason": "Covers prescriber-only requests, the call center number, CoverMyMeds/PAXpress and the 72-hour supply, but omits the Standard PA fax form and its specific PDF URL."
+      }
+    },
+    {
+      "id": "Q14",
+      "status": "answered",
+      "context_source": "trace.cited_evidence",
+      "n_context": 2,
+      "judge": "claude-sonnet-5-5",
+      "scores": {
+        "accuracy": 0.5,
+        "truthfulness": 1.0,
+        "contradicted_share": 0.0,
+        "relevancy": 0.8,
+        "groundedness": 1.0
+      },
+      "reasons": {
+        "accuracy": "The main conclusion matches the Expected Output. Under NY Medicaid, the PDL lists no F/Q/D limit for Ozempic pens, and the pen is preferred with clinical criteria (CC) for a Medicaid-covered indication and PA if used with a DPP-4 inhibitor. It also gives the correct Clinical Call Center number, (877) 309-9493. However, it omits the warning not to confuse Ozempic with Wegovy (semaglutide), which has its own F/Q/D criteria including a lifetime limit of two treatment attempts. The evaluation steps say a missing expected fact caps the score at 0.5. The extra detail about Ozempic tablets being non-preferred is not credited toward the missing fact.",
+        "truthfulness": "The score is 1.00 because the actual output fully aligns with the contexts and has no contradictions. It correctly describes Ozempic® pen as preferred and the tablets as non-preferred, the CC flag, and the clinical criteria. It also correctly notes that preferred drugs can still carry F/Q/D edits and gives the right Clinical Call Center number, (877) 309-9493.",
+        "relevancy": "The score is 0.80 because most of the response addressed the quantity limit on Ozempic pens, but it also included two off-topic statements. One covered prior authorization for concurrent GLP-1 and DPP-4 inhibitor use, which is not a quantity limit. The other discussed Ozempic tablets rather than pens and said nothing about a quantity limit. These two statements keep the score from being higher.",
+        "groundedness": "The score is 1.00 because there are no contradictions between the actual output and the retrieval context. Every claim is fully supported by the provided information. Great work keeping the output accurate and faithful!"
+      },
+      "skipped": {},
+      "errors": {},
+      "timings_s": {
+        "accuracy": 4.52,
+        "truthfulness": 4.78,
+        "relevancy": 7.58,
+        "groundedness": 11.14
+      },
+      "cost_usd": 0.06536,
+      "question": "QL on Ozempic pens?",
+      "answer": "Assuming NY Medicaid: the NYRx PDL doesn't list a QL or F/Q/D limit for Ozempic pens, and I found no GLP-1 quantity limit elsewhere in the documents.\n\n- Ozempic® pen is **preferred**, with only the CC flag (no F/Q/D flag).\n- CC means confirming an FDA-approved or compendia-supported, Medicaid-covered indication.\n- PA is required if the patient is on a GLP-1 and a DPP-4 inhibitor at the same time.\n- Ozempic® tablets are non-preferred.\n\nThis is silence, not proof that no limit exists. For claim-level edits, call the NY Medicaid Clinical Call Center at (877) 309-9493.",
+      "expected_answer": "Assuming NY Medicaid: the PDL lists no frequency, quantity or duration (F/Q/D) limit for Ozempic pen. It is preferred, with clinical criteria (Medicaid-covered indication; PA if used with a DPP-4). Don't confuse it with Wegovy (semaglutide), which has its own F/Q/D criteria, including a lifetime limit of two treatment attempts. Questions on F/Q/D limits can go to the Clinical Call Center at (877) 309-9493.",
+      "harness": {
+        "accuracy": "correct",
+        "groundedness": "1.0",
+        "claims_supported": "7",
+        "claims_partial": "0",
+        "claims_unsupported": "0",
+        "judge_reason": "States NY Medicaid assumption, no QL/F/Q/D listed, preferred with CC and DPP-4 PA, and the call center. Omitting the Wegovy caution doesn't change the conclusion."
+      }
+    },
+    {
+      "id": "Q15",
+      "status": "answered",
+      "context_source": "trace.cited_evidence",
+      "n_context": 2,
+      "judge": "claude-sonnet-5-5",
+      "scores": {
+        "accuracy": 1.0,
+        "truthfulness": 1.0,
+        "contradicted_share": 0.0,
+        "relevancy": 0.8667,
+        "groundedness": 1.0
+      },
+      "reasons": {
+        "accuracy": "The main conclusion matches the Expected Output: a tramadol-naïve patient must try an IR formulation before tramadol ER or ConZip, and tramadol ER is non-preferred with ST. It names tramadol tablet as the preferred IR option. It also includes every long-acting opioid criterion from the Expected Output: PA to start a long-acting opioid in opioid-naïve patients, the limit of 4 opioid Rxs per 30 days, and PA for age <12. The extra details (exemptions, MME threshold, benzodiazepine PA, 7-day supply limit, revision date) are not in the Expected Output and do not contradict it, so they are ignored.",
+        "truthfulness": "The score is 1.00 because the actual output fully aligns with the contexts and there are no contradictions. It matches the p5 context on tramadol ER step therapy, exemptions, other PA edits, and the revision date. It also matches the p6 context on preferred and non-preferred short-acting opioids and the 7-day limit for opioid-naïve patients.",
+        "relevancy": "The score is 0.87 because the response mostly addresses what a tramadol-naïve NY Medicaid patient must try first before tramadol ER. It is not higher because it also included irrelevant details: it noted that the effective date for the step therapy was missing, and it cited the PDL page revision date. Neither helps answer what must be tried first. The score is still high because the rest of the response stays on topic.",
+        "groundedness": "The score is 1.00 because there are no contradictions between the actual output and the retrieval context. Every claim in the output is supported by the source material. Great work keeping it accurate and faithful!"
+      },
+      "skipped": {},
+      "errors": {},
+      "timings_s": {
+        "accuracy": 4.41,
+        "truthfulness": 6.03,
+        "relevancy": 8.12,
+        "groundedness": 11.06
+      },
+      "cost_usd": 0.07905,
+      "question": "Tramadol-naïve NY Medicaid pt with a new Rx for tramadol ER. What do they have to try first?",
+      "answer": "Tramadol ER is **non-preferred with ST** on the NYRx PDL (Opioids – Long-Acting).\n\n1. **Required first step:** a tramadol-naïve patient must try an **IR formulation** before tramadol ER (or ConZip). The preferred IR option is **tramadol tablet**. The 25 mg and 75 mg tablets, the solution and tramadol/APAP are non-preferred.\n2. **Exemption:** cancer, sickle cell disease, or hospice/palliative care.\n3. **Other edits that may apply:**\n   - PA to start long-acting opioid therapy in opioid-naïve patients.\n   - PA at ≥90 MME/day for non-acute pain.\n   - PA if the patient is on a benzodiazepine.\n   - PA for age <12.\n   - Limit of 4 opioid Rxs per 30 days.\n   - The initial IR Rx for opioid-naïve patients is limited to a 7-day supply.\n\nThe PDL pages I found don't give an effective date for this ST. They are revised 9/14/2026.",
+      "expected_answer": "Immediate-release tramadol first. Step therapy on the long-acting opioid class requires tramadol-naïve patients to try an IR formulation before ConZip or tramadol ER, both of which are non-preferred and ST-flagged; tramadol tablet is preferred among short-acting opioids. Long-acting opioid criteria also apply: PA is required to start a long-acting opioid in an opioid-naïve patient, plus the 4-Rx/30-day limit and PA for patients under 12.",
+      "harness": {
+        "accuracy": "correct",
+        "groundedness": "0.909",
+        "claims_supported": "10",
+        "claims_partial": "1",
+        "claims_unsupported": "0",
+        "judge_reason": "Correctly states IR tramadol must be tried first before tramadol ER/ConZip (non-preferred, ST), notes tramadol tablet preferred, opioid-naïve PA, 4-Rx limit, under-12 PA."
+      }
+    },
+    {
+      "id": "Q16",
+      "status": "answered",
+      "context_source": "trace.cited_evidence",
+      "n_context": 3,
+      "judge": "claude-sonnet-5-5",
+      "scores": {
+        "accuracy": 0.5,
+        "truthfulness": 1.0,
+        "contradicted_share": 0.0,
+        "relevancy": 0.9231,
+        "groundedness": 1.0
+      },
+      "reasons": {
+        "accuracy": "The main conclusion is correct. The answer assumes NY Medicaid, says reject 22 is a missing or invalid DAW code, places Victoza in the BLTG program, and says to resubmit with DAW 9. It also correctly limits DAW 1 to Rx's marked 'Brand Medically Necessary' and says BLTG drugs need no DAW wording on the Rx. However, it omits two facts from the expected answer: BLTG brands are paid at the brand rate or U&C, whichever is lower, and they carry the generic copay. The extra details on generic liraglutide PA and GLP-1 clinical criteria are not penalised, but they do not make up for the missing payment and copay facts.",
+        "truthfulness": "The score is 1.00 because the output fully aligns with the contexts and there are no contradictions. It correctly states that Reject 22 means a missing or invalid DAW code, that pharmacies should submit DAW 9 for BLTG drugs like Victoza, and that DAW 1 with 'Brand Medically Necessary' is the only exception. It also correctly describes the GLP-1 class listing, including Victoza as preferred and generic liraglutide as non-preferred and requiring PA. The field reference 408-D8 is extra detail that the context does not contradict.",
+        "relevancy": "The score is 0.92 because the response mostly addressed the Victoza reject 22 and how to resolve it. It falls short of a higher score because it included a statement about a PA requirement for concurrent DPP-IV inhibitor use, which has nothing to do with reject 22, a DAW code error.",
+        "groundedness": "The score is 1.00 because there are no contradictions between the actual output and the retrieval context. Every claim in the output is supported by the source material. Great work keeping the response accurate and grounded!"
+      },
+      "skipped": {},
+      "errors": {},
+      "timings_s": {
+        "accuracy": 6.01,
+        "truthfulness": 7.55,
+        "relevancy": 8.69,
+        "groundedness": 11.38
+      },
+      "cost_usd": 0.08238,
+      "question": "Got reject 22 on a Victoza claim, what now?",
+      "answer": "Assuming NY Medicaid: Victoza is preferred and in the BLTG program. NCPDP reject 22 means a missing or invalid DAW code.\n\n1. Resubmit with DAW 9 (substitution allowed by prescriber, plan requests brand) in field 408-D8.\n2. Don't send DAW 1 unless the prescriber wrote DAW and \"Brand Medically Necessary\" on the Rx. DAW 1 is the only exception.\n3. No DAW or brand-necessary wording is needed on the Rx for BLTG drugs.\n\nGeneric liraglutide is non-preferred and needs PA. The GLP-1 class also has clinical criteria (CC). It needs PA if the patient is on a DPP-IV inhibitor at the same time.",
+      "expected_answer": "Assuming NY Medicaid: reject 22 means missing/invalid DAW code. Victoza is in the Brand Less Than Generic (BLTG) program, so:\n1. Resubmit with DAW 9 (substitution allowed by prescriber but plan requests brand).\n2. Use DAW 1 only if the Rx says 'Brand Medically Necessary.'\nBLTG brands don't need DAW on the Rx, are paid at the brand rate or U&C (whichever is lower), and carry the generic copay.",
+      "harness": {
+        "accuracy": "correct",
+        "groundedness": "0.75",
+        "claims_supported": "6",
+        "claims_partial": "2",
+        "claims_unsupported": "0",
+        "judge_reason": "Assumes NY Medicaid, defines reject 22 as missing/invalid DAW, and advises DAW 9 with the DAW 1 exception. Omits the brand-rate/U&C pricing and generic copay, a minor gap."
+      }
+    },
+    {
+      "id": "Q17",
+      "status": "answered",
+      "context_source": "trace.cited_evidence",
+      "n_context": 2,
+      "judge": "claude-sonnet-5-5",
+      "scores": {
+        "truthfulness": 1.0,
+        "contradicted_share": 0.0,
+        "relevancy": 1.0,
+        "accuracy": 0.5,
+        "groundedness": 1.0
+      },
+      "reasons": {
+        "truthfulness": "The score is 1.00 because the actual output has no contradictions with the contexts. It matches page 37, where Humalog® products are Preferred and insulin aspart is Non-Preferred as of 10/22/2026, and the SGLT2 class has no 10/22 markers. It also matches page 34, where Glucagon HCl emergency kit and Gvoke® are Preferred as of 10/22/2026, and the GLP-1 class rows have no 10/22 markers.",
+        "relevancy": "The score is 1.00 because there were no irrelevant statements in the actual output. Every part of the response addressed the question about which diabetes products change preferred status on NY Medicaid on 10/22/2026. Great job staying focused!",
+        "accuracy": "The main conclusion matches. The Actual Output lists the same five products: Humalog vial/pen/cartridge, Humalog Jr. KwikPen, glucagon HCl emergency kit and Gvoke become preferred, and insulin aspart (generic Novolog) becomes non-preferred. It also correctly says GLP-1 and SGLT2 have no changes. However, it does not explicitly say DPP-4 is unchanged; it only hedges that other classes weren't fully checked. It also omits the PDL superscript convention (1 = preferred as of 10/22/2026, 2 = non-preferred). It does not group products by class (Glucagon Agents, rapid-acting insulin) either. Because some Expected Output facts are missing, the response is only partially complete.",
+        "groundedness": "The score is 1.00 because there are no contradictions between the actual output and the retrieval context. Every claim in the output is supported by the source material. Great work!"
+      },
+      "skipped": {},
+      "errors": {},
+      "timings_s": {
+        "truthfulness": 5.75,
+        "relevancy": 5.98,
+        "accuracy": 6.76,
+        "groundedness": 12.34
+      },
+      "cost_usd": 0.07497,
+      "question": "Which diabetes products change preferred status on NY Medicaid on 10/22/2026?",
+      "answer": "Assuming NY Medicaid, as of today (10/17/2026) none of these changes are in effect yet. All take effect 10/22/2026:\n\n| Product | Status as of 10/22/2026 |\n|---|---|\n| Humalog® 100 U/mL vial, pen, cartridge | Preferred |\n| Humalog® Jr. Kwikpen | Preferred |\n| Insulin aspart (gen Novolog®) cartridge, vial, pen | Non-preferred |\n| Glucagon HCl emergency kit | Preferred |\n| Gvoke® pen, syringe, vial | Preferred |\n\nThe GLP-1 and SGLT2 classes show no 10/22 markers in the rows I retrieved. I didn't find markers in other diabetes classes, but I didn't check every class.",
+      "expected_answer": "Five products change on 10/22/2026:\n1. Becoming preferred: glucagon HCl emergency kit; Gvoke pen, syringe and vial (Glucagon Agents); Humalog 100 U/mL vial, pen and cartridge; Humalog Jr. 100 U/mL KwikPen (rapid-acting insulin).\n2. Becoming non-preferred: insulin aspart cartridge, vial and pen (generic Novolog).\nNo GLP-1, DPP-4 or SGLT2 product changes status on that date. On the PDL, superscript 1 marks drugs preferred as of 10/22/2026 and superscript 2 marks drugs non-preferred as of that date.",
+      "harness": {
+        "accuracy": "correct",
+        "groundedness": "1.0",
+        "claims_supported": "7",
+        "claims_partial": "0",
+        "claims_unsupported": "0",
+        "judge_reason": "Lists all five products with correct status and the 10/22/2026 effective date; minor hedging on unchecked classes doesn't contradict the reference."
+      }
+    },
+    {
+      "id": "Q18",
+      "status": "answered",
+      "context_source": "trace.cited_evidence",
+      "n_context": 2,
+      "judge": "claude-sonnet-5-5",
+      "scores": {
+        "accuracy": 0.1,
+        "relevancy": 1.0,
+        "truthfulness": 0.5,
+        "contradicted_share": 0.5,
+        "groundedness": 1.0
+      },
+      "reasons": {
+        "accuracy": "The main conclusion matches the Expected Output: under NY Medicaid, PA depends on the indication and product. For OUD (MAT formulary), the Actual Output lists the same products (buprenorphine SL, buprenorphine/naloxone tablet/film, Zubsolv, Sublocade, Brixadi). It says no PA when prescribed per national SUD guidelines and notes quantity limits, including the 32 mg/day max. For pain, it says the generic buprenorphine patch is preferred with no PA for the drug itself, and that Belbuca and Butrans are non-preferred and need PA. It also notes that long-acting opioid clinical criteria edits still apply, such as opioid-naïve initiation and ≥90 MME. The extras (benzodiazepine edit, the 8 tablets per 2 days quantity limit, the PA for opioid therapy in patients established on buprenorphine) do not contradict the Expected Output. The 10/22/2026 preferred date is extra detail that does not conflict with it. The response answers the question directly.",
+        "relevancy": "The score is 1.00 because the response stayed fully on topic and addressed whether buprenorphine needs a prior authorization (PA). It contained no irrelevant statements. Great job staying focused and answering the question directly!",
+        "truthfulness": "The score is 0.50 because the output mostly matches the context. It correctly states that SUD medications need no PA, lists the buprenorphine products, gives the right SL quantity limit (8 tablets per 2-day supply, max 32 mg/day), and notes that PA is needed to start opioid therapy in patients on dependence therapy. It also correctly describes the preferred buprenorphine patch and its CC edits. However, it says the patch is 'preferred as of 10/22/2026', but the context gives a document date of 2026-09-14 and contains no 10/22/2026 date. That fabricated date is a direct contradiction and lowers the score.",
+        "groundedness": "The score is 1.00 because there are no contradictions between the actual output and the retrieval context. Every claim is fully supported by the provided information. Great job staying accurate and grounded!"
+      },
+      "skipped": {},
+      "errors": {},
+      "timings_s": {
+        "accuracy": 5.75,
+        "relevancy": 8.41,
+        "truthfulness": 8.66,
+        "groundedness": 13.15
+      },
+      "cost_usd": 0.08367,
+      "question": "Does buprenorphine need a PA?",
+      "answer": "Assuming NY Medicaid (NYRx): it depends on the product.\n\n- **SUD products (MAT formulary):** buprenorphine SL tablet, buprenorphine/naloxone tablet and film, Suboxone film, Zubsolv, Sublocade and Brixadi. PA is not required when prescribed per national SUD guidelines. QLs apply. For example, buprenorphine SL is 8 tablets per 2-day supply, with a max of 32 mg/day.\n- **Buprenorphine patch (pain):** preferred as of 10/22/2026 in Opioids – Long-Acting, so no PA for the drug itself. CC edits can still trigger a PA, for example opioid-naïve initiation, ≥90 MME, or a patient on benzodiazepines. Belbuca and Butrans are non-preferred and need PA.\n- **Opioid therapy started in a patient established on buprenorphine for opioid dependence:** needs PA.",
+      "expected_answer": "Assuming NY Medicaid, it depends on the indication and product:\n1. OUD (MAT formulary): no PA when prescribed per national guidelines for buprenorphine SL tablets, buprenorphine/naloxone tablets/films, Zubsolv, Sublocade or Brixadi. Quantity limits apply (e.g., ≤32 mg/day).\n2. Pain: generic buprenorphine patch is preferred; Butrans and Belbuca are non-preferred (PA). Long-acting opioid criteria still apply, e.g., PA to start in opioid-naïve patients or at ≥90 MME.",
+      "harness": {
+        "accuracy": "correct",
+        "groundedness": "0.75",
+        "claims_supported": "6",
+        "claims_partial": "2",
+        "claims_unsupported": "0",
+        "judge_reason": "Assumes NY Medicaid, says MAT products need no PA under national guidelines with QLs, generic patch preferred, Butrans/Belbuca non-preferred, and long-acting opioid criteria apply. Matches the reference."
+      }
+    },
+    {
+      "id": "Q19",
+      "status": "answered",
+      "context_source": "trace.cited_evidence",
+      "n_context": 2,
+      "judge": "claude-sonnet-5-5",
+      "scores": {
+        "accuracy": 0.05,
+        "truthfulness": 1.0,
+        "contradicted_share": 0.0,
+        "relevancy": 0.8235,
+        "groundedness": 1.0
+      },
+      "reasons": {
+        "accuracy": "The main conclusion matches the Expected Output: NY Medicaid has no copay tiers, Trulicity is a preferred brand on the PDL, and the copay is $1.00. The $3.00 non-preferred brand copay and the exemptions for members under 21 and pregnancy are also correct. Several expected facts are missing: the $1.00 copay for generics and BLTG brands, the $0.50 OTC copay, the nursing home resident exemption, the quarterly copay maximum, and the rule that pharmacies can't refuse service for inability to pay. The answer lists hospice as an exemption, which the Expected Output does not mention. The extra PDL clinical criteria and Part D remarks are not contradictory. Because required details are missing, the answer is only partially complete.",
+        "truthfulness": "The score is 1.00 because the actual output fully aligns with the contexts and there are no contradictions. It correctly states that Trulicity is preferred in the GLP-1 class with Clinical Criteria, and that PA is required when a GLP-1 and DPP-IV are used together. It also gives the correct $1.00 and $3.00 copays for preferred and non-preferred brands and names exemptions that are all on the context's list. The extra remark about effective-date changes is not in the context, but it does not contradict it.",
+        "relevancy": "The score is 0.82 because the response largely addresses the copay tier for Trulicity, but it also includes some off-topic details. These cover clinical criteria for coverage, indication confirmation, and a prior authorization requirement for concurrent DPP-IV use. All of these concern access and coverage requirements, not the copay tier that was asked about, so the score is not higher.",
+        "groundedness": "The score is 1.00 because there are no contradictions between the actual output and the retrieval context. Every claim in the output is supported by the source material. Keep up the great work!"
+      },
+      "skipped": {},
+      "errors": {},
+      "timings_s": {
+        "accuracy": 5.41,
+        "truthfulness": 5.74,
+        "relevancy": 9.0,
+        "groundedness": 12.03
+      },
+      "cost_usd": 0.07641,
+      "question": "What's the copay tier for Trulicity?",
+      "answer": "Assuming NY Medicaid: NYRx has no copay \"tiers.\" Copay depends on PDL status.\n\n- Trulicity is **preferred** on the NYRx PDL (GLP-1 RA class, CC). The PDL doesn't mark it with an effective-date change, so the status is in effect now.\n- A preferred brand copay is **$1.00**. Non-preferred brands are $3.00.\n- The class has clinical criteria: confirm an FDA-approved or compendia-supported, Medicaid-covered indication. PA is required if the patient is also on a DPP-IV inhibitor.\n- Copay exemptions apply, e.g. members under 21, pregnancy, and hospice.\n\nFor Part D, the documents contain no plan formulary or tier for Trulicity. They are silent on it, not negative.",
+      "expected_answer": "NY Medicaid doesn't use copay tiers; the documents don't describe any tier structure. Copays are flat: $1.00 for generics, preferred brands and BLTG brands; $3.00 for non-preferred brands; $0.50 for OTCs. Trulicity is a preferred brand on the PDL, so the copay is $1.00. Exemptions include members under 21, pregnancy, nursing home residents and the quarterly copay maximum. Pharmacies can't refuse service for inability to pay.",
+      "harness": {
+        "accuracy": "correct",
+        "groundedness": "1.0",
+        "claims_supported": "7",
+        "claims_partial": "0",
+        "claims_unsupported": "0",
+        "judge_reason": "States no tiers, Trulicity preferred brand, $1.00 copay, and gives exemptions; omissions like OTC copay and the can't-refuse rule are minor."
+      }
+    },
+    {
+      "id": "Q20",
+      "status": "not_in_documents",
+      "context_source": "none (abstention)",
+      "n_context": 0,
+      "judge": "claude-sonnet-5-5",
+      "scores": {
+        "accuracy": 1.0,
+        "relevancy": 0.75
+      },
+      "reasons": {
+        "accuracy": "The main conclusion matches the Expected Output: the question is outside the documents, and the corpus has no pediatric otitis media or amoxicillin dosing guidance. The response also names the corpus contents (VA/DoD opioid and diabetes guidance, Medicare Part D opioid policy, NYRx PDL), which is consistent with the expected 'diabetes and opioid policy and guidance'. It directs the user to a pediatric antimicrobial reference or product labeling, which fits the expected advice to check a pediatric dosing reference. It leaves out 'or the prescriber', a minor omission. The extra detail about cefdinir on the PDL is not contradictory and is not penalized.",
+        "relevancy": "The score is 0.75 because most of the response addresses amoxicillin dosing for pediatric ear infections, but two statements are off-topic. One discusses Cefdinir's PDL status, which has nothing to do with amoxicillin dosing. The other is a meta-statement about how the response was produced and doesn't answer the dosing question. These irrelevant parts keep the score from being higher."
+      },
+      "skipped": {
+        "groundedness": "no retrieval context (none (abstention))",
+        "truthfulness": "no retrieval context (none (abstention))"
+      },
+      "errors": {},
+      "timings_s": {
+        "accuracy": 4.87,
+        "relevancy": 6.89
+      },
+      "cost_usd": 0.01905,
+      "question": "What's the best amoxicillin dosing for pediatric ear infections?",
+      "answer": "The documents don't cover this. I searched for amoxicillin dosing for pediatric otitis media and found nothing. The corpus is VA/DoD opioid and diabetes guidance, Medicare Part D opioid policy, and the NYRx PDL and policy manual. The only anti-infective content is PDL preferred/non-preferred listings, such as cefdinir, which is preferred. None of it gives pediatric antibiotic dosing. I'm not answering from general knowledge. Use a pediatric antimicrobial reference or the product labeling.",
+      "expected_answer": "Outside these documents. The corpus covers diabetes and opioid policy and guidance; it has no pediatric otitis media or amoxicillin dosing guidance. Check a pediatric dosing reference or the prescriber.",
+      "harness": {
+        "accuracy": "correct",
+        "groundedness": "n/a",
+        "claims_supported": "",
+        "claims_partial": "",
+        "claims_unsupported": "",
+        "judge_reason": "Correctly states the question is outside the documents, describes the corpus scope, and redirects to a pediatric reference; mentioning cefdinir as preferred is extra, non-contradictory detail."
+      }
+    }
+  ]
+}

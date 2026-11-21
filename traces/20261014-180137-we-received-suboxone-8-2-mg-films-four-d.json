@@ -1,0 +1,144 @@
+{
+  "question": "We received Suboxone 8/2 mg films, four daily, quantity 120 for 30 days, for OUD. The VA guide says the usual maximum is 24 mg, but NYRx lists up to 32 mg. Is this automatically excessive—and could we substitute the buprenorphine patch on the VA formulary?",
+  "status": "answered",
+  "assumption": "Assuming NY Medicaid (NYRx) for the claim; the VA guidance is advisory and doesn't govern it.",
+  "answer": "Assuming NY Medicaid: **No, this isn't automatically excessive.** The NYRx PDL (page dated 9/14/2026) allows Suboxone 8/2 mg film at four per day, with a maximum of 120 films per 30 days, not to exceed 32 mg/8 mg per day. Your claim is 32 mg/day and is within that limit.\n\nThe VA figure is different. The VA PBM guide cites 8–24 mg/day SL as the range for considering Sublocade. It's advisory clinical guidance, not a coverage limit. I found no VA text calling 24 mg a hard maximum.\n\n**Don't substitute the patch.** The VA documents list Butrans (buprenorphine TDS) only for chronic pain. It's a different indication and dose, and it isn't an OUD treatment. The VA formulary status isn't in the searchable documents.",
+  "citations": [
+    {
+      "doc_id": "ny_medicaid_pdl",
+      "page": 76,
+      "link": "https://newyork.fhsc.com/downloads/providers/NYRx_PDP_PDL.pdf#page=76",
+      "flag": null
+    },
+    {
+      "doc_id": "va_pbm_bup_oud",
+      "page": 1,
+      "link": "https://www.pbm.va.gov/PBM/AcademicDetailingService/Documents/508/10-1498_OUD_Provider_BuprenorphineforOUD_P97021.pdf#page=1",
+      "flag": null
+    },
+    {
+      "doc_id": "va_pbm_bup_chronic_pain",
+      "page": 2,
+      "link": "https://www.pbm.va.gov/PBM/AcademicDetailingService/Documents/Academic_Detailing_Educational_Material_Catalog/IB_1497_Provider_BupChronicPain.pdf#page=2",
+      "flag": null
+    }
+  ],
+  "conflicts_noted": [
+    "Apparent conflict: VA 24 mg vs NYRx 32 mg. Not a true conflict: the VA figure is advisory SL dosing context (8–24 mg before Sublocade), while the NYRx figure is a binding claim limit. NYRx governs this claim."
+  ],
+  "flags": [],
+  "answered_by": "claude-sonnet-5-5",
+  "fallback_used": false,
+  "timing_s": {
+    "total": 7.9,
+    "search": 0.119,
+    "search_cold": 0,
+    "search_warm": 0.119,
+    "read_page": 0,
+    "list_documents": 0,
+    "model_calls": [
+      1.999,
+      5.782
+    ]
+  },
+  "index_warm_at_start": true,
+  "lookups": 2,
+  "tokens": {
+    "input": 6,
+    "output": 790,
+    "cache_read": 2319,
+    "cache_write": 11992
+  },
+  "cost_usd": 0.038356,
+  "pages_seen": [
+    "ny_medicaid_pdl:p76",
+    "va_dod_cpg_opioids_2022:p104",
+    "va_dod_cpg_opioids_2022:p105",
+    "va_dod_cpg_opioids_2022:p121",
+    "va_dod_cpg_opioids_2022:p44",
+    "va_dod_cpg_opioids_2022:p45",
+    "va_pbm_bup_chronic_pain:p2",
+    "va_pbm_bup_chronic_pain:p3",
+    "va_pbm_bup_chronic_pain:p4",
+    "va_pbm_bup_oud:p1",
+    "va_pbm_bup_oud:p3"
+  ],
+  "started_at": "2026-10-14T22:01:37+00:00",
+  "config": {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium",
+    "setup": "baseline",
+    "max_tool_calls": 6,
+    "deadline_s": 25,
+    "search_k": 8
+  },
+  "model_calls": [
+    {
+      "duration_s": 1.999,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 4,
+        "output": 153,
+        "cache_read": 0,
+        "cache_write": 2319
+      }
+    },
+    {
+      "duration_s": 5.782,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 2,
+        "output": 637,
+        "cache_read": 2319,
+        "cache_write": 9673
+      }
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "search_documents",
+      "input": {
+        "query": "buprenorphine naloxone sublingual film OUD maximum daily dose 24 mg 32 mg"
+      },
+      "duration_s": 0.099,
+      "is_error": false,
+      "pages": [
+        "ny_medicaid_pdl:p76",
+        "va_dod_cpg_opioids_2022:p105",
+        "va_pbm_bup_oud:p1",
+        "va_dod_cpg_opioids_2022:p104",
+        "va_dod_cpg_opioids_2022:p105",
+        "va_dod_cpg_opioids_2022:p104",
+        "va_pbm_bup_oud:p3",
+        "va_pbm_bup_chronic_pain:p3"
+      ],
+      "index_loaded": true
+    },
+    {
+      "name": "search_documents",
+      "input": {
+        "query": "buprenorphine transdermal patch Butrans opioid use disorder not indicated"
+      },
+      "duration_s": 0.02,
+      "is_error": false,
+      "pages": [
+        "va_dod_cpg_opioids_2022:p121",
+        "va_pbm_bup_chronic_pain:p2",
+        "va_pbm_bup_chronic_pain:p4",
+        "va_dod_cpg_opioids_2022:p104",
+        "va_dod_cpg_opioids_2022:p104",
+        "va_pbm_bup_chronic_pain:p4",
+        "va_dod_cpg_opioids_2022:p44",
+        "va_dod_cpg_opioids_2022:p45"
+      ],
+      "index_loaded": true
+    }
+  ],
+  "cost_note": "priced at the requested model's rates; a fallback hop bills at its own rates"
+}

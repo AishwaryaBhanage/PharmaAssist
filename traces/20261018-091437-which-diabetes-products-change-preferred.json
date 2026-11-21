@@ -1,0 +1,1214 @@
+{
+  "question": "Which diabetes products change preferred status on NY Medicaid on 10/22/2026?",
+  "request_id": "8ace9d76-7e9e-491e-a9de-692a553d7f18",
+  "status": "answered",
+  "agent_status": "answered",
+  "assumption": null,
+  "answer": "NYRx PDP status changes effective **10/22/2026** are **not in effect yet** as of today, **10/18/2026**.\n\n| Product | Class | Status on 10/22/2026 |\n|---|---|---|\n| glucagon HCl emergency kit | Glucagon agents | **Preferred** |\n| Gvoke® pen/syringe/vial | Glucagon agents | **Preferred** |\n| Humalog® 100 U/mL vial/pen/cartridge | Rapid-acting insulin | **Preferred** |\n| Humalog® Jr. 100 U/mL KwikPen | Rapid-acting insulin | **Preferred** |\n| insulin aspart cartridge/vial/pen (gen Novolog®) | Rapid-acting insulin | **Non-preferred** |\n\nNon-preferred products generally require PA unless otherwise indicated.",
+  "citations": [
+    {
+      "doc_id": "ny_medicaid_pdl",
+      "page": 34,
+      "link": "https://newyork.fhsc.com/downloads/providers/NYRx_PDP_PDL.pdf#page=34",
+      "flag": null,
+      "locator": "ny_medicaid_pdl:p34"
+    },
+    {
+      "doc_id": "ny_medicaid_pdl",
+      "page": 37,
+      "link": "https://newyork.fhsc.com/downloads/providers/NYRx_PDP_PDL.pdf#page=37",
+      "flag": null,
+      "locator": "ny_medicaid_pdl:p37"
+    },
+    {
+      "doc_id": "ny_medicaid_pdl",
+      "page": 1,
+      "link": "https://newyork.fhsc.com/downloads/providers/NYRx_PDP_PDL.pdf#page=1",
+      "flag": null,
+      "locator": "ny_medicaid_pdl:p1"
+    }
+  ],
+  "conflicts_noted": [],
+  "flags": [],
+  "needs_review": false,
+  "words": {
+    "displayed": 64,
+    "rendered": 64
+  },
+  "answered_by": "gpt-5.5-2026-04-23",
+  "provider": "openai",
+  "model": "gpt-5.5-2026-04-23",
+  "fallback_used": false,
+  "timing_s": {
+    "total": 21.422,
+    "search": 0.595,
+    "read_page": 0,
+    "list_documents": 0,
+    "lookups": 0.03,
+    "model_calls": [
+      3.21,
+      2.464,
+      4.965,
+      10.157
+    ]
+  },
+  "lookups": 5,
+  "tokens": {
+    "input": 19222,
+    "output": 1262,
+    "cache_read": 26624,
+    "cache_write": 0
+  },
+  "cost_usd": 0.147282,
+  "pages_seen": [
+    "ny_medicaid_pdl:p1",
+    "ny_medicaid_pdl:p12",
+    "ny_medicaid_pdl:p2",
+    "ny_medicaid_pdl:p3",
+    "ny_medicaid_pdl:p32",
+    "ny_medicaid_pdl:p33",
+    "ny_medicaid_pdl:p34",
+    "ny_medicaid_pdl:p36",
+    "ny_medicaid_pdl:p37",
+    "ny_medicaid_pdl:p38",
+    "ny_medicaid_pdl:p45",
+    "ny_medicaid_pdl:p46",
+    "ny_medicaid_pdl:p61",
+    "ny_medicaid_pdl:p65",
+    "ny_medicaid_pdl:p67",
+    "ny_medicaid_pdl:p7",
+    "ny_medicaid_pdl:p77",
+    "ny_medicaid_pdl:p78",
+    "ny_medicaid_pdl:p79",
+    "ny_medicaid_pdl:p85",
+    "ny_medicaid_pdl:p86",
+    "ny_medicaid_pharmacy_policy:p6",
+    "ny_medicaid_pharmacy_policy:p7"
+  ],
+  "trace_id": null,
+  "started_at": "2026-10-18T13:14:37+00:00",
+  "config": {
+    "primary": "gpt-5.5",
+    "fallback": "claude-sonnet-5-5",
+    "effort": "medium",
+    "search": {
+      "mode": "hybrid",
+      "rrf_k": 60,
+      "fusion_depth": 100,
+      "return_parents": true,
+      "rerank": null
+    },
+    "max_tool_calls": 6,
+    "deadline_s": 25,
+    "search_k": 8
+  },
+  "structured_lookups": true,
+  "context": {},
+  "model_answer": "NYRx PDP status changes effective **10/22/2026** are **not in effect yet** as of today, **10/18/2026**.\n\n| Product | Class | Status on 10/22/2026 |\n|---|---|---|\n| glucagon HCl emergency kit | Glucagon agents | **Preferred** |\n| Gvoke® pen/syringe/vial | Glucagon agents | **Preferred** |\n| Humalog® 100 U/mL vial/pen/cartridge | Rapid-acting insulin | **Preferred** |\n| Humalog® Jr. 100 U/mL KwikPen | Rapid-acting insulin | **Preferred** |\n| insulin aspart cartridge/vial/pen (gen Novolog®) | Rapid-acting insulin | **Non-preferred** |\n\nNon-preferred products generally require PA unless otherwise indicated.",
+  "model_citations": [
+    {
+      "doc_id": "ny_medicaid_pdl",
+      "page": 34,
+      "link": "https://newyork.fhsc.com/downloads/providers/NYRx_PDP_PDL.pdf#page=34",
+      "flag": null,
+      "locator": "ny_medicaid_pdl:p34"
+    },
+    {
+      "doc_id": "ny_medicaid_pdl",
+      "page": 37,
+      "link": "https://newyork.fhsc.com/downloads/providers/NYRx_PDP_PDL.pdf#page=37",
+      "flag": null,
+      "locator": "ny_medicaid_pdl:p37"
+    },
+    {
+      "doc_id": "ny_medicaid_pdl",
+      "page": 1,
+      "link": "https://newyork.fhsc.com/downloads/providers/NYRx_PDP_PDL.pdf#page=1",
+      "flag": null,
+      "locator": "ny_medicaid_pdl:p1"
+    }
+  ],
+  "model_calls": [
+    {
+      "t_start": 0.0,
+      "duration_s": 3.21,
+      "requested_model": "gpt-5.5",
+      "served_model": "gpt-5.5-2026-04-23",
+      "provider": "openai",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 308,
+        "output": 150,
+        "cache_read": 1536,
+        "cache_write": 0
+      },
+      "cost_usd": 0.006808,
+      "response_id": "resp_0457e7b0a6db06fe016ad4c627da5087d2bac53433e6d1d463",
+      "input_messages": [
+        {
+          "role": "user",
+          "text": "Today's date: 2026-10-18\n\nQuestion: Which diabetes products change preferred status on NY Medicaid on 10/22/2026?"
+        }
+      ],
+      "output": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "call_h4z5EXyYKpQbMa5wtOZiVxlU",
+            "name": "search_documents",
+            "arguments": {
+              "query": "10/22/2026 diabetes preferred non-preferred NYRx Preferred Drug List",
+              "program": "NY Medicaid",
+              "k": 10
+            }
+          },
+          {
+            "id": "call_bQbMsgL4VGR6XqhXKMGs6HxC",
+            "name": "lookup_ny_medicaid_drug",
+            "arguments": {
+              "drug": "diabetes"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "t_start": 3.547,
+      "duration_s": 2.464,
+      "requested_model": "gpt-5.5",
+      "served_model": "gpt-5.5-2026-04-23",
+      "provider": "openai",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 7046,
+        "output": 133,
+        "cache_read": 1536,
+        "cache_write": 0
+      },
+      "cost_usd": 0.039988,
+      "response_id": "resp_0457e7b0a6db06fe016ad4c62b611887d2aaebf9d578aa5f2b",
+      "input_messages": [
+        {
+          "role": "tool",
+          "tool_results": [
+            {
+              "call_id": "call_h4z5EXyYKpQbMa5wtOZiVxlU",
+              "is_error": false,
+              "content": "[{\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1, \"program\": \"NY Medicaid\", \"authority\": \"binding\", \"date\": \"2026-09-14\", \"text\": \"NYRx Preferred Drug Program (PDP) Preferred Drug List > NYRx, the Medicaid Drug Program\\n[p 1]\\nElectronic prior authorizations are now accepted by NYRx, the Medicaid Drug Program via CoverMyMeds®. Consider this alternative option as an effective and efficient way to request a PA other than by phone or by fax. For more information, contact NYRx Education & Outreach at NYRxEO@primetherapeutics.com\\nThe PDP promotes the use of less expensive, equally effective drugs when medically appropriate through a Preferred Drug List (PDL). All drugs currently covered by NYRx, the Medicaid Drug Program, remain available under the PDP and the determination of preferred and non-preferred drugs does not prohibit a prescriber from obtaining any of the medications covered under Medicaid.\\nNon-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise.\\nPreferred drugs that require PA are indicated by footnote.\\nSpecific Clinical, Frequency/Quantity/Duration, Step Therapy criteria are listed in column at the right.\\nNote: Not all drugs covered by NYRx are subject to programs included in this document. For a complete list of drugs covered by NYRx see the Medicaid Pharmacy List of Reimbursable Drugs\\nThe CDRP is aimed at ensuring specific drugs are utilized in a medically appropriate manner. Under the CDRP, certain drugs require PA because there may be specific safety issues, public health concerns, the potential for fraud and abuse, or the potential for significant overuse and misuse.\\nThe DUR helps to ensure that prescriptions for outpatient drugs are appropriate, medically necessary, and not likely to result in adverse medical consequences. This program uses professional medical protocols and computer technology and claims processing to assist in the management of data regarding the prescribing and dispensing of prescriptions. Frequency/Quantity/Duration (F/Q/D) Program and Step Therapy parameters are implemented to ensure clinically appropriate and cost-effective use of these drugs and drug classes.\\nPA will not be required for medications used for the treatment of substance use disorder prescribed according to generally accepted national professional guidelines for the treatment of a substance use disorder.\\nThe Brand Less Than Generic Program is a cost containment initiative which promotes the use of certain multi-source brand name drugs when the cost of the brand name drug is less expensive than the generic equivalent. This program is in conformance with State Education Law, which intends that patients receive the lower cost alternative.\\nFor more information on NYRx, the Medicaid Drug Program: http://www.health.ny.gov/health_care/medicaid/program/pharmacy.htm To contact the NYRx Clinical Call Center please call 1-877-309-9493\\nTo download a copy of the Prior Authorization fax form go to https://newyork.fhsc.com/providers/PA_forms.asp\\nDisclaimer: Branded generics are included with the single generic name listing; they are not listed as separate agents.\\n[p 2]\\nNYRx, the Medicaid Drug Program Preferred Drug List\\nState law excludes Medicaid coverage of brand name drugs that have a Federal Food and Drug Administration (FDA) approved A-rated generic equivalent unless a PA is obtained. Drugs subject to the Preferred Drug Program (PDP), Clinical Drug Review Program (CDRP), and/or the Brand Less Than Generic (BLTG) Program are not subject to the Mandatory Generic Program.\\nDose optimization can reduce prescription costs by reducing the number of pills a patient needs to take each day. The Department has identified drugs to be included in this program, the majority of which have FDA approval for once-a-day dosing, have multiple strengths available in correlating increments at similar costs and are currently being utilized above the recommended dosing frequency.\\nThe Cost Optimization Program "
+            },
+            {
+              "call_id": "call_bQbMsgL4VGR6XqhXKMGs6HxC",
+              "is_error": false,
+              "content": "{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"diabetes\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"class_match\", \"classes\": [{\"drug_class\": \"Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes\", \"section\": \"VI. Endocrine and Metabolic Agents\", \"class_flags\": {\"CC\": \"Clinical Criteria: see the class's Coverage Parameters\"}, \"coverage_parameters\": \"CLINICAL CRITERIA (CC)\\nConfirm diagnosis of FDA-approved or compendia-supported\\nindication and Medicaid covered indication\\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently\", \"coverage_pages\": [34], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p34#row-6\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"exenatide\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-7\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Ozempic® pen\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-8\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Trulicity®\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-9\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Victoza®\", \"listed_as\": \"preferred\", \"flags\": {\"BLTG\": \"Brand Less Than Generic Program (PDL pages 77–78)\"}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-10\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"liraglutide (gen Victoza® )\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-11\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Mounjaro®\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-12\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Ozempic® tablets\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-13\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Rybelsus®\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-14\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Soliqua®\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-15\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Xultophy®\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}]}], \"note\": \"No drug is named 'diabetes'; these are the rows of the matching drug class.\"}"
+            }
+          ]
+        }
+      ],
+      "output": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "call_3NfXlJLs2f1H0BgjqdHqzjtp",
+            "name": "search_documents",
+            "arguments": {
+              "query": "\"Preferred as of 10/22/2026\" \"Non-Preferred as of 10/22/2026\" \"VI. Endocrine and Metabolic Agents\"",
+              "program": "NY Medicaid",
+              "k": 15
+            }
+          }
+        ]
+      }
+    },
+    {
+      "t_start": 6.279,
+      "duration_s": 4.965,
+      "requested_model": "gpt-5.5",
+      "served_model": "gpt-5.5-2026-04-23",
+      "provider": "openai",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 8823,
+        "output": 213,
+        "cache_read": 7680,
+        "cache_write": 0
+      },
+      "cost_usd": 0.054345,
+      "response_id": "resp_0457e7b0a6db06fe016ad4c62e1c7087d291cfa056ffcb2c73",
+      "input_messages": [
+        {
+          "role": "tool",
+          "tool_results": [
+            {
+              "call_id": "call_3NfXlJLs2f1H0BgjqdHqzjtp",
+              "is_error": false,
+              "content": "[{\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37, \"program\": \"NY Medicaid\", \"authority\": \"binding\", \"date\": \"2026-09-14\", \"text\": \"NYRx Preferred Drug Program (PDP) Preferred Drug List > VI. Endocrine and Metabolic Agents > Insulin – Rapid-Acting\\n[p 37]\\nPreferred drugs: Humalog® 100 U/mL vial, pen, cartridge (Preferred as of 10/22/2026); Humalog® Jr. 100 U/mL Kwikpen (Preferred as of 10/22/2026); insulin lispro vial, pen (gen Humalog® U100); insulin lispro junior (gen Humalog® Jr.)\\nNon-preferred drugs: Admelog®; Afrezza®; Apidra®; Fiasp® Penfill, FlexTouch, Pumpcart, vial; Humalog® 100 U/mL Tempo; Humalog® 200 U/mL; insulin aspart cartridge, vial, pen (gen Novolog® ) (Non-Preferred as of 10/22/2026); Kirsty™; Lyumjev®; Lyumjev® Tempo™; Merilog™ Solostar, vial; Novolog® cartridge, FlexPen, vial\", \"pages\": [37], \"section\": \"VI. Endocrine and Metabolic Agents > Insulin – Rapid-Acting\"}, {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 12, \"program\": \"NY Medicaid\", \"authority\": \"binding\", \"date\": \"2026-09-14\", \"text\": \"NYRx Preferred Drug Program (PDP) Preferred Drug List > III. Cardiovascular > Lipotropics, Other\\n[p 12]\\nPreferred drugs: Praluent® (Preferred as of 10/22/2026); Repatha® (Preferred as of 10/22/2026)\\nNon-preferred drugs: Redemplo® (Non-Preferred as of 10/22/2026); Tryngolza® (Non-Preferred as of 10/22/2026)\", \"pages\": [12], \"section\": \"III. Cardiovascular > Lipotropics, Other\"}, {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34, \"program\": \"NY Medicaid\", \"authority\": \"binding\", \"date\": \"2026-09-14\", \"text\": \"NYRx Preferred Drug Program (PDP) Preferred Drug List > VI. Endocrine and Metabolic Agents > Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes (CC)\\n[p 34]\\nPreferred drugs: exenatide; Ozempic® pen; Trulicity®; Victoza® (BLTG)\\nNon-preferred drugs: liraglutide (gen Victoza® ); Mounjaro®; Ozempic® tablets; Rybelsus®; Soliqua®; Xultophy®\\nCoverage parameters: CLINICAL CRITERIA (CC)\\nConfirm diagnosis of FDA-approved or compendia-supported\\nindication and Medicaid covered indication\\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently\", \"pages\": [34], \"section\": \"VI. Endocrine and Metabolic Agents > Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes (CC)\"}, {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34, \"program\": \"NY Medicaid\", \"authority\": \"binding\", \"date\": \"2026-09-14\", \"text\": \"NYRx Preferred Drug Program (PDP) Preferred Drug List > VI. Endocrine and Metabolic Agents > Glucagon Agents\\n[p 34]\\nPreferred drugs: Baqsimi®; glucagon HCl emergency kit (Preferred as of 10/22/2026); glucagon vial; Gvoke® pen, syringe, vial (Preferred as of 10/22/2026); Zegalogue® pen, syringe\", \"pages\": [34], \"section\": \"VI. Endocrine and Metabolic Agents > Glucagon Agents\"}, {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 45, \"program\": \"NY Medicaid\", \"authority\": \"binding\", \"date\": \"2026-09-14\", \"text\": \"NYRx Preferred Drug Program (PDP) Preferred Drug List > IX. Immunologic Agents > Immunomodulators – Systemic (CC, ST)\\n[p 45]\\nPreferred drugs: Adbry™ (Preferred as of 10/22/2026); Dupixent®; Ebglyss™; Fasenra®; Starjemza™ (Preferred as of 10/22/2026); Taltz® (Preferred as of 10/22/2026); Tyenne® (Preferred as of 10/22/2026)\\nNon-preferred drugs: Actemra® SQ; Avtozma®; Bimzelx®; Cosentyx® (Non-Preferred as of 10/22/2026); Ilaris®; Ilumya®; Imuldosa®; Kevzara®; Kineret®; Nemluvio®; Nucala® (Non-Preferred as of 10/22/2026); Omvoh™ SQ; Otulfi™; Pyzchiva®; Selarsdi™; Skyrizi®; Skyrizi® On-Body; Spevigo®; Stelara®; Steqeyma®; Tremfya®; ustekinumab; Yesintek™; Cibinqo™; Olumiant®; Rinvoq™ ER; Rinvoq® LQ; tofacitinib (gen Xeljanz® ); tofacitinib ER (gen Xeljanz® XR)\\n[p 46]\\nPreferred drugs: adalimumab (Boehringer Ingelheim); Hadlima™ (Preferred as of 10/22/2026); Orencia® SQ (Preferred as of 10/22/2026); Otezla® (Preferred as of 10/22/2026); Tezspire® pen (Preferred as of 10/22/2026); Xolair®\\nNon-preferred drugs: Xeljanz®; Xeljanz® XR; Abrilada™; adalimumab; Amjevita™; Cyltezo®; Cimzia®; Enbrel® (Non-Preferred as of 10/22/2"
+            }
+          ]
+        }
+      ],
+      "output": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "call_O8bweRiD2bhyGMkiyY9SL0oK",
+            "name": "lookup_ny_medicaid_drug",
+            "arguments": {
+              "drug": "Insulin – Rapid-Acting"
+            }
+          },
+          {
+            "id": "call_VXqge0PMDzfPDNX7VayYA2iK",
+            "name": "lookup_ny_medicaid_drug",
+            "arguments": {
+              "drug": "Glucagon Agents"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "t_start": 11.264,
+      "duration_s": 10.157,
+      "requested_model": "gpt-5.5",
+      "served_model": "gpt-5.5-2026-04-23",
+      "provider": "openai",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 3045,
+        "output": 766,
+        "cache_read": 15872,
+        "cache_write": 0
+      },
+      "cost_usd": 0.046141,
+      "response_id": "resp_0457e7b0a6db06fe016ad4c6334cd887d2833a9034c3d4003e",
+      "input_messages": [
+        {
+          "role": "tool",
+          "tool_results": [
+            {
+              "call_id": "call_O8bweRiD2bhyGMkiyY9SL0oK",
+              "is_error": false,
+              "content": "{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"Insulin – Rapid-Acting\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"class_match\", \"classes\": [{\"drug_class\": \"Insulin – Rapid-Acting\", \"section\": \"VI. Endocrine and Metabolic Agents\", \"class_flags\": {}, \"coverage_parameters\": \"(none printed)\", \"coverage_pages\": [], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p37#row-1\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"Humalog® 100 U/mL vial, pen, cartridge\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\", \"effective_date_marker\": \"1 = Preferred as of 10/22/2026. The PDL lists the drug in the column it moves to on 2026-10-22: preferred from that date, non-preferred before it.\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-2\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"Humalog® Jr. 100 U/mL Kwikpen\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\", \"effective_date_marker\": \"1 = Preferred as of 10/22/2026. The PDL lists the drug in the column it moves to on 2026-10-22: preferred from that date, non-preferred before it.\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-3\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"insulin lispro vial, pen (gen Humalog® U100)\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-4\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"insulin lispro junior (gen Humalog® Jr.)\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-5\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"Admelog®\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-6\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"Afrezza®\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-7\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"Apidra®\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-8\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"Fiasp® Penfill, FlexTouch, Pumpcart, vial\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-9\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"Humalog® 100 U/mL Tempo\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-10\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"Humalog® 200 U/mL\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-11\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"insulin aspart cartridge, vial, pen (gen Novolog® )\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\", \"effective_date_marker\": \"2 = Non-Preferred as of 10/22/2026. The PDL lists the drug in the column it moves to on 2026-10-22: non-preferred from that date, preferred before it.\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-12\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"Kirsty™\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-13\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"Lyumjev®\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-14\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"Lyumjev® Tempo™\", \"listed_as\": \"non-preferred\", "
+            },
+            {
+              "call_id": "call_VXqge0PMDzfPDNX7VayYA2iK",
+              "is_error": false,
+              "content": "{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"Glucagon Agents\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"class_match\", \"classes\": [{\"drug_class\": \"Glucagon Agents\", \"section\": \"VI. Endocrine and Metabolic Agents\", \"class_flags\": {}, \"coverage_parameters\": \"(none printed)\", \"coverage_pages\": [], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p34#row-1\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Baqsimi®\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-2\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"glucagon HCl emergency kit\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\", \"effective_date_marker\": \"1 = Preferred as of 10/22/2026. The PDL lists the drug in the column it moves to on 2026-10-22: preferred from that date, non-preferred before it.\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-3\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"glucagon vial\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-4\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Gvoke® pen, syringe, vial\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\", \"effective_date_marker\": \"1 = Preferred as of 10/22/2026. The PDL lists the drug in the column it moves to on 2026-10-22: preferred from that date, non-preferred before it.\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-5\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Zegalogue® pen, syringe\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}]}], \"note\": \"No drug is named 'Glucagon Agents'; these are the rows of the matching drug class.\"}"
+            }
+          ]
+        }
+      ],
+      "output": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "call_szoWop2GBPcm8HbXS2na2oLL",
+            "name": "submit_answer",
+            "arguments": {
+              "status": "answered",
+              "assumption": null,
+              "answer": "NYRx PDP status changes effective **10/22/2026** are **not in effect yet** as of today, **10/18/2026**.\n\n| Product | Class | Status on 10/22/2026 |\n|---|---|---|\n| glucagon HCl emergency kit | Glucagon agents | **Preferred** |\n| Gvoke® pen/syringe/vial | Glucagon agents | **Preferred** |\n| Humalog® 100 U/mL vial/pen/cartridge | Rapid-acting insulin | **Preferred** |\n| Humalog® Jr. 100 U/mL KwikPen | Rapid-acting insulin | **Preferred** |\n| insulin aspart cartridge/vial/pen (gen Novolog®) | Rapid-acting insulin | **Non-preferred** |\n\nNon-preferred products generally require PA unless otherwise indicated.",
+              "citations": [
+                {
+                  "doc_id": "ny_medicaid_pdl",
+                  "page": 34,
+                  "row": null
+                },
+                {
+                  "doc_id": "ny_medicaid_pdl",
+                  "page": 37,
+                  "row": null
+                },
+                {
+                  "doc_id": "ny_medicaid_pdl",
+                  "page": 1,
+                  "row": null
+                }
+              ],
+              "conflicts_noted": []
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "search_documents",
+      "input": {
+        "query": "10/22/2026 diabetes preferred non-preferred NYRx Preferred Drug List",
+        "program": "NY Medicaid",
+        "k": 10
+      },
+      "duration_s": 0.327,
+      "is_error": false,
+      "pages": [
+        "ny_medicaid_pdl:p1",
+        "ny_medicaid_pdl:p12",
+        "ny_medicaid_pdl:p2",
+        "ny_medicaid_pdl:p3",
+        "ny_medicaid_pdl:p34",
+        "ny_medicaid_pdl:p37",
+        "ny_medicaid_pdl:p45",
+        "ny_medicaid_pdl:p46",
+        "ny_medicaid_pdl:p61",
+        "ny_medicaid_pdl:p65",
+        "ny_medicaid_pdl:p67",
+        "ny_medicaid_pdl:p77",
+        "ny_medicaid_pdl:p78",
+        "ny_medicaid_pdl:p79",
+        "ny_medicaid_pdl:p85",
+        "ny_medicaid_pdl:p86"
+      ],
+      "result": "[{\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1, \"program\": \"NY Medicaid\", \"authority\": \"binding\", \"date\": \"2026-09-14\", \"text\": \"NYRx Preferred Drug Program (PDP) Preferred Drug List > NYRx, the Medicaid Drug Program\\n[p 1]\\nElectronic prior authorizations are now accepted by NYRx, the Medicaid Drug Program via CoverMyMeds®. Consider this alternative option as an effective and efficient way to request a PA other than by phone or by fax. For more information, contact NYRx Education & Outreach at NYRxEO@primetherapeutics.com\\nThe PDP promotes the use of less expensive, equally effective drugs when medically appropriate through a Preferred Drug List (PDL). All drugs currently covered by NYRx, the Medicaid Drug Program, remain available under the PDP and the determination of preferred and non-preferred drugs does not prohibit a prescriber from obtaining any of the medications covered under Medicaid.\\nNon-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise.\\nPreferred drugs that require PA are indicated by footnote.\\nSpecific Clinical, Frequency/Quantity/Duration, Step Therapy criteria are listed in column at the right.\\nNote: Not all drugs covered by NYRx are subject to programs included in this document. For a complete list of drugs covered by NYRx see the Medicaid Pharmacy List of Reimbursable Drugs\\nThe CDRP is aimed at ensuring specific drugs are utilized in a medically appropriate manner. Under the CDRP, certain drugs require PA because there may be specific safety issues, public health concerns, the potential for fraud and abuse, or the potential for significant overuse and misuse.\\nThe DUR helps to ensure that prescriptions for outpatient drugs are appropriate, medically necessary, and not likely to result in adverse medical consequences. This program uses professional medical protocols and computer technology and claims processing to assist in the management of data regarding the prescribing and dispensing of prescriptions. Frequency/Quantity/Duration (F/Q/D) Program and Step Therapy parameters are implemented to ensure clinically appropriate and cost-effective use of these drugs and drug classes.\\nPA will not be required for medications used for the treatment of substance use disorder prescribed according to generally accepted national professional guidelines for the treatment of a substance use disorder.\\nThe Brand Less Than Generic Program is a cost containment initiative which promotes the use of certain multi-source brand name drugs when the cost of the brand name drug is less expensive than the generic equivalent. This program is in conformance with State Education Law, which intends that patients receive the lower cost alternative.\\nFor more information on NYRx, the Medicaid Drug Program: http://www.health.ny.gov/health_care/medicaid/program/pharmacy.htm To contact the NYRx Clinical Call Center please call 1-877-309-9493\\nTo download a copy of the Prior Authorization fax form go to https://newyork.fhsc.com/providers/PA_forms.asp\\nDisclaimer: Branded generics are included with the single generic name listing; they are not listed as separate agents.\\n[p 2]\\nNYRx, the Medicaid Drug Program Preferred Drug List\\nState law excludes Medicaid coverage of brand name drugs that have a Federal Food and Drug Administration (FDA) approved A-rated generic equivalent unless a PA is obtained. Drugs subject to the Preferred Drug Program (PDP), Clinical Drug Review Program (CDRP), and/or the Brand Less Than Generic (BLTG) Program are not subject to the Mandatory Generic Program.\\nDose optimization can reduce prescription costs by reducing the number of pills a patient needs to take each day. The Department has identified drugs to be included in this program, the majority of which have FDA approval for once-a-day dosing, have multiple strengths available in correlating increments at similar costs and are currently being utilized above the recommended dosing frequency.\\nThe Cost Optimization Program ",
+      "search": {
+        "original_query": "Which diabetes products change preferred status on NY Medicaid on 10/22/2026?",
+        "agent_query": "10/22/2026 diabetes preferred non-preferred NYRx Preferred Drug List",
+        "executed": [
+          {
+            "source": "original",
+            "query": "Which diabetes products change preferred status on NY Medicaid on 10/22/2026?",
+            "program": "NY Medicaid",
+            "k": 10,
+            "seconds": 0.326,
+            "cached": false,
+            "results": 10
+          },
+          {
+            "source": "agent",
+            "query": "10/22/2026 diabetes preferred non-preferred NYRx Preferred Drug List",
+            "program": "NY Medicaid",
+            "k": 10,
+            "seconds": 0.202,
+            "cached": false,
+            "results": 10
+          }
+        ],
+        "duplicates_merged": 8,
+        "returned": 12,
+        "from_both": 8,
+        "from_original_only": 2,
+        "from_agent_only": 2,
+        "provenance": [
+          {
+            "unit": "ny_medicaid_pdl:s1",
+            "found_by": {
+              "original": 2,
+              "agent": 1
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s67",
+            "found_by": {
+              "original": 1,
+              "agent": 3
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s24",
+            "found_by": {
+              "original": 4,
+              "agent": 4
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s134",
+            "found_by": {
+              "original": 7,
+              "agent": 2
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s84",
+            "found_by": {
+              "original": 5,
+              "agent": 5
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s123",
+            "found_by": {
+              "original": 3,
+              "agent": 10
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s62",
+            "found_by": {
+              "original": 6,
+              "agent": 9
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s135",
+            "found_by": {
+              "original": 10,
+              "agent": 8
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s145",
+            "found_by": {
+              "agent": 6
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s0",
+            "found_by": {
+              "agent": 7
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s121",
+            "found_by": {
+              "original": 8
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s61",
+            "found_by": {
+              "original": 9
+            }
+          }
+        ],
+        "hits": [
+          {
+            "unit": "ny_medicaid_pdl:s1",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              1,
+              2,
+              3
+            ],
+            "ranks": {
+              "original": 2,
+              "agent": 1
+            },
+            "scores": {
+              "original": 0.0294,
+              "agent": 0.0293
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s67",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              37
+            ],
+            "ranks": {
+              "original": 1,
+              "agent": 3
+            },
+            "scores": {
+              "original": 0.0297,
+              "agent": 0.028
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s24",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              12
+            ],
+            "ranks": {
+              "original": 4,
+              "agent": 4
+            },
+            "scores": {
+              "original": 0.0264,
+              "agent": 0.0278
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s134",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              77,
+              78
+            ],
+            "ranks": {
+              "original": 7,
+              "agent": 2
+            },
+            "scores": {
+              "original": 0.0239,
+              "agent": 0.0282
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s84",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              45,
+              46
+            ],
+            "ranks": {
+              "original": 5,
+              "agent": 5
+            },
+            "scores": {
+              "original": 0.0251,
+              "agent": 0.0266
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s123",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              67
+            ],
+            "ranks": {
+              "original": 3,
+              "agent": 10
+            },
+            "scores": {
+              "original": 0.0286,
+              "agent": 0.0221
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s62",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              34
+            ],
+            "ranks": {
+              "original": 6,
+              "agent": 9
+            },
+            "scores": {
+              "original": 0.0243,
+              "agent": 0.0238
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s135",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              79
+            ],
+            "ranks": {
+              "original": 10,
+              "agent": 8
+            },
+            "scores": {
+              "original": 0.0225,
+              "agent": 0.0244
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s145",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              85,
+              86
+            ],
+            "ranks": {
+              "agent": 6
+            },
+            "scores": {
+              "agent": 0.0248
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s0",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              61
+            ],
+            "ranks": {
+              "agent": 7
+            },
+            "scores": {
+              "agent": 0.0248
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s121",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              65
+            ],
+            "ranks": {
+              "original": 8
+            },
+            "scores": {
+              "original": 0.0233
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s61",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              34
+            ],
+            "ranks": {
+              "original": 9
+            },
+            "scores": {
+              "original": 0.0231
+            }
+          }
+        ]
+      },
+      "t_start": 3.21
+    },
+    {
+      "name": "lookup_ny_medicaid_drug",
+      "input": {
+        "drug": "diabetes"
+      },
+      "duration_s": 0.01,
+      "is_error": false,
+      "pages": [
+        "ny_medicaid_pdl:p1",
+        "ny_medicaid_pdl:p34"
+      ],
+      "result": "{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"diabetes\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"class_match\", \"classes\": [{\"drug_class\": \"Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes\", \"section\": \"VI. Endocrine and Metabolic Agents\", \"class_flags\": {\"CC\": \"Clinical Criteria: see the class's Coverage Parameters\"}, \"coverage_parameters\": \"CLINICAL CRITERIA (CC)\\nConfirm diagnosis of FDA-approved or compendia-supported\\nindication and Medicaid covered indication\\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently\", \"coverage_pages\": [34], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p34#row-6\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"exenatide\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-7\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Ozempic® pen\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-8\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Trulicity®\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-9\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Victoza®\", \"listed_as\": \"preferred\", \"flags\": {\"BLTG\": \"Brand Less Than Generic Program (PDL pages 77–78)\"}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-10\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"liraglutide (gen Victoza® )\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-11\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Mounjaro®\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-12\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Ozempic® tablets\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-13\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Rybelsus®\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-14\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Soliqua®\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-15\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Xultophy®\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}]}], \"note\": \"No drug is named 'diabetes'; these are the rows of the matching drug class.\"}",
+      "lookup": {
+        "result": "class_match",
+        "rows": 10
+      },
+      "t_start": 3.537
+    },
+    {
+      "name": "search_documents",
+      "input": {
+        "query": "\"Preferred as of 10/22/2026\" \"Non-Preferred as of 10/22/2026\" \"VI. Endocrine and Metabolic Agents\"",
+        "program": "NY Medicaid",
+        "k": 15
+      },
+      "duration_s": 0.268,
+      "is_error": false,
+      "pages": [
+        "ny_medicaid_pdl:p1",
+        "ny_medicaid_pdl:p12",
+        "ny_medicaid_pdl:p2",
+        "ny_medicaid_pdl:p3",
+        "ny_medicaid_pdl:p32",
+        "ny_medicaid_pdl:p33",
+        "ny_medicaid_pdl:p34",
+        "ny_medicaid_pdl:p36",
+        "ny_medicaid_pdl:p37",
+        "ny_medicaid_pdl:p38",
+        "ny_medicaid_pdl:p45",
+        "ny_medicaid_pdl:p46",
+        "ny_medicaid_pdl:p65",
+        "ny_medicaid_pdl:p67",
+        "ny_medicaid_pdl:p7",
+        "ny_medicaid_pdl:p77",
+        "ny_medicaid_pdl:p78",
+        "ny_medicaid_pdl:p79",
+        "ny_medicaid_pharmacy_policy:p6",
+        "ny_medicaid_pharmacy_policy:p7"
+      ],
+      "result": "[{\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37, \"program\": \"NY Medicaid\", \"authority\": \"binding\", \"date\": \"2026-09-14\", \"text\": \"NYRx Preferred Drug Program (PDP) Preferred Drug List > VI. Endocrine and Metabolic Agents > Insulin – Rapid-Acting\\n[p 37]\\nPreferred drugs: Humalog® 100 U/mL vial, pen, cartridge (Preferred as of 10/22/2026); Humalog® Jr. 100 U/mL Kwikpen (Preferred as of 10/22/2026); insulin lispro vial, pen (gen Humalog® U100); insulin lispro junior (gen Humalog® Jr.)\\nNon-preferred drugs: Admelog®; Afrezza®; Apidra®; Fiasp® Penfill, FlexTouch, Pumpcart, vial; Humalog® 100 U/mL Tempo; Humalog® 200 U/mL; insulin aspart cartridge, vial, pen (gen Novolog® ) (Non-Preferred as of 10/22/2026); Kirsty™; Lyumjev®; Lyumjev® Tempo™; Merilog™ Solostar, vial; Novolog® cartridge, FlexPen, vial\", \"pages\": [37], \"section\": \"VI. Endocrine and Metabolic Agents > Insulin – Rapid-Acting\"}, {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 12, \"program\": \"NY Medicaid\", \"authority\": \"binding\", \"date\": \"2026-09-14\", \"text\": \"NYRx Preferred Drug Program (PDP) Preferred Drug List > III. Cardiovascular > Lipotropics, Other\\n[p 12]\\nPreferred drugs: Praluent® (Preferred as of 10/22/2026); Repatha® (Preferred as of 10/22/2026)\\nNon-preferred drugs: Redemplo® (Non-Preferred as of 10/22/2026); Tryngolza® (Non-Preferred as of 10/22/2026)\", \"pages\": [12], \"section\": \"III. Cardiovascular > Lipotropics, Other\"}, {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34, \"program\": \"NY Medicaid\", \"authority\": \"binding\", \"date\": \"2026-09-14\", \"text\": \"NYRx Preferred Drug Program (PDP) Preferred Drug List > VI. Endocrine and Metabolic Agents > Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes (CC)\\n[p 34]\\nPreferred drugs: exenatide; Ozempic® pen; Trulicity®; Victoza® (BLTG)\\nNon-preferred drugs: liraglutide (gen Victoza® ); Mounjaro®; Ozempic® tablets; Rybelsus®; Soliqua®; Xultophy®\\nCoverage parameters: CLINICAL CRITERIA (CC)\\nConfirm diagnosis of FDA-approved or compendia-supported\\nindication and Medicaid covered indication\\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently\", \"pages\": [34], \"section\": \"VI. Endocrine and Metabolic Agents > Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes (CC)\"}, {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34, \"program\": \"NY Medicaid\", \"authority\": \"binding\", \"date\": \"2026-09-14\", \"text\": \"NYRx Preferred Drug Program (PDP) Preferred Drug List > VI. Endocrine and Metabolic Agents > Glucagon Agents\\n[p 34]\\nPreferred drugs: Baqsimi®; glucagon HCl emergency kit (Preferred as of 10/22/2026); glucagon vial; Gvoke® pen, syringe, vial (Preferred as of 10/22/2026); Zegalogue® pen, syringe\", \"pages\": [34], \"section\": \"VI. Endocrine and Metabolic Agents > Glucagon Agents\"}, {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 45, \"program\": \"NY Medicaid\", \"authority\": \"binding\", \"date\": \"2026-09-14\", \"text\": \"NYRx Preferred Drug Program (PDP) Preferred Drug List > IX. Immunologic Agents > Immunomodulators – Systemic (CC, ST)\\n[p 45]\\nPreferred drugs: Adbry™ (Preferred as of 10/22/2026); Dupixent®; Ebglyss™; Fasenra®; Starjemza™ (Preferred as of 10/22/2026); Taltz® (Preferred as of 10/22/2026); Tyenne® (Preferred as of 10/22/2026)\\nNon-preferred drugs: Actemra® SQ; Avtozma®; Bimzelx®; Cosentyx® (Non-Preferred as of 10/22/2026); Ilaris®; Ilumya®; Imuldosa®; Kevzara®; Kineret®; Nemluvio®; Nucala® (Non-Preferred as of 10/22/2026); Omvoh™ SQ; Otulfi™; Pyzchiva®; Selarsdi™; Skyrizi®; Skyrizi® On-Body; Spevigo®; Stelara®; Steqeyma®; Tremfya®; ustekinumab; Yesintek™; Cibinqo™; Olumiant®; Rinvoq™ ER; Rinvoq® LQ; tofacitinib (gen Xeljanz® ); tofacitinib ER (gen Xeljanz® XR)\\n[p 46]\\nPreferred drugs: adalimumab (Boehringer Ingelheim); Hadlima™ (Preferred as of 10/22/2026); Orencia® SQ (Preferred as of 10/22/2026); Otezla® (Preferred as of 10/22/2026); Tezspire® pen (Preferred as of 10/22/2026); Xolair®\\nNon-preferred drugs: Xeljanz®; Xeljanz® XR; Abrilada™; adalimumab; Amjevita™; Cyltezo®; Cimzia®; Enbrel® (Non-Preferred as of 10/22/2",
+      "search": {
+        "original_query": "Which diabetes products change preferred status on NY Medicaid on 10/22/2026?",
+        "agent_query": "\"Preferred as of 10/22/2026\" \"Non-Preferred as of 10/22/2026\" \"VI. Endocrine and Metabolic Agents\"",
+        "executed": [
+          {
+            "source": "original",
+            "query": "Which diabetes products change preferred status on NY Medicaid on 10/22/2026?",
+            "program": "NY Medicaid",
+            "k": 15,
+            "seconds": 0.17,
+            "cached": false,
+            "results": 15
+          },
+          {
+            "source": "agent",
+            "query": "\"Preferred as of 10/22/2026\" \"Non-Preferred as of 10/22/2026\" \"VI. Endocrine and Metabolic Agents\"",
+            "program": "NY Medicaid",
+            "k": 15,
+            "seconds": 0.267,
+            "cached": false,
+            "results": 15
+          }
+        ],
+        "duplicates_merged": 6,
+        "returned": 20,
+        "from_both": 6,
+        "from_original_only": 7,
+        "from_agent_only": 7,
+        "provenance": [
+          {
+            "unit": "ny_medicaid_pdl:s67",
+            "found_by": {
+              "original": 1,
+              "agent": 1
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s24",
+            "found_by": {
+              "original": 4,
+              "agent": 5
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s62",
+            "found_by": {
+              "original": 6,
+              "agent": 4
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s61",
+            "found_by": {
+              "original": 9,
+              "agent": 2
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s84",
+            "found_by": {
+              "original": 5,
+              "agent": 6
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s64",
+            "found_by": {
+              "original": 12,
+              "agent": 7
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s1",
+            "found_by": {
+              "original": 2
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s123",
+            "found_by": {
+              "original": 3
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s58",
+            "found_by": {
+              "agent": 3
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s134",
+            "found_by": {
+              "original": 7
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s121",
+            "found_by": {
+              "original": 8
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s65",
+            "found_by": {
+              "agent": 8
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s60",
+            "found_by": {
+              "agent": 9
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s135",
+            "found_by": {
+              "original": 10
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s69",
+            "found_by": {
+              "agent": 10
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s3",
+            "found_by": {
+              "original": 11
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s59",
+            "found_by": {
+              "agent": 11
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s66",
+            "found_by": {
+              "agent": 12
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s5",
+            "found_by": {
+              "original": 13
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s70",
+            "found_by": {
+              "agent": 13
+            }
+          }
+        ],
+        "hits": [
+          {
+            "unit": "ny_medicaid_pdl:s67",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              37
+            ],
+            "ranks": {
+              "original": 1,
+              "agent": 1
+            },
+            "scores": {
+              "original": 0.0297,
+              "agent": 0.0315
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s24",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              12
+            ],
+            "ranks": {
+              "original": 4,
+              "agent": 5
+            },
+            "scores": {
+              "original": 0.0264,
+              "agent": 0.0295
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s62",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              34
+            ],
+            "ranks": {
+              "original": 6,
+              "agent": 4
+            },
+            "scores": {
+              "original": 0.0243,
+              "agent": 0.0296
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s61",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              34
+            ],
+            "ranks": {
+              "original": 9,
+              "agent": 2
+            },
+            "scores": {
+              "original": 0.0231,
+              "agent": 0.031
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s84",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              45,
+              46
+            ],
+            "ranks": {
+              "original": 5,
+              "agent": 6
+            },
+            "scores": {
+              "original": 0.0251,
+              "agent": 0.0289
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s64",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              36
+            ],
+            "ranks": {
+              "original": 12,
+              "agent": 7
+            },
+            "scores": {
+              "original": 0.0221,
+              "agent": 0.0288
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s1",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              1,
+              2,
+              3
+            ],
+            "ranks": {
+              "original": 2
+            },
+            "scores": {
+              "original": 0.0294
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s123",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              67
+            ],
+            "ranks": {
+              "original": 3
+            },
+            "scores": {
+              "original": 0.0286
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s58",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              32
+            ],
+            "ranks": {
+              "agent": 3
+            },
+            "scores": {
+              "agent": 0.0305
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s134",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              77,
+              78
+            ],
+            "ranks": {
+              "original": 7
+            },
+            "scores": {
+              "original": 0.0239
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s121",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              65
+            ],
+            "ranks": {
+              "original": 8
+            },
+            "scores": {
+              "original": 0.0233
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s65",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              36
+            ],
+            "ranks": {
+              "agent": 8
+            },
+            "scores": {
+              "agent": 0.0285
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s60",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              33
+            ],
+            "ranks": {
+              "agent": 9
+            },
+            "scores": {
+              "agent": 0.0284
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s135",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              79
+            ],
+            "ranks": {
+              "original": 10
+            },
+            "scores": {
+              "original": 0.0225
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s69",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              37
+            ],
+            "ranks": {
+              "agent": 10
+            },
+            "scores": {
+              "agent": 0.0283
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s3",
+            "doc_id": "ny_medicaid_pharmacy_policy",
+            "pages": [
+              6,
+              7
+            ],
+            "ranks": {
+              "original": 11
+            },
+            "scores": {
+              "original": 0.0224
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s59",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              33
+            ],
+            "ranks": {
+              "agent": 11
+            },
+            "scores": {
+              "agent": 0.0282
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s66",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              36
+            ],
+            "ranks": {
+              "agent": 12
+            },
+            "scores": {
+              "agent": 0.0275
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s5",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              7
+            ],
+            "ranks": {
+              "original": 13
+            },
+            "scores": {
+              "original": 0.0219
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s70",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              38
+            ],
+            "ranks": {
+              "agent": 13
+            },
+            "scores": {
+              "agent": 0.0274
+            }
+          }
+        ]
+      },
+      "t_start": 6.011
+    },
+    {
+      "name": "lookup_ny_medicaid_drug",
+      "input": {
+        "drug": "Insulin – Rapid-Acting"
+      },
+      "duration_s": 0.012,
+      "is_error": false,
+      "pages": [
+        "ny_medicaid_pdl:p1",
+        "ny_medicaid_pdl:p37"
+      ],
+      "result": "{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"Insulin – Rapid-Acting\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"class_match\", \"classes\": [{\"drug_class\": \"Insulin – Rapid-Acting\", \"section\": \"VI. Endocrine and Metabolic Agents\", \"class_flags\": {}, \"coverage_parameters\": \"(none printed)\", \"coverage_pages\": [], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p37#row-1\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"Humalog® 100 U/mL vial, pen, cartridge\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\", \"effective_date_marker\": \"1 = Preferred as of 10/22/2026. The PDL lists the drug in the column it moves to on 2026-10-22: preferred from that date, non-preferred before it.\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-2\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"Humalog® Jr. 100 U/mL Kwikpen\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\", \"effective_date_marker\": \"1 = Preferred as of 10/22/2026. The PDL lists the drug in the column it moves to on 2026-10-22: preferred from that date, non-preferred before it.\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-3\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"insulin lispro vial, pen (gen Humalog® U100)\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-4\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"insulin lispro junior (gen Humalog® Jr.)\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-5\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"Admelog®\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-6\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"Afrezza®\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-7\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"Apidra®\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-8\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"Fiasp® Penfill, FlexTouch, Pumpcart, vial\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-9\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"Humalog® 100 U/mL Tempo\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-10\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"Humalog® 200 U/mL\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-11\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"insulin aspart cartridge, vial, pen (gen Novolog® )\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\", \"effective_date_marker\": \"2 = Non-Preferred as of 10/22/2026. The PDL lists the drug in the column it moves to on 2026-10-22: non-preferred from that date, preferred before it.\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-12\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"Kirsty™\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-13\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"Lyumjev®\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-14\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"Lyumjev® Tempo™\", \"listed_as\": \"non-preferred\", ",
+      "lookup": {
+        "result": "class_match",
+        "rows": 16
+      },
+      "t_start": 11.244
+    },
+    {
+      "name": "lookup_ny_medicaid_drug",
+      "input": {
+        "drug": "Glucagon Agents"
+      },
+      "duration_s": 0.008,
+      "is_error": false,
+      "pages": [
+        "ny_medicaid_pdl:p1",
+        "ny_medicaid_pdl:p34"
+      ],
+      "result": "{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"Glucagon Agents\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"class_match\", \"classes\": [{\"drug_class\": \"Glucagon Agents\", \"section\": \"VI. Endocrine and Metabolic Agents\", \"class_flags\": {}, \"coverage_parameters\": \"(none printed)\", \"coverage_pages\": [], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p34#row-1\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Baqsimi®\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-2\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"glucagon HCl emergency kit\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\", \"effective_date_marker\": \"1 = Preferred as of 10/22/2026. The PDL lists the drug in the column it moves to on 2026-10-22: preferred from that date, non-preferred before it.\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-3\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"glucagon vial\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-4\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Gvoke® pen, syringe, vial\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\", \"effective_date_marker\": \"1 = Preferred as of 10/22/2026. The PDL lists the drug in the column it moves to on 2026-10-22: preferred from that date, non-preferred before it.\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-5\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Zegalogue® pen, syringe\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}]}], \"note\": \"No drug is named 'Glucagon Agents'; these are the rows of the matching drug class.\"}",
+      "lookup": {
+        "result": "class_match",
+        "rows": 5
+      },
+      "t_start": 11.256
+    }
+  ],
+  "cited_evidence": {
+    "ny_medicaid_pdl:p34": "ny_medicaid_pdl (NY Medicaid, binding, 2026-09-14)\nNYRx Preferred Drug Program (PDP) Preferred Drug List > VI. Endocrine and Metabolic Agents > Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes (CC)\n[p 34]\nPreferred drugs: exenatide; Ozempic® pen; Trulicity®; Victoza® (BLTG)\nNon-preferred drugs: liraglutide (gen Victoza® ); Mounjaro®; Ozempic® tablets; Rybelsus®; Soliqua®; Xultophy®\nCoverage parameters: CLINICAL CRITERIA (CC)\nConfirm diagnosis of FDA-approved or compendia-supported\nindication and Medicaid covered indication\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently\n\nny_medicaid_pdl (NY Medicaid, binding, 2026-09-14)\nNYRx Preferred Drug Program (PDP) Preferred Drug List > VI. Endocrine and Metabolic Agents > Glucagon Agents\n[p 34]\nPreferred drugs: Baqsimi®; glucagon HCl emergency kit (Preferred as of 10/22/2026); glucagon vial; Gvoke® pen, syringe, vial (Preferred as of 10/22/2026); Zegalogue® pen, syringe\n\n{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"diabetes\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"class_match\", \"classes\": [{\"drug_class\": \"Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes\", \"section\": \"VI. Endocrine and Metabolic Agents\", \"class_flags\": {\"CC\": \"Clinical Criteria: see the class's Coverage Parameters\"}, \"coverage_parameters\": \"CLINICAL CRITERIA (CC)\\nConfirm diagnosis of FDA-approved or compendia-supported\\nindication and Medicaid covered indication\\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently\", \"coverage_pages\": [34], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p34#row-6\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"exenatide\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-7\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Ozempic® pen\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-8\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Trulicity®\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-9\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Victoza®\", \"listed_as\": \"preferred\", \"flags\": {\"BLTG\": \"Brand Less Than Generic Program (PDL pages 77–78)\"}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-10\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"liraglutide (gen Victoza® )\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-11\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Mounjaro®\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-12\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Ozempic® tablets\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-13\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Rybelsus®\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-14\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Soliqua®\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-15\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Xultophy®\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}]}], \"note\": \"No drug is named 'diabetes'; these are the rows of the matching drug class.\"}\n\n{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"Glucagon Agents\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"class_match\", \"classes\": [{\"drug_class\": \"Glucagon Agents\", \"section\": \"VI. Endocrine and Metabolic Agents\", \"class_flags\": {}, \"coverage_parameters\": \"(none printed)\", \"coverage_pages\": [], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p34#row-1\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Baqsimi®\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-2\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"glucagon HCl emergency kit\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\", \"effective_date_marker\": \"1 = Preferred as of 10/22/2026. The PDL lists the drug in the column it moves to on 2026-10-22: preferred from that date, non-preferred before it.\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-3\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"glucagon vial\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-4\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Gvoke® pen, syringe, vial\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\", \"effective_date_marker\": \"1 = Preferred as of 10/22/2026. The PDL lists the drug in the column it moves to on 2026-10-22: preferred from that date, non-preferred before it.\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-5\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Zegalogue® pen, syringe\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}]}], \"note\": \"No drug is named 'Glucagon Agents'; these are th",
+    "ny_medicaid_pdl:p37": "ny_medicaid_pdl (NY Medicaid, binding, 2026-09-14)\nNYRx Preferred Drug Program (PDP) Preferred Drug List > VI. Endocrine and Metabolic Agents > Insulin – Rapid-Acting\n[p 37]\nPreferred drugs: Humalog® 100 U/mL vial, pen, cartridge (Preferred as of 10/22/2026); Humalog® Jr. 100 U/mL Kwikpen (Preferred as of 10/22/2026); insulin lispro vial, pen (gen Humalog® U100); insulin lispro junior (gen Humalog® Jr.)\nNon-preferred drugs: Admelog®; Afrezza®; Apidra®; Fiasp® Penfill, FlexTouch, Pumpcart, vial; Humalog® 100 U/mL Tempo; Humalog® 200 U/mL; insulin aspart cartridge, vial, pen (gen Novolog® ) (Non-Preferred as of 10/22/2026); Kirsty™; Lyumjev®; Lyumjev® Tempo™; Merilog™ Solostar, vial; Novolog® cartridge, FlexPen, vial\n\nny_medicaid_pdl (NY Medicaid, binding, 2026-09-14)\nNYRx Preferred Drug Program (PDP) Preferred Drug List > VI. Endocrine and Metabolic Agents > Insulin – Rapid-Acting\n[p 37]\nPreferred drugs: Humalog® 100 U/mL vial, pen, cartridge (Preferred as of 10/22/2026); Humalog® Jr. 100 U/mL Kwikpen (Preferred as of 10/22/2026); insulin lispro vial, pen (gen Humalog® U100); insulin lispro junior (gen Humalog® Jr.)\nNon-preferred drugs: Admelog®; Afrezza®; Apidra®; Fiasp® Penfill, FlexTouch, Pumpcart, vial; Humalog® 100 U/mL Tempo; Humalog® 200 U/mL; insulin aspart cartridge, vial, pen (gen Novolog® ) (Non-Preferred as of 10/22/2026); Kirsty™; Lyumjev®; Lyumjev® Tempo™; Merilog™ Solostar, vial; Novolog® cartridge, FlexPen, vial\n\nny_medicaid_pdl (NY Medicaid, binding, 2026-09-14)\nNYRx Preferred Drug Program (PDP) Preferred Drug List > VI. Endocrine and Metabolic Agents > Sodium Glucose Co-Transporter 2 (SGLT2) Inhibitors\n[p 37]\nPreferred drugs: dapagliflozin (gen Farxiga® ); Jardiance®; Synjardy®; Synjardy® XR; Trijardy® XR; Xigduo® XR (BLTG)\nNon-preferred drugs: dapagliflozin/metformin (gen Xigduo® XR); Farxiga®; Inpefa™; Invokamet®; Invokamet® XR; Invokana®; Segluromet®; Steglatro®\n\n{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"Insulin – Rapid-Acting\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"class_match\", \"classes\": [{\"drug_class\": \"Insulin – Rapid-Acting\", \"section\": \"VI. Endocrine and Metabolic Agents\", \"class_flags\": {}, \"coverage_parameters\": \"(none printed)\", \"coverage_pages\": [], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p37#row-1\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"Humalog® 100 U/mL vial, pen, cartridge\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\", \"effective_date_marker\": \"1 = Preferred as of 10/22/2026. The PDL lists the drug in the column it moves to on 2026-10-22: preferred from that date, non-preferred before it.\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-2\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"Humalog® Jr. 100 U/mL Kwikpen\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\", \"effective_date_marker\": \"1 = Preferred as of 10/22/2026. The PDL lists the drug in the column it moves to on 2026-10-22: preferred from that date, non-preferred before it.\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-3\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"insulin lispro vial, pen (gen Humalog® U100)\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-4\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"insulin lispro junior (gen Humalog® Jr.)\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-5\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"Admelog®\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-6\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"Afrezza®\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-7\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"Apidra®\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-8\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"Fiasp® Penfill, FlexTouch, Pumpcart, vial\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-9\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"Humalog® 100 U/mL Tempo\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-10\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"Humalog® 200 U/mL\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-11\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"insulin aspart cartridge, vial, pen (gen Novolog® )\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\", \"effective_date_marker\": \"2 = Non-Preferred as of 10/22/2026. The PDL lists the drug in the column it moves to on 2026-10-22: non-preferred from that date, preferred before it.\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-12\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"Kirsty™\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-13\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"Lyumjev®\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-14\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"Lyumjev® Tempo™\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-15\", \"",
+    "ny_medicaid_pdl:p1": "ny_medicaid_pdl (NY Medicaid, binding, 2026-09-14)\nNYRx Preferred Drug Program (PDP) Preferred Drug List > NYRx, the Medicaid Drug Program\n[p 1]\nElectronic prior authorizations are now accepted by NYRx, the Medicaid Drug Program via CoverMyMeds®. Consider this alternative option as an effective and efficient way to request a PA other than by phone or by fax. For more information, contact NYRx Education & Outreach at NYRxEO@primetherapeutics.com\nThe PDP promotes the use of less expensive, equally effective drugs when medically appropriate through a Preferred Drug List (PDL). All drugs currently covered by NYRx, the Medicaid Drug Program, remain available under the PDP and the determination of preferred and non-preferred drugs does not prohibit a prescriber from obtaining any of the medications covered under Medicaid.\nNon-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise.\nPreferred drugs that require PA are indicated by footnote.\nSpecific Clinical, Frequency/Quantity/Duration, Step Therapy criteria are listed in column at the right.\nNote: Not all drugs covered by NYRx are subject to programs included in this document. For a complete list of drugs covered by NYRx see the Medicaid Pharmacy List of Reimbursable Drugs\nThe CDRP is aimed at ensuring specific drugs are utilized in a medically appropriate manner. Under the CDRP, certain drugs require PA because there may be specific safety issues, public health concerns, the potential for fraud and abuse, or the potential for significant overuse and misuse.\nThe DUR helps to ensure that prescriptions for outpatient drugs are appropriate, medically necessary, and not likely to result in adverse medical consequences. This program uses professional medical protocols and computer technology and claims processing to assist in the management of data regarding the prescribing and dispensing of prescriptions. Frequency/Quantity/Duration (F/Q/D) Program and Step Therapy parameters are implemented to ensure clinically appropriate and cost-effective use of these drugs and drug classes.\nPA will not be required for medications used for the treatment of substance use disorder prescribed according to generally accepted national professional guidelines for the treatment of a substance use disorder.\nThe Brand Less Than Generic Program is a cost containment initiative which promotes the use of certain multi-source brand name drugs when the cost of the brand name drug is less expensive than the generic equivalent. This program is in conformance with State Education Law, which intends that patients receive the lower cost alternative.\nFor more information on NYRx, the Medicaid Drug Program: http://www.health.ny.gov/health_care/medicaid/program/pharmacy.htm To contact the NYRx Clinical Call Center please call 1-877-309-9493\nTo download a copy of the Prior Authorization fax form go to https://newyork.fhsc.com/providers/PA_forms.asp\nDisclaimer: Branded generics are included with the single generic name listing; they are not listed as separate agents.\n[p 2]\nNYRx, the Medicaid Drug Program Preferred Drug List\nState law excludes Medicaid coverage of brand name drugs that have a Federal Food and Drug Administration (FDA) approved A-rated generic equivalent unless a PA is obtained. Drugs subject to the Preferred Drug Program (PDP), Clinical Drug Review Program (CDRP), and/or the Brand Less Than Generic (BLTG) Program are not subject to the Mandatory Generic Program.\nDose optimization can reduce prescription costs by reducing the number of pills a patient needs to take each day. The Department has identified drugs to be included in this program, the majority of which have FDA approval for once-a-day dosing, have multiple strengths available in correlating increments at similar costs and are currently being utilized above the recommended dosing frequency.\nThe Cost Optimization Program focuses on new formulations and dosages of older drug products that are disproportionately priced to other strengths of the same drug or similar drugs in the same drug class without any additional clinical benefit. This program can reduce prescription costs by encouraging the use of multiple or half of the lower cost strength, or choosing the lower cost formulation (e.g., tablets versus capsules), or choosing a lower cost therapeutic comparable drug in the same drug class.\n[p 3]\nNYRx, the Medicaid Drug Program Preferred Drug List\n\n{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"diabetes\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"class_match\", \"classes\": [{\"drug_class\": \"Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes\", \"section\": \"VI. Endocrine and Metabolic Agents\", \"class_flags\": {\"CC\": \"Clinical Criteria: see the class's Coverage Parameters\"}, \"coverage_parameters\": \"CLINICAL CRITERIA (CC)\\nConfirm diagnosis of FDA-approved or compendia-supported\\nindication and Medicaid covered indication\\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently\", \"coverage_pages\": [34], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p34#row-6\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"exenatide\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-7\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Ozempic® pen\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-8\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Trulicity®\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-9\", \"cite\": {\"doc_"
+  },
+  "cited_evidence_parts": {
+    "ny_medicaid_pdl:p34": [
+      "ny_medicaid_pdl (NY Medicaid, binding, 2026-09-14)\nNYRx Preferred Drug Program (PDP) Preferred Drug List > VI. Endocrine and Metabolic Agents > Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes (CC)\n[p 34]\nPreferred drugs: exenatide; Ozempic® pen; Trulicity®; Victoza® (BLTG)\nNon-preferred drugs: liraglutide (gen Victoza® ); Mounjaro®; Ozempic® tablets; Rybelsus®; Soliqua®; Xultophy®\nCoverage parameters: CLINICAL CRITERIA (CC)\nConfirm diagnosis of FDA-approved or compendia-supported\nindication and Medicaid covered indication\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently\n\nny_medicaid_pdl (NY Medicaid, binding, 2026-09-14)\nNYRx Preferred Drug Program (PDP) Preferred Drug List > VI. Endocrine and Metabolic Agents > Glucagon Agents\n[p 34]\nPreferred drugs: Baqsimi®; glucagon HCl emergency kit (Preferred as of 10/22/2026); glucagon vial; Gvoke® pen, syringe, vial (Preferred as of 10/22/2026); Zegalogue® pen, syringe",
+      "{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"diabetes\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"class_match\", \"classes\": [{\"drug_class\": \"Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes\", \"section\": \"VI. Endocrine and Metabolic Agents\", \"class_flags\": {\"CC\": \"Clinical Criteria: see the class's Coverage Parameters\"}, \"coverage_parameters\": \"CLINICAL CRITERIA (CC)\\nConfirm diagnosis of FDA-approved or compendia-supported\\nindication and Medicaid covered indication\\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently\", \"coverage_pages\": [34], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p34#row-6\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"exenatide\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-7\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Ozempic® pen\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-8\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Trulicity®\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-9\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Victoza®\", \"listed_as\": \"preferred\", \"flags\": {\"BLTG\": \"Brand Less Than Generic Program (PDL pages 77–78)\"}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-10\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"liraglutide (gen Victoza® )\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-11\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Mounjaro®\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-12\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Ozempic® tablets\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-13\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Rybelsus®\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-14\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Soliqua®\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-15\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Xultophy®\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}]}], \"note\": \"No drug is named 'diabetes'; these are the rows of the matching drug class.\"}",
+      "{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"Glucagon Agents\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"class_match\", \"classes\": [{\"drug_class\": \"Glucagon Agents\", \"section\": \"VI. Endocrine and Metabolic Agents\", \"class_flags\": {}, \"coverage_parameters\": \"(none printed)\", \"coverage_pages\": [], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p34#row-1\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Baqsimi®\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-2\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"glucagon HCl emergency kit\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\", \"effective_date_marker\": \"1 = Preferred as of 10/22/2026. The PDL lists the drug in the column it moves to on 2026-10-22: preferred from that date, non-preferred before it.\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-3\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"glucagon vial\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-4\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Gvoke® pen, syringe, vial\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\", \"effective_date_marker\": \"1 = Preferred as of 10/22/2026. The PDL lists the drug in the column it moves to on 2026-10-22: preferred from that date, non-preferred before it.\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-5\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Zegalogue® pen, syringe\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}]}], \"note\": \"No drug is named 'Glucagon Agents'; these are the rows of the matching drug class.\"}"
+    ],
+    "ny_medicaid_pdl:p37": [
+      "ny_medicaid_pdl (NY Medicaid, binding, 2026-09-14)\nNYRx Preferred Drug Program (PDP) Preferred Drug List > VI. Endocrine and Metabolic Agents > Insulin – Rapid-Acting\n[p 37]\nPreferred drugs: Humalog® 100 U/mL vial, pen, cartridge (Preferred as of 10/22/2026); Humalog® Jr. 100 U/mL Kwikpen (Preferred as of 10/22/2026); insulin lispro vial, pen (gen Humalog® U100); insulin lispro junior (gen Humalog® Jr.)\nNon-preferred drugs: Admelog®; Afrezza®; Apidra®; Fiasp® Penfill, FlexTouch, Pumpcart, vial; Humalog® 100 U/mL Tempo; Humalog® 200 U/mL; insulin aspart cartridge, vial, pen (gen Novolog® ) (Non-Preferred as of 10/22/2026); Kirsty™; Lyumjev®; Lyumjev® Tempo™; Merilog™ Solostar, vial; Novolog® cartridge, FlexPen, vial",
+      "ny_medicaid_pdl (NY Medicaid, binding, 2026-09-14)\nNYRx Preferred Drug Program (PDP) Preferred Drug List > VI. Endocrine and Metabolic Agents > Insulin – Rapid-Acting\n[p 37]\nPreferred drugs: Humalog® 100 U/mL vial, pen, cartridge (Preferred as of 10/22/2026); Humalog® Jr. 100 U/mL Kwikpen (Preferred as of 10/22/2026); insulin lispro vial, pen (gen Humalog® U100); insulin lispro junior (gen Humalog® Jr.)\nNon-preferred drugs: Admelog®; Afrezza®; Apidra®; Fiasp® Penfill, FlexTouch, Pumpcart, vial; Humalog® 100 U/mL Tempo; Humalog® 200 U/mL; insulin aspart cartridge, vial, pen (gen Novolog® ) (Non-Preferred as of 10/22/2026); Kirsty™; Lyumjev®; Lyumjev® Tempo™; Merilog™ Solostar, vial; Novolog® cartridge, FlexPen, vial\n\nny_medicaid_pdl (NY Medicaid, binding, 2026-09-14)\nNYRx Preferred Drug Program (PDP) Preferred Drug List > VI. Endocrine and Metabolic Agents > Sodium Glucose Co-Transporter 2 (SGLT2) Inhibitors\n[p 37]\nPreferred drugs: dapagliflozin (gen Farxiga® ); Jardiance®; Synjardy®; Synjardy® XR; Trijardy® XR; Xigduo® XR (BLTG)\nNon-preferred drugs: dapagliflozin/metformin (gen Xigduo® XR); Farxiga®; Inpefa™; Invokamet®; Invokamet® XR; Invokana®; Segluromet®; Steglatro®",
+      "{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"Insulin – Rapid-Acting\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"class_match\", \"classes\": [{\"drug_class\": \"Insulin – Rapid-Acting\", \"section\": \"VI. Endocrine and Metabolic Agents\", \"class_flags\": {}, \"coverage_parameters\": \"(none printed)\", \"coverage_pages\": [], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p37#row-1\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"Humalog® 100 U/mL vial, pen, cartridge\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\", \"effective_date_marker\": \"1 = Preferred as of 10/22/2026. The PDL lists the drug in the column it moves to on 2026-10-22: preferred from that date, non-preferred before it.\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-2\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"Humalog® Jr. 100 U/mL Kwikpen\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\", \"effective_date_marker\": \"1 = Preferred as of 10/22/2026. The PDL lists the drug in the column it moves to on 2026-10-22: preferred from that date, non-preferred before it.\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-3\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"insulin lispro vial, pen (gen Humalog® U100)\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-4\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"insulin lispro junior (gen Humalog® Jr.)\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-5\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"Admelog®\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-6\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"Afrezza®\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-7\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"Apidra®\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-8\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"Fiasp® Penfill, FlexTouch, Pumpcart, vial\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-9\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"Humalog® 100 U/mL Tempo\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-10\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"Humalog® 200 U/mL\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-11\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"insulin aspart cartridge, vial, pen (gen Novolog® )\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\", \"effective_date_marker\": \"2 = Non-Preferred as of 10/22/2026. The PDL lists the drug in the column it moves to on 2026-10-22: non-preferred from that date, preferred before it.\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-12\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"Kirsty™\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-13\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"Lyumjev®\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-14\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"Lyumjev® Tempo™\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-15\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"Merilog™ Solostar, vial\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-16\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"Novolog® cartridge, FlexPen, vial\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}]}], \"note\": \"No drug is named 'Insulin – Rapid-Acting'; these are the rows of the matching drug class.\"}"
+    ],
+    "ny_medicaid_pdl:p1": [
+      "ny_medicaid_pdl (NY Medicaid, binding, 2026-09-14)\nNYRx Preferred Drug Program (PDP) Preferred Drug List > NYRx, the Medicaid Drug Program\n[p 1]\nElectronic prior authorizations are now accepted by NYRx, the Medicaid Drug Program via CoverMyMeds®. Consider this alternative option as an effective and efficient way to request a PA other than by phone or by fax. For more information, contact NYRx Education & Outreach at NYRxEO@primetherapeutics.com\nThe PDP promotes the use of less expensive, equally effective drugs when medically appropriate through a Preferred Drug List (PDL). All drugs currently covered by NYRx, the Medicaid Drug Program, remain available under the PDP and the determination of preferred and non-preferred drugs does not prohibit a prescriber from obtaining any of the medications covered under Medicaid.\nNon-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise.\nPreferred drugs that require PA are indicated by footnote.\nSpecific Clinical, Frequency/Quantity/Duration, Step Therapy criteria are listed in column at the right.\nNote: Not all drugs covered by NYRx are subject to programs included in this document. For a complete list of drugs covered by NYRx see the Medicaid Pharmacy List of Reimbursable Drugs\nThe CDRP is aimed at ensuring specific drugs are utilized in a medically appropriate manner. Under the CDRP, certain drugs require PA because there may be specific safety issues, public health concerns, the potential for fraud and abuse, or the potential for significant overuse and misuse.\nThe DUR helps to ensure that prescriptions for outpatient drugs are appropriate, medically necessary, and not likely to result in adverse medical consequences. This program uses professional medical protocols and computer technology and claims processing to assist in the management of data regarding the prescribing and dispensing of prescriptions. Frequency/Quantity/Duration (F/Q/D) Program and Step Therapy parameters are implemented to ensure clinically appropriate and cost-effective use of these drugs and drug classes.\nPA will not be required for medications used for the treatment of substance use disorder prescribed according to generally accepted national professional guidelines for the treatment of a substance use disorder.\nThe Brand Less Than Generic Program is a cost containment initiative which promotes the use of certain multi-source brand name drugs when the cost of the brand name drug is less expensive than the generic equivalent. This program is in conformance with State Education Law, which intends that patients receive the lower cost alternative.\nFor more information on NYRx, the Medicaid Drug Program: http://www.health.ny.gov/health_care/medicaid/program/pharmacy.htm To contact the NYRx Clinical Call Center please call 1-877-309-9493\nTo download a copy of the Prior Authorization fax form go to https://newyork.fhsc.com/providers/PA_forms.asp\nDisclaimer: Branded generics are included with the single generic name listing; they are not listed as separate agents.\n[p 2]\nNYRx, the Medicaid Drug Program Preferred Drug List\nState law excludes Medicaid coverage of brand name drugs that have a Federal Food and Drug Administration (FDA) approved A-rated generic equivalent unless a PA is obtained. Drugs subject to the Preferred Drug Program (PDP), Clinical Drug Review Program (CDRP), and/or the Brand Less Than Generic (BLTG) Program are not subject to the Mandatory Generic Program.\nDose optimization can reduce prescription costs by reducing the number of pills a patient needs to take each day. The Department has identified drugs to be included in this program, the majority of which have FDA approval for once-a-day dosing, have multiple strengths available in correlating increments at similar costs and are currently being utilized above the recommended dosing frequency.\nThe Cost Optimization Program focuses on new formulations and dosages of older drug products that are disproportionately priced to other strengths of the same drug or similar drugs in the same drug class without any additional clinical benefit. This program can reduce prescription costs by encouraging the use of multiple or half of the lower cost strength, or choosing the lower cost formulation (e.g., tablets versus capsules), or choosing a lower cost therapeutic comparable drug in the same drug class.\n[p 3]\nNYRx, the Medicaid Drug Program Preferred Drug List",
+      "{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"diabetes\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"class_match\", \"classes\": [{\"drug_class\": \"Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes\", \"section\": \"VI. Endocrine and Metabolic Agents\", \"class_flags\": {\"CC\": \"Clinical Criteria: see the class's Coverage Parameters\"}, \"coverage_parameters\": \"CLINICAL CRITERIA (CC)\\nConfirm diagnosis of FDA-approved or compendia-supported\\nindication and Medicaid covered indication\\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently\", \"coverage_pages\": [34], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p34#row-6\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"exenatide\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-7\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Ozempic® pen\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-8\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Trulicity®\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-9\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Victoza®\", \"listed_as\": \"preferred\", \"flags\": {\"BLTG\": \"Brand Less Than Generic Program (PDL pages 77–78)\"}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-10\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"liraglutide (gen Victoza® )\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-11\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Mounjaro®\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-12\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Ozempic® tablets\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-13\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Rybelsus®\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-14\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Soliqua®\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-15\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Xultophy®\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}]}], \"note\": \"No drug is named 'diabetes'; these are the rows of the matching drug class.\"}",
+      "{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"Insulin – Rapid-Acting\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"class_match\", \"classes\": [{\"drug_class\": \"Insulin – Rapid-Acting\", \"section\": \"VI. Endocrine and Metabolic Agents\", \"class_flags\": {}, \"coverage_parameters\": \"(none printed)\", \"coverage_pages\": [], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p37#row-1\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"Humalog® 100 U/mL vial, pen, cartridge\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\", \"effective_date_marker\": \"1 = Preferred as of 10/22/2026. The PDL lists the drug in the column it moves to on 2026-10-22: preferred from that date, non-preferred before it.\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-2\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"Humalog® Jr. 100 U/mL Kwikpen\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\", \"effective_date_marker\": \"1 = Preferred as of 10/22/2026. The PDL lists the drug in the column it moves to on 2026-10-22: preferred from that date, non-preferred before it.\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-3\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"insulin lispro vial, pen (gen Humalog® U100)\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-4\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"insulin lispro junior (gen Humalog® Jr.)\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-5\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"Admelog®\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-6\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"Afrezza®\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-7\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"Apidra®\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-8\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"Fiasp® Penfill, FlexTouch, Pumpcart, vial\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-9\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"Humalog® 100 U/mL Tempo\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-10\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"Humalog® 200 U/mL\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-11\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"insulin aspart cartridge, vial, pen (gen Novolog® )\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\", \"effective_date_marker\": \"2 = Non-Preferred as of 10/22/2026. The PDL lists the drug in the column it moves to on 2026-10-22: non-preferred from that date, preferred before it.\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-12\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"Kirsty™\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-13\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"Lyumjev®\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-14\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"Lyumjev® Tempo™\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-15\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"Merilog™ Solostar, vial\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p37#row-16\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 37}, \"drug_name\": \"Novolog® cartridge, FlexPen, vial\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}]}], \"note\": \"No drug is named 'Insulin – Rapid-Acting'; these are the rows of the matching drug class.\"}",
+      "{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"Glucagon Agents\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"class_match\", \"classes\": [{\"drug_class\": \"Glucagon Agents\", \"section\": \"VI. Endocrine and Metabolic Agents\", \"class_flags\": {}, \"coverage_parameters\": \"(none printed)\", \"coverage_pages\": [], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p34#row-1\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Baqsimi®\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-2\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"glucagon HCl emergency kit\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\", \"effective_date_marker\": \"1 = Preferred as of 10/22/2026. The PDL lists the drug in the column it moves to on 2026-10-22: preferred from that date, non-preferred before it.\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-3\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"glucagon vial\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-4\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Gvoke® pen, syringe, vial\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\", \"effective_date_marker\": \"1 = Preferred as of 10/22/2026. The PDL lists the drug in the column it moves to on 2026-10-22: preferred from that date, non-preferred before it.\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-5\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Zegalogue® pen, syringe\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}]}], \"note\": \"No drug is named 'Glucagon Agents'; these are the rows of the matching drug class.\"}"
+    ]
+  },
+  "cost_note": "each call priced at its serving role's rates (llm.<role>.prices_per_mtok)",
+  "request_started_utc": "2026-10-18T13:14:15.688342+00:00",
+  "citation_check": {
+    "t_start": 21.421,
+    "duration_s": 0.001
+  }
+}

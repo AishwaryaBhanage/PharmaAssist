@@ -1,0 +1,7743 @@
+{
+ "summary": {
+  "images": 207,
+  "decisions": {
+   "decorative": 157,
+   "vision": 50
+  },
+  "indexed_by_kind": {
+   "flowchart": 17,
+   "chart": 5,
+   "diagram": 6,
+   "photo": 4,
+   "text_image": 16,
+   "table_image": 2
+  },
+  "status": {
+   "machine_interpreted": 6,
+   "reviewed": 5,
+   "ocr_checked": 39
+  },
+  "vision_cost_usd_all_figures": 0.9535,
+  "spent_this_run_usd": 0.0
+ },
+ "figures": [
+  {
+   "figure_id": "va_dod_cpg_diabetes_2023:p1:f0",
+   "page": 1,
+   "bbox": [
+    72.0,
+    72.7,
+    150.6,
+    148.8
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.999
+    ],
+    [
+     "stamp",
+     0.001
+    ],
+    [
+     "icon",
+     0.0
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_dod_cpg_diabetes_2023/p001_f0.png",
+   "size_px": [
+    157,
+    153
+   ],
+   "doc_id": "va_dod_cpg_diabetes_2023",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "va_dod_cpg_diabetes_2023:p88:f0",
+   "page": 88,
+   "bbox": [
+    75.3,
+    106.8,
+    539.0,
+    544.6
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "flow_chart",
+     0.981
+    ],
+    [
+     "table",
+     0.009
+    ],
+    [
+     "calendar",
+     0.004
+    ]
+   ],
+   "caption": "Figure A-1. Study Flow Diagram",
+   "ocr_text": [
+    "Figure A-1. Study Flow Diagram"
+   ],
+   "crop": "storage/figures/va_dod_cpg_diabetes_2023/p088_f0.png",
+   "size_px": [
+    927,
+    875
+   ],
+   "doc_id": "va_dod_cpg_diabetes_2023",
+   "decision": "vision",
+   "decorative_reason": null,
+   "vision_kind": "flowchart",
+   "title": "Figure A-1. Study Flow Diagram",
+   "title_in_image": true,
+   "checks": {
+    "passed": false,
+    "problems": [
+     "decision 3 has 2 exits, not all labelled",
+     "decision 7 has 2 exits, not all labelled",
+     "node 1 text only 0% found in OCR",
+     "node 2 text only 0% found in OCR",
+     "node 3 text only 0% found in OCR",
+     "node 4 text only 0% found in OCR",
+     "node 5 text only 0% found in OCR",
+     "node 6 text only 3% found in OCR",
+     "node 7 text only 0% found in OCR",
+     "node 8 text only 3% found in OCR",
+     "node 9 text only 0% found in OCR"
+    ],
+    "ocr_match": 0.007
+   },
+   "status": "machine_interpreted",
+   "indexed": true,
+   "vision_model": "claude-opus-5-5",
+   "vision_cost_usd": 0.0281,
+   "unreadable": []
+  },
+  {
+   "figure_id": "va_dod_cpg_diabetes_2023:p1:f1",
+   "page": 1,
+   "bbox": [
+    462.0,
+    72.0,
+    539.8,
+    149.8
+   ],
+   "source": "pdf_image",
+   "classes": [],
+   "caption": null,
+   "ocr_text": [],
+   "crop": null,
+   "frac": 0.0125,
+   "size_px": [
+    288,
+    288
+   ],
+   "doc_id": "va_dod_cpg_diabetes_2023",
+   "decision": "decorative",
+   "decorative_reason": "pdf image covering 1.2% of the page"
+  },
+  {
+   "figure_id": "va_dod_cpg_diabetes_2023:p21:f0",
+   "page": 21,
+   "bbox": [
+    72.0,
+    92.0,
+    439.2,
+    686.0
+   ],
+   "source": "pdf_image",
+   "classes": [],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_dod_cpg_diabetes_2023/p021_f0.png",
+   "frac": 0.45,
+   "size_px": [
+    890,
+    1437
+   ],
+   "doc_id": "va_dod_cpg_diabetes_2023",
+   "decision": "vision",
+   "decorative_reason": null,
+   "vision_kind": "flowchart",
+   "title": "",
+   "title_in_image": false,
+   "checks": {
+    "passed": true,
+    "problems": [],
+    "ocr_match": 0.994
+   },
+   "status": "reviewed",
+   "indexed": true,
+   "vision_model": "claude-opus-5-5",
+   "vision_cost_usd": 0.032,
+   "unreadable": []
+  },
+  {
+   "figure_id": "va_dod_cpg_diabetes_2023:p22:f0",
+   "page": 22,
+   "bbox": [
+    122.2,
+    92.0,
+    489.2,
+    440.7
+   ],
+   "source": "pdf_image",
+   "classes": [],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_dod_cpg_diabetes_2023/p022_f0.png",
+   "frac": 0.264,
+   "size_px": [
+    827,
+    786
+   ],
+   "doc_id": "va_dod_cpg_diabetes_2023",
+   "decision": "vision",
+   "decorative_reason": null,
+   "vision_kind": "flowchart",
+   "title": "",
+   "title_in_image": false,
+   "checks": {
+    "passed": true,
+    "problems": [],
+    "ocr_match": 0.991
+   },
+   "status": "reviewed",
+   "indexed": true,
+   "vision_model": "claude-opus-5-5",
+   "vision_cost_usd": 0.0196,
+   "unreadable": []
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p1:f0",
+   "page": 1,
+   "bbox": [
+    0.0,
+    0.0,
+    611.9,
+    462.3
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "photograph",
+     0.984
+    ],
+    [
+     "full_page_image",
+     0.005
+    ],
+    [
+     "logo",
+     0.005
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p001_f0.png",
+   "size_px": [
+    1224,
+    925
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "decorative",
+   "decorative_reason": "Cover stock photo of fruits, vegetables, nuts, rice cakes, dried cranberries, orange dumbbells, and a blood glucose meter; conveys no specific clinical information.",
+   "vision_kind": "decorative",
+   "title": "",
+   "title_in_image": false,
+   "checks": {
+    "passed": true,
+    "problems": [],
+    "ocr_match": null
+   },
+   "status": "ocr_checked",
+   "indexed": false,
+   "vision_model": "claude-opus-5-5",
+   "vision_cost_usd": 0.0165,
+   "unreadable": []
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p1:f1",
+   "page": 1,
+   "bbox": [
+    150.6,
+    685.2,
+    461.1,
+    765.7
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.693
+    ],
+    [
+     "icon",
+     0.197
+    ],
+    [
+     "other",
+     0.032
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p001_f1.png",
+   "size_px": [
+    621,
+    161
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p2:f0",
+   "page": 2,
+   "bbox": [
+    71.2,
+    471.1,
+    177.4,
+    521.3
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.999
+    ],
+    [
+     "stamp",
+     0.001
+    ],
+    [
+     "icon",
+     0.0
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p002_f0.png",
+   "size_px": [
+    213,
+    101
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p3:f0",
+   "page": 3,
+   "bbox": [
+    73.2,
+    200.6,
+    318.6,
+    344.5
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "pie_chart",
+     0.873
+    ],
+    [
+     "bar_chart",
+     0.045
+    ],
+    [
+     "flow_chart",
+     0.024
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p003_f0.png",
+   "size_px": [
+    491,
+    288
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "vision",
+   "decorative_reason": null,
+   "vision_kind": "chart",
+   "title": "Have Diabetes",
+   "title_in_image": true,
+   "checks": {
+    "passed": true,
+    "problems": [],
+    "ocr_match": null
+   },
+   "status": "ocr_checked",
+   "indexed": true,
+   "vision_model": "claude-opus-5-5",
+   "vision_cost_usd": 0.012,
+   "unreadable": []
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p3:f1",
+   "page": 3,
+   "bbox": [
+    165.3,
+    417.4,
+    369.1,
+    498.3
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.745
+    ],
+    [
+     "icon",
+     0.161
+    ],
+    [
+     "page_thumbnail",
+     0.053
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p003_f1.png",
+   "size_px": [
+    407,
+    162
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p3:f2",
+   "page": 3,
+   "bbox": [
+    72.9,
+    536.7,
+    135.2,
+    587.8
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "icon",
+     0.967
+    ],
+    [
+     "logo",
+     0.029
+    ],
+    [
+     "signature",
+     0.002
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p003_f2.png",
+   "size_px": [
+    124,
+    103
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "decorative",
+   "decorative_reason": "docling class icon"
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p3:f3",
+   "page": 3,
+   "bbox": [
+    182.8,
+    526.5,
+    215.2,
+    598.7
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "icon",
+     0.937
+    ],
+    [
+     "logo",
+     0.062
+    ],
+    [
+     "music",
+     0.001
+    ]
+   ],
+   "caption": "Blindness Amputations",
+   "ocr_text": [
+    "Blindness Amputations"
+   ],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p003_f3.png",
+   "size_px": [
+    64,
+    144
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "decorative",
+   "decorative_reason": "docling class icon"
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p3:f4",
+   "page": 3,
+   "bbox": [
+    263.2,
+    537.7,
+    325.6,
+    587.2
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "icon",
+     0.984
+    ],
+    [
+     "logo",
+     0.01
+    ],
+    [
+     "other",
+     0.002
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p003_f4.png",
+   "size_px": [
+    125,
+    99
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "decorative",
+   "decorative_reason": "docling class icon"
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p3:f5",
+   "page": 3,
+   "bbox": [
+    360.8,
+    540.4,
+    418.3,
+    590.7
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "icon",
+     0.63
+    ],
+    [
+     "logo",
+     0.369
+    ],
+    [
+     "pie_chart",
+     0.0
+    ]
+   ],
+   "caption": "End-stage renal disease",
+   "ocr_text": [
+    "End-stage renal disease"
+   ],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p003_f5.png",
+   "size_px": [
+    115,
+    100
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "decorative",
+   "decorative_reason": "docling class icon"
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p3:f6",
+   "page": 3,
+   "bbox": [
+    472.2,
+    529.1,
+    517.5,
+    596.4
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "icon",
+     0.96
+    ],
+    [
+     "logo",
+     0.026
+    ],
+    [
+     "calendar",
+     0.009
+    ]
+   ],
+   "caption": "Hospitalizations 3 rd leading cause of hospitalizations in VA (SAIL)",
+   "ocr_text": [
+    "Hospitalizations 3 rd leading cause of hospitalizations in VA (SAIL)"
+   ],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p003_f6.png",
+   "size_px": [
+    91,
+    135
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "decorative",
+   "decorative_reason": "docling class icon"
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p4:f0",
+   "page": 4,
+   "bbox": [
+    88.3,
+    219.6,
+    126.4,
+    280.5
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "icon",
+     0.982
+    ],
+    [
+     "logo",
+     0.017
+    ],
+    [
+     "music",
+     0.001
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p004_f0.png",
+   "size_px": [
+    76,
+    122
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "decorative",
+   "decorative_reason": "docling class icon"
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p4:f1",
+   "page": 4,
+   "bbox": [
+    72.4,
+    303.3,
+    139.6,
+    372.2
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "icon",
+     0.775
+    ],
+    [
+     "logo",
+     0.157
+    ],
+    [
+     "engineering_drawing",
+     0.014
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p004_f1.png",
+   "size_px": [
+    134,
+    137
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "decorative",
+   "decorative_reason": "docling class icon"
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p4:f2",
+   "page": 4,
+   "bbox": [
+    70.2,
+    468.8,
+    541.5,
+    667.7
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "bar_chart",
+     1.0
+    ],
+    [
+     "line_chart",
+     0.0
+    ],
+    [
+     "table",
+     0.0
+    ]
+   ],
+   "caption": "Figure 1. Lifestyle changes reduce progression to diabetes compared to placebo or metformin, particularly in patients \u2265 60 years old. 7",
+   "ocr_text": [
+    "Figure 1. Lifestyle changes reduce progression to diabetes compared to placebo or metformin, particularly in patients \u2265 60 years old. 7"
+   ],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p004_f2.png",
+   "size_px": [
+    943,
+    397
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "vision",
+   "decorative_reason": null,
+   "vision_kind": "chart",
+   "title": "Figure 1. Lifestyle changes reduce progression to diabetes compared to placebo or metformin, particularly in patients \u2265 60 years old.",
+   "title_in_image": true,
+   "checks": {
+    "passed": true,
+    "problems": [],
+    "ocr_match": null
+   },
+   "status": "ocr_checked",
+   "indexed": true,
+   "vision_model": "claude-opus-5-5",
+   "vision_cost_usd": 0.0182,
+   "unreadable": []
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p4:f3",
+   "page": 4,
+   "bbox": [
+    497.1,
+    117.5,
+    555.9,
+    157.9
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "icon",
+     0.936
+    ],
+    [
+     "bar_chart",
+     0.061
+    ],
+    [
+     "table",
+     0.002
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p004_f3.png",
+   "size_px": [
+    118,
+    81
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "decorative",
+   "decorative_reason": "docling class icon"
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p5:f0",
+   "page": 5,
+   "bbox": [
+    70.7,
+    383.2,
+    165.6,
+    476.4
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "icon",
+     0.711
+    ],
+    [
+     "calendar",
+     0.085
+    ],
+    [
+     "logo",
+     0.065
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p005_f0.png",
+   "size_px": [
+    190,
+    187
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "decorative",
+   "decorative_reason": "docling class icon"
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p5:f1",
+   "page": 5,
+   "bbox": [
+    70.5,
+    506.1,
+    166.1,
+    600.7
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "icon",
+     0.613
+    ],
+    [
+     "logo",
+     0.126
+    ],
+    [
+     "calendar",
+     0.124
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p005_f1.png",
+   "size_px": [
+    191,
+    189
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "decorative",
+   "decorative_reason": "docling class icon"
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p5:f2",
+   "page": 5,
+   "bbox": [
+    391.3,
+    96.7,
+    532.8,
+    160.4
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.998
+    ],
+    [
+     "icon",
+     0.001
+    ],
+    [
+     "stamp",
+     0.0
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p005_f2.png",
+   "size_px": [
+    283,
+    128
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p6:f0",
+   "page": 6,
+   "bbox": [
+    67.8,
+    213.6,
+    555.5,
+    465.3
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "flow_chart",
+     0.624
+    ],
+    [
+     "table",
+     0.164
+    ],
+    [
+     "calendar",
+     0.062
+    ]
+   ],
+   "caption": "Figure 2. Initial considerations 6,10",
+   "ocr_text": [
+    "Figure 2. Initial considerations 6,10"
+   ],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p006_f0.png",
+   "size_px": [
+    975,
+    504
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "vision",
+   "decorative_reason": null,
+   "vision_kind": "flowchart",
+   "title": "Figure 2. Initial considerations",
+   "title_in_image": true,
+   "checks": {
+    "passed": false,
+    "problems": [
+     "node 1 text only 0% found in OCR",
+     "node 2 text only 0% found in OCR",
+     "node 3 text only 0% found in OCR"
+    ],
+    "ocr_match": 0.0
+   },
+   "status": "machine_interpreted",
+   "indexed": true,
+   "vision_model": "claude-opus-5-5",
+   "vision_cost_usd": 0.0167,
+   "unreadable": []
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p6:f1",
+   "page": 6,
+   "bbox": [
+    69.4,
+    476.6,
+    326.7,
+    518.9
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.979
+    ],
+    [
+     "icon",
+     0.014
+    ],
+    [
+     "calendar",
+     0.001
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p006_f1.png",
+   "size_px": [
+    514,
+    85
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p6:f2",
+   "page": 6,
+   "bbox": [
+    81.5,
+    600.6,
+    172.1,
+    711.2
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "icon",
+     0.625
+    ],
+    [
+     "flow_chart",
+     0.272
+    ],
+    [
+     "bar_chart",
+     0.034
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p006_f2.png",
+   "size_px": [
+    181,
+    221
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "decorative",
+   "decorative_reason": "docling class icon"
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p7:f0",
+   "page": 7,
+   "bbox": [
+    459.5,
+    519.9,
+    529.3,
+    590.6
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "icon",
+     0.772
+    ],
+    [
+     "logo",
+     0.224
+    ],
+    [
+     "flow_chart",
+     0.002
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p007_f0.png",
+   "size_px": [
+    140,
+    141
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "decorative",
+   "decorative_reason": "docling class icon"
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p8:f0",
+   "page": 8,
+   "bbox": [
+    68.5,
+    158.9,
+    547.4,
+    254.5
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "bar_chart",
+     0.544
+    ],
+    [
+     "other",
+     0.193
+    ],
+    [
+     "engineering_drawing",
+     0.126
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p008_f0.png",
+   "size_px": [
+    958,
+    191
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "vision",
+   "decorative_reason": null,
+   "vision_kind": "diagram",
+   "title": "Lab report is 7.0%, Range +/- 0.5%",
+   "title_in_image": true,
+   "checks": {
+    "passed": true,
+    "problems": [],
+    "ocr_match": null
+   },
+   "status": "ocr_checked",
+   "indexed": true,
+   "vision_model": "claude-opus-5-5",
+   "vision_cost_usd": 0.0117,
+   "unreadable": []
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p8:f1",
+   "page": 8,
+   "bbox": [
+    66.5,
+    557.7,
+    233.7,
+    677.1
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "icon",
+     0.723
+    ],
+    [
+     "flow_chart",
+     0.246
+    ],
+    [
+     "bar_chart",
+     0.018
+    ]
+   ],
+   "caption": "Younger Veteran HbA1c ~6-7%",
+   "ocr_text": [
+    "Younger Veteran HbA1c ~6-7%"
+   ],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p008_f1.png",
+   "size_px": [
+    334,
+    239
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "decorative",
+   "decorative_reason": "docling class icon"
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p9:f0",
+   "page": 9,
+   "bbox": [
+    68.2,
+    64.9,
+    573.7,
+    308.2
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "flow_chart",
+     0.998
+    ],
+    [
+     "table",
+     0.001
+    ],
+    [
+     "line_chart",
+     0.0
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p009_f0.png",
+   "size_px": [
+    1011,
+    486
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "vision",
+   "decorative_reason": null,
+   "vision_kind": "flowchart",
+   "title": "Figure 3. Patient case example:",
+   "title_in_image": true,
+   "checks": {
+    "passed": true,
+    "problems": [],
+    "ocr_match": 1.0
+   },
+   "status": "ocr_checked",
+   "indexed": true,
+   "vision_model": "claude-opus-5-5",
+   "vision_cost_usd": 0.021,
+   "unreadable": []
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p9:f1",
+   "page": 9,
+   "bbox": [
+    150.3,
+    443.1,
+    468.0,
+    729.3
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "flow_chart",
+     0.928
+    ],
+    [
+     "icon",
+     0.021
+    ],
+    [
+     "pie_chart",
+     0.013
+    ]
+   ],
+   "caption": "Figure 4. Use shared-decision making to involve Veteran in establishing a treatment plan 13",
+   "ocr_text": [
+    "Figure 4. Use shared-decision making to involve Veteran in establishing a treatment plan 13"
+   ],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p009_f1.png",
+   "size_px": [
+    635,
+    573
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "vision",
+   "decorative_reason": null,
+   "vision_kind": "flowchart",
+   "title": "Figure 4. Use shared-decision making to involve Veteran in establishing a treatment plan",
+   "title_in_image": true,
+   "checks": {
+    "passed": false,
+    "problems": [
+     "node n1 text only 0% found in OCR",
+     "node n2 text only 14% found in OCR",
+     "node n3 text only 0% found in OCR",
+     "node n4 text only 0% found in OCR",
+     "node n5 text only 0% found in OCR"
+    ],
+    "ocr_match": 0.029
+   },
+   "status": "machine_interpreted",
+   "indexed": true,
+   "vision_model": "claude-opus-5-5",
+   "vision_cost_usd": 0.0163,
+   "unreadable": []
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p10:f0",
+   "page": 10,
+   "bbox": [
+    69.4,
+    51.3,
+    238.8,
+    90.2
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.976
+    ],
+    [
+     "icon",
+     0.013
+    ],
+    [
+     "calendar",
+     0.003
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p010_f0.png",
+   "size_px": [
+    339,
+    77
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p10:f1",
+   "page": 10,
+   "bbox": [
+    71.2,
+    219.9,
+    200.8,
+    318.1
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "photograph",
+     0.995
+    ],
+    [
+     "logo",
+     0.002
+    ],
+    [
+     "full_page_image",
+     0.002
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p010_f1.png",
+   "size_px": [
+    260,
+    196
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "decorative",
+   "decorative_reason": "Stock photo of assorted fresh produce (peppers, tomatoes, papaya, eggplant, apples, cabbage, mushrooms) with no informational content.",
+   "vision_kind": "decorative",
+   "title": "",
+   "title_in_image": false,
+   "checks": {
+    "passed": true,
+    "problems": [],
+    "ocr_match": null
+   },
+   "status": "ocr_checked",
+   "indexed": false,
+   "vision_model": "claude-opus-5-5",
+   "vision_cost_usd": 0.0088,
+   "unreadable": []
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p10:f2",
+   "page": 10,
+   "bbox": [
+    71.3,
+    348.5,
+    200.5,
+    446.4
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "photograph",
+     0.982
+    ],
+    [
+     "icon",
+     0.006
+    ],
+    [
+     "logo",
+     0.004
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p010_f2.png",
+   "size_px": [
+    258,
+    196
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "decorative",
+   "decorative_reason": "Stock photo of a pair of dark running shoes, a dumbbell, a shaker bottle with a blue lid, a blue towel and workout gloves on a wooden floor; it conveys no clinical information or text.",
+   "vision_kind": "decorative",
+   "title": "",
+   "title_in_image": false,
+   "checks": {
+    "passed": true,
+    "problems": [],
+    "ocr_match": null
+   },
+   "status": "ocr_checked",
+   "indexed": false,
+   "vision_model": "claude-opus-5-5",
+   "vision_cost_usd": 0.009,
+   "unreadable": []
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p10:f3",
+   "page": 10,
+   "bbox": [
+    71.2,
+    461.1,
+    201.0,
+    558.1
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "photograph",
+     0.984
+    ],
+    [
+     "logo",
+     0.004
+    ],
+    [
+     "full_page_image",
+     0.004
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p010_f3.png",
+   "size_px": [
+    260,
+    194
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "decorative",
+   "decorative_reason": "Stock photo of several people's legs walking on treadmills in a gym; conveys no specific information or text.",
+   "vision_kind": "decorative",
+   "title": "",
+   "title_in_image": false,
+   "checks": {
+    "passed": true,
+    "problems": [],
+    "ocr_match": null
+   },
+   "status": "ocr_checked",
+   "indexed": false,
+   "vision_model": "claude-opus-5-5",
+   "vision_cost_usd": 0.0082,
+   "unreadable": []
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p10:f4",
+   "page": 10,
+   "bbox": [
+    246.7,
+    617.2,
+    514.5,
+    718.7
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "icon",
+     0.89
+    ],
+    [
+     "bar_chart",
+     0.04
+    ],
+    [
+     "logo",
+     0.039
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p010_f4.png",
+   "size_px": [
+    536,
+    203
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "decorative",
+   "decorative_reason": "docling class icon"
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p11:f0",
+   "page": 11,
+   "bbox": [
+    69.3,
+    51.3,
+    241.7,
+    91.9
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.989
+    ],
+    [
+     "icon",
+     0.008
+    ],
+    [
+     "page_thumbnail",
+     0.001
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p011_f0.png",
+   "size_px": [
+    344,
+    81
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p11:f1",
+   "page": 11,
+   "bbox": [
+    415.3,
+    85.9,
+    540.1,
+    196.1
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "photograph",
+     0.941
+    ],
+    [
+     "logo",
+     0.017
+    ],
+    [
+     "icon",
+     0.012
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p011_f1.png",
+   "size_px": [
+    249,
+    220
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "decorative",
+   "decorative_reason": "Stock photo of white tablets spilling from an orange prescription bottle onto an Rx pad. It is illustrative and carries no clinical information.",
+   "vision_kind": "decorative",
+   "title": "",
+   "title_in_image": false,
+   "checks": {
+    "passed": true,
+    "problems": [],
+    "ocr_match": null
+   },
+   "status": "ocr_checked",
+   "indexed": false,
+   "vision_model": "claude-opus-5-5",
+   "vision_cost_usd": 0.0108,
+   "unreadable": [
+    "Partial label text on background bottle (e.g., 'TAKE', 'MOU...') is cut off"
+   ]
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p11:f2",
+   "page": 11,
+   "bbox": [
+    408.8,
+    324.2,
+    499.6,
+    414.9
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "pie_chart",
+     0.99
+    ],
+    [
+     "icon",
+     0.009
+    ],
+    [
+     "bar_chart",
+     0.0
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p011_f2.png",
+   "size_px": [
+    181,
+    182
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "vision",
+   "decorative_reason": null,
+   "vision_kind": "chart",
+   "title": "58%",
+   "title_in_image": true,
+   "checks": {
+    "passed": true,
+    "problems": [],
+    "ocr_match": null
+   },
+   "status": "ocr_checked",
+   "indexed": true,
+   "vision_model": "claude-opus-5-5",
+   "vision_cost_usd": 0.0111,
+   "unreadable": [
+    "Cut-off blue text at left edge (appears to be '6' or part of a label)",
+    "No label indicating what the 58% refers to is visible"
+   ]
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p11:f3",
+   "page": 11,
+   "bbox": [
+    430.1,
+    554.2,
+    541.1,
+    630.7
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "photograph",
+     0.957
+    ],
+    [
+     "other",
+     0.015
+    ],
+    [
+     "icon",
+     0.014
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p011_f3.png",
+   "size_px": [
+    222,
+    153
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "decorative",
+   "decorative_reason": "Stylized cross-section illustration of a blood vessel narrowed by yellow plaque deposits, with no labels, text, or data; serves as visual ornament.",
+   "vision_kind": "decorative",
+   "title": "",
+   "title_in_image": false,
+   "checks": {
+    "passed": true,
+    "problems": [],
+    "ocr_match": null
+   },
+   "status": "ocr_checked",
+   "indexed": false,
+   "vision_model": "claude-opus-5-5",
+   "vision_cost_usd": 0.0097,
+   "unreadable": []
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p12:f0",
+   "page": 12,
+   "bbox": [
+    74.8,
+    84.6,
+    489.1,
+    456.1
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "flow_chart",
+     0.994
+    ],
+    [
+     "table",
+     0.002
+    ],
+    [
+     "calendar",
+     0.002
+    ]
+   ],
+   "caption": "Figure 5. Selection of glucose-lowering medications in those with HbA1c above target 6",
+   "ocr_text": [
+    "Figure 5. Selection of glucose-lowering medications in those with HbA1c above target 6"
+   ],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p012_f0.png",
+   "size_px": [
+    828,
+    743
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "vision",
+   "decorative_reason": null,
+   "vision_kind": "flowchart",
+   "title": "Figure 5. Selection of glucose-lowering medications in those with HbA1c above target",
+   "title_in_image": true,
+   "checks": {
+    "passed": false,
+    "problems": [
+     "decision n2 has 1 exits, not all labelled",
+     "decision n3 has 1 exits, not all labelled",
+     "decision n4 has 1 exits, not all labelled",
+     "node n1 text only 0% found in OCR",
+     "node n2 text only 0% found in OCR",
+     "node n4 text only 0% found in OCR",
+     "node n5 text only 0% found in OCR",
+     "node n6 text only 0% found in OCR",
+     "node n7 text only 0% found in OCR",
+     "node n8 text only 0% found in OCR",
+     "node n9 text only 0% found in OCR",
+     "node n10 text only 0% found in OCR",
+     "node n11 text only 17% found in OCR"
+    ],
+    "ocr_match": 0.017
+   },
+   "status": "machine_interpreted",
+   "indexed": true,
+   "vision_model": "claude-opus-5-5",
+   "vision_cost_usd": 0.027,
+   "unreadable": []
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p13:f0",
+   "page": 13,
+   "bbox": [
+    72.7,
+    486.3,
+    527.1,
+    669.8
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "line_chart",
+     0.805
+    ],
+    [
+     "engineering_drawing",
+     0.159
+    ],
+    [
+     "flow_chart",
+     0.029
+    ]
+   ],
+   "caption": "Figure 6. Many types of insulin are available, all with different onsets and durations of action",
+   "ocr_text": [
+    "Figure 6. Many types of insulin are available, all with different onsets and durations of action"
+   ],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p013_f0.png",
+   "size_px": [
+    909,
+    367
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "vision",
+   "decorative_reason": null,
+   "vision_kind": "chart",
+   "title": "Figure 6. Many types of insulin are available, all with different onsets and durations of action",
+   "title_in_image": true,
+   "checks": {
+    "passed": true,
+    "problems": [],
+    "ocr_match": null
+   },
+   "status": "ocr_checked",
+   "indexed": true,
+   "vision_model": "claude-opus-5-5",
+   "vision_cost_usd": 0.0229,
+   "unreadable": [
+    "y-axis has no scale or label",
+    "exact curve values; all estimated from axis"
+   ]
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p14:f0",
+   "page": 14,
+   "bbox": [
+    68.6,
+    350.3,
+    552.1,
+    538.6
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "flow_chart",
+     0.995
+    ],
+    [
+     "bar_chart",
+     0.001
+    ],
+    [
+     "engineering_drawing",
+     0.001
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p014_f0.png",
+   "size_px": [
+    967,
+    376
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "vision",
+   "decorative_reason": null,
+   "vision_kind": "flowchart",
+   "title": "Figure 7. Using basal insulin*6,10",
+   "title_in_image": true,
+   "checks": {
+    "passed": true,
+    "problems": [],
+    "ocr_match": 1.0
+   },
+   "status": "ocr_checked",
+   "indexed": true,
+   "vision_model": "claude-opus-5-5",
+   "vision_cost_usd": 0.0147,
+   "unreadable": []
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p14:f1",
+   "page": 14,
+   "bbox": [
+    71.2,
+    633.6,
+    102.3,
+    664.5
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "icon",
+     0.987
+    ],
+    [
+     "logo",
+     0.007
+    ],
+    [
+     "calendar",
+     0.003
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p014_f1.png",
+   "size_px": [
+    63,
+    62
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "decorative",
+   "decorative_reason": "docling class icon"
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p14:f2",
+   "page": 14,
+   "bbox": [
+    71.1,
+    678.6,
+    102.3,
+    709.8
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "icon",
+     0.934
+    ],
+    [
+     "logo",
+     0.051
+    ],
+    [
+     "calendar",
+     0.006
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p014_f2.png",
+   "size_px": [
+    63,
+    63
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "decorative",
+   "decorative_reason": "docling class icon"
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p15:f0",
+   "page": 15,
+   "bbox": [
+    237.8,
+    40.5,
+    294.0,
+    95.3
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "icon",
+     0.997
+    ],
+    [
+     "logo",
+     0.003
+    ],
+    [
+     "pie_chart",
+     0.0
+    ]
+   ],
+   "caption": "Figure 8. Using prandial insulin",
+   "ocr_text": [
+    "Figure 8. Using prandial insulin"
+   ],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p015_f0.png",
+   "size_px": [
+    112,
+    110
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "decorative",
+   "decorative_reason": "docling class icon"
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p15:f1",
+   "page": 15,
+   "bbox": [
+    70.2,
+    457.7,
+    504.7,
+    617.7
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "table",
+     0.616
+    ],
+    [
+     "flow_chart",
+     0.146
+    ],
+    [
+     "engineering_drawing",
+     0.061
+    ]
+   ],
+   "caption": "Figure 9. Sample day with basal and prandial insulin",
+   "ocr_text": [
+    "Figure 9. Sample day with basal and prandial insulin"
+   ],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p015_f1.png",
+   "size_px": [
+    869,
+    320
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "vision",
+   "decorative_reason": null,
+   "vision_kind": "diagram",
+   "title": "Figure 9. Sample day with basal and prandial insulin",
+   "title_in_image": true,
+   "checks": {
+    "passed": true,
+    "problems": [],
+    "ocr_match": null
+   },
+   "status": "ocr_checked",
+   "indexed": true,
+   "vision_model": "claude-opus-5-5",
+   "vision_cost_usd": 0.0136,
+   "unreadable": []
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p17:f0",
+   "page": 17,
+   "bbox": [
+    148.8,
+    291.4,
+    207.1,
+    353.7
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "icon",
+     0.939
+    ],
+    [
+     "logo",
+     0.047
+    ],
+    [
+     "pie_chart",
+     0.009
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p017_f0.png",
+   "size_px": [
+    116,
+    124
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "decorative",
+   "decorative_reason": "docling class icon"
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p17:f1",
+   "page": 17,
+   "bbox": [
+    71.4,
+    396.2,
+    221.8,
+    487.1
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "photograph",
+     0.973
+    ],
+    [
+     "screenshot_from_manual",
+     0.013
+    ],
+    [
+     "icon",
+     0.007
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p017_f1.png",
+   "size_px": [
+    301,
+    182
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "decorative",
+   "decorative_reason": "Stock photo of a person in a yellow shirt drawing liquid from a vial into a syringe (likely insulin); it contains no text or data.",
+   "vision_kind": "decorative",
+   "title": "",
+   "title_in_image": false,
+   "checks": {
+    "passed": true,
+    "problems": [],
+    "ocr_match": null
+   },
+   "status": "ocr_checked",
+   "indexed": false,
+   "vision_model": "claude-opus-5-5",
+   "vision_cost_usd": 0.0087,
+   "unreadable": []
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p17:f2",
+   "page": 17,
+   "bbox": [
+    71.3,
+    498.2,
+    222.1,
+    588.7
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "photograph",
+     0.994
+    ],
+    [
+     "logo",
+     0.001
+    ],
+    [
+     "screenshot_from_computer",
+     0.001
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p017_f2.png",
+   "size_px": [
+    301,
+    181
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "vision",
+   "decorative_reason": null,
+   "vision_kind": "photo",
+   "title": "",
+   "title_in_image": false,
+   "checks": {
+    "passed": true,
+    "problems": [],
+    "ocr_match": null
+   },
+   "status": "ocr_checked",
+   "indexed": true,
+   "vision_model": "claude-opus-5-5",
+   "vision_cost_usd": 0.0093,
+   "unreadable": []
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p17:f3",
+   "page": 17,
+   "bbox": [
+    71.1,
+    600.9,
+    222.1,
+    691.0
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "photograph",
+     0.981
+    ],
+    [
+     "icon",
+     0.012
+    ],
+    [
+     "logo",
+     0.003
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p017_f3.png",
+   "size_px": [
+    302,
+    180
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "decorative",
+   "decorative_reason": "Stock photo of an orange prescription bottle tipped over with white tablets spilled on a surface; conveys no clinical information or legible text.",
+   "vision_kind": "decorative",
+   "title": "",
+   "title_in_image": false,
+   "checks": {
+    "passed": true,
+    "problems": [],
+    "ocr_match": null
+   },
+   "status": "ocr_checked",
+   "indexed": false,
+   "vision_model": "claude-opus-5-5",
+   "vision_cost_usd": 0.0086,
+   "unreadable": []
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p17:f4",
+   "page": 17,
+   "bbox": [
+    394.9,
+    291.8,
+    449.8,
+    346.6
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "icon",
+     0.753
+    ],
+    [
+     "logo",
+     0.231
+    ],
+    [
+     "stamp",
+     0.009
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p017_f4.png",
+   "size_px": [
+    110,
+    109
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "decorative",
+   "decorative_reason": "docling class icon"
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p17:f5",
+   "page": 17,
+   "bbox": [
+    294.8,
+    73.0,
+    338.1,
+    118.8
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "icon",
+     0.935
+    ],
+    [
+     "logo",
+     0.027
+    ],
+    [
+     "engineering_drawing",
+     0.012
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p017_f5.png",
+   "size_px": [
+    86,
+    92
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "decorative",
+   "decorative_reason": "docling class icon"
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p18:f0",
+   "page": 18,
+   "bbox": [
+    71.3,
+    319.4,
+    300.0,
+    412.1
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "photograph",
+     0.842
+    ],
+    [
+     "icon",
+     0.091
+    ],
+    [
+     "logo",
+     0.025
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p018_f0.png",
+   "size_px": [
+    457,
+    185
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "vision",
+   "decorative_reason": null,
+   "vision_kind": "photo",
+   "title": "",
+   "title_in_image": false,
+   "checks": {
+    "passed": true,
+    "problems": [],
+    "ocr_match": null
+   },
+   "status": "ocr_checked",
+   "indexed": true,
+   "vision_model": "claude-opus-5-5",
+   "vision_cost_usd": 0.0105,
+   "unreadable": [
+    "exact small text on display (time/date values) uncertain"
+   ]
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p19:f0",
+   "page": 19,
+   "bbox": [
+    132.1,
+    218.2,
+    514.9,
+    421.2
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "flow_chart",
+     0.997
+    ],
+    [
+     "icon",
+     0.001
+    ],
+    [
+     "engineering_drawing",
+     0.0
+    ]
+   ],
+   "caption": "Figure 11. Changes to overall health and function should trigger a re-assessment of treatment targets.",
+   "ocr_text": [
+    "Figure 11. Changes to overall health and function should trigger a re-assessment of treatment targets."
+   ],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p019_f0.png",
+   "size_px": [
+    766,
+    406
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "vision",
+   "decorative_reason": null,
+   "vision_kind": "diagram",
+   "title": "Figure 11. Changes to overall health and function should trigger a re-assessment of treatment targets.",
+   "title_in_image": true,
+   "checks": {
+    "passed": true,
+    "problems": [],
+    "ocr_match": null
+   },
+   "status": "ocr_checked",
+   "indexed": true,
+   "vision_model": "claude-opus-5-5",
+   "vision_cost_usd": 0.017,
+   "unreadable": []
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p19:f1",
+   "page": 19,
+   "bbox": [
+    67.8,
+    468.6,
+    550.5,
+    641.2
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "flow_chart",
+     0.742
+    ],
+    [
+     "table",
+     0.21
+    ],
+    [
+     "calendar",
+     0.013
+    ]
+   ],
+   "caption": "Figure 12. Key actions when simplifying insulin 29",
+   "ocr_text": [
+    "Figure 12. Key actions when simplifying insulin 29"
+   ],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p019_f1.png",
+   "size_px": [
+    965,
+    345
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "vision",
+   "decorative_reason": null,
+   "vision_kind": "flowchart",
+   "title": "Figure 12. Key actions when simplifying insulin",
+   "title_in_image": true,
+   "checks": {
+    "passed": false,
+    "problems": [
+     "node n1 text only 12% found in OCR",
+     "node n2 text only 5% found in OCR",
+     "node n3 text only 0% found in OCR"
+    ],
+    "ocr_match": 0.058
+   },
+   "status": "machine_interpreted",
+   "indexed": true,
+   "vision_model": "claude-opus-5-5",
+   "vision_cost_usd": 0.0152,
+   "unreadable": []
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p20:f0",
+   "page": 20,
+   "bbox": [
+    88.2,
+    92.8,
+    144.8,
+    171.0
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.713
+    ],
+    [
+     "icon",
+     0.277
+    ],
+    [
+     "calendar",
+     0.004
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p020_f0.png",
+   "size_px": [
+    114,
+    156
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p20:f1",
+   "page": 20,
+   "bbox": [
+    73.1,
+    190.8,
+    160.8,
+    305.3
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "icon",
+     0.876
+    ],
+    [
+     "logo",
+     0.091
+    ],
+    [
+     "flow_chart",
+     0.011
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p020_f1.png",
+   "size_px": [
+    176,
+    229
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "decorative",
+   "decorative_reason": "docling class icon"
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p20:f2",
+   "page": 20,
+   "bbox": [
+    90.2,
+    336.8,
+    143.6,
+    405.7
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "icon",
+     0.551
+    ],
+    [
+     "logo",
+     0.443
+    ],
+    [
+     "flow_chart",
+     0.003
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p020_f2.png",
+   "size_px": [
+    107,
+    137
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "decorative",
+   "decorative_reason": "docling class icon"
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p20:f3",
+   "page": 20,
+   "bbox": [
+    94.4,
+    432.4,
+    138.4,
+    513.5
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "icon",
+     0.675
+    ],
+    [
+     "logo",
+     0.319
+    ],
+    [
+     "page_thumbnail",
+     0.002
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p020_f3.png",
+   "size_px": [
+    88,
+    162
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "decorative",
+   "decorative_reason": "docling class icon"
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p20:f4",
+   "page": 20,
+   "bbox": [
+    85.1,
+    548.5,
+    148.6,
+    621.9
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.88
+    ],
+    [
+     "icon",
+     0.118
+    ],
+    [
+     "calendar",
+     0.001
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p020_f4.png",
+   "size_px": [
+    127,
+    147
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p20:f5",
+   "page": 20,
+   "bbox": [
+    87.2,
+    657.6,
+    147.4,
+    722.0
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "icon",
+     0.667
+    ],
+    [
+     "logo",
+     0.33
+    ],
+    [
+     "calendar",
+     0.001
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p020_f5.png",
+   "size_px": [
+    121,
+    129
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "decorative",
+   "decorative_reason": "docling class icon"
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p21:f0",
+   "page": 21,
+   "bbox": [
+    90.0,
+    96.6,
+    145.1,
+    179.2
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.77
+    ],
+    [
+     "icon",
+     0.227
+    ],
+    [
+     "calendar",
+     0.001
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p021_f0.png",
+   "size_px": [
+    110,
+    165
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p21:f1",
+   "page": 21,
+   "bbox": [
+    89.2,
+    216.8,
+    143.2,
+    301.4
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "icon",
+     0.953
+    ],
+    [
+     "logo",
+     0.045
+    ],
+    [
+     "calendar",
+     0.001
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p021_f1.png",
+   "size_px": [
+    108,
+    169
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "decorative",
+   "decorative_reason": "docling class icon"
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p21:f2",
+   "page": 21,
+   "bbox": [
+    88.3,
+    343.0,
+    145.8,
+    406.4
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.888
+    ],
+    [
+     "icon",
+     0.112
+    ],
+    [
+     "stamp",
+     0.0
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p021_f2.png",
+   "size_px": [
+    115,
+    127
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p21:f3",
+   "page": 21,
+   "bbox": [
+    84.0,
+    441.2,
+    149.4,
+    479.5
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "icon",
+     0.887
+    ],
+    [
+     "bar_chart",
+     0.047
+    ],
+    [
+     "logo",
+     0.03
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p021_f3.png",
+   "size_px": [
+    131,
+    77
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "decorative",
+   "decorative_reason": "docling class icon"
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p21:f4",
+   "page": 21,
+   "bbox": [
+    92.9,
+    537.0,
+    140.2,
+    602.9
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "icon",
+     0.931
+    ],
+    [
+     "logo",
+     0.067
+    ],
+    [
+     "page_thumbnail",
+     0.001
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p021_f4.png",
+   "size_px": [
+    94,
+    132
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "decorative",
+   "decorative_reason": "docling class icon"
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p22:f0",
+   "page": 22,
+   "bbox": [
+    69.0,
+    109.0,
+    124.8,
+    162.9
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "icon",
+     0.988
+    ],
+    [
+     "logo",
+     0.004
+    ],
+    [
+     "pie_chart",
+     0.002
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p022_f0.png",
+   "size_px": [
+    112,
+    108
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "decorative",
+   "decorative_reason": "docling class icon"
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p22:f1",
+   "page": 22,
+   "bbox": [
+    70.3,
+    177.6,
+    121.8,
+    227.5
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "icon",
+     0.932
+    ],
+    [
+     "calendar",
+     0.047
+    ],
+    [
+     "logo",
+     0.011
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p022_f1.png",
+   "size_px": [
+    103,
+    100
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "decorative",
+   "decorative_reason": "docling class icon"
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p22:f2",
+   "page": 22,
+   "bbox": [
+    68.9,
+    508.5,
+    124.9,
+    565.4
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "icon",
+     0.898
+    ],
+    [
+     "logo",
+     0.075
+    ],
+    [
+     "pie_chart",
+     0.008
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p022_f2.png",
+   "size_px": [
+    112,
+    114
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "decorative",
+   "decorative_reason": "docling class icon"
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p24:f0",
+   "page": 24,
+   "bbox": [
+    226.9,
+    127.5,
+    296.0,
+    213.0
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "full_page_image",
+     0.411
+    ],
+    [
+     "page_thumbnail",
+     0.335
+    ],
+    [
+     "photograph",
+     0.087
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p024_f0.png",
+   "size_px": [
+    138,
+    171
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "vision",
+   "decorative_reason": null,
+   "vision_kind": "photo",
+   "title": "",
+   "title_in_image": false,
+   "checks": {
+    "passed": true,
+    "problems": [],
+    "ocr_match": null
+   },
+   "status": "ocr_checked",
+   "indexed": true,
+   "vision_model": "claude-opus-5-5",
+   "vision_cost_usd": 0.01,
+   "unreadable": []
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p24:f1",
+   "page": 24,
+   "bbox": [
+    70.5,
+    470.1,
+    184.9,
+    523.8
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.999
+    ],
+    [
+     "icon",
+     0.001
+    ],
+    [
+     "stamp",
+     0.001
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p024_f1.png",
+   "size_px": [
+    229,
+    108
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p4:f4",
+   "page": 4,
+   "bbox": [
+    434.1,
+    169.3,
+    562.0,
+    387.5
+   ],
+   "source": "pdf_image",
+   "classes": [],
+   "caption": null,
+   "ocr_text": [
+    "58% reduction in diabetes risk with lifestyle changes8 t"
+   ],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p004_f4.png",
+   "frac": 0.0576,
+   "size_px": [
+    129,
+    219
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "vision",
+   "decorative_reason": null,
+   "vision_kind": "text_image",
+   "title": "58% reduction in diabetes risk with lifestyle changes",
+   "title_in_image": true,
+   "checks": {
+    "passed": true,
+    "problems": [],
+    "ocr_match": null
+   },
+   "status": "ocr_checked",
+   "indexed": true,
+   "vision_model": "claude-opus-5-5",
+   "vision_cost_usd": 0.0101,
+   "unreadable": []
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p7:f1",
+   "page": 7,
+   "bbox": [
+    69.1,
+    85.1,
+    536.4,
+    359.8
+   ],
+   "source": "pdf_image",
+   "classes": [],
+   "caption": null,
+   "ocr_text": [
+    "Status Fasting Plasma Glucose (FPG)*\u00a7 or Hemoglobin A1c (HbA1c)\u2020 Normal FPG < 100 mg/dL HbA1c < 5.7% Prediabetes FPG \u2265 100 mg/dL and < 126 mg/dL on 2 occasions or HbA1c \u2265 5.7% and FPG \u2265 100 mg/dL and < 126 mg/dL or 2-hour plasma glucose 140\u2013199 mg/dL (IGT) Diabetes FPG \u2265 126 mg/dL on 2 occasions or HbA1c \u2265 6.5% and a confirmatory FPG \u2265 126 mg/dL or HbA1c \u2265 7.0% on 2 occasions"
+   ],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p007_f1.png",
+   "frac": 0.2648,
+   "size_px": [
+    1464,
+    840
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "vision",
+   "decorative_reason": null,
+   "vision_kind": "table_image",
+   "title": "",
+   "title_in_image": false,
+   "checks": {
+    "passed": true,
+    "problems": [],
+    "ocr_match": null
+   },
+   "status": "ocr_checked",
+   "indexed": true,
+   "vision_model": "claude-opus-5-5",
+   "vision_cost_usd": 0.0179,
+   "unreadable": [
+    "Footnote text for symbols *, \u00a7, \u2020 is not shown in the image"
+   ]
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p15:f2",
+   "page": 15,
+   "bbox": [
+    69.1,
+    107.8,
+    224.3,
+    310.8
+   ],
+   "source": "pdf_image",
+   "classes": [],
+   "caption": null,
+   "ocr_text": [
+    "H B H o t r \u2022 Start with one dose before the largest meal of the day. \u2022 Begin with 4 units a day or 10% of basal dose. \u2022 If HbA1c is < 8% then consider lowering basal dose by 4 units a day or 10%. Starting prandial insulin"
+   ],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p015_f2.png",
+   "frac": 0.065,
+   "size_px": [
+    524,
+    622
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "vision",
+   "decorative_reason": null,
+   "vision_kind": "text_image",
+   "title": "Starting prandial insulin",
+   "title_in_image": true,
+   "checks": {
+    "passed": true,
+    "problems": [],
+    "ocr_match": null
+   },
+   "status": "ocr_checked",
+   "indexed": true,
+   "vision_model": "claude-opus-5-5",
+   "vision_cost_usd": 0.0118,
+   "unreadable": [
+    "Cut-off red text fragments at the right edge of the image (adjacent page content)"
+   ]
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p15:f3",
+   "page": 15,
+   "bbox": [
+    251.6,
+    107.8,
+    393.5,
+    310.8
+   ],
+   "source": "pdf_image",
+   "classes": [],
+   "caption": null,
+   "ocr_text": [
+    "H o t r \u2022 Increase dose by 1 to 2 units or 10 to 15% twice weekly. \u2022 If having hypoglycemia, determine the cause (e.g., missed meal, exercise). \u2013 If no clear reason, then lower corresponding dose by 10 to 20%. Titrating prandial insulin"
+   ],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p015_f3.png",
+   "frac": 0.0594,
+   "size_px": [
+    488,
+    622
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "vision",
+   "decorative_reason": null,
+   "vision_kind": "text_image",
+   "title": "Titrating prandial insulin",
+   "title_in_image": true,
+   "checks": {
+    "passed": true,
+    "problems": [],
+    "ocr_match": null
+   },
+   "status": "ocr_checked",
+   "indexed": true,
+   "vision_model": "claude-opus-5-5",
+   "vision_cost_usd": 0.012,
+   "unreadable": [
+    "Cut-off text fragments at the right edge from an adjacent box (letters only partially visible)"
+   ]
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p15:f4",
+   "page": 15,
+   "bbox": [
+    421.6,
+    107.8,
+    563.4,
+    310.8
+   ],
+   "source": "pdf_image",
+   "classes": [],
+   "caption": null,
+   "ocr_text": [
+    "\u2022 Start with adding a second prandial dose and follow titration schedule. \u2022 Recheck HbA1c in 3 months. \u2022 If HbA1c still elevated, add a third prandial insulin dose. Adding prandial doses"
+   ],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p015_f4.png",
+   "frac": 0.0594,
+   "size_px": [
+    488,
+    622
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "vision",
+   "decorative_reason": null,
+   "vision_kind": "flowchart",
+   "title": "Adding prandial doses",
+   "title_in_image": true,
+   "checks": {
+    "passed": true,
+    "problems": [],
+    "ocr_match": 1.0
+   },
+   "status": "ocr_checked",
+   "indexed": true,
+   "vision_model": "claude-opus-5-5",
+   "vision_cost_usd": 0.0127,
+   "unreadable": [
+    "Possible arrow fragment at the left edge; its source and direction are not visible in the crop"
+   ]
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p17:f6",
+   "page": 17,
+   "bbox": [
+    69.3,
+    59.7,
+    291.8,
+    371.8
+   ],
+   "source": "pdf_image",
+   "classes": [],
+   "caption": null,
+   "ocr_text": [
+    "CLINICAL PEARL When basal insulin is added to existing therapy: \u2022 Continue metformin, SGLT-2, GLP-1, DPP-4, and/or sulfonylurea. \u2022 TZD can be continued if patient does not have heart failure. \u2022 Keep in mind hypoglycemia risk. Reduce the dose of basal insulin if hypoglycemia occurs."
+   ],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p017_f6.png",
+   "frac": 0.1433,
+   "size_px": [
+    712,
+    924
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "vision",
+   "decorative_reason": null,
+   "vision_kind": "text_image",
+   "title": "Clinical Pearl: When basal insulin is added to existing therapy",
+   "title_in_image": true,
+   "checks": {
+    "passed": true,
+    "problems": [],
+    "ocr_match": null
+   },
+   "status": "ocr_checked",
+   "indexed": true,
+   "vision_model": "claude-opus-5-5",
+   "vision_cost_usd": 0.0134,
+   "unreadable": []
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p17:f7",
+   "page": 17,
+   "bbox": [
+    306.9,
+    59.7,
+    542.7,
+    371.8
+   ],
+   "source": "pdf_image",
+   "classes": [],
+   "caption": null,
+   "ocr_text": [
+    "CLINICAL PEARL When prandial insulin is added to basal insulin and existing therapy: \u2022 Continue metformin, DPP-4, SGLT-2, or GLP-1. \u2022 Discontinue sulfonylurea due to risk of hypoglycemia. \u2022 If hypoglycemia occurs, adjust the dose of prandial or basal insulin (based on readings and symptoms) before adjusting metformin, DPP-4, SGLT-2, or GLP-1."
+   ],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p017_f7.png",
+   "frac": 0.1518,
+   "size_px": [
+    748,
+    924
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "vision",
+   "decorative_reason": null,
+   "vision_kind": "text_image",
+   "title": "Clinical Pearl: When prandial insulin is added to basal insulin and existing therapy",
+   "title_in_image": true,
+   "checks": {
+    "passed": true,
+    "problems": [],
+    "ocr_match": null
+   },
+   "status": "ocr_checked",
+   "indexed": true,
+   "vision_model": "claude-opus-5-5",
+   "vision_cost_usd": 0.0145,
+   "unreadable": []
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p18:f1",
+   "page": 18,
+   "bbox": [
+    93.5,
+    483.5,
+    522.6,
+    614.2
+   ],
+   "source": "pdf_image",
+   "classes": [],
+   "caption": null,
+   "ocr_text": [
+    "Modifiable Non-modifiable Irregular eating habits Longer duration of diabetes Insulin Frailty or older age Sulfonylureas, meglitinides Cognitive impairment Polypharmacy (e.g., non-selective beta-blockers) Chronic kidney disease or hepatic dysfunction Alcohol use Hypoglycemia unawareness"
+   ],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p018_f1.png",
+   "frac": 0.1157,
+   "size_px": [
+    1280,
+    448
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "vision",
+   "decorative_reason": null,
+   "vision_kind": "table_image",
+   "title": "",
+   "title_in_image": false,
+   "checks": {
+    "passed": true,
+    "problems": [],
+    "ocr_match": null
+   },
+   "status": "ocr_checked",
+   "indexed": true,
+   "vision_model": "claude-opus-5-5",
+   "vision_cost_usd": 0.0123,
+   "unreadable": []
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p18:f2",
+   "page": 18,
+   "bbox": [
+    331.0,
+    119.9,
+    548.8,
+    152.3
+   ],
+   "source": "pdf_image",
+   "classes": [],
+   "caption": null,
+   "ocr_text": [],
+   "crop": null,
+   "frac": 0.0146,
+   "size_px": [
+    700,
+    148
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "decorative",
+   "decorative_reason": "pdf image covering 1.5% of the page"
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p18:f3",
+   "page": 18,
+   "bbox": [
+    331.0,
+    236.1,
+    548.8,
+    268.5
+   ],
+   "source": "pdf_image",
+   "classes": [],
+   "caption": null,
+   "ocr_text": [],
+   "crop": null,
+   "frac": 0.0146,
+   "size_px": [
+    700,
+    148
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "decorative",
+   "decorative_reason": "pdf image covering 1.5% of the page"
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p18:f4",
+   "page": 18,
+   "bbox": [
+    331.0,
+    318.7,
+    548.8,
+    351.1
+   ],
+   "source": "pdf_image",
+   "classes": [],
+   "caption": null,
+   "ocr_text": [],
+   "crop": null,
+   "frac": 0.0146,
+   "size_px": [
+    700,
+    148
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "decorative",
+   "decorative_reason": "pdf image covering 1.5% of the page"
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p20:f6",
+   "page": 20,
+   "bbox": [
+    69.1,
+    84.1,
+    547.9,
+    186.0
+   ],
+   "source": "pdf_image",
+   "classes": [],
+   "caption": null,
+   "ocr_text": [
+    "Primary prevention (no CVD) \u2022 Balance risk and benefits. In older adults (e.g., \u2265 70 years), risk appears to outweigh benefit. Secondary prevention (has CVD) \u2022 Use antiplatelet therapy (e.g., aspirin) in most patients unless contraindicated. \u2022 Use clopidogrel 75mg in patients with an aspirin allergy. Antiplatelet therapy"
+   ],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p020_f6.png",
+   "frac": 0.1007,
+   "size_px": [
+    1424,
+    340
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "vision",
+   "decorative_reason": null,
+   "vision_kind": "text_image",
+   "title": "Antiplatelet therapy",
+   "title_in_image": true,
+   "checks": {
+    "passed": true,
+    "problems": [],
+    "ocr_match": null
+   },
+   "status": "ocr_checked",
+   "indexed": true,
+   "vision_model": "claude-opus-5-5",
+   "vision_cost_usd": 0.0129,
+   "unreadable": []
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p20:f7",
+   "page": 20,
+   "bbox": [
+    69.1,
+    326.1,
+    547.9,
+    426.2
+   ],
+   "source": "pdf_image",
+   "classes": [],
+   "caption": null,
+   "ocr_text": [
+    "\u2022 For all patients with diabetes who are > 40 years of age, prescribe a statin. \u2022 Patients > 40 years without other CVD risk factors: \u2013 Prescribe a moderate intensity statin (e.g., atorvastatin 20mg daily). \u2022 Patients with CVD or CVD risk factors (e.g., 10-year ASCVD risk > 20%): \u2013 Prescribe a high-intensity statin (e.g., atorvastatin 40-80mg). Cholesterol"
+   ],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p020_f7.png",
+   "frac": 0.0989,
+   "size_px": [
+    1424,
+    336
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "vision",
+   "decorative_reason": null,
+   "vision_kind": "text_image",
+   "title": "Cholesterol",
+   "title_in_image": true,
+   "checks": {
+    "passed": true,
+    "problems": [],
+    "ocr_match": null
+   },
+   "status": "ocr_checked",
+   "indexed": true,
+   "vision_model": "claude-opus-5-5",
+   "vision_cost_usd": 0.0133,
+   "unreadable": []
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p20:f8",
+   "page": 20,
+   "bbox": [
+    69.1,
+    185.0,
+    547.9,
+    326.8
+   ],
+   "source": "pdf_image",
+   "classes": [],
+   "caption": null,
+   "ocr_text": [
+    "\u2022 Measure BP at every clinical visit using appropriate method, patient preparation, and technique. \u2022 Suggest BP goal < 130/90 mm Hg. For patients 60 years and over with T2DM, recommend Systolic BP goal < 140 mm Hg with an added benefit to lowering Systolic BP further for those between 130 and 140 mm Hg. \u2022 Treat with a thiazide diuretic, angiotensin-converting enzyme inhibitor (ACEI), angiotensin receptor blocker (ARB), or calcium channel blocker (CCB). \u2022 Consider use of an ACEI or ARB if proteinuria present.** Blood pressure*"
+   ],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p020_f8.png",
+   "frac": 0.1401,
+   "size_px": [
+    1424,
+    452
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "vision",
+   "decorative_reason": null,
+   "vision_kind": "text_image",
+   "title": "Blood pressure*",
+   "title_in_image": true,
+   "checks": {
+    "passed": true,
+    "problems": [],
+    "ocr_match": null
+   },
+   "status": "ocr_checked",
+   "indexed": true,
+   "vision_model": "claude-opus-5-5",
+   "vision_cost_usd": 0.0158,
+   "unreadable": []
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p20:f9",
+   "page": 20,
+   "bbox": [
+    69.1,
+    424.9,
+    547.9,
+    532.6
+   ],
+   "source": "pdf_image",
+   "classes": [],
+   "caption": null,
+   "ocr_text": [
+    "\u2022 VA PAVE (Prevention of Amputation for Veterans Everywhere) is a program designed to prevent limb loss. It expands the care and treatment of clients at risk for amputation or who have had a prior amputation. VHA Directive 1410 for PAVE. \u2022 Veterans are encouraged to not go barefoot, use mirrors to view the bottom of their feet to look for ulcers, avoid hot water, and notify their healthcare team if they have wounds that do not heal rapidly. Foot care"
+   ],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p020_f9.png",
+   "frac": 0.1064,
+   "size_px": [
+    1424,
+    356
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "vision",
+   "decorative_reason": null,
+   "vision_kind": "text_image",
+   "title": "Foot care",
+   "title_in_image": true,
+   "checks": {
+    "passed": true,
+    "problems": [],
+    "ocr_match": null
+   },
+   "status": "ocr_checked",
+   "indexed": true,
+   "vision_model": "claude-opus-5-5",
+   "vision_cost_usd": 0.014,
+   "unreadable": []
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p20:f10",
+   "page": 20,
+   "bbox": [
+    69.1,
+    531.7,
+    547.9,
+    644.4
+   ],
+   "source": "pdf_image",
+   "classes": [],
+   "caption": null,
+   "ocr_text": [
+    "\u2022 Recommend a low-fiber, low fat dietary plan with small, frequent meals with a greater proportion of calories as liquids. \u2022 Withdraw medications that can worsen symptoms: Opioids (slowly taper), anticholinergics, GLP-1s, pramlintide, and DPP-4s when clinically feasible \u2022 Metaclopramide may be used for up to 12 weeks in patients unresponsive to other therapies. \u2022 Consider referral to registered dietitian. Gastroparesis"
+   ],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p020_f10.png",
+   "frac": 0.1113,
+   "size_px": [
+    1424,
+    372
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "vision",
+   "decorative_reason": null,
+   "vision_kind": "text_image",
+   "title": "Gastroparesis",
+   "title_in_image": true,
+   "checks": {
+    "passed": true,
+    "problems": [],
+    "ocr_match": null
+   },
+   "status": "ocr_checked",
+   "indexed": true,
+   "vision_model": "claude-opus-5-5",
+   "vision_cost_usd": 0.0134,
+   "unreadable": []
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p20:f11",
+   "page": 20,
+   "bbox": [
+    69.1,
+    643.6,
+    547.9,
+    743.7
+   ],
+   "source": "pdf_image",
+   "classes": [],
+   "caption": null,
+   "ocr_text": [
+    "\u2022 Determine eGFR at diagnosis and annually thereafter. \u2022 Obtain a urine albumin-to-creatinine ratio at diagnosis and annually thereafter. \u2022 Prescribe an ACEI or ARB in Veterans with diabetes, hypertension, and elevated urinary albumin >30 mg/g Cr (e.g., spot urinary to albumin creatinine ratio (UACR)) and/or an eGFR <60 mL/min/1.73 m2. Nephropathy"
+   ],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p020_f11.png",
+   "frac": 0.0989,
+   "size_px": [
+    1424,
+    336
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "vision",
+   "decorative_reason": null,
+   "vision_kind": "text_image",
+   "title": "Nephropathy",
+   "title_in_image": true,
+   "checks": {
+    "passed": true,
+    "problems": [],
+    "ocr_match": null
+   },
+   "status": "ocr_checked",
+   "indexed": true,
+   "vision_model": "claude-opus-5-5",
+   "vision_cost_usd": 0.0142,
+   "unreadable": []
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p21:f5",
+   "page": 21,
+   "bbox": [
+    69.1,
+    84.1,
+    547.9,
+    200.0
+   ],
+   "source": "pdf_image",
+   "classes": [],
+   "caption": null,
+   "ocr_text": [
+    "\u2022 Comprehensive foot exam, including: \u2013 Visual inspection (e.g., skin integrity, toe nails, callouses, deformities, ulcers) \u2013 Determination of temperature, vibration, or pinprick sensation, and 10-g monofilament exam \u2022 Optimize glycemic control for symptoms of autonomic neuropathy and overall health. \u2022 Prescribe duloxetine, gabapentin, or pregabalin for neuropathic pain in accordance with VA PBM clinical guidance. Neuropathy"
+   ],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p021_f5.png",
+   "frac": 0.1145,
+   "size_px": [
+    1424,
+    380
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "vision",
+   "decorative_reason": null,
+   "vision_kind": "text_image",
+   "title": "Neuropathy",
+   "title_in_image": true,
+   "checks": {
+    "passed": true,
+    "problems": [],
+    "ocr_match": null
+   },
+   "status": "ocr_checked",
+   "indexed": true,
+   "vision_model": "claude-opus-5-5",
+   "vision_cost_usd": 0.0137,
+   "unreadable": []
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p21:f6",
+   "page": 21,
+   "bbox": [
+    69.1,
+    199.0,
+    547.9,
+    327.1
+   ],
+   "source": "pdf_image",
+   "classes": [],
+   "caption": null,
+   "ocr_text": [
+    "\u2022 Refer Veterans to the MOVE! Weight Management Program and/or refer to registered dietitian for individual counseling. \u2022 Provide pharmacologic therapy for weight loss when indicated. \u2022 Avoid medications which can contribute to weight gain where clinically feasible. \u2022 Refer for surgical weight loss interventions, especially if: \u2013 BMI 35-39 kg/m2 with obesity associated conditions \u2013 BMI \u2265 40mg/m2 Obesity"
+   ],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p021_f6.png",
+   "frac": 0.1265,
+   "size_px": [
+    1424,
+    413
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "vision",
+   "decorative_reason": null,
+   "vision_kind": "text_image",
+   "title": "Obesity",
+   "title_in_image": true,
+   "checks": {
+    "passed": true,
+    "problems": [],
+    "ocr_match": null
+   },
+   "status": "ocr_checked",
+   "indexed": true,
+   "vision_model": "claude-opus-5-5",
+   "vision_cost_usd": 0.0147,
+   "unreadable": []
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p21:f7",
+   "page": 21,
+   "bbox": [
+    69.1,
+    526.2,
+    547.9,
+    624.8
+   ],
+   "source": "pdf_image",
+   "classes": [],
+   "caption": null,
+   "ocr_text": [
+    "\u2022 Recommend influenza vaccine annually. \u2022 Other recommended vaccines include: \u2013 Pneumonia vaccines \u2013 Hepatitis B \u2013 Vaccines as per immunization schedule (e.g., Tdap, MMR, HPV, Zoster) Vaccines"
+   ],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p021_f7.png",
+   "frac": 0.0974,
+   "size_px": [
+    1424,
+    332
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "vision",
+   "decorative_reason": null,
+   "vision_kind": "text_image",
+   "title": "Vaccines",
+   "title_in_image": true,
+   "checks": {
+    "passed": true,
+    "problems": [],
+    "ocr_match": null
+   },
+   "status": "ocr_checked",
+   "indexed": true,
+   "vision_model": "claude-opus-5-5",
+   "vision_cost_usd": 0.0116,
+   "unreadable": []
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p21:f8",
+   "page": 21,
+   "bbox": [
+    69.1,
+    326.2,
+    547.9,
+    427.0
+   ],
+   "source": "pdf_image",
+   "classes": [],
+   "caption": null,
+   "ocr_text": [
+    "\u2022 All Veterans should have a dilated retinal exam or retinal imaging to detect retinopathy. \u2022 Screen at least every other year for Veterans with no retinopathy on prior exams. \u2022 More frequent screenings required if risk factors for progression of retinopathy are present (e.g., pregnancy). \u2022 Follow-up for retinopathy should occur in conjunction with an eye care professional. Retinopathy"
+   ],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p021_f8.png",
+   "frac": 0.0996,
+   "size_px": [
+    1424,
+    338
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "vision",
+   "decorative_reason": null,
+   "vision_kind": "text_image",
+   "title": "Retinopathy",
+   "title_in_image": true,
+   "checks": {
+    "passed": true,
+    "problems": [],
+    "ocr_match": null
+   },
+   "status": "ocr_checked",
+   "indexed": true,
+   "vision_model": "claude-opus-5-5",
+   "vision_cost_usd": 0.0133,
+   "unreadable": []
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p21:f9",
+   "page": 21,
+   "bbox": [
+    69.1,
+    426.1,
+    547.9,
+    526.9
+   ],
+   "source": "pdf_image",
+   "classes": [],
+   "caption": null,
+   "ocr_text": [
+    "\u2022 Drug therapy using nicotine replacement, bupropion, or varenicline significantly improves cessation rates. \u2022 Adding counseling programs to pharmacotherapy further increases the chances for success. \u2022 Contact your tobacco cessation clinician to learn about programs available at your facility. \u2022 Veterans can also be referred to the Veteran tobacco quitline at 1-855-QUIT-VET. Tobacco"
+   ],
+   "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p021_f9.png",
+   "frac": 0.0996,
+   "size_px": [
+    1424,
+    338
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "vision",
+   "decorative_reason": null,
+   "vision_kind": "text_image",
+   "title": "Tobacco",
+   "title_in_image": true,
+   "checks": {
+    "passed": true,
+    "problems": [],
+    "ocr_match": null
+   },
+   "status": "ocr_checked",
+   "indexed": true,
+   "vision_model": "claude-opus-5-5",
+   "vision_cost_usd": 0.0126,
+   "unreadable": []
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p22:f3",
+   "page": 22,
+   "bbox": [
+    69.6,
+    245.3,
+    125.4,
+    301.1
+   ],
+   "source": "pdf_image",
+   "classes": [],
+   "caption": null,
+   "ocr_text": [],
+   "crop": null,
+   "frac": 0.0064,
+   "size_px": [
+    248,
+    212
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "decorative",
+   "decorative_reason": "pdf image covering 0.6% of the page"
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p22:f4",
+   "page": 22,
+   "bbox": [
+    69.6,
+    321.1,
+    125.4,
+    376.9
+   ],
+   "source": "pdf_image",
+   "classes": [],
+   "caption": null,
+   "ocr_text": [],
+   "crop": null,
+   "frac": 0.0064,
+   "size_px": [
+    248,
+    212
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "decorative",
+   "decorative_reason": "pdf image covering 0.6% of the page"
+  },
+  {
+   "figure_id": "va_pbm_t2dm_clinicians_guide:p22:f5",
+   "page": 22,
+   "bbox": [
+    69.6,
+    424.8,
+    125.4,
+    480.6
+   ],
+   "source": "pdf_image",
+   "classes": [],
+   "caption": null,
+   "ocr_text": [],
+   "crop": null,
+   "frac": 0.0064,
+   "size_px": [
+    248,
+    212
+   ],
+   "doc_id": "va_pbm_t2dm_clinicians_guide",
+   "decision": "decorative",
+   "decorative_reason": "pdf image covering 0.6% of the page"
+  },
+  {
+   "figure_id": "va_pbm_t2dm_pharmacotherapy_2025:p1:f0",
+   "page": 1,
+   "bbox": [
+    19.0,
+    40.1,
+    587.1,
+    463.0
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "icon",
+     0.761
+    ],
+    [
+     "engineering_drawing",
+     0.114
+    ],
+    [
+     "logo",
+     0.05
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_pharmacotherapy_2025/p001_f0.png",
+   "size_px": [
+    1136,
+    846
+   ],
+   "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+   "decision": "decorative",
+   "decorative_reason": "docling class icon"
+  },
+  {
+   "figure_id": "va_pbm_t2dm_pharmacotherapy_2025:p1:f1",
+   "page": 1,
+   "bbox": [
+    164.7,
+    699.8,
+    288.9,
+    758.5
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     1.0
+    ],
+    [
+     "stamp",
+     0.0
+    ],
+    [
+     "icon",
+     0.0
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_pharmacotherapy_2025/p001_f1.png",
+   "size_px": [
+    249,
+    117
+   ],
+   "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "va_pbm_t2dm_pharmacotherapy_2025:p2:f0",
+   "page": 2,
+   "bbox": [
+    79.5,
+    85.0,
+    323.4,
+    135.2
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.866
+    ],
+    [
+     "other",
+     0.026
+    ],
+    [
+     "full_page_image",
+     0.014
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_pharmacotherapy_2025/p002_f0.png",
+   "size_px": [
+    488,
+    100
+   ],
+   "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "va_pbm_t2dm_pharmacotherapy_2025:p2:f1",
+   "page": 2,
+   "bbox": [
+    466.5,
+    160.9,
+    514.6,
+    196.5
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "icon",
+     0.901
+    ],
+    [
+     "logo",
+     0.09
+    ],
+    [
+     "screenshot_from_computer",
+     0.001
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_pharmacotherapy_2025/p002_f1.png",
+   "size_px": [
+    96,
+    71
+   ],
+   "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+   "decision": "decorative",
+   "decorative_reason": "docling class icon"
+  },
+  {
+   "figure_id": "va_pbm_t2dm_pharmacotherapy_2025:p3:f0",
+   "page": 3,
+   "bbox": [
+    385.6,
+    147.7,
+    531.2,
+    264.4
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "photograph",
+     0.961
+    ],
+    [
+     "icon",
+     0.018
+    ],
+    [
+     "logo",
+     0.01
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_pharmacotherapy_2025/p003_f0.png",
+   "size_px": [
+    291,
+    234
+   ],
+   "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+   "decision": "decorative",
+   "decorative_reason": "Stock photo of an orange prescription bottle tipped over with white tablets spilling out; it conveys no clinical information, and the bottle label text is blurred and not legible.",
+   "vision_kind": "decorative",
+   "title": "",
+   "title_in_image": false,
+   "checks": {
+    "passed": true,
+    "problems": [],
+    "ocr_match": null
+   },
+   "status": "ocr_checked",
+   "indexed": false,
+   "vision_model": "claude-opus-5-5",
+   "vision_cost_usd": 0.009,
+   "unreadable": []
+  },
+  {
+   "figure_id": "va_pbm_t2dm_pharmacotherapy_2025:p3:f1",
+   "page": 3,
+   "bbox": [
+    53.9,
+    679.9,
+    199.2,
+    740.8
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "icon",
+     0.877
+    ],
+    [
+     "logo",
+     0.07
+    ],
+    [
+     "stamp",
+     0.012
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_pharmacotherapy_2025/p003_f1.png",
+   "size_px": [
+    290,
+    122
+   ],
+   "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+   "decision": "decorative",
+   "decorative_reason": "docling class icon"
+  },
+  {
+   "figure_id": "va_pbm_t2dm_pharmacotherapy_2025:p5:f0",
+   "page": 5,
+   "bbox": [
+    52.7,
+    254.3,
+    581.8,
+    471.8
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "bar_chart",
+     0.98
+    ],
+    [
+     "line_chart",
+     0.014
+    ],
+    [
+     "table",
+     0.002
+    ]
+   ],
+   "caption": "Figure 2. Cardiac and renal benefits 10-13,37-41",
+   "ocr_text": [
+    "Figure 2. Cardiac and renal benefits 10-13,37-41"
+   ],
+   "crop": "storage/figures/va_pbm_t2dm_pharmacotherapy_2025/p005_f0.png",
+   "size_px": [
+    1059,
+    435
+   ],
+   "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+   "decision": "vision",
+   "decorative_reason": null,
+   "vision_kind": "chart",
+   "title": "Figure 2. Cardiac and renal benefits",
+   "title_in_image": true,
+   "checks": {
+    "passed": true,
+    "problems": [],
+    "ocr_match": null
+   },
+   "status": "ocr_checked",
+   "indexed": true,
+   "vision_model": "claude-opus-5-5",
+   "vision_cost_usd": 0.0197,
+   "unreadable": []
+  },
+  {
+   "figure_id": "va_pbm_t2dm_pharmacotherapy_2025:p6:f0",
+   "page": 6,
+   "bbox": [
+    226.7,
+    104.3,
+    494.6,
+    242.4
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "flow_chart",
+     0.945
+    ],
+    [
+     "bar_chart",
+     0.021
+    ],
+    [
+     "calendar",
+     0.012
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_pharmacotherapy_2025/p006_f0.png",
+   "size_px": [
+    536,
+    276
+   ],
+   "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+   "decision": "vision",
+   "decorative_reason": null,
+   "vision_kind": "diagram",
+   "title": "",
+   "title_in_image": false,
+   "checks": {
+    "passed": true,
+    "problems": [],
+    "ocr_match": null
+   },
+   "status": "ocr_checked",
+   "indexed": true,
+   "vision_model": "claude-opus-5-5",
+   "vision_cost_usd": 0.0139,
+   "unreadable": []
+  },
+  {
+   "figure_id": "va_pbm_t2dm_pharmacotherapy_2025:p6:f1",
+   "page": 6,
+   "bbox": [
+    173.7,
+    298.7,
+    495.1,
+    453.3
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "flow_chart",
+     0.964
+    ],
+    [
+     "engineering_drawing",
+     0.013
+    ],
+    [
+     "table",
+     0.011
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_pharmacotherapy_2025/p006_f1.png",
+   "size_px": [
+    643,
+    310
+   ],
+   "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+   "decision": "vision",
+   "decorative_reason": null,
+   "vision_kind": "diagram",
+   "title": "",
+   "title_in_image": false,
+   "checks": {
+    "passed": true,
+    "problems": [],
+    "ocr_match": null
+   },
+   "status": "ocr_checked",
+   "indexed": true,
+   "vision_model": "claude-opus-5-5",
+   "vision_cost_usd": 0.0161,
+   "unreadable": []
+  },
+  {
+   "figure_id": "va_pbm_t2dm_pharmacotherapy_2025:p6:f2",
+   "page": 6,
+   "bbox": [
+    79.7,
+    544.2,
+    197.0,
+    599.2
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.618
+    ],
+    [
+     "icon",
+     0.253
+    ],
+    [
+     "flow_chart",
+     0.022
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_pharmacotherapy_2025/p006_f2.png",
+   "size_px": [
+    235,
+    110
+   ],
+   "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "va_pbm_t2dm_pharmacotherapy_2025:p7:f0",
+   "page": 7,
+   "bbox": [
+    110.6,
+    101.2,
+    492.1,
+    257.0
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "flow_chart",
+     0.691
+    ],
+    [
+     "table",
+     0.086
+    ],
+    [
+     "calendar",
+     0.052
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_pharmacotherapy_2025/p007_f0.png",
+   "size_px": [
+    763,
+    312
+   ],
+   "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+   "decision": "vision",
+   "decorative_reason": null,
+   "vision_kind": "diagram",
+   "title": "",
+   "title_in_image": false,
+   "checks": {
+    "passed": true,
+    "problems": [],
+    "ocr_match": null
+   },
+   "status": "ocr_checked",
+   "indexed": true,
+   "vision_model": "claude-opus-5-5",
+   "vision_cost_usd": 0.0156,
+   "unreadable": [
+    "Exact direction of the gray triangular arrowheads is ambiguous; the left-to-right sequence is inferred from their placement",
+    "Footnote text for the asterisk after FIB-4 is not visible"
+   ]
+  },
+  {
+   "figure_id": "va_pbm_t2dm_pharmacotherapy_2025:p7:f1",
+   "page": 7,
+   "bbox": [
+    53.9,
+    334.6,
+    198.5,
+    395.3
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "icon",
+     0.826
+    ],
+    [
+     "logo",
+     0.078
+    ],
+    [
+     "flow_chart",
+     0.026
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_pharmacotherapy_2025/p007_f1.png",
+   "size_px": [
+    289,
+    122
+   ],
+   "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+   "decision": "decorative",
+   "decorative_reason": "docling class icon"
+  },
+  {
+   "figure_id": "va_pbm_t2dm_pharmacotherapy_2025:p8:f0",
+   "page": 8,
+   "bbox": [
+    96.2,
+    298.7,
+    542.3,
+    462.9
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "flow_chart",
+     0.985
+    ],
+    [
+     "bar_chart",
+     0.006
+    ],
+    [
+     "calendar",
+     0.005
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_pharmacotherapy_2025/p008_f0.png",
+   "size_px": [
+    893,
+    329
+   ],
+   "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+   "decision": "vision",
+   "decorative_reason": null,
+   "vision_kind": "flowchart",
+   "title": "Figure 5. Using basal insulin*1,2",
+   "title_in_image": true,
+   "checks": {
+    "passed": true,
+    "problems": [],
+    "ocr_match": 1.0
+   },
+   "status": "ocr_checked",
+   "indexed": true,
+   "vision_model": "claude-opus-5-5",
+   "vision_cost_usd": 0.0137,
+   "unreadable": []
+  },
+  {
+   "figure_id": "va_pbm_t2dm_pharmacotherapy_2025:p9:f0",
+   "page": 9,
+   "bbox": [
+    62.5,
+    78.7,
+    523.1,
+    323.9
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "flow_chart",
+     0.558
+    ],
+    [
+     "table",
+     0.418
+    ],
+    [
+     "calendar",
+     0.015
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_pharmacotherapy_2025/p009_f0.png",
+   "size_px": [
+    921,
+    491
+   ],
+   "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+   "decision": "vision",
+   "decorative_reason": null,
+   "vision_kind": "flowchart",
+   "title": "",
+   "title_in_image": false,
+   "checks": {
+    "passed": true,
+    "problems": [],
+    "ocr_match": 1.0
+   },
+   "status": "ocr_checked",
+   "indexed": true,
+   "vision_model": "claude-opus-5-5",
+   "vision_cost_usd": 0.0187,
+   "unreadable": [
+    "Footnote text for the asterisk on 'Home glucose*' is not visible in the crop"
+   ]
+  },
+  {
+   "figure_id": "va_pbm_t2dm_pharmacotherapy_2025:p10:f0",
+   "page": 10,
+   "bbox": [
+    391.9,
+    333.2,
+    558.7,
+    457.3
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "icon",
+     0.713
+    ],
+    [
+     "other",
+     0.057
+    ],
+    [
+     "screenshot_from_manual",
+     0.054
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_pharmacotherapy_2025/p010_f0.png",
+   "size_px": [
+    333,
+    249
+   ],
+   "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+   "decision": "decorative",
+   "decorative_reason": "docling class icon"
+  },
+  {
+   "figure_id": "va_pbm_t2dm_pharmacotherapy_2025:p10:f1",
+   "page": 10,
+   "bbox": [
+    98.3,
+    657.2,
+    203.8,
+    694.4
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.974
+    ],
+    [
+     "icon",
+     0.019
+    ],
+    [
+     "calendar",
+     0.002
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_t2dm_pharmacotherapy_2025/p010_f1.png",
+   "size_px": [
+    211,
+    75
+   ],
+   "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "va_dod_cpg_opioids_2022:p1:f0",
+   "page": 1,
+   "bbox": [
+    72.1,
+    72.6,
+    150.5,
+    148.7
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.999
+    ],
+    [
+     "stamp",
+     0.001
+    ],
+    [
+     "icon",
+     0.0
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_dod_cpg_opioids_2022/p001_f0.png",
+   "size_px": [
+    157,
+    152
+   ],
+   "doc_id": "va_dod_cpg_opioids_2022",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "va_dod_cpg_opioids_2022:p25:f0",
+   "page": 25,
+   "bbox": [
+    76.8,
+    110.1,
+    534.6,
+    681.7
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "flow_chart",
+     0.976
+    ],
+    [
+     "engineering_drawing",
+     0.007
+    ],
+    [
+     "table",
+     0.006
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_dod_cpg_opioids_2022/p025_f0.png",
+   "size_px": [
+    915,
+    1143
+   ],
+   "doc_id": "va_dod_cpg_opioids_2022",
+   "decision": "vision",
+   "decorative_reason": null,
+   "vision_kind": "flowchart",
+   "title": "",
+   "title_in_image": false,
+   "checks": {
+    "passed": true,
+    "problems": [],
+    "ocr_match": 0.985
+   },
+   "status": "reviewed",
+   "indexed": true,
+   "vision_model": "claude-opus-5-5",
+   "vision_cost_usd": 0.0414,
+   "unreadable": []
+  },
+  {
+   "figure_id": "va_dod_cpg_opioids_2022:p26:f0",
+   "page": 26,
+   "bbox": [
+    62.2,
+    92.2,
+    549.7,
+    646.6
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "flow_chart",
+     0.995
+    ],
+    [
+     "table",
+     0.003
+    ],
+    [
+     "engineering_drawing",
+     0.001
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_dod_cpg_opioids_2022/p026_f0.png",
+   "size_px": [
+    971,
+    806
+   ],
+   "bbox_source": "pdf_image_block (docling crop was partial)",
+   "doc_id": "va_dod_cpg_opioids_2022",
+   "decision": "vision",
+   "decorative_reason": null,
+   "vision_kind": "flowchart",
+   "title": "",
+   "title_in_image": false,
+   "checks": {
+    "passed": true,
+    "problems": [],
+    "ocr_match": 1.0
+   },
+   "status": "reviewed",
+   "indexed": true,
+   "vision_model": "claude-opus-5-5",
+   "vision_cost_usd": 0.0427,
+   "unreadable": []
+  },
+  {
+   "figure_id": "va_dod_cpg_opioids_2022:p27:f0",
+   "page": 27,
+   "bbox": [
+    66.3,
+    113.9,
+    546.2,
+    626.5
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "flow_chart",
+     0.995
+    ],
+    [
+     "table",
+     0.003
+    ],
+    [
+     "calendar",
+     0.001
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_dod_cpg_opioids_2022/p027_f0.png",
+   "size_px": [
+    959,
+    1025
+   ],
+   "doc_id": "va_dod_cpg_opioids_2022",
+   "decision": "vision",
+   "decorative_reason": null,
+   "vision_kind": "flowchart",
+   "title": "",
+   "title_in_image": false,
+   "checks": {
+    "passed": true,
+    "problems": [],
+    "ocr_match": 0.977
+   },
+   "status": "reviewed",
+   "indexed": true,
+   "vision_model": "claude-opus-5-5",
+   "vision_cost_usd": 0.04,
+   "unreadable": []
+  },
+  {
+   "figure_id": "va_dod_cpg_opioids_2022:p82:f0",
+   "page": 82,
+   "bbox": [
+    82.6,
+    111.9,
+    492.3,
+    503.0
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "flow_chart",
+     0.988
+    ],
+    [
+     "table",
+     0.011
+    ],
+    [
+     "calendar",
+     0.001
+    ]
+   ],
+   "caption": "Figure A-1. Study Flow Diagram",
+   "ocr_text": [
+    "Figure A-1. Study Flow Diagram"
+   ],
+   "crop": "storage/figures/va_dod_cpg_opioids_2022/p082_f0.png",
+   "size_px": [
+    820,
+    782
+   ],
+   "doc_id": "va_dod_cpg_opioids_2022",
+   "decision": "vision",
+   "decorative_reason": null,
+   "vision_kind": "flowchart",
+   "title": "Figure A-1. Study Flow Diagram",
+   "title_in_image": true,
+   "checks": {
+    "passed": false,
+    "problems": [
+     "decision 3 has 2 exits, not all labelled",
+     "decision 7 has 2 exits, not all labelled",
+     "node 1 text only 0% found in OCR",
+     "node 2 text only 0% found in OCR",
+     "node 3 text only 0% found in OCR",
+     "node 4 text only 0% found in OCR",
+     "node 5 text only 0% found in OCR",
+     "node 6 text only 3% found in OCR",
+     "node 7 text only 0% found in OCR",
+     "node 8 text only 3% found in OCR",
+     "node 9 text only 0% found in OCR"
+    ],
+    "ocr_match": 0.008
+   },
+   "status": "machine_interpreted",
+   "indexed": true,
+   "vision_model": "claude-opus-5-5",
+   "vision_cost_usd": 0.0275,
+   "unreadable": []
+  },
+  {
+   "figure_id": "va_dod_cpg_opioids_2022:p1:f1",
+   "page": 1,
+   "bbox": [
+    462.0,
+    72.0,
+    539.8,
+    149.8
+   ],
+   "source": "pdf_image",
+   "classes": [],
+   "caption": null,
+   "ocr_text": [],
+   "crop": null,
+   "frac": 0.0125,
+   "size_px": [
+    288,
+    288
+   ],
+   "doc_id": "va_dod_cpg_opioids_2022",
+   "decision": "decorative",
+   "decorative_reason": "pdf image covering 1.2% of the page"
+  },
+  {
+   "figure_id": "va_dod_cpg_opioids_2022:p95:f0",
+   "page": 95,
+   "bbox": [
+    73.7,
+    90.4,
+    511.4,
+    168.2
+   ],
+   "source": "pdf_image",
+   "classes": [],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_dod_cpg_opioids_2022/p095_f0.png",
+   "frac": 0.0703,
+   "size_px": [
+    1673,
+    298
+   ],
+   "doc_id": "va_dod_cpg_opioids_2022",
+   "decision": "vision",
+   "decorative_reason": null,
+   "vision_kind": "flowchart",
+   "title": "",
+   "title_in_image": false,
+   "checks": {
+    "passed": true,
+    "problems": [],
+    "ocr_match": 1.0
+   },
+   "status": "ocr_checked",
+   "indexed": true,
+   "vision_model": "claude-opus-5-5",
+   "vision_cost_usd": 0.0149,
+   "unreadable": []
+  },
+  {
+   "figure_id": "va_pbm_bup_chronic_pain:p1:f0",
+   "page": 1,
+   "bbox": [
+    189.0,
+    24.5,
+    419.7,
+    70.6
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.79
+    ],
+    [
+     "icon",
+     0.072
+    ],
+    [
+     "full_page_image",
+     0.048
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_bup_chronic_pain/p001_f0.png",
+   "size_px": [
+    461,
+    92
+   ],
+   "doc_id": "va_pbm_bup_chronic_pain",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "va_pbm_bup_chronic_pain:p1:f1",
+   "page": 1,
+   "bbox": [
+    286.9,
+    684.1,
+    325.4,
+    720.4
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "icon",
+     0.996
+    ],
+    [
+     "logo",
+     0.004
+    ],
+    [
+     "music",
+     0.0
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_bup_chronic_pain/p001_f1.png",
+   "size_px": [
+    77,
+    73
+   ],
+   "doc_id": "va_pbm_bup_chronic_pain",
+   "decision": "decorative",
+   "decorative_reason": "docling class icon"
+  },
+  {
+   "figure_id": "va_pbm_bup_chronic_pain:p1:f2",
+   "page": 1,
+   "bbox": [
+    484.4,
+    611.3,
+    525.5,
+    649.0
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "icon",
+     0.94
+    ],
+    [
+     "bar_chart",
+     0.057
+    ],
+    [
+     "logo",
+     0.001
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_bup_chronic_pain/p001_f2.png",
+   "size_px": [
+    82,
+    75
+   ],
+   "doc_id": "va_pbm_bup_chronic_pain",
+   "decision": "decorative",
+   "decorative_reason": "docling class icon"
+  },
+  {
+   "figure_id": "va_pbm_bup_chronic_pain:p1:f3",
+   "page": 1,
+   "bbox": [
+    520.3,
+    228.3,
+    564.2,
+    315.3
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "icon",
+     0.988
+    ],
+    [
+     "logo",
+     0.008
+    ],
+    [
+     "bar_chart",
+     0.002
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_bup_chronic_pain/p001_f3.png",
+   "size_px": [
+    87,
+    174
+   ],
+   "doc_id": "va_pbm_bup_chronic_pain",
+   "decision": "decorative",
+   "decorative_reason": "docling class icon"
+  },
+  {
+   "figure_id": "va_pbm_bup_chronic_pain:p2:f0",
+   "page": 2,
+   "bbox": [
+    519.5,
+    26.9,
+    568.7,
+    74.3
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.621
+    ],
+    [
+     "icon",
+     0.378
+    ],
+    [
+     "pie_chart",
+     0.001
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_bup_chronic_pain/p002_f0.png",
+   "size_px": [
+    98,
+    95
+   ],
+   "doc_id": "va_pbm_bup_chronic_pain",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "va_pbm_bup_chronic_pain:p3:f0",
+   "page": 3,
+   "bbox": [
+    484.2,
+    47.5,
+    581.5,
+    127.9
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "engineering_drawing",
+     0.546
+    ],
+    [
+     "icon",
+     0.333
+    ],
+    [
+     "logo",
+     0.031
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_bup_chronic_pain/p003_f0.png",
+   "size_px": [
+    195,
+    161
+   ],
+   "doc_id": "va_pbm_bup_chronic_pain",
+   "decision": "vision",
+   "decorative_reason": null,
+   "vision_kind": "photo",
+   "title": "",
+   "title_in_image": false,
+   "checks": {
+    "passed": true,
+    "problems": [],
+    "ocr_match": null
+   },
+   "status": "ocr_checked",
+   "indexed": true,
+   "vision_model": "claude-opus-5-5",
+   "vision_cost_usd": 0.01,
+   "unreadable": [
+    "Faint markings on the orange film (possibly \"N8\")"
+   ]
+  },
+  {
+   "figure_id": "va_pbm_bup_chronic_pain:p3:f1",
+   "page": 3,
+   "bbox": [
+    497.6,
+    213.0,
+    575.8,
+    311.8
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "icon",
+     0.795
+    ],
+    [
+     "engineering_drawing",
+     0.089
+    ],
+    [
+     "bar_chart",
+     0.03
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_bup_chronic_pain/p003_f1.png",
+   "size_px": [
+    157,
+    198
+   ],
+   "doc_id": "va_pbm_bup_chronic_pain",
+   "decision": "decorative",
+   "decorative_reason": "docling class icon"
+  },
+  {
+   "figure_id": "va_pbm_bup_chronic_pain:p3:f2",
+   "page": 3,
+   "bbox": [
+    91.7,
+    685.9,
+    121.5,
+    717.7
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "icon",
+     0.601
+    ],
+    [
+     "logo",
+     0.39
+    ],
+    [
+     "stamp",
+     0.004
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_bup_chronic_pain/p003_f2.png",
+   "size_px": [
+    60,
+    63
+   ],
+   "doc_id": "va_pbm_bup_chronic_pain",
+   "decision": "decorative",
+   "decorative_reason": "docling class icon"
+  },
+  {
+   "figure_id": "va_pbm_bup_chronic_pain:p3:f3",
+   "page": 3,
+   "bbox": [
+    207.2,
+    685.9,
+    237.9,
+    719.9
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "icon",
+     0.554
+    ],
+    [
+     "logo",
+     0.439
+    ],
+    [
+     "calendar",
+     0.003
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_bup_chronic_pain/p003_f3.png",
+   "size_px": [
+    62,
+    68
+   ],
+   "doc_id": "va_pbm_bup_chronic_pain",
+   "decision": "decorative",
+   "decorative_reason": "docling class icon"
+  },
+  {
+   "figure_id": "va_pbm_bup_chronic_pain:p3:f4",
+   "page": 3,
+   "bbox": [
+    450.3,
+    685.5,
+    481.1,
+    717.8
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "icon",
+     0.612
+    ],
+    [
+     "logo",
+     0.378
+    ],
+    [
+     "calendar",
+     0.004
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_bup_chronic_pain/p003_f4.png",
+   "size_px": [
+    61,
+    65
+   ],
+   "doc_id": "va_pbm_bup_chronic_pain",
+   "decision": "decorative",
+   "decorative_reason": "docling class icon"
+  },
+  {
+   "figure_id": "va_pbm_bup_chronic_pain:p4:f0",
+   "page": 4,
+   "bbox": [
+    53.3,
+    161.1,
+    78.4,
+    186.0
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "icon",
+     0.997
+    ],
+    [
+     "logo",
+     0.003
+    ],
+    [
+     "bar_chart",
+     0.0
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_bup_chronic_pain/p004_f0.png",
+   "size_px": [
+    50,
+    50
+   ],
+   "doc_id": "va_pbm_bup_chronic_pain",
+   "decision": "decorative",
+   "decorative_reason": "docling class icon"
+  },
+  {
+   "figure_id": "va_pbm_bup_chronic_pain:p4:f1",
+   "page": 4,
+   "bbox": [
+    354.7,
+    160.7,
+    380.3,
+    186.6
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "icon",
+     0.997
+    ],
+    [
+     "logo",
+     0.003
+    ],
+    [
+     "bar_chart",
+     0.0
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_bup_chronic_pain/p004_f1.png",
+   "size_px": [
+    52,
+    52
+   ],
+   "doc_id": "va_pbm_bup_chronic_pain",
+   "decision": "decorative",
+   "decorative_reason": "docling class icon"
+  },
+  {
+   "figure_id": "va_pbm_bup_chronic_pain:p4:f2",
+   "page": 4,
+   "bbox": [
+    442.2,
+    61.2,
+    500.8,
+    135.5
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "icon",
+     0.921
+    ],
+    [
+     "logo",
+     0.02
+    ],
+    [
+     "table",
+     0.014
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_bup_chronic_pain/p004_f2.png",
+   "size_px": [
+    118,
+    149
+   ],
+   "doc_id": "va_pbm_bup_chronic_pain",
+   "decision": "decorative",
+   "decorative_reason": "docling class icon"
+  },
+  {
+   "figure_id": "va_pbm_bup_chronic_pain:p4:f3",
+   "page": 4,
+   "bbox": [
+    509.3,
+    40.2,
+    564.7,
+    106.3
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "icon",
+     0.823
+    ],
+    [
+     "logo",
+     0.172
+    ],
+    [
+     "flow_chart",
+     0.003
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_bup_chronic_pain/p004_f3.png",
+   "size_px": [
+    110,
+    133
+   ],
+   "doc_id": "va_pbm_bup_chronic_pain",
+   "decision": "decorative",
+   "decorative_reason": "docling class icon"
+  },
+  {
+   "figure_id": "va_pbm_bup_chronic_pain:p4:f4",
+   "page": 4,
+   "bbox": [
+    522.6,
+    160.9,
+    548.2,
+    213.7
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "icon",
+     0.661
+    ],
+    [
+     "logo",
+     0.319
+    ],
+    [
+     "bar_chart",
+     0.004
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_bup_chronic_pain/p004_f4.png",
+   "size_px": [
+    51,
+    105
+   ],
+   "doc_id": "va_pbm_bup_chronic_pain",
+   "decision": "decorative",
+   "decorative_reason": "docling class icon"
+  },
+  {
+   "figure_id": "va_pbm_bup_chronic_pain:p4:f5",
+   "page": 4,
+   "bbox": [
+    206.6,
+    161.0,
+    232.1,
+    186.5
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "icon",
+     0.998
+    ],
+    [
+     "logo",
+     0.001
+    ],
+    [
+     "bar_chart",
+     0.0
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_bup_chronic_pain/p004_f5.png",
+   "size_px": [
+    51,
+    51
+   ],
+   "doc_id": "va_pbm_bup_chronic_pain",
+   "decision": "decorative",
+   "decorative_reason": "docling class icon"
+  },
+  {
+   "figure_id": "va_pbm_bup_oud:p1:f0",
+   "page": 1,
+   "bbox": [
+    189.3,
+    22.5,
+    419.7,
+    68.8
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.66
+    ],
+    [
+     "icon",
+     0.106
+    ],
+    [
+     "full_page_image",
+     0.094
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_bup_oud/p001_f0.png",
+   "size_px": [
+    460,
+    93
+   ],
+   "doc_id": "va_pbm_bup_oud",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "va_pbm_bup_oud:p1:f1",
+   "page": 1,
+   "bbox": [
+    519.0,
+    165.5,
+    582.7,
+    253.3
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "icon",
+     0.745
+    ],
+    [
+     "engineering_drawing",
+     0.083
+    ],
+    [
+     "page_thumbnail",
+     0.057
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_bup_oud/p001_f1.png",
+   "size_px": [
+    127,
+    176
+   ],
+   "doc_id": "va_pbm_bup_oud",
+   "decision": "decorative",
+   "decorative_reason": "docling class icon"
+  },
+  {
+   "figure_id": "va_pbm_bup_oud:p3:f0",
+   "page": 3,
+   "bbox": [
+    483.9,
+    42.9,
+    562.5,
+    142.8
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "icon",
+     0.809
+    ],
+    [
+     "bar_chart",
+     0.059
+    ],
+    [
+     "logo",
+     0.053
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_bup_oud/p003_f0.png",
+   "size_px": [
+    157,
+    200
+   ],
+   "doc_id": "va_pbm_bup_oud",
+   "decision": "decorative",
+   "decorative_reason": "docling class icon"
+  },
+  {
+   "figure_id": "va_pbm_bup_oud:p3:f1",
+   "page": 3,
+   "bbox": [
+    118.6,
+    414.4,
+    148.0,
+    444.9
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "icon",
+     0.519
+    ],
+    [
+     "logo",
+     0.473
+    ],
+    [
+     "stamp",
+     0.003
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_bup_oud/p003_f1.png",
+   "size_px": [
+    59,
+    61
+   ],
+   "doc_id": "va_pbm_bup_oud",
+   "decision": "decorative",
+   "decorative_reason": "docling class icon"
+  },
+  {
+   "figure_id": "va_pbm_bup_oud:p3:f2",
+   "page": 3,
+   "bbox": [
+    445.4,
+    524.2,
+    502.5,
+    592.1
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "icon",
+     0.7
+    ],
+    [
+     "logo",
+     0.28
+    ],
+    [
+     "pie_chart",
+     0.008
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_bup_oud/p003_f2.png",
+   "size_px": [
+    114,
+    136
+   ],
+   "doc_id": "va_pbm_bup_oud",
+   "decision": "decorative",
+   "decorative_reason": "docling class icon"
+  },
+  {
+   "figure_id": "va_pbm_bup_oud:p3:f3",
+   "page": 3,
+   "bbox": [
+    479.7,
+    599.4,
+    539.6,
+    675.8
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "icon",
+     0.924
+    ],
+    [
+     "logo",
+     0.025
+    ],
+    [
+     "page_thumbnail",
+     0.009
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_bup_oud/p003_f3.png",
+   "size_px": [
+    120,
+    153
+   ],
+   "doc_id": "va_pbm_bup_oud",
+   "decision": "decorative",
+   "decorative_reason": "docling class icon"
+  },
+  {
+   "figure_id": "va_pbm_bup_oud:p4:f0",
+   "page": 4,
+   "bbox": [
+    53.4,
+    69.9,
+    77.2,
+    94.3
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "icon",
+     0.998
+    ],
+    [
+     "logo",
+     0.002
+    ],
+    [
+     "bar_chart",
+     0.0
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_bup_oud/p004_f0.png",
+   "size_px": [
+    47,
+    49
+   ],
+   "doc_id": "va_pbm_bup_oud",
+   "decision": "decorative",
+   "decorative_reason": "docling class icon"
+  },
+  {
+   "figure_id": "va_pbm_bup_oud:p4:f1",
+   "page": 4,
+   "bbox": [
+    206.1,
+    69.5,
+    230.3,
+    94.7
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "icon",
+     0.998
+    ],
+    [
+     "logo",
+     0.001
+    ],
+    [
+     "bar_chart",
+     0.0
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_bup_oud/p004_f1.png",
+   "size_px": [
+    49,
+    50
+   ],
+   "doc_id": "va_pbm_bup_oud",
+   "decision": "decorative",
+   "decorative_reason": "docling class icon"
+  },
+  {
+   "figure_id": "va_pbm_bup_oud:p4:f2",
+   "page": 4,
+   "bbox": [
+    354.2,
+    69.4,
+    377.4,
+    95.0
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "icon",
+     0.998
+    ],
+    [
+     "logo",
+     0.002
+    ],
+    [
+     "bar_chart",
+     0.0
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_bup_oud/p004_f2.png",
+   "size_px": [
+    47,
+    51
+   ],
+   "doc_id": "va_pbm_bup_oud",
+   "decision": "decorative",
+   "decorative_reason": "docling class icon"
+  },
+  {
+   "figure_id": "va_pbm_bup_oud:p4:f3",
+   "page": 4,
+   "bbox": [
+    524.8,
+    81.4,
+    551.3,
+    134.9
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "icon",
+     0.939
+    ],
+    [
+     "logo",
+     0.053
+    ],
+    [
+     "bar_chart",
+     0.003
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/va_pbm_bup_oud/p004_f3.png",
+   "size_px": [
+    53,
+    107
+   ],
+   "doc_id": "va_pbm_bup_oud",
+   "decision": "decorative",
+   "decorative_reason": "docling class icon"
+  },
+  {
+   "figure_id": "cms_partd_dmp_guidance_2019:p1:f0",
+   "page": 1,
+   "bbox": [
+    367.3,
+    47.6,
+    513.9,
+    109.3
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     1.0
+    ],
+    [
+     "stamp",
+     0.0
+    ],
+    [
+     "signature",
+     0.0
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/cms_partd_dmp_guidance_2019/p001_f0.png",
+   "size_px": [
+    293,
+    124
+   ],
+   "doc_id": "cms_partd_dmp_guidance_2019",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "cms_partd_opioid_pharmacists_2022:p1:f0",
+   "page": 1,
+   "bbox": [
+    98.0,
+    369.2,
+    115.2,
+    383.9
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "icon",
+     0.998
+    ],
+    [
+     "logo",
+     0.001
+    ],
+    [
+     "pie_chart",
+     0.0
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/cms_partd_opioid_pharmacists_2022/p001_f0.png",
+   "size_px": [
+    34,
+    30
+   ],
+   "doc_id": "cms_partd_opioid_pharmacists_2022",
+   "decision": "decorative",
+   "decorative_reason": "docling class icon"
+  },
+  {
+   "figure_id": "cms_partd_opioid_pharmacists_2022:p1:f1",
+   "page": 1,
+   "bbox": [
+    511.2,
+    759.3,
+    576.3,
+    780.7
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     1.0
+    ],
+    [
+     "icon",
+     0.0
+    ],
+    [
+     "stamp",
+     0.0
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/cms_partd_opioid_pharmacists_2022/p001_f1.png",
+   "size_px": [
+    131,
+    42
+   ],
+   "doc_id": "cms_partd_opioid_pharmacists_2022",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "cms_partd_opioid_pharmacists_2022:p2:f0",
+   "page": 2,
+   "bbox": [
+    100.2,
+    34.5,
+    117.9,
+    50.5
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "icon",
+     0.999
+    ],
+    [
+     "logo",
+     0.001
+    ],
+    [
+     "pie_chart",
+     0.0
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/cms_partd_opioid_pharmacists_2022/p002_f0.png",
+   "size_px": [
+    36,
+    32
+   ],
+   "doc_id": "cms_partd_opioid_pharmacists_2022",
+   "decision": "decorative",
+   "decorative_reason": "docling class icon"
+  },
+  {
+   "figure_id": "cms_partd_opioid_pharmacists_2022:p2:f1",
+   "page": 2,
+   "bbox": [
+    511.6,
+    759.2,
+    576.6,
+    781.9
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     1.0
+    ],
+    [
+     "icon",
+     0.0
+    ],
+    [
+     "stamp",
+     0.0
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/cms_partd_opioid_pharmacists_2022/p002_f1.png",
+   "size_px": [
+    130,
+    46
+   ],
+   "doc_id": "cms_partd_opioid_pharmacists_2022",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "ny_medicaid_pdl:p48:f0",
+   "page": 48,
+   "bbox": [
+    400.0,
+    222.5,
+    404.5,
+    227.0
+   ],
+   "source": "pdf_image",
+   "classes": [],
+   "caption": null,
+   "ocr_text": [],
+   "crop": null,
+   "frac": 0.0,
+   "size_px": [
+    12,
+    12
+   ],
+   "doc_id": "ny_medicaid_pdl",
+   "decision": "decorative",
+   "decorative_reason": "pdf image covering 0.0% of the page"
+  },
+  {
+   "figure_id": "ny_medicaid_pdl:p66:f0",
+   "page": 66,
+   "bbox": [
+    217.9,
+    348.5,
+    222.5,
+    353.0
+   ],
+   "source": "pdf_image",
+   "classes": [],
+   "caption": null,
+   "ocr_text": [],
+   "crop": null,
+   "frac": 0.0,
+   "size_px": [
+    12,
+    12
+   ],
+   "doc_id": "ny_medicaid_pdl",
+   "decision": "decorative",
+   "decorative_reason": "pdf image covering 0.0% of the page"
+  },
+  {
+   "figure_id": "ny_medicaid_pdl:p66:f1",
+   "page": 66,
+   "bbox": [
+    217.9,
+    414.5,
+    222.5,
+    419.0
+   ],
+   "source": "pdf_image",
+   "classes": [],
+   "caption": null,
+   "ocr_text": [],
+   "crop": null,
+   "frac": 0.0,
+   "size_px": [
+    12,
+    12
+   ],
+   "doc_id": "ny_medicaid_pdl",
+   "decision": "decorative",
+   "decorative_reason": "pdf image covering 0.0% of the page"
+  },
+  {
+   "figure_id": "ny_medicaid_pdl:p70:f0",
+   "page": 70,
+   "bbox": [
+    40.9,
+    399.8,
+    45.5,
+    404.4
+   ],
+   "source": "pdf_image",
+   "classes": [],
+   "caption": null,
+   "ocr_text": [],
+   "crop": null,
+   "frac": 0.0,
+   "size_px": [
+    12,
+    12
+   ],
+   "doc_id": "ny_medicaid_pdl",
+   "decision": "decorative",
+   "decorative_reason": "pdf image covering 0.0% of the page"
+  },
+  {
+   "figure_id": "ny_medicaid_pdl:p70:f1",
+   "page": 70,
+   "bbox": [
+    40.9,
+    427.0,
+    45.5,
+    431.5
+   ],
+   "source": "pdf_image",
+   "classes": [],
+   "caption": null,
+   "ocr_text": [],
+   "crop": null,
+   "frac": 0.0,
+   "size_px": [
+    12,
+    12
+   ],
+   "doc_id": "ny_medicaid_pdl",
+   "decision": "decorative",
+   "decorative_reason": "pdf image covering 0.0% of the page"
+  },
+  {
+   "figure_id": "ny_medicaid_pdl:p70:f2",
+   "page": 70,
+   "bbox": [
+    577.9,
+    386.3,
+    582.5,
+    390.8
+   ],
+   "source": "pdf_image",
+   "classes": [],
+   "caption": null,
+   "ocr_text": [],
+   "crop": null,
+   "frac": 0.0,
+   "size_px": [
+    12,
+    12
+   ],
+   "doc_id": "ny_medicaid_pdl",
+   "decision": "decorative",
+   "decorative_reason": "pdf image covering 0.0% of the page"
+  },
+  {
+   "figure_id": "ny_medicaid_pdl:p70:f3",
+   "page": 70,
+   "bbox": [
+    577.9,
+    520.4,
+    582.5,
+    525.0
+   ],
+   "source": "pdf_image",
+   "classes": [],
+   "caption": null,
+   "ocr_text": [],
+   "crop": null,
+   "frac": 0.0,
+   "size_px": [
+    12,
+    12
+   ],
+   "doc_id": "ny_medicaid_pdl",
+   "decision": "decorative",
+   "decorative_reason": "pdf image covering 0.0% of the page"
+  },
+  {
+   "figure_id": "ny_medicaid_pharmacy_policy:p2:f0",
+   "page": 2,
+   "bbox": [
+    49.5,
+    107.8,
+    287.1,
+    148.9
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "engineering_drawing",
+     0.278
+    ],
+    [
+     "other",
+     0.187
+    ],
+    [
+     "signature",
+     0.138
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/ny_medicaid_pharmacy_policy/p002_f0.png",
+   "size_px": [
+    475,
+    82
+   ],
+   "doc_id": "ny_medicaid_pharmacy_policy",
+   "decision": "decorative",
+   "decorative_reason": "Agency logo/header banner with no informational content beyond the organization name: \"NEW YORK STATE | Department of Health | Office of Health Insurance Programs\".",
+   "vision_kind": "decorative",
+   "title": "",
+   "title_in_image": false,
+   "checks": {
+    "passed": true,
+    "problems": [],
+    "ocr_match": null
+   },
+   "status": "ocr_checked",
+   "indexed": false,
+   "vision_model": "claude-opus-5-5",
+   "vision_cost_usd": 0.0089,
+   "unreadable": []
+  },
+  {
+   "figure_id": "ny_medicaid_pharmacy_policy:p3:f0",
+   "page": 3,
+   "bbox": [
+    414.5,
+    40.9,
+    561.2,
+    75.8
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.87
+    ],
+    [
+     "signature",
+     0.054
+    ],
+    [
+     "other",
+     0.014
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/ny_medicaid_pharmacy_policy/p003_f0.png",
+   "size_px": [
+    293,
+    70
+   ],
+   "doc_id": "ny_medicaid_pharmacy_policy",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "ny_medicaid_pharmacy_policy:p4:f0",
+   "page": 4,
+   "bbox": [
+    414.6,
+    40.9,
+    561.2,
+    75.8
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.87
+    ],
+    [
+     "signature",
+     0.054
+    ],
+    [
+     "other",
+     0.014
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/ny_medicaid_pharmacy_policy/p004_f0.png",
+   "size_px": [
+    293,
+    70
+   ],
+   "doc_id": "ny_medicaid_pharmacy_policy",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "ny_medicaid_pharmacy_policy:p5:f0",
+   "page": 5,
+   "bbox": [
+    414.4,
+    41.0,
+    561.3,
+    75.5
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.892
+    ],
+    [
+     "signature",
+     0.047
+    ],
+    [
+     "icon",
+     0.013
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/ny_medicaid_pharmacy_policy/p005_f0.png",
+   "size_px": [
+    294,
+    69
+   ],
+   "doc_id": "ny_medicaid_pharmacy_policy",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "ny_medicaid_pharmacy_policy:p6:f0",
+   "page": 6,
+   "bbox": [
+    414.4,
+    41.0,
+    561.3,
+    75.6
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.892
+    ],
+    [
+     "signature",
+     0.047
+    ],
+    [
+     "icon",
+     0.013
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/ny_medicaid_pharmacy_policy/p006_f0.png",
+   "size_px": [
+    294,
+    69
+   ],
+   "doc_id": "ny_medicaid_pharmacy_policy",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "ny_medicaid_pharmacy_policy:p7:f0",
+   "page": 7,
+   "bbox": [
+    414.4,
+    41.0,
+    561.3,
+    75.6
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.892
+    ],
+    [
+     "signature",
+     0.047
+    ],
+    [
+     "icon",
+     0.013
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/ny_medicaid_pharmacy_policy/p007_f0.png",
+   "size_px": [
+    294,
+    69
+   ],
+   "doc_id": "ny_medicaid_pharmacy_policy",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "ny_medicaid_pharmacy_policy:p8:f0",
+   "page": 8,
+   "bbox": [
+    414.4,
+    41.0,
+    561.3,
+    75.6
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.892
+    ],
+    [
+     "signature",
+     0.047
+    ],
+    [
+     "icon",
+     0.013
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/ny_medicaid_pharmacy_policy/p008_f0.png",
+   "size_px": [
+    294,
+    69
+   ],
+   "doc_id": "ny_medicaid_pharmacy_policy",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "ny_medicaid_pharmacy_policy:p9:f0",
+   "page": 9,
+   "bbox": [
+    414.4,
+    41.0,
+    561.4,
+    75.6
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.892
+    ],
+    [
+     "signature",
+     0.047
+    ],
+    [
+     "icon",
+     0.013
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/ny_medicaid_pharmacy_policy/p009_f0.png",
+   "size_px": [
+    294,
+    69
+   ],
+   "doc_id": "ny_medicaid_pharmacy_policy",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "ny_medicaid_pharmacy_policy:p10:f0",
+   "page": 10,
+   "bbox": [
+    414.4,
+    41.0,
+    561.4,
+    75.7
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.892
+    ],
+    [
+     "signature",
+     0.047
+    ],
+    [
+     "icon",
+     0.013
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/ny_medicaid_pharmacy_policy/p010_f0.png",
+   "size_px": [
+    294,
+    69
+   ],
+   "doc_id": "ny_medicaid_pharmacy_policy",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "ny_medicaid_pharmacy_policy:p11:f0",
+   "page": 11,
+   "bbox": [
+    414.3,
+    41.0,
+    561.4,
+    75.7
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.892
+    ],
+    [
+     "signature",
+     0.047
+    ],
+    [
+     "icon",
+     0.013
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/ny_medicaid_pharmacy_policy/p011_f0.png",
+   "size_px": [
+    294,
+    69
+   ],
+   "doc_id": "ny_medicaid_pharmacy_policy",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "ny_medicaid_pharmacy_policy:p12:f0",
+   "page": 12,
+   "bbox": [
+    414.5,
+    41.1,
+    561.4,
+    75.8
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.891
+    ],
+    [
+     "signature",
+     0.043
+    ],
+    [
+     "icon",
+     0.012
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/ny_medicaid_pharmacy_policy/p012_f0.png",
+   "size_px": [
+    294,
+    70
+   ],
+   "doc_id": "ny_medicaid_pharmacy_policy",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "ny_medicaid_pharmacy_policy:p13:f0",
+   "page": 13,
+   "bbox": [
+    414.5,
+    41.0,
+    561.3,
+    75.6
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.892
+    ],
+    [
+     "signature",
+     0.047
+    ],
+    [
+     "icon",
+     0.013
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/ny_medicaid_pharmacy_policy/p013_f0.png",
+   "size_px": [
+    294,
+    69
+   ],
+   "doc_id": "ny_medicaid_pharmacy_policy",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "ny_medicaid_pharmacy_policy:p14:f0",
+   "page": 14,
+   "bbox": [
+    414.4,
+    41.0,
+    561.4,
+    75.6
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.892
+    ],
+    [
+     "signature",
+     0.047
+    ],
+    [
+     "icon",
+     0.013
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/ny_medicaid_pharmacy_policy/p014_f0.png",
+   "size_px": [
+    294,
+    69
+   ],
+   "doc_id": "ny_medicaid_pharmacy_policy",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "ny_medicaid_pharmacy_policy:p15:f0",
+   "page": 15,
+   "bbox": [
+    414.4,
+    41.1,
+    561.3,
+    75.6
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.892
+    ],
+    [
+     "signature",
+     0.047
+    ],
+    [
+     "icon",
+     0.013
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/ny_medicaid_pharmacy_policy/p015_f0.png",
+   "size_px": [
+    294,
+    69
+   ],
+   "doc_id": "ny_medicaid_pharmacy_policy",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "ny_medicaid_pharmacy_policy:p16:f0",
+   "page": 16,
+   "bbox": [
+    414.4,
+    41.0,
+    561.2,
+    75.5
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.852
+    ],
+    [
+     "signature",
+     0.057
+    ],
+    [
+     "icon",
+     0.019
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/ny_medicaid_pharmacy_policy/p016_f0.png",
+   "size_px": [
+    293,
+    69
+   ],
+   "doc_id": "ny_medicaid_pharmacy_policy",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "ny_medicaid_pharmacy_policy:p17:f0",
+   "page": 17,
+   "bbox": [
+    414.5,
+    41.0,
+    561.4,
+    75.6
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.892
+    ],
+    [
+     "signature",
+     0.047
+    ],
+    [
+     "icon",
+     0.013
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/ny_medicaid_pharmacy_policy/p017_f0.png",
+   "size_px": [
+    294,
+    69
+   ],
+   "doc_id": "ny_medicaid_pharmacy_policy",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "ny_medicaid_pharmacy_policy:p18:f0",
+   "page": 18,
+   "bbox": [
+    414.4,
+    41.0,
+    561.3,
+    75.5
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.892
+    ],
+    [
+     "signature",
+     0.047
+    ],
+    [
+     "icon",
+     0.013
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/ny_medicaid_pharmacy_policy/p018_f0.png",
+   "size_px": [
+    294,
+    69
+   ],
+   "doc_id": "ny_medicaid_pharmacy_policy",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "ny_medicaid_pharmacy_policy:p19:f0",
+   "page": 19,
+   "bbox": [
+    414.5,
+    40.9,
+    561.4,
+    75.7
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.892
+    ],
+    [
+     "signature",
+     0.047
+    ],
+    [
+     "icon",
+     0.013
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/ny_medicaid_pharmacy_policy/p019_f0.png",
+   "size_px": [
+    294,
+    69
+   ],
+   "doc_id": "ny_medicaid_pharmacy_policy",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "ny_medicaid_pharmacy_policy:p20:f0",
+   "page": 20,
+   "bbox": [
+    414.5,
+    41.0,
+    561.3,
+    75.7
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.892
+    ],
+    [
+     "signature",
+     0.047
+    ],
+    [
+     "icon",
+     0.013
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/ny_medicaid_pharmacy_policy/p020_f0.png",
+   "size_px": [
+    294,
+    69
+   ],
+   "doc_id": "ny_medicaid_pharmacy_policy",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "ny_medicaid_pharmacy_policy:p21:f0",
+   "page": 21,
+   "bbox": [
+    414.4,
+    41.0,
+    561.3,
+    75.6
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.892
+    ],
+    [
+     "signature",
+     0.047
+    ],
+    [
+     "icon",
+     0.013
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/ny_medicaid_pharmacy_policy/p021_f0.png",
+   "size_px": [
+    294,
+    69
+   ],
+   "doc_id": "ny_medicaid_pharmacy_policy",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "ny_medicaid_pharmacy_policy:p22:f0",
+   "page": 22,
+   "bbox": [
+    414.4,
+    41.0,
+    561.4,
+    75.8
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.891
+    ],
+    [
+     "signature",
+     0.043
+    ],
+    [
+     "icon",
+     0.012
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/ny_medicaid_pharmacy_policy/p022_f0.png",
+   "size_px": [
+    294,
+    70
+   ],
+   "doc_id": "ny_medicaid_pharmacy_policy",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "ny_medicaid_pharmacy_policy:p23:f0",
+   "page": 23,
+   "bbox": [
+    414.5,
+    41.0,
+    561.3,
+    75.5
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.892
+    ],
+    [
+     "signature",
+     0.047
+    ],
+    [
+     "icon",
+     0.013
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/ny_medicaid_pharmacy_policy/p023_f0.png",
+   "size_px": [
+    294,
+    69
+   ],
+   "doc_id": "ny_medicaid_pharmacy_policy",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "ny_medicaid_pharmacy_policy:p24:f0",
+   "page": 24,
+   "bbox": [
+    414.5,
+    40.9,
+    561.4,
+    75.8
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.891
+    ],
+    [
+     "signature",
+     0.043
+    ],
+    [
+     "icon",
+     0.012
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/ny_medicaid_pharmacy_policy/p024_f0.png",
+   "size_px": [
+    294,
+    70
+   ],
+   "doc_id": "ny_medicaid_pharmacy_policy",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "ny_medicaid_pharmacy_policy:p25:f0",
+   "page": 25,
+   "bbox": [
+    414.4,
+    41.0,
+    561.4,
+    75.6
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.892
+    ],
+    [
+     "signature",
+     0.047
+    ],
+    [
+     "icon",
+     0.013
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/ny_medicaid_pharmacy_policy/p025_f0.png",
+   "size_px": [
+    294,
+    69
+   ],
+   "doc_id": "ny_medicaid_pharmacy_policy",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "ny_medicaid_pharmacy_policy:p26:f0",
+   "page": 26,
+   "bbox": [
+    414.4,
+    41.0,
+    561.4,
+    75.6
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.892
+    ],
+    [
+     "signature",
+     0.047
+    ],
+    [
+     "icon",
+     0.013
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/ny_medicaid_pharmacy_policy/p026_f0.png",
+   "size_px": [
+    294,
+    69
+   ],
+   "doc_id": "ny_medicaid_pharmacy_policy",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "ny_medicaid_pharmacy_policy:p27:f0",
+   "page": 27,
+   "bbox": [
+    414.4,
+    41.0,
+    561.3,
+    75.6
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.892
+    ],
+    [
+     "signature",
+     0.047
+    ],
+    [
+     "icon",
+     0.013
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/ny_medicaid_pharmacy_policy/p027_f0.png",
+   "size_px": [
+    294,
+    69
+   ],
+   "doc_id": "ny_medicaid_pharmacy_policy",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "ny_medicaid_pharmacy_policy:p28:f0",
+   "page": 28,
+   "bbox": [
+    414.4,
+    41.0,
+    561.4,
+    75.6
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.892
+    ],
+    [
+     "signature",
+     0.047
+    ],
+    [
+     "icon",
+     0.013
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/ny_medicaid_pharmacy_policy/p028_f0.png",
+   "size_px": [
+    294,
+    69
+   ],
+   "doc_id": "ny_medicaid_pharmacy_policy",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "ny_medicaid_pharmacy_policy:p29:f0",
+   "page": 29,
+   "bbox": [
+    414.4,
+    41.1,
+    561.3,
+    75.6
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.892
+    ],
+    [
+     "signature",
+     0.047
+    ],
+    [
+     "icon",
+     0.013
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/ny_medicaid_pharmacy_policy/p029_f0.png",
+   "size_px": [
+    294,
+    69
+   ],
+   "doc_id": "ny_medicaid_pharmacy_policy",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "ny_medicaid_pharmacy_policy:p30:f0",
+   "page": 30,
+   "bbox": [
+    414.4,
+    41.0,
+    561.3,
+    75.6
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.892
+    ],
+    [
+     "signature",
+     0.047
+    ],
+    [
+     "icon",
+     0.013
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/ny_medicaid_pharmacy_policy/p030_f0.png",
+   "size_px": [
+    294,
+    69
+   ],
+   "doc_id": "ny_medicaid_pharmacy_policy",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "ny_medicaid_pharmacy_policy:p31:f0",
+   "page": 31,
+   "bbox": [
+    414.4,
+    41.0,
+    561.3,
+    75.6
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.892
+    ],
+    [
+     "signature",
+     0.047
+    ],
+    [
+     "icon",
+     0.013
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/ny_medicaid_pharmacy_policy/p031_f0.png",
+   "size_px": [
+    294,
+    69
+   ],
+   "doc_id": "ny_medicaid_pharmacy_policy",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "ny_medicaid_pharmacy_policy:p32:f0",
+   "page": 32,
+   "bbox": [
+    414.5,
+    41.1,
+    561.3,
+    75.6
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.892
+    ],
+    [
+     "signature",
+     0.047
+    ],
+    [
+     "icon",
+     0.013
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/ny_medicaid_pharmacy_policy/p032_f0.png",
+   "size_px": [
+    294,
+    69
+   ],
+   "doc_id": "ny_medicaid_pharmacy_policy",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "ny_medicaid_pharmacy_policy:p33:f0",
+   "page": 33,
+   "bbox": [
+    414.4,
+    41.0,
+    561.3,
+    75.6
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.892
+    ],
+    [
+     "signature",
+     0.047
+    ],
+    [
+     "icon",
+     0.013
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/ny_medicaid_pharmacy_policy/p033_f0.png",
+   "size_px": [
+    294,
+    69
+   ],
+   "doc_id": "ny_medicaid_pharmacy_policy",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "ny_medicaid_pharmacy_policy:p34:f0",
+   "page": 34,
+   "bbox": [
+    414.4,
+    40.9,
+    561.4,
+    75.6
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.892
+    ],
+    [
+     "signature",
+     0.047
+    ],
+    [
+     "icon",
+     0.013
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/ny_medicaid_pharmacy_policy/p034_f0.png",
+   "size_px": [
+    294,
+    69
+   ],
+   "doc_id": "ny_medicaid_pharmacy_policy",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "ny_medicaid_pharmacy_policy:p35:f0",
+   "page": 35,
+   "bbox": [
+    414.4,
+    41.0,
+    561.3,
+    75.6
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.892
+    ],
+    [
+     "signature",
+     0.047
+    ],
+    [
+     "icon",
+     0.013
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/ny_medicaid_pharmacy_policy/p035_f0.png",
+   "size_px": [
+    294,
+    69
+   ],
+   "doc_id": "ny_medicaid_pharmacy_policy",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "ny_medicaid_pharmacy_policy:p36:f0",
+   "page": 36,
+   "bbox": [
+    414.4,
+    41.0,
+    561.4,
+    75.8
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.891
+    ],
+    [
+     "signature",
+     0.043
+    ],
+    [
+     "icon",
+     0.012
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/ny_medicaid_pharmacy_policy/p036_f0.png",
+   "size_px": [
+    294,
+    70
+   ],
+   "doc_id": "ny_medicaid_pharmacy_policy",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "ny_medicaid_pharmacy_policy:p37:f0",
+   "page": 37,
+   "bbox": [
+    414.4,
+    40.9,
+    561.5,
+    76.0
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.891
+    ],
+    [
+     "signature",
+     0.043
+    ],
+    [
+     "icon",
+     0.012
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/ny_medicaid_pharmacy_policy/p037_f0.png",
+   "size_px": [
+    294,
+    70
+   ],
+   "doc_id": "ny_medicaid_pharmacy_policy",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "ny_medicaid_pharmacy_policy:p38:f0",
+   "page": 38,
+   "bbox": [
+    414.5,
+    41.0,
+    561.3,
+    75.5
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.892
+    ],
+    [
+     "signature",
+     0.047
+    ],
+    [
+     "icon",
+     0.013
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/ny_medicaid_pharmacy_policy/p038_f0.png",
+   "size_px": [
+    294,
+    69
+   ],
+   "doc_id": "ny_medicaid_pharmacy_policy",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "ny_medicaid_pharmacy_policy:p39:f0",
+   "page": 39,
+   "bbox": [
+    414.5,
+    40.9,
+    561.2,
+    75.8
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.87
+    ],
+    [
+     "signature",
+     0.054
+    ],
+    [
+     "other",
+     0.014
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/ny_medicaid_pharmacy_policy/p039_f0.png",
+   "size_px": [
+    293,
+    70
+   ],
+   "doc_id": "ny_medicaid_pharmacy_policy",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "ny_medicaid_pharmacy_policy:p40:f0",
+   "page": 40,
+   "bbox": [
+    414.5,
+    41.0,
+    561.2,
+    75.8
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.87
+    ],
+    [
+     "signature",
+     0.054
+    ],
+    [
+     "other",
+     0.014
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/ny_medicaid_pharmacy_policy/p040_f0.png",
+   "size_px": [
+    293,
+    70
+   ],
+   "doc_id": "ny_medicaid_pharmacy_policy",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "ny_medicaid_pharmacy_policy:p41:f0",
+   "page": 41,
+   "bbox": [
+    414.5,
+    40.9,
+    561.3,
+    75.6
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.892
+    ],
+    [
+     "signature",
+     0.047
+    ],
+    [
+     "icon",
+     0.013
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/ny_medicaid_pharmacy_policy/p041_f0.png",
+   "size_px": [
+    294,
+    69
+   ],
+   "doc_id": "ny_medicaid_pharmacy_policy",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "ny_medicaid_pharmacy_policy:p42:f0",
+   "page": 42,
+   "bbox": [
+    414.4,
+    41.0,
+    561.4,
+    75.7
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.892
+    ],
+    [
+     "signature",
+     0.047
+    ],
+    [
+     "icon",
+     0.013
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/ny_medicaid_pharmacy_policy/p042_f0.png",
+   "size_px": [
+    294,
+    69
+   ],
+   "doc_id": "ny_medicaid_pharmacy_policy",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "ny_medicaid_pharmacy_policy:p43:f0",
+   "page": 43,
+   "bbox": [
+    414.4,
+    41.0,
+    561.3,
+    75.6
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.892
+    ],
+    [
+     "signature",
+     0.047
+    ],
+    [
+     "icon",
+     0.013
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/ny_medicaid_pharmacy_policy/p043_f0.png",
+   "size_px": [
+    294,
+    69
+   ],
+   "doc_id": "ny_medicaid_pharmacy_policy",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "ny_medicaid_pharmacy_policy:p44:f0",
+   "page": 44,
+   "bbox": [
+    414.4,
+    40.9,
+    561.4,
+    75.7
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.892
+    ],
+    [
+     "signature",
+     0.047
+    ],
+    [
+     "icon",
+     0.013
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/ny_medicaid_pharmacy_policy/p044_f0.png",
+   "size_px": [
+    294,
+    69
+   ],
+   "doc_id": "ny_medicaid_pharmacy_policy",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "ny_medicaid_pharmacy_policy:p45:f0",
+   "page": 45,
+   "bbox": [
+    414.4,
+    41.0,
+    561.4,
+    75.6
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.892
+    ],
+    [
+     "signature",
+     0.047
+    ],
+    [
+     "icon",
+     0.013
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/ny_medicaid_pharmacy_policy/p045_f0.png",
+   "size_px": [
+    294,
+    69
+   ],
+   "doc_id": "ny_medicaid_pharmacy_policy",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "ny_medicaid_pharmacy_policy:p46:f0",
+   "page": 46,
+   "bbox": [
+    414.3,
+    40.9,
+    561.4,
+    75.8
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.891
+    ],
+    [
+     "signature",
+     0.043
+    ],
+    [
+     "icon",
+     0.012
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/ny_medicaid_pharmacy_policy/p046_f0.png",
+   "size_px": [
+    294,
+    70
+   ],
+   "doc_id": "ny_medicaid_pharmacy_policy",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "ny_medicaid_pharmacy_policy:p47:f0",
+   "page": 47,
+   "bbox": [
+    414.3,
+    40.9,
+    561.4,
+    75.7
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.892
+    ],
+    [
+     "signature",
+     0.047
+    ],
+    [
+     "icon",
+     0.013
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/ny_medicaid_pharmacy_policy/p047_f0.png",
+   "size_px": [
+    294,
+    69
+   ],
+   "doc_id": "ny_medicaid_pharmacy_policy",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "ny_medicaid_pharmacy_policy:p48:f0",
+   "page": 48,
+   "bbox": [
+    414.4,
+    40.9,
+    561.4,
+    75.8
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.891
+    ],
+    [
+     "signature",
+     0.043
+    ],
+    [
+     "icon",
+     0.012
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/ny_medicaid_pharmacy_policy/p048_f0.png",
+   "size_px": [
+    294,
+    70
+   ],
+   "doc_id": "ny_medicaid_pharmacy_policy",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "ny_medicaid_pharmacy_policy:p49:f0",
+   "page": 49,
+   "bbox": [
+    414.3,
+    40.9,
+    561.4,
+    75.7
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.892
+    ],
+    [
+     "signature",
+     0.047
+    ],
+    [
+     "icon",
+     0.013
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/ny_medicaid_pharmacy_policy/p049_f0.png",
+   "size_px": [
+    294,
+    69
+   ],
+   "doc_id": "ny_medicaid_pharmacy_policy",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "ny_medicaid_pharmacy_policy:p50:f0",
+   "page": 50,
+   "bbox": [
+    414.4,
+    40.9,
+    561.5,
+    75.8
+   ],
+   "source": "docling",
+   "classes": [
+    [
+     "logo",
+     0.891
+    ],
+    [
+     "signature",
+     0.043
+    ],
+    [
+     "icon",
+     0.012
+    ]
+   ],
+   "caption": null,
+   "ocr_text": [],
+   "crop": "storage/figures/ny_medicaid_pharmacy_policy/p050_f0.png",
+   "size_px": [
+    294,
+    70
+   ],
+   "doc_id": "ny_medicaid_pharmacy_policy",
+   "decision": "decorative",
+   "decorative_reason": "docling class logo"
+  },
+  {
+   "figure_id": "ny_medicaid_pharmacy_policy:p2:f1",
+   "page": 2,
+   "bbox": [
+    415.8,
+    42.4,
+    560.5,
+    74.9
+   ],
+   "source": "pdf_image",
+   "classes": [],
+   "caption": null,
+   "ocr_text": [],
+   "crop": null,
+   "frac": 0.0097,
+   "size_px": [
+    470,
+    106
+   ],
+   "doc_id": "ny_medicaid_pharmacy_policy",
+   "decision": "decorative",
+   "decorative_reason": "pdf image covering 1.0% of the page"
+  }
+ ]
+}

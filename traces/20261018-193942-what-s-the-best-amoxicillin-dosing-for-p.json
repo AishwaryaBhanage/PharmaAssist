@@ -1,0 +1,617 @@
+{
+  "question": "What's the best amoxicillin dosing for pediatric ear infections?",
+  "request_id": "b758f46d-db49-4eb9-921f-10742d05965b",
+  "status": "no_answer",
+  "agent_status": "not_in_documents",
+  "assumption": null,
+  "answer": "No answer found in knowledge base",
+  "citations": [],
+  "conflicts_noted": [],
+  "flags": [
+    "no_answer_rule"
+  ],
+  "needs_review": true,
+  "words": {
+    "displayed": 6,
+    "rendered": 6
+  },
+  "answered_by": "gpt-5.5-2026-04-23",
+  "provider": "openai",
+  "model": "gpt-5.5-2026-04-23",
+  "fallback_used": false,
+  "timing_s": {
+    "total": 9.62,
+    "search": 0.605,
+    "read_page": 0,
+    "list_documents": 0,
+    "lookups": 0,
+    "model_calls": [
+      2.826,
+      6.188
+    ]
+  },
+  "lookups": 2,
+  "tokens": {
+    "input": 16311,
+    "output": 530,
+    "cache_read": 3072,
+    "cache_write": 0
+  },
+  "cost_usd": 0.098991,
+  "completeness": null,
+  "pages_seen": [
+    "ny_medicaid_pdl:p80",
+    "ny_medicaid_pdl:p81",
+    "ny_medicaid_pdl:p82",
+    "va_dod_cpg_opioids_2022:p100",
+    "va_dod_cpg_opioids_2022:p101",
+    "va_dod_cpg_opioids_2022:p109",
+    "va_dod_cpg_opioids_2022:p110",
+    "va_dod_cpg_opioids_2022:p111",
+    "va_dod_cpg_opioids_2022:p116",
+    "va_dod_cpg_opioids_2022:p117",
+    "va_dod_cpg_opioids_2022:p118",
+    "va_dod_cpg_opioids_2022:p119",
+    "va_dod_cpg_opioids_2022:p98",
+    "va_dod_cpg_opioids_2022:p99"
+  ],
+  "trace_id": null,
+  "started_at": "2026-10-18T23:39:42+00:00",
+  "config": {
+    "primary": "gpt-5.5",
+    "fallback": "claude-sonnet-5-5",
+    "effort": "medium",
+    "search": {
+      "mode": "hybrid",
+      "rrf_k": 60,
+      "fusion_depth": 100,
+      "return_parents": true,
+      "rerank": null
+    },
+    "max_tool_calls": 6,
+    "deadline_s": 25,
+    "search_k": 8,
+    "min_lookups": 1,
+    "completeness_pass": false,
+    "completeness_min_remaining_s": 8
+  },
+  "structured_lookups": true,
+  "context": {},
+  "model_answer": "Assuming VA clinical guidance: I can’t give a pediatric AOM amoxicillin dose from this document set. The retrieved evidence is unrelated—VA/DoD chronic-pain opioid dosing tables and NYRx dose-optimization policy pages—not pediatric otitis media or antibiotic dosing. So the specific best amoxicillin regimen, duration, max dose, or exceptions (e.g., recent beta-lactam use, conjunctivitis, allergy) are **not in the available documents**. Use your site’s pediatric/AOM reference or prescriber clarification rather than relying on this corpus.",
+  "model_citations": [
+    {
+      "doc_id": "va_dod_cpg_opioids_2022",
+      "page": 100,
+      "link": "https://www.healthquality.va.gov/guidelines/Pain/cot/VADoDOpioidsCPG.pdf#page=100",
+      "flag": null,
+      "locator": "va_dod_cpg_opioids_2022:p100"
+    },
+    {
+      "doc_id": "va_dod_cpg_opioids_2022",
+      "page": 117,
+      "link": "https://www.healthquality.va.gov/guidelines/Pain/cot/VADoDOpioidsCPG.pdf#page=117",
+      "flag": null,
+      "locator": "va_dod_cpg_opioids_2022:p117"
+    },
+    {
+      "doc_id": "ny_medicaid_pdl",
+      "page": 80,
+      "link": "https://newyork.fhsc.com/downloads/providers/NYRx_PDP_PDL.pdf#page=80",
+      "flag": null,
+      "locator": "ny_medicaid_pdl:p80"
+    }
+  ],
+  "first_submit": null,
+  "model_calls": [
+    {
+      "t_start": 0.0,
+      "duration_s": 2.826,
+      "requested_model": "gpt-5.5",
+      "served_model": "gpt-5.5-2026-04-23",
+      "provider": "openai",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 511,
+        "output": 164,
+        "cache_read": 1536,
+        "cache_write": 0
+      },
+      "cost_usd": 0.008243,
+      "response_id": "resp_098240ebcf98bcf6016ad558b5355c87d29efa0be17118c1e1",
+      "input_messages": [
+        {
+          "role": "user",
+          "text": "Today's date: 2026-10-18\n\nQuestion: What's the best amoxicillin dosing for pediatric ear infections?"
+        }
+      ],
+      "output": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "call_8igHb89ZXHlqjpl9VA4jcEIi",
+            "name": "search_documents",
+            "arguments": {
+              "query": "amoxicillin pediatric ear infection otitis media dosing children",
+              "program": "VA",
+              "k": 5
+            }
+          },
+          {
+            "id": "call_XtNzd1WnTvFC40NlcHWlsW3x",
+            "name": "search_documents",
+            "arguments": {
+              "query": "amoxicillin pediatric otitis media dosing children ear infections",
+              "k": 5
+            }
+          }
+        ]
+      }
+    },
+    {
+      "t_start": 3.431,
+      "duration_s": 6.188,
+      "requested_model": "gpt-5.5",
+      "served_model": "gpt-5.5-2026-04-23",
+      "provider": "openai",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 15800,
+        "output": 366,
+        "cache_read": 1536,
+        "cache_write": 0
+      },
+      "cost_usd": 0.090748,
+      "response_id": "resp_098240ebcf98bcf6016ad558b89e4c87d29ed8943cf6350359",
+      "input_messages": [
+        {
+          "role": "tool",
+          "tool_results": [
+            {
+              "call_id": "call_8igHb89ZXHlqjpl9VA4jcEIi",
+              "is_error": false,
+              "content": "[{\"doc_id\": \"va_dod_cpg_opioids_2022\", \"page\": 117, \"program\": \"VA\", \"authority\": \"advisory\", \"date\": \"2022-05\", \"text\": \"VA/DoD Clinical Practice Guideline for the Use of Opioids in the Management of Chronic Pain (Version 4.0) > Appendix D: Drug Tables > D.Methadone Dosing Guidance > c. Dosing Strategies\\n[p 117]\\nThe dosing recommendations listed below (in Table D-5) are provided to offer guidance on using methadone in the treatment of patients with chronic pain, particularly when converting from another opioid to methadone. The use of methadone for pain should be done in the context of a pain clinic or with assistance of local pain management experts, including healthcare providers or pharmacists, who have experience with methadone's use. If such resources are not readily available, other long-acting opioids should be considered (e.g., morphine sustained action [SA], or oxycodone SA).\\n[p 118]\\nVarious methadone dosing strategies have been employed (268, 282, 283) and methods are still evolving. Older, prospective studies found no evidence to support the superiority of one dosing strategy over another.(284-286) The lack of prospective and comparative studies concerning methadone dosing strategies highlights the need to carefully individualize the dosing regimen of methadone.\\nFor opioid tolerant patients, a number of different equianalgesic dose ratio tables can be used to determine the dose of methadone.(267, 286-290) This VA/DoD OT CPG includes one of the more conservative equianalgesic dose ratio tables as a reference for providers to discuss and/or consider (Table D-3).(289) Local subject matter experts may prefer, or be more familiar with, other accepted (evidence-based) equianalgesic dose ratio tables. No equianalgesic dose ratio table is considered superior and all have similar limitations. When converting to methadone, lower MEDDs have lower conversion ratios than higher MEDDs. As compared to lower MEDDs, higher MEDDs may convert to smaller methadone doses than one might expect. For example, 60 mg MEDD would be ~15 mg of methadone/day (a ratio of ~4:1); whereas 180 mg MEDD would be ~22.5 mg/day (a ratio of ~8:1). Methadone dose conversion is not a linear process. Furthermore, while the equianalgesic dose ratio tables account for cross-tolerance, (263) some subject matter experts feel the calculated methadone dose should be further decreased for incomplete crosstolerance, especially for patients on higher MEDDs.(273, 291)\\nTable D-5: Dosing Recommendations for Patients Receiving Codeine Preparations or No Previous Opioids (292, 293)\\n[Table: Table D-5: Dosing Recommendations for Patients Receiving Codeine Preparations or No Previous Opioids (292, 293)] (PDF page 118)\\nColumns: Dosing Strategy | Initial Methadone Dose | Increments | Comments\\nGradual titration (For CNCP and situations necessitating less frequent monitoring) | 2.5 mg every 12 hr or 8 hr | 2.5 mg every 12 hr or 8 hr, no more often than every 5 to 7 d | As a general rule, start low and go slow\\nFaster titration (For cancer pain and situations where frequent monitoring is possible) | 2.5-5 mg every 8 hr | 2.5 to 5 mg every 8 hr as often as every third day | As a general rule, start low and go slow\\nNote: All doses refer to oral administration\\nAbbreviations: CNCP: chronic non-cancer pain; d: day(s); hr: hour(s); mg: milligram(s)\\nTable D-6: Equianalgesic Dose Ratios (289, 291)\\n[Table: Table D-6: Equianalgesic Dose Ratios (289, 291)] (PDF page 118)\\nColumns: Morphine Dose (mg/d) | <30 | 31-99 | 100-299 | 300-499 | 500-999 | 1000-1200 | >1200\\nMorphine: Methadone | 2:1 | 4:1 | 8:1 | 12:1 | 15:1 | 20:1 | Consult\\nNote: The conversion ratio increases as the morphine equivalent dose increases (17, 265, 266, 286, 294)\\nAbbreviations: d: day(s); mg: milligram(s)\\nThe equianalgesic dose ratio is only one component of the process for appropriate dosing of methadone and other opioids. Once the dose is determined, there are two different methods to make the switch:"
+            },
+            {
+              "call_id": "call_XtNzd1WnTvFC40NlcHWlsW3x",
+              "is_error": false,
+              "content": "[{\"doc_id\": \"ny_medicaid_pdl\", \"page\": 81, \"program\": \"NY Medicaid\", \"authority\": \"binding\", \"date\": \"2026-09-14\", \"text\": \"NYRx Preferred Drug Program (PDP) Preferred Drug List > NYS Medicaid NYRx Dose Optimization Program > Anticonvulsants\\n[p 81]\\n[Table] (PDF page 81)\\nColumns: Brand Name | Dose Optimization Limitations | Dose Optimization Limitations | Dose Optimization Limitations\\nCENTRAL NERVOUS SYSTEM | CENTRAL NERVOUS SYSTEM | CENTRAL NERVOUS SYSTEM | CENTRAL NERVOUS SYSTEM\\nFycompa ® 4 mg, 6 mg | 1 daily | Tablet | \\ntopiramate ER 100 mg (Qudexy ® XR, Trokendi XR ® ) | 1 daily | Capsule | \\nLamictal XR ® 50 mg | 1 daily | Tablet | NYRx will allow two doses per day for up to 90 days for dose titration.\\nOxtellar XR ® 300 mg | 1 daily | Tablet | NYRx will allow two doses per day for up to 90 days for dose titration.\\nLyrica ® 25 mg, 50 mg, 75 mg, 100 mg, 150 mg, 200 mg | 3 daily | Capsule | Electronic bypass for diagnosis of seizure disorder identified in medical claims data. NYRx will allow two doses per day for up to 90 days for dose titration.\\nQudexy ® XR 100 mg | 1 daily | Capsule | Electronic bypass for diagnosis of seizure disorder identified in medical claims data. NYRx will allow two doses per day for up to 90 days for dose titration.\\nLyrica ® 225 mg and 300 mg | 2 daily | Capsule | Electronic bypass for diagnosis of seizure disorder identified in medical claims data. NYRx will allow two doses per day for up to 90 days for dose titration.\\nTrokendi XR ® 100 mg | 1 daily | Capsule | Electronic bypass for diagnosis of seizure disorder identified in medical claims data. NYRx will allow two doses per day for up to 90 days for dose titration.\\nAntiparkinson Agents | Antiparkinson Agents | Antiparkinson Agents | Antiparkinson Agents\\nAzilect ® 0.5 mg | 1 daily | Tablet | \\nAntipsychotics - Second Generation | Antipsychotics - Second Generation | Antipsychotics - Second Generation | Antipsychotics - Second Generation\\nAbilify ® 2 mg | 4 daily | Tablet | \\nAbilify ® 5 mg, 10 mg, 15 mg | 1 daily | Tablet | NYRx will allow two doses per day for up to 90 days for dose titration.\\naripiprazole 5 mg, 10 mg, 15 mg | 1 daily | Tablet | NYRx will allow two doses per day for up to 90 days for dose titration.\\nInvega ® 1.5 mg, 3 mg | 1 daily | Tablet | NYRx will allow two doses per day for up to 90 days for dose titration.\\nLatuda ® 20 mg, 40 mg, 60 mg | 1 daily | Tablet | NYRx will allow two doses per day for up to 90 days for dose titration.\\nolanzapine 5 mg, 10 mg | 1 daily | Tablet | NYRx will allow two doses per day for up to 90 days for dose titration.\\nolanzapine ODT 5 mg, 10 mg | 1 daily | Tablet | NYRx will allow two doses per day for up to 90 days for dose titration.\\npaliperidone er 1.5 mg, 3 mg | 1 daily | Tablet | NYRx will allow two doses per day for up to 90 days for dose titration.\\nquetiapine fumarate er 200 mg, 150 mg | 1 daily | Tablet | NYRx will allow two doses per day for up to 90 days for dose titration.\\nRexulti ® 0.25 mg, 0.5 mg, 1 mg, 2 mg | 1 daily | Tablet | NYRx will allow two doses per day for up to 90 days for dose titration.\\nSeroquel ® XR 150 mg, 200 mg | 1 daily | Tablet | NYRx will allow two doses per day for up to 90 days for dose titration.\\nVraylar ® 1.5 mg, 3 mg, 0.5 mg, 0.75 mg | 1 daily | Capsule | NYRx will allow two doses per day for up to 90 days for dose titration.\\nZyprexa ® Zydis 5 mg, 10 mg | 1 daily | Tablet | NYRx will allow two doses per day for up to 90 days for dose titration.\\nCNS Stimulants | CNS Stimulants | CNS Stimulants | CNS Stimulants\\nAdderall ® XR 5 mg, 10 mg, 15 mg | 1 daily | Capsule | \", \"pages\": [81], \"section\": \"NYS Medicaid NYRx Dose Optimization Program > Anticonvulsants\"}, {\"doc_id\": \"va_dod_cpg_opioids_2022\", \"page\": 100, \"program\": \"VA\", \"authority\": \"advisory\", \"date\": \"2022-05\", \"text\": \"VA/DoD Clinical Practice Guideline for the Use of Opioids in the Management of Chronic Pain (Version 4.0) > Appendix D: Drug Tables\\n[p 100]\\n[Table] (PDF page 100)\\nC"
+            }
+          ]
+        }
+      ],
+      "output": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "call_5XH5ekxZmIftorA3ahRjiR62",
+            "name": "submit_answer",
+            "arguments": {
+              "status": "not_in_documents",
+              "assumption": "Clinical question inferred as VA guidance because no program was named.",
+              "answer": "Assuming VA clinical guidance: I can’t give a pediatric AOM amoxicillin dose from this document set. The retrieved evidence is unrelated—VA/DoD chronic-pain opioid dosing tables and NYRx dose-optimization policy pages—not pediatric otitis media or antibiotic dosing. So the specific best amoxicillin regimen, duration, max dose, or exceptions (e.g., recent beta-lactam use, conjunctivitis, allergy) are **not in the available documents**. Use your site’s pediatric/AOM reference or prescriber clarification rather than relying on this corpus.",
+              "citations": [
+                {
+                  "doc_id": "va_dod_cpg_opioids_2022",
+                  "page": 100,
+                  "row": null
+                },
+                {
+                  "doc_id": "va_dod_cpg_opioids_2022",
+                  "page": 117,
+                  "row": null
+                },
+                {
+                  "doc_id": "ny_medicaid_pdl",
+                  "page": 80,
+                  "row": null
+                }
+              ],
+              "conflicts_noted": []
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "search_documents",
+      "input": {
+        "query": "amoxicillin pediatric ear infection otitis media dosing children",
+        "program": "VA",
+        "k": 5
+      },
+      "duration_s": 0.337,
+      "is_error": false,
+      "pages": [
+        "va_dod_cpg_opioids_2022:p100",
+        "va_dod_cpg_opioids_2022:p101",
+        "va_dod_cpg_opioids_2022:p109",
+        "va_dod_cpg_opioids_2022:p110",
+        "va_dod_cpg_opioids_2022:p111",
+        "va_dod_cpg_opioids_2022:p116",
+        "va_dod_cpg_opioids_2022:p117",
+        "va_dod_cpg_opioids_2022:p118",
+        "va_dod_cpg_opioids_2022:p119",
+        "va_dod_cpg_opioids_2022:p98",
+        "va_dod_cpg_opioids_2022:p99"
+      ],
+      "result": "[{\"doc_id\": \"va_dod_cpg_opioids_2022\", \"page\": 117, \"program\": \"VA\", \"authority\": \"advisory\", \"date\": \"2022-05\", \"text\": \"VA/DoD Clinical Practice Guideline for the Use of Opioids in the Management of Chronic Pain (Version 4.0) > Appendix D: Drug Tables > D.Methadone Dosing Guidance > c. Dosing Strategies\\n[p 117]\\nThe dosing recommendations listed below (in Table D-5) are provided to offer guidance on using methadone in the treatment of patients with chronic pain, particularly when converting from another opioid to methadone. The use of methadone for pain should be done in the context of a pain clinic or with assistance of local pain management experts, including healthcare providers or pharmacists, who have experience with methadone's use. If such resources are not readily available, other long-acting opioids should be considered (e.g., morphine sustained action [SA], or oxycodone SA).\\n[p 118]\\nVarious methadone dosing strategies have been employed (268, 282, 283) and methods are still evolving. Older, prospective studies found no evidence to support the superiority of one dosing strategy over another.(284-286) The lack of prospective and comparative studies concerning methadone dosing strategies highlights the need to carefully individualize the dosing regimen of methadone.\\nFor opioid tolerant patients, a number of different equianalgesic dose ratio tables can be used to determine the dose of methadone.(267, 286-290) This VA/DoD OT CPG includes one of the more conservative equianalgesic dose ratio tables as a reference for providers to discuss and/or consider (Table D-3).(289) Local subject matter experts may prefer, or be more familiar with, other accepted (evidence-based) equianalgesic dose ratio tables. No equianalgesic dose ratio table is considered superior and all have similar limitations. When converting to methadone, lower MEDDs have lower conversion ratios than higher MEDDs. As compared to lower MEDDs, higher MEDDs may convert to smaller methadone doses than one might expect. For example, 60 mg MEDD would be ~15 mg of methadone/day (a ratio of ~4:1); whereas 180 mg MEDD would be ~22.5 mg/day (a ratio of ~8:1). Methadone dose conversion is not a linear process. Furthermore, while the equianalgesic dose ratio tables account for cross-tolerance, (263) some subject matter experts feel the calculated methadone dose should be further decreased for incomplete crosstolerance, especially for patients on higher MEDDs.(273, 291)\\nTable D-5: Dosing Recommendations for Patients Receiving Codeine Preparations or No Previous Opioids (292, 293)\\n[Table: Table D-5: Dosing Recommendations for Patients Receiving Codeine Preparations or No Previous Opioids (292, 293)] (PDF page 118)\\nColumns: Dosing Strategy | Initial Methadone Dose | Increments | Comments\\nGradual titration (For CNCP and situations necessitating less frequent monitoring) | 2.5 mg every 12 hr or 8 hr | 2.5 mg every 12 hr or 8 hr, no more often than every 5 to 7 d | As a general rule, start low and go slow\\nFaster titration (For cancer pain and situations where frequent monitoring is possible) | 2.5-5 mg every 8 hr | 2.5 to 5 mg every 8 hr as often as every third day | As a general rule, start low and go slow\\nNote: All doses refer to oral administration\\nAbbreviations: CNCP: chronic non-cancer pain; d: day(s); hr: hour(s); mg: milligram(s)\\nTable D-6: Equianalgesic Dose Ratios (289, 291)\\n[Table: Table D-6: Equianalgesic Dose Ratios (289, 291)] (PDF page 118)\\nColumns: Morphine Dose (mg/d) | <30 | 31-99 | 100-299 | 300-499 | 500-999 | 1000-1200 | >1200\\nMorphine: Methadone | 2:1 | 4:1 | 8:1 | 12:1 | 15:1 | 20:1 | Consult\\nNote: The conversion ratio increases as the morphine equivalent dose increases (17, 265, 266, 286, 294)\\nAbbreviations: d: day(s); mg: milligram(s)\\nThe equianalgesic dose ratio is only one component of the process for appropriate dosing of methadone and other opioids. Once the dose is determined, there are two different methods to make the switch:",
+      "search": {
+        "original_query": "What's the best amoxicillin dosing for pediatric ear infections?",
+        "agent_query": "amoxicillin pediatric ear infection otitis media dosing children",
+        "executed": [
+          {
+            "source": "original",
+            "query": "What's the best amoxicillin dosing for pediatric ear infections?",
+            "program": "VA",
+            "k": 5,
+            "seconds": 0.336,
+            "cached": false,
+            "results": 5
+          },
+          {
+            "source": "agent",
+            "query": "amoxicillin pediatric ear infection otitis media dosing children",
+            "program": "VA",
+            "k": 5,
+            "seconds": 0.264,
+            "cached": false,
+            "results": 5
+          }
+        ],
+        "duplicates_merged": 4,
+        "returned": 6,
+        "from_both": 4,
+        "from_original_only": 1,
+        "from_agent_only": 1,
+        "provenance": [
+          {
+            "unit": "va_dod_cpg_opioids_2022:s89",
+            "found_by": {
+              "original": 1,
+              "agent": 2
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s77",
+            "found_by": {
+              "original": 3,
+              "agent": 1
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s88",
+            "found_by": {
+              "original": 2,
+              "agent": 4
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s76",
+            "found_by": {
+              "original": 4,
+              "agent": 3
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s82",
+            "found_by": {
+              "original": 5
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s83",
+            "found_by": {
+              "agent": 5
+            }
+          }
+        ],
+        "hits": [
+          {
+            "unit": "va_dod_cpg_opioids_2022:s89",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              117,
+              118,
+              119
+            ],
+            "ranks": {
+              "original": 1,
+              "agent": 2
+            },
+            "scores": {
+              "original": 0.0295,
+              "agent": 0.028
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s77",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              100,
+              101
+            ],
+            "ranks": {
+              "original": 3,
+              "agent": 1
+            },
+            "scores": {
+              "original": 0.0288,
+              "agent": 0.0291
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s88",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              116,
+              117
+            ],
+            "ranks": {
+              "original": 2,
+              "agent": 4
+            },
+            "scores": {
+              "original": 0.0292,
+              "agent": 0.0255
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s76",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              98,
+              99
+            ],
+            "ranks": {
+              "original": 4,
+              "agent": 3
+            },
+            "scores": {
+              "original": 0.0255,
+              "agent": 0.0263
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s82",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              109
+            ],
+            "ranks": {
+              "original": 5
+            },
+            "scores": {
+              "original": 0.0254
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s83",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              110,
+              111
+            ],
+            "ranks": {
+              "agent": 5
+            },
+            "scores": {
+              "agent": 0.0247
+            }
+          }
+        ]
+      },
+      "t_start": 2.826
+    },
+    {
+      "name": "search_documents",
+      "input": {
+        "query": "amoxicillin pediatric otitis media dosing children ear infections",
+        "k": 5
+      },
+      "duration_s": 0.268,
+      "is_error": false,
+      "pages": [
+        "ny_medicaid_pdl:p80",
+        "ny_medicaid_pdl:p81",
+        "ny_medicaid_pdl:p82",
+        "va_dod_cpg_opioids_2022:p100",
+        "va_dod_cpg_opioids_2022:p101",
+        "va_dod_cpg_opioids_2022:p116",
+        "va_dod_cpg_opioids_2022:p117",
+        "va_dod_cpg_opioids_2022:p118",
+        "va_dod_cpg_opioids_2022:p119"
+      ],
+      "result": "[{\"doc_id\": \"ny_medicaid_pdl\", \"page\": 81, \"program\": \"NY Medicaid\", \"authority\": \"binding\", \"date\": \"2026-09-14\", \"text\": \"NYRx Preferred Drug Program (PDP) Preferred Drug List > NYS Medicaid NYRx Dose Optimization Program > Anticonvulsants\\n[p 81]\\n[Table] (PDF page 81)\\nColumns: Brand Name | Dose Optimization Limitations | Dose Optimization Limitations | Dose Optimization Limitations\\nCENTRAL NERVOUS SYSTEM | CENTRAL NERVOUS SYSTEM | CENTRAL NERVOUS SYSTEM | CENTRAL NERVOUS SYSTEM\\nFycompa ® 4 mg, 6 mg | 1 daily | Tablet | \\ntopiramate ER 100 mg (Qudexy ® XR, Trokendi XR ® ) | 1 daily | Capsule | \\nLamictal XR ® 50 mg | 1 daily | Tablet | NYRx will allow two doses per day for up to 90 days for dose titration.\\nOxtellar XR ® 300 mg | 1 daily | Tablet | NYRx will allow two doses per day for up to 90 days for dose titration.\\nLyrica ® 25 mg, 50 mg, 75 mg, 100 mg, 150 mg, 200 mg | 3 daily | Capsule | Electronic bypass for diagnosis of seizure disorder identified in medical claims data. NYRx will allow two doses per day for up to 90 days for dose titration.\\nQudexy ® XR 100 mg | 1 daily | Capsule | Electronic bypass for diagnosis of seizure disorder identified in medical claims data. NYRx will allow two doses per day for up to 90 days for dose titration.\\nLyrica ® 225 mg and 300 mg | 2 daily | Capsule | Electronic bypass for diagnosis of seizure disorder identified in medical claims data. NYRx will allow two doses per day for up to 90 days for dose titration.\\nTrokendi XR ® 100 mg | 1 daily | Capsule | Electronic bypass for diagnosis of seizure disorder identified in medical claims data. NYRx will allow two doses per day for up to 90 days for dose titration.\\nAntiparkinson Agents | Antiparkinson Agents | Antiparkinson Agents | Antiparkinson Agents\\nAzilect ® 0.5 mg | 1 daily | Tablet | \\nAntipsychotics - Second Generation | Antipsychotics - Second Generation | Antipsychotics - Second Generation | Antipsychotics - Second Generation\\nAbilify ® 2 mg | 4 daily | Tablet | \\nAbilify ® 5 mg, 10 mg, 15 mg | 1 daily | Tablet | NYRx will allow two doses per day for up to 90 days for dose titration.\\naripiprazole 5 mg, 10 mg, 15 mg | 1 daily | Tablet | NYRx will allow two doses per day for up to 90 days for dose titration.\\nInvega ® 1.5 mg, 3 mg | 1 daily | Tablet | NYRx will allow two doses per day for up to 90 days for dose titration.\\nLatuda ® 20 mg, 40 mg, 60 mg | 1 daily | Tablet | NYRx will allow two doses per day for up to 90 days for dose titration.\\nolanzapine 5 mg, 10 mg | 1 daily | Tablet | NYRx will allow two doses per day for up to 90 days for dose titration.\\nolanzapine ODT 5 mg, 10 mg | 1 daily | Tablet | NYRx will allow two doses per day for up to 90 days for dose titration.\\npaliperidone er 1.5 mg, 3 mg | 1 daily | Tablet | NYRx will allow two doses per day for up to 90 days for dose titration.\\nquetiapine fumarate er 200 mg, 150 mg | 1 daily | Tablet | NYRx will allow two doses per day for up to 90 days for dose titration.\\nRexulti ® 0.25 mg, 0.5 mg, 1 mg, 2 mg | 1 daily | Tablet | NYRx will allow two doses per day for up to 90 days for dose titration.\\nSeroquel ® XR 150 mg, 200 mg | 1 daily | Tablet | NYRx will allow two doses per day for up to 90 days for dose titration.\\nVraylar ® 1.5 mg, 3 mg, 0.5 mg, 0.75 mg | 1 daily | Capsule | NYRx will allow two doses per day for up to 90 days for dose titration.\\nZyprexa ® Zydis 5 mg, 10 mg | 1 daily | Tablet | NYRx will allow two doses per day for up to 90 days for dose titration.\\nCNS Stimulants | CNS Stimulants | CNS Stimulants | CNS Stimulants\\nAdderall ® XR 5 mg, 10 mg, 15 mg | 1 daily | Capsule | \", \"pages\": [81], \"section\": \"NYS Medicaid NYRx Dose Optimization Program > Anticonvulsants\"}, {\"doc_id\": \"va_dod_cpg_opioids_2022\", \"page\": 100, \"program\": \"VA\", \"authority\": \"advisory\", \"date\": \"2022-05\", \"text\": \"VA/DoD Clinical Practice Guideline for the Use of Opioids in the Management of Chronic Pain (Version 4.0) > Appendix D: Drug Tables\\n[p 100]\\n[Table] (PDF page 100)\\nC",
+      "search": {
+        "original_query": "What's the best amoxicillin dosing for pediatric ear infections?",
+        "agent_query": "amoxicillin pediatric otitis media dosing children ear infections",
+        "executed": [
+          {
+            "source": "original",
+            "query": "What's the best amoxicillin dosing for pediatric ear infections?",
+            "program": null,
+            "k": 5,
+            "seconds": 0.267,
+            "cached": false,
+            "results": 5
+          },
+          {
+            "source": "agent",
+            "query": "amoxicillin pediatric otitis media dosing children ear infections",
+            "program": null,
+            "k": 5,
+            "seconds": 0.255,
+            "cached": false,
+            "results": 5
+          }
+        ],
+        "duplicates_merged": 4,
+        "returned": 6,
+        "from_both": 4,
+        "from_original_only": 1,
+        "from_agent_only": 1,
+        "provenance": [
+          {
+            "unit": "ny_medicaid_pdl:s138",
+            "found_by": {
+              "original": 4,
+              "agent": 1
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s77",
+            "found_by": {
+              "original": 3,
+              "agent": 2
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s89",
+            "found_by": {
+              "original": 1,
+              "agent": 5
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s136",
+            "found_by": {
+              "original": 5,
+              "agent": 3
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s88",
+            "found_by": {
+              "original": 2
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s139",
+            "found_by": {
+              "agent": 4
+            }
+          }
+        ],
+        "hits": [
+          {
+            "unit": "ny_medicaid_pdl:s138",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              81
+            ],
+            "ranks": {
+              "original": 4,
+              "agent": 1
+            },
+            "scores": {
+              "original": 0.0267,
+              "agent": 0.0308
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s77",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              100,
+              101
+            ],
+            "ranks": {
+              "original": 3,
+              "agent": 2
+            },
+            "scores": {
+              "original": 0.0269,
+              "agent": 0.0266
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s89",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              117,
+              118,
+              119
+            ],
+            "ranks": {
+              "original": 1,
+              "agent": 5
+            },
+            "scores": {
+              "original": 0.0273,
+              "agent": 0.0233
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s136",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              80
+            ],
+            "ranks": {
+              "original": 5,
+              "agent": 3
+            },
+            "scores": {
+              "original": 0.0247,
+              "agent": 0.0258
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s88",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              116,
+              117
+            ],
+            "ranks": {
+              "original": 2
+            },
+            "scores": {
+              "original": 0.0272
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s139",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              82
+            ],
+            "ranks": {
+              "agent": 4
+            },
+            "scores": {
+              "agent": 0.0241
+            }
+          }
+        ]
+      },
+      "t_start": 3.163
+    }
+  ],
+  "cited_evidence": {
+    "va_dod_cpg_opioids_2022:p100": "va_dod_cpg_opioids_2022 (VA, advisory, 2022-05)\nVA/DoD Clinical Practice Guideline for the Use of Opioids in the Management of Chronic Pain (Version 4.0) > Appendix D: Drug Tables\n[p 100]\n[Table] (PDF page 100)\nColumns: Short-acting Opioids a | Initial Oral Dosage (in opioid-naïve) | Additional Dosage Information | Timing | Dosing In Special Populations | Other Considerations\nOxycodone (alone or in combination with APAP or ASA) · Single-agent oxycodone available as oral solution 5 mg/5 ml, 20 mg/1 ml, and oral tablet 5, 10, 15, 20, and 30 mg · Combination products vary in oxycodone content, 2.5 to 10 mg per dose unit | · 5 to 15 mg every 4 to 6 hr · Initial dose based upon oxycodone component · Maximum dose based upon non- opioid component | · For combination products, maximum dose is limited by APAP or ASA content (4000 mg/d for both; 2000 mg/d APAP in chronic alcoholics or patients with hepatic impairment) · There is no optimal or maximum dose of oxycodone; patients on LOT are likely to become tolerant d and require doses higher than the usual dosage range to maintain the desired effect | · Analgesic Onset (min): 10 to 15 · Peak (min): 30 to 60 · Duration (hr): 3 to 6 · t½ (hr): 3.2 to ~4 | · Elderly or debilitated: Reduce dosage · Hepatic / Renal: Use with caution; consider reducing dose and increasing frequency of dosing | · Conversion to the active metabolite, oxymorphone (< 15% plasma concentration), may be decreased in patients with decreased CYP-2D6 activity (due to poor CYP-2D6 metabolism or CYP-2D6 inhibiting drugs b ) · Higher peak plasma oxycodone (50%) and noroxycodone (20%), higher AUC for oxycodone (60%), noroxycodone (50%), and oxymorphone (40%) in patients with CrCl < 60 ml/min · Higher oxycodone peak plasma concentration (50%) and AUC values (95%) in mild to moderate hepatic impairment; oxymorphone peak plasma concentration and AUC values are lower by 30% and 40%, respectively\nOxymorphone · Available as 5 or 10 mg tablets and 1mg/ml solution for injection | · 5 to 10 mg every 4 to 6 hr | · There is no optimal or maximum dose of oxymorphone; patients on LOT are likely to become tolerant and require doses higher than the usual dosage range to maintain the desired effect | · Analgesic Onset (min): 30 to 45 · Peak (min): N/A · Duration (hr): 4 · t½ (hr): 7 to 0 | · Elderly or debilitated: Use with caution and start at low end of dosing range; levels are increased 40% in patients ≥65 years | · Food: When taken orally with a high-fat meal, food has been shown to increase peak levels of oxymorphone immediate- release are 38 to 50% greater; must be taken on an empty stomach at least 1 hr before or 2 hr after a meal\n[p 101]\n[Table] (PDF page 101)\nColumns: Short-acting Opioids a | Initial Oral Dosage (in opioid-naïve) | Additional Dosage Information | Timing | Dosing In Special Populations | Other Considerations\nOxymorphone (cont.) |  |  |  | · Hepatic dysfunction ¨ Mild hepatic impairment: Use cautiously, start at low end of dosing range ¨ Moderate and severe hepatic impairment: Contraindicated · Renal dysfunction: Bioavailability is increased 57 - 65% in moderate and severe impairment; start at lower doses and adjust slowly | · Must NOT be taken concomitantly with alcohol; alcohol (240 ml of 4% to 40% ethanol) can cause highly variable effects on peak drug levels, ranging from a decrease of 50% to an increase of 270% (demonstrated with ER oxymorphone)\nTapentadol · Available as 50, 75, or 100 mg tablets | · 50 mg every 4 to 6 hr · For diabetic peripheral neuropathy (DPN): 50 mg every 12 hrs | · Subsequent dose is 50, 75, or 100 mg every 4 to 6 hr, adjusted to analgesia and tolerability · Second dose may be given 1 hr after the first dose if necessary · Max recommended dose: 700 mg on first day, 600 mg on subsequent days · Use tapentadol only under careful medical supervision at lowest effective dose · Patients on LOT are likely to become tolerant d and require doses higher than the usual dosage range to maintain the desired effect | · Analgesic Onset (min): N/A (rapid) · Peak (min): 60 · Duration (hr): 4 to 6 · t½ (hr): ~4 | · Elderly: Consider starting at the lowest recommended dose · Hepatic dysfunction: ¨ Mild hepatic impairment: No dosage adjustment ¨ Moderate hepatic impairment: Start at 50 mg and give subsequent doses at least 8 hr apart (max. 3 doses in 24 hr) · Severe hepatic impairment: Use is not recommended · Renal dysfunction: No dosage adjustment for mild or moderate renal impairment; not recommended in severe renal impairment (CrCl < 30 ml/min) | · Must NOT be taken concomitantly with alcohol which can increase serum tapentadol concentration · Food: When administered after a high fat/calorie meal, the AUC and Cmax increased by 25% and 16% respectively; management: may administer without regards to meals · If used in combination with other CNS depressants, consider dose reduction of one or both agents · Use with or within 14 days of MAOIs is contraindicated · Monitor for signs and symptoms of serotonin syndrome when used in combination with serotonergic agents",
+    "va_dod_cpg_opioids_2022:p117": "va_dod_cpg_opioids_2022 (VA, advisory, 2022-05)\nVA/DoD Clinical Practice Guideline for the Use of Opioids in the Management of Chronic Pain (Version 4.0) > Appendix D: Drug Tables > D.Methadone Dosing Guidance > c. Dosing Strategies\n[p 117]\nThe dosing recommendations listed below (in Table D-5) are provided to offer guidance on using methadone in the treatment of patients with chronic pain, particularly when converting from another opioid to methadone. The use of methadone for pain should be done in the context of a pain clinic or with assistance of local pain management experts, including healthcare providers or pharmacists, who have experience with methadone's use. If such resources are not readily available, other long-acting opioids should be considered (e.g., morphine sustained action [SA], or oxycodone SA).\n[p 118]\nVarious methadone dosing strategies have been employed (268, 282, 283) and methods are still evolving. Older, prospective studies found no evidence to support the superiority of one dosing strategy over another.(284-286) The lack of prospective and comparative studies concerning methadone dosing strategies highlights the need to carefully individualize the dosing regimen of methadone.\nFor opioid tolerant patients, a number of different equianalgesic dose ratio tables can be used to determine the dose of methadone.(267, 286-290) This VA/DoD OT CPG includes one of the more conservative equianalgesic dose ratio tables as a reference for providers to discuss and/or consider (Table D-3).(289) Local subject matter experts may prefer, or be more familiar with, other accepted (evidence-based) equianalgesic dose ratio tables. No equianalgesic dose ratio table is considered superior and all have similar limitations. When converting to methadone, lower MEDDs have lower conversion ratios than higher MEDDs. As compared to lower MEDDs, higher MEDDs may convert to smaller methadone doses than one might expect. For example, 60 mg MEDD would be ~15 mg of methadone/day (a ratio of ~4:1); whereas 180 mg MEDD would be ~22.5 mg/day (a ratio of ~8:1). Methadone dose conversion is not a linear process. Furthermore, while the equianalgesic dose ratio tables account for cross-tolerance, (263) some subject matter experts feel the calculated methadone dose should be further decreased for incomplete crosstolerance, especially for patients on higher MEDDs.(273, 291)\nTable D-5: Dosing Recommendations for Patients Receiving Codeine Preparations or No Previous Opioids (292, 293)\n[Table: Table D-5: Dosing Recommendations for Patients Receiving Codeine Preparations or No Previous Opioids (292, 293)] (PDF page 118)\nColumns: Dosing Strategy | Initial Methadone Dose | Increments | Comments\nGradual titration (For CNCP and situations necessitating less frequent monitoring) | 2.5 mg every 12 hr or 8 hr | 2.5 mg every 12 hr or 8 hr, no more often than every 5 to 7 d | As a general rule, start low and go slow\nFaster titration (For cancer pain and situations where frequent monitoring is possible) | 2.5-5 mg every 8 hr | 2.5 to 5 mg every 8 hr as often as every third day | As a general rule, start low and go slow\nNote: All doses refer to oral administration\nAbbreviations: CNCP: chronic non-cancer pain; d: day(s); hr: hour(s); mg: milligram(s)\nTable D-6: Equianalgesic Dose Ratios (289, 291)\n[Table: Table D-6: Equianalgesic Dose Ratios (289, 291)] (PDF page 118)\nColumns: Morphine Dose (mg/d) | <30 | 31-99 | 100-299 | 300-499 | 500-999 | 1000-1200 | >1200\nMorphine: Methadone | 2:1 | 4:1 | 8:1 | 12:1 | 15:1 | 20:1 | Consult\nNote: The conversion ratio increases as the morphine equivalent dose increases (17, 265, 266, 286, 294)\nAbbreviations: d: day(s); mg: milligram(s)\nThe equianalgesic dose ratio is only one component of the process for appropriate dosing of methadone and other opioids. Once the dose is determined, there are two different methods to make the switch: a rapid conversion method and a stepwise/phased conversion. Again, no one conversion method has been determined to be superior to the others.\n[p 119]\nFor rapid conversion, the previous opioid is discontinued and the calculated methadone dose is started on day one.\nFor the stepwise/phased conversion, the dose of the previous opioid is decreased by 1/3 and replaced with 1/3 of the calculated methadone dose (given in three divided doses). Then the previous opioid dose is decreased by an additional 1/3 and the methadone dose is increased by 1/3. Finally, the remaining 1/3 of the previous opioid dose is discontinued and the methadone dose is increased to the initial calculated dose. This can be done over several days or weeks.(263, 295)\nFor breakthrough pain, a short-acting opioid preparation (e.g., acetaminophen with hydrocodone, oxycodone with or without acetaminophen, or immediate-release morphine) may be used until steady state is achieved (i.e., 5-7 days). As-needed methadone has also been used in a palliative care setting;(268, 282, 284) however, it is generally discouraged to avoid drug accumulation. It is important to note that use of breakthrough pain medications in patients with CNCP is controversial. If opioid medications for breakthrough pain are indicated, following titration to a stable methadone dose in CNCP patients, they should be used sparingly.(285)\n\nva_dod_cpg_opioids_2022 (VA, advisory, 2022-05)\nVA/DoD Clinical Practice Guideline for the Use of Opioids in the Management of Chronic Pain (Version 4.0) > Appendix D: Drug Tables > D.Methadone Dosing Guidance > b. Overview\n[p 116]\nMethadone is indicated for persistent, moderate-to-severe chronic pain in patients requiring continuous, around-the-clock opioid administration over an extended time. Methadone's pharmacokinetic properties are complex and incompletely documented.(245, 246) It has a long elimination half-life that has wide interpatient variability (mean or median half-life, depending on subject type, ranges from 3-128 hr) (247-259) and does not reflect duration of analgesia.(256, 260) I",
+    "ny_medicaid_pdl:p80": "ny_medicaid_pdl (NY Medicaid, binding, 2026-09-14)\nNYRx Preferred Drug Program (PDP) Preferred Drug List > NYS Medicaid NYRx Dose Optimization Program\n[p 80]\nOn November 14, 2013, the Medicaid NYRx program instituted a Dose Optimization initiative. Dose optimization can reduce prescription costs by reducing the number of pills a patient needs to take each day. The Department has identified drugs to be included in this program, the majority of which have FDA approval for once-a-day dosing, have multiple strengths available in correlating increments at similar costs and are currently being utilized above the recommended dosing frequency. Prior authorization will be required to obtain the following medication beyond the following limits:\nDose Optimization Chart\n[Table] (PDF page 80)\nColumns: Brand Name | Dose Optimization Limitations | Dose Optimization Limitations | Dose Optimization Limitations / CARDIOVASCULAR | CARDIOVASCULAR | CARDIOVASCULAR | CARDIOVASCULAR / Angiotensin Receptor Blockers (ARBs) | Angiotensin Receptor Blockers (ARBs) | Angiotensin Receptor Blockers (ARBs) | Angiotensin Receptor Blockers (ARBs)\nBenicar ® 20 mg | 1 daily | Tablet | \nMicardis ® 20 mg, 40 mg | 1 daily | Tablet | \nDiovan ® 40 mg, 80 mg, 160 mg | 1 daily | Tablet | \nAntiarrhythmics | Antiarrhythmics | Antiarrhythmics | Antiarrhythmics\nAmiodarone 100 mg | 1 daily | Tablet | NYRx will allow two doses per day for up to 90 days for dose titration.\nARBs Combinations | ARBs Combinations | ARBs Combinations | ARBs Combinations\nExforge ® 5-160mg | 1 daily | Tablet | \nARBs/Diuretics | ARBs/Diuretics | ARBs/Diuretics | ARBs/Diuretics\nBenicar ® HCT 20-12.5 mg | 1 daily | Tablet | \nDiovan ® HCT 80-12.5 mg, 160-12.5 mg | 1 daily | Tablet | \nEdarbyclor ® 40-12.5 mg | 1 daily | Tablet | \nMicardis ® HCT 40-12.5 mg, 80-12.5 mg | 1 daily | Tablet | \nBeta Blockers | Beta Blockers | Beta Blockers | Beta Blockers\nBystolic ® 2.5 mg, 5 mg, 10 mg | 1 daily | Tablet | \nnadolol 40 mg | 1 daily | Tablet | \nToprol ® XL 25 mg, 50 mg, 100 mg | 1 daily | Tablet | "
+  },
+  "cited_evidence_parts": {
+    "va_dod_cpg_opioids_2022:p100": [
+      "va_dod_cpg_opioids_2022 (VA, advisory, 2022-05)\nVA/DoD Clinical Practice Guideline for the Use of Opioids in the Management of Chronic Pain (Version 4.0) > Appendix D: Drug Tables\n[p 100]\n[Table] (PDF page 100)\nColumns: Short-acting Opioids a | Initial Oral Dosage (in opioid-naïve) | Additional Dosage Information | Timing | Dosing In Special Populations | Other Considerations\nOxycodone (alone or in combination with APAP or ASA) · Single-agent oxycodone available as oral solution 5 mg/5 ml, 20 mg/1 ml, and oral tablet 5, 10, 15, 20, and 30 mg · Combination products vary in oxycodone content, 2.5 to 10 mg per dose unit | · 5 to 15 mg every 4 to 6 hr · Initial dose based upon oxycodone component · Maximum dose based upon non- opioid component | · For combination products, maximum dose is limited by APAP or ASA content (4000 mg/d for both; 2000 mg/d APAP in chronic alcoholics or patients with hepatic impairment) · There is no optimal or maximum dose of oxycodone; patients on LOT are likely to become tolerant d and require doses higher than the usual dosage range to maintain the desired effect | · Analgesic Onset (min): 10 to 15 · Peak (min): 30 to 60 · Duration (hr): 3 to 6 · t½ (hr): 3.2 to ~4 | · Elderly or debilitated: Reduce dosage · Hepatic / Renal: Use with caution; consider reducing dose and increasing frequency of dosing | · Conversion to the active metabolite, oxymorphone (< 15% plasma concentration), may be decreased in patients with decreased CYP-2D6 activity (due to poor CYP-2D6 metabolism or CYP-2D6 inhibiting drugs b ) · Higher peak plasma oxycodone (50%) and noroxycodone (20%), higher AUC for oxycodone (60%), noroxycodone (50%), and oxymorphone (40%) in patients with CrCl < 60 ml/min · Higher oxycodone peak plasma concentration (50%) and AUC values (95%) in mild to moderate hepatic impairment; oxymorphone peak plasma concentration and AUC values are lower by 30% and 40%, respectively\nOxymorphone · Available as 5 or 10 mg tablets and 1mg/ml solution for injection | · 5 to 10 mg every 4 to 6 hr | · There is no optimal or maximum dose of oxymorphone; patients on LOT are likely to become tolerant and require doses higher than the usual dosage range to maintain the desired effect | · Analgesic Onset (min): 30 to 45 · Peak (min): N/A · Duration (hr): 4 · t½ (hr): 7 to 0 | · Elderly or debilitated: Use with caution and start at low end of dosing range; levels are increased 40% in patients ≥65 years | · Food: When taken orally with a high-fat meal, food has been shown to increase peak levels of oxymorphone immediate- release are 38 to 50% greater; must be taken on an empty stomach at least 1 hr before or 2 hr after a meal\n[p 101]\n[Table] (PDF page 101)\nColumns: Short-acting Opioids a | Initial Oral Dosage (in opioid-naïve) | Additional Dosage Information | Timing | Dosing In Special Populations | Other Considerations\nOxymorphone (cont.) |  |  |  | · Hepatic dysfunction ¨ Mild hepatic impairment: Use cautiously, start at low end of dosing range ¨ Moderate and severe hepatic impairment: Contraindicated · Renal dysfunction: Bioavailability is increased 57 - 65% in moderate and severe impairment; start at lower doses and adjust slowly | · Must NOT be taken concomitantly with alcohol; alcohol (240 ml of 4% to 40% ethanol) can cause highly variable effects on peak drug levels, ranging from a decrease of 50% to an increase of 270% (demonstrated with ER oxymorphone)\nTapentadol · Available as 50, 75, or 100 mg tablets | · 50 mg every 4 to 6 hr · For diabetic peripheral neuropathy (DPN): 50 mg every 12 hrs | · Subsequent dose is 50, 75, or 100 mg every 4 to 6 hr, adjusted to analgesia and tolerability · Second dose may be given 1 hr after the first dose if necessary · Max recommended dose: 700 mg on first day, 600 mg on subsequent days · Use tapentadol only under careful medical supervision at lowest effective dose · Patients on LOT are likely to become tolerant d and require doses higher than the usual dosage range to maintain the desired effect | · Analgesic Onset (min): N/A (rapid) · Peak (min): 60 · Duration (hr): 4 to 6 · t½ (hr): ~4 | · Elderly: Consider starting at the lowest recommended dose · Hepatic dysfunction: ¨ Mild hepatic impairment: No dosage adjustment ¨ Moderate hepatic impairment: Start at 50 mg and give subsequent doses at least 8 hr apart (max. 3 doses in 24 hr) · Severe hepatic impairment: Use is not recommended · Renal dysfunction: No dosage adjustment for mild or moderate renal impairment; not recommended in severe renal impairment (CrCl < 30 ml/min) | · Must NOT be taken concomitantly with alcohol which can increase serum tapentadol concentration · Food: When administered after a high fat/calorie meal, the AUC and Cmax increased by 25% and 16% respectively; management: may administer without regards to meals · If used in combination with other CNS depressants, consider dose reduction of one or both agents · Use with or within 14 days of MAOIs is contraindicated · Monitor for signs and symptoms of serotonin syndrome when used in combination with serotonergic agents"
+    ],
+    "va_dod_cpg_opioids_2022:p117": [
+      "va_dod_cpg_opioids_2022 (VA, advisory, 2022-05)\nVA/DoD Clinical Practice Guideline for the Use of Opioids in the Management of Chronic Pain (Version 4.0) > Appendix D: Drug Tables > D.Methadone Dosing Guidance > c. Dosing Strategies\n[p 117]\nThe dosing recommendations listed below (in Table D-5) are provided to offer guidance on using methadone in the treatment of patients with chronic pain, particularly when converting from another opioid to methadone. The use of methadone for pain should be done in the context of a pain clinic or with assistance of local pain management experts, including healthcare providers or pharmacists, who have experience with methadone's use. If such resources are not readily available, other long-acting opioids should be considered (e.g., morphine sustained action [SA], or oxycodone SA).\n[p 118]\nVarious methadone dosing strategies have been employed (268, 282, 283) and methods are still evolving. Older, prospective studies found no evidence to support the superiority of one dosing strategy over another.(284-286) The lack of prospective and comparative studies concerning methadone dosing strategies highlights the need to carefully individualize the dosing regimen of methadone.\nFor opioid tolerant patients, a number of different equianalgesic dose ratio tables can be used to determine the dose of methadone.(267, 286-290) This VA/DoD OT CPG includes one of the more conservative equianalgesic dose ratio tables as a reference for providers to discuss and/or consider (Table D-3).(289) Local subject matter experts may prefer, or be more familiar with, other accepted (evidence-based) equianalgesic dose ratio tables. No equianalgesic dose ratio table is considered superior and all have similar limitations. When converting to methadone, lower MEDDs have lower conversion ratios than higher MEDDs. As compared to lower MEDDs, higher MEDDs may convert to smaller methadone doses than one might expect. For example, 60 mg MEDD would be ~15 mg of methadone/day (a ratio of ~4:1); whereas 180 mg MEDD would be ~22.5 mg/day (a ratio of ~8:1). Methadone dose conversion is not a linear process. Furthermore, while the equianalgesic dose ratio tables account for cross-tolerance, (263) some subject matter experts feel the calculated methadone dose should be further decreased for incomplete crosstolerance, especially for patients on higher MEDDs.(273, 291)\nTable D-5: Dosing Recommendations for Patients Receiving Codeine Preparations or No Previous Opioids (292, 293)\n[Table: Table D-5: Dosing Recommendations for Patients Receiving Codeine Preparations or No Previous Opioids (292, 293)] (PDF page 118)\nColumns: Dosing Strategy | Initial Methadone Dose | Increments | Comments\nGradual titration (For CNCP and situations necessitating less frequent monitoring) | 2.5 mg every 12 hr or 8 hr | 2.5 mg every 12 hr or 8 hr, no more often than every 5 to 7 d | As a general rule, start low and go slow\nFaster titration (For cancer pain and situations where frequent monitoring is possible) | 2.5-5 mg every 8 hr | 2.5 to 5 mg every 8 hr as often as every third day | As a general rule, start low and go slow\nNote: All doses refer to oral administration\nAbbreviations: CNCP: chronic non-cancer pain; d: day(s); hr: hour(s); mg: milligram(s)\nTable D-6: Equianalgesic Dose Ratios (289, 291)\n[Table: Table D-6: Equianalgesic Dose Ratios (289, 291)] (PDF page 118)\nColumns: Morphine Dose (mg/d) | <30 | 31-99 | 100-299 | 300-499 | 500-999 | 1000-1200 | >1200\nMorphine: Methadone | 2:1 | 4:1 | 8:1 | 12:1 | 15:1 | 20:1 | Consult\nNote: The conversion ratio increases as the morphine equivalent dose increases (17, 265, 266, 286, 294)\nAbbreviations: d: day(s); mg: milligram(s)\nThe equianalgesic dose ratio is only one component of the process for appropriate dosing of methadone and other opioids. Once the dose is determined, there are two different methods to make the switch: a rapid conversion method and a stepwise/phased conversion. Again, no one conversion method has been determined to be superior to the others.\n[p 119]\nFor rapid conversion, the previous opioid is discontinued and the calculated methadone dose is started on day one.\nFor the stepwise/phased conversion, the dose of the previous opioid is decreased by 1/3 and replaced with 1/3 of the calculated methadone dose (given in three divided doses). Then the previous opioid dose is decreased by an additional 1/3 and the methadone dose is increased by 1/3. Finally, the remaining 1/3 of the previous opioid dose is discontinued and the methadone dose is increased to the initial calculated dose. This can be done over several days or weeks.(263, 295)\nFor breakthrough pain, a short-acting opioid preparation (e.g., acetaminophen with hydrocodone, oxycodone with or without acetaminophen, or immediate-release morphine) may be used until steady state is achieved (i.e., 5-7 days). As-needed methadone has also been used in a palliative care setting;(268, 282, 284) however, it is generally discouraged to avoid drug accumulation. It is important to note that use of breakthrough pain medications in patients with CNCP is controversial. If opioid medications for breakthrough pain are indicated, following titration to a stable methadone dose in CNCP patients, they should be used sparingly.(285)\n\nva_dod_cpg_opioids_2022 (VA, advisory, 2022-05)\nVA/DoD Clinical Practice Guideline for the Use of Opioids in the Management of Chronic Pain (Version 4.0) > Appendix D: Drug Tables > D.Methadone Dosing Guidance > b. Overview\n[p 116]\nMethadone is indicated for persistent, moderate-to-severe chronic pain in patients requiring continuous, around-the-clock opioid administration over an extended time. Methadone's pharmacokinetic properties are complex and incompletely documented.(245, 246) It has a long elimination half-life that has wide interpatient variability (mean or median half-life, depending on subject type, ranges from 3-128 hr) (247-259) and does not reflect duration of analgesia.(256, 260) I"
+    ],
+    "ny_medicaid_pdl:p80": [
+      "ny_medicaid_pdl (NY Medicaid, binding, 2026-09-14)\nNYRx Preferred Drug Program (PDP) Preferred Drug List > NYS Medicaid NYRx Dose Optimization Program\n[p 80]\nOn November 14, 2013, the Medicaid NYRx program instituted a Dose Optimization initiative. Dose optimization can reduce prescription costs by reducing the number of pills a patient needs to take each day. The Department has identified drugs to be included in this program, the majority of which have FDA approval for once-a-day dosing, have multiple strengths available in correlating increments at similar costs and are currently being utilized above the recommended dosing frequency. Prior authorization will be required to obtain the following medication beyond the following limits:\nDose Optimization Chart\n[Table] (PDF page 80)\nColumns: Brand Name | Dose Optimization Limitations | Dose Optimization Limitations | Dose Optimization Limitations / CARDIOVASCULAR | CARDIOVASCULAR | CARDIOVASCULAR | CARDIOVASCULAR / Angiotensin Receptor Blockers (ARBs) | Angiotensin Receptor Blockers (ARBs) | Angiotensin Receptor Blockers (ARBs) | Angiotensin Receptor Blockers (ARBs)\nBenicar ® 20 mg | 1 daily | Tablet | \nMicardis ® 20 mg, 40 mg | 1 daily | Tablet | \nDiovan ® 40 mg, 80 mg, 160 mg | 1 daily | Tablet | \nAntiarrhythmics | Antiarrhythmics | Antiarrhythmics | Antiarrhythmics\nAmiodarone 100 mg | 1 daily | Tablet | NYRx will allow two doses per day for up to 90 days for dose titration.\nARBs Combinations | ARBs Combinations | ARBs Combinations | ARBs Combinations\nExforge ® 5-160mg | 1 daily | Tablet | \nARBs/Diuretics | ARBs/Diuretics | ARBs/Diuretics | ARBs/Diuretics\nBenicar ® HCT 20-12.5 mg | 1 daily | Tablet | \nDiovan ® HCT 80-12.5 mg, 160-12.5 mg | 1 daily | Tablet | \nEdarbyclor ® 40-12.5 mg | 1 daily | Tablet | \nMicardis ® HCT 40-12.5 mg, 80-12.5 mg | 1 daily | Tablet | \nBeta Blockers | Beta Blockers | Beta Blockers | Beta Blockers\nBystolic ® 2.5 mg, 5 mg, 10 mg | 1 daily | Tablet | \nnadolol 40 mg | 1 daily | Tablet | \nToprol ® XL 25 mg, 50 mg, 100 mg | 1 daily | Tablet | "
+    ]
+  },
+  "cost_note": "each call priced at its serving role's rates (llm.<role>.prices_per_mtok)",
+  "request_started_utc": "2026-10-18T23:39:33.054547+00:00",
+  "citation_check": {
+    "t_start": 9.619,
+    "duration_s": 0.001
+  }
+}

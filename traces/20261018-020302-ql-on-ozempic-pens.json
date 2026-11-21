@@ -1,0 +1,533 @@
+{
+  "question": "QL on Ozempic pens?",
+  "status": "answered",
+  "assumption": "Assuming NY Medicaid (NYRx PDL), since no program was named.",
+  "answer": "Assuming NY Medicaid: the NYRx PDL doesn't list a QL (F/Q/D) for Ozempic pens.\n\n- Ozempic pen is **preferred** in the GLP-1 RA, Type 2 Diabetes class. It carries no F/Q/D flag on its row.\n- The class has CC only. Both apply: confirm an FDA-approved or compendia-supported, Medicaid-covered indication. PA is also required if the patient is on a GLP-1 and a DPP-IV concurrently.\n- Ozempic tablets are non-preferred.\n- The documents don't give a pen quantity per fill. Any system-message limit would be outside what I found. The NY Medicaid Clinical Call Center is (877) 309-9493.",
+  "citations": [
+    {
+      "doc_id": "ny_medicaid_pdl",
+      "page": 34,
+      "link": "https://newyork.fhsc.com/downloads/providers/NYRx_PDP_PDL.pdf#page=34",
+      "flag": null,
+      "locator": "ny_medicaid_pdl:p34"
+    },
+    {
+      "doc_id": "ny_medicaid_pharmacy_policy",
+      "page": 14,
+      "link": "https://www.emedny.org/ProviderManuals/Pharmacy/PDFS/Pharmacy_Policy_Guidelines.pdf#page=14",
+      "flag": null,
+      "locator": "ny_medicaid_pharmacy_policy:p14"
+    }
+  ],
+  "conflicts_noted": [],
+  "flags": [],
+  "needs_review": false,
+  "words": {
+    "displayed": 98,
+    "rendered": 98
+  },
+  "answered_by": "claude-sonnet-5-5",
+  "fallback_used": false,
+  "timing_s": {
+    "total": 6.164,
+    "search": 0.836,
+    "search_cold": 0,
+    "search_warm": 0.836,
+    "read_page": 0,
+    "list_documents": 0,
+    "model_calls": [
+      1.291,
+      4.031
+    ]
+  },
+  "index_warm_at_start": true,
+  "lookups": 2,
+  "tokens": {
+    "input": 6,
+    "output": 606,
+    "cache_read": 3581,
+    "cache_write": 26396
+  },
+  "cost_usd": 0.072778,
+  "pages_seen": [
+    "ny_medicaid_pdl:p1",
+    "ny_medicaid_pdl:p14",
+    "ny_medicaid_pdl:p15",
+    "ny_medicaid_pdl:p16",
+    "ny_medicaid_pdl:p22",
+    "ny_medicaid_pdl:p23",
+    "ny_medicaid_pdl:p34",
+    "ny_medicaid_pdl:p56",
+    "ny_medicaid_pdl:p67",
+    "ny_medicaid_pdl:p69",
+    "ny_medicaid_pdl:p74",
+    "ny_medicaid_pdl:p75",
+    "ny_medicaid_pharmacy_policy:p14",
+    "ny_medicaid_pharmacy_policy:p15",
+    "ny_medicaid_pharmacy_policy:p6",
+    "ny_medicaid_pharmacy_policy:p7",
+    "va_dod_cpg_diabetes_2023:p100",
+    "va_dod_cpg_diabetes_2023:p101",
+    "va_dod_cpg_diabetes_2023:p102",
+    "va_dod_cpg_diabetes_2023:p131",
+    "va_dod_cpg_diabetes_2023:p65",
+    "va_dod_cpg_diabetes_2023:p66",
+    "va_dod_cpg_diabetes_2023:p99",
+    "va_pbm_t2dm_clinicians_guide:p14",
+    "va_pbm_t2dm_clinicians_guide:p15",
+    "va_pbm_t2dm_pharmacotherapy_2025:p14"
+  ],
+  "started_at": "2026-10-18T06:03:02+00:00",
+  "config": {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium",
+    "setup": "docling_norerank_structured",
+    "max_tool_calls": 6,
+    "deadline_s": 25,
+    "search_k": 8
+  },
+  "structured_lookups": true,
+  "model_calls": [
+    {
+      "t_start": 0.0,
+      "duration_s": 1.291,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 4,
+        "output": 124,
+        "cache_read": 0,
+        "cache_write": 3581
+      }
+    },
+    {
+      "t_start": 2.133,
+      "duration_s": 4.031,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 2,
+        "output": 482,
+        "cache_read": 3581,
+        "cache_write": 22815
+      }
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "lookup_ny_medicaid_drug",
+      "input": {
+        "drug": "Ozempic"
+      },
+      "duration_s": 0.006,
+      "is_error": false,
+      "pages": [
+        "ny_medicaid_pdl:p1",
+        "ny_medicaid_pdl:p34"
+      ],
+      "lookup": {
+        "result": "multiple_matches",
+        "rows": 2
+      },
+      "t_start": 1.292
+    },
+    {
+      "name": "search_documents",
+      "input": {
+        "query": "Ozempic quantity limit pens per 28 days"
+      },
+      "duration_s": 0.836,
+      "is_error": false,
+      "pages": [
+        "ny_medicaid_pdl:p14",
+        "ny_medicaid_pdl:p15",
+        "ny_medicaid_pdl:p16",
+        "ny_medicaid_pdl:p22",
+        "ny_medicaid_pdl:p23",
+        "ny_medicaid_pdl:p34",
+        "ny_medicaid_pdl:p56",
+        "ny_medicaid_pdl:p67",
+        "ny_medicaid_pdl:p69",
+        "ny_medicaid_pdl:p74",
+        "ny_medicaid_pdl:p75",
+        "ny_medicaid_pharmacy_policy:p14",
+        "ny_medicaid_pharmacy_policy:p15",
+        "ny_medicaid_pharmacy_policy:p6",
+        "ny_medicaid_pharmacy_policy:p7",
+        "va_dod_cpg_diabetes_2023:p100",
+        "va_dod_cpg_diabetes_2023:p101",
+        "va_dod_cpg_diabetes_2023:p102",
+        "va_dod_cpg_diabetes_2023:p131",
+        "va_dod_cpg_diabetes_2023:p65",
+        "va_dod_cpg_diabetes_2023:p66",
+        "va_dod_cpg_diabetes_2023:p99",
+        "va_pbm_t2dm_clinicians_guide:p14",
+        "va_pbm_t2dm_clinicians_guide:p15",
+        "va_pbm_t2dm_pharmacotherapy_2025:p14"
+      ],
+      "index_loaded": true,
+      "search": {
+        "original_query": "QL on Ozempic pens?",
+        "agent_query": "Ozempic quantity limit pens per 28 days",
+        "executed": [
+          {
+            "source": "original",
+            "query": "QL on Ozempic pens?",
+            "program": null,
+            "k": 8,
+            "seconds": 0.835,
+            "cached": false,
+            "results": 8
+          },
+          {
+            "source": "agent",
+            "query": "Ozempic quantity limit pens per 28 days",
+            "program": null,
+            "k": 8,
+            "seconds": 0.283,
+            "cached": false,
+            "results": 8
+          }
+        ],
+        "duplicates_merged": 1,
+        "returned": 15,
+        "from_both": 1,
+        "from_original_only": 7,
+        "from_agent_only": 7,
+        "provenance": [
+          {
+            "unit": "ny_medicaid_pdl:s62",
+            "found_by": {
+              "original": 1,
+              "agent": 3
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s131",
+            "found_by": {
+              "agent": 1
+            }
+          },
+          {
+            "unit": "va_dod_cpg_diabetes_2023:s102",
+            "found_by": {
+              "original": 2
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s41",
+            "found_by": {
+              "agent": 2
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s3",
+            "found_by": {
+              "original": 3
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s15",
+            "found_by": {
+              "original": 4
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s125",
+            "found_by": {
+              "agent": 4
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_clinicians_guide:s14",
+            "found_by": {
+              "original": 5
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s123",
+            "found_by": {
+              "agent": 5
+            }
+          },
+          {
+            "unit": "va_dod_cpg_diabetes_2023:s122",
+            "found_by": {
+              "original": 6
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s130",
+            "found_by": {
+              "agent": 6
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s16",
+            "found_by": {
+              "original": 7
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s107",
+            "found_by": {
+              "agent": 7
+            }
+          },
+          {
+            "unit": "va_dod_cpg_diabetes_2023:s67",
+            "found_by": {
+              "original": 8
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s31",
+            "found_by": {
+              "agent": 8
+            }
+          }
+        ],
+        "hits": [
+          {
+            "unit": "ny_medicaid_pdl:s62",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              34
+            ],
+            "ranks": {
+              "original": 1,
+              "agent": 3
+            },
+            "scores": {
+              "original": 0.0328,
+              "agent": 0.0286
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s131",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              75
+            ],
+            "ranks": {
+              "agent": 1
+            },
+            "scores": {
+              "agent": 0.0308
+            }
+          },
+          {
+            "unit": "va_dod_cpg_diabetes_2023:s102",
+            "doc_id": "va_dod_cpg_diabetes_2023",
+            "pages": [
+              99,
+              100,
+              101,
+              102
+            ],
+            "ranks": {
+              "original": 2
+            },
+            "scores": {
+              "original": 0.0289
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s41",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              22,
+              23
+            ],
+            "ranks": {
+              "agent": 2
+            },
+            "scores": {
+              "agent": 0.0299
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s3",
+            "doc_id": "ny_medicaid_pharmacy_policy",
+            "pages": [
+              6,
+              7
+            ],
+            "ranks": {
+              "original": 3
+            },
+            "scores": {
+              "original": 0.0266
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s15",
+            "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+            "pages": [
+              14
+            ],
+            "ranks": {
+              "original": 4
+            },
+            "scores": {
+              "original": 0.0263
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s125",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              69
+            ],
+            "ranks": {
+              "agent": 4
+            },
+            "scores": {
+              "agent": 0.0278
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_clinicians_guide:s14",
+            "doc_id": "va_pbm_t2dm_clinicians_guide",
+            "pages": [
+              14,
+              15
+            ],
+            "ranks": {
+              "original": 5
+            },
+            "scores": {
+              "original": 0.0239
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s123",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              67
+            ],
+            "ranks": {
+              "agent": 5
+            },
+            "scores": {
+              "agent": 0.0278
+            }
+          },
+          {
+            "unit": "va_dod_cpg_diabetes_2023:s122",
+            "doc_id": "va_dod_cpg_diabetes_2023",
+            "pages": [
+              131
+            ],
+            "ranks": {
+              "original": 6
+            },
+            "scores": {
+              "original": 0.0227
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s130",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              74
+            ],
+            "ranks": {
+              "agent": 6
+            },
+            "scores": {
+              "agent": 0.0274
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s16",
+            "doc_id": "ny_medicaid_pharmacy_policy",
+            "pages": [
+              14,
+              15
+            ],
+            "ranks": {
+              "original": 7
+            },
+            "scores": {
+              "original": 0.0198
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s107",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              56
+            ],
+            "ranks": {
+              "agent": 7
+            },
+            "scores": {
+              "agent": 0.0271
+            }
+          },
+          {
+            "unit": "va_dod_cpg_diabetes_2023:s67",
+            "doc_id": "va_dod_cpg_diabetes_2023",
+            "pages": [
+              65,
+              66
+            ],
+            "ranks": {
+              "original": 8
+            },
+            "scores": {
+              "original": 0.0161
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s31",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              14,
+              15,
+              16
+            ],
+            "ranks": {
+              "agent": 8
+            },
+            "scores": {
+              "agent": 0.0263
+            }
+          }
+        ]
+      },
+      "t_start": 1.297
+    }
+  ],
+  "cited_evidence": {
+    "ny_medicaid_pdl:p34": "{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"Ozempic\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"multiple_matches\", \"classes\": [{\"drug_class\": \"Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes\", \"section\": \"VI. Endocrine and Metabolic Agents\", \"class_flags\": {\"CC\": \"Clinical Criteria: see the class's Coverage Parameters\"}, \"coverage_parameters\": \"CLINICAL CRITERIA (CC)\\nConfirm diagnosis of FDA-approved or compendia-supported\\nindication and Medicaid covered indication\\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently\", \"coverage_pages\": [34], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p34#row-7\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Ozempic® pen\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"name plus strength or dosage form\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-12\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Ozempic® tablets\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"name plus strength or dosage form\"}]}], \"note\": \"Several rows match. List the relevant ones, or state which one you assumed.\"}\n\nny_medicaid_pdl (NY Medicaid, binding, 2026-09-14)\nNYRx Preferred Drug Program (PDP) Preferred Drug List > VI. Endocrine and Metabolic Agents > Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes (CC)\n[p 34]\nPreferred drugs: exenatide; Ozempic® pen; Trulicity®; Victoza® (BLTG)\nNon-preferred drugs: liraglutide (gen Victoza® ); Mounjaro®; Ozempic® tablets; Rybelsus®; Soliqua®; Xultophy®\nCoverage parameters: CLINICAL CRITERIA (CC)\nConfirm diagnosis of FDA-approved or compendia-supported\nindication and Medicaid covered indication\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently",
+    "ny_medicaid_pharmacy_policy:p14": "ny_medicaid_pharmacy_policy (NY Medicaid, binding, 2026-09)\nNYRx Pharmacy Manual Policy Guidelines (Version 2026-3) > 1.0 General Pharmacy Policy > Frequency, Quantity and Duration (F/Q/D) Limits\n[p 14]\nPrescription, non-prescription drugs, and medical/surgical supplies may have fixed limits in the amount and/or frequency that can be dispensed. NY Medicaid considers Frequency, Quantity, and Duration (F/Q/D) recommendations made by the Drug Utilization Review (DUR) Board. Some of the drugs/drug classes affected by F/Q/D editing are also included in the Preferred Drug Program (PDP). Therefore, drugs/drug classes that have a preferred status can also be subject to F/Q/D editing.\n[p 15]\nPolicy Guidelines\nNYRx\nSystem messaging has been developed to help guide the pharmacists to appropriately submit the claim or to refer to the prescriber.\nFor certain medical/surgical supplies, if the limit on an item is exceeded, prior approval must be requested with accompanying documentation as to why the limit needs to be exceeded. Quantity and frequency limits are available in the OTC and Supply Fee Schedule section of this manual. Questions on medical/surgical supplies may be referred to the Durable Medical Equipment unit at 800-342-3005. The following links have been provided as helpful resources for information on the PDP, F/Q/D and Step Therapy Programs: https://newyork.fhsc.com/ and http://www.health.ny.gov/health_care/medicaid/program/dur/index.htm. Questions on prescription Frequency, Quantity and Duration (F/Q/D) Limits may be referred to the NY Medicaid Clinical Call Center at: (877)309-9493."
+  },
+  "cited_evidence_parts": {
+    "ny_medicaid_pdl:p34": [
+      "{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"Ozempic\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"multiple_matches\", \"classes\": [{\"drug_class\": \"Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes\", \"section\": \"VI. Endocrine and Metabolic Agents\", \"class_flags\": {\"CC\": \"Clinical Criteria: see the class's Coverage Parameters\"}, \"coverage_parameters\": \"CLINICAL CRITERIA (CC)\\nConfirm diagnosis of FDA-approved or compendia-supported\\nindication and Medicaid covered indication\\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently\", \"coverage_pages\": [34], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p34#row-7\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Ozempic® pen\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"name plus strength or dosage form\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-12\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Ozempic® tablets\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"name plus strength or dosage form\"}]}], \"note\": \"Several rows match. List the relevant ones, or state which one you assumed.\"}",
+      "ny_medicaid_pdl (NY Medicaid, binding, 2026-09-14)\nNYRx Preferred Drug Program (PDP) Preferred Drug List > VI. Endocrine and Metabolic Agents > Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes (CC)\n[p 34]\nPreferred drugs: exenatide; Ozempic® pen; Trulicity®; Victoza® (BLTG)\nNon-preferred drugs: liraglutide (gen Victoza® ); Mounjaro®; Ozempic® tablets; Rybelsus®; Soliqua®; Xultophy®\nCoverage parameters: CLINICAL CRITERIA (CC)\nConfirm diagnosis of FDA-approved or compendia-supported\nindication and Medicaid covered indication\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently"
+    ],
+    "ny_medicaid_pharmacy_policy:p14": [
+      "ny_medicaid_pharmacy_policy (NY Medicaid, binding, 2026-09)\nNYRx Pharmacy Manual Policy Guidelines (Version 2026-3) > 1.0 General Pharmacy Policy > Frequency, Quantity and Duration (F/Q/D) Limits\n[p 14]\nPrescription, non-prescription drugs, and medical/surgical supplies may have fixed limits in the amount and/or frequency that can be dispensed. NY Medicaid considers Frequency, Quantity, and Duration (F/Q/D) recommendations made by the Drug Utilization Review (DUR) Board. Some of the drugs/drug classes affected by F/Q/D editing are also included in the Preferred Drug Program (PDP). Therefore, drugs/drug classes that have a preferred status can also be subject to F/Q/D editing.\n[p 15]\nPolicy Guidelines\nNYRx\nSystem messaging has been developed to help guide the pharmacists to appropriately submit the claim or to refer to the prescriber.\nFor certain medical/surgical supplies, if the limit on an item is exceeded, prior approval must be requested with accompanying documentation as to why the limit needs to be exceeded. Quantity and frequency limits are available in the OTC and Supply Fee Schedule section of this manual. Questions on medical/surgical supplies may be referred to the Durable Medical Equipment unit at 800-342-3005. The following links have been provided as helpful resources for information on the PDP, F/Q/D and Step Therapy Programs: https://newyork.fhsc.com/ and http://www.health.ny.gov/health_care/medicaid/program/dur/index.htm. Questions on prescription Frequency, Quantity and Duration (F/Q/D) Limits may be referred to the NY Medicaid Clinical Call Center at: (877)309-9493."
+    ]
+  },
+  "cost_note": "priced at the requested model's rates; a fallback hop bills at its own rates",
+  "request_id": "de7c10ff-2bf6-4e02-8e6f-095ed0b5e707",
+  "request_started_utc": "2026-10-18T06:02:55.913936+00:00",
+  "citation_check": {
+    "t_start": 6.164,
+    "duration_s": 0.0
+  },
+  "prices_per_mtok": {
+    "input": 2.0,
+    "output": 10.0,
+    "cache_read": 0.2,
+    "cache_write": 2.5
+  }
+}

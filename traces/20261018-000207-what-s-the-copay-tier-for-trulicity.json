@@ -1,0 +1,479 @@
+{
+  "question": "What's the copay tier for Trulicity?",
+  "status": "answered",
+  "assumption": "Assuming NY Medicaid (no program named; coverage/copay question defaults there). Part D formulary tiers aren't in the documents.",
+  "answer": "Assuming NY Medicaid: NYRx has no copay \"tiers.\" Copay depends on PDL status.\n\n- Trulicity is **preferred** on the NYRx PDL (GLP-1 RA class, CC). The PDL doesn't mark it with an effective-date change, so the status is in effect now.\n- A preferred brand copay is **$1.00**. Non-preferred brands are $3.00.\n- The class has clinical criteria: confirm an FDA-approved or compendia-supported, Medicaid-covered indication. PA is required if the patient is also on a DPP-IV inhibitor.\n- Copay exemptions apply, e.g. members under 21, pregnancy, and hospice.\n\nFor Part D, the documents contain no plan formulary or tier for Trulicity. They are silent on it, not negative.",
+  "citations": [
+    {
+      "doc_id": "ny_medicaid_pdl",
+      "page": 34,
+      "link": "https://newyork.fhsc.com/downloads/providers/NYRx_PDP_PDL.pdf#page=34",
+      "flag": null,
+      "locator": "ny_medicaid_pdl:p34"
+    },
+    {
+      "doc_id": "ny_medicaid_pharmacy_policy",
+      "page": 42,
+      "link": "https://www.emedny.org/ProviderManuals/Pharmacy/PDFS/Pharmacy_Policy_Guidelines.pdf#page=42",
+      "flag": null,
+      "locator": "ny_medicaid_pharmacy_policy:p42"
+    }
+  ],
+  "conflicts_noted": [],
+  "flags": [],
+  "needs_review": false,
+  "words": {
+    "displayed": 109,
+    "rendered": 109
+  },
+  "answered_by": "claude-sonnet-5-5",
+  "fallback_used": false,
+  "timing_s": {
+    "total": 10.777,
+    "search": 3.999,
+    "search_cold": 0,
+    "search_warm": 3.999,
+    "read_page": 0,
+    "list_documents": 0,
+    "model_calls": [
+      2.399,
+      4.372
+    ]
+  },
+  "index_warm_at_start": true,
+  "lookups": 2,
+  "tokens": {
+    "input": 6,
+    "output": 743,
+    "cache_read": 3584,
+    "cache_write": 27081
+  },
+  "cost_usd": 0.075861,
+  "pages_seen": [
+    "ny_medicaid_pdl:p1",
+    "ny_medicaid_pdl:p34",
+    "ny_medicaid_pdl:p36",
+    "ny_medicaid_pdl:p38",
+    "ny_medicaid_pharmacy_policy:p28",
+    "ny_medicaid_pharmacy_policy:p29",
+    "ny_medicaid_pharmacy_policy:p41",
+    "ny_medicaid_pharmacy_policy:p42",
+    "ny_medicaid_pharmacy_policy:p43",
+    "va_dod_cpg_diabetes_2023:p129",
+    "va_dod_cpg_diabetes_2023:p131",
+    "va_dod_cpg_diabetes_2023:p137",
+    "va_dod_cpg_diabetes_2023:p78",
+    "va_dod_cpg_diabetes_2023:p79",
+    "va_dod_cpg_diabetes_2023:p80",
+    "va_dod_cpg_diabetes_2023:p81",
+    "va_dod_cpg_diabetes_2023:p82",
+    "va_pbm_t2dm_pharmacotherapy_2025:p10",
+    "va_pbm_t2dm_pharmacotherapy_2025:p11",
+    "va_pbm_t2dm_pharmacotherapy_2025:p12",
+    "va_pbm_t2dm_pharmacotherapy_2025:p14",
+    "va_pbm_t2dm_pharmacotherapy_2025:p5",
+    "va_pbm_t2dm_pharmacotherapy_2025:p6"
+  ],
+  "started_at": "2026-10-18T04:02:07+00:00",
+  "config": {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium",
+    "setup": "docling_rerank_structured",
+    "max_tool_calls": 6,
+    "deadline_s": 25,
+    "search_k": 8
+  },
+  "structured_lookups": true,
+  "model_calls": [
+    {
+      "t_start": 0.0,
+      "duration_s": 2.399,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 4,
+        "output": 224,
+        "cache_read": 0,
+        "cache_write": 3584
+      }
+    },
+    {
+      "t_start": 6.405,
+      "duration_s": 4.372,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 2,
+        "output": 519,
+        "cache_read": 3584,
+        "cache_write": 23497
+      }
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "lookup_ny_medicaid_drug",
+      "input": {
+        "drug": "Trulicity"
+      },
+      "duration_s": 0.006,
+      "is_error": false,
+      "pages": [
+        "ny_medicaid_pdl:p1",
+        "ny_medicaid_pdl:p34"
+      ],
+      "lookup": {
+        "result": "exact_match",
+        "rows": 1
+      },
+      "t_start": 2.399
+    },
+    {
+      "name": "search_documents",
+      "input": {
+        "query": "Trulicity dulaglutide copay tier"
+      },
+      "duration_s": 3.999,
+      "is_error": false,
+      "pages": [
+        "ny_medicaid_pdl:p34",
+        "ny_medicaid_pdl:p36",
+        "ny_medicaid_pdl:p38",
+        "ny_medicaid_pharmacy_policy:p28",
+        "ny_medicaid_pharmacy_policy:p29",
+        "ny_medicaid_pharmacy_policy:p41",
+        "ny_medicaid_pharmacy_policy:p42",
+        "ny_medicaid_pharmacy_policy:p43",
+        "va_dod_cpg_diabetes_2023:p129",
+        "va_dod_cpg_diabetes_2023:p131",
+        "va_dod_cpg_diabetes_2023:p137",
+        "va_dod_cpg_diabetes_2023:p78",
+        "va_dod_cpg_diabetes_2023:p79",
+        "va_dod_cpg_diabetes_2023:p80",
+        "va_dod_cpg_diabetes_2023:p81",
+        "va_dod_cpg_diabetes_2023:p82",
+        "va_pbm_t2dm_pharmacotherapy_2025:p10",
+        "va_pbm_t2dm_pharmacotherapy_2025:p11",
+        "va_pbm_t2dm_pharmacotherapy_2025:p12",
+        "va_pbm_t2dm_pharmacotherapy_2025:p14",
+        "va_pbm_t2dm_pharmacotherapy_2025:p5",
+        "va_pbm_t2dm_pharmacotherapy_2025:p6"
+      ],
+      "index_loaded": true,
+      "search": {
+        "original_query": "What's the copay tier for Trulicity?",
+        "agent_query": "Trulicity dulaglutide copay tier",
+        "executed": [
+          {
+            "source": "original",
+            "query": "What's the copay tier for Trulicity?",
+            "program": null,
+            "k": 8,
+            "seconds": 2.609,
+            "cached": false,
+            "results": 8
+          },
+          {
+            "source": "agent",
+            "query": "Trulicity dulaglutide copay tier",
+            "program": null,
+            "k": 8,
+            "seconds": 3.997,
+            "cached": false,
+            "results": 8
+          }
+        ],
+        "duplicates_merged": 4,
+        "returned": 12,
+        "from_both": 4,
+        "from_original_only": 4,
+        "from_agent_only": 4,
+        "provenance": [
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s15",
+            "found_by": {
+              "original": 1,
+              "agent": 1
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s62",
+            "found_by": {
+              "original": 2,
+              "agent": 3
+            }
+          },
+          {
+            "unit": "va_dod_cpg_diabetes_2023:s88",
+            "found_by": {
+              "original": 4,
+              "agent": 2
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s4",
+            "found_by": {
+              "original": 3,
+              "agent": 6
+            }
+          },
+          {
+            "unit": "va_dod_cpg_diabetes_2023:s120",
+            "found_by": {
+              "agent": 4
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s61",
+            "found_by": {
+              "original": 5
+            }
+          },
+          {
+            "unit": "va_dod_cpg_diabetes_2023:s128",
+            "found_by": {
+              "agent": 5
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s36",
+            "found_by": {
+              "original": 6
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s65",
+            "found_by": {
+              "original": 7
+            }
+          },
+          {
+            "unit": "va_dod_cpg_diabetes_2023:s122",
+            "found_by": {
+              "agent": 7
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s70",
+            "found_by": {
+              "original": 8
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s12",
+            "found_by": {
+              "agent": 8
+            }
+          }
+        ],
+        "hits": [
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s15",
+            "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+            "pages": [
+              14
+            ],
+            "ranks": {
+              "original": 1,
+              "agent": 1
+            },
+            "scores": {
+              "original": 0.0382,
+              "agent": 0.1338
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s62",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              34
+            ],
+            "ranks": {
+              "original": 2,
+              "agent": 3
+            },
+            "scores": {
+              "original": 0.0086,
+              "agent": 0.0298
+            }
+          },
+          {
+            "unit": "va_dod_cpg_diabetes_2023:s88",
+            "doc_id": "va_dod_cpg_diabetes_2023",
+            "pages": [
+              78,
+              79,
+              80,
+              81,
+              82
+            ],
+            "ranks": {
+              "original": 4,
+              "agent": 2
+            },
+            "scores": {
+              "original": 0.0001,
+              "agent": 0.0357
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s4",
+            "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+            "pages": [
+              5,
+              6
+            ],
+            "ranks": {
+              "original": 3,
+              "agent": 6
+            },
+            "scores": {
+              "original": 0.0002,
+              "agent": 0.0125
+            }
+          },
+          {
+            "unit": "va_dod_cpg_diabetes_2023:s120",
+            "doc_id": "va_dod_cpg_diabetes_2023",
+            "pages": [
+              129
+            ],
+            "ranks": {
+              "agent": 4
+            },
+            "scores": {
+              "agent": 0.0211
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s61",
+            "doc_id": "ny_medicaid_pharmacy_policy",
+            "pages": [
+              41,
+              42,
+              43
+            ],
+            "ranks": {
+              "original": 5
+            },
+            "scores": {
+              "original": 0.0001
+            }
+          },
+          {
+            "unit": "va_dod_cpg_diabetes_2023:s128",
+            "doc_id": "va_dod_cpg_diabetes_2023",
+            "pages": [
+              137
+            ],
+            "ranks": {
+              "agent": 5
+            },
+            "scores": {
+              "agent": 0.0146
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s36",
+            "doc_id": "ny_medicaid_pharmacy_policy",
+            "pages": [
+              28,
+              29
+            ],
+            "ranks": {
+              "original": 6
+            },
+            "scores": {
+              "original": 0.0001
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s65",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              36
+            ],
+            "ranks": {
+              "original": 7
+            },
+            "scores": {
+              "original": 0.0
+            }
+          },
+          {
+            "unit": "va_dod_cpg_diabetes_2023:s122",
+            "doc_id": "va_dod_cpg_diabetes_2023",
+            "pages": [
+              131
+            ],
+            "ranks": {
+              "agent": 7
+            },
+            "scores": {
+              "agent": 0.0118
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s70",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              38
+            ],
+            "ranks": {
+              "original": 8
+            },
+            "scores": {
+              "original": 0.0
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s12",
+            "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+            "pages": [
+              10,
+              11,
+              12
+            ],
+            "ranks": {
+              "agent": 8
+            },
+            "scores": {
+              "agent": 0.0115
+            }
+          }
+        ]
+      },
+      "t_start": 2.405
+    }
+  ],
+  "cited_evidence": {
+    "ny_medicaid_pdl:p34": "{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"Trulicity\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"exact_match\", \"classes\": [{\"drug_class\": \"Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes\", \"section\": \"VI. Endocrine and Metabolic Agents\", \"class_flags\": {\"CC\": \"Clinical Criteria: see the class's Coverage Parameters\"}, \"coverage_parameters\": \"CLINICAL CRITERIA (CC)\\nConfirm diagnosis of FDA-approved or compendia-supported\\nindication and Medicaid covered indication\\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently\", \"coverage_pages\": [34], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p34#row-8\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Trulicity®\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"exact name\"}]}]}\n\nny_medicaid_pdl (NY Medicaid, binding, 2026-09-14)\nNYRx Preferred Drug Program (PDP) Preferred Drug List > VI. Endocrine and Metabolic Agents > Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes (CC)\n[p 34]\nPreferred drugs: exenatide; Ozempic® pen; Trulicity®; Victoza® (BLTG)\nNon-preferred drugs: liraglutide (gen Victoza® ); Mounjaro®; Ozempic® tablets; Rybelsus®; Soliqua®; Xultophy®\nCoverage parameters: CLINICAL CRITERIA (CC)\nConfirm diagnosis of FDA-approved or compendia-supported\nindication and Medicaid covered indication\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently",
+    "ny_medicaid_pharmacy_policy:p42": "ny_medicaid_pharmacy_policy (NY Medicaid, binding, 2026-09)\nNYRx Pharmacy Manual Policy Guidelines (Version 2026-3) > 4.0 Basis of Payment > Co-payments for Drugs and Medical Supplies\n[p 41]\nThe New York State Medicaid Program charges co-payments for many drug and medical supply items.\nHealth care providers have an obligation to provide services and goods regardless of a Medicaid member's ability to pay co-payments:\nPharmacy providers may not refuse services to otherwise eligible Medicaid members who cannot afford to pay the co-payment, per Social Security Act (SSA) § 1916 and Title 18 NYCRR § 360-7.12. Refusing to provide services is an unacceptable practice.\no Providers may attempt to collect outstanding copayments through methods such as requesting the copayment each time the member is provided with services or goods, sending bills or any other legal means.\n[p 42]\nPolicy Guidelines\nNYRx\nPharmacy providers must not reduce the amount charged on a Medicaid claim by the copayment that is collected from a Medicaid member. Each claim that requires a co-payment will have the co-payment automatically deducted from the final payment when the claim is approved for payment.\nProviders cannot offer gifts or cash per SSA § 1128A (a)(5), Title 18 NYCRR § 515.2, and Rules of the Board of Regents §29.1. It is not permissible for providers to:\no Providers cannot make offers where it is likely to influence the enrollee's selection of a provider of Medicaid items or services. Note: NYRx allows for the provision of an item or device to a NYRx member or enrollee which is directly related to the administration of medication for that person (e.g., medicine cup, dosing spoons, or pill organizer).\no Providers cannot proactively waive copays. Copays may be waived only as provided on a case-bycase basis per the financial need by request of the individual member or enrollee.\nMedicaid Co-payments:\nSome Medicaid members become eligible for Medicaid by spending part of their monthly income on medical care. Since co-payments paid or incurred can be used toward satisfying the spend-down (overage) in the following month, itemized bills or receipts for co-payments should be provided to members when requested.\nThere is a maximum amount per Medicaid member for all co-payments incurred per year and is calculated on a quarterly basis. The co-payment year starts April 1 and ends March 31. When a member reaches the quarterly co-pay maximum, they will receive a letter confirming the date on which the co-pay maximum was met and exempting the member from a co-payment until the end of the current co-payment quarter.\nCo-payment amounts are as follows:\no $3.00 for non-preferred Brand Name Drugs.\no $1.00 for Generic Drugs, preferred Brand Name Drugs, and Brand Drugs included in the Brand Less Than Generic Drugs Program.\no $0.50 for Non-Prescription (over the counter) Drugs.\no $1.00 for Medical/Sickroom Supplies.\nCo-payment is not required for certain members and service categories which include:\no Family planning (birth control) services including birth control pills, emergency contraception, and condoms.\no FDA-approved drugs to treat tuberculosis.\no FDA-approved drugs to treat mental illness (psychotropic drugs).\no Medicaid members younger than 21 years old.\no Medicaid members during pregnancy and for the two months after the month in which the pregnancy ends.\no Residents of Adult Care Facilities licensed by the New York State Department of Health (DOH).\no Residents of nursing homes.\no Residents of Intermediate Care Facilities for the Developmentally Disabled (ICF/DD).\no Residents of Office of Mental Health (OMH) or Office of Persons with Developmental Disabilities (OPWDD) certified residences.\no Members in Comprehensive Medicaid Case Management (CMCM) or Service Coordination Programs.\no Members in OMH or OPWDD Home and Community Based Services (HCBS) Waiver Programs. and\no Members in a DOH HCBS Waiver Program for Persons with Traumatic Brain Injury (TBI).\no Members with incomes below 100 percent of the federal poverty level.\no Members in Hospice.\no American Indians and Alaska Natives who have ever received a service from the Indian Health Service, tribal health programs or under contract health services referral.\n[p 43]\nPolicy Guidelines\nNYRx"
+  },
+  "cited_evidence_parts": {
+    "ny_medicaid_pdl:p34": [
+      "{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"Trulicity\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"exact_match\", \"classes\": [{\"drug_class\": \"Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes\", \"section\": \"VI. Endocrine and Metabolic Agents\", \"class_flags\": {\"CC\": \"Clinical Criteria: see the class's Coverage Parameters\"}, \"coverage_parameters\": \"CLINICAL CRITERIA (CC)\\nConfirm diagnosis of FDA-approved or compendia-supported\\nindication and Medicaid covered indication\\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently\", \"coverage_pages\": [34], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p34#row-8\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Trulicity®\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"exact name\"}]}]}",
+      "ny_medicaid_pdl (NY Medicaid, binding, 2026-09-14)\nNYRx Preferred Drug Program (PDP) Preferred Drug List > VI. Endocrine and Metabolic Agents > Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes (CC)\n[p 34]\nPreferred drugs: exenatide; Ozempic® pen; Trulicity®; Victoza® (BLTG)\nNon-preferred drugs: liraglutide (gen Victoza® ); Mounjaro®; Ozempic® tablets; Rybelsus®; Soliqua®; Xultophy®\nCoverage parameters: CLINICAL CRITERIA (CC)\nConfirm diagnosis of FDA-approved or compendia-supported\nindication and Medicaid covered indication\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently"
+    ],
+    "ny_medicaid_pharmacy_policy:p42": [
+      "ny_medicaid_pharmacy_policy (NY Medicaid, binding, 2026-09)\nNYRx Pharmacy Manual Policy Guidelines (Version 2026-3) > 4.0 Basis of Payment > Co-payments for Drugs and Medical Supplies\n[p 41]\nThe New York State Medicaid Program charges co-payments for many drug and medical supply items.\nHealth care providers have an obligation to provide services and goods regardless of a Medicaid member's ability to pay co-payments:\nPharmacy providers may not refuse services to otherwise eligible Medicaid members who cannot afford to pay the co-payment, per Social Security Act (SSA) § 1916 and Title 18 NYCRR § 360-7.12. Refusing to provide services is an unacceptable practice.\no Providers may attempt to collect outstanding copayments through methods such as requesting the copayment each time the member is provided with services or goods, sending bills or any other legal means.\n[p 42]\nPolicy Guidelines\nNYRx\nPharmacy providers must not reduce the amount charged on a Medicaid claim by the copayment that is collected from a Medicaid member. Each claim that requires a co-payment will have the co-payment automatically deducted from the final payment when the claim is approved for payment.\nProviders cannot offer gifts or cash per SSA § 1128A (a)(5), Title 18 NYCRR § 515.2, and Rules of the Board of Regents §29.1. It is not permissible for providers to:\no Providers cannot make offers where it is likely to influence the enrollee's selection of a provider of Medicaid items or services. Note: NYRx allows for the provision of an item or device to a NYRx member or enrollee which is directly related to the administration of medication for that person (e.g., medicine cup, dosing spoons, or pill organizer).\no Providers cannot proactively waive copays. Copays may be waived only as provided on a case-bycase basis per the financial need by request of the individual member or enrollee.\nMedicaid Co-payments:\nSome Medicaid members become eligible for Medicaid by spending part of their monthly income on medical care. Since co-payments paid or incurred can be used toward satisfying the spend-down (overage) in the following month, itemized bills or receipts for co-payments should be provided to members when requested.\nThere is a maximum amount per Medicaid member for all co-payments incurred per year and is calculated on a quarterly basis. The co-payment year starts April 1 and ends March 31. When a member reaches the quarterly co-pay maximum, they will receive a letter confirming the date on which the co-pay maximum was met and exempting the member from a co-payment until the end of the current co-payment quarter.\nCo-payment amounts are as follows:\no $3.00 for non-preferred Brand Name Drugs.\no $1.00 for Generic Drugs, preferred Brand Name Drugs, and Brand Drugs included in the Brand Less Than Generic Drugs Program.\no $0.50 for Non-Prescription (over the counter) Drugs.\no $1.00 for Medical/Sickroom Supplies.\nCo-payment is not required for certain members and service categories which include:\no Family planning (birth control) services including birth control pills, emergency contraception, and condoms.\no FDA-approved drugs to treat tuberculosis.\no FDA-approved drugs to treat mental illness (psychotropic drugs).\no Medicaid members younger than 21 years old.\no Medicaid members during pregnancy and for the two months after the month in which the pregnancy ends.\no Residents of Adult Care Facilities licensed by the New York State Department of Health (DOH).\no Residents of nursing homes.\no Residents of Intermediate Care Facilities for the Developmentally Disabled (ICF/DD).\no Residents of Office of Mental Health (OMH) or Office of Persons with Developmental Disabilities (OPWDD) certified residences.\no Members in Comprehensive Medicaid Case Management (CMCM) or Service Coordination Programs.\no Members in OMH or OPWDD Home and Community Based Services (HCBS) Waiver Programs. and\no Members in a DOH HCBS Waiver Program for Persons with Traumatic Brain Injury (TBI).\no Members with incomes below 100 percent of the federal poverty level.\no Members in Hospice.\no American Indians and Alaska Natives who have ever received a service from the Indian Health Service, tribal health programs or under contract health services referral.\n[p 43]\nPolicy Guidelines\nNYRx"
+    ]
+  },
+  "cost_note": "priced at the requested model's rates; a fallback hop bills at its own rates",
+  "request_id": "ada9cffe-a8d8-414e-a5d0-746c95f2c215",
+  "request_started_utc": "2026-10-18T04:01:57.138828+00:00",
+  "citation_check": {
+    "t_start": 10.777,
+    "duration_s": 0.0
+  },
+  "prices_per_mtok": {
+    "input": 2.0,
+    "output": 10.0,
+    "cache_read": 0.2,
+    "cache_write": 2.5
+  }
+}

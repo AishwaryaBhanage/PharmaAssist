@@ -1,0 +1,437 @@
+{
+  "question": "How does the 2025 VA pharmacotherapy summary say to start and titrate basal insulin, and what if hypoglycemia occurs?",
+  "request_id": "39435260-4e6b-45f3-9664-672f5e72dd3b",
+  "status": "answered",
+  "agent_status": "answered",
+  "assumption": null,
+  "answer": "The 2025 VA pharmacotherapy summary says to start **basal insulin** as **one injection daily at bedtime**. Initial dose: **10 units once daily** or **0.1–0.2 units/kg once daily**. Set an individualized **FPG target range**, then titrate based on self-monitored FPG by **10–15% weekly** or **2 units every 3 days**. If hypoglycemia occurs, **decrease the insulin dose by 10–20%**. It also notes glargine is preferred over NPH initially due to less hypoglycemia; for recurrent hypoglycemia despite dose adjustment, consider glargine U300, then degludec if it continues.",
+  "citations": [
+    {
+      "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+      "page": 8,
+      "link": "https://www.pbm.va.gov/PBM/AcademicDetailingService/Documents/508/IB10-1775_PharmacotherapyforT2DM_P97221.pdf#page=8",
+      "flag": null,
+      "locator": "va_pbm_t2dm_pharmacotherapy_2025:p8"
+    }
+  ],
+  "conflicts_noted": [],
+  "flags": [],
+  "needs_review": false,
+  "words": {
+    "displayed": 89,
+    "rendered": 89
+  },
+  "answered_by": "gpt-5.5-2026-04-23",
+  "provider": "openai",
+  "model": "gpt-5.5-2026-04-23",
+  "fallback_used": false,
+  "timing_s": {
+    "total": 7.206,
+    "search": 0.378,
+    "read_page": 0.018,
+    "list_documents": 0,
+    "lookups": 0,
+    "model_calls": [
+      1.615,
+      1.527,
+      3.668
+    ]
+  },
+  "lookups": 2,
+  "tokens": {
+    "input": 6662,
+    "output": 357,
+    "cache_read": 8704,
+    "cache_write": 0
+  },
+  "cost_usd": 0.048372,
+  "completeness": null,
+  "pages_seen": [
+    "va_pbm_t2dm_clinicians_guide:p14",
+    "va_pbm_t2dm_clinicians_guide:p15",
+    "va_pbm_t2dm_clinicians_guide:p16",
+    "va_pbm_t2dm_clinicians_guide:p17",
+    "va_pbm_t2dm_pharmacotherapy_2025:p7",
+    "va_pbm_t2dm_pharmacotherapy_2025:p8",
+    "va_pbm_t2dm_pharmacotherapy_2025:p9"
+  ],
+  "trace_id": null,
+  "started_at": "2026-10-18T23:44:08+00:00",
+  "config": {
+    "primary": "gpt-5.5",
+    "fallback": "claude-sonnet-5-5",
+    "effort": "medium",
+    "search": {
+      "mode": "hybrid",
+      "rrf_k": 60,
+      "fusion_depth": 100,
+      "return_parents": true,
+      "rerank": null
+    },
+    "max_tool_calls": 6,
+    "deadline_s": 25,
+    "search_k": 8,
+    "min_lookups": 1,
+    "completeness_pass": false,
+    "completeness_min_remaining_s": 8
+  },
+  "structured_lookups": true,
+  "context": {},
+  "model_answer": "The 2025 VA pharmacotherapy summary says to start **basal insulin** as **one injection daily at bedtime**. Initial dose: **10 units once daily** or **0.1–0.2 units/kg once daily**. Set an individualized **FPG target range**, then titrate based on self-monitored FPG by **10–15% weekly** or **2 units every 3 days**. If hypoglycemia occurs, **decrease the insulin dose by 10–20%**. It also notes glargine is preferred over NPH initially due to less hypoglycemia; for recurrent hypoglycemia despite dose adjustment, consider glargine U300, then degludec if it continues.",
+  "model_citations": [
+    {
+      "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+      "page": 8,
+      "link": "https://www.pbm.va.gov/PBM/AcademicDetailingService/Documents/508/IB10-1775_PharmacotherapyforT2DM_P97221.pdf#page=8",
+      "flag": null,
+      "locator": "va_pbm_t2dm_pharmacotherapy_2025:p8"
+    }
+  ],
+  "first_submit": null,
+  "model_calls": [
+    {
+      "t_start": 0.0,
+      "duration_s": 1.615,
+      "requested_model": "gpt-5.5",
+      "served_model": "gpt-5.5-2026-04-23",
+      "provider": "openai",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 526,
+        "output": 56,
+        "cache_read": 1536,
+        "cache_write": 0
+      },
+      "cost_usd": 0.005078,
+      "response_id": "resp_03124f9679ef9bae016ad559c124fc87d29eb825c949fe5ec8",
+      "input_messages": [
+        {
+          "role": "user",
+          "text": "Today's date: 2026-10-18\n\nQuestion: How does the 2025 VA pharmacotherapy summary say to start and titrate basal insulin, and what if hypoglycemia occurs?"
+        }
+      ],
+      "output": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "call_KAfy4OhfHFtap7OpGb4Oe3Qm",
+            "name": "search_documents",
+            "arguments": {
+              "program": "VA",
+              "query": "2025 VA pharmacotherapy summary basal insulin start titrate hypoglycemia occurs",
+              "k": 5
+            }
+          }
+        ]
+      }
+    },
+    {
+      "t_start": 1.994,
+      "duration_s": 1.527,
+      "requested_model": "gpt-5.5",
+      "served_model": "gpt-5.5-2026-04-23",
+      "provider": "openai",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 4776,
+        "output": 53,
+        "cache_read": 1536,
+        "cache_write": 0
+      },
+      "cost_usd": 0.026238,
+      "response_id": "resp_03124f9679ef9bae016ad559c3393887d2b9a28b99a86f00c5",
+      "input_messages": [
+        {
+          "role": "tool",
+          "tool_results": [
+            {
+              "call_id": "call_KAfy4OhfHFtap7OpGb4Oe3Qm",
+              "is_error": false,
+              "content": "[{\"doc_id\": \"va_pbm_t2dm_pharmacotherapy_2025\", \"page\": 8, \"program\": \"VA\", \"authority\": \"advisory\", \"date\": \"2025-04\", \"text\": \"Pharmacotherapy for Type 2 Diabetes Mellitus (T2DM) 2025: A VA Clinician's Summary (IB 10-1775) > Initiating insulin > Insulin selection\\n[p 8]\\nBasal insulin 1,2\\nBasal insulins include NPH, glargine, and degludec.\\n■ Start with a basal insulin and one injection daily at bedtime.\\n■ NPH can cause more hypoglycemia than glargine, making glargine the preferred initial basal insulin. 43-45 Insulin glargine-yfgn (Semglee®) is a biosimilar to insulin glargine (Lantus®). See ADS Biologics/Biosimilar SharePoint for more information.\\n■ Glargine 300 units/mL (or U300) is a concentrated version of glargine 100 units/mL (or U100). Glargine 300 units/mL and insulin degludec have a longer duration of action than glargine 100 units/mL (over 24 hours). Both are associated with less nocturnal and less severe hypoglycemia compared to glargine 100 units/mL. In patients with recurrent hypoglycemia, despite dosage adjustments, consider a trial of insulin glargine 300 units/mL. If hypoglycemia continues, consider switching to insulin degludec. 46 See criteria for use: https://www.va.gov/ formularyadvisor/.\\n[Figure, flowchart] Figure 5. Using basal insulin*1,2 (PDF page 8). Machine-generated visual interpretation; status: machine-interpreted from the page image by a vision model; structure and OCR cross-check passed.\\nBox n1 (start): Basal insulin Initial dose 10 units or 0.1 to 0.2 units/kg once daily -> if Set FPG target range: box n2\\nBox n2 (action): Titrate basal insulin 10 to 15% weekly or 2 units every 3 days based on self-monitored FPG -> if If patient has hypoglycemia: box n3\\nBox n3 (action): Decrease insulin Decrease insulin dose by 10 to 20%\\nDecision path: n1 -> [Set FPG target range] n2 -> [If patient has hypoglycemia] n3\\n*Individualize insulin regimen based on Veteran-specific factors and glucose measurements.\", \"pages\": [8], \"section\": \"Pharmacotherapy for Type 2 Diabetes Mellitus (T2DM) 2025 > Initiating insulin > Insulin selection\"}, {\"doc_id\": \"va_pbm_t2dm_clinicians_guide\", \"page\": 14, \"program\": \"VA\", \"authority\": \"advisory\", \"date\": \"2020-05\", \"text\": \"A VA Clinician's Guide to Diabetes Management in Primary Care (IB 10-1402) > Type 2 Diabetes A VA Clinician’s Guide to Diabetes Management in Primary Care (2020) > Initiating insulin\\n[p 14]\\nWhen deciding to start insulin in a Veteran, it is important to consider the following factors:\\nWhat do they prefer? Use motivational interviewing to identify their preferences. Ask the Veteran: How do you feel about taking insulin?\\nCognitive function\\nVisual acuity\\nAbility to detect hypoglycemia\\nWillingness to do injections\\nAvoid using statements that imply a punitive stance about insulin or that the patient has \\\"failed\\\" with other efforts. Diabetes is a progressive disease and many patients eventually require insulin for optimal diabetes management.\\n[Figure, flowchart] Figure 7. Using basal insulin*6,10 (PDF page 14). Machine-generated visual interpretation; status: machine-interpreted from the page image by a vision model; structure and OCR cross-check passed.\\nBox n1 (start): Basal insulin • Initial dose 10 units or 0.1 to 0.2 units/kg once daily -> if Set FPG target range: box n2\\nBox n2 (action): Titrate basal insulin • 10 to 15% weekly or 2 units every 3 days based on self-monitored FPG -> if If hypoglycemia: box n3\\nBox n3 (end): Decrease insulin • Decrease insulin dose by 10 to 20%\\nDecision path: n1 -> [Set FPG target range] n2 -> [If hypoglycemia] n3\\nThree-box left-to-right flowchart with a stopwatch icon above the middle box.\", \"pages\": [14], \"section\": \"Type 2 Diabetes A VA Clinician’s Guide to Diabetes Management in Primary Care (2020) > Initiating insulin\"}, {\"doc_id\": \"va_pbm_t2dm_pharmacotherapy_2025\", \"page\": 8, \"program\": \"VA\", \"authority\": \"advisory\", \"date\": \"2025-04\", \"text\": \"Pharmacotherapy for Type 2 Diabetes Mellitus (T2DM) 2"
+            }
+          ]
+        }
+      ],
+      "output": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "call_ndrxEsoX4yAGsaHOkak9jDb4",
+            "name": "read_page",
+            "arguments": {
+              "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+              "page": 8
+            }
+          }
+        ]
+      }
+    },
+    {
+      "t_start": 3.538,
+      "duration_s": 3.668,
+      "requested_model": "gpt-5.5",
+      "served_model": "gpt-5.5-2026-04-23",
+      "provider": "openai",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 1360,
+        "output": 248,
+        "cache_read": 5632,
+        "cache_write": 0
+      },
+      "cost_usd": 0.017056,
+      "response_id": "resp_03124f9679ef9bae016ad559c4ab6c87d2aa9e1a0bce1e6aa8",
+      "input_messages": [
+        {
+          "role": "tool",
+          "tool_results": [
+            {
+              "call_id": "call_ndrxEsoX4yAGsaHOkak9jDb4",
+              "is_error": false,
+              "content": "va_pbm_t2dm_pharmacotherapy_2025 page 8 (VA, advisory, 2025-04)\n\n \n \n \n \n \n \n \n \n \n \n \n \nInsulin selection \nBasal insulin1,2 \nBasal insulins include NPH, glargine, and degludec. \n■Start with a basal insulin and one injection daily at bedtime. \n■NPH can cause more hypoglycemia than glargine, making glargine the preferred initial basal \ninsulin.43–45 Insulin glargine-yfgn (Semglee®) is a biosimilar to insulin glargine (Lantus®). See \nADS Biologics/Biosimilar SharePoint for more information. \n■Glargine 300 units/mL (or U300) is a concentrated version of glargine 100 units/mL (or \nU100). Glargine 300 units/mL and insulin degludec have a longer duration of action than \nglargine 100 units/mL (over 24 hours). Both are associated with less nocturnal and less severe \nhypoglycemia compared to glargine 100 units/mL. In patients with recurrent hypoglycemia, \ndespite dosage adjustments, consider a trial of insulin glargine 300 units/mL. If hypoglycemia \ncontinues, consider switching to insulin degludec.46 See criteria for use: https://www.va.gov/ \nformularyadvisor/. \nFigure 5.  \nUsing basal insulin*1,2  \nBasal \ninsulin \nInitial dose 10 units \nor 0.1 to 0.2 \nunits/kg once daily \nSet FPG \ntarget \nrange \nTitrate basal \ninsulin \n10 to 15% weekly or \n2 units every 3 days \nbased on \nself-monitored FPG \nIf patient \nhas hypo­\nglycemia \nDecrease \ninsulin \nDecrease insulin \ndose by 10 to 20% \n*Individualize insulin regimen based on Veteran-specific factors and glucose measurements.\nPrandial (mealtime) insulin1,2 \nPrandial insulins include aspart, glulisine, lispro, and regular. \n■Consider GLP-1 RA before adding prandial insulin if inadequate glycemic control on basal \ninsulin and one or more oral agents.47 \n■Add prandial insulin when coverage is needed for meals. Consider when HbA1c continues \nto be above goal, basal insulin dose is > 0.5 units/kg, or glucose readings are elevated \nafter meals. \n■Rapid acting insulins like aspart, glulisine, and lispro should be administered 0–15 minutes \nbefore meals and are preferred to insulin regular due to easier administration. \n■Insulin regular should be administered 30 minutes before meals. The longer time of onset and \nduration may increase hypoglycemia risk.48 \n6\n  \n"
+            }
+          ]
+        }
+      ],
+      "output": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "call_AXDExQ3ccVXfvMavwa2fcH7Q",
+            "name": "submit_answer",
+            "arguments": {
+              "status": "answered",
+              "assumption": null,
+              "answer": "The 2025 VA pharmacotherapy summary says to start **basal insulin** as **one injection daily at bedtime**. Initial dose: **10 units once daily** or **0.1–0.2 units/kg once daily**. Set an individualized **FPG target range**, then titrate based on self-monitored FPG by **10–15% weekly** or **2 units every 3 days**. If hypoglycemia occurs, **decrease the insulin dose by 10–20%**. It also notes glargine is preferred over NPH initially due to less hypoglycemia; for recurrent hypoglycemia despite dose adjustment, consider glargine U300, then degludec if it continues.",
+              "citations": [
+                {
+                  "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+                  "page": 8,
+                  "row": null
+                }
+              ],
+              "conflicts_noted": []
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "search_documents",
+      "input": {
+        "program": "VA",
+        "query": "2025 VA pharmacotherapy summary basal insulin start titrate hypoglycemia occurs",
+        "k": 5
+      },
+      "duration_s": 0.378,
+      "is_error": false,
+      "pages": [
+        "va_pbm_t2dm_clinicians_guide:p14",
+        "va_pbm_t2dm_clinicians_guide:p15",
+        "va_pbm_t2dm_clinicians_guide:p16",
+        "va_pbm_t2dm_clinicians_guide:p17",
+        "va_pbm_t2dm_pharmacotherapy_2025:p7",
+        "va_pbm_t2dm_pharmacotherapy_2025:p8",
+        "va_pbm_t2dm_pharmacotherapy_2025:p9"
+      ],
+      "result": "[{\"doc_id\": \"va_pbm_t2dm_pharmacotherapy_2025\", \"page\": 8, \"program\": \"VA\", \"authority\": \"advisory\", \"date\": \"2025-04\", \"text\": \"Pharmacotherapy for Type 2 Diabetes Mellitus (T2DM) 2025: A VA Clinician's Summary (IB 10-1775) > Initiating insulin > Insulin selection\\n[p 8]\\nBasal insulin 1,2\\nBasal insulins include NPH, glargine, and degludec.\\n■ Start with a basal insulin and one injection daily at bedtime.\\n■ NPH can cause more hypoglycemia than glargine, making glargine the preferred initial basal insulin. 43-45 Insulin glargine-yfgn (Semglee®) is a biosimilar to insulin glargine (Lantus®). See ADS Biologics/Biosimilar SharePoint for more information.\\n■ Glargine 300 units/mL (or U300) is a concentrated version of glargine 100 units/mL (or U100). Glargine 300 units/mL and insulin degludec have a longer duration of action than glargine 100 units/mL (over 24 hours). Both are associated with less nocturnal and less severe hypoglycemia compared to glargine 100 units/mL. In patients with recurrent hypoglycemia, despite dosage adjustments, consider a trial of insulin glargine 300 units/mL. If hypoglycemia continues, consider switching to insulin degludec. 46 See criteria for use: https://www.va.gov/ formularyadvisor/.\\n[Figure, flowchart] Figure 5. Using basal insulin*1,2 (PDF page 8). Machine-generated visual interpretation; status: machine-interpreted from the page image by a vision model; structure and OCR cross-check passed.\\nBox n1 (start): Basal insulin Initial dose 10 units or 0.1 to 0.2 units/kg once daily -> if Set FPG target range: box n2\\nBox n2 (action): Titrate basal insulin 10 to 15% weekly or 2 units every 3 days based on self-monitored FPG -> if If patient has hypoglycemia: box n3\\nBox n3 (action): Decrease insulin Decrease insulin dose by 10 to 20%\\nDecision path: n1 -> [Set FPG target range] n2 -> [If patient has hypoglycemia] n3\\n*Individualize insulin regimen based on Veteran-specific factors and glucose measurements.\", \"pages\": [8], \"section\": \"Pharmacotherapy for Type 2 Diabetes Mellitus (T2DM) 2025 > Initiating insulin > Insulin selection\"}, {\"doc_id\": \"va_pbm_t2dm_clinicians_guide\", \"page\": 14, \"program\": \"VA\", \"authority\": \"advisory\", \"date\": \"2020-05\", \"text\": \"A VA Clinician's Guide to Diabetes Management in Primary Care (IB 10-1402) > Type 2 Diabetes A VA Clinician’s Guide to Diabetes Management in Primary Care (2020) > Initiating insulin\\n[p 14]\\nWhen deciding to start insulin in a Veteran, it is important to consider the following factors:\\nWhat do they prefer? Use motivational interviewing to identify their preferences. Ask the Veteran: How do you feel about taking insulin?\\nCognitive function\\nVisual acuity\\nAbility to detect hypoglycemia\\nWillingness to do injections\\nAvoid using statements that imply a punitive stance about insulin or that the patient has \\\"failed\\\" with other efforts. Diabetes is a progressive disease and many patients eventually require insulin for optimal diabetes management.\\n[Figure, flowchart] Figure 7. Using basal insulin*6,10 (PDF page 14). Machine-generated visual interpretation; status: machine-interpreted from the page image by a vision model; structure and OCR cross-check passed.\\nBox n1 (start): Basal insulin • Initial dose 10 units or 0.1 to 0.2 units/kg once daily -> if Set FPG target range: box n2\\nBox n2 (action): Titrate basal insulin • 10 to 15% weekly or 2 units every 3 days based on self-monitored FPG -> if If hypoglycemia: box n3\\nBox n3 (end): Decrease insulin • Decrease insulin dose by 10 to 20%\\nDecision path: n1 -> [Set FPG target range] n2 -> [If hypoglycemia] n3\\nThree-box left-to-right flowchart with a stopwatch icon above the middle box.\", \"pages\": [14], \"section\": \"Type 2 Diabetes A VA Clinician’s Guide to Diabetes Management in Primary Care (2020) > Initiating insulin\"}, {\"doc_id\": \"va_pbm_t2dm_pharmacotherapy_2025\", \"page\": 8, \"program\": \"VA\", \"authority\": \"advisory\", \"date\": \"2025-04\", \"text\": \"Pharmacotherapy for Type 2 Diabetes Mellitus (T2DM) 2",
+      "search": {
+        "original_query": "How does the 2025 VA pharmacotherapy summary say to start and titrate basal insulin, and what if hypoglycemia occurs?",
+        "agent_query": "2025 VA pharmacotherapy summary basal insulin start titrate hypoglycemia occurs",
+        "executed": [
+          {
+            "source": "original",
+            "query": "How does the 2025 VA pharmacotherapy summary say to start and titrate basal insulin, and what if hypoglycemia occurs?",
+            "program": "VA",
+            "k": 5,
+            "seconds": 0.377,
+            "cached": false,
+            "results": 5
+          },
+          {
+            "source": "agent",
+            "query": "2025 VA pharmacotherapy summary basal insulin start titrate hypoglycemia occurs",
+            "program": "VA",
+            "k": 5,
+            "seconds": 0.223,
+            "cached": false,
+            "results": 5
+          }
+        ],
+        "duplicates_merged": 4,
+        "returned": 6,
+        "from_both": 4,
+        "from_original_only": 1,
+        "from_agent_only": 1,
+        "provenance": [
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s7",
+            "found_by": {
+              "original": 1,
+              "agent": 1
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_clinicians_guide:s13",
+            "found_by": {
+              "original": 2,
+              "agent": 3
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s8",
+            "found_by": {
+              "original": 5,
+              "agent": 2
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_clinicians_guide:s15",
+            "found_by": {
+              "original": 3,
+              "agent": 4
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_clinicians_guide:s14",
+            "found_by": {
+              "original": 4
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s6",
+            "found_by": {
+              "agent": 5
+            }
+          }
+        ],
+        "hits": [
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s7",
+            "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+            "pages": [
+              8
+            ],
+            "ranks": {
+              "original": 1,
+              "agent": 1
+            },
+            "scores": {
+              "original": 0.0325,
+              "agent": 0.0328
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_clinicians_guide:s13",
+            "doc_id": "va_pbm_t2dm_clinicians_guide",
+            "pages": [
+              14
+            ],
+            "ranks": {
+              "original": 2,
+              "agent": 3
+            },
+            "scores": {
+              "original": 0.0317,
+              "agent": 0.0281
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s8",
+            "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+            "pages": [
+              8,
+              9
+            ],
+            "ranks": {
+              "original": 5,
+              "agent": 2
+            },
+            "scores": {
+              "original": 0.0296,
+              "agent": 0.0299
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_clinicians_guide:s15",
+            "doc_id": "va_pbm_t2dm_clinicians_guide",
+            "pages": [
+              16,
+              17
+            ],
+            "ranks": {
+              "original": 3,
+              "agent": 4
+            },
+            "scores": {
+              "original": 0.0303,
+              "agent": 0.0277
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_clinicians_guide:s14",
+            "doc_id": "va_pbm_t2dm_clinicians_guide",
+            "pages": [
+              14,
+              15
+            ],
+            "ranks": {
+              "original": 4
+            },
+            "scores": {
+              "original": 0.0299
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s6",
+            "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+            "pages": [
+              7
+            ],
+            "ranks": {
+              "agent": 5
+            },
+            "scores": {
+              "agent": 0.0268
+            }
+          }
+        ]
+      },
+      "t_start": 1.616
+    },
+    {
+      "name": "read_page",
+      "input": {
+        "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+        "page": 8
+      },
+      "duration_s": 0.018,
+      "is_error": false,
+      "pages": [
+        "va_pbm_t2dm_pharmacotherapy_2025:p8"
+      ],
+      "result": "va_pbm_t2dm_pharmacotherapy_2025 page 8 (VA, advisory, 2025-04)\n\n \n \n \n \n \n \n \n \n \n \n \n \nInsulin selection \nBasal insulin1,2 \nBasal insulins include NPH, glargine, and degludec. \n■Start with a basal insulin and one injection daily at bedtime. \n■NPH can cause more hypoglycemia than glargine, making glargine the preferred initial basal \ninsulin.43–45 Insulin glargine-yfgn (Semglee®) is a biosimilar to insulin glargine (Lantus®). See \nADS Biologics/Biosimilar SharePoint for more information. \n■Glargine 300 units/mL (or U300) is a concentrated version of glargine 100 units/mL (or \nU100). Glargine 300 units/mL and insulin degludec have a longer duration of action than \nglargine 100 units/mL (over 24 hours). Both are associated with less nocturnal and less severe \nhypoglycemia compared to glargine 100 units/mL. In patients with recurrent hypoglycemia, \ndespite dosage adjustments, consider a trial of insulin glargine 300 units/mL. If hypoglycemia \ncontinues, consider switching to insulin degludec.46 See criteria for use: https://www.va.gov/ \nformularyadvisor/. \nFigure 5.  \nUsing basal insulin*1,2  \nBasal \ninsulin \nInitial dose 10 units \nor 0.1 to 0.2 \nunits/kg once daily \nSet FPG \ntarget \nrange \nTitrate basal \ninsulin \n10 to 15% weekly or \n2 units every 3 days \nbased on \nself-monitored FPG \nIf patient \nhas hypo­\nglycemia \nDecrease \ninsulin \nDecrease insulin \ndose by 10 to 20% \n*Individualize insulin regimen based on Veteran-specific factors and glucose measurements.\nPrandial (mealtime) insulin1,2 \nPrandial insulins include aspart, glulisine, lispro, and regular. \n■Consider GLP-1 RA before adding prandial insulin if inadequate glycemic control on basal \ninsulin and one or more oral agents.47 \n■Add prandial insulin when coverage is needed for meals. Consider when HbA1c continues \nto be above goal, basal insulin dose is > 0.5 units/kg, or glucose readings are elevated \nafter meals. \n■Rapid acting insulins like aspart, glulisine, and lispro should be administered 0–15 minutes \nbefore meals and are preferred to insulin regular due to easier administration. \n■Insulin regular should be administered 30 minutes before meals. The longer time of onset and \nduration may increase hypoglycemia risk.48 \n6\n  \n",
+      "t_start": 3.52
+    }
+  ],
+  "cited_evidence": {
+    "va_pbm_t2dm_pharmacotherapy_2025:p8": "va_pbm_t2dm_pharmacotherapy_2025 (VA, advisory, 2025-04)\nPharmacotherapy for Type 2 Diabetes Mellitus (T2DM) 2025: A VA Clinician's Summary (IB 10-1775) > Initiating insulin > Insulin selection\n[p 8]\nBasal insulin 1,2\nBasal insulins include NPH, glargine, and degludec.\n■ Start with a basal insulin and one injection daily at bedtime.\n■ NPH can cause more hypoglycemia than glargine, making glargine the preferred initial basal insulin. 43-45 Insulin glargine-yfgn (Semglee®) is a biosimilar to insulin glargine (Lantus®). See ADS Biologics/Biosimilar SharePoint for more information.\n■ Glargine 300 units/mL (or U300) is a concentrated version of glargine 100 units/mL (or U100). Glargine 300 units/mL and insulin degludec have a longer duration of action than glargine 100 units/mL (over 24 hours). Both are associated with less nocturnal and less severe hypoglycemia compared to glargine 100 units/mL. In patients with recurrent hypoglycemia, despite dosage adjustments, consider a trial of insulin glargine 300 units/mL. If hypoglycemia continues, consider switching to insulin degludec. 46 See criteria for use: https://www.va.gov/ formularyadvisor/.\n[Figure, flowchart] Figure 5. Using basal insulin*1,2 (PDF page 8). Machine-generated visual interpretation; status: machine-interpreted from the page image by a vision model; structure and OCR cross-check passed.\nBox n1 (start): Basal insulin Initial dose 10 units or 0.1 to 0.2 units/kg once daily -> if Set FPG target range: box n2\nBox n2 (action): Titrate basal insulin 10 to 15% weekly or 2 units every 3 days based on self-monitored FPG -> if If patient has hypoglycemia: box n3\nBox n3 (action): Decrease insulin Decrease insulin dose by 10 to 20%\nDecision path: n1 -> [Set FPG target range] n2 -> [If patient has hypoglycemia] n3\n*Individualize insulin regimen based on Veteran-specific factors and glucose measurements.\n\nva_pbm_t2dm_pharmacotherapy_2025 (VA, advisory, 2025-04)\nPharmacotherapy for Type 2 Diabetes Mellitus (T2DM) 2025: A VA Clinician's Summary (IB 10-1775) > Initiating insulin > Prandial (mealtime) insulin1,2\n[p 8]\nPrandial (mealtime) insulin 1,2\nPrandial insulins include aspart, glulisine, lispro, and regular.\n■ Consider GLP-1 RA before adding prandial insulin if inadequate glycemic control on basal insulin and one or more oral agents. 47\n■ Add prandial insulin when coverage is needed for meals. Consider when HbA1c continues to be above goal, basal insulin dose is > 0.5 units/kg, or glucose readings are elevated after meals.\n■ Rapid acting insulins like aspart, glulisine, and lispro should be administered 0-15 minutes before meals and are preferred to insulin regular due to easier administration.\n■ Insulin regular should be administered 30 minutes before meals. The longer time of onset and duration may increase hypoglycemia risk. 48\n[p 9]\nFigure 6. Using prandial insulin\n[Figure, flowchart] untitled in the image; see the section heading (PDF page 9). Machine-generated visual interpretation; status: machine-interpreted from the page image by a vision model; structure and OCR cross-check passed.\nBox n1 (start): Starting prandial insulin • Start with one dose before the largest meal of the day. • Use in addition to basal insulin. • Begin with 4 units or 10% of basal dose. • Discontinue sulfonylurea, meglitinides, and DPP-4 I. -> if Home glucose* or HbA1c over target range: box n2\nBox n2 (action): Titrating prandial insulin • Increase dose by 1 to 2 units or 10 to 15% twice weekly • If having hypoglycemia, determine the cause (e.g., missed meal, exercise). - If no clear reason, lower dose by 10 to 20% -> if HbA1c over target range: box n3\nBox n3 (action): Adding prandial doses • Start with adding a second prandial dose and follow titration schedule • Recheck HbA1c in 3 months • If HbA1c still elevated, adjust regimen based on glucose patterns; consider adding a third prandial insulin dose\nDecision path: n1 -> [Home glucose* or HbA1c over target range] n2 -> [HbA1c over target range] n3\nUnreadable or ambiguous (not interpreted): Footnote text for the asterisk on 'Home glucose*' is not visible in the crop\n■ Insulin aspart protamine/insulin aspart 70/30 (Novolog 70/30) or insulin 70/30 NPH/REG (Novolin 70/30) - Note these are look-alike, sound-alike drugs.\n■ Need to have regular meal routines and not skip meals.\n■ Novolog 70/30 is preferred since it is administered 0-15 minutes before mealtime, while Novolin 70/30 is administered 30 minutes before eating.\n\nva_pbm_t2dm_pharmacotherapy_2025 page 8 (VA, advisory, 2025-04)\n\n \n \n \n \n \n \n \n \n \n \n \n \nInsulin selection \nBasal insulin1,2 \nBasal insulins include NPH, glargine, and degludec. \n■Start with a basal insulin and one injection daily at bedtime. \n■NPH can cause more hypoglycemia than glargine, making glargine the preferred initial basal \ninsulin.43–45 Insulin glargine-yfgn (Semglee®) is a biosimilar to insulin glargine (Lantus®). See \nADS Biologics/Biosimilar SharePoint for more information. \n■Glargine 300 units/mL (or U300) is a concentrated version of glargine 100 units/mL (or \nU100). Glargine 300 units/mL and insulin degludec have a longer duration of action than \nglargine 100 units/mL (over 24 hours). Both are associated with less nocturnal and less severe \nhypoglycemia compared to glargine 100 units/mL. In patients with recurrent hypoglycemia, \ndespite dosage adjustments, consider a trial of insulin glargine 300 units/mL. If hypoglycemia \ncontinues, consider switching to insulin degludec.46 See criteria for use: https://www.va.gov/ \nformularyadvisor/. \nFigure 5.  \nUsing basal insulin*1,2  \nBasal \ninsulin \nInitial dose 10 units \nor 0.1 to 0.2 \nunits/kg once daily \nSet FPG \ntarget \nrange \nTitrate basal \ninsulin \n10 to 15% weekly or \n2 units every 3 days \nbased on \nself-monitored FPG \nIf patient \nhas hypo­\nglycemia \nDecrease \ninsulin \nDecrease insulin \ndose by 10 to 20% \n*Individualize insulin regimen based on Veteran-specific factors and glucose measurements.\nPrandial (mealtime) insulin1,2 \nPran"
+  },
+  "cited_evidence_parts": {
+    "va_pbm_t2dm_pharmacotherapy_2025:p8": [
+      "va_pbm_t2dm_pharmacotherapy_2025 (VA, advisory, 2025-04)\nPharmacotherapy for Type 2 Diabetes Mellitus (T2DM) 2025: A VA Clinician's Summary (IB 10-1775) > Initiating insulin > Insulin selection\n[p 8]\nBasal insulin 1,2\nBasal insulins include NPH, glargine, and degludec.\n■ Start with a basal insulin and one injection daily at bedtime.\n■ NPH can cause more hypoglycemia than glargine, making glargine the preferred initial basal insulin. 43-45 Insulin glargine-yfgn (Semglee®) is a biosimilar to insulin glargine (Lantus®). See ADS Biologics/Biosimilar SharePoint for more information.\n■ Glargine 300 units/mL (or U300) is a concentrated version of glargine 100 units/mL (or U100). Glargine 300 units/mL and insulin degludec have a longer duration of action than glargine 100 units/mL (over 24 hours). Both are associated with less nocturnal and less severe hypoglycemia compared to glargine 100 units/mL. In patients with recurrent hypoglycemia, despite dosage adjustments, consider a trial of insulin glargine 300 units/mL. If hypoglycemia continues, consider switching to insulin degludec. 46 See criteria for use: https://www.va.gov/ formularyadvisor/.\n[Figure, flowchart] Figure 5. Using basal insulin*1,2 (PDF page 8). Machine-generated visual interpretation; status: machine-interpreted from the page image by a vision model; structure and OCR cross-check passed.\nBox n1 (start): Basal insulin Initial dose 10 units or 0.1 to 0.2 units/kg once daily -> if Set FPG target range: box n2\nBox n2 (action): Titrate basal insulin 10 to 15% weekly or 2 units every 3 days based on self-monitored FPG -> if If patient has hypoglycemia: box n3\nBox n3 (action): Decrease insulin Decrease insulin dose by 10 to 20%\nDecision path: n1 -> [Set FPG target range] n2 -> [If patient has hypoglycemia] n3\n*Individualize insulin regimen based on Veteran-specific factors and glucose measurements.\n\nva_pbm_t2dm_pharmacotherapy_2025 (VA, advisory, 2025-04)\nPharmacotherapy for Type 2 Diabetes Mellitus (T2DM) 2025: A VA Clinician's Summary (IB 10-1775) > Initiating insulin > Prandial (mealtime) insulin1,2\n[p 8]\nPrandial (mealtime) insulin 1,2\nPrandial insulins include aspart, glulisine, lispro, and regular.\n■ Consider GLP-1 RA before adding prandial insulin if inadequate glycemic control on basal insulin and one or more oral agents. 47\n■ Add prandial insulin when coverage is needed for meals. Consider when HbA1c continues to be above goal, basal insulin dose is > 0.5 units/kg, or glucose readings are elevated after meals.\n■ Rapid acting insulins like aspart, glulisine, and lispro should be administered 0-15 minutes before meals and are preferred to insulin regular due to easier administration.\n■ Insulin regular should be administered 30 minutes before meals. The longer time of onset and duration may increase hypoglycemia risk. 48\n[p 9]\nFigure 6. Using prandial insulin\n[Figure, flowchart] untitled in the image; see the section heading (PDF page 9). Machine-generated visual interpretation; status: machine-interpreted from the page image by a vision model; structure and OCR cross-check passed.\nBox n1 (start): Starting prandial insulin • Start with one dose before the largest meal of the day. • Use in addition to basal insulin. • Begin with 4 units or 10% of basal dose. • Discontinue sulfonylurea, meglitinides, and DPP-4 I. -> if Home glucose* or HbA1c over target range: box n2\nBox n2 (action): Titrating prandial insulin • Increase dose by 1 to 2 units or 10 to 15% twice weekly • If having hypoglycemia, determine the cause (e.g., missed meal, exercise). - If no clear reason, lower dose by 10 to 20% -> if HbA1c over target range: box n3\nBox n3 (action): Adding prandial doses • Start with adding a second prandial dose and follow titration schedule • Recheck HbA1c in 3 months • If HbA1c still elevated, adjust regimen based on glucose patterns; consider adding a third prandial insulin dose\nDecision path: n1 -> [Home glucose* or HbA1c over target range] n2 -> [HbA1c over target range] n3\nUnreadable or ambiguous (not interpreted): Footnote text for the asterisk on 'Home glucose*' is not visible in the crop\n■ Insulin aspart protamine/insulin aspart 70/30 (Novolog 70/30) or insulin 70/30 NPH/REG (Novolin 70/30) - Note these are look-alike, sound-alike drugs.\n■ Need to have regular meal routines and not skip meals.\n■ Novolog 70/30 is preferred since it is administered 0-15 minutes before mealtime, while Novolin 70/30 is administered 30 minutes before eating.",
+      "va_pbm_t2dm_pharmacotherapy_2025 page 8 (VA, advisory, 2025-04)\n\n \n \n \n \n \n \n \n \n \n \n \n \nInsulin selection \nBasal insulin1,2 \nBasal insulins include NPH, glargine, and degludec. \n■Start with a basal insulin and one injection daily at bedtime. \n■NPH can cause more hypoglycemia than glargine, making glargine the preferred initial basal \ninsulin.43–45 Insulin glargine-yfgn (Semglee®) is a biosimilar to insulin glargine (Lantus®). See \nADS Biologics/Biosimilar SharePoint for more information. \n■Glargine 300 units/mL (or U300) is a concentrated version of glargine 100 units/mL (or \nU100). Glargine 300 units/mL and insulin degludec have a longer duration of action than \nglargine 100 units/mL (over 24 hours). Both are associated with less nocturnal and less severe \nhypoglycemia compared to glargine 100 units/mL. In patients with recurrent hypoglycemia, \ndespite dosage adjustments, consider a trial of insulin glargine 300 units/mL. If hypoglycemia \ncontinues, consider switching to insulin degludec.46 See criteria for use: https://www.va.gov/ \nformularyadvisor/. \nFigure 5.  \nUsing basal insulin*1,2  \nBasal \ninsulin \nInitial dose 10 units \nor 0.1 to 0.2 \nunits/kg once daily \nSet FPG \ntarget \nrange \nTitrate basal \ninsulin \n10 to 15% weekly or \n2 units every 3 days \nbased on \nself-monitored FPG \nIf patient \nhas hypo­\nglycemia \nDecrease \ninsulin \nDecrease insulin \ndose by 10 to 20% \n*Individualize insulin regimen based on Veteran-specific factors and glucose measurements.\nPrandial (mealtime) insulin1,2 \nPrandial insulins include aspart, glulisine, lispro, and regular. \n■Consider GLP-1 RA before adding prandial insulin if inadequate glycemic control on basal \ninsulin and one or more oral agents.47 \n■Add prandial insulin when coverage is needed for meals. Consider when HbA1c continues \nto be above goal, basal insulin dose is > 0.5 units/kg, or glucose readings are elevated \nafter meals. \n■Rapid acting insulins like aspart, glulisine, and lispro should be administered 0–15 minutes \nbefore meals and are preferred to insulin regular due to easier administration. \n■Insulin regular should be administered 30 minutes before meals. The longer time of onset and \nduration may increase hypoglycemia risk.48 \n6\n  \n"
+    ]
+  },
+  "cost_note": "each call priced at its serving role's rates (llm.<role>.prices_per_mtok)",
+  "request_started_utc": "2026-10-18T23:44:00.992865+00:00",
+  "citation_check": {
+    "t_start": 7.206,
+    "duration_s": 0.0
+  }
+}

@@ -1,0 +1,435 @@
+{
+  "question": "What's the best amoxicillin dosing for pediatric ear infections?",
+  "status": "not_in_documents",
+  "assumption": "Assuming a general clinical question; no program specified.",
+  "answer": "The documents don't answer this. They cover diabetes and opioid guidance (VA/DoD guidelines, Medicare Part D opioid policy) and NY Medicaid PDL and pharmacy policy. My search found nothing on amoxicillin dosing or pediatric otitis media. I won't answer from general knowledge. Please check a pediatric antimicrobial reference or current AAP guidance. If you need coverage, PA or QL status for amoxicillin under NY Medicaid, ask that separately.",
+  "citations": [],
+  "conflicts_noted": [],
+  "flags": [],
+  "needs_review": true,
+  "words": {
+    "displayed": 68,
+    "rendered": 68
+  },
+  "answered_by": "claude-sonnet-5-5",
+  "fallback_used": false,
+  "timing_s": {
+    "total": 6.689,
+    "search": 0.356,
+    "search_cold": 0,
+    "search_warm": 0.356,
+    "read_page": 0,
+    "list_documents": 0,
+    "model_calls": [
+      1.108,
+      5.224
+    ]
+  },
+  "index_warm_at_start": true,
+  "lookups": 1,
+  "tokens": {
+    "input": 6,
+    "output": 394,
+    "cache_read": 3593,
+    "cache_write": 25825
+  },
+  "cost_usd": 0.069233,
+  "pages_seen": [
+    "ny_medicaid_pdl:p40",
+    "va_dod_cpg_opioids_2022:p100",
+    "va_dod_cpg_opioids_2022:p101",
+    "va_dod_cpg_opioids_2022:p109",
+    "va_dod_cpg_opioids_2022:p110",
+    "va_dod_cpg_opioids_2022:p111",
+    "va_dod_cpg_opioids_2022:p112",
+    "va_dod_cpg_opioids_2022:p113",
+    "va_dod_cpg_opioids_2022:p114",
+    "va_dod_cpg_opioids_2022:p115",
+    "va_dod_cpg_opioids_2022:p116",
+    "va_dod_cpg_opioids_2022:p117",
+    "va_dod_cpg_opioids_2022:p118",
+    "va_dod_cpg_opioids_2022:p119",
+    "va_dod_cpg_opioids_2022:p50",
+    "va_dod_cpg_opioids_2022:p51",
+    "va_dod_cpg_opioids_2022:p52",
+    "va_dod_cpg_opioids_2022:p87",
+    "va_dod_cpg_opioids_2022:p88",
+    "va_dod_cpg_opioids_2022:p98",
+    "va_dod_cpg_opioids_2022:p99"
+  ],
+  "started_at": "2026-10-18T06:07:28+00:00",
+  "config": {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium",
+    "setup": "docling_norerank_structured",
+    "max_tool_calls": 6,
+    "deadline_s": 25,
+    "search_k": 8
+  },
+  "structured_lookups": true,
+  "model_calls": [
+    {
+      "t_start": 0.0,
+      "duration_s": 1.108,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 4,
+        "output": 64,
+        "cache_read": 0,
+        "cache_write": 3593
+      }
+    },
+    {
+      "t_start": 1.465,
+      "duration_s": 5.224,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 2,
+        "output": 330,
+        "cache_read": 3593,
+        "cache_write": 22232
+      }
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "search_documents",
+      "input": {
+        "query": "amoxicillin pediatric otitis media dosing"
+      },
+      "duration_s": 0.356,
+      "is_error": false,
+      "pages": [
+        "ny_medicaid_pdl:p40",
+        "va_dod_cpg_opioids_2022:p100",
+        "va_dod_cpg_opioids_2022:p101",
+        "va_dod_cpg_opioids_2022:p109",
+        "va_dod_cpg_opioids_2022:p110",
+        "va_dod_cpg_opioids_2022:p111",
+        "va_dod_cpg_opioids_2022:p112",
+        "va_dod_cpg_opioids_2022:p113",
+        "va_dod_cpg_opioids_2022:p114",
+        "va_dod_cpg_opioids_2022:p115",
+        "va_dod_cpg_opioids_2022:p116",
+        "va_dod_cpg_opioids_2022:p117",
+        "va_dod_cpg_opioids_2022:p118",
+        "va_dod_cpg_opioids_2022:p119",
+        "va_dod_cpg_opioids_2022:p50",
+        "va_dod_cpg_opioids_2022:p51",
+        "va_dod_cpg_opioids_2022:p52",
+        "va_dod_cpg_opioids_2022:p87",
+        "va_dod_cpg_opioids_2022:p88",
+        "va_dod_cpg_opioids_2022:p98",
+        "va_dod_cpg_opioids_2022:p99"
+      ],
+      "index_loaded": true,
+      "search": {
+        "original_query": "What's the best amoxicillin dosing for pediatric ear infections?",
+        "agent_query": "amoxicillin pediatric otitis media dosing",
+        "executed": [
+          {
+            "source": "original",
+            "query": "What's the best amoxicillin dosing for pediatric ear infections?",
+            "program": null,
+            "k": 8,
+            "seconds": 0.252,
+            "cached": false,
+            "results": 8
+          },
+          {
+            "source": "agent",
+            "query": "amoxicillin pediatric otitis media dosing",
+            "program": null,
+            "k": 8,
+            "seconds": 0.354,
+            "cached": false,
+            "results": 8
+          }
+        ],
+        "duplicates_merged": 4,
+        "returned": 12,
+        "from_both": 4,
+        "from_original_only": 4,
+        "from_agent_only": 4,
+        "provenance": [
+          {
+            "unit": "va_dod_cpg_opioids_2022:s89",
+            "found_by": {
+              "original": 1,
+              "agent": 1
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s88",
+            "found_by": {
+              "original": 2,
+              "agent": 2
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s82",
+            "found_by": {
+              "original": 4,
+              "agent": 7
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s83",
+            "found_by": {
+              "original": 5,
+              "agent": 8
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s87",
+            "found_by": {
+              "original": 3
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s77",
+            "found_by": {
+              "agent": 3
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s91",
+            "found_by": {
+              "agent": 4
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s84",
+            "found_by": {
+              "agent": 5
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s45",
+            "found_by": {
+              "original": 6
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s76",
+            "found_by": {
+              "agent": 6
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s74",
+            "found_by": {
+              "original": 7
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s68",
+            "found_by": {
+              "original": 8
+            }
+          }
+        ],
+        "hits": [
+          {
+            "unit": "va_dod_cpg_opioids_2022:s89",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              117,
+              118,
+              119
+            ],
+            "ranks": {
+              "original": 1,
+              "agent": 1
+            },
+            "scores": {
+              "original": 0.0285,
+              "agent": 0.0289
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s88",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              116,
+              117
+            ],
+            "ranks": {
+              "original": 2,
+              "agent": 2
+            },
+            "scores": {
+              "original": 0.0242,
+              "agent": 0.0264
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s82",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              109
+            ],
+            "ranks": {
+              "original": 4,
+              "agent": 7
+            },
+            "scores": {
+              "original": 0.018,
+              "agent": 0.0209
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s83",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              110,
+              111
+            ],
+            "ranks": {
+              "original": 5,
+              "agent": 8
+            },
+            "scores": {
+              "original": 0.0177,
+              "agent": 0.0205
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s87",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              115,
+              116
+            ],
+            "ranks": {
+              "original": 3
+            },
+            "scores": {
+              "original": 0.0207
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s77",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              100,
+              101
+            ],
+            "ranks": {
+              "agent": 3
+            },
+            "scores": {
+              "agent": 0.0238
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s91",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              119
+            ],
+            "ranks": {
+              "agent": 4
+            },
+            "scores": {
+              "agent": 0.0233
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s84",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              112,
+              113,
+              114
+            ],
+            "ranks": {
+              "agent": 5
+            },
+            "scores": {
+              "agent": 0.022
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s45",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              50,
+              51,
+              52
+            ],
+            "ranks": {
+              "original": 6
+            },
+            "scores": {
+              "original": 0.0172
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s76",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              98,
+              99
+            ],
+            "ranks": {
+              "agent": 6
+            },
+            "scores": {
+              "agent": 0.0216
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s74",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              40
+            ],
+            "ranks": {
+              "original": 7
+            },
+            "scores": {
+              "original": 0.0171
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s68",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              87,
+              88
+            ],
+            "ranks": {
+              "original": 8
+            },
+            "scores": {
+              "original": 0.0164
+            }
+          }
+        ]
+      },
+      "t_start": 1.109
+    }
+  ],
+  "cited_evidence": {},
+  "cited_evidence_parts": {},
+  "cost_note": "priced at the requested model's rates; a fallback hop bills at its own rates",
+  "request_id": "ab7e3204-31d2-4efd-a4fb-0a861aced538",
+  "request_started_utc": "2026-10-18T06:07:21.954093+00:00",
+  "citation_check": {
+    "t_start": 6.689,
+    "duration_s": 0.0
+  },
+  "prices_per_mtok": {
+    "input": 2.0,
+    "output": 10.0,
+    "cache_read": 0.2,
+    "cache_write": 2.5
+  }
+}

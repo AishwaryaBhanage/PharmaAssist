@@ -1,0 +1,975 @@
+{
+  "question": "Which diabetes products change preferred status on NY Medicaid on 10/22/2026?",
+  "status": "answered",
+  "assumption": "Assuming NY Medicaid (NYRx PDL, effective-date markers); \"diabetes products\" includes insulin and glucagon. Searched the PDL text, not exhaustively by every class.",
+  "answer": "Assuming NY Medicaid, as of today (10/17/2026) none of these changes are in effect yet. All take effect 10/22/2026:\n\n| Product | Status as of 10/22/2026 |\n|---|---|\n| Humalog® 100 U/mL vial, pen, cartridge | Preferred |\n| Humalog® Jr. Kwikpen | Preferred |\n| Insulin aspart (gen Novolog®) cartridge, vial, pen | Non-preferred |\n| Glucagon HCl emergency kit | Preferred |\n| Gvoke® pen, syringe, vial | Preferred |\n\nThe GLP-1 and SGLT2 classes show no 10/22 markers in the rows I retrieved. I didn't find markers in other diabetes classes, but I didn't check every class.",
+  "citations": [
+    {
+      "doc_id": "ny_medicaid_pdl",
+      "page": 37,
+      "link": "https://newyork.fhsc.com/downloads/providers/NYRx_PDP_PDL.pdf#page=37",
+      "flag": null,
+      "locator": "ny_medicaid_pdl:p37"
+    },
+    {
+      "doc_id": "ny_medicaid_pdl",
+      "page": 34,
+      "link": "https://newyork.fhsc.com/downloads/providers/NYRx_PDP_PDL.pdf#page=34",
+      "flag": null,
+      "locator": "ny_medicaid_pdl:p34"
+    }
+  ],
+  "conflicts_noted": [],
+  "flags": [],
+  "needs_review": false,
+  "words": {
+    "displayed": 81,
+    "rendered": 81
+  },
+  "answered_by": "claude-sonnet-5-5",
+  "fallback_used": false,
+  "timing_s": {
+    "total": 16.761,
+    "search": 7.114,
+    "search_cold": 0,
+    "search_warm": 7.114,
+    "read_page": 0,
+    "list_documents": 0,
+    "model_calls": [
+      1.966,
+      3.418,
+      4.256
+    ]
+  },
+  "index_warm_at_start": true,
+  "lookups": 3,
+  "tokens": {
+    "input": 8,
+    "output": 951,
+    "cache_read": 23979,
+    "cache_write": 29474
+  },
+  "cost_usd": 0.088007,
+  "pages_seen": [
+    "ny_medicaid_pdl:p1",
+    "ny_medicaid_pdl:p11",
+    "ny_medicaid_pdl:p12",
+    "ny_medicaid_pdl:p14",
+    "ny_medicaid_pdl:p15",
+    "ny_medicaid_pdl:p16",
+    "ny_medicaid_pdl:p29",
+    "ny_medicaid_pdl:p34",
+    "ny_medicaid_pdl:p35",
+    "ny_medicaid_pdl:p36",
+    "ny_medicaid_pdl:p37",
+    "ny_medicaid_pdl:p45",
+    "ny_medicaid_pdl:p46",
+    "ny_medicaid_pdl:p7",
+    "ny_medicaid_pdl:p9",
+    "ny_medicaid_pharmacy_policy:p22",
+    "ny_medicaid_pharmacy_policy:p23",
+    "ny_medicaid_pharmacy_policy:p29",
+    "ny_medicaid_pharmacy_policy:p30",
+    "ny_medicaid_pharmacy_policy:p41",
+    "ny_medicaid_pharmacy_policy:p42",
+    "ny_medicaid_pharmacy_policy:p43",
+    "ny_medicaid_pharmacy_policy:p6",
+    "ny_medicaid_pharmacy_policy:p7"
+  ],
+  "started_at": "2026-10-18T04:00:22+00:00",
+  "config": {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium",
+    "setup": "docling_rerank_structured",
+    "max_tool_calls": 6,
+    "deadline_s": 25,
+    "search_k": 8
+  },
+  "structured_lookups": true,
+  "model_calls": [
+    {
+      "t_start": 0.0,
+      "duration_s": 1.966,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 4,
+        "output": 177,
+        "cache_read": 0,
+        "cache_write": 3599
+      }
+    },
+    {
+      "t_start": 4.599,
+      "duration_s": 3.418,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 2,
+        "output": 243,
+        "cache_read": 3599,
+        "cache_write": 16781
+      }
+    },
+    {
+      "t_start": 12.505,
+      "duration_s": 4.256,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 2,
+        "output": 531,
+        "cache_read": 20380,
+        "cache_write": 9094
+      }
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "search_documents",
+      "input": {
+        "query": "effective 10/22/2026 preferred non-preferred diabetes",
+        "program": "NY Medicaid",
+        "k": 15
+      },
+      "duration_s": 2.627,
+      "is_error": false,
+      "pages": [
+        "ny_medicaid_pdl:p11",
+        "ny_medicaid_pdl:p12",
+        "ny_medicaid_pdl:p14",
+        "ny_medicaid_pdl:p15",
+        "ny_medicaid_pdl:p16",
+        "ny_medicaid_pdl:p29",
+        "ny_medicaid_pdl:p34",
+        "ny_medicaid_pdl:p35",
+        "ny_medicaid_pdl:p36",
+        "ny_medicaid_pdl:p37",
+        "ny_medicaid_pdl:p45",
+        "ny_medicaid_pdl:p46",
+        "ny_medicaid_pdl:p7",
+        "ny_medicaid_pdl:p9",
+        "ny_medicaid_pharmacy_policy:p22",
+        "ny_medicaid_pharmacy_policy:p23",
+        "ny_medicaid_pharmacy_policy:p29",
+        "ny_medicaid_pharmacy_policy:p30",
+        "ny_medicaid_pharmacy_policy:p41",
+        "ny_medicaid_pharmacy_policy:p42",
+        "ny_medicaid_pharmacy_policy:p43",
+        "ny_medicaid_pharmacy_policy:p6",
+        "ny_medicaid_pharmacy_policy:p7"
+      ],
+      "index_loaded": true,
+      "search": {
+        "original_query": "Which diabetes products change preferred status on NY Medicaid on 10/22/2026?",
+        "agent_query": "effective 10/22/2026 preferred non-preferred diabetes",
+        "executed": [
+          {
+            "source": "original",
+            "query": "Which diabetes products change preferred status on NY Medicaid on 10/22/2026?",
+            "program": "NY Medicaid",
+            "k": 15,
+            "seconds": 1.611,
+            "cached": false,
+            "results": 15
+          },
+          {
+            "source": "agent",
+            "query": "effective 10/22/2026 preferred non-preferred diabetes",
+            "program": "NY Medicaid",
+            "k": 15,
+            "seconds": 2.625,
+            "cached": false,
+            "results": 15
+          }
+        ],
+        "duplicates_merged": 8,
+        "returned": 20,
+        "from_both": 8,
+        "from_original_only": 6,
+        "from_agent_only": 6,
+        "provenance": [
+          {
+            "unit": "ny_medicaid_pdl:s24",
+            "found_by": {
+              "original": 1,
+              "agent": 1
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s67",
+            "found_by": {
+              "original": 2,
+              "agent": 4
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s84",
+            "found_by": {
+              "original": 3,
+              "agent": 3
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s6",
+            "found_by": {
+              "original": 8,
+              "agent": 2
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s64",
+            "found_by": {
+              "original": 4,
+              "agent": 6
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s5",
+            "found_by": {
+              "original": 7,
+              "agent": 5
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s61",
+            "found_by": {
+              "original": 6,
+              "agent": 7
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s62",
+            "found_by": {
+              "original": 14,
+              "agent": 8
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s50",
+            "found_by": {
+              "original": 5
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s30",
+            "found_by": {
+              "original": 9
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s31",
+            "found_by": {
+              "agent": 9
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s3",
+            "found_by": {
+              "original": 10
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s63",
+            "found_by": {
+              "agent": 10
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s39",
+            "found_by": {
+              "original": 11
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s19",
+            "found_by": {
+              "agent": 11
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s61",
+            "found_by": {
+              "original": 12
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s15",
+            "found_by": {
+              "agent": 12
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s65",
+            "found_by": {
+              "original": 13
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s21",
+            "found_by": {
+              "agent": 13
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s23",
+            "found_by": {
+              "agent": 14
+            }
+          }
+        ],
+        "hits": [
+          {
+            "unit": "ny_medicaid_pdl:s24",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              12
+            ],
+            "ranks": {
+              "original": 1,
+              "agent": 1
+            },
+            "scores": {
+              "original": 0.8186,
+              "agent": 0.9828
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s67",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              37
+            ],
+            "ranks": {
+              "original": 2,
+              "agent": 4
+            },
+            "scores": {
+              "original": 0.7086,
+              "agent": 0.8463
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s84",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              45,
+              46
+            ],
+            "ranks": {
+              "original": 3,
+              "agent": 3
+            },
+            "scores": {
+              "original": 0.5762,
+              "agent": 0.8551
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s6",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              7
+            ],
+            "ranks": {
+              "original": 8,
+              "agent": 2
+            },
+            "scores": {
+              "original": 0.3768,
+              "agent": 0.8638
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s64",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              36
+            ],
+            "ranks": {
+              "original": 4,
+              "agent": 6
+            },
+            "scores": {
+              "original": 0.5005,
+              "agent": 0.2562
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s5",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              7
+            ],
+            "ranks": {
+              "original": 7,
+              "agent": 5
+            },
+            "scores": {
+              "original": 0.379,
+              "agent": 0.6522
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s61",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              34
+            ],
+            "ranks": {
+              "original": 6,
+              "agent": 7
+            },
+            "scores": {
+              "original": 0.4283,
+              "agent": 0.2475
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s62",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              34
+            ],
+            "ranks": {
+              "original": 14,
+              "agent": 8
+            },
+            "scores": {
+              "original": 0.0021,
+              "agent": 0.0405
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s50",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              29
+            ],
+            "ranks": {
+              "original": 5
+            },
+            "scores": {
+              "original": 0.4922
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s30",
+            "doc_id": "ny_medicaid_pharmacy_policy",
+            "pages": [
+              22,
+              23
+            ],
+            "ranks": {
+              "original": 9
+            },
+            "scores": {
+              "original": 0.0222
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s31",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              14,
+              15,
+              16
+            ],
+            "ranks": {
+              "agent": 9
+            },
+            "scores": {
+              "agent": 0.0332
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s3",
+            "doc_id": "ny_medicaid_pharmacy_policy",
+            "pages": [
+              6,
+              7
+            ],
+            "ranks": {
+              "original": 10
+            },
+            "scores": {
+              "original": 0.0129
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s63",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              35
+            ],
+            "ranks": {
+              "agent": 10
+            },
+            "scores": {
+              "agent": 0.0264
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s39",
+            "doc_id": "ny_medicaid_pharmacy_policy",
+            "pages": [
+              29,
+              30
+            ],
+            "ranks": {
+              "original": 11
+            },
+            "scores": {
+              "original": 0.0112
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s19",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              11
+            ],
+            "ranks": {
+              "agent": 11
+            },
+            "scores": {
+              "agent": 0.0243
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s61",
+            "doc_id": "ny_medicaid_pharmacy_policy",
+            "pages": [
+              41,
+              42,
+              43
+            ],
+            "ranks": {
+              "original": 12
+            },
+            "scores": {
+              "original": 0.01
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s15",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              9
+            ],
+            "ranks": {
+              "agent": 12
+            },
+            "scores": {
+              "agent": 0.0237
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s65",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              36
+            ],
+            "ranks": {
+              "original": 13
+            },
+            "scores": {
+              "original": 0.0025
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s21",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              11
+            ],
+            "ranks": {
+              "agent": 13
+            },
+            "scores": {
+              "agent": 0.021
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s23",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              12
+            ],
+            "ranks": {
+              "agent": 14
+            },
+            "scores": {
+              "agent": 0.0203
+            }
+          }
+        ]
+      },
+      "t_start": 1.966
+    },
+    {
+      "name": "lookup_ny_medicaid_drug",
+      "input": {
+        "drug": "GLP-1"
+      },
+      "duration_s": 0.006,
+      "is_error": false,
+      "pages": [
+        "ny_medicaid_pdl:p1",
+        "ny_medicaid_pdl:p34"
+      ],
+      "lookup": {
+        "result": "class_match",
+        "rows": 10
+      },
+      "t_start": 4.594
+    },
+    {
+      "name": "search_documents",
+      "input": {
+        "query": "DPP-IV SGLT2 metformin sulfonylurea diabetes \"as of 10/22/2026\"",
+        "program": "NY Medicaid",
+        "k": 10
+      },
+      "duration_s": 4.487,
+      "is_error": false,
+      "pages": [
+        "ny_medicaid_pdl:p12",
+        "ny_medicaid_pdl:p29",
+        "ny_medicaid_pdl:p34",
+        "ny_medicaid_pdl:p36",
+        "ny_medicaid_pdl:p37",
+        "ny_medicaid_pdl:p45",
+        "ny_medicaid_pdl:p46",
+        "ny_medicaid_pdl:p7",
+        "ny_medicaid_pharmacy_policy:p22",
+        "ny_medicaid_pharmacy_policy:p23",
+        "ny_medicaid_pharmacy_policy:p6",
+        "ny_medicaid_pharmacy_policy:p7"
+      ],
+      "index_loaded": true,
+      "search": {
+        "original_query": "Which diabetes products change preferred status on NY Medicaid on 10/22/2026?",
+        "agent_query": "DPP-IV SGLT2 metformin sulfonylurea diabetes \"as of 10/22/2026\"",
+        "executed": [
+          {
+            "source": "original",
+            "query": "Which diabetes products change preferred status on NY Medicaid on 10/22/2026?",
+            "program": "NY Medicaid",
+            "k": 10,
+            "seconds": 4.487,
+            "cached": false,
+            "results": 10
+          },
+          {
+            "source": "agent",
+            "query": "DPP-IV SGLT2 metformin sulfonylurea diabetes \"as of 10/22/2026\"",
+            "program": "NY Medicaid",
+            "k": 10,
+            "seconds": 1.859,
+            "cached": false,
+            "results": 10
+          }
+        ],
+        "duplicates_merged": 8,
+        "returned": 12,
+        "from_both": 8,
+        "from_original_only": 2,
+        "from_agent_only": 2,
+        "provenance": [
+          {
+            "unit": "ny_medicaid_pdl:s24",
+            "found_by": {
+              "original": 1,
+              "agent": 2
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s64",
+            "found_by": {
+              "original": 4,
+              "agent": 1
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s67",
+            "found_by": {
+              "original": 2,
+              "agent": 5
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s84",
+            "found_by": {
+              "original": 3,
+              "agent": 4
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s5",
+            "found_by": {
+              "original": 7,
+              "agent": 3
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s50",
+            "found_by": {
+              "original": 5,
+              "agent": 7
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s61",
+            "found_by": {
+              "original": 6,
+              "agent": 6
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s6",
+            "found_by": {
+              "original": 8,
+              "agent": 9
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s69",
+            "found_by": {
+              "agent": 8
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s30",
+            "found_by": {
+              "original": 9
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s3",
+            "found_by": {
+              "original": 10
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s62",
+            "found_by": {
+              "agent": 10
+            }
+          }
+        ],
+        "hits": [
+          {
+            "unit": "ny_medicaid_pdl:s24",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              12
+            ],
+            "ranks": {
+              "original": 1,
+              "agent": 2
+            },
+            "scores": {
+              "original": 0.8186,
+              "agent": 0.4784
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s64",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              36
+            ],
+            "ranks": {
+              "original": 4,
+              "agent": 1
+            },
+            "scores": {
+              "original": 0.5005,
+              "agent": 0.5618
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s67",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              37
+            ],
+            "ranks": {
+              "original": 2,
+              "agent": 5
+            },
+            "scores": {
+              "original": 0.7086,
+              "agent": 0.3066
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s84",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              45,
+              46
+            ],
+            "ranks": {
+              "original": 3,
+              "agent": 4
+            },
+            "scores": {
+              "original": 0.5762,
+              "agent": 0.3161
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s5",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              7
+            ],
+            "ranks": {
+              "original": 7,
+              "agent": 3
+            },
+            "scores": {
+              "original": 0.379,
+              "agent": 0.4098
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s50",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              29
+            ],
+            "ranks": {
+              "original": 5,
+              "agent": 7
+            },
+            "scores": {
+              "original": 0.4922,
+              "agent": 0.2544
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s61",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              34
+            ],
+            "ranks": {
+              "original": 6,
+              "agent": 6
+            },
+            "scores": {
+              "original": 0.4283,
+              "agent": 0.2958
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s6",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              7
+            ],
+            "ranks": {
+              "original": 8,
+              "agent": 9
+            },
+            "scores": {
+              "original": 0.3768,
+              "agent": 0.1442
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s69",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              37
+            ],
+            "ranks": {
+              "agent": 8
+            },
+            "scores": {
+              "agent": 0.1552
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s30",
+            "doc_id": "ny_medicaid_pharmacy_policy",
+            "pages": [
+              22,
+              23
+            ],
+            "ranks": {
+              "original": 9
+            },
+            "scores": {
+              "original": 0.0222
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s3",
+            "doc_id": "ny_medicaid_pharmacy_policy",
+            "pages": [
+              6,
+              7
+            ],
+            "ranks": {
+              "original": 10
+            },
+            "scores": {
+              "original": 0.0129
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s62",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              34
+            ],
+            "ranks": {
+              "agent": 10
+            },
+            "scores": {
+              "agent": 0.076
+            }
+          }
+        ]
+      },
+      "t_start": 8.017
+    }
+  ],
+  "cited_evidence": {
+    "ny_medicaid_pdl:p37": "ny_medicaid_pdl (NY Medicaid, binding, 2026-09-14)\nNYRx Preferred Drug Program (PDP) Preferred Drug List > VI. Endocrine and Metabolic Agents > Insulin – Rapid-Acting\n[p 37]\nPreferred drugs: Humalog® 100 U/mL vial, pen, cartridge (Preferred as of 10/22/2026); Humalog® Jr. 100 U/mL Kwikpen (Preferred as of 10/22/2026); insulin lispro vial, pen (gen Humalog® U100); insulin lispro junior (gen Humalog® Jr.)\nNon-preferred drugs: Admelog®; Afrezza®; Apidra®; Fiasp® Penfill, FlexTouch, Pumpcart, vial; Humalog® 100 U/mL Tempo; Humalog® 200 U/mL; insulin aspart cartridge, vial, pen (gen Novolog® ) (Non-Preferred as of 10/22/2026); Kirsty™; Lyumjev®; Lyumjev® Tempo™; Merilog™ Solostar, vial; Novolog® cartridge, FlexPen, vial\n\nny_medicaid_pdl (NY Medicaid, binding, 2026-09-14)\nNYRx Preferred Drug Program (PDP) Preferred Drug List > VI. Endocrine and Metabolic Agents > Insulin – Rapid-Acting\n[p 37]\nPreferred drugs: Humalog® 100 U/mL vial, pen, cartridge (Preferred as of 10/22/2026); Humalog® Jr. 100 U/mL Kwikpen (Preferred as of 10/22/2026); insulin lispro vial, pen (gen Humalog® U100); insulin lispro junior (gen Humalog® Jr.)\nNon-preferred drugs: Admelog®; Afrezza®; Apidra®; Fiasp® Penfill, FlexTouch, Pumpcart, vial; Humalog® 100 U/mL Tempo; Humalog® 200 U/mL; insulin aspart cartridge, vial, pen (gen Novolog® ) (Non-Preferred as of 10/22/2026); Kirsty™; Lyumjev®; Lyumjev® Tempo™; Merilog™ Solostar, vial; Novolog® cartridge, FlexPen, vial\n\nny_medicaid_pdl (NY Medicaid, binding, 2026-09-14)\nNYRx Preferred Drug Program (PDP) Preferred Drug List > VI. Endocrine and Metabolic Agents > Sodium Glucose Co-Transporter 2 (SGLT2) Inhibitors\n[p 37]\nPreferred drugs: dapagliflozin (gen Farxiga® ); Jardiance®; Synjardy®; Synjardy® XR; Trijardy® XR; Xigduo® XR (BLTG)\nNon-preferred drugs: dapagliflozin/metformin (gen Xigduo® XR); Farxiga®; Inpefa™; Invokamet®; Invokamet® XR; Invokana®; Segluromet®; Steglatro®",
+    "ny_medicaid_pdl:p34": "ny_medicaid_pdl (NY Medicaid, binding, 2026-09-14)\nNYRx Preferred Drug Program (PDP) Preferred Drug List > VI. Endocrine and Metabolic Agents > Glucagon Agents\n[p 34]\nPreferred drugs: Baqsimi®; glucagon HCl emergency kit (Preferred as of 10/22/2026); glucagon vial; Gvoke® pen, syringe, vial (Preferred as of 10/22/2026); Zegalogue® pen, syringe\n\nny_medicaid_pdl (NY Medicaid, binding, 2026-09-14)\nNYRx Preferred Drug Program (PDP) Preferred Drug List > VI. Endocrine and Metabolic Agents > Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes (CC)\n[p 34]\nPreferred drugs: exenatide; Ozempic® pen; Trulicity®; Victoza® (BLTG)\nNon-preferred drugs: liraglutide (gen Victoza® ); Mounjaro®; Ozempic® tablets; Rybelsus®; Soliqua®; Xultophy®\nCoverage parameters: CLINICAL CRITERIA (CC)\nConfirm diagnosis of FDA-approved or compendia-supported\nindication and Medicaid covered indication\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently\n\n{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"GLP-1\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"class_match\", \"classes\": [{\"drug_class\": \"Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes\", \"section\": \"VI. Endocrine and Metabolic Agents\", \"class_flags\": {\"CC\": \"Clinical Criteria: see the class's Coverage Parameters\"}, \"coverage_parameters\": \"CLINICAL CRITERIA (CC)\\nConfirm diagnosis of FDA-approved or compendia-supported\\nindication and Medicaid covered indication\\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently\", \"coverage_pages\": [34], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p34#row-6\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"exenatide\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-7\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Ozempic® pen\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-8\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Trulicity®\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-9\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Victoza®\", \"listed_as\": \"preferred\", \"flags\": {\"BLTG\": \"Brand Less Than Generic Program (PDL pages 77–78)\"}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-10\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"liraglutide (gen Victoza® )\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-11\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Mounjaro®\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-12\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Ozempic® tablets\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-13\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Rybelsus®\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-14\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Soliqua®\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-15\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Xultophy®\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}]}], \"note\": \"No drug is named 'GLP-1'; these are the rows of the matching drug class.\"}"
+  },
+  "cited_evidence_parts": {
+    "ny_medicaid_pdl:p37": [
+      "ny_medicaid_pdl (NY Medicaid, binding, 2026-09-14)\nNYRx Preferred Drug Program (PDP) Preferred Drug List > VI. Endocrine and Metabolic Agents > Insulin – Rapid-Acting\n[p 37]\nPreferred drugs: Humalog® 100 U/mL vial, pen, cartridge (Preferred as of 10/22/2026); Humalog® Jr. 100 U/mL Kwikpen (Preferred as of 10/22/2026); insulin lispro vial, pen (gen Humalog® U100); insulin lispro junior (gen Humalog® Jr.)\nNon-preferred drugs: Admelog®; Afrezza®; Apidra®; Fiasp® Penfill, FlexTouch, Pumpcart, vial; Humalog® 100 U/mL Tempo; Humalog® 200 U/mL; insulin aspart cartridge, vial, pen (gen Novolog® ) (Non-Preferred as of 10/22/2026); Kirsty™; Lyumjev®; Lyumjev® Tempo™; Merilog™ Solostar, vial; Novolog® cartridge, FlexPen, vial",
+      "ny_medicaid_pdl (NY Medicaid, binding, 2026-09-14)\nNYRx Preferred Drug Program (PDP) Preferred Drug List > VI. Endocrine and Metabolic Agents > Insulin – Rapid-Acting\n[p 37]\nPreferred drugs: Humalog® 100 U/mL vial, pen, cartridge (Preferred as of 10/22/2026); Humalog® Jr. 100 U/mL Kwikpen (Preferred as of 10/22/2026); insulin lispro vial, pen (gen Humalog® U100); insulin lispro junior (gen Humalog® Jr.)\nNon-preferred drugs: Admelog®; Afrezza®; Apidra®; Fiasp® Penfill, FlexTouch, Pumpcart, vial; Humalog® 100 U/mL Tempo; Humalog® 200 U/mL; insulin aspart cartridge, vial, pen (gen Novolog® ) (Non-Preferred as of 10/22/2026); Kirsty™; Lyumjev®; Lyumjev® Tempo™; Merilog™ Solostar, vial; Novolog® cartridge, FlexPen, vial\n\nny_medicaid_pdl (NY Medicaid, binding, 2026-09-14)\nNYRx Preferred Drug Program (PDP) Preferred Drug List > VI. Endocrine and Metabolic Agents > Sodium Glucose Co-Transporter 2 (SGLT2) Inhibitors\n[p 37]\nPreferred drugs: dapagliflozin (gen Farxiga® ); Jardiance®; Synjardy®; Synjardy® XR; Trijardy® XR; Xigduo® XR (BLTG)\nNon-preferred drugs: dapagliflozin/metformin (gen Xigduo® XR); Farxiga®; Inpefa™; Invokamet®; Invokamet® XR; Invokana®; Segluromet®; Steglatro®"
+    ],
+    "ny_medicaid_pdl:p34": [
+      "ny_medicaid_pdl (NY Medicaid, binding, 2026-09-14)\nNYRx Preferred Drug Program (PDP) Preferred Drug List > VI. Endocrine and Metabolic Agents > Glucagon Agents\n[p 34]\nPreferred drugs: Baqsimi®; glucagon HCl emergency kit (Preferred as of 10/22/2026); glucagon vial; Gvoke® pen, syringe, vial (Preferred as of 10/22/2026); Zegalogue® pen, syringe\n\nny_medicaid_pdl (NY Medicaid, binding, 2026-09-14)\nNYRx Preferred Drug Program (PDP) Preferred Drug List > VI. Endocrine and Metabolic Agents > Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes (CC)\n[p 34]\nPreferred drugs: exenatide; Ozempic® pen; Trulicity®; Victoza® (BLTG)\nNon-preferred drugs: liraglutide (gen Victoza® ); Mounjaro®; Ozempic® tablets; Rybelsus®; Soliqua®; Xultophy®\nCoverage parameters: CLINICAL CRITERIA (CC)\nConfirm diagnosis of FDA-approved or compendia-supported\nindication and Medicaid covered indication\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently",
+      "{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"GLP-1\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"class_match\", \"classes\": [{\"drug_class\": \"Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes\", \"section\": \"VI. Endocrine and Metabolic Agents\", \"class_flags\": {\"CC\": \"Clinical Criteria: see the class's Coverage Parameters\"}, \"coverage_parameters\": \"CLINICAL CRITERIA (CC)\\nConfirm diagnosis of FDA-approved or compendia-supported\\nindication and Medicaid covered indication\\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently\", \"coverage_pages\": [34], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p34#row-6\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"exenatide\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-7\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Ozempic® pen\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-8\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Trulicity®\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-9\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Victoza®\", \"listed_as\": \"preferred\", \"flags\": {\"BLTG\": \"Brand Less Than Generic Program (PDL pages 77–78)\"}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-10\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"liraglutide (gen Victoza® )\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-11\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Mounjaro®\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-12\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Ozempic® tablets\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-13\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Rybelsus®\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-14\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Soliqua®\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-15\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Xultophy®\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"drug class\"}]}], \"note\": \"No drug is named 'GLP-1'; these are the rows of the matching drug class.\"}"
+    ]
+  },
+  "cost_note": "priced at the requested model's rates; a fallback hop bills at its own rates",
+  "request_id": "d0fc34a4-682b-4306-8f4a-16e7009998a1",
+  "request_started_utc": "2026-10-18T04:00:05.806417+00:00",
+  "citation_check": {
+    "t_start": 16.761,
+    "duration_s": 0.0
+  },
+  "prices_per_mtok": {
+    "input": 2.0,
+    "output": 10.0,
+    "cache_read": 0.2,
+    "cache_write": 2.5
+  }
+}

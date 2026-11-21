@@ -1,0 +1,149 @@
+{
+  "question": "What's the copay tier for Trulicity?",
+  "status": "answered",
+  "assumption": "Assuming NY Medicaid (coverage question, no program named). Part D tiers and VA formulary status aren't in the searchable documents.",
+  "answer": "Assuming NY Medicaid: NYRx doesn't use copay tiers. The PDL only lists preferred or non-preferred status.\n\n- Trulicity is **Preferred** in the GLP-1 Receptor Agonists – Type 2 Diabetes class (PDL revised 9/14/2026).\n- The class has clinical criteria (CC). Confirm an FDA-approved or compendia-supported, Medicaid-covered indication.\n- PA is required if the patient is on a GLP-1 and a DPP-4 inhibitor concurrently.\n- The PDL is marked BLTG for Trulicity.\n- The PDL footer says \"Preferred as of 10/22/2026\". That date is still upcoming as of today (10/14/2026).\n\nThe documents don't give a copay amount or tier. I found no Part D formulary tier for Trulicity.",
+  "citations": [
+    {
+      "doc_id": "ny_medicaid_pdl",
+      "page": 34,
+      "link": "https://newyork.fhsc.com/downloads/providers/NYRx_PDP_PDL.pdf#page=34",
+      "flag": null
+    }
+  ],
+  "conflicts_noted": [],
+  "flags": [],
+  "answered_by": "claude-sonnet-5-5",
+  "fallback_used": false,
+  "timing_s": {
+    "total": 6.523,
+    "search": 0.099,
+    "search_cold": 0,
+    "search_warm": 0.099,
+    "read_page": 0,
+    "list_documents": 0,
+    "model_calls": [
+      1.858,
+      1.063,
+      3.503
+    ]
+  },
+  "index_warm_at_start": true,
+  "lookups": 2,
+  "tokens": {
+    "input": 8,
+    "output": 651,
+    "cache_read": 9232,
+    "cache_write": 10984
+  },
+  "cost_usd": 0.035832,
+  "pages_seen": [
+    "ny_medicaid_pdl:p22",
+    "ny_medicaid_pdl:p33",
+    "ny_medicaid_pdl:p34",
+    "ny_medicaid_pdl:p39",
+    "ny_medicaid_pdl:p49",
+    "ny_medicaid_pdl:p51",
+    "ny_medicaid_pdl:p60",
+    "va_dod_cpg_diabetes_2023:p101",
+    "va_dod_cpg_diabetes_2023:p129",
+    "va_dod_cpg_diabetes_2023:p131",
+    "va_dod_cpg_diabetes_2023:p137",
+    "va_dod_cpg_diabetes_2023:p161",
+    "va_dod_cpg_diabetes_2023:p58",
+    "va_pbm_t2dm_pharmacotherapy_2025:p13",
+    "va_pbm_t2dm_pharmacotherapy_2025:p15"
+  ],
+  "started_at": "2026-10-14T22:07:54+00:00",
+  "config": {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium",
+    "setup": "baseline",
+    "max_tool_calls": 6,
+    "deadline_s": 25,
+    "search_k": 8
+  },
+  "model_calls": [
+    {
+      "duration_s": 1.858,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 4,
+        "output": 62,
+        "cache_read": 0,
+        "cache_write": 2229
+      }
+    },
+    {
+      "duration_s": 1.063,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 2,
+        "output": 96,
+        "cache_read": 2229,
+        "cache_write": 4774
+      }
+    },
+    {
+      "duration_s": 3.503,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 2,
+        "output": 493,
+        "cache_read": 7003,
+        "cache_write": 3981
+      }
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "search_documents",
+      "input": {
+        "query": "Trulicity dulaglutide copay tier"
+      },
+      "duration_s": 0.072,
+      "is_error": false,
+      "pages": [
+        "va_pbm_t2dm_pharmacotherapy_2025:p15",
+        "va_dod_cpg_diabetes_2023:p131",
+        "va_dod_cpg_diabetes_2023:p137",
+        "va_pbm_t2dm_pharmacotherapy_2025:p13",
+        "va_dod_cpg_diabetes_2023:p129",
+        "va_dod_cpg_diabetes_2023:p161",
+        "va_dod_cpg_diabetes_2023:p101",
+        "va_dod_cpg_diabetes_2023:p58"
+      ],
+      "index_loaded": true
+    },
+    {
+      "name": "search_documents",
+      "input": {
+        "query": "Trulicity GLP-1 receptor agonists preferred PA",
+        "program": "NY Medicaid"
+      },
+      "duration_s": 0.027,
+      "is_error": false,
+      "pages": [
+        "ny_medicaid_pdl:p34",
+        "ny_medicaid_pdl:p51",
+        "ny_medicaid_pdl:p39",
+        "ny_medicaid_pdl:p33",
+        "ny_medicaid_pdl:p33",
+        "ny_medicaid_pdl:p60",
+        "ny_medicaid_pdl:p49",
+        "ny_medicaid_pdl:p22"
+      ],
+      "index_loaded": true
+    }
+  ],
+  "cost_note": "priced at the requested model's rates; a fallback hop bills at its own rates"
+}

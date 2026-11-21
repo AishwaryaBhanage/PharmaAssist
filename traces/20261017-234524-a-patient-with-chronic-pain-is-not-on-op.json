@@ -1,0 +1,376 @@
+{
+  "question": "A patient with chronic pain is not on opioids; optimized non-opioid treatment has not been effective, but the patient is not able or willing to engage in a comprehensive pain care plan. Per the VA/DoD opioid algorithm, should opioids be started?",
+  "status": "answered",
+  "assumption": "Assuming the VA/DoD Opioids CPG (v4.0, 2022) Module A algorithm; this is advisory clinical guidance.",
+  "answer": "Assuming the VA/DoD opioid CPG Module A: **No, don't start opioids.**\n\nPath for this patient:\n1. Not on opioids (Box 3 No), so optimize non-opioid care (Box 5).\n2. Treatment still ineffective (Box 6 No), so do the opioid risk assessment and refer for interdisciplinary and specialty consults (Box 7).\n3. If benefits outweigh risks (Box 8 Yes), refer for interdisciplinary treatments (Box 9).\n4. Box 10 asks whether the patient is able and willing to engage in a comprehensive pain care plan. The answer is No, so go to Box 17: exit the algorithm and manage with non-opioid modalities.\n\nOpioids are only considered after Box 10 is \"Yes\". Box 12 (opioids indicated) and Box 13 (risk mitigation) are the later decision points.",
+  "citations": [
+    {
+      "doc_id": "va_dod_cpg_opioids_2022",
+      "page": 25,
+      "link": "https://www.healthquality.va.gov/guidelines/Pain/cot/VADoDOpioidsCPG.pdf#page=25",
+      "flag": null,
+      "locator": "va_dod_cpg_opioids_2022:p25"
+    },
+    {
+      "doc_id": "va_dod_cpg_opioids_2022",
+      "page": 153,
+      "link": "https://www.healthquality.va.gov/guidelines/Pain/cot/VADoDOpioidsCPG.pdf#page=153",
+      "flag": null,
+      "locator": "va_dod_cpg_opioids_2022:p153"
+    }
+  ],
+  "conflicts_noted": [],
+  "flags": [],
+  "needs_review": false,
+  "words": {
+    "displayed": 123,
+    "rendered": 123
+  },
+  "answered_by": "claude-sonnet-5-5",
+  "fallback_used": false,
+  "timing_s": {
+    "total": 12.132,
+    "search": 6.218,
+    "search_cold": 0,
+    "search_warm": 6.218,
+    "read_page": 0,
+    "list_documents": 0,
+    "model_calls": [
+      1.553,
+      4.358
+    ]
+  },
+  "index_warm_at_start": true,
+  "lookups": 1,
+  "tokens": {
+    "input": 6,
+    "output": 701,
+    "cache_read": 3653,
+    "cache_write": 16659
+  },
+  "cost_usd": 0.0494,
+  "pages_seen": [
+    "va_dod_cpg_opioids_2022:p152",
+    "va_dod_cpg_opioids_2022:p153",
+    "va_dod_cpg_opioids_2022:p154",
+    "va_dod_cpg_opioids_2022:p24",
+    "va_dod_cpg_opioids_2022:p25",
+    "va_dod_cpg_opioids_2022:p30",
+    "va_dod_cpg_opioids_2022:p36",
+    "va_dod_cpg_opioids_2022:p37",
+    "va_dod_cpg_opioids_2022:p38",
+    "va_dod_cpg_opioids_2022:p45",
+    "va_dod_cpg_opioids_2022:p46",
+    "va_dod_cpg_opioids_2022:p7"
+  ],
+  "started_at": "2026-10-18T03:45:24+00:00",
+  "config": {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium",
+    "setup": "docling_rerank_structured",
+    "max_tool_calls": 6,
+    "deadline_s": 25,
+    "search_k": 8
+  },
+  "structured_lookups": true,
+  "model_calls": [
+    {
+      "t_start": 0.002,
+      "duration_s": 1.553,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 4,
+        "output": 149,
+        "cache_read": 0,
+        "cache_write": 3653
+      }
+    },
+    {
+      "t_start": 7.774,
+      "duration_s": 4.358,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 2,
+        "output": 552,
+        "cache_read": 3653,
+        "cache_write": 13006
+      }
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "search_documents",
+      "input": {
+        "query": "VA/DoD opioid therapy algorithm chronic pain not on opioids, non-opioid treatment ineffective, unable or unwilling to engage in comprehensive pain care",
+        "program": "VA",
+        "k": 6
+      },
+      "duration_s": 6.218,
+      "is_error": false,
+      "pages": [
+        "va_dod_cpg_opioids_2022:p152",
+        "va_dod_cpg_opioids_2022:p153",
+        "va_dod_cpg_opioids_2022:p154",
+        "va_dod_cpg_opioids_2022:p24",
+        "va_dod_cpg_opioids_2022:p25",
+        "va_dod_cpg_opioids_2022:p30",
+        "va_dod_cpg_opioids_2022:p36",
+        "va_dod_cpg_opioids_2022:p37",
+        "va_dod_cpg_opioids_2022:p38",
+        "va_dod_cpg_opioids_2022:p45",
+        "va_dod_cpg_opioids_2022:p46",
+        "va_dod_cpg_opioids_2022:p7"
+      ],
+      "index_loaded": true,
+      "search": {
+        "original_query": "A patient with chronic pain is not on opioids; optimized non-opioid treatment has not been effective, but the patient is not able or willing to engage in a comprehensive pain care plan. Per the VA/DoD opioid algorithm, should opioids be started?",
+        "agent_query": "VA/DoD opioid therapy algorithm chronic pain not on opioids, non-opioid treatment ineffective, unable or unwilling to engage in comprehensive pain care",
+        "executed": [
+          {
+            "source": "original",
+            "query": "A patient with chronic pain is not on opioids; optimized non-opioid treatment has not been effective, but the patient is not able or willing to engage in a comprehensive pain care plan. Per the VA/DoD opioid algorithm, should opioids be started?",
+            "program": "VA",
+            "k": 6,
+            "seconds": 3.557,
+            "cached": false,
+            "results": 6
+          },
+          {
+            "source": "agent",
+            "query": "VA/DoD opioid therapy algorithm chronic pain not on opioids, non-opioid treatment ineffective, unable or unwilling to engage in comprehensive pain care",
+            "program": "VA",
+            "k": 6,
+            "seconds": 6.209,
+            "cached": false,
+            "results": 6
+          }
+        ],
+        "duplicates_merged": 3,
+        "returned": 9,
+        "from_both": 3,
+        "from_original_only": 3,
+        "from_agent_only": 3,
+        "provenance": [
+          {
+            "unit": "va_dod_cpg_opioids_2022:s115",
+            "found_by": {
+              "original": 1,
+              "agent": 5
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s3",
+            "found_by": {
+              "original": 5,
+              "agent": 1
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s36",
+            "found_by": {
+              "original": 6,
+              "agent": 6
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s42",
+            "found_by": {
+              "original": 2
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s28",
+            "found_by": {
+              "agent": 2
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s116",
+            "found_by": {
+              "original": 3
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s27",
+            "found_by": {
+              "agent": 3
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s18",
+            "found_by": {
+              "original": 4
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s19",
+            "found_by": {
+              "agent": 4
+            }
+          }
+        ],
+        "hits": [
+          {
+            "unit": "va_dod_cpg_opioids_2022:s115",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              152,
+              153
+            ],
+            "ranks": {
+              "original": 1,
+              "agent": 5
+            },
+            "scores": {
+              "original": 0.995,
+              "agent": 0.8992
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s3",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              7
+            ],
+            "ranks": {
+              "original": 5,
+              "agent": 1
+            },
+            "scores": {
+              "original": 0.9902,
+              "agent": 0.9506
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s36",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              36,
+              37,
+              38
+            ],
+            "ranks": {
+              "original": 6,
+              "agent": 6
+            },
+            "scores": {
+              "original": 0.9855,
+              "agent": 0.8927
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s42",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              45,
+              46
+            ],
+            "ranks": {
+              "original": 2
+            },
+            "scores": {
+              "original": 0.9943
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s28",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              30
+            ],
+            "ranks": {
+              "agent": 2
+            },
+            "scores": {
+              "agent": 0.9498
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s116",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              154
+            ],
+            "ranks": {
+              "original": 3
+            },
+            "scores": {
+              "original": 0.9927
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s27",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              30
+            ],
+            "ranks": {
+              "agent": 3
+            },
+            "scores": {
+              "agent": 0.9251
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s18",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              24
+            ],
+            "ranks": {
+              "original": 4
+            },
+            "scores": {
+              "original": 0.9911
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s19",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              25
+            ],
+            "ranks": {
+              "agent": 4
+            },
+            "scores": {
+              "agent": 0.9231
+            }
+          }
+        ]
+      },
+      "t_start": 1.556
+    }
+  ],
+  "cited_evidence": {
+    "va_dod_cpg_opioids_2022:p25": "va_dod_cpg_opioids_2022 (VA, advisory, 2022-05)\nVA/DoD Clinical Practice Guideline for the Use of Opioids in the Management of Chronic Pain (Version 4.0) > VIII. Algorithm > A. Module A: Determination of Appropriateness for Opioids for Chronic Pain\n[p 25]\nNote: Non-pharmacologic and non-opioid pharmacologic treatments are preferred for chronic pain\n[Figure, flowchart] untitled in the image; see the section heading (PDF page 25). Machine-generated visual interpretation; status: machine-interpreted from the page image by a vision model; compared box by box against the page image (not clinician-verified).\nBox 1 (start): Patient with chronic pain -> then box 2\nBox 2 (action): Obtain pain and biopsychosocial assessment (see Sidebar A) -> then box 3\nBox 3 (decision): Is the patient currently on opioids for chronic pain? -> if Yes: box 4; if No: box 5\nBox 4 (end): Proceed to Module C\nBox 5 (action): Educate/re-educate on, implement, and optimize non-opioid treatments for chronic pain (see Sidebar B), including: • Self-management to promote health and wellness • Non-opioid pharmacologic management • Non-pharmacologic pain treatments: ▪ Behavioral therapies (e.g., cognitive behavioral therapy) ▪ Physical/movement-based therapies (e.g., physical therapy) ▪ Manipulative therapies (e.g., chiropractic care) ▪ Complementary and integrative health treatments (e.g., acupuncture) • Interventional pain care (e.g., joint injection, radiofrequency ablation) • Realistic expectations and limitations of medical treatment • Refer to the LBP, OA, and Headache CPGs as appropriate for further condition-specific guidance* -> then box 6\nBox 6 (decision): After regular follow-up and treatment optimization, has the treatment plan been effective in managing pain and optimizing function? -> if No: box 7; if Yes: box 17\nBox 7 (action): Complete opioid risk assessment; refer for interdisciplinary pain and specialty consultations, as appropriate (see Sidebar C) -> then box 8\nBox 8 (decision): Do potential benefits outweigh risks? Consider strength and number of risk factors and patient preference (see Sidebar C) -> if No: box 17; if Yes: box 9\nBox 9 (action): Refer/consult for appropriate interdisciplinary treatments -> then box 10\nBox 10 (decision): Is the patient able and willing to engage in a comprehensive pain care plan? -> if No: box 17; if Yes: box 11\nBox 11 (action): Educate patient and family about treatment options, including education on: • Known risks and unknown long-term benefits of opioids • Risks of SUD and overdose • Need for risk mitigation strategies • Naloxone rescue -> then box 12\nBox 12 (decision): Is adding opioids to comprehensive pain therapy indicated at this time? (see Sidebar D) -> if No: box 17; if Yes: box 13\nBox 13 (decision): Is patient prepared to accept responsibilities of and is provider prepared to implement risk mitigation strategies? -> if No: box 17; if Yes: box 14\nBox 14 (action): Discuss and complete written informed consent with patient and family -> then box 15\nBox 15 (action): Modify and document comprehensive pain management plan including opioids -> then box 16\nBox 16 (end): Proceed to Module B\nBox 17 (end): Exit algorithm; manage with non-opioid modalities\nDecision path: 1 -> 2 -> 3 -> [Yes] 4\nDecision path: 1 -> 2 -> 3 -> [No] 5 -> 6 -> [No] 7 -> 8 -> [No] 17\nDecision path: 1 -> 2 -> 3 -> [No] 5 -> 6 -> [No] 7 -> 8 -> [Yes] 9 -> 10 -> [No] 17\nDecision path: 1 -> 2 -> 3 -> [No] 5 -> 6 -> [No] 7 -> 8 -> [Yes] 9 -> 10 -> [Yes] 11 -> 12 -> [No] 17\nDecision path: 1 -> 2 -> 3 -> [No] 5 -> 6 -> [No] 7 -> 8 -> [Yes] 9 -> 10 -> [Yes] 11 -> 12 -> [Yes] 13 -> [No] 17\nDecision path: 1 -> 2 -> 3 -> [No] 5 -> 6 -> [No] 7 -> 8 -> [Yes] 9 -> 10 -> [Yes] 11 -> 12 -> [Yes] 13 -> [Yes] 14 -> 15 -> 16\nDecision path: 1 -> 2 -> 3 -> [No] 5 -> 6 -> [Yes] 17\nAbbreviations: CPGs: VA/DoD Clinical Practice Guidelines; LBP: low back pain; OA: osteoarthritis; SUD: substance use disorders",
+    "va_dod_cpg_opioids_2022:p153": "va_dod_cpg_opioids_2022 (VA, advisory, 2022-05)\nVA/DoD Clinical Practice Guideline for the Use of Opioids in the Management of Chronic Pain (Version 4.0) > Appendix J: Alternative Text Descriptions of Algorithm\n[p 152]\nThe following outline narratively describes the Use of Opioids in the Management of Chronic Pain algorithm. An explanation of the purpose of the algorithm and description of the various shapes used within the algorithm can be found in the Algorithm section. The sidebars referenced within this outline can also be found in the Algorithm section.\nA. Module A: Determination of Appropriateness for Opioids for Chronic Pain\nModule A begins with Box 1, in the shape of a rounded rectangle: \"Patient with chronic pain\"\nBox 1 connects to Box 2, in the shape of a rectangle: \"Obtain pain and biopsychosocial assessment (see Sidebar A)\"\nBox 2 connects to Box 3, in the shape of a hexagon, and asks the question: \"Is the patient currently on opioids for chronic pain?\"\nIf the answer is \"Yes\" to Box 3, then continue to Box 4, in the shape of an oval: \"Go to Module C\"\n4. If the answer is \"No\" to Box 3, then continue to Box 5, in the shape of a rectangle:\n\"Educate/re-educate on, implement, and optimize non-opioid treatments for chronic pain (see\nSidebar B), including:\nSelf-management to promote health and wellness\nNon-opioid pharmacologic management\nNon-pharmacologic pain treatments:\n¨ Behavioral therapies (e.g., cognitive behavioral therapy)\n¨ Physical/movement-based therapies (e.g., physical therapy)\n¨ Manipulative therapies (e.g., chiropractic care)\n¨ Complementary and integrative health treatments (e.g., acupuncture)\nInterventional pain care (e.g., joint injection, radiofrequency ablation)\nRealistic expectations and limitations of medical treatment\nRefer to the LBP, OA, and Headache CPGs as appropriate for further condition-specific guidance\"; VA/DoD CPGs are available here: https://www.healthquality.va.gov/\nBox 5 connects to Box 6, in the shape of a hexagon, and asks the question: \"After regular follow-up and treatment optimization, has the treatment plan been effective in managing pain and optimizing function?\"\nIf the answer is \"Yes\" to Box 6, then continue to Box 17, in the shape of a rectangle: \"Exit algorithm; manage with non-opioid modalities\"\nIf the answer is \"No\" to Box 6, then continue to Box 7, in the shape of a rectangle: \"Complete opioid risk assessment; refer for interdisciplinary pain and specialty consultations, as appropriate (see Sidebar C)\"\n[p 153]\nBox 7 connects to Box 8, in the shape of a hexagon, and asks the question: \"Do potential benefits outweigh risks? Consider strength and number of risk factors and patient preferences (see Sidebar C)\"\nIf the answer is \"No\" to Box 8, then continue to Box 17, in the shape of a rectangle: \"Exit algorithm; manage with non-opioid modalities\"\nIf the answer is \"Yes\" to Box 8, then continue to Box 9, in the shape of a rectangle: \"Refer/consult for appropriate interdisciplinary treatments\"\nBox 9 connects to Box 10, in the shape of a hexagon, and asks the question: \"Is the patient able and willing to engage in a comprehensive pain care plan?\"\nIf the answer is \"No\" to Box 10, then continue to Box 17, in the shape of a rectangle: \"Exit algorithm; manage with non-opioid modalities\"\nIf the answer is \"Yes\" to Box 10, then continue to Box 11, in the shape of a rectangle:\n\"Educate patient and family about treatment options, including education on:\nKnown risks and unknown long-term benefits of opioids\nRisks of SUD and overdose\nNeed for risk mitigation strategies\nNaloxone rescue\"\nBox 11 connects to Box 12, in the shape of a hexagon, and asks the question: \"Is adding opioids to comprehensive pain therapy indicated at this time? (see Sidebar D)\"\nIf the answer is \"No\" to Box 12, then continue to Box 17, in the shape of a rectangle: \"Exit algorithm; manage with non-opioid modalities\"\nIf the answer is \"Yes\" to Box 12, then Box 13, in the shape of a hexagon, asks the question: \"Is patient prepared to accept responsibilities of and is provider prepared to implement risk mitigation strategies?\"\nIf the answer is \"No\" to Box 13, then continue to Box 17, in the shape of a rectangle: \"Exit algorithm; manage with non-opioid modalities\"\nIf the answer is \"Yes\" to Box 13, then continue to Box 14, in the shape of a rectangle: \"Discuss and complete written informed consent with patient and family\"\nBox 14 connects to Box 15, in the shape of a rectangle: \"Modify and document comprehensive pain management plan including opioids\"\nBox 15 connects to Box 16, in the shape of an oval: \"Go to Module B\""
+  },
+  "cited_evidence_parts": {
+    "va_dod_cpg_opioids_2022:p25": [
+      "va_dod_cpg_opioids_2022 (VA, advisory, 2022-05)\nVA/DoD Clinical Practice Guideline for the Use of Opioids in the Management of Chronic Pain (Version 4.0) > VIII. Algorithm > A. Module A: Determination of Appropriateness for Opioids for Chronic Pain\n[p 25]\nNote: Non-pharmacologic and non-opioid pharmacologic treatments are preferred for chronic pain\n[Figure, flowchart] untitled in the image; see the section heading (PDF page 25). Machine-generated visual interpretation; status: machine-interpreted from the page image by a vision model; compared box by box against the page image (not clinician-verified).\nBox 1 (start): Patient with chronic pain -> then box 2\nBox 2 (action): Obtain pain and biopsychosocial assessment (see Sidebar A) -> then box 3\nBox 3 (decision): Is the patient currently on opioids for chronic pain? -> if Yes: box 4; if No: box 5\nBox 4 (end): Proceed to Module C\nBox 5 (action): Educate/re-educate on, implement, and optimize non-opioid treatments for chronic pain (see Sidebar B), including: • Self-management to promote health and wellness • Non-opioid pharmacologic management • Non-pharmacologic pain treatments: ▪ Behavioral therapies (e.g., cognitive behavioral therapy) ▪ Physical/movement-based therapies (e.g., physical therapy) ▪ Manipulative therapies (e.g., chiropractic care) ▪ Complementary and integrative health treatments (e.g., acupuncture) • Interventional pain care (e.g., joint injection, radiofrequency ablation) • Realistic expectations and limitations of medical treatment • Refer to the LBP, OA, and Headache CPGs as appropriate for further condition-specific guidance* -> then box 6\nBox 6 (decision): After regular follow-up and treatment optimization, has the treatment plan been effective in managing pain and optimizing function? -> if No: box 7; if Yes: box 17\nBox 7 (action): Complete opioid risk assessment; refer for interdisciplinary pain and specialty consultations, as appropriate (see Sidebar C) -> then box 8\nBox 8 (decision): Do potential benefits outweigh risks? Consider strength and number of risk factors and patient preference (see Sidebar C) -> if No: box 17; if Yes: box 9\nBox 9 (action): Refer/consult for appropriate interdisciplinary treatments -> then box 10\nBox 10 (decision): Is the patient able and willing to engage in a comprehensive pain care plan? -> if No: box 17; if Yes: box 11\nBox 11 (action): Educate patient and family about treatment options, including education on: • Known risks and unknown long-term benefits of opioids • Risks of SUD and overdose • Need for risk mitigation strategies • Naloxone rescue -> then box 12\nBox 12 (decision): Is adding opioids to comprehensive pain therapy indicated at this time? (see Sidebar D) -> if No: box 17; if Yes: box 13\nBox 13 (decision): Is patient prepared to accept responsibilities of and is provider prepared to implement risk mitigation strategies? -> if No: box 17; if Yes: box 14\nBox 14 (action): Discuss and complete written informed consent with patient and family -> then box 15\nBox 15 (action): Modify and document comprehensive pain management plan including opioids -> then box 16\nBox 16 (end): Proceed to Module B\nBox 17 (end): Exit algorithm; manage with non-opioid modalities\nDecision path: 1 -> 2 -> 3 -> [Yes] 4\nDecision path: 1 -> 2 -> 3 -> [No] 5 -> 6 -> [No] 7 -> 8 -> [No] 17\nDecision path: 1 -> 2 -> 3 -> [No] 5 -> 6 -> [No] 7 -> 8 -> [Yes] 9 -> 10 -> [No] 17\nDecision path: 1 -> 2 -> 3 -> [No] 5 -> 6 -> [No] 7 -> 8 -> [Yes] 9 -> 10 -> [Yes] 11 -> 12 -> [No] 17\nDecision path: 1 -> 2 -> 3 -> [No] 5 -> 6 -> [No] 7 -> 8 -> [Yes] 9 -> 10 -> [Yes] 11 -> 12 -> [Yes] 13 -> [No] 17\nDecision path: 1 -> 2 -> 3 -> [No] 5 -> 6 -> [No] 7 -> 8 -> [Yes] 9 -> 10 -> [Yes] 11 -> 12 -> [Yes] 13 -> [Yes] 14 -> 15 -> 16\nDecision path: 1 -> 2 -> 3 -> [No] 5 -> 6 -> [Yes] 17\nAbbreviations: CPGs: VA/DoD Clinical Practice Guidelines; LBP: low back pain; OA: osteoarthritis; SUD: substance use disorders"
+    ],
+    "va_dod_cpg_opioids_2022:p153": [
+      "va_dod_cpg_opioids_2022 (VA, advisory, 2022-05)\nVA/DoD Clinical Practice Guideline for the Use of Opioids in the Management of Chronic Pain (Version 4.0) > Appendix J: Alternative Text Descriptions of Algorithm\n[p 152]\nThe following outline narratively describes the Use of Opioids in the Management of Chronic Pain algorithm. An explanation of the purpose of the algorithm and description of the various shapes used within the algorithm can be found in the Algorithm section. The sidebars referenced within this outline can also be found in the Algorithm section.\nA. Module A: Determination of Appropriateness for Opioids for Chronic Pain\nModule A begins with Box 1, in the shape of a rounded rectangle: \"Patient with chronic pain\"\nBox 1 connects to Box 2, in the shape of a rectangle: \"Obtain pain and biopsychosocial assessment (see Sidebar A)\"\nBox 2 connects to Box 3, in the shape of a hexagon, and asks the question: \"Is the patient currently on opioids for chronic pain?\"\nIf the answer is \"Yes\" to Box 3, then continue to Box 4, in the shape of an oval: \"Go to Module C\"\n4. If the answer is \"No\" to Box 3, then continue to Box 5, in the shape of a rectangle:\n\"Educate/re-educate on, implement, and optimize non-opioid treatments for chronic pain (see\nSidebar B), including:\nSelf-management to promote health and wellness\nNon-opioid pharmacologic management\nNon-pharmacologic pain treatments:\n¨ Behavioral therapies (e.g., cognitive behavioral therapy)\n¨ Physical/movement-based therapies (e.g., physical therapy)\n¨ Manipulative therapies (e.g., chiropractic care)\n¨ Complementary and integrative health treatments (e.g., acupuncture)\nInterventional pain care (e.g., joint injection, radiofrequency ablation)\nRealistic expectations and limitations of medical treatment\nRefer to the LBP, OA, and Headache CPGs as appropriate for further condition-specific guidance\"; VA/DoD CPGs are available here: https://www.healthquality.va.gov/\nBox 5 connects to Box 6, in the shape of a hexagon, and asks the question: \"After regular follow-up and treatment optimization, has the treatment plan been effective in managing pain and optimizing function?\"\nIf the answer is \"Yes\" to Box 6, then continue to Box 17, in the shape of a rectangle: \"Exit algorithm; manage with non-opioid modalities\"\nIf the answer is \"No\" to Box 6, then continue to Box 7, in the shape of a rectangle: \"Complete opioid risk assessment; refer for interdisciplinary pain and specialty consultations, as appropriate (see Sidebar C)\"\n[p 153]\nBox 7 connects to Box 8, in the shape of a hexagon, and asks the question: \"Do potential benefits outweigh risks? Consider strength and number of risk factors and patient preferences (see Sidebar C)\"\nIf the answer is \"No\" to Box 8, then continue to Box 17, in the shape of a rectangle: \"Exit algorithm; manage with non-opioid modalities\"\nIf the answer is \"Yes\" to Box 8, then continue to Box 9, in the shape of a rectangle: \"Refer/consult for appropriate interdisciplinary treatments\"\nBox 9 connects to Box 10, in the shape of a hexagon, and asks the question: \"Is the patient able and willing to engage in a comprehensive pain care plan?\"\nIf the answer is \"No\" to Box 10, then continue to Box 17, in the shape of a rectangle: \"Exit algorithm; manage with non-opioid modalities\"\nIf the answer is \"Yes\" to Box 10, then continue to Box 11, in the shape of a rectangle:\n\"Educate patient and family about treatment options, including education on:\nKnown risks and unknown long-term benefits of opioids\nRisks of SUD and overdose\nNeed for risk mitigation strategies\nNaloxone rescue\"\nBox 11 connects to Box 12, in the shape of a hexagon, and asks the question: \"Is adding opioids to comprehensive pain therapy indicated at this time? (see Sidebar D)\"\nIf the answer is \"No\" to Box 12, then continue to Box 17, in the shape of a rectangle: \"Exit algorithm; manage with non-opioid modalities\"\nIf the answer is \"Yes\" to Box 12, then Box 13, in the shape of a hexagon, asks the question: \"Is patient prepared to accept responsibilities of and is provider prepared to implement risk mitigation strategies?\"\nIf the answer is \"No\" to Box 13, then continue to Box 17, in the shape of a rectangle: \"Exit algorithm; manage with non-opioid modalities\"\nIf the answer is \"Yes\" to Box 13, then continue to Box 14, in the shape of a rectangle: \"Discuss and complete written informed consent with patient and family\"\nBox 14 connects to Box 15, in the shape of a rectangle: \"Modify and document comprehensive pain management plan including opioids\"\nBox 15 connects to Box 16, in the shape of an oval: \"Go to Module B\""
+    ]
+  },
+  "cost_note": "priced at the requested model's rates; a fallback hop bills at its own rates",
+  "request_id": "8b06a004-4477-4cca-a5f5-1418fa521521",
+  "request_started_utc": "2026-10-18T03:45:11.895855+00:00",
+  "citation_check": {
+    "t_start": 12.132,
+    "duration_s": 0.0
+  },
+  "prices_per_mtok": {
+    "input": 2.0,
+    "output": 10.0,
+    "cache_read": 0.2,
+    "cache_write": 2.5
+  }
+}

@@ -1,0 +1,476 @@
+{
+  "question": "Tramadol-naïve NY Medicaid pt with a new Rx for tramadol ER. What do they have to try first?",
+  "request_id": "07c13df6-5d4a-4d20-9484-e6abacefb575",
+  "status": "answered",
+  "agent_status": "answered",
+  "assumption": null,
+  "answer": "For NYRx, **tramadol ER is non-preferred with ST** in Opioids–Long-Acting. For a **tramadol-naïve** member, NY Medicaid says to **attempt IR formulations first** before **ConZip® or tramadol ER**. The relevant IR option on the PDL is **tramadol tablet**, listed as preferred under short-acting opioids.\n\nAlso screen for opioid edits: long-acting opioid initiation in an opioid-naïve patient requires PA, and opioid requirements have exemptions for cancer, sickle cell disease, hospice, or palliative care.",
+  "citations": [
+    {
+      "doc_id": "ny_medicaid_pdl",
+      "page": 5,
+      "link": "https://newyork.fhsc.com/downloads/providers/NYRx_PDP_PDL.pdf#page=5",
+      "flag": null,
+      "locator": "ny_medicaid_pdl:p5"
+    },
+    {
+      "doc_id": "ny_medicaid_pdl",
+      "page": 6,
+      "link": "https://newyork.fhsc.com/downloads/providers/NYRx_PDP_PDL.pdf#page=6",
+      "flag": null,
+      "locator": "ny_medicaid_pdl:p6"
+    }
+  ],
+  "conflicts_noted": [],
+  "flags": [],
+  "needs_review": false,
+  "words": {
+    "displayed": 73,
+    "rendered": 73
+  },
+  "answered_by": "gpt-5.5-2026-04-23",
+  "provider": "openai",
+  "model": "gpt-5.5-2026-04-23",
+  "fallback_used": false,
+  "timing_s": {
+    "total": 10.744,
+    "search": 0.379,
+    "read_page": 0,
+    "list_documents": 0,
+    "lookups": 0.008,
+    "model_calls": [
+      2.674,
+      7.682
+    ]
+  },
+  "lookups": 2,
+  "tokens": {
+    "input": 6843,
+    "output": 647,
+    "cache_read": 3072,
+    "cache_write": 0
+  },
+  "cost_usd": 0.055161,
+  "completeness": null,
+  "pages_seen": [
+    "ny_medicaid_pdl:p1",
+    "ny_medicaid_pdl:p14",
+    "ny_medicaid_pdl:p15",
+    "ny_medicaid_pdl:p16",
+    "ny_medicaid_pdl:p5",
+    "ny_medicaid_pdl:p6",
+    "ny_medicaid_pdl:p69",
+    "ny_medicaid_pdl:p70",
+    "ny_medicaid_pdl:p71",
+    "ny_medicaid_pdl:p76",
+    "ny_medicaid_pharmacy_policy:p17",
+    "ny_medicaid_pharmacy_policy:p18"
+  ],
+  "trace_id": null,
+  "started_at": "2026-10-18T23:36:13+00:00",
+  "config": {
+    "primary": "gpt-5.5",
+    "fallback": "claude-sonnet-5-5",
+    "effort": "medium",
+    "search": {
+      "mode": "hybrid",
+      "rrf_k": 60,
+      "fusion_depth": 100,
+      "return_parents": true,
+      "rerank": null
+    },
+    "max_tool_calls": 6,
+    "deadline_s": 25,
+    "search_k": 8,
+    "min_lookups": 1,
+    "completeness_pass": false,
+    "completeness_min_remaining_s": 8
+  },
+  "structured_lookups": true,
+  "context": {},
+  "model_answer": "For NYRx, **tramadol ER is non-preferred with ST** in Opioids–Long-Acting. For a **tramadol-naïve** member, NY Medicaid says to **attempt IR formulations first** before **ConZip® or tramadol ER**. The relevant IR option on the PDL is **tramadol tablet**, listed as preferred under short-acting opioids.\n\nAlso screen for opioid edits: long-acting opioid initiation in an opioid-naïve patient requires PA, and opioid requirements have exemptions for cancer, sickle cell disease, hospice, or palliative care.",
+  "model_citations": [
+    {
+      "doc_id": "ny_medicaid_pdl",
+      "page": 5,
+      "link": "https://newyork.fhsc.com/downloads/providers/NYRx_PDP_PDL.pdf#page=5",
+      "flag": null,
+      "locator": "ny_medicaid_pdl:p5"
+    },
+    {
+      "doc_id": "ny_medicaid_pdl",
+      "page": 6,
+      "link": "https://newyork.fhsc.com/downloads/providers/NYRx_PDP_PDL.pdf#page=6",
+      "flag": null,
+      "locator": "ny_medicaid_pdl:p6"
+    }
+  ],
+  "first_submit": null,
+  "model_calls": [
+    {
+      "t_start": 0.0,
+      "duration_s": 2.674,
+      "requested_model": "gpt-5.5",
+      "served_model": "gpt-5.5-2026-04-23",
+      "provider": "openai",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 525,
+        "output": 122,
+        "cache_read": 1536,
+        "cache_write": 0
+      },
+      "cost_usd": 0.007053,
+      "response_id": "resp_001c52520423d3cf016ad557e2986487d2881eef1b001c6844",
+      "input_messages": [
+        {
+          "role": "user",
+          "text": "Today's date: 2026-10-18\n\nQuestion: Tramadol-naïve NY Medicaid pt with a new Rx for tramadol ER. What do they have to try first?"
+        }
+      ],
+      "output": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "call_jX4APadchvNykx7V3LQ5GtW8",
+            "name": "lookup_ny_medicaid_drug",
+            "arguments": {
+              "drug": "tramadol ER"
+            }
+          },
+          {
+            "id": "call_QOFiz6UdYB7BDOgmi1jMH7Il",
+            "name": "search_documents",
+            "arguments": {
+              "query": "tramadol ER tramadol-naive try first extended release opioid coverage parameters",
+              "program": "NY Medicaid",
+              "k": 5
+            }
+          }
+        ]
+      }
+    },
+    {
+      "t_start": 3.061,
+      "duration_s": 7.682,
+      "requested_model": "gpt-5.5",
+      "served_model": "gpt-5.5-2026-04-23",
+      "provider": "openai",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 6318,
+        "output": 525,
+        "cache_read": 1536,
+        "cache_write": 0
+      },
+      "cost_usd": 0.048108,
+      "response_id": "resp_001c52520423d3cf016ad557e58ad887d2bc2ac79d35424c59",
+      "input_messages": [
+        {
+          "role": "tool",
+          "tool_results": [
+            {
+              "call_id": "call_jX4APadchvNykx7V3LQ5GtW8",
+              "is_error": false,
+              "content": "{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"tramadol ER\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"exact_match\", \"classes\": [{\"drug_class\": \"Opioids – Long-Acting\", \"section\": \"I. Analgesics\", \"class_flags\": {\"CC\": \"Clinical Criteria: see the class's Coverage Parameters\"}, \"coverage_parameters\": \"CLINICAL CRITERIA (CC) *\\nLimited to a total of 4 opioid prescriptions every 30 days; Exemption\\nfor diagnosis of cancer, hospice or palliative care, or sickle cell\\ndisease\\nPA required for initiation of opioid therapy for patients on established\\nopioid dependence therapy\\nPA required for use if ≥ 90 MME (MME = morphine milligram\\nequivalents) of opioid per day for management of non-acute pain\\n(pain lasting > 7 days)\\nPA required for initiation of long-acting opioid therapy in opioid-naïve\\npatients.\\nPA required for any additional long-acting opioid prescription for\\npatients currently on long-acting opioid therapy.\\nPA required for initiation of opioid therapy in patients currently on\\nbenzodiazepine therapy\\nPA required for any codeine- or tramadol-containing products in pts\\n< 12 years\\nSTEP THERAPY (ST)\\nTramadol ER (tramadol naïve patients): Attempt treatment with IR\\nformulations before the following ER formulations: ConZip® , tramadol\\nER\\n*Exemption from requirements for diagnosis of cancer, sickle cell\\ndisease, or hospice or palliative care.\", \"coverage_pages\": [5, 6], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p5#row-27\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 5}, \"drug_name\": \"tramadol ER\", \"listed_as\": \"non-preferred\", \"flags\": {\"ST\": \"Step Therapy: see the class's Coverage Parameters\"}, \"matched_on\": \"exact name\"}]}]}"
+            },
+            {
+              "call_id": "call_QOFiz6UdYB7BDOgmi1jMH7Il",
+              "is_error": false,
+              "content": "[{\"doc_id\": \"ny_medicaid_pdl\", \"page\": 5, \"program\": \"NY Medicaid\", \"authority\": \"binding\", \"date\": \"2026-09-14\", \"text\": \"NYRx Preferred Drug Program (PDP) Preferred Drug List > I. Analgesics > Opioids – Long-Acting (CC)\\n[p 5]\\nPreferred drugs: buprenorphine patch; fentanyl patch (12 mcg, 25 mcg, 50 mcg, 75 mcg, 100 mcg); morphine sulfate ER tablet)\\nNon-preferred drugs: Belbuca®; Butrans®; ConZip® (ST); fentanyl patch (37.5 mcg, 62.5 mcg, 87.5 mcg); hydrocodone ER; hydrocodone ER (gen Hysingla ER); hydromorphone ER; Hysingla® ER; morphine ER capsule (gen Avinza); morphine ER capsule (gen Kadian); MS Contin®; oxycodone ER; Oxycontin®; oxymorphone ER; tramadol ER (ST)\\nCoverage parameters: CLINICAL CRITERIA (CC) *\\nLimited to a total of 4 opioid prescriptions every 30 days; Exemption\\nfor diagnosis of cancer, hospice or palliative care, or sickle cell\\ndisease\\nPA required for initiation of opioid therapy for patients on established\\nopioid dependence therapy\\nPA required for use if ≥ 90 MME (MME = morphine milligram\\nequivalents) of opioid per day for management of non-acute pain\\n(pain lasting > 7 days)\\nPA required for initiation of long-acting opioid therapy in opioid-naïve\\npatients.\\nPA required for any additional long-acting opioid prescription for\\npatients currently on long-acting opioid therapy.\\nPA required for initiation of opioid therapy in patients currently on\\nbenzodiazepine therapy\\nPA required for any codeine- or tramadol-containing products in pts\\n< 12 years\\nSTEP THERAPY (ST)\\nTramadol ER (tramadol naïve patients): Attempt treatment with IR\\nformulations before the following ER formulations: ConZip® , tramadol\\nER\\n*Exemption from requirements for diagnosis of cancer, sickle cell\\ndisease, or hospice or palliative care.\", \"pages\": [5], \"section\": \"I. Analgesics > Opioids – Long-Acting (CC)\"}, {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 6, \"program\": \"NY Medicaid\", \"authority\": \"binding\", \"date\": \"2026-09-14\", \"text\": \"NYRx Preferred Drug Program (PDP) Preferred Drug List > I. Analgesics > Opioids – Short-Acting (CC)\\n[p 6]\\nPreferred drugs: butalbital/APAP/caffeine/codeine; codeine; codeine/APAP; hydrocodone/APAP; hydrocodone/ibuprofen; hydromorphone tablet; morphine IR; oxycodone IR tablet, solution; oxycodone/APAP; tramadol tablet\\nNon-preferred drugs: butalbital compound/codeine; butorphanol nasal spray; dihydrocodeine/APAP/caffeine; Dilaudid®; hydromorphone solution; levorphanol; meperidine; oxycodone IR capsule, concentrate; oxycodone/APAP 2.5 mg, 5 mg, 7.5 mg, 10 mg/300 mg; oxymorphone; pentazocine/naloxone; Percocet®; RoxyBond; Roxicodone®; tapentadol (gen Nucynta® ); tramadol solution; tramadol 25mg, 75mg tablet; tramadol/APAP\\nCoverage parameters: CLINICAL CRITERIA (CC) *\\nLimited to a total of 4 opioid prescriptions every 30 days.\\nInitial prescription for opioid-naïve patients limited to a 7-day supply.\\nPA required for initiation of opioid therapy for patients on established\\nopioid dependence therapy.\\nPA required for use if ≥ 90 MME of opioid per day for management\\nof non-acute pain (> 7 days)\\nException for diagnosis of cancer or sickle cell disease, or\\nhospice or palliative care programs\\nPA is required for opioid-naïve patients for prescription requests ≥ 50\\nMME per day.\\nPA required for continuation of opioid therapy beyond an initial 7-day\\nsupply in patients established on gabapentin or pregabalin\\nPA required for initiation of opioid therapy in patients currently on\\nbenzodiazepine therapy\\nPA required for any codeine- or tramadol-containing products in pts\\n< 12 years\\nPA required for continuation of opioid therapy for >7days for patients\\non established CNS stimulant therapy\\nSTEP THERAPY (ST)\\nFor Non-opioid Pain management alternatives please visit:\\nhttps://health.ny.gov/health_care/medicaid/program/opioid_manage\\nment/docs/non_opioid_alternatives_to_pain_management.pdf\\n*Exemptions from requirements for diagnosis of cancer, sickle cell\\ndisease, or hospice or palliative care\", \"pag"
+            }
+          ]
+        }
+      ],
+      "output": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "call_RlUT2SSvgW1dFYe1MSKVfDdP",
+            "name": "submit_answer",
+            "arguments": {
+              "status": "answered",
+              "assumption": null,
+              "answer": "For NYRx, **tramadol ER is non-preferred with ST** in Opioids–Long-Acting. For a **tramadol-naïve** member, NY Medicaid says to **attempt IR formulations first** before **ConZip® or tramadol ER**. The relevant IR option on the PDL is **tramadol tablet**, listed as preferred under short-acting opioids.\n\nAlso screen for opioid edits: long-acting opioid initiation in an opioid-naïve patient requires PA, and opioid requirements have exemptions for cancer, sickle cell disease, hospice, or palliative care.",
+              "citations": [
+                {
+                  "doc_id": "ny_medicaid_pdl",
+                  "page": 5,
+                  "row": null
+                },
+                {
+                  "doc_id": "ny_medicaid_pdl",
+                  "page": 6,
+                  "row": null
+                }
+              ],
+              "conflicts_noted": []
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "lookup_ny_medicaid_drug",
+      "input": {
+        "drug": "tramadol ER"
+      },
+      "duration_s": 0.008,
+      "is_error": false,
+      "pages": [
+        "ny_medicaid_pdl:p1",
+        "ny_medicaid_pdl:p5",
+        "ny_medicaid_pdl:p6"
+      ],
+      "result": "{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"tramadol ER\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"exact_match\", \"classes\": [{\"drug_class\": \"Opioids – Long-Acting\", \"section\": \"I. Analgesics\", \"class_flags\": {\"CC\": \"Clinical Criteria: see the class's Coverage Parameters\"}, \"coverage_parameters\": \"CLINICAL CRITERIA (CC) *\\nLimited to a total of 4 opioid prescriptions every 30 days; Exemption\\nfor diagnosis of cancer, hospice or palliative care, or sickle cell\\ndisease\\nPA required for initiation of opioid therapy for patients on established\\nopioid dependence therapy\\nPA required for use if ≥ 90 MME (MME = morphine milligram\\nequivalents) of opioid per day for management of non-acute pain\\n(pain lasting > 7 days)\\nPA required for initiation of long-acting opioid therapy in opioid-naïve\\npatients.\\nPA required for any additional long-acting opioid prescription for\\npatients currently on long-acting opioid therapy.\\nPA required for initiation of opioid therapy in patients currently on\\nbenzodiazepine therapy\\nPA required for any codeine- or tramadol-containing products in pts\\n< 12 years\\nSTEP THERAPY (ST)\\nTramadol ER (tramadol naïve patients): Attempt treatment with IR\\nformulations before the following ER formulations: ConZip® , tramadol\\nER\\n*Exemption from requirements for diagnosis of cancer, sickle cell\\ndisease, or hospice or palliative care.\", \"coverage_pages\": [5, 6], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p5#row-27\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 5}, \"drug_name\": \"tramadol ER\", \"listed_as\": \"non-preferred\", \"flags\": {\"ST\": \"Step Therapy: see the class's Coverage Parameters\"}, \"matched_on\": \"exact name\"}]}]}",
+      "lookup": {
+        "result": "exact_match",
+        "rows": 1
+      },
+      "t_start": 2.674
+    },
+    {
+      "name": "search_documents",
+      "input": {
+        "query": "tramadol ER tramadol-naive try first extended release opioid coverage parameters",
+        "program": "NY Medicaid",
+        "k": 5
+      },
+      "duration_s": 0.379,
+      "is_error": false,
+      "pages": [
+        "ny_medicaid_pdl:p14",
+        "ny_medicaid_pdl:p15",
+        "ny_medicaid_pdl:p16",
+        "ny_medicaid_pdl:p5",
+        "ny_medicaid_pdl:p6",
+        "ny_medicaid_pdl:p69",
+        "ny_medicaid_pdl:p70",
+        "ny_medicaid_pdl:p71",
+        "ny_medicaid_pdl:p76",
+        "ny_medicaid_pharmacy_policy:p17",
+        "ny_medicaid_pharmacy_policy:p18"
+      ],
+      "result": "[{\"doc_id\": \"ny_medicaid_pdl\", \"page\": 5, \"program\": \"NY Medicaid\", \"authority\": \"binding\", \"date\": \"2026-09-14\", \"text\": \"NYRx Preferred Drug Program (PDP) Preferred Drug List > I. Analgesics > Opioids – Long-Acting (CC)\\n[p 5]\\nPreferred drugs: buprenorphine patch; fentanyl patch (12 mcg, 25 mcg, 50 mcg, 75 mcg, 100 mcg); morphine sulfate ER tablet)\\nNon-preferred drugs: Belbuca®; Butrans®; ConZip® (ST); fentanyl patch (37.5 mcg, 62.5 mcg, 87.5 mcg); hydrocodone ER; hydrocodone ER (gen Hysingla ER); hydromorphone ER; Hysingla® ER; morphine ER capsule (gen Avinza); morphine ER capsule (gen Kadian); MS Contin®; oxycodone ER; Oxycontin®; oxymorphone ER; tramadol ER (ST)\\nCoverage parameters: CLINICAL CRITERIA (CC) *\\nLimited to a total of 4 opioid prescriptions every 30 days; Exemption\\nfor diagnosis of cancer, hospice or palliative care, or sickle cell\\ndisease\\nPA required for initiation of opioid therapy for patients on established\\nopioid dependence therapy\\nPA required for use if ≥ 90 MME (MME = morphine milligram\\nequivalents) of opioid per day for management of non-acute pain\\n(pain lasting > 7 days)\\nPA required for initiation of long-acting opioid therapy in opioid-naïve\\npatients.\\nPA required for any additional long-acting opioid prescription for\\npatients currently on long-acting opioid therapy.\\nPA required for initiation of opioid therapy in patients currently on\\nbenzodiazepine therapy\\nPA required for any codeine- or tramadol-containing products in pts\\n< 12 years\\nSTEP THERAPY (ST)\\nTramadol ER (tramadol naïve patients): Attempt treatment with IR\\nformulations before the following ER formulations: ConZip® , tramadol\\nER\\n*Exemption from requirements for diagnosis of cancer, sickle cell\\ndisease, or hospice or palliative care.\", \"pages\": [5], \"section\": \"I. Analgesics > Opioids – Long-Acting (CC)\"}, {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 6, \"program\": \"NY Medicaid\", \"authority\": \"binding\", \"date\": \"2026-09-14\", \"text\": \"NYRx Preferred Drug Program (PDP) Preferred Drug List > I. Analgesics > Opioids – Short-Acting (CC)\\n[p 6]\\nPreferred drugs: butalbital/APAP/caffeine/codeine; codeine; codeine/APAP; hydrocodone/APAP; hydrocodone/ibuprofen; hydromorphone tablet; morphine IR; oxycodone IR tablet, solution; oxycodone/APAP; tramadol tablet\\nNon-preferred drugs: butalbital compound/codeine; butorphanol nasal spray; dihydrocodeine/APAP/caffeine; Dilaudid®; hydromorphone solution; levorphanol; meperidine; oxycodone IR capsule, concentrate; oxycodone/APAP 2.5 mg, 5 mg, 7.5 mg, 10 mg/300 mg; oxymorphone; pentazocine/naloxone; Percocet®; RoxyBond; Roxicodone®; tapentadol (gen Nucynta® ); tramadol solution; tramadol 25mg, 75mg tablet; tramadol/APAP\\nCoverage parameters: CLINICAL CRITERIA (CC) *\\nLimited to a total of 4 opioid prescriptions every 30 days.\\nInitial prescription for opioid-naïve patients limited to a 7-day supply.\\nPA required for initiation of opioid therapy for patients on established\\nopioid dependence therapy.\\nPA required for use if ≥ 90 MME of opioid per day for management\\nof non-acute pain (> 7 days)\\nException for diagnosis of cancer or sickle cell disease, or\\nhospice or palliative care programs\\nPA is required for opioid-naïve patients for prescription requests ≥ 50\\nMME per day.\\nPA required for continuation of opioid therapy beyond an initial 7-day\\nsupply in patients established on gabapentin or pregabalin\\nPA required for initiation of opioid therapy in patients currently on\\nbenzodiazepine therapy\\nPA required for any codeine- or tramadol-containing products in pts\\n< 12 years\\nPA required for continuation of opioid therapy for >7days for patients\\non established CNS stimulant therapy\\nSTEP THERAPY (ST)\\nFor Non-opioid Pain management alternatives please visit:\\nhttps://health.ny.gov/health_care/medicaid/program/opioid_manage\\nment/docs/non_opioid_alternatives_to_pain_management.pdf\\n*Exemptions from requirements for diagnosis of cancer, sickle cell\\ndisease, or hospice or palliative care\", \"pag",
+      "search": {
+        "original_query": "Tramadol-naïve NY Medicaid pt with a new Rx for tramadol ER. What do they have to try first?",
+        "agent_query": "tramadol ER tramadol-naive try first extended release opioid coverage parameters",
+        "executed": [
+          {
+            "source": "original",
+            "query": "Tramadol-naïve NY Medicaid pt with a new Rx for tramadol ER. What do they have to try first?",
+            "program": "NY Medicaid",
+            "k": 5,
+            "seconds": 0.378,
+            "cached": false,
+            "results": 5
+          },
+          {
+            "source": "agent",
+            "query": "tramadol ER tramadol-naive try first extended release opioid coverage parameters",
+            "program": "NY Medicaid",
+            "k": 5,
+            "seconds": 0.233,
+            "cached": false,
+            "results": 5
+          }
+        ],
+        "duplicates_merged": 2,
+        "returned": 8,
+        "from_both": 2,
+        "from_original_only": 3,
+        "from_agent_only": 3,
+        "provenance": [
+          {
+            "unit": "ny_medicaid_pdl:s3",
+            "found_by": {
+              "original": 1,
+              "agent": 1
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s4",
+            "found_by": {
+              "original": 5,
+              "agent": 2
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s126",
+            "found_by": {
+              "original": 2
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s31",
+            "found_by": {
+              "original": 3
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s125",
+            "found_by": {
+              "agent": 3
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s24",
+            "found_by": {
+              "original": 4
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s127",
+            "found_by": {
+              "agent": 4
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s133",
+            "found_by": {
+              "agent": 5
+            }
+          }
+        ],
+        "hits": [
+          {
+            "unit": "ny_medicaid_pdl:s3",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              5
+            ],
+            "ranks": {
+              "original": 1,
+              "agent": 1
+            },
+            "scores": {
+              "original": 0.0308,
+              "agent": 0.0323
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s4",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              6
+            ],
+            "ranks": {
+              "original": 5,
+              "agent": 2
+            },
+            "scores": {
+              "original": 0.0221,
+              "agent": 0.0323
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s126",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              70
+            ],
+            "ranks": {
+              "original": 2
+            },
+            "scores": {
+              "original": 0.0247
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s31",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              14,
+              15,
+              16
+            ],
+            "ranks": {
+              "original": 3
+            },
+            "scores": {
+              "original": 0.0241
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s125",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              69
+            ],
+            "ranks": {
+              "agent": 3
+            },
+            "scores": {
+              "agent": 0.0308
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s24",
+            "doc_id": "ny_medicaid_pharmacy_policy",
+            "pages": [
+              17,
+              18
+            ],
+            "ranks": {
+              "original": 4
+            },
+            "scores": {
+              "original": 0.0224
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s127",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              71
+            ],
+            "ranks": {
+              "agent": 4
+            },
+            "scores": {
+              "agent": 0.0303
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s133",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              76
+            ],
+            "ranks": {
+              "agent": 5
+            },
+            "scores": {
+              "agent": 0.027
+            }
+          }
+        ]
+      },
+      "t_start": 2.682
+    }
+  ],
+  "cited_evidence": {
+    "ny_medicaid_pdl:p5": "{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"tramadol ER\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"exact_match\", \"classes\": [{\"drug_class\": \"Opioids – Long-Acting\", \"section\": \"I. Analgesics\", \"class_flags\": {\"CC\": \"Clinical Criteria: see the class's Coverage Parameters\"}, \"coverage_parameters\": \"CLINICAL CRITERIA (CC) *\\nLimited to a total of 4 opioid prescriptions every 30 days; Exemption\\nfor diagnosis of cancer, hospice or palliative care, or sickle cell\\ndisease\\nPA required for initiation of opioid therapy for patients on established\\nopioid dependence therapy\\nPA required for use if ≥ 90 MME (MME = morphine milligram\\nequivalents) of opioid per day for management of non-acute pain\\n(pain lasting > 7 days)\\nPA required for initiation of long-acting opioid therapy in opioid-naïve\\npatients.\\nPA required for any additional long-acting opioid prescription for\\npatients currently on long-acting opioid therapy.\\nPA required for initiation of opioid therapy in patients currently on\\nbenzodiazepine therapy\\nPA required for any codeine- or tramadol-containing products in pts\\n< 12 years\\nSTEP THERAPY (ST)\\nTramadol ER (tramadol naïve patients): Attempt treatment with IR\\nformulations before the following ER formulations: ConZip® , tramadol\\nER\\n*Exemption from requirements for diagnosis of cancer, sickle cell\\ndisease, or hospice or palliative care.\", \"coverage_pages\": [5, 6], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p5#row-27\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 5}, \"drug_name\": \"tramadol ER\", \"listed_as\": \"non-preferred\", \"flags\": {\"ST\": \"Step Therapy: see the class's Coverage Parameters\"}, \"matched_on\": \"exact name\"}]}]}\n\nny_medicaid_pdl (NY Medicaid, binding, 2026-09-14)\nNYRx Preferred Drug Program (PDP) Preferred Drug List > I. Analgesics > Opioids – Long-Acting (CC)\n[p 5]\nPreferred drugs: buprenorphine patch; fentanyl patch (12 mcg, 25 mcg, 50 mcg, 75 mcg, 100 mcg); morphine sulfate ER tablet)\nNon-preferred drugs: Belbuca®; Butrans®; ConZip® (ST); fentanyl patch (37.5 mcg, 62.5 mcg, 87.5 mcg); hydrocodone ER; hydrocodone ER (gen Hysingla ER); hydromorphone ER; Hysingla® ER; morphine ER capsule (gen Avinza); morphine ER capsule (gen Kadian); MS Contin®; oxycodone ER; Oxycontin®; oxymorphone ER; tramadol ER (ST)\nCoverage parameters: CLINICAL CRITERIA (CC) *\nLimited to a total of 4 opioid prescriptions every 30 days; Exemption\nfor diagnosis of cancer, hospice or palliative care, or sickle cell\ndisease\nPA required for initiation of opioid therapy for patients on established\nopioid dependence therapy\nPA required for use if ≥ 90 MME (MME = morphine milligram\nequivalents) of opioid per day for management of non-acute pain\n(pain lasting > 7 days)\nPA required for initiation of long-acting opioid therapy in opioid-naïve\npatients.\nPA required for any additional long-acting opioid prescription for\npatients currently on long-acting opioid therapy.\nPA required for initiation of opioid therapy in patients currently on\nbenzodiazepine therapy\nPA required for any codeine- or tramadol-containing products in pts\n< 12 years\nSTEP THERAPY (ST)\nTramadol ER (tramadol naïve patients): Attempt treatment with IR\nformulations before the following ER formulations: ConZip® , tramadol\nER\n*Exemption from requirements for diagnosis of cancer, sickle cell\ndisease, or hospice or palliative care.",
+    "ny_medicaid_pdl:p6": "{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"tramadol ER\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"exact_match\", \"classes\": [{\"drug_class\": \"Opioids – Long-Acting\", \"section\": \"I. Analgesics\", \"class_flags\": {\"CC\": \"Clinical Criteria: see the class's Coverage Parameters\"}, \"coverage_parameters\": \"CLINICAL CRITERIA (CC) *\\nLimited to a total of 4 opioid prescriptions every 30 days; Exemption\\nfor diagnosis of cancer, hospice or palliative care, or sickle cell\\ndisease\\nPA required for initiation of opioid therapy for patients on established\\nopioid dependence therapy\\nPA required for use if ≥ 90 MME (MME = morphine milligram\\nequivalents) of opioid per day for management of non-acute pain\\n(pain lasting > 7 days)\\nPA required for initiation of long-acting opioid therapy in opioid-naïve\\npatients.\\nPA required for any additional long-acting opioid prescription for\\npatients currently on long-acting opioid therapy.\\nPA required for initiation of opioid therapy in patients currently on\\nbenzodiazepine therapy\\nPA required for any codeine- or tramadol-containing products in pts\\n< 12 years\\nSTEP THERAPY (ST)\\nTramadol ER (tramadol naïve patients): Attempt treatment with IR\\nformulations before the following ER formulations: ConZip® , tramadol\\nER\\n*Exemption from requirements for diagnosis of cancer, sickle cell\\ndisease, or hospice or palliative care.\", \"coverage_pages\": [5, 6], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p5#row-27\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 5}, \"drug_name\": \"tramadol ER\", \"listed_as\": \"non-preferred\", \"flags\": {\"ST\": \"Step Therapy: see the class's Coverage Parameters\"}, \"matched_on\": \"exact name\"}]}]}\n\nny_medicaid_pdl (NY Medicaid, binding, 2026-09-14)\nNYRx Preferred Drug Program (PDP) Preferred Drug List > I. Analgesics > Opioids – Short-Acting (CC)\n[p 6]\nPreferred drugs: butalbital/APAP/caffeine/codeine; codeine; codeine/APAP; hydrocodone/APAP; hydrocodone/ibuprofen; hydromorphone tablet; morphine IR; oxycodone IR tablet, solution; oxycodone/APAP; tramadol tablet\nNon-preferred drugs: butalbital compound/codeine; butorphanol nasal spray; dihydrocodeine/APAP/caffeine; Dilaudid®; hydromorphone solution; levorphanol; meperidine; oxycodone IR capsule, concentrate; oxycodone/APAP 2.5 mg, 5 mg, 7.5 mg, 10 mg/300 mg; oxymorphone; pentazocine/naloxone; Percocet®; RoxyBond; Roxicodone®; tapentadol (gen Nucynta® ); tramadol solution; tramadol 25mg, 75mg tablet; tramadol/APAP\nCoverage parameters: CLINICAL CRITERIA (CC) *\nLimited to a total of 4 opioid prescriptions every 30 days.\nInitial prescription for opioid-naïve patients limited to a 7-day supply.\nPA required for initiation of opioid therapy for patients on established\nopioid dependence therapy.\nPA required for use if ≥ 90 MME of opioid per day for management\nof non-acute pain (> 7 days)\nException for diagnosis of cancer or sickle cell disease, or\nhospice or palliative care programs\nPA is required for opioid-naïve patients for prescription requests ≥ 50\nMME per day.\nPA required for continuation of opioid therapy beyond an initial 7-day\nsupply in patients established on gabapentin or pregabalin\nPA required for initiation of opioid therapy in patients currently on\nbenzodiazepine therapy\nPA required for any codeine- or tramadol-containing products in pts\n< 12 years\nPA required for continuation of opioid therapy for >7days for patients\non established CNS stimulant therapy\nSTEP THERAPY (ST)\nFor Non-opioid Pain management alternatives please visit:\nhttps://health.ny.gov/health_care/medicaid/program/opioid_manage\nment/docs/non_opioid_alternatives_to_pain_management.pdf\n*Exemptions from requirements for diagnosis of cancer, sickle cell\ndisease, or hospice or palliative care"
+  },
+  "cited_evidence_parts": {
+    "ny_medicaid_pdl:p5": [
+      "{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"tramadol ER\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"exact_match\", \"classes\": [{\"drug_class\": \"Opioids – Long-Acting\", \"section\": \"I. Analgesics\", \"class_flags\": {\"CC\": \"Clinical Criteria: see the class's Coverage Parameters\"}, \"coverage_parameters\": \"CLINICAL CRITERIA (CC) *\\nLimited to a total of 4 opioid prescriptions every 30 days; Exemption\\nfor diagnosis of cancer, hospice or palliative care, or sickle cell\\ndisease\\nPA required for initiation of opioid therapy for patients on established\\nopioid dependence therapy\\nPA required for use if ≥ 90 MME (MME = morphine milligram\\nequivalents) of opioid per day for management of non-acute pain\\n(pain lasting > 7 days)\\nPA required for initiation of long-acting opioid therapy in opioid-naïve\\npatients.\\nPA required for any additional long-acting opioid prescription for\\npatients currently on long-acting opioid therapy.\\nPA required for initiation of opioid therapy in patients currently on\\nbenzodiazepine therapy\\nPA required for any codeine- or tramadol-containing products in pts\\n< 12 years\\nSTEP THERAPY (ST)\\nTramadol ER (tramadol naïve patients): Attempt treatment with IR\\nformulations before the following ER formulations: ConZip® , tramadol\\nER\\n*Exemption from requirements for diagnosis of cancer, sickle cell\\ndisease, or hospice or palliative care.\", \"coverage_pages\": [5, 6], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p5#row-27\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 5}, \"drug_name\": \"tramadol ER\", \"listed_as\": \"non-preferred\", \"flags\": {\"ST\": \"Step Therapy: see the class's Coverage Parameters\"}, \"matched_on\": \"exact name\"}]}]}",
+      "ny_medicaid_pdl (NY Medicaid, binding, 2026-09-14)\nNYRx Preferred Drug Program (PDP) Preferred Drug List > I. Analgesics > Opioids – Long-Acting (CC)\n[p 5]\nPreferred drugs: buprenorphine patch; fentanyl patch (12 mcg, 25 mcg, 50 mcg, 75 mcg, 100 mcg); morphine sulfate ER tablet)\nNon-preferred drugs: Belbuca®; Butrans®; ConZip® (ST); fentanyl patch (37.5 mcg, 62.5 mcg, 87.5 mcg); hydrocodone ER; hydrocodone ER (gen Hysingla ER); hydromorphone ER; Hysingla® ER; morphine ER capsule (gen Avinza); morphine ER capsule (gen Kadian); MS Contin®; oxycodone ER; Oxycontin®; oxymorphone ER; tramadol ER (ST)\nCoverage parameters: CLINICAL CRITERIA (CC) *\nLimited to a total of 4 opioid prescriptions every 30 days; Exemption\nfor diagnosis of cancer, hospice or palliative care, or sickle cell\ndisease\nPA required for initiation of opioid therapy for patients on established\nopioid dependence therapy\nPA required for use if ≥ 90 MME (MME = morphine milligram\nequivalents) of opioid per day for management of non-acute pain\n(pain lasting > 7 days)\nPA required for initiation of long-acting opioid therapy in opioid-naïve\npatients.\nPA required for any additional long-acting opioid prescription for\npatients currently on long-acting opioid therapy.\nPA required for initiation of opioid therapy in patients currently on\nbenzodiazepine therapy\nPA required for any codeine- or tramadol-containing products in pts\n< 12 years\nSTEP THERAPY (ST)\nTramadol ER (tramadol naïve patients): Attempt treatment with IR\nformulations before the following ER formulations: ConZip® , tramadol\nER\n*Exemption from requirements for diagnosis of cancer, sickle cell\ndisease, or hospice or palliative care."
+    ],
+    "ny_medicaid_pdl:p6": [
+      "{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"tramadol ER\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"exact_match\", \"classes\": [{\"drug_class\": \"Opioids – Long-Acting\", \"section\": \"I. Analgesics\", \"class_flags\": {\"CC\": \"Clinical Criteria: see the class's Coverage Parameters\"}, \"coverage_parameters\": \"CLINICAL CRITERIA (CC) *\\nLimited to a total of 4 opioid prescriptions every 30 days; Exemption\\nfor diagnosis of cancer, hospice or palliative care, or sickle cell\\ndisease\\nPA required for initiation of opioid therapy for patients on established\\nopioid dependence therapy\\nPA required for use if ≥ 90 MME (MME = morphine milligram\\nequivalents) of opioid per day for management of non-acute pain\\n(pain lasting > 7 days)\\nPA required for initiation of long-acting opioid therapy in opioid-naïve\\npatients.\\nPA required for any additional long-acting opioid prescription for\\npatients currently on long-acting opioid therapy.\\nPA required for initiation of opioid therapy in patients currently on\\nbenzodiazepine therapy\\nPA required for any codeine- or tramadol-containing products in pts\\n< 12 years\\nSTEP THERAPY (ST)\\nTramadol ER (tramadol naïve patients): Attempt treatment with IR\\nformulations before the following ER formulations: ConZip® , tramadol\\nER\\n*Exemption from requirements for diagnosis of cancer, sickle cell\\ndisease, or hospice or palliative care.\", \"coverage_pages\": [5, 6], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p5#row-27\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 5}, \"drug_name\": \"tramadol ER\", \"listed_as\": \"non-preferred\", \"flags\": {\"ST\": \"Step Therapy: see the class's Coverage Parameters\"}, \"matched_on\": \"exact name\"}]}]}",
+      "ny_medicaid_pdl (NY Medicaid, binding, 2026-09-14)\nNYRx Preferred Drug Program (PDP) Preferred Drug List > I. Analgesics > Opioids – Short-Acting (CC)\n[p 6]\nPreferred drugs: butalbital/APAP/caffeine/codeine; codeine; codeine/APAP; hydrocodone/APAP; hydrocodone/ibuprofen; hydromorphone tablet; morphine IR; oxycodone IR tablet, solution; oxycodone/APAP; tramadol tablet\nNon-preferred drugs: butalbital compound/codeine; butorphanol nasal spray; dihydrocodeine/APAP/caffeine; Dilaudid®; hydromorphone solution; levorphanol; meperidine; oxycodone IR capsule, concentrate; oxycodone/APAP 2.5 mg, 5 mg, 7.5 mg, 10 mg/300 mg; oxymorphone; pentazocine/naloxone; Percocet®; RoxyBond; Roxicodone®; tapentadol (gen Nucynta® ); tramadol solution; tramadol 25mg, 75mg tablet; tramadol/APAP\nCoverage parameters: CLINICAL CRITERIA (CC) *\nLimited to a total of 4 opioid prescriptions every 30 days.\nInitial prescription for opioid-naïve patients limited to a 7-day supply.\nPA required for initiation of opioid therapy for patients on established\nopioid dependence therapy.\nPA required for use if ≥ 90 MME of opioid per day for management\nof non-acute pain (> 7 days)\nException for diagnosis of cancer or sickle cell disease, or\nhospice or palliative care programs\nPA is required for opioid-naïve patients for prescription requests ≥ 50\nMME per day.\nPA required for continuation of opioid therapy beyond an initial 7-day\nsupply in patients established on gabapentin or pregabalin\nPA required for initiation of opioid therapy in patients currently on\nbenzodiazepine therapy\nPA required for any codeine- or tramadol-containing products in pts\n< 12 years\nPA required for continuation of opioid therapy for >7days for patients\non established CNS stimulant therapy\nSTEP THERAPY (ST)\nFor Non-opioid Pain management alternatives please visit:\nhttps://health.ny.gov/health_care/medicaid/program/opioid_manage\nment/docs/non_opioid_alternatives_to_pain_management.pdf\n*Exemptions from requirements for diagnosis of cancer, sickle cell\ndisease, or hospice or palliative care"
+    ]
+  },
+  "cost_note": "each call priced at its serving role's rates (llm.<role>.prices_per_mtok)",
+  "request_started_utc": "2026-10-18T23:36:02.365904+00:00",
+  "citation_check": {
+    "t_start": 10.742,
+    "duration_s": 0.001
+  }
+}

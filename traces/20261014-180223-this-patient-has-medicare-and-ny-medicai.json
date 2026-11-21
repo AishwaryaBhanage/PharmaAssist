@@ -1,0 +1,137 @@
+{
+  "question": "This patient has Medicare and NY Medicaid, takes opioids regularly, and just changed Part D plans. Their 30-day refill rejects for the opioid-naïve seven-day limit. Can we bill NYRx instead, or how do we resolve the claim?",
+  "status": "answered",
+  "assumption": "Assuming Medicare Part D rules govern (dual-eligible, full-benefit); the question doesn't say whether the patient is full-benefit.",
+  "answer": "Assuming Part D governs (dual-eligible): **No, don't bill NYRx.** NYRx policy (Sept 2026) says Medicaid doesn't cover drug classes covered under Part D for full-benefit duals. It limits Medicaid to Part D-excluded classes, such as select vitamins and certain OTCs. Opioids aren't in that group.\n\nResolve through the Part D plan:\n1. Recognize the edit. The 7-day opioid-naïve hard edit can fire when a new plan doesn't have the patient's history.\n2. Tell the plan the patient is currently taking opioids. Send the POS override transaction code, or call the plan.\n3. If it isn't overridden, dispense up to 7 days or have the prescriber or enrollee request a coverage determination for the full days supply.\n4. If the Rx can't be filled as written, give the patient the CMS notice *Medicare Prescription Drug Coverage and Your Rights*.",
+  "citations": [
+    {
+      "doc_id": "cms_partd_opioid_pharmacists_2022",
+      "page": 2,
+      "link": "https://www.cms.gov/files/document/medicare-part-d-opioid-policies-information-pharmacists-december-19-2022.pdf#page=2",
+      "flag": null
+    },
+    {
+      "doc_id": "ny_medicaid_pharmacy_policy",
+      "page": 20,
+      "link": "https://www.emedny.org/ProviderManuals/Pharmacy/PDFS/Pharmacy_Policy_Guidelines.pdf#page=20",
+      "flag": null
+    },
+    {
+      "doc_id": "ny_medicaid_pharmacy_policy",
+      "page": 19,
+      "link": "https://www.emedny.org/ProviderManuals/Pharmacy/PDFS/Pharmacy_Policy_Guidelines.pdf#page=19",
+      "flag": null
+    }
+  ],
+  "conflicts_noted": [],
+  "flags": [],
+  "answered_by": "claude-sonnet-5-5",
+  "fallback_used": false,
+  "timing_s": {
+    "total": 7.348,
+    "search": 0.374,
+    "search_cold": 0,
+    "search_warm": 0.374,
+    "read_page": 0,
+    "list_documents": 0,
+    "model_calls": [
+      2.25,
+      4.723
+    ]
+  },
+  "index_warm_at_start": true,
+  "lookups": 2,
+  "tokens": {
+    "input": 6,
+    "output": 841,
+    "cache_read": 2301,
+    "cache_write": 9318
+  },
+  "cost_usd": 0.032177,
+  "pages_seen": [
+    "cms_partd_dmp_guidance_2019:p13",
+    "cms_partd_opioid_pharmacists_2022:p1",
+    "cms_partd_opioid_pharmacists_2022:p2",
+    "ny_medicaid_pharmacy_policy:p19",
+    "ny_medicaid_pharmacy_policy:p20",
+    "ny_medicaid_pharmacy_policy:p22",
+    "ny_medicaid_pharmacy_policy:p32"
+  ],
+  "started_at": "2026-10-14T22:02:23+00:00",
+  "config": {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium",
+    "setup": "baseline",
+    "max_tool_calls": 6,
+    "deadline_s": 25,
+    "search_k": 8
+  },
+  "model_calls": [
+    {
+      "duration_s": 2.25,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 4,
+        "output": 246,
+        "cache_read": 0,
+        "cache_write": 2301
+      }
+    },
+    {
+      "duration_s": 4.723,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 2,
+        "output": 595,
+        "cache_read": 2301,
+        "cache_write": 7017
+      }
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "search_documents",
+      "input": {
+        "query": "opioid naïve seven-day supply limit new plan enrollee transition rejection override",
+        "program": "Medicare Part D",
+        "k": 6
+      },
+      "duration_s": 0.356,
+      "is_error": false,
+      "pages": [
+        "cms_partd_opioid_pharmacists_2022:p2",
+        "cms_partd_opioid_pharmacists_2022:p2",
+        "cms_partd_opioid_pharmacists_2022:p2",
+        "cms_partd_opioid_pharmacists_2022:p1",
+        "cms_partd_opioid_pharmacists_2022:p1",
+        "cms_partd_dmp_guidance_2019:p13"
+      ],
+      "index_loaded": true
+    },
+    {
+      "name": "search_documents",
+      "input": {
+        "query": "dual eligible Medicare Part D drugs billed to Medicaid opioid 7 day limit",
+        "program": "NY Medicaid",
+        "k": 5
+      },
+      "duration_s": 0.018,
+      "is_error": false,
+      "pages": [
+        "ny_medicaid_pharmacy_policy:p19",
+        "ny_medicaid_pharmacy_policy:p20",
+        "ny_medicaid_pharmacy_policy:p32",
+        "ny_medicaid_pharmacy_policy:p22",
+        "ny_medicaid_pharmacy_policy:p19"
+      ],
+      "index_loaded": true
+    }
+  ],
+  "cost_note": "priced at the requested model's rates; a fallback hop bills at its own rates"
+}

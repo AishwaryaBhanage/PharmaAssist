@@ -1,0 +1,109 @@
+{
+  "question": "Ozempic pen: preferred or PA?",
+  "status": "answered",
+  "assumption": "Assuming NY Medicaid (NYRx PDL), since the program wasn't named.",
+  "answer": "Assuming NY Medicaid: **Ozempic pen is preferred** on the NYRx PDL (revised 9/14/2026), in the GLP-1 RA Type 2 Diabetes class. It has no 10/22/2026 change marker, so the status holds today (10/14/2026).\n\n- The class carries clinical criteria (CC). Confirm an FDA-approved or compendia-supported indication that Medicaid covers.\n- PA is required if the patient is on a GLP-1 and a DPP-IV inhibitor concurrently.\n- Ozempic **tablets**, Rybelsus, Mounjaro, Soliqua, Xultophy and generic liraglutide are non-preferred.\n\nThe PDL doesn't spell out the PA process for preferred GLP-1s beyond these criteria.",
+  "citations": [
+    {
+      "doc_id": "ny_medicaid_pdl",
+      "page": 34,
+      "link": "https://newyork.fhsc.com/downloads/providers/NYRx_PDP_PDL.pdf#page=34",
+      "flag": null
+    }
+  ],
+  "conflicts_noted": [],
+  "flags": [],
+  "answered_by": "claude-sonnet-5-5",
+  "fallback_used": false,
+  "timing_s": {
+    "total": 7.137,
+    "search": 0.144,
+    "search_cold": 0,
+    "search_warm": 0.144,
+    "read_page": 0,
+    "list_documents": 0,
+    "model_calls": [
+      2.221,
+      4.772
+    ]
+  },
+  "index_warm_at_start": true,
+  "lookups": 1,
+  "tokens": {
+    "input": 6,
+    "output": 684,
+    "cache_read": 2230,
+    "cache_write": 6791
+  },
+  "cost_usd": 0.024275,
+  "pages_seen": [
+    "ny_medicaid_pdl:p16",
+    "ny_medicaid_pdl:p34",
+    "ny_medicaid_pdl:p36",
+    "ny_medicaid_pdl:p37",
+    "ny_medicaid_pdl:p46",
+    "ny_medicaid_pdl:p60",
+    "ny_medicaid_pharmacy_policy:p38"
+  ],
+  "started_at": "2026-10-14T22:04:50+00:00",
+  "config": {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium",
+    "setup": "baseline",
+    "max_tool_calls": 6,
+    "deadline_s": 25,
+    "search_k": 8
+  },
+  "model_calls": [
+    {
+      "duration_s": 2.221,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 4,
+        "output": 120,
+        "cache_read": 0,
+        "cache_write": 2230
+      }
+    },
+    {
+      "duration_s": 4.772,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 2,
+        "output": 564,
+        "cache_read": 2230,
+        "cache_write": 4561
+      }
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "search_documents",
+      "input": {
+        "query": "Ozempic semaglutide pen preferred prior authorization GLP-1",
+        "program": "NY Medicaid",
+        "k": 8
+      },
+      "duration_s": 0.144,
+      "is_error": false,
+      "pages": [
+        "ny_medicaid_pdl:p34",
+        "ny_medicaid_pdl:p37",
+        "ny_medicaid_pdl:p36",
+        "ny_medicaid_pdl:p46",
+        "ny_medicaid_pdl:p16",
+        "ny_medicaid_pdl:p36",
+        "ny_medicaid_pdl:p60",
+        "ny_medicaid_pharmacy_policy:p38"
+      ],
+      "index_loaded": true
+    }
+  ],
+  "cost_note": "priced at the requested model's rates; a fallback hop bills at its own rates"
+}

@@ -1,0 +1,517 @@
+{
+  "question": "Got reject 22 on a Victoza claim, what now?",
+  "request_id": "89d31256-3be2-414d-ad90-2f7484002bec",
+  "status": "answered",
+  "agent_status": "answered",
+  "assumption": "Assuming NY Medicaid NYRx, because this is a claim reject/coverage question.",
+  "answer": "Assuming NY Medicaid: **Victoza is preferred and in BLTG**; **generic liraglutide is non-preferred**. Reject **22 = missing/invalid DAW** for BLTG when the wrong DAW is sent.\n\n1. If billing **brand Victoza**, resubmit with **DAW 9** (“Substitution Allowed by Prescriber but Plan Requests Brand”).\n2. Exception: if the Rx has **DAW 1 / Brand Medically Necessary**, DAW 1 is allowed.\n3. Don’t switch to generic liraglutide just to clear this; it’s **non-preferred**.\n4. Usual GLP-1 CC still applies: covered indication; **PA if GLP-1 + DPP-IV concurrent**.",
+  "citations": [
+    {
+      "doc_id": "ny_medicaid_pdl",
+      "page": 34,
+      "link": "https://newyork.fhsc.com/downloads/providers/NYRx_PDP_PDL.pdf#page=34",
+      "flag": null,
+      "locator": "ny_medicaid_pdl:p34"
+    },
+    {
+      "doc_id": "ny_medicaid_pdl",
+      "page": 77,
+      "link": "https://newyork.fhsc.com/downloads/providers/NYRx_PDP_PDL.pdf#page=77",
+      "flag": null,
+      "locator": "ny_medicaid_pdl:p77"
+    },
+    {
+      "doc_id": "ny_medicaid_pdl",
+      "page": 78,
+      "link": "https://newyork.fhsc.com/downloads/providers/NYRx_PDP_PDL.pdf#page=78",
+      "flag": null,
+      "locator": "ny_medicaid_pdl:p78"
+    }
+  ],
+  "conflicts_noted": [],
+  "flags": [],
+  "needs_review": false,
+  "words": {
+    "displayed": 91,
+    "rendered": 91
+  },
+  "answered_by": "gpt-5.5-2026-04-23",
+  "provider": "openai",
+  "model": "gpt-5.5-2026-04-23",
+  "fallback_used": false,
+  "timing_s": {
+    "total": 9.09,
+    "search": 0.241,
+    "read_page": 0,
+    "list_documents": 0,
+    "lookups": 0.007,
+    "model_calls": [
+      3.238,
+      5.602
+    ]
+  },
+  "lookups": 2,
+  "tokens": {
+    "input": 7923,
+    "output": 580,
+    "cache_read": 3072,
+    "cache_write": 0
+  },
+  "cost_usd": 0.058551,
+  "pages_seen": [
+    "ny_medicaid_pdl:p1",
+    "ny_medicaid_pdl:p34",
+    "ny_medicaid_pdl:p77",
+    "ny_medicaid_pdl:p78",
+    "ny_medicaid_pharmacy_policy:p17",
+    "ny_medicaid_pharmacy_policy:p18",
+    "ny_medicaid_pharmacy_policy:p25",
+    "ny_medicaid_pharmacy_policy:p26",
+    "ny_medicaid_pharmacy_policy:p27",
+    "ny_medicaid_pharmacy_policy:p37",
+    "ny_medicaid_pharmacy_policy:p38",
+    "ny_medicaid_pharmacy_policy:p39",
+    "ny_medicaid_pharmacy_policy:p40",
+    "ny_medicaid_pharmacy_policy:p43",
+    "ny_medicaid_pharmacy_policy:p44",
+    "ny_medicaid_pharmacy_policy:p45",
+    "ny_medicaid_pharmacy_policy:p6",
+    "ny_medicaid_pharmacy_policy:p7"
+  ],
+  "trace_id": null,
+  "started_at": "2026-10-18T13:13:40+00:00",
+  "config": {
+    "primary": "gpt-5.5",
+    "fallback": "claude-sonnet-5-5",
+    "effort": "medium",
+    "search": {
+      "mode": "hybrid",
+      "rrf_k": 60,
+      "fusion_depth": 100,
+      "return_parents": true,
+      "rerank": null
+    },
+    "max_tool_calls": 6,
+    "deadline_s": 25,
+    "search_k": 8
+  },
+  "structured_lookups": true,
+  "context": {},
+  "model_answer": "Assuming NY Medicaid: **Victoza is preferred and in BLTG**; **generic liraglutide is non-preferred**. Reject **22 = missing/invalid DAW** for BLTG when the wrong DAW is sent.\n\n1. If billing **brand Victoza**, resubmit with **DAW 9** (“Substitution Allowed by Prescriber but Plan Requests Brand”).\n2. Exception: if the Rx has **DAW 1 / Brand Medically Necessary**, DAW 1 is allowed.\n3. Don’t switch to generic liraglutide just to clear this; it’s **non-preferred**.\n4. Usual GLP-1 CC still applies: covered indication; **PA if GLP-1 + DPP-IV concurrent**.",
+  "model_citations": [
+    {
+      "doc_id": "ny_medicaid_pdl",
+      "page": 34,
+      "link": "https://newyork.fhsc.com/downloads/providers/NYRx_PDP_PDL.pdf#page=34",
+      "flag": null,
+      "locator": "ny_medicaid_pdl:p34"
+    },
+    {
+      "doc_id": "ny_medicaid_pdl",
+      "page": 77,
+      "link": "https://newyork.fhsc.com/downloads/providers/NYRx_PDP_PDL.pdf#page=77",
+      "flag": null,
+      "locator": "ny_medicaid_pdl:p77"
+    },
+    {
+      "doc_id": "ny_medicaid_pdl",
+      "page": 78,
+      "link": "https://newyork.fhsc.com/downloads/providers/NYRx_PDP_PDL.pdf#page=78",
+      "flag": null,
+      "locator": "ny_medicaid_pdl:p78"
+    }
+  ],
+  "model_calls": [
+    {
+      "t_start": 0.0,
+      "duration_s": 3.238,
+      "requested_model": "gpt-5.5",
+      "served_model": "gpt-5.5-2026-04-23",
+      "provider": "openai",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 304,
+        "output": 138,
+        "cache_read": 1536,
+        "cache_write": 0
+      },
+      "cost_usd": 0.006428,
+      "response_id": "resp_07961426d328822a016ad4c5fbd32487d29f3eb388a8b5faa9",
+      "input_messages": [
+        {
+          "role": "user",
+          "text": "Today's date: 2026-10-18\n\nQuestion: Got reject 22 on a Victoza claim, what now?"
+        }
+      ],
+      "output": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "call_9nU1Rh92PeYWRQgoLtU7ClgT",
+            "name": "lookup_ny_medicaid_drug",
+            "arguments": {
+              "drug": "Victoza"
+            }
+          },
+          {
+            "id": "call_VwpJpQALvWJxwW5pjB39wTF6",
+            "name": "search_documents",
+            "arguments": {
+              "program": "NY Medicaid",
+              "query": "reject 22 Victoza claim what now reject code 22",
+              "k": 6
+            }
+          }
+        ]
+      }
+    },
+    {
+      "t_start": 3.487,
+      "duration_s": 5.602,
+      "requested_model": "gpt-5.5",
+      "served_model": "gpt-5.5-2026-04-23",
+      "provider": "openai",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 7619,
+        "output": 442,
+        "cache_read": 1536,
+        "cache_write": 0
+      },
+      "cost_usd": 0.052123,
+      "response_id": "resp_07961426d328822a016ad4c5ff477487d297f41806af65e160",
+      "input_messages": [
+        {
+          "role": "tool",
+          "tool_results": [
+            {
+              "call_id": "call_9nU1Rh92PeYWRQgoLtU7ClgT",
+              "is_error": false,
+              "content": "{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"Victoza\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"multiple_matches\", \"classes\": [{\"drug_class\": \"Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes\", \"section\": \"VI. Endocrine and Metabolic Agents\", \"class_flags\": {\"CC\": \"Clinical Criteria: see the class's Coverage Parameters\"}, \"coverage_parameters\": \"CLINICAL CRITERIA (CC)\\nConfirm diagnosis of FDA-approved or compendia-supported\\nindication and Medicaid covered indication\\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently\", \"coverage_pages\": [34], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p34#row-9\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Victoza®\", \"listed_as\": \"preferred\", \"flags\": {\"BLTG\": \"Brand Less Than Generic Program (PDL pages 77–78)\"}, \"matched_on\": \"exact name\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-10\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"liraglutide (gen Victoza® )\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"generic of Victoza (stated in the PDL as '(gen ...)')\"}]}], \"note\": \"Several rows match (1 by exact name). List the relevant ones, or state which one you assumed.\"}"
+            },
+            {
+              "call_id": "call_VwpJpQALvWJxwW5pjB39wTF6",
+              "is_error": false,
+              "content": "[{\"doc_id\": \"ny_medicaid_pharmacy_policy\", \"page\": 25, \"program\": \"NY Medicaid\", \"authority\": \"binding\", \"date\": \"2026-09\", \"text\": \"NYRx Pharmacy Manual Policy Guidelines (Version 2026-3) > 2.0 General Guidelines > Who May Prescribe\\n[p 25]\\nLicensed practitioners authorized to prescribe by New York State must be enrolled in the Medicaid Program to prescribe to NY Medicaid members. Enrollment information may be found here:\\nhttps://www.emedny.org/info/ProviderEnrollment/index.aspx.\\nAll prescriptions/fiscal orders must comply with relevant State Education Law requirements.\\nAdditionally, other requirements include:\\nEnrolled Registered Physician Assistants (RPAs) may prescribe orders subject to any limitations imposed by the supervising physician.\\nThe Medicaid member must be under the care of the physician responsible for the supervision of the RPA.\\nExemptions from Enrollment Requirements for Prescribers\\nInterns, Residents and Foreign Physicians in Training - Unlicensed Physicians\\n[p 26]\\nPolicy Guidelines\\nNYRx\\nIn accordance with NYS Education Law Article 131 § 6526, unlicensed physicians who are residents, interns and foreign physicians participating in training programs, are authorized to prescribe. NYS Medicaid recognizes the authority under which these unlicensed physicians may prescribe, however, these physicians are not eligible for enrollment into the Medicaid program without a license. The Medicaid Provider Enrollment Compendium (MPEC) 2025 https://www.medicaid.gov/medicaid/program-integrity/downloads/mpec.pdf allows unlicensed physicians to provide ordering/prescribing/referring/attending (OPRA) services to Medicaid members. The State Medicaid Agency (SMA) is not required to enroll a provider type, such as unlicensed physicians, for the purpose of complying with 42 of the Code of Federal Regulations (CFR) § 455.410(b) or § 455.440, when the provider type is ineligible to enroll in the NYS Medicaid Program.\\nNote: Residents or other physician trainees who obtain a New York State license prior to completion of their training are eligible and required to enroll in New York State Medicaid to provide care, including prescribing, for Medicaid members.\\nBilling Guidance\\nTo allow claims by unlicensed physicians who are authorized to prescribe pharmacies may use the following billing guidance.\\nClaims prescribed by an unlicensed OPRA provider will initially be rejected for National Council for Prescription Drug Programs (NCPDP) Reject code \\\"889\\\" (Non-Matched Prescriber ID). This means the prescriber is not enrolled in Medicaid. To allow claims by unlicensed physicians who are authorized to prescribe pharmacies may use the following billing guidance.\\nThe following information must be included on the claim to override the above rejection for unlicensed residents, interns, or foreign physicians in training programs:\\nField 439-E4 (Reason for Service Code): enter \\\"PN\\\" (Prescriber Consultation)\\nField 441-E6 (Result of Service Code): enter applicable value (\\\"1A\\\", \\\"1B\\\", \\\"1C\\\", \\\"1D\\\", \\\"1E\\\", \\\"1F\\\", \\\"1G\\\", \\\"1H\\\", \\\"1J\\\", \\\"1K\\\", \\\"2A\\\", \\\"2B\\\", \\\"3A\\\", \\\"3B\\\", \\\"3C\\\", \\\"3D\\\", \\\"3E\\\", \\\"3F\\\", \\\"3G\\\", \\\"3H\\\", \\\"3J\\\", \\\"3K\\\", \\\"3M\\\", \\\"3N\\\", \\\"4A\\\")\\nField 420-DK (Submission Clarification Code): enter \\\"02\\\" (Other Override)\\nIf the above override is attempted for a non-enrolled licensed practitioner, the claim will continue to be denied.\\nPharmacies may not use the above billing guidance for NY licensed practitioners. The only option available when a pharmacy is presented with a prescription or fiscal order written by a licensed, non-enrolled prescriber for a Medicaid member is to obtain a new prescription from an enrolled provider.\\nDocumentation\\nFor any claims submitted for a prescription issued to a Medicaid enrollee by any unlicensed physician, records should be contemporaneously created and maintained supporting the issuance of such prescription. This requirement applies to all residents, interns and foreign"
+            }
+          ]
+        }
+      ],
+      "output": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "call_lf27M00nMUl6NRFXH1N5ChK8",
+            "name": "submit_answer",
+            "arguments": {
+              "status": "answered",
+              "assumption": "Assuming NY Medicaid NYRx, because this is a claim reject/coverage question.",
+              "answer": "Assuming NY Medicaid: **Victoza is preferred and in BLTG**; **generic liraglutide is non-preferred**. Reject **22 = missing/invalid DAW** for BLTG when the wrong DAW is sent.\n\n1. If billing **brand Victoza**, resubmit with **DAW 9** (“Substitution Allowed by Prescriber but Plan Requests Brand”).\n2. Exception: if the Rx has **DAW 1 / Brand Medically Necessary**, DAW 1 is allowed.\n3. Don’t switch to generic liraglutide just to clear this; it’s **non-preferred**.\n4. Usual GLP-1 CC still applies: covered indication; **PA if GLP-1 + DPP-IV concurrent**.",
+              "citations": [
+                {
+                  "doc_id": "ny_medicaid_pdl",
+                  "page": 34,
+                  "row": null
+                },
+                {
+                  "doc_id": "ny_medicaid_pdl",
+                  "page": 77,
+                  "row": null
+                },
+                {
+                  "doc_id": "ny_medicaid_pdl",
+                  "page": 78,
+                  "row": null
+                }
+              ],
+              "conflicts_noted": []
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "lookup_ny_medicaid_drug",
+      "input": {
+        "drug": "Victoza"
+      },
+      "duration_s": 0.007,
+      "is_error": false,
+      "pages": [
+        "ny_medicaid_pdl:p1",
+        "ny_medicaid_pdl:p34"
+      ],
+      "result": "{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"Victoza\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"multiple_matches\", \"classes\": [{\"drug_class\": \"Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes\", \"section\": \"VI. Endocrine and Metabolic Agents\", \"class_flags\": {\"CC\": \"Clinical Criteria: see the class's Coverage Parameters\"}, \"coverage_parameters\": \"CLINICAL CRITERIA (CC)\\nConfirm diagnosis of FDA-approved or compendia-supported\\nindication and Medicaid covered indication\\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently\", \"coverage_pages\": [34], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p34#row-9\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Victoza®\", \"listed_as\": \"preferred\", \"flags\": {\"BLTG\": \"Brand Less Than Generic Program (PDL pages 77–78)\"}, \"matched_on\": \"exact name\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-10\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"liraglutide (gen Victoza® )\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"generic of Victoza (stated in the PDL as '(gen ...)')\"}]}], \"note\": \"Several rows match (1 by exact name). List the relevant ones, or state which one you assumed.\"}",
+      "lookup": {
+        "result": "multiple_matches",
+        "rows": 2
+      },
+      "t_start": 3.238
+    },
+    {
+      "name": "search_documents",
+      "input": {
+        "program": "NY Medicaid",
+        "query": "reject 22 Victoza claim what now reject code 22",
+        "k": 6
+      },
+      "duration_s": 0.241,
+      "is_error": false,
+      "pages": [
+        "ny_medicaid_pdl:p34",
+        "ny_medicaid_pdl:p77",
+        "ny_medicaid_pdl:p78",
+        "ny_medicaid_pharmacy_policy:p17",
+        "ny_medicaid_pharmacy_policy:p18",
+        "ny_medicaid_pharmacy_policy:p25",
+        "ny_medicaid_pharmacy_policy:p26",
+        "ny_medicaid_pharmacy_policy:p27",
+        "ny_medicaid_pharmacy_policy:p37",
+        "ny_medicaid_pharmacy_policy:p38",
+        "ny_medicaid_pharmacy_policy:p39",
+        "ny_medicaid_pharmacy_policy:p40",
+        "ny_medicaid_pharmacy_policy:p43",
+        "ny_medicaid_pharmacy_policy:p44",
+        "ny_medicaid_pharmacy_policy:p45",
+        "ny_medicaid_pharmacy_policy:p6",
+        "ny_medicaid_pharmacy_policy:p7"
+      ],
+      "result": "[{\"doc_id\": \"ny_medicaid_pharmacy_policy\", \"page\": 25, \"program\": \"NY Medicaid\", \"authority\": \"binding\", \"date\": \"2026-09\", \"text\": \"NYRx Pharmacy Manual Policy Guidelines (Version 2026-3) > 2.0 General Guidelines > Who May Prescribe\\n[p 25]\\nLicensed practitioners authorized to prescribe by New York State must be enrolled in the Medicaid Program to prescribe to NY Medicaid members. Enrollment information may be found here:\\nhttps://www.emedny.org/info/ProviderEnrollment/index.aspx.\\nAll prescriptions/fiscal orders must comply with relevant State Education Law requirements.\\nAdditionally, other requirements include:\\nEnrolled Registered Physician Assistants (RPAs) may prescribe orders subject to any limitations imposed by the supervising physician.\\nThe Medicaid member must be under the care of the physician responsible for the supervision of the RPA.\\nExemptions from Enrollment Requirements for Prescribers\\nInterns, Residents and Foreign Physicians in Training - Unlicensed Physicians\\n[p 26]\\nPolicy Guidelines\\nNYRx\\nIn accordance with NYS Education Law Article 131 § 6526, unlicensed physicians who are residents, interns and foreign physicians participating in training programs, are authorized to prescribe. NYS Medicaid recognizes the authority under which these unlicensed physicians may prescribe, however, these physicians are not eligible for enrollment into the Medicaid program without a license. The Medicaid Provider Enrollment Compendium (MPEC) 2025 https://www.medicaid.gov/medicaid/program-integrity/downloads/mpec.pdf allows unlicensed physicians to provide ordering/prescribing/referring/attending (OPRA) services to Medicaid members. The State Medicaid Agency (SMA) is not required to enroll a provider type, such as unlicensed physicians, for the purpose of complying with 42 of the Code of Federal Regulations (CFR) § 455.410(b) or § 455.440, when the provider type is ineligible to enroll in the NYS Medicaid Program.\\nNote: Residents or other physician trainees who obtain a New York State license prior to completion of their training are eligible and required to enroll in New York State Medicaid to provide care, including prescribing, for Medicaid members.\\nBilling Guidance\\nTo allow claims by unlicensed physicians who are authorized to prescribe pharmacies may use the following billing guidance.\\nClaims prescribed by an unlicensed OPRA provider will initially be rejected for National Council for Prescription Drug Programs (NCPDP) Reject code \\\"889\\\" (Non-Matched Prescriber ID). This means the prescriber is not enrolled in Medicaid. To allow claims by unlicensed physicians who are authorized to prescribe pharmacies may use the following billing guidance.\\nThe following information must be included on the claim to override the above rejection for unlicensed residents, interns, or foreign physicians in training programs:\\nField 439-E4 (Reason for Service Code): enter \\\"PN\\\" (Prescriber Consultation)\\nField 441-E6 (Result of Service Code): enter applicable value (\\\"1A\\\", \\\"1B\\\", \\\"1C\\\", \\\"1D\\\", \\\"1E\\\", \\\"1F\\\", \\\"1G\\\", \\\"1H\\\", \\\"1J\\\", \\\"1K\\\", \\\"2A\\\", \\\"2B\\\", \\\"3A\\\", \\\"3B\\\", \\\"3C\\\", \\\"3D\\\", \\\"3E\\\", \\\"3F\\\", \\\"3G\\\", \\\"3H\\\", \\\"3J\\\", \\\"3K\\\", \\\"3M\\\", \\\"3N\\\", \\\"4A\\\")\\nField 420-DK (Submission Clarification Code): enter \\\"02\\\" (Other Override)\\nIf the above override is attempted for a non-enrolled licensed practitioner, the claim will continue to be denied.\\nPharmacies may not use the above billing guidance for NY licensed practitioners. The only option available when a pharmacy is presented with a prescription or fiscal order written by a licensed, non-enrolled prescriber for a Medicaid member is to obtain a new prescription from an enrolled provider.\\nDocumentation\\nFor any claims submitted for a prescription issued to a Medicaid enrollee by any unlicensed physician, records should be contemporaneously created and maintained supporting the issuance of such prescription. This requirement applies to all residents, interns and foreign",
+      "search": {
+        "original_query": "Got reject 22 on a Victoza claim, what now?",
+        "agent_query": "reject 22 Victoza claim what now reject code 22",
+        "executed": [
+          {
+            "source": "original",
+            "query": "Got reject 22 on a Victoza claim, what now?",
+            "program": "NY Medicaid",
+            "k": 6,
+            "seconds": 0.241,
+            "cached": false,
+            "results": 6
+          },
+          {
+            "source": "agent",
+            "query": "reject 22 Victoza claim what now reject code 22",
+            "program": "NY Medicaid",
+            "k": 6,
+            "seconds": 0.236,
+            "cached": false,
+            "results": 6
+          }
+        ],
+        "duplicates_merged": 4,
+        "returned": 8,
+        "from_both": 4,
+        "from_original_only": 2,
+        "from_agent_only": 2,
+        "provenance": [
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s33",
+            "found_by": {
+              "original": 2,
+              "agent": 1
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s24",
+            "found_by": {
+              "original": 1,
+              "agent": 3
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s57",
+            "found_by": {
+              "original": 3,
+              "agent": 2
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s65",
+            "found_by": {
+              "original": 4,
+              "agent": 6
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s134",
+            "found_by": {
+              "agent": 4
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s58",
+            "found_by": {
+              "original": 5
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s3",
+            "found_by": {
+              "agent": 5
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s62",
+            "found_by": {
+              "original": 6
+            }
+          }
+        ],
+        "hits": [
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s33",
+            "doc_id": "ny_medicaid_pharmacy_policy",
+            "pages": [
+              25,
+              26,
+              27
+            ],
+            "ranks": {
+              "original": 2,
+              "agent": 1
+            },
+            "scores": {
+              "original": 0.0296,
+              "agent": 0.0318
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s24",
+            "doc_id": "ny_medicaid_pharmacy_policy",
+            "pages": [
+              17,
+              18
+            ],
+            "ranks": {
+              "original": 1,
+              "agent": 3
+            },
+            "scores": {
+              "original": 0.0313,
+              "agent": 0.0301
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s57",
+            "doc_id": "ny_medicaid_pharmacy_policy",
+            "pages": [
+              37,
+              38,
+              39
+            ],
+            "ranks": {
+              "original": 3,
+              "agent": 2
+            },
+            "scores": {
+              "original": 0.0291,
+              "agent": 0.0303
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s65",
+            "doc_id": "ny_medicaid_pharmacy_policy",
+            "pages": [
+              43,
+              44,
+              45
+            ],
+            "ranks": {
+              "original": 4,
+              "agent": 6
+            },
+            "scores": {
+              "original": 0.029,
+              "agent": 0.0268
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s134",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              77,
+              78
+            ],
+            "ranks": {
+              "agent": 4
+            },
+            "scores": {
+              "agent": 0.0292
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s58",
+            "doc_id": "ny_medicaid_pharmacy_policy",
+            "pages": [
+              39,
+              40
+            ],
+            "ranks": {
+              "original": 5
+            },
+            "scores": {
+              "original": 0.027
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s3",
+            "doc_id": "ny_medicaid_pharmacy_policy",
+            "pages": [
+              6,
+              7
+            ],
+            "ranks": {
+              "agent": 5
+            },
+            "scores": {
+              "agent": 0.0281
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s62",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              34
+            ],
+            "ranks": {
+              "original": 6
+            },
+            "scores": {
+              "original": 0.0269
+            }
+          }
+        ]
+      },
+      "t_start": 3.245
+    }
+  ],
+  "cited_evidence": {
+    "ny_medicaid_pdl:p34": "{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"Victoza\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"multiple_matches\", \"classes\": [{\"drug_class\": \"Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes\", \"section\": \"VI. Endocrine and Metabolic Agents\", \"class_flags\": {\"CC\": \"Clinical Criteria: see the class's Coverage Parameters\"}, \"coverage_parameters\": \"CLINICAL CRITERIA (CC)\\nConfirm diagnosis of FDA-approved or compendia-supported\\nindication and Medicaid covered indication\\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently\", \"coverage_pages\": [34], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p34#row-9\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Victoza®\", \"listed_as\": \"preferred\", \"flags\": {\"BLTG\": \"Brand Less Than Generic Program (PDL pages 77–78)\"}, \"matched_on\": \"exact name\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-10\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"liraglutide (gen Victoza® )\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"generic of Victoza (stated in the PDL as '(gen ...)')\"}]}], \"note\": \"Several rows match (1 by exact name). List the relevant ones, or state which one you assumed.\"}\n\nny_medicaid_pdl (NY Medicaid, binding, 2026-09-14)\nNYRx Preferred Drug Program (PDP) Preferred Drug List > VI. Endocrine and Metabolic Agents > Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes (CC)\n[p 34]\nPreferred drugs: exenatide; Ozempic® pen; Trulicity®; Victoza® (BLTG)\nNon-preferred drugs: liraglutide (gen Victoza® ); Mounjaro®; Ozempic® tablets; Rybelsus®; Soliqua®; Xultophy®\nCoverage parameters: CLINICAL CRITERIA (CC)\nConfirm diagnosis of FDA-approved or compendia-supported\nindication and Medicaid covered indication\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently",
+    "ny_medicaid_pdl:p77": "ny_medicaid_pdl (NY Medicaid, binding, 2026-09-14)\nNYRx Preferred Drug Program (PDP) Preferred Drug List > NYS Medicaid NYRx Brand Less Than Generic (BLTG) Program\n[p 77]\nOn April 26, 2010, NYRx, the Medicaid Pharmacy Program, implemented a new cost-containment initiative, which promotes the use of certain multisource brand name drugs when the cost of the brand name drug is less expensive than the generic equivalent.\nIn conformance with State Education Law, which intends that patients receive the lower cost alternative, brand name drugs included in this program:\nDo not require \"Dispense as Written\" (DAW) or \"Brand Medically Necessary\" on the prescription\nHave a generic copayment\nAre paid at the Brand Name Drug reimbursement rate or usual and customary price, whichever is lower (SMAC/FUL are not applied)\nDo not require a new prescription if the drug is removed from this program\nBosulif ® tablet, Janumet ® , Januvia ® , and Xyrem ® will be added to the program\nFarxiga ® and Ravicti ® will be removed from the program\n[Table] (PDF page 77)\nColumns: List of Brand Name Drugs included in this program** | List of Brand Name Drugs included in this program** | List of Brand Name Drugs included in this program** / Acular LS ® | Copaxone ® 20 mg SQ | Pylera ®\nAdvair Diskus ® | Depakote® Sprinkle | Restasis ®\nAdvair HFA ® | Edurant ® | Risperdal Consta ®\nAlphagan P ® 0.15% | Endometrin ® | Spiriva ® Handihaler ®\nAlphagan P ® 0.1% | EpiPen | Symbicort ®\nAnoro Ellipta ® | EpiPen Jr | Tegretol ® suspension\nArnuity Ellipta ® | Forteo ® | Tegretol ® tablet\nAtrovent HFA ® | Incruse Ellipta ® | Tegretol ® XR\nAzopt ™ | Istalol ® | Ventolin ® HFA\nBethkis ® | Janumet ® | Victoza ®\nBosulif ® tablet | Januvia ® | Vyvanse ® capsule\nCarbaglu ® | Kitabis ® Pak | Xarelto ® 2.5 mg tablet\nCarbatrol ® | Myrbetriq ® tablet | Xigduo ® XR\nCipro HC | Oxtellar XR ® | Xyrem ®\nCipro ® oral suspension | Pentasa ® | Zavesca ®\nCombigan ® | Premarin ® tablet | \nComplera ® | Protonix ® suspension | \nTable note: **List is subject to change\n**List is subject to change\nPlease keep in mind that drugs in this program may be subject to PA requirements of other pharmacy programs, promoting the use of the most cost-effective product.\n[p 78]\nPursuant to this program, prescription claims submitted to the Medicaid program do not require the submission of Dispense as Written/Product Selection Code of '1'; Pharmacies should submit DAW code 9 (Substitution Allowed by Prescriber but Plan Requests Brand). Pharmacies will receive an NCPDP reject response of \"22\" which means missing/invalid DAW code if other DAW codes are submitted. The only exception to this is DAW code 1 and \"Brand Medically Necessary\" on the prescription.\nFor more information on the Brand Less Than Generic (BLTG) Program, please refer to https://newyork.fhsc.com/providers/bltgp_about.asp",
+    "ny_medicaid_pdl:p78": "ny_medicaid_pdl (NY Medicaid, binding, 2026-09-14)\nNYRx Preferred Drug Program (PDP) Preferred Drug List > NYS Medicaid NYRx Brand Less Than Generic (BLTG) Program\n[p 77]\nOn April 26, 2010, NYRx, the Medicaid Pharmacy Program, implemented a new cost-containment initiative, which promotes the use of certain multisource brand name drugs when the cost of the brand name drug is less expensive than the generic equivalent.\nIn conformance with State Education Law, which intends that patients receive the lower cost alternative, brand name drugs included in this program:\nDo not require \"Dispense as Written\" (DAW) or \"Brand Medically Necessary\" on the prescription\nHave a generic copayment\nAre paid at the Brand Name Drug reimbursement rate or usual and customary price, whichever is lower (SMAC/FUL are not applied)\nDo not require a new prescription if the drug is removed from this program\nBosulif ® tablet, Janumet ® , Januvia ® , and Xyrem ® will be added to the program\nFarxiga ® and Ravicti ® will be removed from the program\n[Table] (PDF page 77)\nColumns: List of Brand Name Drugs included in this program** | List of Brand Name Drugs included in this program** | List of Brand Name Drugs included in this program** / Acular LS ® | Copaxone ® 20 mg SQ | Pylera ®\nAdvair Diskus ® | Depakote® Sprinkle | Restasis ®\nAdvair HFA ® | Edurant ® | Risperdal Consta ®\nAlphagan P ® 0.15% | Endometrin ® | Spiriva ® Handihaler ®\nAlphagan P ® 0.1% | EpiPen | Symbicort ®\nAnoro Ellipta ® | EpiPen Jr | Tegretol ® suspension\nArnuity Ellipta ® | Forteo ® | Tegretol ® tablet\nAtrovent HFA ® | Incruse Ellipta ® | Tegretol ® XR\nAzopt ™ | Istalol ® | Ventolin ® HFA\nBethkis ® | Janumet ® | Victoza ®\nBosulif ® tablet | Januvia ® | Vyvanse ® capsule\nCarbaglu ® | Kitabis ® Pak | Xarelto ® 2.5 mg tablet\nCarbatrol ® | Myrbetriq ® tablet | Xigduo ® XR\nCipro HC | Oxtellar XR ® | Xyrem ®\nCipro ® oral suspension | Pentasa ® | Zavesca ®\nCombigan ® | Premarin ® tablet | \nComplera ® | Protonix ® suspension | \nTable note: **List is subject to change\n**List is subject to change\nPlease keep in mind that drugs in this program may be subject to PA requirements of other pharmacy programs, promoting the use of the most cost-effective product.\n[p 78]\nPursuant to this program, prescription claims submitted to the Medicaid program do not require the submission of Dispense as Written/Product Selection Code of '1'; Pharmacies should submit DAW code 9 (Substitution Allowed by Prescriber but Plan Requests Brand). Pharmacies will receive an NCPDP reject response of \"22\" which means missing/invalid DAW code if other DAW codes are submitted. The only exception to this is DAW code 1 and \"Brand Medically Necessary\" on the prescription.\nFor more information on the Brand Less Than Generic (BLTG) Program, please refer to https://newyork.fhsc.com/providers/bltgp_about.asp"
+  },
+  "cited_evidence_parts": {
+    "ny_medicaid_pdl:p34": [
+      "{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"Victoza\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"multiple_matches\", \"classes\": [{\"drug_class\": \"Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes\", \"section\": \"VI. Endocrine and Metabolic Agents\", \"class_flags\": {\"CC\": \"Clinical Criteria: see the class's Coverage Parameters\"}, \"coverage_parameters\": \"CLINICAL CRITERIA (CC)\\nConfirm diagnosis of FDA-approved or compendia-supported\\nindication and Medicaid covered indication\\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently\", \"coverage_pages\": [34], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p34#row-9\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Victoza®\", \"listed_as\": \"preferred\", \"flags\": {\"BLTG\": \"Brand Less Than Generic Program (PDL pages 77–78)\"}, \"matched_on\": \"exact name\"}, {\"row_id\": \"ny_medicaid_pdl#p34#row-10\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"liraglutide (gen Victoza® )\", \"listed_as\": \"non-preferred\", \"flags\": {}, \"matched_on\": \"generic of Victoza (stated in the PDL as '(gen ...)')\"}]}], \"note\": \"Several rows match (1 by exact name). List the relevant ones, or state which one you assumed.\"}",
+      "ny_medicaid_pdl (NY Medicaid, binding, 2026-09-14)\nNYRx Preferred Drug Program (PDP) Preferred Drug List > VI. Endocrine and Metabolic Agents > Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes (CC)\n[p 34]\nPreferred drugs: exenatide; Ozempic® pen; Trulicity®; Victoza® (BLTG)\nNon-preferred drugs: liraglutide (gen Victoza® ); Mounjaro®; Ozempic® tablets; Rybelsus®; Soliqua®; Xultophy®\nCoverage parameters: CLINICAL CRITERIA (CC)\nConfirm diagnosis of FDA-approved or compendia-supported\nindication and Medicaid covered indication\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently"
+    ],
+    "ny_medicaid_pdl:p77": [
+      "ny_medicaid_pdl (NY Medicaid, binding, 2026-09-14)\nNYRx Preferred Drug Program (PDP) Preferred Drug List > NYS Medicaid NYRx Brand Less Than Generic (BLTG) Program\n[p 77]\nOn April 26, 2010, NYRx, the Medicaid Pharmacy Program, implemented a new cost-containment initiative, which promotes the use of certain multisource brand name drugs when the cost of the brand name drug is less expensive than the generic equivalent.\nIn conformance with State Education Law, which intends that patients receive the lower cost alternative, brand name drugs included in this program:\nDo not require \"Dispense as Written\" (DAW) or \"Brand Medically Necessary\" on the prescription\nHave a generic copayment\nAre paid at the Brand Name Drug reimbursement rate or usual and customary price, whichever is lower (SMAC/FUL are not applied)\nDo not require a new prescription if the drug is removed from this program\nBosulif ® tablet, Janumet ® , Januvia ® , and Xyrem ® will be added to the program\nFarxiga ® and Ravicti ® will be removed from the program\n[Table] (PDF page 77)\nColumns: List of Brand Name Drugs included in this program** | List of Brand Name Drugs included in this program** | List of Brand Name Drugs included in this program** / Acular LS ® | Copaxone ® 20 mg SQ | Pylera ®\nAdvair Diskus ® | Depakote® Sprinkle | Restasis ®\nAdvair HFA ® | Edurant ® | Risperdal Consta ®\nAlphagan P ® 0.15% | Endometrin ® | Spiriva ® Handihaler ®\nAlphagan P ® 0.1% | EpiPen | Symbicort ®\nAnoro Ellipta ® | EpiPen Jr | Tegretol ® suspension\nArnuity Ellipta ® | Forteo ® | Tegretol ® tablet\nAtrovent HFA ® | Incruse Ellipta ® | Tegretol ® XR\nAzopt ™ | Istalol ® | Ventolin ® HFA\nBethkis ® | Janumet ® | Victoza ®\nBosulif ® tablet | Januvia ® | Vyvanse ® capsule\nCarbaglu ® | Kitabis ® Pak | Xarelto ® 2.5 mg tablet\nCarbatrol ® | Myrbetriq ® tablet | Xigduo ® XR\nCipro HC | Oxtellar XR ® | Xyrem ®\nCipro ® oral suspension | Pentasa ® | Zavesca ®\nCombigan ® | Premarin ® tablet | \nComplera ® | Protonix ® suspension | \nTable note: **List is subject to change\n**List is subject to change\nPlease keep in mind that drugs in this program may be subject to PA requirements of other pharmacy programs, promoting the use of the most cost-effective product.\n[p 78]\nPursuant to this program, prescription claims submitted to the Medicaid program do not require the submission of Dispense as Written/Product Selection Code of '1'; Pharmacies should submit DAW code 9 (Substitution Allowed by Prescriber but Plan Requests Brand). Pharmacies will receive an NCPDP reject response of \"22\" which means missing/invalid DAW code if other DAW codes are submitted. The only exception to this is DAW code 1 and \"Brand Medically Necessary\" on the prescription.\nFor more information on the Brand Less Than Generic (BLTG) Program, please refer to https://newyork.fhsc.com/providers/bltgp_about.asp"
+    ],
+    "ny_medicaid_pdl:p78": [
+      "ny_medicaid_pdl (NY Medicaid, binding, 2026-09-14)\nNYRx Preferred Drug Program (PDP) Preferred Drug List > NYS Medicaid NYRx Brand Less Than Generic (BLTG) Program\n[p 77]\nOn April 26, 2010, NYRx, the Medicaid Pharmacy Program, implemented a new cost-containment initiative, which promotes the use of certain multisource brand name drugs when the cost of the brand name drug is less expensive than the generic equivalent.\nIn conformance with State Education Law, which intends that patients receive the lower cost alternative, brand name drugs included in this program:\nDo not require \"Dispense as Written\" (DAW) or \"Brand Medically Necessary\" on the prescription\nHave a generic copayment\nAre paid at the Brand Name Drug reimbursement rate or usual and customary price, whichever is lower (SMAC/FUL are not applied)\nDo not require a new prescription if the drug is removed from this program\nBosulif ® tablet, Janumet ® , Januvia ® , and Xyrem ® will be added to the program\nFarxiga ® and Ravicti ® will be removed from the program\n[Table] (PDF page 77)\nColumns: List of Brand Name Drugs included in this program** | List of Brand Name Drugs included in this program** | List of Brand Name Drugs included in this program** / Acular LS ® | Copaxone ® 20 mg SQ | Pylera ®\nAdvair Diskus ® | Depakote® Sprinkle | Restasis ®\nAdvair HFA ® | Edurant ® | Risperdal Consta ®\nAlphagan P ® 0.15% | Endometrin ® | Spiriva ® Handihaler ®\nAlphagan P ® 0.1% | EpiPen | Symbicort ®\nAnoro Ellipta ® | EpiPen Jr | Tegretol ® suspension\nArnuity Ellipta ® | Forteo ® | Tegretol ® tablet\nAtrovent HFA ® | Incruse Ellipta ® | Tegretol ® XR\nAzopt ™ | Istalol ® | Ventolin ® HFA\nBethkis ® | Janumet ® | Victoza ®\nBosulif ® tablet | Januvia ® | Vyvanse ® capsule\nCarbaglu ® | Kitabis ® Pak | Xarelto ® 2.5 mg tablet\nCarbatrol ® | Myrbetriq ® tablet | Xigduo ® XR\nCipro HC | Oxtellar XR ® | Xyrem ®\nCipro ® oral suspension | Pentasa ® | Zavesca ®\nCombigan ® | Premarin ® tablet | \nComplera ® | Protonix ® suspension | \nTable note: **List is subject to change\n**List is subject to change\nPlease keep in mind that drugs in this program may be subject to PA requirements of other pharmacy programs, promoting the use of the most cost-effective product.\n[p 78]\nPursuant to this program, prescription claims submitted to the Medicaid program do not require the submission of Dispense as Written/Product Selection Code of '1'; Pharmacies should submit DAW code 9 (Substitution Allowed by Prescriber but Plan Requests Brand). Pharmacies will receive an NCPDP reject response of \"22\" which means missing/invalid DAW code if other DAW codes are submitted. The only exception to this is DAW code 1 and \"Brand Medically Necessary\" on the prescription.\nFor more information on the Brand Less Than Generic (BLTG) Program, please refer to https://newyork.fhsc.com/providers/bltgp_about.asp"
+    ]
+  },
+  "cost_note": "each call priced at its serving role's rates (llm.<role>.prices_per_mtok)",
+  "request_started_utc": "2026-10-18T13:13:31.654431+00:00",
+  "citation_check": {
+    "t_start": 9.089,
+    "duration_s": 0.002
+  }
+}

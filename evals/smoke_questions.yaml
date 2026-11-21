@@ -1,0 +1,16 @@
+# Smoke questions: run in every search mode after each index build to eyeball retrieval.
+# `expected` is filled in where the answer's location is known.
+
+questions:
+  - id: a1c_target
+    question: "What A1C target does the VA/DoD guideline recommend for most adults with type 2 diabetes?"
+  - id: part_d_opioid_edit_exemptions
+    question: "Which Medicare Part D enrollees are exempt from opioid safety edits?"
+  - id: ny_buprenorphine_pa
+    question: "Does NY Medicaid require prior authorization for buprenorphine?"
+  - id: ncpdp_reject_22
+    question: "What does NCPDP reject code 22 mean in NY Medicaid?"
+    expected:
+      file: ny_medicaid_pdl.pdf
+      page: 78
+      answer: "missing/invalid DAW code"

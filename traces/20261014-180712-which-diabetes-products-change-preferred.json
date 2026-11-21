@@ -1,0 +1,218 @@
+{
+  "question": "Which diabetes products change preferred status on NY Medicaid on 10/22/2026?",
+  "status": "answered",
+  "assumption": "Assuming NY Medicaid (NYRx PDL revised 9/14/2026); the footnote markers are read from flattened page text.",
+  "answer": "Assuming NY Medicaid: the PDL (rev. 9/14/2026) marks these diabetes-related changes, none in effect yet (today is 10/14/2026):\n\n- **Preferred as of 10/22/2026 (marker 1):** glucagon HCl emergency kit, Gvoke (pen, syringe, vial), Humalog 100 U/mL (vial, pen, cartridge), Humalog Jr. 100 U/mL Kwikpen.\n- **Non-Preferred as of 10/22/2026 (marker 2):** insulin aspart (gen Novolog) cartridge, vial, pen.\n\nMarker placement is flattened in the text, so I couldn't confirm which exact items each marker covers. I didn't verify the SGLT2, DPP-4 or biguanide pages. Check the PDL itself before acting.",
+  "citations": [
+    {
+      "doc_id": "ny_medicaid_pdl",
+      "page": 34,
+      "link": "https://newyork.fhsc.com/downloads/providers/NYRx_PDP_PDL.pdf#page=34",
+      "flag": null
+    },
+    {
+      "doc_id": "ny_medicaid_pdl",
+      "page": 37,
+      "link": "https://newyork.fhsc.com/downloads/providers/NYRx_PDP_PDL.pdf#page=37",
+      "flag": null
+    }
+  ],
+  "conflicts_noted": [],
+  "flags": [
+    "budget_spent:tool_cap"
+  ],
+  "answered_by": "claude-sonnet-5-5",
+  "fallback_used": false,
+  "timing_s": {
+    "total": 9.63,
+    "search": 0.115,
+    "search_cold": 0,
+    "search_warm": 0.115,
+    "read_page": 0.016,
+    "list_documents": 0,
+    "model_calls": [
+      2.661,
+      3.188,
+      3.649
+    ]
+  },
+  "index_warm_at_start": true,
+  "lookups": 6,
+  "tokens": {
+    "input": 8,
+    "output": 1266,
+    "cache_read": 13365,
+    "cache_write": 14701
+  },
+  "cost_usd": 0.052102,
+  "pages_seen": [
+    "ny_medicaid_pdl:p17",
+    "ny_medicaid_pdl:p20",
+    "ny_medicaid_pdl:p21",
+    "ny_medicaid_pdl:p23",
+    "ny_medicaid_pdl:p33",
+    "ny_medicaid_pdl:p34",
+    "ny_medicaid_pdl:p35",
+    "ny_medicaid_pdl:p36",
+    "ny_medicaid_pdl:p37",
+    "ny_medicaid_pdl:p39",
+    "ny_medicaid_pdl:p41",
+    "ny_medicaid_pdl:p42",
+    "ny_medicaid_pdl:p51",
+    "ny_medicaid_pdl:p52",
+    "ny_medicaid_pdl:p54",
+    "ny_medicaid_pdl:p58",
+    "ny_medicaid_pdl:p60"
+  ],
+  "started_at": "2026-10-14T22:07:12+00:00",
+  "config": {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium",
+    "setup": "baseline",
+    "max_tool_calls": 6,
+    "deadline_s": 25,
+    "search_k": 8
+  },
+  "model_calls": [
+    {
+      "duration_s": 2.661,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 4,
+        "output": 247,
+        "cache_read": 0,
+        "cache_write": 2244
+      }
+    },
+    {
+      "duration_s": 3.188,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 2,
+        "output": 504,
+        "cache_read": 2244,
+        "cache_write": 8877
+      }
+    },
+    {
+      "duration_s": 3.649,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 2,
+        "output": 515,
+        "cache_read": 11121,
+        "cache_write": 3580
+      }
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "search_documents",
+      "input": {
+        "query": "effective 10/22/2026 preferred status change diabetes",
+        "program": "NY Medicaid",
+        "k": 12
+      },
+      "duration_s": 0.093,
+      "is_error": false,
+      "pages": [
+        "ny_medicaid_pdl:p60",
+        "ny_medicaid_pdl:p34",
+        "ny_medicaid_pdl:p17",
+        "ny_medicaid_pdl:p54",
+        "ny_medicaid_pdl:p39",
+        "ny_medicaid_pdl:p41",
+        "ny_medicaid_pdl:p58",
+        "ny_medicaid_pdl:p52",
+        "ny_medicaid_pdl:p20",
+        "ny_medicaid_pdl:p23",
+        "ny_medicaid_pdl:p21",
+        "ny_medicaid_pdl:p51"
+      ],
+      "index_loaded": true
+    },
+    {
+      "name": "search_documents",
+      "input": {
+        "query": "PDL changes 10/22/2026 non-preferred preferred insulin GLP-1 SGLT2 DPP-4",
+        "program": "NY Medicaid",
+        "k": 12
+      },
+      "duration_s": 0.022,
+      "is_error": false,
+      "pages": [
+        "ny_medicaid_pdl:p34",
+        "ny_medicaid_pdl:p37",
+        "ny_medicaid_pdl:p36",
+        "ny_medicaid_pdl:p60",
+        "ny_medicaid_pdl:p41",
+        "ny_medicaid_pdl:p17",
+        "ny_medicaid_pdl:p39",
+        "ny_medicaid_pdl:p23",
+        "ny_medicaid_pdl:p33",
+        "ny_medicaid_pdl:p20",
+        "ny_medicaid_pdl:p52",
+        "ny_medicaid_pdl:p42"
+      ],
+      "index_loaded": true
+    },
+    {
+      "name": "read_page",
+      "input": {
+        "doc_id": "ny_medicaid_pdl",
+        "page": 34
+      },
+      "duration_s": 0.004,
+      "is_error": false,
+      "pages": [
+        "ny_medicaid_pdl:p34"
+      ]
+    },
+    {
+      "name": "read_page",
+      "input": {
+        "doc_id": "ny_medicaid_pdl",
+        "page": 35
+      },
+      "duration_s": 0.002,
+      "is_error": false,
+      "pages": [
+        "ny_medicaid_pdl:p35"
+      ]
+    },
+    {
+      "name": "read_page",
+      "input": {
+        "doc_id": "ny_medicaid_pdl",
+        "page": 36
+      },
+      "duration_s": 0.007,
+      "is_error": false,
+      "pages": [
+        "ny_medicaid_pdl:p36"
+      ]
+    },
+    {
+      "name": "read_page",
+      "input": {
+        "doc_id": "ny_medicaid_pdl",
+        "page": 37
+      },
+      "duration_s": 0.003,
+      "is_error": false,
+      "pages": [
+        "ny_medicaid_pdl:p37"
+      ]
+    }
+  ],
+  "cost_note": "priced at the requested model's rates; a fallback hop bills at its own rates"
+}

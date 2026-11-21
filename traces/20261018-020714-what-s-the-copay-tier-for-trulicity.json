@@ -1,0 +1,485 @@
+{
+  "question": "What's the copay tier for Trulicity?",
+  "status": "not_in_documents",
+  "assumption": "Assuming NY Medicaid (program not named); \"copay tier\" is a Part D formulary concept, and no Part D formulary was found.",
+  "answer": "Assuming NY Medicaid: the documents give no copay tier for Trulicity. NYRx uses PDL preferred/non-preferred status, not tiers.\n\n- Trulicity® is **preferred** on the NYRx PDL in the GLP-1 RA (Type 2 diabetes) class. The row carries no flags, and no effective-date marker applies.\n- Class CC applies: confirm an FDA-approved or compendia-supported indication that Medicaid covers.\n- PA is required if the patient is also on a DPP-4 inhibitor.\n\nThe Part D documents here cover opioid policy only, not formulary tiers. If the patient has Part D, check the plan's formulary. The VA guidance doesn't give tiers either.",
+  "citations": [
+    {
+      "doc_id": "ny_medicaid_pdl",
+      "page": 34,
+      "link": "https://newyork.fhsc.com/downloads/providers/NYRx_PDP_PDL.pdf#page=34",
+      "flag": null,
+      "locator": "ny_medicaid_pdl:p34"
+    }
+  ],
+  "conflicts_noted": [],
+  "flags": [],
+  "needs_review": true,
+  "words": {
+    "displayed": 99,
+    "rendered": 99
+  },
+  "answered_by": "claude-sonnet-5-5",
+  "fallback_used": false,
+  "timing_s": {
+    "total": 6.551,
+    "search": 0.466,
+    "search_cold": 0,
+    "search_warm": 0.466,
+    "read_page": 0,
+    "list_documents": 0,
+    "model_calls": [
+      2.145,
+      3.935
+    ]
+  },
+  "index_warm_at_start": true,
+  "lookups": 2,
+  "tokens": {
+    "input": 6,
+    "output": 679,
+    "cache_read": 3584,
+    "cache_write": 28790
+  },
+  "cost_usd": 0.079494,
+  "pages_seen": [
+    "ny_medicaid_pdl:p1",
+    "ny_medicaid_pdl:p33",
+    "ny_medicaid_pdl:p34",
+    "ny_medicaid_pdl:p75",
+    "va_dod_cpg_diabetes_2023:p100",
+    "va_dod_cpg_diabetes_2023:p101",
+    "va_dod_cpg_diabetes_2023:p102",
+    "va_dod_cpg_diabetes_2023:p131",
+    "va_dod_cpg_diabetes_2023:p88",
+    "va_dod_cpg_diabetes_2023:p89",
+    "va_dod_cpg_diabetes_2023:p90",
+    "va_dod_cpg_diabetes_2023:p91",
+    "va_dod_cpg_diabetes_2023:p99",
+    "va_dod_cpg_opioids_2022:p84",
+    "va_pbm_t2dm_clinicians_guide:p11",
+    "va_pbm_t2dm_clinicians_guide:p12",
+    "va_pbm_t2dm_pharmacotherapy_2025:p10",
+    "va_pbm_t2dm_pharmacotherapy_2025:p11",
+    "va_pbm_t2dm_pharmacotherapy_2025:p12",
+    "va_pbm_t2dm_pharmacotherapy_2025:p13",
+    "va_pbm_t2dm_pharmacotherapy_2025:p14",
+    "va_pbm_t2dm_pharmacotherapy_2025:p3",
+    "va_pbm_t2dm_pharmacotherapy_2025:p4"
+  ],
+  "started_at": "2026-10-18T06:07:14+00:00",
+  "config": {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium",
+    "setup": "docling_norerank_structured",
+    "max_tool_calls": 6,
+    "deadline_s": 25,
+    "search_k": 8
+  },
+  "structured_lookups": true,
+  "model_calls": [
+    {
+      "t_start": 0.0,
+      "duration_s": 2.145,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 4,
+        "output": 218,
+        "cache_read": 0,
+        "cache_write": 3584
+      }
+    },
+    {
+      "t_start": 2.616,
+      "duration_s": 3.935,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 2,
+        "output": 461,
+        "cache_read": 3584,
+        "cache_write": 25206
+      }
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "lookup_ny_medicaid_drug",
+      "input": {
+        "drug": "Trulicity"
+      },
+      "duration_s": 0.004,
+      "is_error": false,
+      "pages": [
+        "ny_medicaid_pdl:p1",
+        "ny_medicaid_pdl:p34"
+      ],
+      "lookup": {
+        "result": "exact_match",
+        "rows": 1
+      },
+      "t_start": 2.145
+    },
+    {
+      "name": "search_documents",
+      "input": {
+        "query": "Trulicity dulaglutide copay tier formulary"
+      },
+      "duration_s": 0.466,
+      "is_error": false,
+      "pages": [
+        "ny_medicaid_pdl:p33",
+        "ny_medicaid_pdl:p34",
+        "ny_medicaid_pdl:p75",
+        "va_dod_cpg_diabetes_2023:p100",
+        "va_dod_cpg_diabetes_2023:p101",
+        "va_dod_cpg_diabetes_2023:p102",
+        "va_dod_cpg_diabetes_2023:p131",
+        "va_dod_cpg_diabetes_2023:p88",
+        "va_dod_cpg_diabetes_2023:p89",
+        "va_dod_cpg_diabetes_2023:p90",
+        "va_dod_cpg_diabetes_2023:p91",
+        "va_dod_cpg_diabetes_2023:p99",
+        "va_dod_cpg_opioids_2022:p84",
+        "va_pbm_t2dm_clinicians_guide:p11",
+        "va_pbm_t2dm_clinicians_guide:p12",
+        "va_pbm_t2dm_pharmacotherapy_2025:p10",
+        "va_pbm_t2dm_pharmacotherapy_2025:p11",
+        "va_pbm_t2dm_pharmacotherapy_2025:p12",
+        "va_pbm_t2dm_pharmacotherapy_2025:p13",
+        "va_pbm_t2dm_pharmacotherapy_2025:p14",
+        "va_pbm_t2dm_pharmacotherapy_2025:p3",
+        "va_pbm_t2dm_pharmacotherapy_2025:p4"
+      ],
+      "index_loaded": true,
+      "search": {
+        "original_query": "What's the copay tier for Trulicity?",
+        "agent_query": "Trulicity dulaglutide copay tier formulary",
+        "executed": [
+          {
+            "source": "original",
+            "query": "What's the copay tier for Trulicity?",
+            "program": null,
+            "k": 8,
+            "seconds": 0.294,
+            "cached": false,
+            "results": 8
+          },
+          {
+            "source": "agent",
+            "query": "Trulicity dulaglutide copay tier formulary",
+            "program": null,
+            "k": 8,
+            "seconds": 0.464,
+            "cached": false,
+            "results": 8
+          }
+        ],
+        "duplicates_merged": 3,
+        "returned": 13,
+        "from_both": 3,
+        "from_original_only": 5,
+        "from_agent_only": 5,
+        "provenance": [
+          {
+            "unit": "ny_medicaid_pdl:s62",
+            "found_by": {
+              "original": 1,
+              "agent": 1
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s15",
+            "found_by": {
+              "original": 2,
+              "agent": 2
+            }
+          },
+          {
+            "unit": "va_dod_cpg_diabetes_2023:s102",
+            "found_by": {
+              "original": 5,
+              "agent": 4
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_clinicians_guide:s10",
+            "found_by": {
+              "original": 3
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s13",
+            "found_by": {
+              "agent": 3
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s63",
+            "found_by": {
+              "original": 4
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s2",
+            "found_by": {
+              "agent": 5
+            }
+          },
+          {
+            "unit": "va_dod_cpg_diabetes_2023:s92",
+            "found_by": {
+              "original": 6
+            }
+          },
+          {
+            "unit": "va_dod_cpg_diabetes_2023:s122",
+            "found_by": {
+              "agent": 6
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s60",
+            "found_by": {
+              "original": 7
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s12",
+            "found_by": {
+              "agent": 7
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s131",
+            "found_by": {
+              "original": 8
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s14",
+            "found_by": {
+              "agent": 8
+            }
+          }
+        ],
+        "hits": [
+          {
+            "unit": "ny_medicaid_pdl:s62",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              34
+            ],
+            "ranks": {
+              "original": 1,
+              "agent": 1
+            },
+            "scores": {
+              "original": 0.0274,
+              "agent": 0.0307
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s15",
+            "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+            "pages": [
+              14
+            ],
+            "ranks": {
+              "original": 2,
+              "agent": 2
+            },
+            "scores": {
+              "original": 0.0254,
+              "agent": 0.0296
+            }
+          },
+          {
+            "unit": "va_dod_cpg_diabetes_2023:s102",
+            "doc_id": "va_dod_cpg_diabetes_2023",
+            "pages": [
+              99,
+              100,
+              101,
+              102
+            ],
+            "ranks": {
+              "original": 5,
+              "agent": 4
+            },
+            "scores": {
+              "original": 0.0161,
+              "agent": 0.0272
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_clinicians_guide:s10",
+            "doc_id": "va_pbm_t2dm_clinicians_guide",
+            "pages": [
+              11,
+              12
+            ],
+            "ranks": {
+              "original": 3
+            },
+            "scores": {
+              "original": 0.0165
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s13",
+            "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+            "pages": [
+              12
+            ],
+            "ranks": {
+              "agent": 3
+            },
+            "scores": {
+              "agent": 0.0274
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s63",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              84
+            ],
+            "ranks": {
+              "original": 4
+            },
+            "scores": {
+              "original": 0.0164
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s2",
+            "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+            "pages": [
+              3,
+              4
+            ],
+            "ranks": {
+              "agent": 5
+            },
+            "scores": {
+              "agent": 0.025
+            }
+          },
+          {
+            "unit": "va_dod_cpg_diabetes_2023:s92",
+            "doc_id": "va_dod_cpg_diabetes_2023",
+            "pages": [
+              88,
+              89,
+              90,
+              91
+            ],
+            "ranks": {
+              "original": 6
+            },
+            "scores": {
+              "original": 0.0159
+            }
+          },
+          {
+            "unit": "va_dod_cpg_diabetes_2023:s122",
+            "doc_id": "va_dod_cpg_diabetes_2023",
+            "pages": [
+              131
+            ],
+            "ranks": {
+              "agent": 6
+            },
+            "scores": {
+              "agent": 0.0243
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s60",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              33
+            ],
+            "ranks": {
+              "original": 7
+            },
+            "scores": {
+              "original": 0.0159
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s12",
+            "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+            "pages": [
+              10,
+              11,
+              12
+            ],
+            "ranks": {
+              "agent": 7
+            },
+            "scores": {
+              "agent": 0.0236
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s131",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              75
+            ],
+            "ranks": {
+              "original": 8
+            },
+            "scores": {
+              "original": 0.0156
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s14",
+            "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+            "pages": [
+              13,
+              14
+            ],
+            "ranks": {
+              "agent": 8
+            },
+            "scores": {
+              "agent": 0.0232
+            }
+          }
+        ]
+      },
+      "t_start": 2.15
+    }
+  ],
+  "cited_evidence": {
+    "ny_medicaid_pdl:p34": "{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"Trulicity\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"exact_match\", \"classes\": [{\"drug_class\": \"Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes\", \"section\": \"VI. Endocrine and Metabolic Agents\", \"class_flags\": {\"CC\": \"Clinical Criteria: see the class's Coverage Parameters\"}, \"coverage_parameters\": \"CLINICAL CRITERIA (CC)\\nConfirm diagnosis of FDA-approved or compendia-supported\\nindication and Medicaid covered indication\\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently\", \"coverage_pages\": [34], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p34#row-8\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Trulicity®\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"exact name\"}]}]}\n\nny_medicaid_pdl (NY Medicaid, binding, 2026-09-14)\nNYRx Preferred Drug Program (PDP) Preferred Drug List > VI. Endocrine and Metabolic Agents > Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes (CC)\n[p 34]\nPreferred drugs: exenatide; Ozempic® pen; Trulicity®; Victoza® (BLTG)\nNon-preferred drugs: liraglutide (gen Victoza® ); Mounjaro®; Ozempic® tablets; Rybelsus®; Soliqua®; Xultophy®\nCoverage parameters: CLINICAL CRITERIA (CC)\nConfirm diagnosis of FDA-approved or compendia-supported\nindication and Medicaid covered indication\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently"
+  },
+  "cited_evidence_parts": {
+    "ny_medicaid_pdl:p34": [
+      "{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"Trulicity\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"exact_match\", \"classes\": [{\"drug_class\": \"Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes\", \"section\": \"VI. Endocrine and Metabolic Agents\", \"class_flags\": {\"CC\": \"Clinical Criteria: see the class's Coverage Parameters\"}, \"coverage_parameters\": \"CLINICAL CRITERIA (CC)\\nConfirm diagnosis of FDA-approved or compendia-supported\\nindication and Medicaid covered indication\\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently\", \"coverage_pages\": [34], \"rows\": [{\"row_id\": \"ny_medicaid_pdl#p34#row-8\", \"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 34}, \"drug_name\": \"Trulicity®\", \"listed_as\": \"preferred\", \"flags\": {}, \"matched_on\": \"exact name\"}]}]}",
+      "ny_medicaid_pdl (NY Medicaid, binding, 2026-09-14)\nNYRx Preferred Drug Program (PDP) Preferred Drug List > VI. Endocrine and Metabolic Agents > Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists – Type 2 Diabetes (CC)\n[p 34]\nPreferred drugs: exenatide; Ozempic® pen; Trulicity®; Victoza® (BLTG)\nNon-preferred drugs: liraglutide (gen Victoza® ); Mounjaro®; Ozempic® tablets; Rybelsus®; Soliqua®; Xultophy®\nCoverage parameters: CLINICAL CRITERIA (CC)\nConfirm diagnosis of FDA-approved or compendia-supported\nindication and Medicaid covered indication\nPA required for patients utilizing a GLP-1 and DPP-IV concurrently"
+    ]
+  },
+  "cost_note": "priced at the requested model's rates; a fallback hop bills at its own rates",
+  "request_id": "0345bacf-d0e0-49b4-9728-a502b7bce7ed",
+  "request_started_utc": "2026-10-18T06:07:07.653805+00:00",
+  "citation_check": {
+    "t_start": 6.55,
+    "duration_s": 0.0
+  },
+  "prices_per_mtok": {
+    "input": 2.0,
+    "output": 10.0,
+    "cache_read": 0.2,
+    "cache_write": 2.5
+  }
+}

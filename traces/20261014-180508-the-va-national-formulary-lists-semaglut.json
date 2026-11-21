@@ -1,0 +1,112 @@
+{
+  "question": "The VA National Formulary lists semaglutide one way. My pt is on NY Medicaid. Is Ozempic covered for them?",
+  "status": "answered",
+  "assumption": "NY Medicaid (NYRx PDL, revised 9/14/2026); the VA formulary isn't relevant to a NY Medicaid patient and isn't searchable anyway.",
+  "answer": "Assuming NY Medicaid: **Ozempic pen is listed as a preferred GLP-1 RA (T2DM)** on the NYRx PDL, alongside exenatide, Trulicity, and Victoza (BLTG). Ozempic **tablets** are non-preferred, as are Rybelsus, Mounjaro, and liraglutide generic.\n\nClinical criteria (CC) apply:\n1. Confirm an FDA-approved or compendia-supported indication that Medicaid covers.\n2. PA is required if the pt is also on a DPP-4 inhibitor (GLP-1 + DPP-4 concurrently).\n\nNote: the PDL's preferred/non-preferred markers are \"as of 10/22/2026,\" which is after today (10/14/2026). The page doesn't say how the status is handled before then. VA formulary status doesn't apply to this pt.",
+  "citations": [
+    {
+      "doc_id": "ny_medicaid_pdl",
+      "page": 34,
+      "link": "https://newyork.fhsc.com/downloads/providers/NYRx_PDP_PDL.pdf#page=34",
+      "flag": null
+    }
+  ],
+  "conflicts_noted": [
+    "VA National Formulary semaglutide status is not searchable and doesn't apply to a NY Medicaid pt; NYRx PDL used (program match)."
+  ],
+  "flags": [],
+  "answered_by": "claude-sonnet-5-5",
+  "fallback_used": false,
+  "timing_s": {
+    "total": 6.968,
+    "search": 0.13,
+    "search_cold": 0,
+    "search_warm": 0.13,
+    "read_page": 0,
+    "list_documents": 0,
+    "model_calls": [
+      2.321,
+      4.517
+    ]
+  },
+  "index_warm_at_start": true,
+  "lookups": 1,
+  "tokens": {
+    "input": 6,
+    "output": 686,
+    "cache_read": 2258,
+    "cache_write": 6258
+  },
+  "cost_usd": 0.022969,
+  "pages_seen": [
+    "ny_medicaid_pdl:p33",
+    "ny_medicaid_pdl:p34",
+    "ny_medicaid_pdl:p39",
+    "ny_medicaid_pdl:p51",
+    "ny_medicaid_pdl:p52",
+    "ny_medicaid_pdl:p55",
+    "ny_medicaid_pdl:p60",
+    "ny_medicaid_pdl:p9"
+  ],
+  "started_at": "2026-10-14T22:05:08+00:00",
+  "config": {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium",
+    "setup": "baseline",
+    "max_tool_calls": 6,
+    "deadline_s": 25,
+    "search_k": 8
+  },
+  "model_calls": [
+    {
+      "duration_s": 2.321,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 4,
+        "output": 119,
+        "cache_read": 0,
+        "cache_write": 2258
+      }
+    },
+    {
+      "duration_s": 4.517,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 2,
+        "output": 567,
+        "cache_read": 2258,
+        "cache_write": 4000
+      }
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "search_documents",
+      "input": {
+        "query": "Ozempic semaglutide GLP-1 preferred drug list PA",
+        "program": "NY Medicaid",
+        "k": 8
+      },
+      "duration_s": 0.13,
+      "is_error": false,
+      "pages": [
+        "ny_medicaid_pdl:p34",
+        "ny_medicaid_pdl:p60",
+        "ny_medicaid_pdl:p33",
+        "ny_medicaid_pdl:p39",
+        "ny_medicaid_pdl:p52",
+        "ny_medicaid_pdl:p51",
+        "ny_medicaid_pdl:p55",
+        "ny_medicaid_pdl:p9"
+      ],
+      "index_loaded": true
+    }
+  ],
+  "cost_note": "priced at the requested model's rates; a fallback hop bills at its own rates"
+}

@@ -1,0 +1,1189 @@
+{
+  "question": "Our old CMS memo says Part D drug management programs are optional and excludes buprenorphine for MAT. The newer sheet says every plan needs a DMP. Can the plan count this patient's Suboxone prescriber and pharmacy—and does that mean their OUD treatment should be blocked?",
+  "request_id": "84f751e6-9a80-43b0-844a-7db33255a731",
+  "status": "answered",
+  "agent_status": "answered",
+  "assumption": "Medicare Part D DMP policy; Suboxone assumed to be buprenorphine for MAT/OUD",
+  "answer": "As of **10/18/2026**, use the newer rule: **all Part D plans must have a DMP**; the CY2019 “optional” language was superseded for plan years **on/after 1/1/2022**.\n\nYes, the plan may **count Suboxone/buprenorphine MAT claims to identify opioid prescribers and dispensing pharmacies** under OMS criteria, but **not for average daily MME**. Count group-practice prescribers/TINs as one prescriber and shared-real-time-data pharmacy locations as one pharmacy.\n\nThat does **not** mean OUD treatment should be blocked: buprenorphine for MAT is **excluded from FADs**, and DMP limits apply only to FADs after OMS eligibility, case management, required beneficiary notices/preferences, reasonable access, and appeal rights.",
+  "citations": [
+    {
+      "doc_id": "cms_partd_opioid_pharmacists_2022",
+      "page": 2,
+      "link": "https://www.cms.gov/files/document/medicare-part-d-opioid-policies-information-pharmacists-december-19-2022.pdf#page=2",
+      "flag": null,
+      "locator": "cms_partd_opioid_pharmacists_2022:p2"
+    },
+    {
+      "doc_id": "cms_partd_dmp_guidance_2019",
+      "page": 1,
+      "link": "https://www.cms.gov/medicare/prescription-drug-coverage/prescriptiondrugcovcontra/downloads/2019-part-d-drug-management-program-policy-guidance-memo-november-20-2018-.pdf#page=1",
+      "flag": null,
+      "locator": "cms_partd_dmp_guidance_2019:p1"
+    },
+    {
+      "doc_id": "cms_partd_dmp_guidance_2019",
+      "page": 6,
+      "link": "https://www.cms.gov/medicare/prescription-drug-coverage/prescriptiondrugcovcontra/downloads/2019-part-d-drug-management-program-policy-guidance-memo-november-20-2018-.pdf#page=6",
+      "flag": null,
+      "locator": "cms_partd_dmp_guidance_2019:p6"
+    },
+    {
+      "doc_id": "cms_partd_dmp_guidance_2019",
+      "page": 9,
+      "link": "https://www.cms.gov/medicare/prescription-drug-coverage/prescriptiondrugcovcontra/downloads/2019-part-d-drug-management-program-policy-guidance-memo-november-20-2018-.pdf#page=9",
+      "flag": null,
+      "locator": "cms_partd_dmp_guidance_2019:p9"
+    },
+    {
+      "doc_id": "cms_partd_dmp_guidance_2019",
+      "page": 17,
+      "link": "https://www.cms.gov/medicare/prescription-drug-coverage/prescriptiondrugcovcontra/downloads/2019-part-d-drug-management-program-policy-guidance-memo-november-20-2018-.pdf#page=17",
+      "flag": null,
+      "locator": "cms_partd_dmp_guidance_2019:p17"
+    },
+    {
+      "doc_id": "cms_partd_dmp_guidance_2019",
+      "page": 23,
+      "link": "https://www.cms.gov/medicare/prescription-drug-coverage/prescriptiondrugcovcontra/downloads/2019-part-d-drug-management-program-policy-guidance-memo-november-20-2018-.pdf#page=23",
+      "flag": null,
+      "locator": "cms_partd_dmp_guidance_2019:p23"
+    },
+    {
+      "doc_id": "cms_partd_dmp_guidance_2019",
+      "page": 24,
+      "link": "https://www.cms.gov/medicare/prescription-drug-coverage/prescriptiondrugcovcontra/downloads/2019-part-d-drug-management-program-policy-guidance-memo-november-20-2018-.pdf#page=24",
+      "flag": null,
+      "locator": "cms_partd_dmp_guidance_2019:p24"
+    },
+    {
+      "doc_id": "cms_partd_dmp_guidance_2019",
+      "page": 25,
+      "link": "https://www.cms.gov/medicare/prescription-drug-coverage/prescriptiondrugcovcontra/downloads/2019-part-d-drug-management-program-policy-guidance-memo-november-20-2018-.pdf#page=25",
+      "flag": null,
+      "locator": "cms_partd_dmp_guidance_2019:p25"
+    },
+    {
+      "doc_id": "cms_partd_dmp_guidance_2019",
+      "page": 26,
+      "link": "https://www.cms.gov/medicare/prescription-drug-coverage/prescriptiondrugcovcontra/downloads/2019-part-d-drug-management-program-policy-guidance-memo-november-20-2018-.pdf#page=26",
+      "flag": null,
+      "locator": "cms_partd_dmp_guidance_2019:p26"
+    },
+    {
+      "doc_id": "cms_partd_dmp_guidance_2019",
+      "page": 27,
+      "link": "https://www.cms.gov/medicare/prescription-drug-coverage/prescriptiondrugcovcontra/downloads/2019-part-d-drug-management-program-policy-guidance-memo-november-20-2018-.pdf#page=27",
+      "flag": null,
+      "locator": "cms_partd_dmp_guidance_2019:p27"
+    }
+  ],
+  "conflicts_noted": [
+    "Apparent conflict: 2019 guidance says DMPs were voluntary under CARA for CY2019 but also says SUPPORT Act requires all Part D sponsors to have DMPs for plan years beginning on/after 1/1/2022; the 2022 summary reflects the later effective requirement."
+  ],
+  "flags": [
+    "completeness_pass"
+  ],
+  "needs_review": false,
+  "words": {
+    "displayed": 104,
+    "rendered": 104
+  },
+  "answered_by": "gpt-5.5-2026-04-23",
+  "provider": "openai",
+  "model": "gpt-5.5-2026-04-23",
+  "fallback_used": false,
+  "timing_s": {
+    "total": 22.882,
+    "search": 0.518,
+    "read_page": 0,
+    "list_documents": 0,
+    "lookups": 0,
+    "model_calls": [
+      2.834,
+      11.335,
+      8.192
+    ]
+  },
+  "lookups": 2,
+  "tokens": {
+    "input": 56232,
+    "output": 1833,
+    "cache_read": 4480,
+    "cache_write": 0
+  },
+  "cost_usd": 0.33839,
+  "completeness": {
+    "ran": true,
+    "changed": true,
+    "added_words": 12,
+    "outcome": "replaced",
+    "duration_s": 8.192
+  },
+  "pages_seen": [
+    "cms_partd_dmp_guidance_2019:p1",
+    "cms_partd_dmp_guidance_2019:p13",
+    "cms_partd_dmp_guidance_2019:p16",
+    "cms_partd_dmp_guidance_2019:p17",
+    "cms_partd_dmp_guidance_2019:p18",
+    "cms_partd_dmp_guidance_2019:p19",
+    "cms_partd_dmp_guidance_2019:p2",
+    "cms_partd_dmp_guidance_2019:p20",
+    "cms_partd_dmp_guidance_2019:p23",
+    "cms_partd_dmp_guidance_2019:p24",
+    "cms_partd_dmp_guidance_2019:p25",
+    "cms_partd_dmp_guidance_2019:p26",
+    "cms_partd_dmp_guidance_2019:p27",
+    "cms_partd_dmp_guidance_2019:p28",
+    "cms_partd_dmp_guidance_2019:p29",
+    "cms_partd_dmp_guidance_2019:p3",
+    "cms_partd_dmp_guidance_2019:p30",
+    "cms_partd_dmp_guidance_2019:p32",
+    "cms_partd_dmp_guidance_2019:p33",
+    "cms_partd_dmp_guidance_2019:p34",
+    "cms_partd_dmp_guidance_2019:p35",
+    "cms_partd_dmp_guidance_2019:p36",
+    "cms_partd_dmp_guidance_2019:p37",
+    "cms_partd_dmp_guidance_2019:p38",
+    "cms_partd_dmp_guidance_2019:p6",
+    "cms_partd_dmp_guidance_2019:p7",
+    "cms_partd_dmp_guidance_2019:p8",
+    "cms_partd_dmp_guidance_2019:p9",
+    "cms_partd_opioid_pharmacists_2022:p2"
+  ],
+  "trace_id": null,
+  "started_at": "2026-10-18T22:23:30+00:00",
+  "config": {
+    "primary": "gpt-5.5",
+    "fallback": "claude-sonnet-5-5",
+    "effort": "medium",
+    "search": {
+      "mode": "hybrid",
+      "rrf_k": 60,
+      "fusion_depth": 100,
+      "return_parents": true,
+      "rerank": null
+    },
+    "max_tool_calls": 6,
+    "deadline_s": 25,
+    "search_k": 8,
+    "min_lookups": 2,
+    "completeness_pass": true,
+    "completeness_min_remaining_s": 8
+  },
+  "structured_lookups": true,
+  "context": {},
+  "model_answer": "As of **10/18/2026**, use the newer rule: **all Part D plans must have a DMP**; the CY2019 “optional” language was superseded for plan years **on/after 1/1/2022**.\n\nYes, the plan may **count Suboxone/buprenorphine MAT claims to identify opioid prescribers and dispensing pharmacies** under OMS criteria, but **not for average daily MME**. Count group-practice prescribers/TINs as one prescriber and shared-real-time-data pharmacy locations as one pharmacy.\n\nThat does **not** mean OUD treatment should be blocked: buprenorphine for MAT is **excluded from FADs**, and DMP limits apply only to FADs after OMS eligibility, case management, required beneficiary notices/preferences, reasonable access, and appeal rights.",
+  "model_citations": [
+    {
+      "doc_id": "cms_partd_opioid_pharmacists_2022",
+      "page": 2,
+      "link": "https://www.cms.gov/files/document/medicare-part-d-opioid-policies-information-pharmacists-december-19-2022.pdf#page=2",
+      "flag": null,
+      "locator": "cms_partd_opioid_pharmacists_2022:p2"
+    },
+    {
+      "doc_id": "cms_partd_dmp_guidance_2019",
+      "page": 1,
+      "link": "https://www.cms.gov/medicare/prescription-drug-coverage/prescriptiondrugcovcontra/downloads/2019-part-d-drug-management-program-policy-guidance-memo-november-20-2018-.pdf#page=1",
+      "flag": null,
+      "locator": "cms_partd_dmp_guidance_2019:p1"
+    },
+    {
+      "doc_id": "cms_partd_dmp_guidance_2019",
+      "page": 6,
+      "link": "https://www.cms.gov/medicare/prescription-drug-coverage/prescriptiondrugcovcontra/downloads/2019-part-d-drug-management-program-policy-guidance-memo-november-20-2018-.pdf#page=6",
+      "flag": null,
+      "locator": "cms_partd_dmp_guidance_2019:p6"
+    },
+    {
+      "doc_id": "cms_partd_dmp_guidance_2019",
+      "page": 9,
+      "link": "https://www.cms.gov/medicare/prescription-drug-coverage/prescriptiondrugcovcontra/downloads/2019-part-d-drug-management-program-policy-guidance-memo-november-20-2018-.pdf#page=9",
+      "flag": null,
+      "locator": "cms_partd_dmp_guidance_2019:p9"
+    },
+    {
+      "doc_id": "cms_partd_dmp_guidance_2019",
+      "page": 17,
+      "link": "https://www.cms.gov/medicare/prescription-drug-coverage/prescriptiondrugcovcontra/downloads/2019-part-d-drug-management-program-policy-guidance-memo-november-20-2018-.pdf#page=17",
+      "flag": null,
+      "locator": "cms_partd_dmp_guidance_2019:p17"
+    },
+    {
+      "doc_id": "cms_partd_dmp_guidance_2019",
+      "page": 23,
+      "link": "https://www.cms.gov/medicare/prescription-drug-coverage/prescriptiondrugcovcontra/downloads/2019-part-d-drug-management-program-policy-guidance-memo-november-20-2018-.pdf#page=23",
+      "flag": null,
+      "locator": "cms_partd_dmp_guidance_2019:p23"
+    },
+    {
+      "doc_id": "cms_partd_dmp_guidance_2019",
+      "page": 24,
+      "link": "https://www.cms.gov/medicare/prescription-drug-coverage/prescriptiondrugcovcontra/downloads/2019-part-d-drug-management-program-policy-guidance-memo-november-20-2018-.pdf#page=24",
+      "flag": null,
+      "locator": "cms_partd_dmp_guidance_2019:p24"
+    },
+    {
+      "doc_id": "cms_partd_dmp_guidance_2019",
+      "page": 25,
+      "link": "https://www.cms.gov/medicare/prescription-drug-coverage/prescriptiondrugcovcontra/downloads/2019-part-d-drug-management-program-policy-guidance-memo-november-20-2018-.pdf#page=25",
+      "flag": null,
+      "locator": "cms_partd_dmp_guidance_2019:p25"
+    },
+    {
+      "doc_id": "cms_partd_dmp_guidance_2019",
+      "page": 26,
+      "link": "https://www.cms.gov/medicare/prescription-drug-coverage/prescriptiondrugcovcontra/downloads/2019-part-d-drug-management-program-policy-guidance-memo-november-20-2018-.pdf#page=26",
+      "flag": null,
+      "locator": "cms_partd_dmp_guidance_2019:p26"
+    },
+    {
+      "doc_id": "cms_partd_dmp_guidance_2019",
+      "page": 27,
+      "link": "https://www.cms.gov/medicare/prescription-drug-coverage/prescriptiondrugcovcontra/downloads/2019-part-d-drug-management-program-policy-guidance-memo-november-20-2018-.pdf#page=27",
+      "flag": null,
+      "locator": "cms_partd_dmp_guidance_2019:p27"
+    }
+  ],
+  "first_submit": {
+    "status": "answered",
+    "assumption": "Medicare Part D DMP policy; Suboxone assumed to be buprenorphine for MAT/OUD",
+    "answer": "As of **10/18/2026**, use the newer rule: **all Part D plans must have a DMP**. The “optional” language was CY2019/CARA-era; CMS also noted DMPs became required for plan years **on/after 1/1/2022**.\n\nYes, the plan may **count Suboxone/buprenorphine MAT claims to identify opioid prescribers and dispensing pharmacies** under OMS criteria, but **not for average daily MME**. That count does **not** mean OUD treatment should be blocked: buprenorphine for MAT is **excluded from FADs**, and DMP coverage limits apply to FADs only after required case management/notices and reasonable-access rules.",
+    "citations": [
+      {
+        "doc_id": "cms_partd_opioid_pharmacists_2022",
+        "page": 2,
+        "row": null
+      },
+      {
+        "doc_id": "cms_partd_dmp_guidance_2019",
+        "page": 1,
+        "row": null
+      },
+      {
+        "doc_id": "cms_partd_dmp_guidance_2019",
+        "page": 6,
+        "row": null
+      },
+      {
+        "doc_id": "cms_partd_dmp_guidance_2019",
+        "page": 9,
+        "row": null
+      },
+      {
+        "doc_id": "cms_partd_dmp_guidance_2019",
+        "page": 17,
+        "row": null
+      }
+    ],
+    "conflicts_noted": [
+      "Apparent conflict: 2019 guidance says DMPs were voluntary under CARA for CY2019 but also says SUPPORT Act requires all Part D sponsors to have DMPs for plan years beginning on/after 1/1/2022; the 2022 summary reflects the later effective requirement."
+    ]
+  },
+  "model_calls": [
+    {
+      "t_start": 0.0,
+      "duration_s": 2.834,
+      "requested_model": "gpt-5.5",
+      "served_model": "gpt-5.5-2026-04-23",
+      "provider": "openai",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 347,
+        "output": 142,
+        "cache_read": 1536,
+        "cache_write": 0
+      },
+      "cost_usd": 0.006763,
+      "response_id": "resp_004f2829c528a96b016ad546cc1dd487d2b8f9e29e5b733c11",
+      "input_messages": [
+        {
+          "role": "user",
+          "text": "Today's date: 2026-10-18\n\nQuestion: Our old CMS memo says Part D drug management programs are optional and excludes buprenorphine for MAT. The newer sheet says every plan needs a DMP. Can the plan count this patient's Suboxone prescriber and pharmacy—and does that mean their OUD treatment should be blocked?"
+        }
+      ],
+      "output": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "call_NzphktNOAcIc910O1FtDJi7a",
+            "name": "search_documents",
+            "arguments": {
+              "program": "Medicare Part D",
+              "query": "drug management programs optional excludes buprenorphine MAT Suboxone prescriber pharmacy counted OUD treatment blocked DMP every plan required buprenorphine medication assisted treatment",
+              "k": 8
+            }
+          },
+          {
+            "id": "call_Li28orG9jxJCVGJ8q7LYMIU0",
+            "name": "search_documents",
+            "arguments": {
+              "program": "Medicare Part D",
+              "query": "DMP every plan sponsor must have drug management program 2026 buprenorphine prescriber pharmacy opioid MAT excluded",
+              "k": 8
+            }
+          }
+        ]
+      }
+    },
+    {
+      "t_start": 3.353,
+      "duration_s": 11.335,
+      "requested_model": "gpt-5.5",
+      "served_model": "gpt-5.5-2026-04-23",
+      "provider": "openai",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 27619,
+        "output": 908,
+        "cache_read": 1536,
+        "cache_write": 0
+      },
+      "cost_usd": 0.166103,
+      "response_id": "resp_004f2829c528a96b016ad546cf512887d28d602222fbd497a7",
+      "input_messages": [
+        {
+          "role": "tool",
+          "tool_results": [
+            {
+              "call_id": "call_NzphktNOAcIc910O1FtDJi7a",
+              "is_error": false,
+              "content": "[{\"doc_id\": \"cms_partd_opioid_pharmacists_2022\", \"page\": 2, \"program\": \"Medicare Part D\", \"authority\": \"summary_of_binding_policy\", \"date\": \"2022-12-19\", \"text\": \"Medicare Part D Opioid Policies: Information for Pharmacists > Drug Management Programs (DMPs)\\n[p 2]\\nAll Medicare Part D plans must have a DMP that limits access to opioids and/or benzodiazepines for enrollees considered by the plan to be at risk for prescription drug abuse or misuse. Enrollees are identified by opioid use involving multiple doctors and pharmacies or a recent history of opioid-related overdose, and undergo case management conducted by the plan with the enrollee's prescribers.\\nDMP limitations can include requiring the enrollee to obtain these medications from a specified prescriber and/or pharmacy, or implementing a enrollee-specific POS edit that limits the amount of these medications that will be covered. Before a limitation is implemented, the plan must give written notice to the enrollee, and an opportunity to tell the plan which prescribers or pharmacies they prefer to use or provide additional information that they think is relevant.\\nIf the plan decides to limit coverage under a DMP, the enrollee, their representative, or their prescriber have the right to appeal the plan's decision. Pharmacies are not expected to distribute the standardized CMS pharmacy notice Medicare Prescription Drug Coverage and Your Rights to the enrollee in response to a rejected claim due to a limitation under a DMP. The enrollee or prescriber should contact the plan for information on how to appeal.\", \"pages\": [2], \"section\": \"Medicare Part D Opioid Policies: Information for Pharmacists > Drug Management Programs (DMPs)\"}, {\"doc_id\": \"cms_partd_dmp_guidance_2019\", \"page\": 34, \"program\": \"Medicare Part D\", \"authority\": \"binding\", \"date\": \"2018-11-20\", \"text\": \"Part D Drug Management Program Policy Guidance (CY 2019) > IX. FREQUENTLY ASKED QUESTIONS\\n[p 34]\\nLimitations on Access to Coverage for FADs\\nWe intend to implement a pharmacy limitation on an ARB's access to coverage for opioids. However, while all 3 prescribers agree that the beneficiary is at-risk, 1 prescriber offered that they would not want their patient to be \\\"locked-in\\\" to a pharmacy. Can we proceed with the limitation?\\nIt depends. If a prescriber proactively alerts a plan sponsor that they do not believe that a pharmacy limitation is appropriate for a particular ARB, we expect the plan sponsor to take such information into consideration. In this case, the sponsor might inquire what the specific reason is for the prescriber's opinion and take it into consideration. For example, if the prescriber states that the patient typically uses one pharmacy near their home and another pharmacy near where they work, a pharmacy limitation may not be the best approach for the beneficiary and the sponsor could ask if the prescriber would agree to a prescriber limitation instead. However, if the prescriber states that the reason is that the beneficiary splits their year between two homes in different states, the sponsor may be able to change the prescriber's opinion of a pharmacy limitation if the sponsor explains that the sponsor will limit the beneficiary to 2 pharmacies instead of 1 to provide reasonable access. If the prescriber does not change their mind, the sponsor must decide if it is reasonable to proceed with the pharmacy limitation and document their reasoning in the case file and should monitor if the pharmacy limitation is resolving the case without issues.\\n12) Do we have to obtain agreement from the prescriber that a beneficiary prefers for a prescriber limitation?\\nGenerally, yes. The prescriber who agrees to a prescriber limitation for a beneficiary should be identified, and their agreement obtained by the plan sponsor through case management. If a beneficiary submits a preference for a different prescriber in response to the Initial Notice or later, the sponsor will have to obtain that prescriber'"
+            },
+            {
+              "call_id": "call_Li28orG9jxJCVGJ8q7LYMIU0",
+              "is_error": false,
+              "content": "[{\"doc_id\": \"cms_partd_opioid_pharmacists_2022\", \"page\": 2, \"program\": \"Medicare Part D\", \"authority\": \"summary_of_binding_policy\", \"date\": \"2022-12-19\", \"text\": \"Medicare Part D Opioid Policies: Information for Pharmacists > Drug Management Programs (DMPs)\\n[p 2]\\nAll Medicare Part D plans must have a DMP that limits access to opioids and/or benzodiazepines for enrollees considered by the plan to be at risk for prescription drug abuse or misuse. Enrollees are identified by opioid use involving multiple doctors and pharmacies or a recent history of opioid-related overdose, and undergo case management conducted by the plan with the enrollee's prescribers.\\nDMP limitations can include requiring the enrollee to obtain these medications from a specified prescriber and/or pharmacy, or implementing a enrollee-specific POS edit that limits the amount of these medications that will be covered. Before a limitation is implemented, the plan must give written notice to the enrollee, and an opportunity to tell the plan which prescribers or pharmacies they prefer to use or provide additional information that they think is relevant.\\nIf the plan decides to limit coverage under a DMP, the enrollee, their representative, or their prescriber have the right to appeal the plan's decision. Pharmacies are not expected to distribute the standardized CMS pharmacy notice Medicare Prescription Drug Coverage and Your Rights to the enrollee in response to a rejected claim due to a limitation under a DMP. The enrollee or prescriber should contact the plan for information on how to appeal.\", \"pages\": [2], \"section\": \"Medicare Part D Opioid Policies: Information for Pharmacists > Drug Management Programs (DMPs)\"}, {\"doc_id\": \"cms_partd_dmp_guidance_2019\", \"page\": 13, \"program\": \"Medicare Part D\", \"authority\": \"binding\", \"date\": \"2018-11-20\", \"text\": \"Part D Drug Management Program Policy Guidance (CY 2019) > VI. BENEFICIARIES ENROLLING IN A PART D PLAN WHOSE COVERAGE OF CONTROLLED SUBSTANCES WAS LIMITED UNDER THEIR PRIOR PLAN (BUT NOT THROUGH A DMP)\\n[p 13]\\nA. Non-Part D Prescription Drug Benefit Coverage\\nAs discussed later in this guidance, in order for a sponsor to immediately implement a coverage limitation under its DMP for a beneficiary who is newly enrolled, the plan from which the beneficiary most recently disenrolled must have been a Part D plan in which they were determined to be an ARB under that previous plan's DMP and the ARB identification was not terminated before disenrollment.\\nBecause DMPs are new to Part D in 2019, no Part D sponsor could have had a Part D DMP before 2019. This means that a beneficiary with a limitation on their opioid coverage that was implemented before 2019 could not have had such a limitation imposed under a Part D DMP. Thus, beneficiaries with these opioid coverage limitations in a prior plan who switch plans could only be subject to a coverage limitation in the new plan through the required DMP process detailed in this guidance.\\nTo the extent the new Part D plan sponsor is aware or discovers based on reliable information that a beneficiary who meets the OMS criteria was subject to an opioid or benzodiazepine coverage limitation specific to the beneficiary, such as prescriber or pharmacy lock-in or a beneficiary-specific POS edit under a state Medicaid or EGWP plan, that plan sponsor may consider that information in deciding whether to determine that a beneficiary is an ARB under its DMP. In other words, when a new enrollee comes from a non-Part D plan in which the beneficiary was subject to lock-in, the sponsor can consider the prior lock-in if it learns or knows of it based upon reliable information which is legally available to the sponsor in conjunction with the information it gathers from the case management process, the beneficiary, and the sponsor's other relevant internal sources and data.\\nB. Part D Prescription Drug Benefit Coverage: Beneficiary-Specific POS Claim Edits for Opioids Prior to 2019\\nBenefici"
+            }
+          ]
+        }
+      ],
+      "output": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "call_YOTITQrNWOh78tykl28a9RUF",
+            "name": "submit_answer",
+            "arguments": {
+              "status": "answered",
+              "assumption": "Medicare Part D DMP policy; Suboxone assumed to be buprenorphine for MAT/OUD",
+              "answer": "As of **10/18/2026**, use the newer rule: **all Part D plans must have a DMP**. The “optional” language was CY2019/CARA-era; CMS also noted DMPs became required for plan years **on/after 1/1/2022**.\n\nYes, the plan may **count Suboxone/buprenorphine MAT claims to identify opioid prescribers and dispensing pharmacies** under OMS criteria, but **not for average daily MME**. That count does **not** mean OUD treatment should be blocked: buprenorphine for MAT is **excluded from FADs**, and DMP coverage limits apply to FADs only after required case management/notices and reasonable-access rules.",
+              "citations": [
+                {
+                  "doc_id": "cms_partd_opioid_pharmacists_2022",
+                  "page": 2,
+                  "row": null
+                },
+                {
+                  "doc_id": "cms_partd_dmp_guidance_2019",
+                  "page": 1,
+                  "row": null
+                },
+                {
+                  "doc_id": "cms_partd_dmp_guidance_2019",
+                  "page": 6,
+                  "row": null
+                },
+                {
+                  "doc_id": "cms_partd_dmp_guidance_2019",
+                  "page": 9,
+                  "row": null
+                },
+                {
+                  "doc_id": "cms_partd_dmp_guidance_2019",
+                  "page": 17,
+                  "row": null
+                }
+              ],
+              "conflicts_noted": [
+                "Apparent conflict: 2019 guidance says DMPs were voluntary under CARA for CY2019 but also says SUPPORT Act requires all Part D sponsors to have DMPs for plan years beginning on/after 1/1/2022; the 2022 summary reflects the later effective requirement."
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "t_start": 14.688,
+      "duration_s": 8.192,
+      "requested_model": "gpt-5.5",
+      "served_model": "gpt-5.5-2026-04-23",
+      "provider": "openai",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 28266,
+        "output": 783,
+        "cache_read": 1408,
+        "cache_write": 0
+      },
+      "cost_usd": 0.165524,
+      "response_id": "resp_004f2829c528a96b016ad546daa82887d296f4821fba49da68",
+      "input_messages": [
+        {
+          "role": "tool",
+          "tool_results": [
+            {
+              "call_id": "call_YOTITQrNWOh78tykl28a9RUF",
+              "is_error": false,
+              "content": "Answer received."
+            }
+          ]
+        },
+        {
+          "role": "user",
+          "text": "Completeness check. Compare your answer with the evidence the tools returned in this conversation. List, for yourself, any condition, quantity or day limit, exception, effective date, step of a process or alternative channel, older-version difference, or program distinction that the evidence states for this question and your answer omits. Then call submit_answer again: the same answer with those points added in one or two sentences each, each cited to the page or row that states it; if nothing is missing, resubmit the same answer unchanged. Do not add anything the evidence does not state; do not remove correct content; do not run more lookups."
+        }
+      ],
+      "output": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "call_YyArB6Kh424BghohfjSMMSLl",
+            "name": "submit_answer",
+            "arguments": {
+              "status": "answered",
+              "assumption": "Medicare Part D DMP policy; Suboxone assumed to be buprenorphine for MAT/OUD",
+              "answer": "As of **10/18/2026**, use the newer rule: **all Part D plans must have a DMP**; the CY2019 “optional” language was superseded for plan years **on/after 1/1/2022**.\n\nYes, the plan may **count Suboxone/buprenorphine MAT claims to identify opioid prescribers and dispensing pharmacies** under OMS criteria, but **not for average daily MME**. Count group-practice prescribers/TINs as one prescriber and shared-real-time-data pharmacy locations as one pharmacy.\n\nThat does **not** mean OUD treatment should be blocked: buprenorphine for MAT is **excluded from FADs**, and DMP limits apply only to FADs after OMS eligibility, case management, required beneficiary notices/preferences, reasonable access, and appeal rights.",
+              "citations": [
+                {
+                  "doc_id": "cms_partd_opioid_pharmacists_2022",
+                  "page": 2,
+                  "row": null
+                },
+                {
+                  "doc_id": "cms_partd_dmp_guidance_2019",
+                  "page": 1,
+                  "row": null
+                },
+                {
+                  "doc_id": "cms_partd_dmp_guidance_2019",
+                  "page": 6,
+                  "row": null
+                },
+                {
+                  "doc_id": "cms_partd_dmp_guidance_2019",
+                  "page": 9,
+                  "row": null
+                },
+                {
+                  "doc_id": "cms_partd_dmp_guidance_2019",
+                  "page": 17,
+                  "row": null
+                },
+                {
+                  "doc_id": "cms_partd_dmp_guidance_2019",
+                  "page": 23,
+                  "row": null
+                },
+                {
+                  "doc_id": "cms_partd_dmp_guidance_2019",
+                  "page": 24,
+                  "row": null
+                },
+                {
+                  "doc_id": "cms_partd_dmp_guidance_2019",
+                  "page": 25,
+                  "row": null
+                },
+                {
+                  "doc_id": "cms_partd_dmp_guidance_2019",
+                  "page": 26,
+                  "row": null
+                },
+                {
+                  "doc_id": "cms_partd_dmp_guidance_2019",
+                  "page": 27,
+                  "row": null
+                }
+              ],
+              "conflicts_noted": [
+                "Apparent conflict: 2019 guidance says DMPs were voluntary under CARA for CY2019 but also says SUPPORT Act requires all Part D sponsors to have DMPs for plan years beginning on/after 1/1/2022; the 2022 summary reflects the later effective requirement."
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "search_documents",
+      "input": {
+        "program": "Medicare Part D",
+        "query": "drug management programs optional excludes buprenorphine MAT Suboxone prescriber pharmacy counted OUD treatment blocked DMP every plan required buprenorphine medication assisted treatment",
+        "k": 8
+      },
+      "duration_s": 0.29,
+      "is_error": false,
+      "pages": [
+        "cms_partd_dmp_guidance_2019:p1",
+        "cms_partd_dmp_guidance_2019:p13",
+        "cms_partd_dmp_guidance_2019:p16",
+        "cms_partd_dmp_guidance_2019:p17",
+        "cms_partd_dmp_guidance_2019:p18",
+        "cms_partd_dmp_guidance_2019:p19",
+        "cms_partd_dmp_guidance_2019:p2",
+        "cms_partd_dmp_guidance_2019:p20",
+        "cms_partd_dmp_guidance_2019:p27",
+        "cms_partd_dmp_guidance_2019:p28",
+        "cms_partd_dmp_guidance_2019:p29",
+        "cms_partd_dmp_guidance_2019:p3",
+        "cms_partd_dmp_guidance_2019:p30",
+        "cms_partd_dmp_guidance_2019:p32",
+        "cms_partd_dmp_guidance_2019:p33",
+        "cms_partd_dmp_guidance_2019:p34",
+        "cms_partd_dmp_guidance_2019:p35",
+        "cms_partd_dmp_guidance_2019:p36",
+        "cms_partd_dmp_guidance_2019:p37",
+        "cms_partd_dmp_guidance_2019:p38",
+        "cms_partd_dmp_guidance_2019:p6",
+        "cms_partd_opioid_pharmacists_2022:p2"
+      ],
+      "result": "[{\"doc_id\": \"cms_partd_opioid_pharmacists_2022\", \"page\": 2, \"program\": \"Medicare Part D\", \"authority\": \"summary_of_binding_policy\", \"date\": \"2022-12-19\", \"text\": \"Medicare Part D Opioid Policies: Information for Pharmacists > Drug Management Programs (DMPs)\\n[p 2]\\nAll Medicare Part D plans must have a DMP that limits access to opioids and/or benzodiazepines for enrollees considered by the plan to be at risk for prescription drug abuse or misuse. Enrollees are identified by opioid use involving multiple doctors and pharmacies or a recent history of opioid-related overdose, and undergo case management conducted by the plan with the enrollee's prescribers.\\nDMP limitations can include requiring the enrollee to obtain these medications from a specified prescriber and/or pharmacy, or implementing a enrollee-specific POS edit that limits the amount of these medications that will be covered. Before a limitation is implemented, the plan must give written notice to the enrollee, and an opportunity to tell the plan which prescribers or pharmacies they prefer to use or provide additional information that they think is relevant.\\nIf the plan decides to limit coverage under a DMP, the enrollee, their representative, or their prescriber have the right to appeal the plan's decision. Pharmacies are not expected to distribute the standardized CMS pharmacy notice Medicare Prescription Drug Coverage and Your Rights to the enrollee in response to a rejected claim due to a limitation under a DMP. The enrollee or prescriber should contact the plan for information on how to appeal.\", \"pages\": [2], \"section\": \"Medicare Part D Opioid Policies: Information for Pharmacists > Drug Management Programs (DMPs)\"}, {\"doc_id\": \"cms_partd_dmp_guidance_2019\", \"page\": 34, \"program\": \"Medicare Part D\", \"authority\": \"binding\", \"date\": \"2018-11-20\", \"text\": \"Part D Drug Management Program Policy Guidance (CY 2019) > IX. FREQUENTLY ASKED QUESTIONS\\n[p 34]\\nLimitations on Access to Coverage for FADs\\nWe intend to implement a pharmacy limitation on an ARB's access to coverage for opioids. However, while all 3 prescribers agree that the beneficiary is at-risk, 1 prescriber offered that they would not want their patient to be \\\"locked-in\\\" to a pharmacy. Can we proceed with the limitation?\\nIt depends. If a prescriber proactively alerts a plan sponsor that they do not believe that a pharmacy limitation is appropriate for a particular ARB, we expect the plan sponsor to take such information into consideration. In this case, the sponsor might inquire what the specific reason is for the prescriber's opinion and take it into consideration. For example, if the prescriber states that the patient typically uses one pharmacy near their home and another pharmacy near where they work, a pharmacy limitation may not be the best approach for the beneficiary and the sponsor could ask if the prescriber would agree to a prescriber limitation instead. However, if the prescriber states that the reason is that the beneficiary splits their year between two homes in different states, the sponsor may be able to change the prescriber's opinion of a pharmacy limitation if the sponsor explains that the sponsor will limit the beneficiary to 2 pharmacies instead of 1 to provide reasonable access. If the prescriber does not change their mind, the sponsor must decide if it is reasonable to proceed with the pharmacy limitation and document their reasoning in the case file and should monitor if the pharmacy limitation is resolving the case without issues.\\n12) Do we have to obtain agreement from the prescriber that a beneficiary prefers for a prescriber limitation?\\nGenerally, yes. The prescriber who agrees to a prescriber limitation for a beneficiary should be identified, and their agreement obtained by the plan sponsor through case management. If a beneficiary submits a preference for a different prescriber in response to the Initial Notice or later, the sponsor will have to obtain that prescriber'",
+      "search": {
+        "original_query": "Our old CMS memo says Part D drug management programs are optional and excludes buprenorphine for MAT. The newer sheet says every plan needs a DMP. Can the plan count this patient's Suboxone prescriber and pharmacy—and does that mean their OUD treatment should be blocked?",
+        "agent_query": "drug management programs optional excludes buprenorphine MAT Suboxone prescriber pharmacy counted OUD treatment blocked DMP every plan required buprenorphine medication assisted treatment",
+        "executed": [
+          {
+            "source": "original",
+            "query": "Our old CMS memo says Part D drug management programs are optional and excludes buprenorphine for MAT. The newer sheet says every plan needs a DMP. Can the plan count this patient's Suboxone prescriber and pharmacy—and does that mean their OUD treatment should be blocked?",
+            "program": "Medicare Part D",
+            "k": 8,
+            "seconds": 0.267,
+            "cached": false,
+            "results": 8
+          },
+          {
+            "source": "agent",
+            "query": "drug management programs optional excludes buprenorphine MAT Suboxone prescriber pharmacy counted OUD treatment blocked DMP every plan required buprenorphine medication assisted treatment",
+            "program": "Medicare Part D",
+            "k": 8,
+            "seconds": 0.289,
+            "cached": false,
+            "results": 8
+          }
+        ],
+        "duplicates_merged": 6,
+        "returned": 10,
+        "from_both": 6,
+        "from_original_only": 2,
+        "from_agent_only": 2,
+        "provenance": [
+          {
+            "unit": "cms_partd_opioid_pharmacists_2022:s2",
+            "found_by": {
+              "original": 1,
+              "agent": 1
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s18",
+            "found_by": {
+              "original": 6,
+              "agent": 3
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s7",
+            "found_by": {
+              "original": 2,
+              "agent": 8
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s10",
+            "found_by": {
+              "original": 8,
+              "agent": 2
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s3",
+            "found_by": {
+              "original": 5,
+              "agent": 5
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s19",
+            "found_by": {
+              "original": 4,
+              "agent": 7
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s0",
+            "found_by": {
+              "original": 3
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s11",
+            "found_by": {
+              "agent": 4
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s15",
+            "found_by": {
+              "agent": 6
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s17",
+            "found_by": {
+              "original": 7
+            }
+          }
+        ],
+        "hits": [
+          {
+            "unit": "cms_partd_opioid_pharmacists_2022:s2",
+            "doc_id": "cms_partd_opioid_pharmacists_2022",
+            "pages": [
+              2
+            ],
+            "ranks": {
+              "original": 1,
+              "agent": 1
+            },
+            "scores": {
+              "original": 0.0318,
+              "agent": 0.0323
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s18",
+            "doc_id": "cms_partd_dmp_guidance_2019",
+            "pages": [
+              34,
+              35,
+              36
+            ],
+            "ranks": {
+              "original": 6,
+              "agent": 3
+            },
+            "scores": {
+              "original": 0.0282,
+              "agent": 0.0273
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s7",
+            "doc_id": "cms_partd_dmp_guidance_2019",
+            "pages": [
+              13
+            ],
+            "ranks": {
+              "original": 2,
+              "agent": 8
+            },
+            "scores": {
+              "original": 0.0312,
+              "agent": 0.025
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s10",
+            "doc_id": "cms_partd_dmp_guidance_2019",
+            "pages": [
+              16,
+              17,
+              18
+            ],
+            "ranks": {
+              "original": 8,
+              "agent": 2
+            },
+            "scores": {
+              "original": 0.0256,
+              "agent": 0.0301
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s3",
+            "doc_id": "cms_partd_dmp_guidance_2019",
+            "pages": [
+              6
+            ],
+            "ranks": {
+              "original": 5,
+              "agent": 5
+            },
+            "scores": {
+              "original": 0.0284,
+              "agent": 0.0265
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s19",
+            "doc_id": "cms_partd_dmp_guidance_2019",
+            "pages": [
+              36,
+              37,
+              38
+            ],
+            "ranks": {
+              "original": 4,
+              "agent": 7
+            },
+            "scores": {
+              "original": 0.0285,
+              "agent": 0.0253
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s0",
+            "doc_id": "cms_partd_dmp_guidance_2019",
+            "pages": [
+              1,
+              2,
+              3
+            ],
+            "ranks": {
+              "original": 3
+            },
+            "scores": {
+              "original": 0.0286
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s11",
+            "doc_id": "cms_partd_dmp_guidance_2019",
+            "pages": [
+              18,
+              19,
+              20
+            ],
+            "ranks": {
+              "agent": 4
+            },
+            "scores": {
+              "agent": 0.0266
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s15",
+            "doc_id": "cms_partd_dmp_guidance_2019",
+            "pages": [
+              27,
+              28,
+              29,
+              30
+            ],
+            "ranks": {
+              "agent": 6
+            },
+            "scores": {
+              "agent": 0.0262
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s17",
+            "doc_id": "cms_partd_dmp_guidance_2019",
+            "pages": [
+              32,
+              33,
+              34
+            ],
+            "ranks": {
+              "original": 7
+            },
+            "scores": {
+              "original": 0.0278
+            }
+          }
+        ]
+      },
+      "t_start": 2.834
+    },
+    {
+      "name": "search_documents",
+      "input": {
+        "program": "Medicare Part D",
+        "query": "DMP every plan sponsor must have drug management program 2026 buprenorphine prescriber pharmacy opioid MAT excluded",
+        "k": 8
+      },
+      "duration_s": 0.228,
+      "is_error": false,
+      "pages": [
+        "cms_partd_dmp_guidance_2019:p1",
+        "cms_partd_dmp_guidance_2019:p13",
+        "cms_partd_dmp_guidance_2019:p16",
+        "cms_partd_dmp_guidance_2019:p17",
+        "cms_partd_dmp_guidance_2019:p18",
+        "cms_partd_dmp_guidance_2019:p2",
+        "cms_partd_dmp_guidance_2019:p23",
+        "cms_partd_dmp_guidance_2019:p24",
+        "cms_partd_dmp_guidance_2019:p25",
+        "cms_partd_dmp_guidance_2019:p26",
+        "cms_partd_dmp_guidance_2019:p27",
+        "cms_partd_dmp_guidance_2019:p28",
+        "cms_partd_dmp_guidance_2019:p29",
+        "cms_partd_dmp_guidance_2019:p3",
+        "cms_partd_dmp_guidance_2019:p30",
+        "cms_partd_dmp_guidance_2019:p32",
+        "cms_partd_dmp_guidance_2019:p33",
+        "cms_partd_dmp_guidance_2019:p34",
+        "cms_partd_dmp_guidance_2019:p35",
+        "cms_partd_dmp_guidance_2019:p36",
+        "cms_partd_dmp_guidance_2019:p37",
+        "cms_partd_dmp_guidance_2019:p38",
+        "cms_partd_dmp_guidance_2019:p6",
+        "cms_partd_dmp_guidance_2019:p7",
+        "cms_partd_dmp_guidance_2019:p8",
+        "cms_partd_dmp_guidance_2019:p9",
+        "cms_partd_opioid_pharmacists_2022:p2"
+      ],
+      "result": "[{\"doc_id\": \"cms_partd_opioid_pharmacists_2022\", \"page\": 2, \"program\": \"Medicare Part D\", \"authority\": \"summary_of_binding_policy\", \"date\": \"2022-12-19\", \"text\": \"Medicare Part D Opioid Policies: Information for Pharmacists > Drug Management Programs (DMPs)\\n[p 2]\\nAll Medicare Part D plans must have a DMP that limits access to opioids and/or benzodiazepines for enrollees considered by the plan to be at risk for prescription drug abuse or misuse. Enrollees are identified by opioid use involving multiple doctors and pharmacies or a recent history of opioid-related overdose, and undergo case management conducted by the plan with the enrollee's prescribers.\\nDMP limitations can include requiring the enrollee to obtain these medications from a specified prescriber and/or pharmacy, or implementing a enrollee-specific POS edit that limits the amount of these medications that will be covered. Before a limitation is implemented, the plan must give written notice to the enrollee, and an opportunity to tell the plan which prescribers or pharmacies they prefer to use or provide additional information that they think is relevant.\\nIf the plan decides to limit coverage under a DMP, the enrollee, their representative, or their prescriber have the right to appeal the plan's decision. Pharmacies are not expected to distribute the standardized CMS pharmacy notice Medicare Prescription Drug Coverage and Your Rights to the enrollee in response to a rejected claim due to a limitation under a DMP. The enrollee or prescriber should contact the plan for information on how to appeal.\", \"pages\": [2], \"section\": \"Medicare Part D Opioid Policies: Information for Pharmacists > Drug Management Programs (DMPs)\"}, {\"doc_id\": \"cms_partd_dmp_guidance_2019\", \"page\": 13, \"program\": \"Medicare Part D\", \"authority\": \"binding\", \"date\": \"2018-11-20\", \"text\": \"Part D Drug Management Program Policy Guidance (CY 2019) > VI. BENEFICIARIES ENROLLING IN A PART D PLAN WHOSE COVERAGE OF CONTROLLED SUBSTANCES WAS LIMITED UNDER THEIR PRIOR PLAN (BUT NOT THROUGH A DMP)\\n[p 13]\\nA. Non-Part D Prescription Drug Benefit Coverage\\nAs discussed later in this guidance, in order for a sponsor to immediately implement a coverage limitation under its DMP for a beneficiary who is newly enrolled, the plan from which the beneficiary most recently disenrolled must have been a Part D plan in which they were determined to be an ARB under that previous plan's DMP and the ARB identification was not terminated before disenrollment.\\nBecause DMPs are new to Part D in 2019, no Part D sponsor could have had a Part D DMP before 2019. This means that a beneficiary with a limitation on their opioid coverage that was implemented before 2019 could not have had such a limitation imposed under a Part D DMP. Thus, beneficiaries with these opioid coverage limitations in a prior plan who switch plans could only be subject to a coverage limitation in the new plan through the required DMP process detailed in this guidance.\\nTo the extent the new Part D plan sponsor is aware or discovers based on reliable information that a beneficiary who meets the OMS criteria was subject to an opioid or benzodiazepine coverage limitation specific to the beneficiary, such as prescriber or pharmacy lock-in or a beneficiary-specific POS edit under a state Medicaid or EGWP plan, that plan sponsor may consider that information in deciding whether to determine that a beneficiary is an ARB under its DMP. In other words, when a new enrollee comes from a non-Part D plan in which the beneficiary was subject to lock-in, the sponsor can consider the prior lock-in if it learns or knows of it based upon reliable information which is legally available to the sponsor in conjunction with the information it gathers from the case management process, the beneficiary, and the sponsor's other relevant internal sources and data.\\nB. Part D Prescription Drug Benefit Coverage: Beneficiary-Specific POS Claim Edits for Opioids Prior to 2019\\nBenefici",
+      "search": {
+        "original_query": "Our old CMS memo says Part D drug management programs are optional and excludes buprenorphine for MAT. The newer sheet says every plan needs a DMP. Can the plan count this patient's Suboxone prescriber and pharmacy—and does that mean their OUD treatment should be blocked?",
+        "agent_query": "DMP every plan sponsor must have drug management program 2026 buprenorphine prescriber pharmacy opioid MAT excluded",
+        "executed": [
+          {
+            "source": "original",
+            "query": "Our old CMS memo says Part D drug management programs are optional and excludes buprenorphine for MAT. The newer sheet says every plan needs a DMP. Can the plan count this patient's Suboxone prescriber and pharmacy—and does that mean their OUD treatment should be blocked?",
+            "program": "Medicare Part D",
+            "k": 8,
+            "seconds": 0.0,
+            "cached": true,
+            "results": 8
+          },
+          {
+            "source": "agent",
+            "query": "DMP every plan sponsor must have drug management program 2026 buprenorphine prescriber pharmacy opioid MAT excluded",
+            "program": "Medicare Part D",
+            "k": 8,
+            "seconds": 0.227,
+            "cached": false,
+            "results": 8
+          }
+        ],
+        "duplicates_merged": 4,
+        "returned": 12,
+        "from_both": 4,
+        "from_original_only": 4,
+        "from_agent_only": 4,
+        "provenance": [
+          {
+            "unit": "cms_partd_opioid_pharmacists_2022:s2",
+            "found_by": {
+              "original": 1,
+              "agent": 1
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s7",
+            "found_by": {
+              "original": 2,
+              "agent": 7
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s18",
+            "found_by": {
+              "original": 6,
+              "agent": 4
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s3",
+            "found_by": {
+              "original": 5,
+              "agent": 5
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s15",
+            "found_by": {
+              "agent": 2
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s0",
+            "found_by": {
+              "original": 3
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s13",
+            "found_by": {
+              "agent": 3
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s19",
+            "found_by": {
+              "original": 4
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s14",
+            "found_by": {
+              "agent": 6
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s17",
+            "found_by": {
+              "original": 7
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s10",
+            "found_by": {
+              "original": 8
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s4",
+            "found_by": {
+              "agent": 8
+            }
+          }
+        ],
+        "hits": [
+          {
+            "unit": "cms_partd_opioid_pharmacists_2022:s2",
+            "doc_id": "cms_partd_opioid_pharmacists_2022",
+            "pages": [
+              2
+            ],
+            "ranks": {
+              "original": 1,
+              "agent": 1
+            },
+            "scores": {
+              "original": 0.0318,
+              "agent": 0.0323
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s7",
+            "doc_id": "cms_partd_dmp_guidance_2019",
+            "pages": [
+              13
+            ],
+            "ranks": {
+              "original": 2,
+              "agent": 7
+            },
+            "scores": {
+              "original": 0.0312,
+              "agent": 0.026
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s18",
+            "doc_id": "cms_partd_dmp_guidance_2019",
+            "pages": [
+              34,
+              35,
+              36
+            ],
+            "ranks": {
+              "original": 6,
+              "agent": 4
+            },
+            "scores": {
+              "original": 0.0282,
+              "agent": 0.0269
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s3",
+            "doc_id": "cms_partd_dmp_guidance_2019",
+            "pages": [
+              6
+            ],
+            "ranks": {
+              "original": 5,
+              "agent": 5
+            },
+            "scores": {
+              "original": 0.0284,
+              "agent": 0.0264
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s15",
+            "doc_id": "cms_partd_dmp_guidance_2019",
+            "pages": [
+              27,
+              28,
+              29,
+              30
+            ],
+            "ranks": {
+              "agent": 2
+            },
+            "scores": {
+              "agent": 0.0291
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s0",
+            "doc_id": "cms_partd_dmp_guidance_2019",
+            "pages": [
+              1,
+              2,
+              3
+            ],
+            "ranks": {
+              "original": 3
+            },
+            "scores": {
+              "original": 0.0286
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s13",
+            "doc_id": "cms_partd_dmp_guidance_2019",
+            "pages": [
+              23,
+              24,
+              25
+            ],
+            "ranks": {
+              "agent": 3
+            },
+            "scores": {
+              "agent": 0.0274
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s19",
+            "doc_id": "cms_partd_dmp_guidance_2019",
+            "pages": [
+              36,
+              37,
+              38
+            ],
+            "ranks": {
+              "original": 4
+            },
+            "scores": {
+              "original": 0.0285
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s14",
+            "doc_id": "cms_partd_dmp_guidance_2019",
+            "pages": [
+              25,
+              26,
+              27
+            ],
+            "ranks": {
+              "agent": 6
+            },
+            "scores": {
+              "agent": 0.026
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s17",
+            "doc_id": "cms_partd_dmp_guidance_2019",
+            "pages": [
+              32,
+              33,
+              34
+            ],
+            "ranks": {
+              "original": 7
+            },
+            "scores": {
+              "original": 0.0278
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s10",
+            "doc_id": "cms_partd_dmp_guidance_2019",
+            "pages": [
+              16,
+              17,
+              18
+            ],
+            "ranks": {
+              "original": 8
+            },
+            "scores": {
+              "original": 0.0256
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s4",
+            "doc_id": "cms_partd_dmp_guidance_2019",
+            "pages": [
+              7,
+              8,
+              9
+            ],
+            "ranks": {
+              "agent": 8
+            },
+            "scores": {
+              "agent": 0.0255
+            }
+          }
+        ]
+      },
+      "t_start": 3.125
+    }
+  ],
+  "cited_evidence": {
+    "cms_partd_opioid_pharmacists_2022:p2": "cms_partd_opioid_pharmacists_2022 (Medicare Part D, summary_of_binding_policy, 2022-12-19)\nMedicare Part D Opioid Policies: Information for Pharmacists > Drug Management Programs (DMPs)\n[p 2]\nAll Medicare Part D plans must have a DMP that limits access to opioids and/or benzodiazepines for enrollees considered by the plan to be at risk for prescription drug abuse or misuse. Enrollees are identified by opioid use involving multiple doctors and pharmacies or a recent history of opioid-related overdose, and undergo case management conducted by the plan with the enrollee's prescribers.\nDMP limitations can include requiring the enrollee to obtain these medications from a specified prescriber and/or pharmacy, or implementing a enrollee-specific POS edit that limits the amount of these medications that will be covered. Before a limitation is implemented, the plan must give written notice to the enrollee, and an opportunity to tell the plan which prescribers or pharmacies they prefer to use or provide additional information that they think is relevant.\nIf the plan decides to limit coverage under a DMP, the enrollee, their representative, or their prescriber have the right to appeal the plan's decision. Pharmacies are not expected to distribute the standardized CMS pharmacy notice Medicare Prescription Drug Coverage and Your Rights to the enrollee in response to a rejected claim due to a limitation under a DMP. The enrollee or prescriber should contact the plan for information on how to appeal.",
+    "cms_partd_dmp_guidance_2019:p1": "cms_partd_dmp_guidance_2019 (Medicare Part D, binding, 2018-11-20)\nPart D Drug Management Program Policy Guidance (CY 2019) > Subject: Part D Drug Management Program Policy Guidance\n[p 1]\nDEPARTMENT OF HEALTH & HUMAN SERVICES\n7500 Security Boulevard\nBaltimore, Maryland 21244-1850\n_________________________________________________________________\nDate: November 20, 2018\nTo: All Part D sponsors\nFrom: Amy Larrick Chavez-Valdez Director, Medicare Drug Benefit and C&D Data Group\nSection 704 of the Comprehensive Addiction and Recovery Act (CARA) of 2016 included provisions permitting Part D sponsors to establish drug management programs (DMPs) for beneficiaries at-risk for misuse or abuse of frequently abused drugs (FADs). In a final rule (CMS-4182-F) published in the Federal Register on April 16, 2018 (\"final rule\"), CMS established the framework under which Part D sponsors may implement a DMP. This memorandum is intended to provide comprehensive policy guidance for implementation of DMPs. This document incorporates the extensive guidance CMS provided for DMPs in the final rule and provides additional detail.\nAlthough DMPs are voluntary under CARA, given the current national opioid epidemic and based on Part D sponsors' CY 2019 Opioid Template Submissions, we are pleased that most sponsors will implement DMPs in 2019. We also note that the SUPPORT for Patients and Communities Act, enacted on October 24, 2018, requires all Part D sponsors to have a DMP for plan years beginning on or after January 1, 2022.\nUnder DMPs, Part D sponsors are required to communicate in writing with beneficiaries for whom they intend to limit access to FADs. CMS has developed and beneficiary-tested standardized notices for this purpose. Currently, these notices are pending approval at the Office of Management and Budget (OMB). Part D sponsors will be required to use these notices for their DMPs and may not develop their own. In the meantime, sponsors with DMPs in 2019 must implement their programs beginning January 1 and move forward with those aspects of the programs that can be completed without the notices. Once available, sponsors may issue notices and implement coverage limitations. Because CMS understands it may take some time for sponsors to update their systems with the approved notice language, sponsors will have up to 90 days following the release of the standardized notices to fully implement aspects of their programs requiring the notices.\nIn practical terms, these circumstances mean that: 1) CMS will provide sponsors with quarterly Overutilization Monitoring System (OMS) reports of potential at-risk beneficiaries (PARBs); 2) sponsors may identify PARBs by applying the minimum or supplemental OMS criteria on their own; and 3) sponsors will engage in case management. We remind sponsors that the data CMS has previously shared publicly about impact of the Part D overutilization/OMS policy have demonstrated that the significant reduction in opioid overutilization in the program has been due mostly to case management, and to a much lesser extent, because of coverage limitations (e.g., beneficiary-specific POS claim edits). For OMS cases that are not resolved and in which sponsors intend to implement a coverage limitation on access to coverage of FADs to achieve resolution, sponsors may continue to respond to OMS that the cases are \"Initial Review In Progress.\" (See also the OMS technical guidance referenced below). Sponsors must not notify a beneficiary that they intend to implement a coverage limitation until the notices are released by CMS. 1\n[p 2]\nIn addition to the final rule, by the end of today, this implementation guidance and the 2019 OMS technical guidance for DMPs will be available on the CMS Part D Overutilization website at: https://www.cms.gov/Medicare/Prescription-Drugcoverage/PrescriptionDrugCovContra/RxUtilization.html.\nThe updated MAPD Plan Communications User Guide (PCUG), including technical guidance for submitting DMP information to the MARx system, will be released on or about November 30, 2018. Please reference the MAPD Plan Communications User Guide (PCUG) page for the updated Guide: https://www.cms.gov/Research-Statistics-Data-and-Systems/CMS-InformationTechnology/mapdhelpdesk/Plan_Communications_User_Guide.html. A link to the MAPD PCUG page will also be available on the CMS Part D Overutilization website once released.\nEnrollment guidance, including information on the special enrollment period (SEP) limitation, can be found at the following links: Medicare Managed Care Manual -\nhttp://www.cms.gov/Medicare/Eligibility-and-\nEnrollment/MedicareMangCareEligEnrol/index.html and Medicare Prescription Drug Benefit Manual - https://www.cms.gov/Medicare/Eligibility-and-\nEnrollment/MedicarePresDrugEligEnrol/index.html. Guidance concerning appeals of at-risk determinations will be provided in the Parts C & D Enrollee Grievances, Organization/Coverage Determinations, and Appeals Guidance.\nWe appreciate the diligent efforts of Part D sponsors to implement drug management programs in 2019. Questions about DMPs may be submitted to PartD_OM@cms.hhs.gov.\n1 Additionally, sponsors will not submit information concerning coverage limitations to the Medicare Advantage Prescription Drug (MARx) system until notification occurs, and therefore there can be no limitations on the use of the special enrollment period (SEP) for dually- or other low income subsidy (LIS)-eligible beneficiaries pursuant to DMPs until the notices become available.\n[p 3]\nPART D DRUG MANAGEMENT PROGRAMS\nNovember 20, 2018",
+    "cms_partd_dmp_guidance_2019:p6": "cms_partd_dmp_guidance_2019 (Medicare Part D, binding, 2018-11-20)\nPart D Drug Management Program Policy Guidance (CY 2019) > III. FREQUENTLY ABUSED DRUGS (FADs) (42 CFR §423.100)\n[p 6]\nII. POTENTIAL AT-RISK BENEFICIARIES (PARBs) AND AT-RISK BENEFICIARIES (ARBs) (42 CFR §423.100)\nA PARB is a beneficiary who meets the OMS criteria, or who was identified as a PARB by the sponsor of the beneficiary's immediately prior Part D plan under its DMP and such identification had not been terminated before disenrollment. (See below section, \"Overutilization Monitoring System (OMS) Criteria (Clinical Guidelines) / Estimated Program Size\").\nFor purposes of this guidance, a PARB 1 refers to a beneficiary who meets the OMS criteria and is identified by CMS or a sponsor. A PARB 2 refers to a beneficiary about whom a new plan sponsor receives notice upon the beneficiary's enrollment through the MARx system that the beneficiary was identified as potentially at-risk by the immediately prior plan sponsor under its DMP, but a coverage limitation on FADs had not yet been implemented by the prior plan before the beneficiary disenrolled. (See below section, \"Limitations on Access to Coverage for FADs.\")\nAn ARB is a beneficiary who meets the OMS criteria, is not exempted from DMPs, and is identified to be at-risk by their Part D plan sponsor under its DMP, or who was identified as an ARB by the sponsor of the beneficiary's immediately prior Part D plan under its DMP and such identification had not been terminated before disenrollment.\nFor purposes of this guidance, an ARB 1 refers to a beneficiary who was identified as at-risk under their Part D plan's DMP. An ARB 2 refers to a beneficiary about whom a new plan sponsor receives notice upon the beneficiary's enrollment through MARx that the beneficiary was identified as at-risk by the immediately prior plan sponsor under its DMP and a coverage limitation(s) on FADs had been implemented by the prior plan before the beneficiary disenrolled.\nSponsors receive notifications about PARB 2s and ARB 2s through MARx system. See below section, \"Data Disclosure.\"\nA. Opioids and Benzodiazepines\nOpioids (except buprenorphine for medication-assisted treatment (MAT) and injectables) and benzodiazepines are FADs for purposes of Part D DMPs for plan year 2019. This means that methadone for pain is included in the definition of a FAD for purposes of Part D DMPs. Please note that CMS uses prescriptions opioids, including all formulations of buprenorphine for pain and MAT, to determine opioid prescribers and opioid dispensing pharmacies in the OMS criteria. (See below section, \"Overutilization Monitoring System (OMS) Criteria (Clinical Guidelines) / Estimated Program Size\"). Please also consult final Medicare Parts C&D Call Letters for any changes in the drugs that CMS determines to be FADs for purposes of Part D DMPs for plan years 2020 and beyond.)\nB. Additional Information about Benzodiazepines\nIt is also important to note that the 2019 OMS criteria only consider opioid use, and not benzodiazepines, for purposes of identifying PARBs. However, CMS will continue to flag PARBs through OMS who have concurrent opioid and benzodiazepine use to assist sponsors in determining whether such use is an issue, and if so, addressing such use through their DMPs. This means that a beneficiary who is determined to be at-risk based on OMS criteria that look at the beneficiary's opioid use could have a coverage limitation applied under a DMP to both opioids and benzodiazepines to manage current and future concurrent use. For example, a sponsor could require an ARB to obtain both opioids and benzodiazepines from one selected pharmacy. (See next sections, \"Overutilization Monitoring System (Oms) Criteria (Clinical Guidelines) / Estimated Program Size\" and \"Requirements for Implementing Limitations on an ARB's Access to Coverage for FADs\").",
+    "cms_partd_dmp_guidance_2019:p9": "cms_partd_dmp_guidance_2019 (Medicare Part D, binding, 2018-11-20)\nPart D Drug Management Program Policy Guidance (CY 2019) > IV. OVERUTILIZATION MONITORING SYSTEM (OMS) CRITERIA (CLINICAL GUIDELINES) / ESTIMATED PROGRAM SIZE (42 CFR §§423.100 and 423.153(f)(16))\n[p 7]\nIt is possible for a sponsor to apply a limitation only on an ARB's access to coverage for benzodiazepines. CMS expects to see this happen rarely in practice, however, because the ARB would have to have met the OMS criteria, which look at opioid use that is potentially risky. Nevertheless, we acknowledge that prescriber agreement during case management could lead to such an outcome on occasion. For example, if no opioid prescriber agrees to a beneficiaryspecific POS claim edit for opioids, but all but one state they will no longer prescribe opioids to the beneficiary, then a limit on coverage of opioids may not be necessary. However, the benzodiazepine prescriber agrees to such an edit for benzodiazepines.\nIf a sponsor implements a coverage limitation for both opioids and benzodiazepines, the sponsor may have to permit the ARB to obtain FADs from more than one pharmacy and/or more than one prescriber in order to provide reasonable access. (See section further below, \"Reasonable Access Considerations.\")\nOMS refers to the system that reports PARBs to sponsors and which sponsors use to provide updates on each case to CMS. CMS uses the term \"OMS criteria\" instead of the statutory term \"clinical guidelines\" for purposes of describing the standards used to identify individuals to be included in DMPs. We will develop future OMS criteria through the annual Medicare Parts C&D Call Letter process which allows for stakeholder input by applying the standards in 42 CFR 423.153(f)(16). Therefore, please consult proposed and final Call letters for any changes in the OMS criteria and program size for plan years 2020 and beyond. Please also refer to the Section \"Data Disclosure\" below for information about OMS reports.\nA. OMS Criteria are not Dosing Limits\nThe OMS criteria identify the Part D beneficiaries whom CMS believes are at the highest risk of adverse events or overdose due to their level of opioid use and/or obtaining them from multiple prescribers/pharmacies. The OMS criteria are not to be used as a maximum threshold for prescribing opioids or meant to imply that a lower dosage is universally safe. Rather, in the absence of dosing limits in the FDA-approved labeling for opioids, we are using the Centers for Disease Control and Prevention (CDC) Guideline for Prescribing Opioids for Chronic Pain 2 to establish a threshold to identify PARBs who may benefit from better care coordination / closer monitoring and to create alignment between Government programs. Under DMPs, decisions about the amount of FADs an ARB should receive are made by the beneficiary's prescriber(s), and only in limited cases may the amount be set by the Part D sponsor through a beneficiary point-of-sale claim edit when no prescriber is responsive to the DMP's efforts to make clinical contact during case management. (See below sections, \"Case Management / Clinical Contact / Prescriber Verification\" and \"Requirements for Implementing Limitations on an ARB's Access to Coverage for FADs.\")\n[p 8]\nB. Minimum and Supplemental OMS Criteria\nThe OMS criteria and estimated program size for plan year 2019 are in Table 1. Part D sponsors may not vary the OMS criteria.\n2 See https://www.cdc.gov/drugoverdose/prescribing/guideline.html.\n[p 9]\nTABLE 1: 2019 CLINICAL GUIDELINES / OMS CRITERIA* FOR IDENTIFYING PARBs\n[Table] (PDF page 9)\nColumns: Minimum Criteria Applied (Sponsors with Drug Management Programs Must Review) | Impact to Part D Program\nUse of opioids with average daily MME > 90 mg for any duration during the most recent 6 months and either: 3+ opioid prescribers AND 3+ opioid dispensing pharmacies OR 5+ opioid prescribers (regardless of the number of opioid dispensing pharmacies) Prescribers associated with the same single Tax Identification Numbers (TIN) are counted as a single prescriber. Pharmacies with multiple locations that share real-time data are counted as one pharmacy. | 44,332 beneficiaries in 2017 (69.9% were LIS) Represents 0.10% of 45,218,211 Part D beneficiaries in 2017 LTC beneficiaries included in estimate but are exempt. Estimate does not include pharmacies grouped as one pharmacy; CMS does not have system capability.\nSupplemental Criteria Applied (Sponsors with Drug Management Programs May Review as Many as Manageable) | Impact to Part D Program\nUse of opioids (regardless of average daily MME) during the most recent 6 months and: 7+ opioid prescribers OR 7+ opioid dispensing pharmacies Prescribers associated with the same single Tax Identification Numbers (TIN) are counted as a single prescriber. Pharmacies with multiple locations that share real-time data are counted as one pharmacy. | 22,841** beneficiaries in 2017 (77.8% were LIS) Represents 0.05% of 45,218,211 Part D beneficiaries in 2017 LTC beneficiaries included in estimate but are exempt. Estimate does not include pharmacies grouped as one pharmacy; CMS does not have system capability.\nTable note: * Benzodiazepines are a FAD for purposes of Part D DMPs but are not a factor in these clinical guidelines/OMS criteria. Buprenorphine products are not used to determine the beneficiary's average daily MME. However, prescription opioids including all formulations of buprenorphine for pain and MAT, are used to determine opioid prescribers and opioid dispensing pharmacies under the minimum criteria. Similarly, sponsors must include all prescription opioids, including all buprenorphine products, to determine opioid prescribers and opioid dispensing pharmacies under the supplemental criteria.\nTable note: ** Note: A total of 25,480 beneficiaries met the supplemental criteria alone. The estimate is 22,841 beneficiaries after removing duplicate beneficiaries already identified by the minimum criteria.\n* Benz",
+    "cms_partd_dmp_guidance_2019:p17": "cms_partd_dmp_guidance_2019 (Medicare Part D, binding, 2018-11-20)\nPart D Drug Management Program Policy Guidance (CY 2019) > VIII. REQUIRED FRAMEWORK OF DRUG MANAGEMENT PROGRAMS (§423.153(a) & (f))\n[p 16]\nWhile not required, to the extent possible, CMS encourages Part D sponsors to incorporate the following into case management, and in the case of MA-PD plans, through network provider agreements:\nEducation of prescribers about the opioid overutilization crisis, the CDC Guideline for Prescribing Opioids for Chronic Pain, and the role their DMPs play in reducing overutilization of FADs in the Part D program. We expect this additional information to enhance the requirements of case management and requirements that must be met to implement limitations on ARBs' access to FADs.\nEncouragement of prescribers to perform, or refer their patient for, a comprehensive substance abuse disorder screening and/or assessment, and if indicated, refer their patient for follow-up treatment with a pain specialist or addiction treatment provider.\nUse of all reliable sources legally available to them, such as prescription drug monitoring programs (PDMPs), to which they may have access under applicable state law, to obtain an accurate account of a PARB's or ARB's utilization of FADs.\nPrescribers who do not Respond to Case Management. In cases where prescribers have not responded to case management, the sponsor must make reasonable attempts to communicate with the prescribers telephonically and/or by another effective communication method designed to elicit a response from the prescribers within a reasonable period after sending the written information. The idea is that the sponsor will escalate the steps they take to engage in clinical contact with the prescribers, given that the OMS criteria identify beneficiaries who are potentially at-risk for serious adverse health events, including death, due to their opioid use and apparent lack of coordinated care.\nIn doing so, a sponsor should balance on a case-by-case basis the competing priorities of diligently addressing opioid overutilization through the required case management, which may necessitate multiple outreach attempts to prescribers, while being cognizant of the need to be judicious in contacting prescribers telephonically in order to not unnecessarily disrupt their practices. We suggest that sponsors make 3 outreach attempts to contact prescribers over 10 business days during case management, because documentation of 3 or more attempts is sufficient for the sponsor to demonstrate that a prescriber is not responsive in cases when the sponsor wants to implement a coverage limitation on a beneficiary's access to FADs under their DMPs. (See section, \"Requirements for Implementing Limitations on an ARB's Access to Coverage for FADs\").\n[p 17]\nException to case management. If a beneficiary was identified as a PARB 2 or ARB 2 by his or her most recent prior plan, MARx will report such beneficiaries to their new plan sponsors, if such identification was not terminated before the beneficiary disenrolled from the previous plan. To distinguish between the two, the sponsor must contact the sponsor of the Part D plan in which the beneficiary was most recently enrolled. Plans should refer to the applicable Overutilization Contact listed in HPMS and posted on the CMS Part D Overutilization website. See Attachment B for a sample memo that a former sponsor may use to provide such information to a new sponsor, when the new sponsor requests it.\nThe sponsor does not have to engage in case management for PARB 2s and ARB 2s, so long as the sponsor obtains case management information from the previous sponsor and such information is still clinically adequate and up to date. The purpose of this exception is to avoid unnecessary burden on Part D sponsors and health care providers when additional case management outreach is not necessary, because it has already been performed by a prior Part D sponsor under a DMP. See also the Section, \"Data Disclosure.\"\nC. Limitations on Access to Coverage for FADs (42 CFR §423.100(f)(3))\nIf the requirements to do so are met, a Part D plan sponsor may limit an ARB's access to coverage for FADs under a DMP in the following ways:\nBeneficiary-Specific POS Claim Edit: Implement a point-of-sale claim edit for FADs that is specific to an ARB. This means that the sponsor must not cover FADs for the ARB in excess of the edit, unless the edit is terminated or revised based on a subsequent determination, including a successful appeal. A sponsor should not implement an edit at a dosage that is lower than the highest dosage a prescriber asserts is medically necessary.\no Example: The sponsor will cover only certain Part D prescription opioid medications or benzodiazepines for the ARB.\no Example: The sponsor will not cover any prescription opioid medications or benzodiazepines for the ARB..\no Example: The sponsor will cover up to a certain level (e.g., MME, quantity) of prescription opioid medications for the ARB.\nPrescriber Limitation: Limit an ARB's access to coverage for FADs to those that are prescribed for the beneficiary by one or more selected prescribers. This means that the sponsor covers FADs for the ARB only when they are obtained from the selected prescriber(s).\nPharmacy Limitation: Limit an ARB's access to coverage for FADs to those that are dispensed for the beneficiary by one or more selected network pharmacies. This means that\n[p 18]\nthe sponsor covers FADs for the ARB only when they are obtained from the selected pharmacy(ies).\n(See next section \"Requirements for Implementing Limitations on an ARB's Access to Coverage for FADs\").\nIn applying a prescriber and/or pharmacy limitation, the sponsor must also comply with the requirements regarding beneficiary preferences and to provide an ARB with reasonable access to coverage for FADs. (Please refer to the \"Beneficiary Preferences\" and \"Reasonable Access Considerations\" sections later in this guidan",
+    "cms_partd_dmp_guidance_2019:p23": "cms_partd_dmp_guidance_2019 (Medicare Part D, binding, 2018-11-20)\nPart D Drug Management Program Policy Guidance (CY 2019) > VIII. REQUIRED FRAMEWORK OF DRUG MANAGEMENT PROGRAMS (§423.153(a) & (f))\n[p 23]\nNotices: Timing and Exceptions (42 CFR § 423.153(f)(8))\nUpon making the determination that the beneficiary is at-risk for abuse or misuse of FADs or not, a Part D sponsor must provide the beneficiary a Second Notice or the Alternate Second Notice, as applicable, no sooner than 30 days from the date of the Initial Notice, and no later than 60 days from the date of the Initial Notice.\nException: A gaining plan sponsor may forgo providing the Initial Notice and may immediately provide a Second Notice to an ARB 2, if the sponsor is implementing either of the following coverage limitations:\nA beneficiary-specific POS claim edit, if the edit is the same as the one that was implemented in the losing sponsor.\nA pharmacy or prescriber limitation, if such limitation would require the ARB 2 to obtain FADs from the same location of pharmacy and/or the same prescriber, as applicable, that served as the selected pharmacy/prescriber under the losing sponsor.\nWe note that if an ARB changes plans within a contract, CMS does not consider the beneficiary's status in a DMP to have changed and thus the beneficiary will not be reported by MARx. However, if the new plan does not have the previously selected pharmacy or prescriber in its network, the sponsor must request the beneficiary to provide their preference for a selected pharmacy or prescriber, as applicable. If an ARB changes contracts - even if both are held by the same legal entity or parent organization - CMS does consider the beneficiary to be an ARB 2 and the beneficiary will be reported by MARx.\nSpecific instructions for sponsors to submit information to MARx starting 1/1/2019 will be available in the November 2018 MAPD PCUG, scheduled for publication on or around November 30, 2018 and described in the HPMS: Announcement of the Fall 2018 Software Releases, October 4, 2018. A link to the PCUG will be available at the CMS Part D overutilization website at: https://www.cms.gov/Medicare/Prescription-Drugcoverage/PrescriptionDrugCovContra/RxUtilization.html once released.\n[p 24]\nG. Overview of Selection Process for Prescribers and Pharmacies\nThis section summarizes multiple subsections below about the prescriber and pharmacy selection process that a Part D sponsor must follow for cases involving prescriber and/or pharmacy coverage limitations. In such cases, the pharmacy(ies) and prescriber(s) from which an ARB must obtain FADs are called \"selected pharmacy(ies)\" and \"selected prescriber(s).\" Sponsors are required to include a selected pharmacy and/or prescriber, as applicable, that ensures the beneficiary has reasonable access to FADs in the Initial Notice to the beneficiary and solicit the beneficiary's preference(s) (after notification and confirmation with the prescriber/pharmacy about the selection).\nIt is important to note, however, that the selections a Part D sponsor ultimately makes and includes in the Second Notice or later are based on the beneficiary's preferences, unless:\nthe beneficiary does not submit preferences;\nthe beneficiary's preferences do not comply with the \"network policy\" described in a subsection below; or\nthe sponsor takes exception to the beneficiary's preferences, as also described in a later subsection.\n1. Beneficiary Preferences (42 CFR § 423.153(f)(9))\nIf an ARB submits preferences for a selected pharmacy(ies) or prescriber(s) or both, the sponsor must review the preferences and must generally select or change the selection based on the ARB's preferences. However, there are some parameters, caveats, and exceptions, discussed in this subsection and later in this section. The sponsor must do the following:\nIf the beneficiary is enrolled in a stand-alone prescription drug benefit plan and specifies a prescriber(s) or network pharmacy(ies) or both, the sponsor must select or change the selection of the prescriber(s) or network pharmacy(ies) or both for the beneficiary based on beneficiary's preference(s).\nIf the beneficiary is enrolled in an MA-PD plan and specifies a network prescriber(s) or network pharmacy(ies) or both, the sponsor must select or change the selection of prescriber(s) or pharmacy(ies) or both for the beneficiary based on the beneficiary's preference(s).\nThis means that the selected pharmacy or prescriber must be a network pharmacy or network prescriber, unless the ARB is in a stand-alone prescription drug benefit plan (PDP) or in an MAPD plan that is not network-based. In such a case, the prescriber would not be a network prescriber, because such plans do not have prescriber networks. The reason for this \"network policy\" is that the selection of network prescribers and pharmacies puts the sponsor in the best possible position to coordinate the beneficiary's care going forward in light of the demonstrated concerns with the beneficiary's utilization of FADs.\nA few caveats to this guidance are that a sponsor may have to permit an ARB in a network-based MA-PD plan to obtain FADs from a non-network prescriber, if needed to provide the ARB with reasonable access, as discussed in a subsection below. The same is true regarding a non-network pharmacy for an ARB in an MA-PD or stand-alone PDP. Finally, a sponsor can take exception to a beneficiary's preference for a selected pharmacy and/or prescriber, as detailed in a later subsection.\n[p 25]\nThe sponsor must inform the beneficiary of the selection or change in -\nThe Second Notice; or\nIf the Second Notice is not feasible due to the timing of the beneficiary's submission of preference, then in a subsequent written notice, issued no later than 14 days after receipt of the submission.\n(See earlier section, \"Second Notice.\")",
+    "cms_partd_dmp_guidance_2019:p24": "cms_partd_dmp_guidance_2019 (Medicare Part D, binding, 2018-11-20)\nPart D Drug Management Program Policy Guidance (CY 2019) > VIII. REQUIRED FRAMEWORK OF DRUG MANAGEMENT PROGRAMS (§423.153(a) & (f))\n[p 23]\nNotices: Timing and Exceptions (42 CFR § 423.153(f)(8))\nUpon making the determination that the beneficiary is at-risk for abuse or misuse of FADs or not, a Part D sponsor must provide the beneficiary a Second Notice or the Alternate Second Notice, as applicable, no sooner than 30 days from the date of the Initial Notice, and no later than 60 days from the date of the Initial Notice.\nException: A gaining plan sponsor may forgo providing the Initial Notice and may immediately provide a Second Notice to an ARB 2, if the sponsor is implementing either of the following coverage limitations:\nA beneficiary-specific POS claim edit, if the edit is the same as the one that was implemented in the losing sponsor.\nA pharmacy or prescriber limitation, if such limitation would require the ARB 2 to obtain FADs from the same location of pharmacy and/or the same prescriber, as applicable, that served as the selected pharmacy/prescriber under the losing sponsor.\nWe note that if an ARB changes plans within a contract, CMS does not consider the beneficiary's status in a DMP to have changed and thus the beneficiary will not be reported by MARx. However, if the new plan does not have the previously selected pharmacy or prescriber in its network, the sponsor must request the beneficiary to provide their preference for a selected pharmacy or prescriber, as applicable. If an ARB changes contracts - even if both are held by the same legal entity or parent organization - CMS does consider the beneficiary to be an ARB 2 and the beneficiary will be reported by MARx.\nSpecific instructions for sponsors to submit information to MARx starting 1/1/2019 will be available in the November 2018 MAPD PCUG, scheduled for publication on or around November 30, 2018 and described in the HPMS: Announcement of the Fall 2018 Software Releases, October 4, 2018. A link to the PCUG will be available at the CMS Part D overutilization website at: https://www.cms.gov/Medicare/Prescription-Drugcoverage/PrescriptionDrugCovContra/RxUtilization.html once released.\n[p 24]\nG. Overview of Selection Process for Prescribers and Pharmacies\nThis section summarizes multiple subsections below about the prescriber and pharmacy selection process that a Part D sponsor must follow for cases involving prescriber and/or pharmacy coverage limitations. In such cases, the pharmacy(ies) and prescriber(s) from which an ARB must obtain FADs are called \"selected pharmacy(ies)\" and \"selected prescriber(s).\" Sponsors are required to include a selected pharmacy and/or prescriber, as applicable, that ensures the beneficiary has reasonable access to FADs in the Initial Notice to the beneficiary and solicit the beneficiary's preference(s) (after notification and confirmation with the prescriber/pharmacy about the selection).\nIt is important to note, however, that the selections a Part D sponsor ultimately makes and includes in the Second Notice or later are based on the beneficiary's preferences, unless:\nthe beneficiary does not submit preferences;\nthe beneficiary's preferences do not comply with the \"network policy\" described in a subsection below; or\nthe sponsor takes exception to the beneficiary's preferences, as also described in a later subsection.\n1. Beneficiary Preferences (42 CFR § 423.153(f)(9))\nIf an ARB submits preferences for a selected pharmacy(ies) or prescriber(s) or both, the sponsor must review the preferences and must generally select or change the selection based on the ARB's preferences. However, there are some parameters, caveats, and exceptions, discussed in this subsection and later in this section. The sponsor must do the following:\nIf the beneficiary is enrolled in a stand-alone prescription drug benefit plan and specifies a prescriber(s) or network pharmacy(ies) or both, the sponsor must select or change the selection of the prescriber(s) or network pharmacy(ies) or both for the beneficiary based on beneficiary's preference(s).\nIf the beneficiary is enrolled in an MA-PD plan and specifies a network prescriber(s) or network pharmacy(ies) or both, the sponsor must select or change the selection of prescriber(s) or pharmacy(ies) or both for the beneficiary based on the beneficiary's preference(s).\nThis means that the selected pharmacy or prescriber must be a network pharmacy or network prescriber, unless the ARB is in a stand-alone prescription drug benefit plan (PDP) or in an MAPD plan that is not network-based. In such a case, the prescriber would not be a network prescriber, because such plans do not have prescriber networks. The reason for this \"network policy\" is that the selection of network prescribers and pharmacies puts the sponsor in the best possible position to coordinate the beneficiary's care going forward in light of the demonstrated concerns with the beneficiary's utilization of FADs.\nA few caveats to this guidance are that a sponsor may have to permit an ARB in a network-based MA-PD plan to obtain FADs from a non-network prescriber, if needed to provide the ARB with reasonable access, as discussed in a subsection below. The same is true regarding a non-network pharmacy for an ARB in an MA-PD or stand-alone PDP. Finally, a sponsor can take exception to a beneficiary's preference for a selected pharmacy and/or prescriber, as detailed in a later subsection.\n[p 25]\nThe sponsor must inform the beneficiary of the selection or change in -\nThe Second Notice; or\nIf the Second Notice is not feasible due to the timing of the beneficiary's submission of preference, then in a subsequent written notice, issued no later than 14 days after receipt of the submission.\n(See earlier section, \"Second Notice.\")",
+    "cms_partd_dmp_guidance_2019:p25": "cms_partd_dmp_guidance_2019 (Medicare Part D, binding, 2018-11-20)\nPart D Drug Management Program Policy Guidance (CY 2019) > VIII. REQUIRED FRAMEWORK OF DRUG MANAGEMENT PROGRAMS (§423.153(a) & (f))\n[p 23]\nNotices: Timing and Exceptions (42 CFR § 423.153(f)(8))\nUpon making the determination that the beneficiary is at-risk for abuse or misuse of FADs or not, a Part D sponsor must provide the beneficiary a Second Notice or the Alternate Second Notice, as applicable, no sooner than 30 days from the date of the Initial Notice, and no later than 60 days from the date of the Initial Notice.\nException: A gaining plan sponsor may forgo providing the Initial Notice and may immediately provide a Second Notice to an ARB 2, if the sponsor is implementing either of the following coverage limitations:\nA beneficiary-specific POS claim edit, if the edit is the same as the one that was implemented in the losing sponsor.\nA pharmacy or prescriber limitation, if such limitation would require the ARB 2 to obtain FADs from the same location of pharmacy and/or the same prescriber, as applicable, that served as the selected pharmacy/prescriber under the losing sponsor.\nWe note that if an ARB changes plans within a contract, CMS does not consider the beneficiary's status in a DMP to have changed and thus the beneficiary will not be reported by MARx. However, if the new plan does not have the previously selected pharmacy or prescriber in its network, the sponsor must request the beneficiary to provide their preference for a selected pharmacy or prescriber, as applicable. If an ARB changes contracts - even if both are held by the same legal entity or parent organization - CMS does consider the beneficiary to be an ARB 2 and the beneficiary will be reported by MARx.\nSpecific instructions for sponsors to submit information to MARx starting 1/1/2019 will be available in the November 2018 MAPD PCUG, scheduled for publication on or around November 30, 2018 and described in the HPMS: Announcement of the Fall 2018 Software Releases, October 4, 2018. A link to the PCUG will be available at the CMS Part D overutilization website at: https://www.cms.gov/Medicare/Prescription-Drugcoverage/PrescriptionDrugCovContra/RxUtilization.html once released.\n[p 24]\nG. Overview of Selection Process for Prescribers and Pharmacies\nThis section summarizes multiple subsections below about the prescriber and pharmacy selection process that a Part D sponsor must follow for cases involving prescriber and/or pharmacy coverage limitations. In such cases, the pharmacy(ies) and prescriber(s) from which an ARB must obtain FADs are called \"selected pharmacy(ies)\" and \"selected prescriber(s).\" Sponsors are required to include a selected pharmacy and/or prescriber, as applicable, that ensures the beneficiary has reasonable access to FADs in the Initial Notice to the beneficiary and solicit the beneficiary's preference(s) (after notification and confirmation with the prescriber/pharmacy about the selection).\nIt is important to note, however, that the selections a Part D sponsor ultimately makes and includes in the Second Notice or later are based on the beneficiary's preferences, unless:\nthe beneficiary does not submit preferences;\nthe beneficiary's preferences do not comply with the \"network policy\" described in a subsection below; or\nthe sponsor takes exception to the beneficiary's preferences, as also described in a later subsection.\n1. Beneficiary Preferences (42 CFR § 423.153(f)(9))\nIf an ARB submits preferences for a selected pharmacy(ies) or prescriber(s) or both, the sponsor must review the preferences and must generally select or change the selection based on the ARB's preferences. However, there are some parameters, caveats, and exceptions, discussed in this subsection and later in this section. The sponsor must do the following:\nIf the beneficiary is enrolled in a stand-alone prescription drug benefit plan and specifies a prescriber(s) or network pharmacy(ies) or both, the sponsor must select or change the selection of the prescriber(s) or network pharmacy(ies) or both for the beneficiary based on beneficiary's preference(s).\nIf the beneficiary is enrolled in an MA-PD plan and specifies a network prescriber(s) or network pharmacy(ies) or both, the sponsor must select or change the selection of prescriber(s) or pharmacy(ies) or both for the beneficiary based on the beneficiary's preference(s).\nThis means that the selected pharmacy or prescriber must be a network pharmacy or network prescriber, unless the ARB is in a stand-alone prescription drug benefit plan (PDP) or in an MAPD plan that is not network-based. In such a case, the prescriber would not be a network prescriber, because such plans do not have prescriber networks. The reason for this \"network policy\" is that the selection of network prescribers and pharmacies puts the sponsor in the best possible position to coordinate the beneficiary's care going forward in light of the demonstrated concerns with the beneficiary's utilization of FADs.\nA few caveats to this guidance are that a sponsor may have to permit an ARB in a network-based MA-PD plan to obtain FADs from a non-network prescriber, if needed to provide the ARB with reasonable access, as discussed in a subsection below. The same is true regarding a non-network pharmacy for an ARB in an MA-PD or stand-alone PDP. Finally, a sponsor can take exception to a beneficiary's preference for a selected pharmacy and/or prescriber, as detailed in a later subsection.\n[p 25]\nThe sponsor must inform the beneficiary of the selection or change in -\nThe Second Notice; or\nIf the Second Notice is not feasible due to the timing of the beneficiary's submission of preference, then in a subsequent written notice, issued no later than 14 days after receipt of the submission.\n(See earlier section, \"Second Notice.\")\n\ncms_partd_dmp_guidance_2019 (Medicare Part D, binding, 2018-11-20)\nPart D Drug Management Program Policy Guidance (CY 2019) > VIII. REQUIRED ",
+    "cms_partd_dmp_guidance_2019:p26": "cms_partd_dmp_guidance_2019 (Medicare Part D, binding, 2018-11-20)\nPart D Drug Management Program Policy Guidance (CY 2019) > VIII. REQUIRED FRAMEWORK OF DRUG MANAGEMENT PROGRAMS (§423.153(a) & (f))\n[p 25]\nThere is no limit on how many times a beneficiary can submit their preferences. A beneficiary may change a prescriber preference because they have developed a new health condition, or change pharmacy preference because they have moved, for example. A change in beneficiary preferences is generally not sufficient reason to extend the original one year time period for the applicable coverage limitation. However, if an ARB changes their preferences so frequently such that there is strong evidence that this behavior is inappropriate and is contributing to prescription drug abuse or diversion, the sponsor may take exception to the beneficiary's preferences and change the selection, as described in the guidance below. The sponsor may also consider this information when the sponsor determines whether there is a clinical basis to extend a coverage limitation at the end of the original one year period.\n2. Reasonable Access Considerations\nWhen making pharmacy and prescriber selections, a Part D plan sponsor must ensure that the beneficiary continues to have reasonable access to FADs, taking into account all relevant factors, including but not limited to-\nThe beneficiary's preference(s);\nThe beneficiary's predominant usage of a prescriber or pharmacy or both for FADs;\nGeographic location;\nReasonable travel time;\nWhether the beneficiary has multiple residences;\nThe beneficiary's health conditions;\nThe impact on cost-sharing;\nNatural disasters and similar situations; and\nThe provision of emergency services.\nAs discussed earlier, a beneficiary's preferences for selected prescriber and pharmacy prevail over the other factors, unless the beneficiary's preferences do not comply with the \"network policy\" described in this section or the sponsor takes exception to the beneficiary's preferences.\n[p 26]\nWhen the beneficiary's preferences are not available, in weighing these factors, CMS expects the sponsor will select the network pharmacy(ies) and/or the network prescriber(s)(or non-network prescriber in the case of a plan without a provider network), that the beneficiary predominantly uses for FADs, if predominant use can be discerned. The sponsor must also take into account whether more than one prescriber or pharmacy is necessary to provide the ARB with reasonable access to FADs due to the ARB's health care or housing situation in accordance with the next section of this guidance. With regard to emergency services, CMS expects sponsors to have reasonable policies in place to ensure the ARB has access to coverage of FADs without a delay that may seriously jeopardize the life and health of the ARB or the ARB's ability to function. If the beneficiary's predominant use of prescriber or pharmacy cannot be ascertained, then the sponsor must weigh the remaining reasonable access factors in the manner the sponsor deems most appropriate for the case.\n3. Actual Selection of Prescribers and Pharmacies (42 CFR § 423.153(f)(12))\nWhen making prescriber and pharmacy selections, whether the beneficiary's preferences are available or not, a Part D sponsor must do the following:\nIn the case of a prescriber limitation, an MA-PD sponsor must select one, or more than one, network prescriber(s) as the selected prescriber(s) who is authorized to prescribe FADs for the ARB, if the sponsor determines it necessary to ensure the ARB has reasonable access to FADs. Also, selection of an out-of-network provider may be necessary to provide the ARB with reasonable access to FADs. A stand-alone PDP must select one, or more than one, selected prescriber who is authorized to prescribe FADs for the ARB if the sponsor determines it necessary to ensure the ARB has reasonable access to FADs. Also, in the case of a group practice, regardless of the type of Part D sponsor, sponsors shall treat all prescribers of the group practice as one prescriber.\nIn the case of a pharmacy limitation, an MA-PD and stand-alone PDP sponsor must select one, or more than one, network pharmacy as the selected pharmacy that may dispense FADs for the ARB, unless selection of an out-of-network pharmacy is necessary to ensure the ARB has reasonable access to FADs. Also, in the case of a pharmacy that has multiple locations that share real-time electronic data, sponsors shall treat such locations of the pharmacy must collectively as one pharmacy.\nWhether the selection of more than one pharmacy or prescriber is necessary for reasonable access depends upon the facts and circumstances of the case. Below are examples as to when selection of more than one prescriber/pharmacy may be necessary:\nIn the case of a pharmacy limitation, if an ARB lives 6 months in one area of the country and 6 months in another, the sponsor would have to select two pharmacies, one in each geographic area, unless there is a location of the same pharmacy in both areas that share real-time electronic data, which would only count as one pharmacy but would suffice for reasonable access. However, if the beneficiary prefers not to use such a pharmacy, and the sponsor does not have a basis on which to take exception to the beneficiary's preference, then the sponsor would have to accept the beneficiary's preference for two selected pharmacies.\n[p 27]\nIf a beneficiary has been obtaining opioids from multiple prescribers and benzodiazepines from one psychiatrist, a sponsor may have to permit an ARB to obtain opioids from the primary care physician and benzodiazepines from the psychiatrist, in order to ensure the ARB has reasonable access to FADs.\nSponsor Exception to Beneficiary Preferences (42 CFR § 423.153(f)(10))\nIf the Part D sponsor determines that the selection or change of a prescriber or pharmacy would contribute to prescription drug abuse or drug diversion by the ARB, the sponsor may change the sele",
+    "cms_partd_dmp_guidance_2019:p27": "cms_partd_dmp_guidance_2019 (Medicare Part D, binding, 2018-11-20)\nPart D Drug Management Program Policy Guidance (CY 2019) > VIII. REQUIRED FRAMEWORK OF DRUG MANAGEMENT PROGRAMS (§423.153(a) & (f))\n[p 27]\nBefore selecting a prescriber or pharmacy, a Part D plan sponsor must notify the prescriber and/or pharmacy, as applicable, that the beneficiary has been identified for inclusion in a DMP and that the prescriber or pharmacy or both is(are) being selected as the beneficiary's selected prescriber or pharmacy or both for FADs. The sponsor must also receive confirmation from the prescriber(s) and/or pharmacy(ies), as applicable, that the selection is accepted before conveying this information to the ARB.\nWe note that nothing in this guidance supersedes a provider or pharmacy's right under state law to refuse treatment to a patient or customer.\ni) Prescribers\nAs described earlier, the sponsor should initially select the prescriber who will serve as the beneficiary's selected prescriber during case management, although the beneficiary may later express a different preference, which then must be taken into account. As also described earlier in the \"Case Management\" section, the sponsor must obtain the prescriber's agreement to the prescriber limitation, i.e., to serve as the selected prescriber. Such agreement also logically constitutes prescriber notification and confirmation; therefore, the sponsor can identify the prescriber in the Initial Notice it provides to the beneficiary. If the beneficiary provides the sponsor with a different selection, then the sponsor would contact the alternate prescriber and obtain their agreement to serve as the beneficiary's selected prescriber, which again also constitutes prescriber notification and confirmation.\n[p 28]\nWhile a prescriber's confirmation to serve as a selected prescriber can be verbal, CMS strongly recommends that sponsors also provide an advance written statement to a prescriber, to the extent possible, which can memorialize prescriber agreement, notice and confirmation. A copy of such statement should be included in the case management file.\nAn MA-PD plan sponsor may address DMPs in their network contracts with providers, including how notifications and confirmations will be executed. However, the contracts may not substitute for case-by-case notifications and confirmations to ensure that the selected prescriber has actively agreed to manage a particular ARB's use of FADs.\nii) Pharmacies\nSimilar to selected prescribers, the sponsor should initially select the pharmacy that will serve as the beneficiary's selected pharmacy during case management, although the beneficiary may later express a different preference, which then must be taken into account. In the case of a pharmacy limitation, the sponsor and network pharmacies should negotiate how to notify a network pharmacy that a beneficiary has been identified for inclusion in a DMP, that the network pharmacy is the beneficiary's selected pharmacy for FADs, and how the pharmacy confirms its selection. For out-of-network pharmacies, or network pharmacies who have not negotiated how to be notified, the sponsor must notify on a case-by case basis, which CMS strongly suggests be done in writing.\nThe sponsor must receive confirmation from a pharmacy that the selection is accepted before conveying this information to the ARB, unless the agreement specifies how the pharmacy will be notified by the sponsor of its selection and the pharmacy has agreed in advance in a network agreement with the sponsor to accept all such selections.\nCMS strongly recommends that sponsors provide advance written notifications, which could be via electronic messaging, to pharmacies for each case, to the extent possible, so that the selected pharmacy is best prepared for each ARB it will serve. In the case of non-network pharmacies, CMS strongly suggests that it receive an advance written confirmation from the pharmacy, to the extent possible, accepting its selection and to include it in the case management file.\nH. Effective and Termination Dates and Extensions of Identification as an ARB (42 CFR § 423.153(f)(14))\n1. Effective Dates\nThe effective date of a coverage limitation implemented under a DMP is the date of the Second Notice.\n2. Termination Dates\nThe identification of an ARB as such must terminate on whichever of the following 2 possible dates is earliest:\n[p 29]\nThe date the beneficiary demonstrates that they are no longer likely to be at risk for abuse or misuse of FADs without the limitation through a subsequent determination, including but not limited to, a successful appeal; or\nThe date that is the end of:\nthe 1 year period calculated from the effective date of the limitation, unless the limitation is extended, or\nthe date that is the end of a 2 year period calculated from the effective date of the limitation, if the limitation was extended.\nRegarding extensions to coverage limitation periods, please see the next section. As we noted earlier, the time periods of overlapping limitations are independent of each other. Also, as noted earlier, if a beneficiary changes sponsors, any coverage limitation period placed on an ARB 2 by the new sponsor is independent of the original limitation period implemented by the prior plan sponsor.\nAdditionally, a beneficiary's identification of an ARB also terminates as soon as a sponsor discovers that the beneficiary is exempted or did not meet the OMS criteria to begin with, as also discussed earlier in this guidance.\nFinally, a plan sponsor is not prevented from identifying a beneficiary as an ARB after the beneficiary's coverage limitation terminates if the beneficiary again meets the OMS criteria.\n3. Extensions\nAs just noted, a Part D sponsor may extend a coverage limitation if certain requirements are met. The sponsor must do the following:\nDetermine at the end of the one year limitation period that there is a clinical basis to extend the limitation\nObtain the agreement of"
+  },
+  "cited_evidence_parts": {
+    "cms_partd_opioid_pharmacists_2022:p2": [
+      "cms_partd_opioid_pharmacists_2022 (Medicare Part D, summary_of_binding_policy, 2022-12-19)\nMedicare Part D Opioid Policies: Information for Pharmacists > Drug Management Programs (DMPs)\n[p 2]\nAll Medicare Part D plans must have a DMP that limits access to opioids and/or benzodiazepines for enrollees considered by the plan to be at risk for prescription drug abuse or misuse. Enrollees are identified by opioid use involving multiple doctors and pharmacies or a recent history of opioid-related overdose, and undergo case management conducted by the plan with the enrollee's prescribers.\nDMP limitations can include requiring the enrollee to obtain these medications from a specified prescriber and/or pharmacy, or implementing a enrollee-specific POS edit that limits the amount of these medications that will be covered. Before a limitation is implemented, the plan must give written notice to the enrollee, and an opportunity to tell the plan which prescribers or pharmacies they prefer to use or provide additional information that they think is relevant.\nIf the plan decides to limit coverage under a DMP, the enrollee, their representative, or their prescriber have the right to appeal the plan's decision. Pharmacies are not expected to distribute the standardized CMS pharmacy notice Medicare Prescription Drug Coverage and Your Rights to the enrollee in response to a rejected claim due to a limitation under a DMP. The enrollee or prescriber should contact the plan for information on how to appeal."
+    ],
+    "cms_partd_dmp_guidance_2019:p1": [
+      "cms_partd_dmp_guidance_2019 (Medicare Part D, binding, 2018-11-20)\nPart D Drug Management Program Policy Guidance (CY 2019) > Subject: Part D Drug Management Program Policy Guidance\n[p 1]\nDEPARTMENT OF HEALTH & HUMAN SERVICES\n7500 Security Boulevard\nBaltimore, Maryland 21244-1850\n_________________________________________________________________\nDate: November 20, 2018\nTo: All Part D sponsors\nFrom: Amy Larrick Chavez-Valdez Director, Medicare Drug Benefit and C&D Data Group\nSection 704 of the Comprehensive Addiction and Recovery Act (CARA) of 2016 included provisions permitting Part D sponsors to establish drug management programs (DMPs) for beneficiaries at-risk for misuse or abuse of frequently abused drugs (FADs). In a final rule (CMS-4182-F) published in the Federal Register on April 16, 2018 (\"final rule\"), CMS established the framework under which Part D sponsors may implement a DMP. This memorandum is intended to provide comprehensive policy guidance for implementation of DMPs. This document incorporates the extensive guidance CMS provided for DMPs in the final rule and provides additional detail.\nAlthough DMPs are voluntary under CARA, given the current national opioid epidemic and based on Part D sponsors' CY 2019 Opioid Template Submissions, we are pleased that most sponsors will implement DMPs in 2019. We also note that the SUPPORT for Patients and Communities Act, enacted on October 24, 2018, requires all Part D sponsors to have a DMP for plan years beginning on or after January 1, 2022.\nUnder DMPs, Part D sponsors are required to communicate in writing with beneficiaries for whom they intend to limit access to FADs. CMS has developed and beneficiary-tested standardized notices for this purpose. Currently, these notices are pending approval at the Office of Management and Budget (OMB). Part D sponsors will be required to use these notices for their DMPs and may not develop their own. In the meantime, sponsors with DMPs in 2019 must implement their programs beginning January 1 and move forward with those aspects of the programs that can be completed without the notices. Once available, sponsors may issue notices and implement coverage limitations. Because CMS understands it may take some time for sponsors to update their systems with the approved notice language, sponsors will have up to 90 days following the release of the standardized notices to fully implement aspects of their programs requiring the notices.\nIn practical terms, these circumstances mean that: 1) CMS will provide sponsors with quarterly Overutilization Monitoring System (OMS) reports of potential at-risk beneficiaries (PARBs); 2) sponsors may identify PARBs by applying the minimum or supplemental OMS criteria on their own; and 3) sponsors will engage in case management. We remind sponsors that the data CMS has previously shared publicly about impact of the Part D overutilization/OMS policy have demonstrated that the significant reduction in opioid overutilization in the program has been due mostly to case management, and to a much lesser extent, because of coverage limitations (e.g., beneficiary-specific POS claim edits). For OMS cases that are not resolved and in which sponsors intend to implement a coverage limitation on access to coverage of FADs to achieve resolution, sponsors may continue to respond to OMS that the cases are \"Initial Review In Progress.\" (See also the OMS technical guidance referenced below). Sponsors must not notify a beneficiary that they intend to implement a coverage limitation until the notices are released by CMS. 1\n[p 2]\nIn addition to the final rule, by the end of today, this implementation guidance and the 2019 OMS technical guidance for DMPs will be available on the CMS Part D Overutilization website at: https://www.cms.gov/Medicare/Prescription-Drugcoverage/PrescriptionDrugCovContra/RxUtilization.html.\nThe updated MAPD Plan Communications User Guide (PCUG), including technical guidance for submitting DMP information to the MARx system, will be released on or about November 30, 2018. Please reference the MAPD Plan Communications User Guide (PCUG) page for the updated Guide: https://www.cms.gov/Research-Statistics-Data-and-Systems/CMS-InformationTechnology/mapdhelpdesk/Plan_Communications_User_Guide.html. A link to the MAPD PCUG page will also be available on the CMS Part D Overutilization website once released.\nEnrollment guidance, including information on the special enrollment period (SEP) limitation, can be found at the following links: Medicare Managed Care Manual -\nhttp://www.cms.gov/Medicare/Eligibility-and-\nEnrollment/MedicareMangCareEligEnrol/index.html and Medicare Prescription Drug Benefit Manual - https://www.cms.gov/Medicare/Eligibility-and-\nEnrollment/MedicarePresDrugEligEnrol/index.html. Guidance concerning appeals of at-risk determinations will be provided in the Parts C & D Enrollee Grievances, Organization/Coverage Determinations, and Appeals Guidance.\nWe appreciate the diligent efforts of Part D sponsors to implement drug management programs in 2019. Questions about DMPs may be submitted to PartD_OM@cms.hhs.gov.\n1 Additionally, sponsors will not submit information concerning coverage limitations to the Medicare Advantage Prescription Drug (MARx) system until notification occurs, and therefore there can be no limitations on the use of the special enrollment period (SEP) for dually- or other low income subsidy (LIS)-eligible beneficiaries pursuant to DMPs until the notices become available.\n[p 3]\nPART D DRUG MANAGEMENT PROGRAMS\nNovember 20, 2018"
+    ],
+    "cms_partd_dmp_guidance_2019:p6": [
+      "cms_partd_dmp_guidance_2019 (Medicare Part D, binding, 2018-11-20)\nPart D Drug Management Program Policy Guidance (CY 2019) > III. FREQUENTLY ABUSED DRUGS (FADs) (42 CFR §423.100)\n[p 6]\nII. POTENTIAL AT-RISK BENEFICIARIES (PARBs) AND AT-RISK BENEFICIARIES (ARBs) (42 CFR §423.100)\nA PARB is a beneficiary who meets the OMS criteria, or who was identified as a PARB by the sponsor of the beneficiary's immediately prior Part D plan under its DMP and such identification had not been terminated before disenrollment. (See below section, \"Overutilization Monitoring System (OMS) Criteria (Clinical Guidelines) / Estimated Program Size\").\nFor purposes of this guidance, a PARB 1 refers to a beneficiary who meets the OMS criteria and is identified by CMS or a sponsor. A PARB 2 refers to a beneficiary about whom a new plan sponsor receives notice upon the beneficiary's enrollment through the MARx system that the beneficiary was identified as potentially at-risk by the immediately prior plan sponsor under its DMP, but a coverage limitation on FADs had not yet been implemented by the prior plan before the beneficiary disenrolled. (See below section, \"Limitations on Access to Coverage for FADs.\")\nAn ARB is a beneficiary who meets the OMS criteria, is not exempted from DMPs, and is identified to be at-risk by their Part D plan sponsor under its DMP, or who was identified as an ARB by the sponsor of the beneficiary's immediately prior Part D plan under its DMP and such identification had not been terminated before disenrollment.\nFor purposes of this guidance, an ARB 1 refers to a beneficiary who was identified as at-risk under their Part D plan's DMP. An ARB 2 refers to a beneficiary about whom a new plan sponsor receives notice upon the beneficiary's enrollment through MARx that the beneficiary was identified as at-risk by the immediately prior plan sponsor under its DMP and a coverage limitation(s) on FADs had been implemented by the prior plan before the beneficiary disenrolled.\nSponsors receive notifications about PARB 2s and ARB 2s through MARx system. See below section, \"Data Disclosure.\"\nA. Opioids and Benzodiazepines\nOpioids (except buprenorphine for medication-assisted treatment (MAT) and injectables) and benzodiazepines are FADs for purposes of Part D DMPs for plan year 2019. This means that methadone for pain is included in the definition of a FAD for purposes of Part D DMPs. Please note that CMS uses prescriptions opioids, including all formulations of buprenorphine for pain and MAT, to determine opioid prescribers and opioid dispensing pharmacies in the OMS criteria. (See below section, \"Overutilization Monitoring System (OMS) Criteria (Clinical Guidelines) / Estimated Program Size\"). Please also consult final Medicare Parts C&D Call Letters for any changes in the drugs that CMS determines to be FADs for purposes of Part D DMPs for plan years 2020 and beyond.)\nB. Additional Information about Benzodiazepines\nIt is also important to note that the 2019 OMS criteria only consider opioid use, and not benzodiazepines, for purposes of identifying PARBs. However, CMS will continue to flag PARBs through OMS who have concurrent opioid and benzodiazepine use to assist sponsors in determining whether such use is an issue, and if so, addressing such use through their DMPs. This means that a beneficiary who is determined to be at-risk based on OMS criteria that look at the beneficiary's opioid use could have a coverage limitation applied under a DMP to both opioids and benzodiazepines to manage current and future concurrent use. For example, a sponsor could require an ARB to obtain both opioids and benzodiazepines from one selected pharmacy. (See next sections, \"Overutilization Monitoring System (Oms) Criteria (Clinical Guidelines) / Estimated Program Size\" and \"Requirements for Implementing Limitations on an ARB's Access to Coverage for FADs\")."
+    ],
+    "cms_partd_dmp_guidance_2019:p9": [
+      "cms_partd_dmp_guidance_2019 (Medicare Part D, binding, 2018-11-20)\nPart D Drug Management Program Policy Guidance (CY 2019) > IV. OVERUTILIZATION MONITORING SYSTEM (OMS) CRITERIA (CLINICAL GUIDELINES) / ESTIMATED PROGRAM SIZE (42 CFR §§423.100 and 423.153(f)(16))\n[p 7]\nIt is possible for a sponsor to apply a limitation only on an ARB's access to coverage for benzodiazepines. CMS expects to see this happen rarely in practice, however, because the ARB would have to have met the OMS criteria, which look at opioid use that is potentially risky. Nevertheless, we acknowledge that prescriber agreement during case management could lead to such an outcome on occasion. For example, if no opioid prescriber agrees to a beneficiaryspecific POS claim edit for opioids, but all but one state they will no longer prescribe opioids to the beneficiary, then a limit on coverage of opioids may not be necessary. However, the benzodiazepine prescriber agrees to such an edit for benzodiazepines.\nIf a sponsor implements a coverage limitation for both opioids and benzodiazepines, the sponsor may have to permit the ARB to obtain FADs from more than one pharmacy and/or more than one prescriber in order to provide reasonable access. (See section further below, \"Reasonable Access Considerations.\")\nOMS refers to the system that reports PARBs to sponsors and which sponsors use to provide updates on each case to CMS. CMS uses the term \"OMS criteria\" instead of the statutory term \"clinical guidelines\" for purposes of describing the standards used to identify individuals to be included in DMPs. We will develop future OMS criteria through the annual Medicare Parts C&D Call Letter process which allows for stakeholder input by applying the standards in 42 CFR 423.153(f)(16). Therefore, please consult proposed and final Call letters for any changes in the OMS criteria and program size for plan years 2020 and beyond. Please also refer to the Section \"Data Disclosure\" below for information about OMS reports.\nA. OMS Criteria are not Dosing Limits\nThe OMS criteria identify the Part D beneficiaries whom CMS believes are at the highest risk of adverse events or overdose due to their level of opioid use and/or obtaining them from multiple prescribers/pharmacies. The OMS criteria are not to be used as a maximum threshold for prescribing opioids or meant to imply that a lower dosage is universally safe. Rather, in the absence of dosing limits in the FDA-approved labeling for opioids, we are using the Centers for Disease Control and Prevention (CDC) Guideline for Prescribing Opioids for Chronic Pain 2 to establish a threshold to identify PARBs who may benefit from better care coordination / closer monitoring and to create alignment between Government programs. Under DMPs, decisions about the amount of FADs an ARB should receive are made by the beneficiary's prescriber(s), and only in limited cases may the amount be set by the Part D sponsor through a beneficiary point-of-sale claim edit when no prescriber is responsive to the DMP's efforts to make clinical contact during case management. (See below sections, \"Case Management / Clinical Contact / Prescriber Verification\" and \"Requirements for Implementing Limitations on an ARB's Access to Coverage for FADs.\")\n[p 8]\nB. Minimum and Supplemental OMS Criteria\nThe OMS criteria and estimated program size for plan year 2019 are in Table 1. Part D sponsors may not vary the OMS criteria.\n2 See https://www.cdc.gov/drugoverdose/prescribing/guideline.html.\n[p 9]\nTABLE 1: 2019 CLINICAL GUIDELINES / OMS CRITERIA* FOR IDENTIFYING PARBs\n[Table] (PDF page 9)\nColumns: Minimum Criteria Applied (Sponsors with Drug Management Programs Must Review) | Impact to Part D Program\nUse of opioids with average daily MME > 90 mg for any duration during the most recent 6 months and either: 3+ opioid prescribers AND 3+ opioid dispensing pharmacies OR 5+ opioid prescribers (regardless of the number of opioid dispensing pharmacies) Prescribers associated with the same single Tax Identification Numbers (TIN) are counted as a single prescriber. Pharmacies with multiple locations that share real-time data are counted as one pharmacy. | 44,332 beneficiaries in 2017 (69.9% were LIS) Represents 0.10% of 45,218,211 Part D beneficiaries in 2017 LTC beneficiaries included in estimate but are exempt. Estimate does not include pharmacies grouped as one pharmacy; CMS does not have system capability.\nSupplemental Criteria Applied (Sponsors with Drug Management Programs May Review as Many as Manageable) | Impact to Part D Program\nUse of opioids (regardless of average daily MME) during the most recent 6 months and: 7+ opioid prescribers OR 7+ opioid dispensing pharmacies Prescribers associated with the same single Tax Identification Numbers (TIN) are counted as a single prescriber. Pharmacies with multiple locations that share real-time data are counted as one pharmacy. | 22,841** beneficiaries in 2017 (77.8% were LIS) Represents 0.05% of 45,218,211 Part D beneficiaries in 2017 LTC beneficiaries included in estimate but are exempt. Estimate does not include pharmacies grouped as one pharmacy; CMS does not have system capability.\nTable note: * Benzodiazepines are a FAD for purposes of Part D DMPs but are not a factor in these clinical guidelines/OMS criteria. Buprenorphine products are not used to determine the beneficiary's average daily MME. However, prescription opioids including all formulations of buprenorphine for pain and MAT, are used to determine opioid prescribers and opioid dispensing pharmacies under the minimum criteria. Similarly, sponsors must include all prescription opioids, including all buprenorphine products, to determine opioid prescribers and opioid dispensing pharmacies under the supplemental criteria.\nTable note: ** Note: A total of 25,480 beneficiaries met the supplemental criteria alone. The estimate is 22,841 beneficiaries after removing duplicate beneficiaries already identified by the minimum criteria.\n* Benz"
+    ],
+    "cms_partd_dmp_guidance_2019:p17": [
+      "cms_partd_dmp_guidance_2019 (Medicare Part D, binding, 2018-11-20)\nPart D Drug Management Program Policy Guidance (CY 2019) > VIII. REQUIRED FRAMEWORK OF DRUG MANAGEMENT PROGRAMS (§423.153(a) & (f))\n[p 16]\nWhile not required, to the extent possible, CMS encourages Part D sponsors to incorporate the following into case management, and in the case of MA-PD plans, through network provider agreements:\nEducation of prescribers about the opioid overutilization crisis, the CDC Guideline for Prescribing Opioids for Chronic Pain, and the role their DMPs play in reducing overutilization of FADs in the Part D program. We expect this additional information to enhance the requirements of case management and requirements that must be met to implement limitations on ARBs' access to FADs.\nEncouragement of prescribers to perform, or refer their patient for, a comprehensive substance abuse disorder screening and/or assessment, and if indicated, refer their patient for follow-up treatment with a pain specialist or addiction treatment provider.\nUse of all reliable sources legally available to them, such as prescription drug monitoring programs (PDMPs), to which they may have access under applicable state law, to obtain an accurate account of a PARB's or ARB's utilization of FADs.\nPrescribers who do not Respond to Case Management. In cases where prescribers have not responded to case management, the sponsor must make reasonable attempts to communicate with the prescribers telephonically and/or by another effective communication method designed to elicit a response from the prescribers within a reasonable period after sending the written information. The idea is that the sponsor will escalate the steps they take to engage in clinical contact with the prescribers, given that the OMS criteria identify beneficiaries who are potentially at-risk for serious adverse health events, including death, due to their opioid use and apparent lack of coordinated care.\nIn doing so, a sponsor should balance on a case-by-case basis the competing priorities of diligently addressing opioid overutilization through the required case management, which may necessitate multiple outreach attempts to prescribers, while being cognizant of the need to be judicious in contacting prescribers telephonically in order to not unnecessarily disrupt their practices. We suggest that sponsors make 3 outreach attempts to contact prescribers over 10 business days during case management, because documentation of 3 or more attempts is sufficient for the sponsor to demonstrate that a prescriber is not responsive in cases when the sponsor wants to implement a coverage limitation on a beneficiary's access to FADs under their DMPs. (See section, \"Requirements for Implementing Limitations on an ARB's Access to Coverage for FADs\").\n[p 17]\nException to case management. If a beneficiary was identified as a PARB 2 or ARB 2 by his or her most recent prior plan, MARx will report such beneficiaries to their new plan sponsors, if such identification was not terminated before the beneficiary disenrolled from the previous plan. To distinguish between the two, the sponsor must contact the sponsor of the Part D plan in which the beneficiary was most recently enrolled. Plans should refer to the applicable Overutilization Contact listed in HPMS and posted on the CMS Part D Overutilization website. See Attachment B for a sample memo that a former sponsor may use to provide such information to a new sponsor, when the new sponsor requests it.\nThe sponsor does not have to engage in case management for PARB 2s and ARB 2s, so long as the sponsor obtains case management information from the previous sponsor and such information is still clinically adequate and up to date. The purpose of this exception is to avoid unnecessary burden on Part D sponsors and health care providers when additional case management outreach is not necessary, because it has already been performed by a prior Part D sponsor under a DMP. See also the Section, \"Data Disclosure.\"\nC. Limitations on Access to Coverage for FADs (42 CFR §423.100(f)(3))\nIf the requirements to do so are met, a Part D plan sponsor may limit an ARB's access to coverage for FADs under a DMP in the following ways:\nBeneficiary-Specific POS Claim Edit: Implement a point-of-sale claim edit for FADs that is specific to an ARB. This means that the sponsor must not cover FADs for the ARB in excess of the edit, unless the edit is terminated or revised based on a subsequent determination, including a successful appeal. A sponsor should not implement an edit at a dosage that is lower than the highest dosage a prescriber asserts is medically necessary.\no Example: The sponsor will cover only certain Part D prescription opioid medications or benzodiazepines for the ARB.\no Example: The sponsor will not cover any prescription opioid medications or benzodiazepines for the ARB..\no Example: The sponsor will cover up to a certain level (e.g., MME, quantity) of prescription opioid medications for the ARB.\nPrescriber Limitation: Limit an ARB's access to coverage for FADs to those that are prescribed for the beneficiary by one or more selected prescribers. This means that the sponsor covers FADs for the ARB only when they are obtained from the selected prescriber(s).\nPharmacy Limitation: Limit an ARB's access to coverage for FADs to those that are dispensed for the beneficiary by one or more selected network pharmacies. This means that\n[p 18]\nthe sponsor covers FADs for the ARB only when they are obtained from the selected pharmacy(ies).\n(See next section \"Requirements for Implementing Limitations on an ARB's Access to Coverage for FADs\").\nIn applying a prescriber and/or pharmacy limitation, the sponsor must also comply with the requirements regarding beneficiary preferences and to provide an ARB with reasonable access to coverage for FADs. (Please refer to the \"Beneficiary Preferences\" and \"Reasonable Access Considerations\" sections later in this guidan"
+    ],
+    "cms_partd_dmp_guidance_2019:p23": [
+      "cms_partd_dmp_guidance_2019 (Medicare Part D, binding, 2018-11-20)\nPart D Drug Management Program Policy Guidance (CY 2019) > VIII. REQUIRED FRAMEWORK OF DRUG MANAGEMENT PROGRAMS (§423.153(a) & (f))\n[p 23]\nNotices: Timing and Exceptions (42 CFR § 423.153(f)(8))\nUpon making the determination that the beneficiary is at-risk for abuse or misuse of FADs or not, a Part D sponsor must provide the beneficiary a Second Notice or the Alternate Second Notice, as applicable, no sooner than 30 days from the date of the Initial Notice, and no later than 60 days from the date of the Initial Notice.\nException: A gaining plan sponsor may forgo providing the Initial Notice and may immediately provide a Second Notice to an ARB 2, if the sponsor is implementing either of the following coverage limitations:\nA beneficiary-specific POS claim edit, if the edit is the same as the one that was implemented in the losing sponsor.\nA pharmacy or prescriber limitation, if such limitation would require the ARB 2 to obtain FADs from the same location of pharmacy and/or the same prescriber, as applicable, that served as the selected pharmacy/prescriber under the losing sponsor.\nWe note that if an ARB changes plans within a contract, CMS does not consider the beneficiary's status in a DMP to have changed and thus the beneficiary will not be reported by MARx. However, if the new plan does not have the previously selected pharmacy or prescriber in its network, the sponsor must request the beneficiary to provide their preference for a selected pharmacy or prescriber, as applicable. If an ARB changes contracts - even if both are held by the same legal entity or parent organization - CMS does consider the beneficiary to be an ARB 2 and the beneficiary will be reported by MARx.\nSpecific instructions for sponsors to submit information to MARx starting 1/1/2019 will be available in the November 2018 MAPD PCUG, scheduled for publication on or around November 30, 2018 and described in the HPMS: Announcement of the Fall 2018 Software Releases, October 4, 2018. A link to the PCUG will be available at the CMS Part D overutilization website at: https://www.cms.gov/Medicare/Prescription-Drugcoverage/PrescriptionDrugCovContra/RxUtilization.html once released.\n[p 24]\nG. Overview of Selection Process for Prescribers and Pharmacies\nThis section summarizes multiple subsections below about the prescriber and pharmacy selection process that a Part D sponsor must follow for cases involving prescriber and/or pharmacy coverage limitations. In such cases, the pharmacy(ies) and prescriber(s) from which an ARB must obtain FADs are called \"selected pharmacy(ies)\" and \"selected prescriber(s).\" Sponsors are required to include a selected pharmacy and/or prescriber, as applicable, that ensures the beneficiary has reasonable access to FADs in the Initial Notice to the beneficiary and solicit the beneficiary's preference(s) (after notification and confirmation with the prescriber/pharmacy about the selection).\nIt is important to note, however, that the selections a Part D sponsor ultimately makes and includes in the Second Notice or later are based on the beneficiary's preferences, unless:\nthe beneficiary does not submit preferences;\nthe beneficiary's preferences do not comply with the \"network policy\" described in a subsection below; or\nthe sponsor takes exception to the beneficiary's preferences, as also described in a later subsection.\n1. Beneficiary Preferences (42 CFR § 423.153(f)(9))\nIf an ARB submits preferences for a selected pharmacy(ies) or prescriber(s) or both, the sponsor must review the preferences and must generally select or change the selection based on the ARB's preferences. However, there are some parameters, caveats, and exceptions, discussed in this subsection and later in this section. The sponsor must do the following:\nIf the beneficiary is enrolled in a stand-alone prescription drug benefit plan and specifies a prescriber(s) or network pharmacy(ies) or both, the sponsor must select or change the selection of the prescriber(s) or network pharmacy(ies) or both for the beneficiary based on beneficiary's preference(s).\nIf the beneficiary is enrolled in an MA-PD plan and specifies a network prescriber(s) or network pharmacy(ies) or both, the sponsor must select or change the selection of prescriber(s) or pharmacy(ies) or both for the beneficiary based on the beneficiary's preference(s).\nThis means that the selected pharmacy or prescriber must be a network pharmacy or network prescriber, unless the ARB is in a stand-alone prescription drug benefit plan (PDP) or in an MAPD plan that is not network-based. In such a case, the prescriber would not be a network prescriber, because such plans do not have prescriber networks. The reason for this \"network policy\" is that the selection of network prescribers and pharmacies puts the sponsor in the best possible position to coordinate the beneficiary's care going forward in light of the demonstrated concerns with the beneficiary's utilization of FADs.\nA few caveats to this guidance are that a sponsor may have to permit an ARB in a network-based MA-PD plan to obtain FADs from a non-network prescriber, if needed to provide the ARB with reasonable access, as discussed in a subsection below. The same is true regarding a non-network pharmacy for an ARB in an MA-PD or stand-alone PDP. Finally, a sponsor can take exception to a beneficiary's preference for a selected pharmacy and/or prescriber, as detailed in a later subsection.\n[p 25]\nThe sponsor must inform the beneficiary of the selection or change in -\nThe Second Notice; or\nIf the Second Notice is not feasible due to the timing of the beneficiary's submission of preference, then in a subsequent written notice, issued no later than 14 days after receipt of the submission.\n(See earlier section, \"Second Notice.\")"
+    ],
+    "cms_partd_dmp_guidance_2019:p24": [
+      "cms_partd_dmp_guidance_2019 (Medicare Part D, binding, 2018-11-20)\nPart D Drug Management Program Policy Guidance (CY 2019) > VIII. REQUIRED FRAMEWORK OF DRUG MANAGEMENT PROGRAMS (§423.153(a) & (f))\n[p 23]\nNotices: Timing and Exceptions (42 CFR § 423.153(f)(8))\nUpon making the determination that the beneficiary is at-risk for abuse or misuse of FADs or not, a Part D sponsor must provide the beneficiary a Second Notice or the Alternate Second Notice, as applicable, no sooner than 30 days from the date of the Initial Notice, and no later than 60 days from the date of the Initial Notice.\nException: A gaining plan sponsor may forgo providing the Initial Notice and may immediately provide a Second Notice to an ARB 2, if the sponsor is implementing either of the following coverage limitations:\nA beneficiary-specific POS claim edit, if the edit is the same as the one that was implemented in the losing sponsor.\nA pharmacy or prescriber limitation, if such limitation would require the ARB 2 to obtain FADs from the same location of pharmacy and/or the same prescriber, as applicable, that served as the selected pharmacy/prescriber under the losing sponsor.\nWe note that if an ARB changes plans within a contract, CMS does not consider the beneficiary's status in a DMP to have changed and thus the beneficiary will not be reported by MARx. However, if the new plan does not have the previously selected pharmacy or prescriber in its network, the sponsor must request the beneficiary to provide their preference for a selected pharmacy or prescriber, as applicable. If an ARB changes contracts - even if both are held by the same legal entity or parent organization - CMS does consider the beneficiary to be an ARB 2 and the beneficiary will be reported by MARx.\nSpecific instructions for sponsors to submit information to MARx starting 1/1/2019 will be available in the November 2018 MAPD PCUG, scheduled for publication on or around November 30, 2018 and described in the HPMS: Announcement of the Fall 2018 Software Releases, October 4, 2018. A link to the PCUG will be available at the CMS Part D overutilization website at: https://www.cms.gov/Medicare/Prescription-Drugcoverage/PrescriptionDrugCovContra/RxUtilization.html once released.\n[p 24]\nG. Overview of Selection Process for Prescribers and Pharmacies\nThis section summarizes multiple subsections below about the prescriber and pharmacy selection process that a Part D sponsor must follow for cases involving prescriber and/or pharmacy coverage limitations. In such cases, the pharmacy(ies) and prescriber(s) from which an ARB must obtain FADs are called \"selected pharmacy(ies)\" and \"selected prescriber(s).\" Sponsors are required to include a selected pharmacy and/or prescriber, as applicable, that ensures the beneficiary has reasonable access to FADs in the Initial Notice to the beneficiary and solicit the beneficiary's preference(s) (after notification and confirmation with the prescriber/pharmacy about the selection).\nIt is important to note, however, that the selections a Part D sponsor ultimately makes and includes in the Second Notice or later are based on the beneficiary's preferences, unless:\nthe beneficiary does not submit preferences;\nthe beneficiary's preferences do not comply with the \"network policy\" described in a subsection below; or\nthe sponsor takes exception to the beneficiary's preferences, as also described in a later subsection.\n1. Beneficiary Preferences (42 CFR § 423.153(f)(9))\nIf an ARB submits preferences for a selected pharmacy(ies) or prescriber(s) or both, the sponsor must review the preferences and must generally select or change the selection based on the ARB's preferences. However, there are some parameters, caveats, and exceptions, discussed in this subsection and later in this section. The sponsor must do the following:\nIf the beneficiary is enrolled in a stand-alone prescription drug benefit plan and specifies a prescriber(s) or network pharmacy(ies) or both, the sponsor must select or change the selection of the prescriber(s) or network pharmacy(ies) or both for the beneficiary based on beneficiary's preference(s).\nIf the beneficiary is enrolled in an MA-PD plan and specifies a network prescriber(s) or network pharmacy(ies) or both, the sponsor must select or change the selection of prescriber(s) or pharmacy(ies) or both for the beneficiary based on the beneficiary's preference(s).\nThis means that the selected pharmacy or prescriber must be a network pharmacy or network prescriber, unless the ARB is in a stand-alone prescription drug benefit plan (PDP) or in an MAPD plan that is not network-based. In such a case, the prescriber would not be a network prescriber, because such plans do not have prescriber networks. The reason for this \"network policy\" is that the selection of network prescribers and pharmacies puts the sponsor in the best possible position to coordinate the beneficiary's care going forward in light of the demonstrated concerns with the beneficiary's utilization of FADs.\nA few caveats to this guidance are that a sponsor may have to permit an ARB in a network-based MA-PD plan to obtain FADs from a non-network prescriber, if needed to provide the ARB with reasonable access, as discussed in a subsection below. The same is true regarding a non-network pharmacy for an ARB in an MA-PD or stand-alone PDP. Finally, a sponsor can take exception to a beneficiary's preference for a selected pharmacy and/or prescriber, as detailed in a later subsection.\n[p 25]\nThe sponsor must inform the beneficiary of the selection or change in -\nThe Second Notice; or\nIf the Second Notice is not feasible due to the timing of the beneficiary's submission of preference, then in a subsequent written notice, issued no later than 14 days after receipt of the submission.\n(See earlier section, \"Second Notice.\")"
+    ],
+    "cms_partd_dmp_guidance_2019:p25": [
+      "cms_partd_dmp_guidance_2019 (Medicare Part D, binding, 2018-11-20)\nPart D Drug Management Program Policy Guidance (CY 2019) > VIII. REQUIRED FRAMEWORK OF DRUG MANAGEMENT PROGRAMS (§423.153(a) & (f))\n[p 23]\nNotices: Timing and Exceptions (42 CFR § 423.153(f)(8))\nUpon making the determination that the beneficiary is at-risk for abuse or misuse of FADs or not, a Part D sponsor must provide the beneficiary a Second Notice or the Alternate Second Notice, as applicable, no sooner than 30 days from the date of the Initial Notice, and no later than 60 days from the date of the Initial Notice.\nException: A gaining plan sponsor may forgo providing the Initial Notice and may immediately provide a Second Notice to an ARB 2, if the sponsor is implementing either of the following coverage limitations:\nA beneficiary-specific POS claim edit, if the edit is the same as the one that was implemented in the losing sponsor.\nA pharmacy or prescriber limitation, if such limitation would require the ARB 2 to obtain FADs from the same location of pharmacy and/or the same prescriber, as applicable, that served as the selected pharmacy/prescriber under the losing sponsor.\nWe note that if an ARB changes plans within a contract, CMS does not consider the beneficiary's status in a DMP to have changed and thus the beneficiary will not be reported by MARx. However, if the new plan does not have the previously selected pharmacy or prescriber in its network, the sponsor must request the beneficiary to provide their preference for a selected pharmacy or prescriber, as applicable. If an ARB changes contracts - even if both are held by the same legal entity or parent organization - CMS does consider the beneficiary to be an ARB 2 and the beneficiary will be reported by MARx.\nSpecific instructions for sponsors to submit information to MARx starting 1/1/2019 will be available in the November 2018 MAPD PCUG, scheduled for publication on or around November 30, 2018 and described in the HPMS: Announcement of the Fall 2018 Software Releases, October 4, 2018. A link to the PCUG will be available at the CMS Part D overutilization website at: https://www.cms.gov/Medicare/Prescription-Drugcoverage/PrescriptionDrugCovContra/RxUtilization.html once released.\n[p 24]\nG. Overview of Selection Process for Prescribers and Pharmacies\nThis section summarizes multiple subsections below about the prescriber and pharmacy selection process that a Part D sponsor must follow for cases involving prescriber and/or pharmacy coverage limitations. In such cases, the pharmacy(ies) and prescriber(s) from which an ARB must obtain FADs are called \"selected pharmacy(ies)\" and \"selected prescriber(s).\" Sponsors are required to include a selected pharmacy and/or prescriber, as applicable, that ensures the beneficiary has reasonable access to FADs in the Initial Notice to the beneficiary and solicit the beneficiary's preference(s) (after notification and confirmation with the prescriber/pharmacy about the selection).\nIt is important to note, however, that the selections a Part D sponsor ultimately makes and includes in the Second Notice or later are based on the beneficiary's preferences, unless:\nthe beneficiary does not submit preferences;\nthe beneficiary's preferences do not comply with the \"network policy\" described in a subsection below; or\nthe sponsor takes exception to the beneficiary's preferences, as also described in a later subsection.\n1. Beneficiary Preferences (42 CFR § 423.153(f)(9))\nIf an ARB submits preferences for a selected pharmacy(ies) or prescriber(s) or both, the sponsor must review the preferences and must generally select or change the selection based on the ARB's preferences. However, there are some parameters, caveats, and exceptions, discussed in this subsection and later in this section. The sponsor must do the following:\nIf the beneficiary is enrolled in a stand-alone prescription drug benefit plan and specifies a prescriber(s) or network pharmacy(ies) or both, the sponsor must select or change the selection of the prescriber(s) or network pharmacy(ies) or both for the beneficiary based on beneficiary's preference(s).\nIf the beneficiary is enrolled in an MA-PD plan and specifies a network prescriber(s) or network pharmacy(ies) or both, the sponsor must select or change the selection of prescriber(s) or pharmacy(ies) or both for the beneficiary based on the beneficiary's preference(s).\nThis means that the selected pharmacy or prescriber must be a network pharmacy or network prescriber, unless the ARB is in a stand-alone prescription drug benefit plan (PDP) or in an MAPD plan that is not network-based. In such a case, the prescriber would not be a network prescriber, because such plans do not have prescriber networks. The reason for this \"network policy\" is that the selection of network prescribers and pharmacies puts the sponsor in the best possible position to coordinate the beneficiary's care going forward in light of the demonstrated concerns with the beneficiary's utilization of FADs.\nA few caveats to this guidance are that a sponsor may have to permit an ARB in a network-based MA-PD plan to obtain FADs from a non-network prescriber, if needed to provide the ARB with reasonable access, as discussed in a subsection below. The same is true regarding a non-network pharmacy for an ARB in an MA-PD or stand-alone PDP. Finally, a sponsor can take exception to a beneficiary's preference for a selected pharmacy and/or prescriber, as detailed in a later subsection.\n[p 25]\nThe sponsor must inform the beneficiary of the selection or change in -\nThe Second Notice; or\nIf the Second Notice is not feasible due to the timing of the beneficiary's submission of preference, then in a subsequent written notice, issued no later than 14 days after receipt of the submission.\n(See earlier section, \"Second Notice.\")\n\ncms_partd_dmp_guidance_2019 (Medicare Part D, binding, 2018-11-20)\nPart D Drug Management Program Policy Guidance (CY 2019) > VIII. REQUIRED "
+    ],
+    "cms_partd_dmp_guidance_2019:p26": [
+      "cms_partd_dmp_guidance_2019 (Medicare Part D, binding, 2018-11-20)\nPart D Drug Management Program Policy Guidance (CY 2019) > VIII. REQUIRED FRAMEWORK OF DRUG MANAGEMENT PROGRAMS (§423.153(a) & (f))\n[p 25]\nThere is no limit on how many times a beneficiary can submit their preferences. A beneficiary may change a prescriber preference because they have developed a new health condition, or change pharmacy preference because they have moved, for example. A change in beneficiary preferences is generally not sufficient reason to extend the original one year time period for the applicable coverage limitation. However, if an ARB changes their preferences so frequently such that there is strong evidence that this behavior is inappropriate and is contributing to prescription drug abuse or diversion, the sponsor may take exception to the beneficiary's preferences and change the selection, as described in the guidance below. The sponsor may also consider this information when the sponsor determines whether there is a clinical basis to extend a coverage limitation at the end of the original one year period.\n2. Reasonable Access Considerations\nWhen making pharmacy and prescriber selections, a Part D plan sponsor must ensure that the beneficiary continues to have reasonable access to FADs, taking into account all relevant factors, including but not limited to-\nThe beneficiary's preference(s);\nThe beneficiary's predominant usage of a prescriber or pharmacy or both for FADs;\nGeographic location;\nReasonable travel time;\nWhether the beneficiary has multiple residences;\nThe beneficiary's health conditions;\nThe impact on cost-sharing;\nNatural disasters and similar situations; and\nThe provision of emergency services.\nAs discussed earlier, a beneficiary's preferences for selected prescriber and pharmacy prevail over the other factors, unless the beneficiary's preferences do not comply with the \"network policy\" described in this section or the sponsor takes exception to the beneficiary's preferences.\n[p 26]\nWhen the beneficiary's preferences are not available, in weighing these factors, CMS expects the sponsor will select the network pharmacy(ies) and/or the network prescriber(s)(or non-network prescriber in the case of a plan without a provider network), that the beneficiary predominantly uses for FADs, if predominant use can be discerned. The sponsor must also take into account whether more than one prescriber or pharmacy is necessary to provide the ARB with reasonable access to FADs due to the ARB's health care or housing situation in accordance with the next section of this guidance. With regard to emergency services, CMS expects sponsors to have reasonable policies in place to ensure the ARB has access to coverage of FADs without a delay that may seriously jeopardize the life and health of the ARB or the ARB's ability to function. If the beneficiary's predominant use of prescriber or pharmacy cannot be ascertained, then the sponsor must weigh the remaining reasonable access factors in the manner the sponsor deems most appropriate for the case.\n3. Actual Selection of Prescribers and Pharmacies (42 CFR § 423.153(f)(12))\nWhen making prescriber and pharmacy selections, whether the beneficiary's preferences are available or not, a Part D sponsor must do the following:\nIn the case of a prescriber limitation, an MA-PD sponsor must select one, or more than one, network prescriber(s) as the selected prescriber(s) who is authorized to prescribe FADs for the ARB, if the sponsor determines it necessary to ensure the ARB has reasonable access to FADs. Also, selection of an out-of-network provider may be necessary to provide the ARB with reasonable access to FADs. A stand-alone PDP must select one, or more than one, selected prescriber who is authorized to prescribe FADs for the ARB if the sponsor determines it necessary to ensure the ARB has reasonable access to FADs. Also, in the case of a group practice, regardless of the type of Part D sponsor, sponsors shall treat all prescribers of the group practice as one prescriber.\nIn the case of a pharmacy limitation, an MA-PD and stand-alone PDP sponsor must select one, or more than one, network pharmacy as the selected pharmacy that may dispense FADs for the ARB, unless selection of an out-of-network pharmacy is necessary to ensure the ARB has reasonable access to FADs. Also, in the case of a pharmacy that has multiple locations that share real-time electronic data, sponsors shall treat such locations of the pharmacy must collectively as one pharmacy.\nWhether the selection of more than one pharmacy or prescriber is necessary for reasonable access depends upon the facts and circumstances of the case. Below are examples as to when selection of more than one prescriber/pharmacy may be necessary:\nIn the case of a pharmacy limitation, if an ARB lives 6 months in one area of the country and 6 months in another, the sponsor would have to select two pharmacies, one in each geographic area, unless there is a location of the same pharmacy in both areas that share real-time electronic data, which would only count as one pharmacy but would suffice for reasonable access. However, if the beneficiary prefers not to use such a pharmacy, and the sponsor does not have a basis on which to take exception to the beneficiary's preference, then the sponsor would have to accept the beneficiary's preference for two selected pharmacies.\n[p 27]\nIf a beneficiary has been obtaining opioids from multiple prescribers and benzodiazepines from one psychiatrist, a sponsor may have to permit an ARB to obtain opioids from the primary care physician and benzodiazepines from the psychiatrist, in order to ensure the ARB has reasonable access to FADs.\nSponsor Exception to Beneficiary Preferences (42 CFR § 423.153(f)(10))\nIf the Part D sponsor determines that the selection or change of a prescriber or pharmacy would contribute to prescription drug abuse or drug diversion by the ARB, the sponsor may change the sele"
+    ],
+    "cms_partd_dmp_guidance_2019:p27": [
+      "cms_partd_dmp_guidance_2019 (Medicare Part D, binding, 2018-11-20)\nPart D Drug Management Program Policy Guidance (CY 2019) > VIII. REQUIRED FRAMEWORK OF DRUG MANAGEMENT PROGRAMS (§423.153(a) & (f))\n[p 27]\nBefore selecting a prescriber or pharmacy, a Part D plan sponsor must notify the prescriber and/or pharmacy, as applicable, that the beneficiary has been identified for inclusion in a DMP and that the prescriber or pharmacy or both is(are) being selected as the beneficiary's selected prescriber or pharmacy or both for FADs. The sponsor must also receive confirmation from the prescriber(s) and/or pharmacy(ies), as applicable, that the selection is accepted before conveying this information to the ARB.\nWe note that nothing in this guidance supersedes a provider or pharmacy's right under state law to refuse treatment to a patient or customer.\ni) Prescribers\nAs described earlier, the sponsor should initially select the prescriber who will serve as the beneficiary's selected prescriber during case management, although the beneficiary may later express a different preference, which then must be taken into account. As also described earlier in the \"Case Management\" section, the sponsor must obtain the prescriber's agreement to the prescriber limitation, i.e., to serve as the selected prescriber. Such agreement also logically constitutes prescriber notification and confirmation; therefore, the sponsor can identify the prescriber in the Initial Notice it provides to the beneficiary. If the beneficiary provides the sponsor with a different selection, then the sponsor would contact the alternate prescriber and obtain their agreement to serve as the beneficiary's selected prescriber, which again also constitutes prescriber notification and confirmation.\n[p 28]\nWhile a prescriber's confirmation to serve as a selected prescriber can be verbal, CMS strongly recommends that sponsors also provide an advance written statement to a prescriber, to the extent possible, which can memorialize prescriber agreement, notice and confirmation. A copy of such statement should be included in the case management file.\nAn MA-PD plan sponsor may address DMPs in their network contracts with providers, including how notifications and confirmations will be executed. However, the contracts may not substitute for case-by-case notifications and confirmations to ensure that the selected prescriber has actively agreed to manage a particular ARB's use of FADs.\nii) Pharmacies\nSimilar to selected prescribers, the sponsor should initially select the pharmacy that will serve as the beneficiary's selected pharmacy during case management, although the beneficiary may later express a different preference, which then must be taken into account. In the case of a pharmacy limitation, the sponsor and network pharmacies should negotiate how to notify a network pharmacy that a beneficiary has been identified for inclusion in a DMP, that the network pharmacy is the beneficiary's selected pharmacy for FADs, and how the pharmacy confirms its selection. For out-of-network pharmacies, or network pharmacies who have not negotiated how to be notified, the sponsor must notify on a case-by case basis, which CMS strongly suggests be done in writing.\nThe sponsor must receive confirmation from a pharmacy that the selection is accepted before conveying this information to the ARB, unless the agreement specifies how the pharmacy will be notified by the sponsor of its selection and the pharmacy has agreed in advance in a network agreement with the sponsor to accept all such selections.\nCMS strongly recommends that sponsors provide advance written notifications, which could be via electronic messaging, to pharmacies for each case, to the extent possible, so that the selected pharmacy is best prepared for each ARB it will serve. In the case of non-network pharmacies, CMS strongly suggests that it receive an advance written confirmation from the pharmacy, to the extent possible, accepting its selection and to include it in the case management file.\nH. Effective and Termination Dates and Extensions of Identification as an ARB (42 CFR § 423.153(f)(14))\n1. Effective Dates\nThe effective date of a coverage limitation implemented under a DMP is the date of the Second Notice.\n2. Termination Dates\nThe identification of an ARB as such must terminate on whichever of the following 2 possible dates is earliest:\n[p 29]\nThe date the beneficiary demonstrates that they are no longer likely to be at risk for abuse or misuse of FADs without the limitation through a subsequent determination, including but not limited to, a successful appeal; or\nThe date that is the end of:\nthe 1 year period calculated from the effective date of the limitation, unless the limitation is extended, or\nthe date that is the end of a 2 year period calculated from the effective date of the limitation, if the limitation was extended.\nRegarding extensions to coverage limitation periods, please see the next section. As we noted earlier, the time periods of overlapping limitations are independent of each other. Also, as noted earlier, if a beneficiary changes sponsors, any coverage limitation period placed on an ARB 2 by the new sponsor is independent of the original limitation period implemented by the prior plan sponsor.\nAdditionally, a beneficiary's identification of an ARB also terminates as soon as a sponsor discovers that the beneficiary is exempted or did not meet the OMS criteria to begin with, as also discussed earlier in this guidance.\nFinally, a plan sponsor is not prevented from identifying a beneficiary as an ARB after the beneficiary's coverage limitation terminates if the beneficiary again meets the OMS criteria.\n3. Extensions\nAs just noted, a Part D sponsor may extend a coverage limitation if certain requirements are met. The sponsor must do the following:\nDetermine at the end of the one year limitation period that there is a clinical basis to extend the limitation\nObtain the agreement of",
+      "cms_partd_dmp_guidance_2019 (Medicare Part D, binding, 2018-11-20)\nPart D Drug Management Program Policy Guidance (CY 2019) > VIII. REQUIRED FRAMEWORK OF DRUG MANAGEMENT PROGRAMS (§423.153(a) & (f))\n[p 27]\nBefore selecting a prescriber or pharmacy, a Part D plan sponsor must notify the prescriber and/or pharmacy, as applicable, that the beneficiary has been identified for inclusion in a DMP and that the prescriber or pharmacy or both is(are) being selected as the beneficiary's selected prescriber or pharmacy or both for FADs. The sponsor must also receive confirmation from the prescriber(s) and/or pharmacy(ies), as applicable, that the selection is accepted before conveying this information to the ARB.\nWe note that nothing in this guidance supersedes a provider or pharmacy's right under state law to refuse treatment to a patient or customer.\ni) Prescribers\nAs described earlier, the sponsor should initially select the prescriber who will serve as the beneficiary's selected prescriber during case management, although the beneficiary may later express a different preference, which then must be taken into account. As also described earlier in the \"Case Management\" section, the sponsor must obtain the prescriber's agreement to the prescriber limitation, i.e., to serve as the selected prescriber. Such agreement also logically constitutes prescriber notification and confirmation; therefore, the sponsor can identify the prescriber in the Initial Notice it provides to the beneficiary. If the beneficiary provides the sponsor with a different selection, then the sponsor would contact the alternate prescriber and obtain their agreement to serve as the beneficiary's selected prescriber, which again also constitutes prescriber notification and confirmation.\n[p 28]\nWhile a prescriber's confirmation to serve as a selected prescriber can be verbal, CMS strongly recommends that sponsors also provide an advance written statement to a prescriber, to the extent possible, which can memorialize prescriber agreement, notice and confirmation. A copy of such statement should be included in the case management file.\nAn MA-PD plan sponsor may address DMPs in their network contracts with providers, including how notifications and confirmations will be executed. However, the contracts may not substitute for case-by-case notifications and confirmations to ensure that the selected prescriber has actively agreed to manage a particular ARB's use of FADs.\nii) Pharmacies\nSimilar to selected prescribers, the sponsor should initially select the pharmacy that will serve as the beneficiary's selected pharmacy during case management, although the beneficiary may later express a different preference, which then must be taken into account. In the case of a pharmacy limitation, the sponsor and network pharmacies should negotiate how to notify a network pharmacy that a beneficiary has been identified for inclusion in a DMP, that the network pharmacy is the beneficiary's selected pharmacy for FADs, and how the pharmacy confirms its selection. For out-of-network pharmacies, or network pharmacies who have not negotiated how to be notified, the sponsor must notify on a case-by case basis, which CMS strongly suggests be done in writing.\nThe sponsor must receive confirmation from a pharmacy that the selection is accepted before conveying this information to the ARB, unless the agreement specifies how the pharmacy will be notified by the sponsor of its selection and the pharmacy has agreed in advance in a network agreement with the sponsor to accept all such selections.\nCMS strongly recommends that sponsors provide advance written notifications, which could be via electronic messaging, to pharmacies for each case, to the extent possible, so that the selected pharmacy is best prepared for each ARB it will serve. In the case of non-network pharmacies, CMS strongly suggests that it receive an advance written confirmation from the pharmacy, to the extent possible, accepting its selection and to include it in the case management file.\nH. Effective and Termination Dates and Extensions of Identification as an ARB (42 CFR § 423.153(f)(14))\n1. Effective Dates\nThe effective date of a coverage limitation implemented under a DMP is the date of the Second Notice.\n2. Termination Dates\nThe identification of an ARB as such must terminate on whichever of the following 2 possible dates is earliest:\n[p 29]\nThe date the beneficiary demonstrates that they are no longer likely to be at risk for abuse or misuse of FADs without the limitation through a subsequent determination, including but not limited to, a successful appeal; or\nThe date that is the end of:\nthe 1 year period calculated from the effective date of the limitation, unless the limitation is extended, or\nthe date that is the end of a 2 year period calculated from the effective date of the limitation, if the limitation was extended.\nRegarding extensions to coverage limitation periods, please see the next section. As we noted earlier, the time periods of overlapping limitations are independent of each other. Also, as noted earlier, if a beneficiary changes sponsors, any coverage limitation period placed on an ARB 2 by the new sponsor is independent of the original limitation period implemented by the prior plan sponsor.\nAdditionally, a beneficiary's identification of an ARB also terminates as soon as a sponsor discovers that the beneficiary is exempted or did not meet the OMS criteria to begin with, as also discussed earlier in this guidance.\nFinally, a plan sponsor is not prevented from identifying a beneficiary as an ARB after the beneficiary's coverage limitation terminates if the beneficiary again meets the OMS criteria.\n3. Extensions\nAs just noted, a Part D sponsor may extend a coverage limitation if certain requirements are met. The sponsor must do the following:\nDetermine at the end of the one year limitation period that there is a clinical basis to extend the limitation\nObtain the agreement of"
+    ]
+  },
+  "cost_note": "each call priced at its serving role's rates (llm.<role>.prices_per_mtok)",
+  "request_started_utc": "2026-10-18T22:23:07.831465+00:00",
+  "citation_check": {
+    "t_start": 22.88,
+    "duration_s": 0.002
+  }
+}

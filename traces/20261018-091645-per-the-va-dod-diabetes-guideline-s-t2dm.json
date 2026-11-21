@@ -1,0 +1,382 @@
+{
+  "question": "Per the VA/DoD diabetes guideline's T2DM management algorithm, a patient has no ASCVD, nephropathy or heart failure and is not at their glycemic target. What is the next step?",
+  "request_id": "4e952ce5-9039-4f09-aaba-63782e7c0e75",
+  "status": "answered",
+  "agent_status": "answered",
+  "assumption": null,
+  "answer": "Per the **VA/DoD T2DM management algorithm**: if the patient has **no established ASCVD/high ASCVD risk, no diabetic nephropathy, and no HF**, skip the GLP-1 RA/SGLT-2 comorbidity-driven step and assess glycemic target. If the patient is **not at target**, the next step is to **consider additional glucose-lowering medications until the target A1C range is achieved**, selecting the agent based on **efficacy and overall risk–benefit ratio**; the algorithm points to **CPG Appendix B** for medication selection support.",
+  "citations": [
+    {
+      "doc_id": "va_dod_cpg_diabetes_2023",
+      "page": 21,
+      "link": "https://www.healthquality.va.gov/guidelines/CD/diabetes/VADoD-Diabetes-CPG_Final_508.pdf#page=21",
+      "flag": null,
+      "locator": "va_dod_cpg_diabetes_2023:p21"
+    }
+  ],
+  "conflicts_noted": [],
+  "flags": [],
+  "needs_review": false,
+  "words": {
+    "displayed": 80,
+    "rendered": 80
+  },
+  "answered_by": "gpt-5.5-2026-04-23",
+  "provider": "openai",
+  "model": "gpt-5.5-2026-04-23",
+  "fallback_used": false,
+  "timing_s": {
+    "total": 6.635,
+    "search": 0.288,
+    "read_page": 0,
+    "list_documents": 0,
+    "lookups": 0,
+    "model_calls": [
+      2.24,
+      4.104
+    ]
+  },
+  "lookups": 1,
+  "tokens": {
+    "input": 5656,
+    "output": 354,
+    "cache_read": 3072,
+    "cache_write": 0
+  },
+  "cost_usd": 0.040436,
+  "pages_seen": [
+    "va_dod_cpg_diabetes_2023:p19",
+    "va_dod_cpg_diabetes_2023:p20",
+    "va_dod_cpg_diabetes_2023:p21",
+    "va_dod_cpg_diabetes_2023:p22",
+    "va_dod_cpg_diabetes_2023:p23",
+    "va_dod_cpg_diabetes_2023:p24",
+    "va_pbm_t2dm_clinicians_guide:p11",
+    "va_pbm_t2dm_clinicians_guide:p12",
+    "va_pbm_t2dm_clinicians_guide:p13",
+    "va_pbm_t2dm_clinicians_guide:p6"
+  ],
+  "trace_id": null,
+  "started_at": "2026-10-18T13:16:45+00:00",
+  "config": {
+    "primary": "gpt-5.5",
+    "fallback": "claude-sonnet-5-5",
+    "effort": "medium",
+    "search": {
+      "mode": "hybrid",
+      "rrf_k": 60,
+      "fusion_depth": 100,
+      "return_parents": true,
+      "rerank": null
+    },
+    "max_tool_calls": 6,
+    "deadline_s": 25,
+    "search_k": 8
+  },
+  "structured_lookups": true,
+  "context": {},
+  "model_answer": "Per the **VA/DoD T2DM management algorithm**: if the patient has **no established ASCVD/high ASCVD risk, no diabetic nephropathy, and no HF**, skip the GLP-1 RA/SGLT-2 comorbidity-driven step and assess glycemic target. If the patient is **not at target**, the next step is to **consider additional glucose-lowering medications until the target A1C range is achieved**, selecting the agent based on **efficacy and overall risk–benefit ratio**; the algorithm points to **CPG Appendix B** for medication selection support.",
+  "model_citations": [
+    {
+      "doc_id": "va_dod_cpg_diabetes_2023",
+      "page": 21,
+      "link": "https://www.healthquality.va.gov/guidelines/CD/diabetes/VADoD-Diabetes-CPG_Final_508.pdf#page=21",
+      "flag": null,
+      "locator": "va_dod_cpg_diabetes_2023:p21"
+    }
+  ],
+  "model_calls": [
+    {
+      "t_start": 0.0,
+      "duration_s": 2.24,
+      "requested_model": "gpt-5.5",
+      "served_model": "gpt-5.5-2026-04-23",
+      "provider": "openai",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 333,
+        "output": 66,
+        "cache_read": 1536,
+        "cache_write": 0
+      },
+      "cost_usd": 0.004413,
+      "response_id": "resp_0186d6f35b1399e0016ad4c6b7aad487d28b2d103b2306a1d0",
+      "input_messages": [
+        {
+          "role": "user",
+          "text": "Today's date: 2026-10-18\n\nQuestion: Per the VA/DoD diabetes guideline's T2DM management algorithm, a patient has no ASCVD, nephropathy or heart failure and is not at their glycemic target. What is the next step?"
+        }
+      ],
+      "output": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "call_471ymDoxHyUS6aRytdazcCmU",
+            "name": "search_documents",
+            "arguments": {
+              "program": "VA",
+              "query": "VA DoD diabetes guideline T2DM management algorithm no ASCVD nephropathy heart failure not at glycemic target next step",
+              "k": 5
+            }
+          }
+        ]
+      }
+    },
+    {
+      "t_start": 2.528,
+      "duration_s": 4.104,
+      "requested_model": "gpt-5.5",
+      "served_model": "gpt-5.5-2026-04-23",
+      "provider": "openai",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 5323,
+        "output": 288,
+        "cache_read": 1536,
+        "cache_write": 0
+      },
+      "cost_usd": 0.036023,
+      "response_id": "resp_0186d6f35b1399e0016ad4c6b9dc8887d2a11ed9fc57e8b4c3",
+      "input_messages": [
+        {
+          "role": "tool",
+          "tool_results": [
+            {
+              "call_id": "call_471ymDoxHyUS6aRytdazcCmU",
+              "is_error": false,
+              "content": "[{\"doc_id\": \"va_dod_cpg_diabetes_2023\", \"page\": 21, \"program\": \"VA\", \"authority\": \"advisory\", \"date\": \"2023-05\", \"text\": \"VA/DoD Clinical Practice Guideline for the Management of Type 2 Diabetes Mellitus (Version 6.0) > VIII. Algorithm > A. Module A: T2DM Management\\n[p 21]\\n[Figure, flowchart] untitled in the image; see the section heading (PDF page 21). Machine-generated visual interpretation; status: machine-interpreted from the page image by a vision model; compared box by box against the page image (not clinician-verified).\\nBox 1 (start): Patient with T2DM -> then box 2\\nBox 2 (decision): Does the patient have an urgent or emergent care need (e.g., symptomatic hyperglycemia, severe hypoglycemia, concurrent medical issue, etc.)? -> if Yes: box 3; if No: box 4\\nBox 3 (action): Treat and/or refer for acute care\\nBox 4 (action): Assess barriers to success (e.g., psychosocial needs, navigating health care, health literacy/numeracy, patient/provider inertia, social determinants of health [e.g., transportation, economic or food insecurity]) -> then box 5\\nBox 5 (action): Develop an individualized treatment plan Review non-pharmacologic therapies • Medical Nutrition Therapy (MNT) (including weight management) (see Module B) • Diabetes Self-Management Education and Support (DSMES) (see Module B) • Exercise If pharmacologic therapy is indicated, begin metformin unless contraindicated -> then box 6\\nBox 6 (decision): Does the patient have any of the following: 1. Established ASCVD or high ASCVD risk 2. Diabetic nephropathy 3. Heart failure (see Sidebar 4) -> if Yes: box 7; if No: box 8\\nBox 7 (action): Consider GLP-1 RA or SGLT-2 inhibitor if indicated -> then box 8\\nBox 8 (decision): Has the patient's glycemic target been achieved (A1C 7.0-8.5% for most patients or alternative range based on individualization)? -> if Yes: box 9; if No: box 10\\nBox 9 (action): Review treatment plan to minimize or treat complications and/or comorbidities (see Sidebars 1, 2, 3 and 4) -> then box 11\\nBox 10 (action): Consider additional medications until target A1C range is achieved. Select agent based on efficacy and risk-benefit ratio. See CPG Appendix B.\\nBox 11 (action): Review health promotion activities • Tobacco cessation • Vaccinations, age-related • Dental care -> then box 12\\nBox 12 (end): Follow up as needed\\nDecision path: 1 -> 2 -> [Yes] 3\\nDecision path: 1 -> 2 -> [No] 4 -> 5 -> 6 -> [Yes] 7 -> 8 -> [Yes] 9 -> 11 -> 12\\nDecision path: 1 -> 2 -> [No] 4 -> 5 -> 6 -> [Yes] 7 -> 8 -> [No] 10\\nDecision path: 1 -> 2 -> [No] 4 -> 5 -> 6 -> [No] 8 -> [Yes] 9 -> 11 -> 12\\nDecision path: 1 -> 2 -> [No] 4 -> 5 -> 6 -> [No] 8 -> [No] 10\\nAbbreviations: ASCVD: atherosclerotic cardiovascular disease; GLP-1 RA: glucagon-like peptide 1 receptor agonist; SGLT-2 inhibitor: sodium-glucose transporter 2 inhibitor; MNT: Medical Nutrition Therapy; T2DM: type 2 diabetes mellitus\", \"pages\": [21], \"section\": \"VA/DoD CLINICAL PRACTICE GUIDELINE FOR THE MANAGEMENT OF TYPE 2 DIABETES MELLITUS > VIII. Algorithm > A. Module A: T2DM Management\"}, {\"doc_id\": \"va_pbm_t2dm_clinicians_guide\", \"page\": 11, \"program\": \"VA\", \"authority\": \"advisory\", \"date\": \"2020-05\", \"text\": \"A VA Clinician's Guide to Diabetes Management in Primary Care (IB 10-1402) > Type 2 Diabetes A VA Clinician’s Guide to Diabetes Management in Primary Care (2020) > Diabetes management > 3 Pharmacotherapy > Metformin is recommended as first-line therapy.\\n[p 11]\\nHas been in use for decades and is low cost.\\nSafe to initiate in patients with moderate renal dysfunction (eGFR > 45 mL/min) and may continue metformin therapy in patients with eGFR 30-45 mL/min. 15 Monitoring is no longer based on serum creatinine levels.\\nConsider referring to a clinical pharmacy specialist for drug therapy initiation and titration.\\nSlow titration, taking metformin with food, or using an extended-release formulation can reduce or prevent GI upset and diarrhea.\\nConsider metformin first for most Veterans with diabetes.\\n[Figu"
+            }
+          ]
+        }
+      ],
+      "output": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "call_3IxmNaIb2zFe7ySaJObP50h0",
+            "name": "submit_answer",
+            "arguments": {
+              "status": "answered",
+              "assumption": null,
+              "answer": "Per the **VA/DoD T2DM management algorithm**: if the patient has **no established ASCVD/high ASCVD risk, no diabetic nephropathy, and no HF**, skip the GLP-1 RA/SGLT-2 comorbidity-driven step and assess glycemic target. If the patient is **not at target**, the next step is to **consider additional glucose-lowering medications until the target A1C range is achieved**, selecting the agent based on **efficacy and overall risk–benefit ratio**; the algorithm points to **CPG Appendix B** for medication selection support.",
+              "citations": [
+                {
+                  "doc_id": "va_dod_cpg_diabetes_2023",
+                  "page": 21,
+                  "row": null
+                }
+              ],
+              "conflicts_noted": []
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "search_documents",
+      "input": {
+        "program": "VA",
+        "query": "VA DoD diabetes guideline T2DM management algorithm no ASCVD nephropathy heart failure not at glycemic target next step",
+        "k": 5
+      },
+      "duration_s": 0.288,
+      "is_error": false,
+      "pages": [
+        "va_dod_cpg_diabetes_2023:p19",
+        "va_dod_cpg_diabetes_2023:p20",
+        "va_dod_cpg_diabetes_2023:p21",
+        "va_dod_cpg_diabetes_2023:p22",
+        "va_dod_cpg_diabetes_2023:p23",
+        "va_dod_cpg_diabetes_2023:p24",
+        "va_pbm_t2dm_clinicians_guide:p11",
+        "va_pbm_t2dm_clinicians_guide:p12",
+        "va_pbm_t2dm_clinicians_guide:p13",
+        "va_pbm_t2dm_clinicians_guide:p6"
+      ],
+      "result": "[{\"doc_id\": \"va_dod_cpg_diabetes_2023\", \"page\": 21, \"program\": \"VA\", \"authority\": \"advisory\", \"date\": \"2023-05\", \"text\": \"VA/DoD Clinical Practice Guideline for the Management of Type 2 Diabetes Mellitus (Version 6.0) > VIII. Algorithm > A. Module A: T2DM Management\\n[p 21]\\n[Figure, flowchart] untitled in the image; see the section heading (PDF page 21). Machine-generated visual interpretation; status: machine-interpreted from the page image by a vision model; compared box by box against the page image (not clinician-verified).\\nBox 1 (start): Patient with T2DM -> then box 2\\nBox 2 (decision): Does the patient have an urgent or emergent care need (e.g., symptomatic hyperglycemia, severe hypoglycemia, concurrent medical issue, etc.)? -> if Yes: box 3; if No: box 4\\nBox 3 (action): Treat and/or refer for acute care\\nBox 4 (action): Assess barriers to success (e.g., psychosocial needs, navigating health care, health literacy/numeracy, patient/provider inertia, social determinants of health [e.g., transportation, economic or food insecurity]) -> then box 5\\nBox 5 (action): Develop an individualized treatment plan Review non-pharmacologic therapies • Medical Nutrition Therapy (MNT) (including weight management) (see Module B) • Diabetes Self-Management Education and Support (DSMES) (see Module B) • Exercise If pharmacologic therapy is indicated, begin metformin unless contraindicated -> then box 6\\nBox 6 (decision): Does the patient have any of the following: 1. Established ASCVD or high ASCVD risk 2. Diabetic nephropathy 3. Heart failure (see Sidebar 4) -> if Yes: box 7; if No: box 8\\nBox 7 (action): Consider GLP-1 RA or SGLT-2 inhibitor if indicated -> then box 8\\nBox 8 (decision): Has the patient's glycemic target been achieved (A1C 7.0-8.5% for most patients or alternative range based on individualization)? -> if Yes: box 9; if No: box 10\\nBox 9 (action): Review treatment plan to minimize or treat complications and/or comorbidities (see Sidebars 1, 2, 3 and 4) -> then box 11\\nBox 10 (action): Consider additional medications until target A1C range is achieved. Select agent based on efficacy and risk-benefit ratio. See CPG Appendix B.\\nBox 11 (action): Review health promotion activities • Tobacco cessation • Vaccinations, age-related • Dental care -> then box 12\\nBox 12 (end): Follow up as needed\\nDecision path: 1 -> 2 -> [Yes] 3\\nDecision path: 1 -> 2 -> [No] 4 -> 5 -> 6 -> [Yes] 7 -> 8 -> [Yes] 9 -> 11 -> 12\\nDecision path: 1 -> 2 -> [No] 4 -> 5 -> 6 -> [Yes] 7 -> 8 -> [No] 10\\nDecision path: 1 -> 2 -> [No] 4 -> 5 -> 6 -> [No] 8 -> [Yes] 9 -> 11 -> 12\\nDecision path: 1 -> 2 -> [No] 4 -> 5 -> 6 -> [No] 8 -> [No] 10\\nAbbreviations: ASCVD: atherosclerotic cardiovascular disease; GLP-1 RA: glucagon-like peptide 1 receptor agonist; SGLT-2 inhibitor: sodium-glucose transporter 2 inhibitor; MNT: Medical Nutrition Therapy; T2DM: type 2 diabetes mellitus\", \"pages\": [21], \"section\": \"VA/DoD CLINICAL PRACTICE GUIDELINE FOR THE MANAGEMENT OF TYPE 2 DIABETES MELLITUS > VIII. Algorithm > A. Module A: T2DM Management\"}, {\"doc_id\": \"va_pbm_t2dm_clinicians_guide\", \"page\": 11, \"program\": \"VA\", \"authority\": \"advisory\", \"date\": \"2020-05\", \"text\": \"A VA Clinician's Guide to Diabetes Management in Primary Care (IB 10-1402) > Type 2 Diabetes A VA Clinician’s Guide to Diabetes Management in Primary Care (2020) > Diabetes management > 3 Pharmacotherapy > Metformin is recommended as first-line therapy.\\n[p 11]\\nHas been in use for decades and is low cost.\\nSafe to initiate in patients with moderate renal dysfunction (eGFR > 45 mL/min) and may continue metformin therapy in patients with eGFR 30-45 mL/min. 15 Monitoring is no longer based on serum creatinine levels.\\nConsider referring to a clinical pharmacy specialist for drug therapy initiation and titration.\\nSlow titration, taking metformin with food, or using an extended-release formulation can reduce or prevent GI upset and diarrhea.\\nConsider metformin first for most Veterans with diabetes.\\n[Figu",
+      "search": {
+        "original_query": "Per the VA/DoD diabetes guideline's T2DM management algorithm, a patient has no ASCVD, nephropathy or heart failure and is not at their glycemic target. What is the next step?",
+        "agent_query": "VA DoD diabetes guideline T2DM management algorithm no ASCVD nephropathy heart failure not at glycemic target next step",
+        "executed": [
+          {
+            "source": "original",
+            "query": "Per the VA/DoD diabetes guideline's T2DM management algorithm, a patient has no ASCVD, nephropathy or heart failure and is not at their glycemic target. What is the next step?",
+            "program": "VA",
+            "k": 5,
+            "seconds": 0.276,
+            "cached": false,
+            "results": 5
+          },
+          {
+            "source": "agent",
+            "query": "VA DoD diabetes guideline T2DM management algorithm no ASCVD nephropathy heart failure not at glycemic target next step",
+            "program": "VA",
+            "k": 5,
+            "seconds": 0.286,
+            "cached": false,
+            "results": 5
+          }
+        ],
+        "duplicates_merged": 4,
+        "returned": 6,
+        "from_both": 4,
+        "from_original_only": 1,
+        "from_agent_only": 1,
+        "provenance": [
+          {
+            "unit": "va_dod_cpg_diabetes_2023:s17",
+            "found_by": {
+              "original": 1,
+              "agent": 2
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_clinicians_guide:s10",
+            "found_by": {
+              "original": 4,
+              "agent": 1
+            }
+          },
+          {
+            "unit": "va_dod_cpg_diabetes_2023:s18",
+            "found_by": {
+              "original": 2,
+              "agent": 5
+            }
+          },
+          {
+            "unit": "va_dod_cpg_diabetes_2023:s16",
+            "found_by": {
+              "original": 5,
+              "agent": 4
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_clinicians_guide:s11",
+            "found_by": {
+              "original": 3
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_clinicians_guide:s3",
+            "found_by": {
+              "agent": 3
+            }
+          }
+        ],
+        "hits": [
+          {
+            "unit": "va_dod_cpg_diabetes_2023:s17",
+            "doc_id": "va_dod_cpg_diabetes_2023",
+            "pages": [
+              21
+            ],
+            "ranks": {
+              "original": 1,
+              "agent": 2
+            },
+            "scores": {
+              "original": 0.0301,
+              "agent": 0.0292
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_clinicians_guide:s10",
+            "doc_id": "va_pbm_t2dm_clinicians_guide",
+            "pages": [
+              11,
+              12
+            ],
+            "ranks": {
+              "original": 4,
+              "agent": 1
+            },
+            "scores": {
+              "original": 0.0269,
+              "agent": 0.0296
+            }
+          },
+          {
+            "unit": "va_dod_cpg_diabetes_2023:s18",
+            "doc_id": "va_dod_cpg_diabetes_2023",
+            "pages": [
+              22,
+              23,
+              24
+            ],
+            "ranks": {
+              "original": 2,
+              "agent": 5
+            },
+            "scores": {
+              "original": 0.0274,
+              "agent": 0.0267
+            }
+          },
+          {
+            "unit": "va_dod_cpg_diabetes_2023:s16",
+            "doc_id": "va_dod_cpg_diabetes_2023",
+            "pages": [
+              19,
+              20
+            ],
+            "ranks": {
+              "original": 5,
+              "agent": 4
+            },
+            "scores": {
+              "original": 0.0258,
+              "agent": 0.0268
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_clinicians_guide:s11",
+            "doc_id": "va_pbm_t2dm_clinicians_guide",
+            "pages": [
+              12,
+              13
+            ],
+            "ranks": {
+              "original": 3
+            },
+            "scores": {
+              "original": 0.0271
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_clinicians_guide:s3",
+            "doc_id": "va_pbm_t2dm_clinicians_guide",
+            "pages": [
+              6
+            ],
+            "ranks": {
+              "agent": 3
+            },
+            "scores": {
+              "agent": 0.0276
+            }
+          }
+        ]
+      },
+      "t_start": 2.24
+    }
+  ],
+  "cited_evidence": {
+    "va_dod_cpg_diabetes_2023:p21": "va_dod_cpg_diabetes_2023 (VA, advisory, 2023-05)\nVA/DoD Clinical Practice Guideline for the Management of Type 2 Diabetes Mellitus (Version 6.0) > VIII. Algorithm > A. Module A: T2DM Management\n[p 21]\n[Figure, flowchart] untitled in the image; see the section heading (PDF page 21). Machine-generated visual interpretation; status: machine-interpreted from the page image by a vision model; compared box by box against the page image (not clinician-verified).\nBox 1 (start): Patient with T2DM -> then box 2\nBox 2 (decision): Does the patient have an urgent or emergent care need (e.g., symptomatic hyperglycemia, severe hypoglycemia, concurrent medical issue, etc.)? -> if Yes: box 3; if No: box 4\nBox 3 (action): Treat and/or refer for acute care\nBox 4 (action): Assess barriers to success (e.g., psychosocial needs, navigating health care, health literacy/numeracy, patient/provider inertia, social determinants of health [e.g., transportation, economic or food insecurity]) -> then box 5\nBox 5 (action): Develop an individualized treatment plan Review non-pharmacologic therapies • Medical Nutrition Therapy (MNT) (including weight management) (see Module B) • Diabetes Self-Management Education and Support (DSMES) (see Module B) • Exercise If pharmacologic therapy is indicated, begin metformin unless contraindicated -> then box 6\nBox 6 (decision): Does the patient have any of the following: 1. Established ASCVD or high ASCVD risk 2. Diabetic nephropathy 3. Heart failure (see Sidebar 4) -> if Yes: box 7; if No: box 8\nBox 7 (action): Consider GLP-1 RA or SGLT-2 inhibitor if indicated -> then box 8\nBox 8 (decision): Has the patient's glycemic target been achieved (A1C 7.0-8.5% for most patients or alternative range based on individualization)? -> if Yes: box 9; if No: box 10\nBox 9 (action): Review treatment plan to minimize or treat complications and/or comorbidities (see Sidebars 1, 2, 3 and 4) -> then box 11\nBox 10 (action): Consider additional medications until target A1C range is achieved. Select agent based on efficacy and risk-benefit ratio. See CPG Appendix B.\nBox 11 (action): Review health promotion activities • Tobacco cessation • Vaccinations, age-related • Dental care -> then box 12\nBox 12 (end): Follow up as needed\nDecision path: 1 -> 2 -> [Yes] 3\nDecision path: 1 -> 2 -> [No] 4 -> 5 -> 6 -> [Yes] 7 -> 8 -> [Yes] 9 -> 11 -> 12\nDecision path: 1 -> 2 -> [No] 4 -> 5 -> 6 -> [Yes] 7 -> 8 -> [No] 10\nDecision path: 1 -> 2 -> [No] 4 -> 5 -> 6 -> [No] 8 -> [Yes] 9 -> 11 -> 12\nDecision path: 1 -> 2 -> [No] 4 -> 5 -> 6 -> [No] 8 -> [No] 10\nAbbreviations: ASCVD: atherosclerotic cardiovascular disease; GLP-1 RA: glucagon-like peptide 1 receptor agonist; SGLT-2 inhibitor: sodium-glucose transporter 2 inhibitor; MNT: Medical Nutrition Therapy; T2DM: type 2 diabetes mellitus"
+  },
+  "cited_evidence_parts": {
+    "va_dod_cpg_diabetes_2023:p21": [
+      "va_dod_cpg_diabetes_2023 (VA, advisory, 2023-05)\nVA/DoD Clinical Practice Guideline for the Management of Type 2 Diabetes Mellitus (Version 6.0) > VIII. Algorithm > A. Module A: T2DM Management\n[p 21]\n[Figure, flowchart] untitled in the image; see the section heading (PDF page 21). Machine-generated visual interpretation; status: machine-interpreted from the page image by a vision model; compared box by box against the page image (not clinician-verified).\nBox 1 (start): Patient with T2DM -> then box 2\nBox 2 (decision): Does the patient have an urgent or emergent care need (e.g., symptomatic hyperglycemia, severe hypoglycemia, concurrent medical issue, etc.)? -> if Yes: box 3; if No: box 4\nBox 3 (action): Treat and/or refer for acute care\nBox 4 (action): Assess barriers to success (e.g., psychosocial needs, navigating health care, health literacy/numeracy, patient/provider inertia, social determinants of health [e.g., transportation, economic or food insecurity]) -> then box 5\nBox 5 (action): Develop an individualized treatment plan Review non-pharmacologic therapies • Medical Nutrition Therapy (MNT) (including weight management) (see Module B) • Diabetes Self-Management Education and Support (DSMES) (see Module B) • Exercise If pharmacologic therapy is indicated, begin metformin unless contraindicated -> then box 6\nBox 6 (decision): Does the patient have any of the following: 1. Established ASCVD or high ASCVD risk 2. Diabetic nephropathy 3. Heart failure (see Sidebar 4) -> if Yes: box 7; if No: box 8\nBox 7 (action): Consider GLP-1 RA or SGLT-2 inhibitor if indicated -> then box 8\nBox 8 (decision): Has the patient's glycemic target been achieved (A1C 7.0-8.5% for most patients or alternative range based on individualization)? -> if Yes: box 9; if No: box 10\nBox 9 (action): Review treatment plan to minimize or treat complications and/or comorbidities (see Sidebars 1, 2, 3 and 4) -> then box 11\nBox 10 (action): Consider additional medications until target A1C range is achieved. Select agent based on efficacy and risk-benefit ratio. See CPG Appendix B.\nBox 11 (action): Review health promotion activities • Tobacco cessation • Vaccinations, age-related • Dental care -> then box 12\nBox 12 (end): Follow up as needed\nDecision path: 1 -> 2 -> [Yes] 3\nDecision path: 1 -> 2 -> [No] 4 -> 5 -> 6 -> [Yes] 7 -> 8 -> [Yes] 9 -> 11 -> 12\nDecision path: 1 -> 2 -> [No] 4 -> 5 -> 6 -> [Yes] 7 -> 8 -> [No] 10\nDecision path: 1 -> 2 -> [No] 4 -> 5 -> 6 -> [No] 8 -> [Yes] 9 -> 11 -> 12\nDecision path: 1 -> 2 -> [No] 4 -> 5 -> 6 -> [No] 8 -> [No] 10\nAbbreviations: ASCVD: atherosclerotic cardiovascular disease; GLP-1 RA: glucagon-like peptide 1 receptor agonist; SGLT-2 inhibitor: sodium-glucose transporter 2 inhibitor; MNT: Medical Nutrition Therapy; T2DM: type 2 diabetes mellitus"
+    ]
+  },
+  "cost_note": "each call priced at its serving role's rates (llm.<role>.prices_per_mtok)",
+  "request_started_utc": "2026-10-18T13:16:39.176591+00:00",
+  "citation_check": {
+    "t_start": 6.632,
+    "duration_s": 0.003
+  }
+}

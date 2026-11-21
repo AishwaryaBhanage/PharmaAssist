@@ -1,0 +1,409 @@
+{
+  "question": "After prescriber approval, what code clears a Part D 90-MME alert? Do our documents specify one?",
+  "status": "answered",
+  "assumption": "Assuming Medicare Part D (90-MME opioid care coordination edit).",
+  "answer": "Assuming Medicare Part D: **No, the documents don't name a specific code.**\n\nThe CMS pharmacist guidance says to:\n1. Consult the prescriber to confirm intent. This isn't needed if you recently consulted and have current clinical information, such as PDMP records.\n2. Document the discussion. This can include date, time, prescriber name, and the outcome (confirmed intent, didn't confirm, gave exclusion information, or couldn't be reached after X attempts).\n3. \"Submit the appropriate override code.\" Overrides can be sent at POS.\n\nThe documents don't list an NCPDP DUR/PPS value (reason/professional service/result code). Use the plan's payer sheet or call the plan for the exact code. If the claim still rejects and you can't fill it as written, give the enrollee the CMS-10147 notice.",
+  "citations": [
+    {
+      "doc_id": "cms_partd_opioid_pharmacists_2022",
+      "page": 1,
+      "link": "https://www.cms.gov/files/document/medicare-part-d-opioid-policies-information-pharmacists-december-19-2022.pdf#page=1",
+      "flag": null,
+      "locator": "cms_partd_opioid_pharmacists_2022:p1"
+    },
+    {
+      "doc_id": "cms_partd_opioid_pharmacists_2022",
+      "page": 2,
+      "link": "https://www.cms.gov/files/document/medicare-part-d-opioid-policies-information-pharmacists-december-19-2022.pdf#page=2",
+      "flag": null,
+      "locator": "cms_partd_opioid_pharmacists_2022:p2"
+    }
+  ],
+  "conflicts_noted": [],
+  "flags": [],
+  "needs_review": false,
+  "words": {
+    "displayed": 123,
+    "rendered": 123
+  },
+  "answered_by": "claude-sonnet-5-5",
+  "fallback_used": false,
+  "timing_s": {
+    "total": 10.351,
+    "search": 3.392,
+    "search_cold": 0,
+    "search_warm": 3.392,
+    "read_page": 0,
+    "list_documents": 0,
+    "model_calls": [
+      2.18,
+      4.778
+    ]
+  },
+  "index_warm_at_start": true,
+  "lookups": 1,
+  "tokens": {
+    "input": 6,
+    "output": 620,
+    "cache_read": 3603,
+    "cache_write": 22663
+  },
+  "cost_usd": 0.06359,
+  "pages_seen": [
+    "cms_partd_dmp_guidance_2019:p10",
+    "cms_partd_dmp_guidance_2019:p14",
+    "cms_partd_dmp_guidance_2019:p15",
+    "cms_partd_dmp_guidance_2019:p16",
+    "cms_partd_dmp_guidance_2019:p17",
+    "cms_partd_dmp_guidance_2019:p18",
+    "cms_partd_dmp_guidance_2019:p19",
+    "cms_partd_dmp_guidance_2019:p20",
+    "cms_partd_dmp_guidance_2019:p36",
+    "cms_partd_dmp_guidance_2019:p37",
+    "cms_partd_dmp_guidance_2019:p38",
+    "cms_partd_dmp_guidance_2019:p39",
+    "cms_partd_dmp_guidance_2019:p40",
+    "cms_partd_dmp_guidance_2019:p7",
+    "cms_partd_dmp_guidance_2019:p8",
+    "cms_partd_dmp_guidance_2019:p9",
+    "cms_partd_opioid_pharmacists_2022:p1",
+    "cms_partd_opioid_pharmacists_2022:p2"
+  ],
+  "started_at": "2026-10-18T03:53:30+00:00",
+  "config": {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium",
+    "setup": "docling_rerank_structured",
+    "max_tool_calls": 6,
+    "deadline_s": 25,
+    "search_k": 8
+  },
+  "structured_lookups": true,
+  "model_calls": [
+    {
+      "t_start": 0.0,
+      "duration_s": 2.18,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 4,
+        "output": 107,
+        "cache_read": 0,
+        "cache_write": 3603
+      }
+    },
+    {
+      "t_start": 5.572,
+      "duration_s": 4.778,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 2,
+        "output": 513,
+        "cache_read": 3603,
+        "cache_write": 19060
+      }
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "search_documents",
+      "input": {
+        "query": "90 MME opioid care coordination edit pharmacist override submission clarification code after prescriber consultation",
+        "program": "Medicare Part D"
+      },
+      "duration_s": 3.392,
+      "is_error": false,
+      "pages": [
+        "cms_partd_dmp_guidance_2019:p10",
+        "cms_partd_dmp_guidance_2019:p14",
+        "cms_partd_dmp_guidance_2019:p15",
+        "cms_partd_dmp_guidance_2019:p16",
+        "cms_partd_dmp_guidance_2019:p17",
+        "cms_partd_dmp_guidance_2019:p18",
+        "cms_partd_dmp_guidance_2019:p19",
+        "cms_partd_dmp_guidance_2019:p20",
+        "cms_partd_dmp_guidance_2019:p36",
+        "cms_partd_dmp_guidance_2019:p37",
+        "cms_partd_dmp_guidance_2019:p38",
+        "cms_partd_dmp_guidance_2019:p39",
+        "cms_partd_dmp_guidance_2019:p40",
+        "cms_partd_dmp_guidance_2019:p7",
+        "cms_partd_dmp_guidance_2019:p8",
+        "cms_partd_dmp_guidance_2019:p9",
+        "cms_partd_opioid_pharmacists_2022:p1",
+        "cms_partd_opioid_pharmacists_2022:p2"
+      ],
+      "index_loaded": true,
+      "search": {
+        "original_query": "After prescriber approval, what code clears a Part D 90-MME alert? Do our documents specify one?",
+        "agent_query": "90 MME opioid care coordination edit pharmacist override submission clarification code after prescriber consultation",
+        "executed": [
+          {
+            "source": "original",
+            "query": "After prescriber approval, what code clears a Part D 90-MME alert? Do our documents specify one?",
+            "program": "Medicare Part D",
+            "k": 8,
+            "seconds": 3.391,
+            "cached": false,
+            "results": 8
+          },
+          {
+            "source": "agent",
+            "query": "90 MME opioid care coordination edit pharmacist override submission clarification code after prescriber consultation",
+            "program": "Medicare Part D",
+            "k": 8,
+            "seconds": 1.798,
+            "cached": false,
+            "results": 8
+          }
+        ],
+        "duplicates_merged": 7,
+        "returned": 9,
+        "from_both": 7,
+        "from_original_only": 1,
+        "from_agent_only": 1,
+        "provenance": [
+          {
+            "unit": "cms_partd_opioid_pharmacists_2022:s1",
+            "found_by": {
+              "original": 1,
+              "agent": 1
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s5",
+            "found_by": {
+              "original": 2,
+              "agent": 3
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s19",
+            "found_by": {
+              "original": 3,
+              "agent": 2
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s4",
+            "found_by": {
+              "original": 5,
+              "agent": 4
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s20",
+            "found_by": {
+              "original": 4,
+              "agent": 6
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s10",
+            "found_by": {
+              "original": 8,
+              "agent": 5
+            }
+          },
+          {
+            "unit": "cms_partd_opioid_pharmacists_2022:s2",
+            "found_by": {
+              "original": 7,
+              "agent": 7
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s9",
+            "found_by": {
+              "original": 6
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s11",
+            "found_by": {
+              "agent": 8
+            }
+          }
+        ],
+        "hits": [
+          {
+            "unit": "cms_partd_opioid_pharmacists_2022:s1",
+            "doc_id": "cms_partd_opioid_pharmacists_2022",
+            "pages": [
+              1,
+              2
+            ],
+            "ranks": {
+              "original": 1,
+              "agent": 1
+            },
+            "scores": {
+              "original": 0.5871,
+              "agent": 0.9957
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s5",
+            "doc_id": "cms_partd_dmp_guidance_2019",
+            "pages": [
+              9,
+              10
+            ],
+            "ranks": {
+              "original": 2,
+              "agent": 3
+            },
+            "scores": {
+              "original": 0.0524,
+              "agent": 0.3975
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s19",
+            "doc_id": "cms_partd_dmp_guidance_2019",
+            "pages": [
+              36,
+              37,
+              38
+            ],
+            "ranks": {
+              "original": 3,
+              "agent": 2
+            },
+            "scores": {
+              "original": 0.0169,
+              "agent": 0.7017
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s4",
+            "doc_id": "cms_partd_dmp_guidance_2019",
+            "pages": [
+              7,
+              8,
+              9
+            ],
+            "ranks": {
+              "original": 5,
+              "agent": 4
+            },
+            "scores": {
+              "original": 0.0018,
+              "agent": 0.0597
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s20",
+            "doc_id": "cms_partd_dmp_guidance_2019",
+            "pages": [
+              38,
+              39,
+              40
+            ],
+            "ranks": {
+              "original": 4,
+              "agent": 6
+            },
+            "scores": {
+              "original": 0.002,
+              "agent": 0.0138
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s10",
+            "doc_id": "cms_partd_dmp_guidance_2019",
+            "pages": [
+              16,
+              17,
+              18
+            ],
+            "ranks": {
+              "original": 8,
+              "agent": 5
+            },
+            "scores": {
+              "original": 0.0004,
+              "agent": 0.0279
+            }
+          },
+          {
+            "unit": "cms_partd_opioid_pharmacists_2022:s2",
+            "doc_id": "cms_partd_opioid_pharmacists_2022",
+            "pages": [
+              2
+            ],
+            "ranks": {
+              "original": 7,
+              "agent": 7
+            },
+            "scores": {
+              "original": 0.0004,
+              "agent": 0.011
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s9",
+            "doc_id": "cms_partd_dmp_guidance_2019",
+            "pages": [
+              14,
+              15,
+              16
+            ],
+            "ranks": {
+              "original": 6
+            },
+            "scores": {
+              "original": 0.0004
+            }
+          },
+          {
+            "unit": "cms_partd_dmp_guidance_2019:s11",
+            "doc_id": "cms_partd_dmp_guidance_2019",
+            "pages": [
+              18,
+              19,
+              20
+            ],
+            "ranks": {
+              "agent": 8
+            },
+            "scores": {
+              "agent": 0.0079
+            }
+          }
+        ]
+      },
+      "t_start": 2.18
+    }
+  ],
+  "cited_evidence": {
+    "cms_partd_opioid_pharmacists_2022:p1": "cms_partd_opioid_pharmacists_2022 (Medicare Part D, summary_of_binding_policy, 2022-12-19)\nMedicare Part D Opioid Policies: Information for Pharmacists > Opioid Safety Edits\n[p 1]\nImportant Note(s):\nCMS expects Part D plan sponsors to have a mechanism in place which allows all opioid safety alerts, including hard edits, to be overridden at point of sale (POS) at the pharmacy based on information from the prescriber or otherwise known to the pharmacy that an enrollee is exempt.\nMorphine Milligram Equivalent (MME) thresholds and days supply limits are not prescribing limits. The enrollee or their prescriber can request an expedited or standard coverage determination from the plan for approval of higher amounts or a longer days supply. This can be done in advance of the prescription.\nOpioid Safety Edit\nPharmacist's Role\nOpioid care coordination edit at 90 morphine milligram equivalent (MME)\nProvide information to the plan for override if known to pharmacist that enrollee has an exemption (discussed above) or if prescriber has recently been consulted and the pharmacist has up to date clinical information. Overrides may be communicated at POS.\nÎ This edit triggers when an enrollee's cumulative MME per day across their opioid prescription(s) reaches or exceeds 90 MME.\nOutside of a known exclusion or the COVID-19 waiver, when the care coordination edit is triggered, consult with the enrollee's prescriber to confirm intent. The consultation should be consistent with current pharmacy practice to verify the prescription and to validate its clinical appropriateness. This is an opportunity to inform the prescriber of other opioid prescribers or increasing amounts of opioids.\nÎ Some plans have this alert only when the enrollee uses multiple opioid prescribers and/or opioid dispensing pharmacies.\nÎ If the pharmacist recently consulted with the prescriber and has up to date clinical information (e.g., Prescription Drug Monitoring Program (PDMP) system or other records), additional consultation with the prescriber is not expected.\nDocument the discussion and submit the appropriate override code. The documentation may include the date, time, name of prescriber, and brief note that the prescriber confirmed intent, did not confirm intent, provided information on enrollee exclusion, or could not be reached after 'X' number of attempts.\nÎ Due to the increased burden on the healthcare system as a result of the COVID-19 pandemic, plans may waive requirements for pharmacist consultation with the prescriber to confirm intent.\nIf the issue is not resolved at the POS and the prescription cannot be filled as written, distribute a copy of the standardized CMS pharmacy notice Medicare Prescription Drug Coverage and Your Rights to the enrollee.\n[p 2]\nOpioid Safety Edit\nPharmacist's Role\nOptional Hard Edit at 200 MME or more\nProvide information to the plan for override if known to pharmacist that enrollee has an exemption (discussed above). Overrides for exemptions from the safety edit may be communicated at POS with a transaction code or by contacting the plan directly.\nÎ Some plans may implement a hard edit when a enrollee's cumulative opioid daily dosage reaches 200 MME or more.\nIf the issue is not resolved at the POS and the prescription cannot be filled as written, distribute a copy of the standardized CMS pharmacy notice Medicare Prescription Drug Coverage and Your Rights to the enrollee.\nÎ Some plans have this alert only when the enrollee has multiple opioid prescribers and/or opioid dispensing pharmacies.\nSeven-day supply limit for opioid naïve enrollees (hard edit)\nProvide information to the plan for override if known to pharmacist that enrollee has an exemption (discussed above) or is currently taking opioids. Overrides may be communicated at POS with a transaction code or by contacting the plan directly.\nÎ Medicare Part D enrollees who have not filled an opioid prescription recently will be limited to a supply of 7 days or less.\nIf no override, enrollee may receive up to a 7 days supply or request a coverage determination for full days supply as written.\nÎ Subsequent prescriptions filled during the plan's review window (generally 60-90 days) will not be subject to the 7 days supply limit.\nIf the issue is not resolved at the POS and the prescription cannot be filled as written, including when the full days supply is not dispensed, distribute a copy of the standardized CMS pharmacy notice Medicare Prescription Drug Coverage and Your Rights to the enrollee.\nÎ This edit should not impact enrollees who already take opioids, but may occur for enrollees who enroll in a new plan that does not know their current prescription information.\nConcurrent opioid and benzodiazepine use or duplicative long-acting opioid therapy (soft edits)\nConduct additional safety review to determine if the enrollee's medication use is safe and clinically appropriate.\nÎ These soft edits will trigger when the enrollee is taking opioids and benzodiazepines concurrently or is taking multiple long-acting opioids.\nIf the issue is not resolved at the POS and the prescription cannot be filled as written, distribute a copy of the standardized CMS pharmacy notice Medicare Prescription Drug Coverage and Your Rights to the enrollee.",
+    "cms_partd_opioid_pharmacists_2022:p2": "cms_partd_opioid_pharmacists_2022 (Medicare Part D, summary_of_binding_policy, 2022-12-19)\nMedicare Part D Opioid Policies: Information for Pharmacists > Opioid Safety Edits\n[p 1]\nImportant Note(s):\nCMS expects Part D plan sponsors to have a mechanism in place which allows all opioid safety alerts, including hard edits, to be overridden at point of sale (POS) at the pharmacy based on information from the prescriber or otherwise known to the pharmacy that an enrollee is exempt.\nMorphine Milligram Equivalent (MME) thresholds and days supply limits are not prescribing limits. The enrollee or their prescriber can request an expedited or standard coverage determination from the plan for approval of higher amounts or a longer days supply. This can be done in advance of the prescription.\nOpioid Safety Edit\nPharmacist's Role\nOpioid care coordination edit at 90 morphine milligram equivalent (MME)\nProvide information to the plan for override if known to pharmacist that enrollee has an exemption (discussed above) or if prescriber has recently been consulted and the pharmacist has up to date clinical information. Overrides may be communicated at POS.\nÎ This edit triggers when an enrollee's cumulative MME per day across their opioid prescription(s) reaches or exceeds 90 MME.\nOutside of a known exclusion or the COVID-19 waiver, when the care coordination edit is triggered, consult with the enrollee's prescriber to confirm intent. The consultation should be consistent with current pharmacy practice to verify the prescription and to validate its clinical appropriateness. This is an opportunity to inform the prescriber of other opioid prescribers or increasing amounts of opioids.\nÎ Some plans have this alert only when the enrollee uses multiple opioid prescribers and/or opioid dispensing pharmacies.\nÎ If the pharmacist recently consulted with the prescriber and has up to date clinical information (e.g., Prescription Drug Monitoring Program (PDMP) system or other records), additional consultation with the prescriber is not expected.\nDocument the discussion and submit the appropriate override code. The documentation may include the date, time, name of prescriber, and brief note that the prescriber confirmed intent, did not confirm intent, provided information on enrollee exclusion, or could not be reached after 'X' number of attempts.\nÎ Due to the increased burden on the healthcare system as a result of the COVID-19 pandemic, plans may waive requirements for pharmacist consultation with the prescriber to confirm intent.\nIf the issue is not resolved at the POS and the prescription cannot be filled as written, distribute a copy of the standardized CMS pharmacy notice Medicare Prescription Drug Coverage and Your Rights to the enrollee.\n[p 2]\nOpioid Safety Edit\nPharmacist's Role\nOptional Hard Edit at 200 MME or more\nProvide information to the plan for override if known to pharmacist that enrollee has an exemption (discussed above). Overrides for exemptions from the safety edit may be communicated at POS with a transaction code or by contacting the plan directly.\nÎ Some plans may implement a hard edit when a enrollee's cumulative opioid daily dosage reaches 200 MME or more.\nIf the issue is not resolved at the POS and the prescription cannot be filled as written, distribute a copy of the standardized CMS pharmacy notice Medicare Prescription Drug Coverage and Your Rights to the enrollee.\nÎ Some plans have this alert only when the enrollee has multiple opioid prescribers and/or opioid dispensing pharmacies.\nSeven-day supply limit for opioid naïve enrollees (hard edit)\nProvide information to the plan for override if known to pharmacist that enrollee has an exemption (discussed above) or is currently taking opioids. Overrides may be communicated at POS with a transaction code or by contacting the plan directly.\nÎ Medicare Part D enrollees who have not filled an opioid prescription recently will be limited to a supply of 7 days or less.\nIf no override, enrollee may receive up to a 7 days supply or request a coverage determination for full days supply as written.\nÎ Subsequent prescriptions filled during the plan's review window (generally 60-90 days) will not be subject to the 7 days supply limit.\nIf the issue is not resolved at the POS and the prescription cannot be filled as written, including when the full days supply is not dispensed, distribute a copy of the standardized CMS pharmacy notice Medicare Prescription Drug Coverage and Your Rights to the enrollee.\nÎ This edit should not impact enrollees who already take opioids, but may occur for enrollees who enroll in a new plan that does not know their current prescription information.\nConcurrent opioid and benzodiazepine use or duplicative long-acting opioid therapy (soft edits)\nConduct additional safety review to determine if the enrollee's medication use is safe and clinically appropriate.\nÎ These soft edits will trigger when the enrollee is taking opioids and benzodiazepines concurrently or is taking multiple long-acting opioids.\nIf the issue is not resolved at the POS and the prescription cannot be filled as written, distribute a copy of the standardized CMS pharmacy notice Medicare Prescription Drug Coverage and Your Rights to the enrollee.\n\ncms_partd_opioid_pharmacists_2022 (Medicare Part D, summary_of_binding_policy, 2022-12-19)\nMedicare Part D Opioid Policies: Information for Pharmacists > Drug Management Programs (DMPs)\n[p 2]\nAll Medicare Part D plans must have a DMP that limits access to opioids and/or benzodiazepines for enrollees considered by the plan to be at risk for prescription drug abuse or misuse. Enrollees are identified by opioid use involving multiple doctors and pharmacies or a recent history of opioid-related overdose, and undergo case management conducted by the plan with the enrollee's prescribers.\nDMP limitations can include requiring the enrollee to obtain these medications from a specified prescriber and/or pharmacy, or implementing a "
+  },
+  "cited_evidence_parts": {
+    "cms_partd_opioid_pharmacists_2022:p1": [
+      "cms_partd_opioid_pharmacists_2022 (Medicare Part D, summary_of_binding_policy, 2022-12-19)\nMedicare Part D Opioid Policies: Information for Pharmacists > Opioid Safety Edits\n[p 1]\nImportant Note(s):\nCMS expects Part D plan sponsors to have a mechanism in place which allows all opioid safety alerts, including hard edits, to be overridden at point of sale (POS) at the pharmacy based on information from the prescriber or otherwise known to the pharmacy that an enrollee is exempt.\nMorphine Milligram Equivalent (MME) thresholds and days supply limits are not prescribing limits. The enrollee or their prescriber can request an expedited or standard coverage determination from the plan for approval of higher amounts or a longer days supply. This can be done in advance of the prescription.\nOpioid Safety Edit\nPharmacist's Role\nOpioid care coordination edit at 90 morphine milligram equivalent (MME)\nProvide information to the plan for override if known to pharmacist that enrollee has an exemption (discussed above) or if prescriber has recently been consulted and the pharmacist has up to date clinical information. Overrides may be communicated at POS.\nÎ This edit triggers when an enrollee's cumulative MME per day across their opioid prescription(s) reaches or exceeds 90 MME.\nOutside of a known exclusion or the COVID-19 waiver, when the care coordination edit is triggered, consult with the enrollee's prescriber to confirm intent. The consultation should be consistent with current pharmacy practice to verify the prescription and to validate its clinical appropriateness. This is an opportunity to inform the prescriber of other opioid prescribers or increasing amounts of opioids.\nÎ Some plans have this alert only when the enrollee uses multiple opioid prescribers and/or opioid dispensing pharmacies.\nÎ If the pharmacist recently consulted with the prescriber and has up to date clinical information (e.g., Prescription Drug Monitoring Program (PDMP) system or other records), additional consultation with the prescriber is not expected.\nDocument the discussion and submit the appropriate override code. The documentation may include the date, time, name of prescriber, and brief note that the prescriber confirmed intent, did not confirm intent, provided information on enrollee exclusion, or could not be reached after 'X' number of attempts.\nÎ Due to the increased burden on the healthcare system as a result of the COVID-19 pandemic, plans may waive requirements for pharmacist consultation with the prescriber to confirm intent.\nIf the issue is not resolved at the POS and the prescription cannot be filled as written, distribute a copy of the standardized CMS pharmacy notice Medicare Prescription Drug Coverage and Your Rights to the enrollee.\n[p 2]\nOpioid Safety Edit\nPharmacist's Role\nOptional Hard Edit at 200 MME or more\nProvide information to the plan for override if known to pharmacist that enrollee has an exemption (discussed above). Overrides for exemptions from the safety edit may be communicated at POS with a transaction code or by contacting the plan directly.\nÎ Some plans may implement a hard edit when a enrollee's cumulative opioid daily dosage reaches 200 MME or more.\nIf the issue is not resolved at the POS and the prescription cannot be filled as written, distribute a copy of the standardized CMS pharmacy notice Medicare Prescription Drug Coverage and Your Rights to the enrollee.\nÎ Some plans have this alert only when the enrollee has multiple opioid prescribers and/or opioid dispensing pharmacies.\nSeven-day supply limit for opioid naïve enrollees (hard edit)\nProvide information to the plan for override if known to pharmacist that enrollee has an exemption (discussed above) or is currently taking opioids. Overrides may be communicated at POS with a transaction code or by contacting the plan directly.\nÎ Medicare Part D enrollees who have not filled an opioid prescription recently will be limited to a supply of 7 days or less.\nIf no override, enrollee may receive up to a 7 days supply or request a coverage determination for full days supply as written.\nÎ Subsequent prescriptions filled during the plan's review window (generally 60-90 days) will not be subject to the 7 days supply limit.\nIf the issue is not resolved at the POS and the prescription cannot be filled as written, including when the full days supply is not dispensed, distribute a copy of the standardized CMS pharmacy notice Medicare Prescription Drug Coverage and Your Rights to the enrollee.\nÎ This edit should not impact enrollees who already take opioids, but may occur for enrollees who enroll in a new plan that does not know their current prescription information.\nConcurrent opioid and benzodiazepine use or duplicative long-acting opioid therapy (soft edits)\nConduct additional safety review to determine if the enrollee's medication use is safe and clinically appropriate.\nÎ These soft edits will trigger when the enrollee is taking opioids and benzodiazepines concurrently or is taking multiple long-acting opioids.\nIf the issue is not resolved at the POS and the prescription cannot be filled as written, distribute a copy of the standardized CMS pharmacy notice Medicare Prescription Drug Coverage and Your Rights to the enrollee."
+    ],
+    "cms_partd_opioid_pharmacists_2022:p2": [
+      "cms_partd_opioid_pharmacists_2022 (Medicare Part D, summary_of_binding_policy, 2022-12-19)\nMedicare Part D Opioid Policies: Information for Pharmacists > Opioid Safety Edits\n[p 1]\nImportant Note(s):\nCMS expects Part D plan sponsors to have a mechanism in place which allows all opioid safety alerts, including hard edits, to be overridden at point of sale (POS) at the pharmacy based on information from the prescriber or otherwise known to the pharmacy that an enrollee is exempt.\nMorphine Milligram Equivalent (MME) thresholds and days supply limits are not prescribing limits. The enrollee or their prescriber can request an expedited or standard coverage determination from the plan for approval of higher amounts or a longer days supply. This can be done in advance of the prescription.\nOpioid Safety Edit\nPharmacist's Role\nOpioid care coordination edit at 90 morphine milligram equivalent (MME)\nProvide information to the plan for override if known to pharmacist that enrollee has an exemption (discussed above) or if prescriber has recently been consulted and the pharmacist has up to date clinical information. Overrides may be communicated at POS.\nÎ This edit triggers when an enrollee's cumulative MME per day across their opioid prescription(s) reaches or exceeds 90 MME.\nOutside of a known exclusion or the COVID-19 waiver, when the care coordination edit is triggered, consult with the enrollee's prescriber to confirm intent. The consultation should be consistent with current pharmacy practice to verify the prescription and to validate its clinical appropriateness. This is an opportunity to inform the prescriber of other opioid prescribers or increasing amounts of opioids.\nÎ Some plans have this alert only when the enrollee uses multiple opioid prescribers and/or opioid dispensing pharmacies.\nÎ If the pharmacist recently consulted with the prescriber and has up to date clinical information (e.g., Prescription Drug Monitoring Program (PDMP) system or other records), additional consultation with the prescriber is not expected.\nDocument the discussion and submit the appropriate override code. The documentation may include the date, time, name of prescriber, and brief note that the prescriber confirmed intent, did not confirm intent, provided information on enrollee exclusion, or could not be reached after 'X' number of attempts.\nÎ Due to the increased burden on the healthcare system as a result of the COVID-19 pandemic, plans may waive requirements for pharmacist consultation with the prescriber to confirm intent.\nIf the issue is not resolved at the POS and the prescription cannot be filled as written, distribute a copy of the standardized CMS pharmacy notice Medicare Prescription Drug Coverage and Your Rights to the enrollee.\n[p 2]\nOpioid Safety Edit\nPharmacist's Role\nOptional Hard Edit at 200 MME or more\nProvide information to the plan for override if known to pharmacist that enrollee has an exemption (discussed above). Overrides for exemptions from the safety edit may be communicated at POS with a transaction code or by contacting the plan directly.\nÎ Some plans may implement a hard edit when a enrollee's cumulative opioid daily dosage reaches 200 MME or more.\nIf the issue is not resolved at the POS and the prescription cannot be filled as written, distribute a copy of the standardized CMS pharmacy notice Medicare Prescription Drug Coverage and Your Rights to the enrollee.\nÎ Some plans have this alert only when the enrollee has multiple opioid prescribers and/or opioid dispensing pharmacies.\nSeven-day supply limit for opioid naïve enrollees (hard edit)\nProvide information to the plan for override if known to pharmacist that enrollee has an exemption (discussed above) or is currently taking opioids. Overrides may be communicated at POS with a transaction code or by contacting the plan directly.\nÎ Medicare Part D enrollees who have not filled an opioid prescription recently will be limited to a supply of 7 days or less.\nIf no override, enrollee may receive up to a 7 days supply or request a coverage determination for full days supply as written.\nÎ Subsequent prescriptions filled during the plan's review window (generally 60-90 days) will not be subject to the 7 days supply limit.\nIf the issue is not resolved at the POS and the prescription cannot be filled as written, including when the full days supply is not dispensed, distribute a copy of the standardized CMS pharmacy notice Medicare Prescription Drug Coverage and Your Rights to the enrollee.\nÎ This edit should not impact enrollees who already take opioids, but may occur for enrollees who enroll in a new plan that does not know their current prescription information.\nConcurrent opioid and benzodiazepine use or duplicative long-acting opioid therapy (soft edits)\nConduct additional safety review to determine if the enrollee's medication use is safe and clinically appropriate.\nÎ These soft edits will trigger when the enrollee is taking opioids and benzodiazepines concurrently or is taking multiple long-acting opioids.\nIf the issue is not resolved at the POS and the prescription cannot be filled as written, distribute a copy of the standardized CMS pharmacy notice Medicare Prescription Drug Coverage and Your Rights to the enrollee.\n\ncms_partd_opioid_pharmacists_2022 (Medicare Part D, summary_of_binding_policy, 2022-12-19)\nMedicare Part D Opioid Policies: Information for Pharmacists > Drug Management Programs (DMPs)\n[p 2]\nAll Medicare Part D plans must have a DMP that limits access to opioids and/or benzodiazepines for enrollees considered by the plan to be at risk for prescription drug abuse or misuse. Enrollees are identified by opioid use involving multiple doctors and pharmacies or a recent history of opioid-related overdose, and undergo case management conducted by the plan with the enrollee's prescribers.\nDMP limitations can include requiring the enrollee to obtain these medications from a specified prescriber and/or pharmacy, or implementing a "
+    ]
+  },
+  "cost_note": "priced at the requested model's rates; a fallback hop bills at its own rates",
+  "request_id": "821681ca-d452-4020-9667-d37aa3c2e478",
+  "request_started_utc": "2026-10-18T03:53:20.033480+00:00",
+  "citation_check": {
+    "t_start": 10.351,
+    "duration_s": 0.0
+  },
+  "prices_per_mtok": {
+    "input": 2.0,
+    "output": 10.0,
+    "cache_read": 0.2,
+    "cache_write": 2.5
+  }
+}

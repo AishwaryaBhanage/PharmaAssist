@@ -1,0 +1,355 @@
+{
+  "run": "v2_checklist_visual_2026-10-18_1939",
+  "run_dir": "reports/evals/v2_checklist_visual_2026-10-18_1939",
+  "golden": "evals/visual.jsonl",
+  "judge": "claude-sonnet-5-5",
+  "deepeval_version": "4.3.1",
+  "scored_at": "2026-10-18 19:48",
+  "n": 8,
+  "n_requested": 8,
+  "elapsed_s": 31.1,
+  "cost_usd": 0.6034,
+  "cost_estimated_metrics": 0,
+  "context_sources": {
+    "trace.cited_evidence": 8
+  },
+  "metrics": {
+    "groundedness": "FaithfulnessMetric(threshold=0.5)",
+    "truthfulness": "HallucinationMetric(threshold=0.5).score (deepeval 4.3.1: share of context passages the answer agrees with; contradicted_share = 1 - score)",
+    "relevancy": "AnswerRelevancyMetric(threshold=0.5)",
+    "accuracy": "GEval(name='accuracy', criteria=..., params=[input, actual_output, expected_output], threshold=0.5)"
+  },
+  "accuracy_criteria": "Compare the actual output with the expected output for a pharmacy staff question; score 1 when every fact the expected output states is present and correct in the actual output, 0.5 when the main conclusion is right but a stated condition, limit, date, program or process step is missing, 0 when the conclusion is wrong or contradicts the expected output; extra correct detail is not penalised",
+  "means": {
+    "accuracy": 0.875,
+    "accuracy_n": 8,
+    "truthfulness": 1.0,
+    "truthfulness_n": 8,
+    "groundedness": 0.975,
+    "groundedness_n": 8,
+    "relevancy": 0.972,
+    "relevancy_n": 8
+  },
+  "questions": [
+    {
+      "id": "V01",
+      "status": "answered",
+      "context_source": "trace.cited_evidence",
+      "n_context": 1,
+      "judge": "claude-sonnet-5-5",
+      "scores": {
+        "truthfulness": 1.0,
+        "contradicted_share": 0.0,
+        "accuracy": 0.9,
+        "relevancy": 0.7778,
+        "groundedness": 1.0
+      },
+      "reasons": {
+        "truthfulness": "The score is 1.00 because the actual output fully agrees with the context and there are no contradictions. It correctly follows the flowchart: with no established/high ASCVD risk, diabetic nephropathy, or heart failure (Box 6 = No), the path skips Box 7 and goes to Box 8. If the glycemic target is not met (Box 8 = No), Box 10 says to add medications until the target A1C is reached, choosing based on efficacy and risk-benefit and referring to CPG Appendix B. The extra formulary/coverage disclaimer does not conflict with the context.",
+        "accuracy": "The main conclusion matches the Expected Output: with no ASCVD, nephropathy or HF and the patient not at target, the next step is to consider additional medications until the target A1C range is achieved. The agent is selected on efficacy and risk-benefit ratio, with reference to CPG Appendix B. The response also correctly says the algorithm skips the GLP-1 RA/SGLT-2 comorbidity step (Box 7) and goes to the glycemic target question (Box 8). It does not cite the box numbers (Box 6 No, Box 8 No, Box 10), which is a minor omission in precision, but the content of each step is present and nothing contradicts the Expected Output. The added note that this is not a formulary determination is harmless.",
+        "relevancy": "The score is 0.78 because most of the response addressed the VA/DoD T2DM algorithm step for a patient without ASCVD, nephropathy or heart failure who is above their glycemic target. It is not higher because it also included a general disclaimer and a note about formulary and coverage. Neither of these answers the question about the next management step, so they diluted the response.",
+        "groundedness": "The score is 1.00 because there are no contradictions between the actual output and the retrieval context. Every claim in the output is supported by the source material. Keep up the great work!"
+      },
+      "skipped": {},
+      "errors": {},
+      "timings_s": {
+        "truthfulness": 3.92,
+        "accuracy": 5.08,
+        "relevancy": 7.13,
+        "groundedness": 9.81
+      },
+      "cost_usd": 0.05759,
+      "question": "Per the VA/DoD diabetes guideline's T2DM management algorithm, a patient has no ASCVD, nephropathy or heart failure and is not at their glycemic target. What is the next step?",
+      "answer": "Assuming VA clinical guidance: in Module A, after metformin/non-pharm review, if the patient **does not** have established/high-risk ASCVD, diabetic nephropathy, or HF, the algorithm skips the GLP-1 RA/SGLT-2 comorbidity step and asks whether glycemic target is achieved. If **not at target**, the next step is: **consider additional medications until the target A1C range is achieved**, selecting the agent based on **efficacy and risk–benefit ratio** and referring to **CPG Appendix B**. This is clinical guidance, not a VA formulary/coverage determination.",
+      "expected_answer": "Box 8 'No' leads to Box 10: consider additional medications until the target A1C range is achieved, selecting the agent based on efficacy and risk-benefit ratio (see CPG Appendix B). Box 6 'No' skips Box 7 (GLP-1 RA/SGLT-2 inhibitor) and goes to Box 8.",
+      "harness": {
+        "accuracy": "correct",
+        "groundedness": "0.333",
+        "claims_supported": "2",
+        "claims_partial": "0",
+        "claims_unsupported": "4",
+        "judge_reason": "Matches reference: skips GLP-1/SGLT-2 step, then consider additional medications until target A1C based on efficacy and risk-benefit, Appendix B."
+      }
+    },
+    {
+      "id": "V02",
+      "status": "answered",
+      "context_source": "trace.cited_evidence",
+      "n_context": 3,
+      "judge": "claude-sonnet-5-5",
+      "scores": {
+        "accuracy": 1.0,
+        "truthfulness": 1.0,
+        "contradicted_share": 0.0,
+        "relevancy": 1.0,
+        "groundedness": 1.0
+      },
+      "reasons": {
+        "accuracy": "The main conclusion matches the Expected Output. DSMES or MNT is offered at initial diagnosis, when treatment goals are not met, and with a change in health status or barriers to self-management. For the acute setting, the response says survival-skills training comes first, then referral for DSMES or MNT after acute care, then outpatient DSMES/MNT enrollment. This covers every Expected Output fact. It omits the Box 14/15 and Sidebar 5 references, but these are labels rather than substantive facts. The added 2025 VA DSMES summary timing is extra detail that does not contradict the Expected Output, and the added assessment/screening and ongoing support steps are likewise extra and not penalized.",
+        "truthfulness": "The score is 1.00 because the actual output fully aligns with the contexts and there are no contradictions. It correctly gives the timing triggers for DSMES/MNT (initial diagnosis, not meeting treatment goals, change in health status or barriers). It also correctly describes the acute-setting path from survival skills training and referral through enrollment, assessment/screening, and ongoing support. This matches both the Module B description and the algorithm boxes 13-18, as well as the 2025 VA summary. Its remark that DSMES-only timing does not replace the algorithm is an interpretive addition that does not contradict the context.",
+        "relevancy": "The score is 1.00 because the response stayed fully on topic. It addressed when patients with T2DM should be offered DSMES or MNT, and what should happen first in an acute setting, with no irrelevant statements. Great job staying focused on the question!",
+        "groundedness": "The score is 1.00 because there are no contradictions between the actual output and the retrieval context. Every claim in the output is supported by the source material. Keep up the great work!"
+      },
+      "skipped": {},
+      "errors": {},
+      "timings_s": {
+        "accuracy": 4.53,
+        "truthfulness": 6.05,
+        "relevancy": 7.0,
+        "groundedness": 14.01
+      },
+      "cost_usd": 0.0835,
+      "question": "When should patients with T2DM be offered DSMES or MNT, and what should happen first if the patient is being treated in an acute setting?",
+      "answer": "Assuming VA clinical guidance: offer **DSMES or MNT** for T2DM at **initial diagnosis**, **when not meeting treatment goals**, and with a **change in health status or barriers to self-management**. A 2025 VA DSMES summary also lists DSMES **at diagnosis, annually, when not meeting goals, and when complicating factors or care/life transitions occur**; that DSMES-only timing does not replace the DSMES/MNT algorithm.\n\nIf the patient is in an **acute setting**, do **survival-skills training first**, then refer for DSMES or MNT after acute care, followed by outpatient DSMES/MNT enrollment, assessment/screening, and comprehensive/ongoing support.",
+      "expected_answer": "Offer DSMES or MNT at initial diagnosis, when not meeting treatment goals, and with a change in health status or barriers to self-management. In an acute setting (Box 14 Yes -> Box 15): train in survival skills (Sidebar 5) and refer for DSMES or MNT following acute care, then consult/enroll in an outpatient VA/DoD DSMES and MNT program.",
+      "harness": {
+        "accuracy": "correct",
+        "groundedness": "1.0",
+        "claims_supported": "5",
+        "claims_partial": "0",
+        "claims_unsupported": "0",
+        "judge_reason": "Matches reference: three timing triggers, survival skills first in acute setting, referral after acute care, then outpatient DSMES/MNT enrollment. Extra 2025 summary detail doesn't contradict."
+      }
+    },
+    {
+      "id": "V03",
+      "status": "answered",
+      "context_source": "trace.cited_evidence",
+      "n_context": 2,
+      "judge": "claude-sonnet-5-5",
+      "scores": {
+        "accuracy": 0.8,
+        "truthfulness": 1.0,
+        "contradicted_share": 0.0,
+        "relevancy": 1.0,
+        "groundedness": 0.8
+      },
+      "reasons": {
+        "accuracy": "The main conclusion is correct and matches the Expected Output: do not start opioids, exit the algorithm, and manage with non-opioid modalities. It also correctly says that a 'No' on whether the patient can/will engage in a comprehensive pain care plan leads to exiting the algorithm. The only gap is that it never cites Box 10 or Box 17, which the Expected Output names as the process steps. The extra detail about risk assessment and consultation is relevant and does not contradict anything. The missing box references keep it from a full score.",
+        "truthfulness": "The score is 1.00 because the actual output matches both the Module A flowchart and its alternative text description, with no contradictions. It follows the correct path (Boxes 3, 5, 6, 7, 8, 10, then 17), and its conclusion that opioids should not be started when the patient is unable or unwilling to engage in a comprehensive pain care plan is consistent with the source. It omits Boxes 11-16 and frames the path somewhat narrowly, but it does not contradict the contexts.",
+        "relevancy": "The score is 1.00 because the response stayed fully on topic. It addressed whether opioids should be started under the VA/DoD opioid algorithm for a patient with chronic pain who has not responded to optimized non-opioid treatment and cannot or will not engage in a comprehensive pain care plan. No irrelevant statements were found. Great job staying focused on the question!",
+        "groundedness": "The score is 0.80 because the actual output mostly aligns with the retrieval context but contains one contradiction. It claims opioids should not be started when optimized non-opioid treatment is ineffective. The context says the algorithm then moves to an opioid risk assessment and interdisciplinary consultation. Opioids can be added if later criteria are met: benefits outweigh risks, the patient is willing, there is an indication, risk mitigation is ready, and informed consent is given."
+      },
+      "skipped": {},
+      "errors": {},
+      "timings_s": {
+        "accuracy": 4.5,
+        "truthfulness": 5.81,
+        "relevancy": 5.89,
+        "groundedness": 11.59
+      },
+      "cost_usd": 0.07385,
+      "question": "A patient with chronic pain is not on opioids; optimized non-opioid treatment has not been effective, but the patient is not able or willing to engage in a comprehensive pain care plan. Per the VA/DoD opioid algorithm, should opioids be started?",
+      "answer": "Per the VA/DoD algorithm: **No—do not start opioids in this scenario.**\n\nFor a chronic-pain patient **not currently on opioids**, after optimized non-opioid treatment is ineffective, the algorithm proceeds to opioid risk assessment and appropriate interdisciplinary/specialty consultation. If potential benefits outweigh risks, it then asks whether the patient is **able and willing to engage in a comprehensive pain care plan**. A **“No”** at that decision point leads to: **“Exit algorithm; manage with non-opioid modalities.”**\n\nSo opioids should not be initiated unless they are part of a documented comprehensive pain care plan and the patient can/will engage in it.",
+      "expected_answer": "No. Box 10 'No' leads to Box 17: exit the algorithm and manage with non-opioid modalities.",
+      "harness": {
+        "accuracy": "correct",
+        "groundedness": "0.25",
+        "claims_supported": "1",
+        "claims_partial": "1",
+        "claims_unsupported": "2",
+        "judge_reason": "Correctly says no opioids; the 'No' at the comprehensive care plan decision leads to exiting the algorithm and managing with non-opioid modalities. Omitting box numbers is minor."
+      }
+    },
+    {
+      "id": "V04",
+      "status": "answered",
+      "context_source": "trace.cited_evidence",
+      "n_context": 5,
+      "judge": "claude-sonnet-5-5",
+      "scores": {
+        "accuracy": 0.9,
+        "truthfulness": 1.0,
+        "contradicted_share": 0.0,
+        "relevancy": 1.0,
+        "groundedness": 1.0
+      },
+      "reasons": {
+        "accuracy": "The Actual Output gives the same main conclusion as the Expected Output. The first reevaluation should be 1-4 weeks after initiation and no later than 30 days (30 days or fewer). For a stable patient with no added risk factors, reassessment is every 1-3 months, with more frequent follow-up if risk changes. The extra detail about 90 days/3 months as a starting standard and the list of reassessment domains does not contradict the Expected Output. The Actual Output omits the algorithm references (Box 26 No -> Box 28, Sidebar G) and the phrase 'as needed clinically', which are minor missing process details. It also opens with an assumption that the VA/DoD guidance applies, though that framing is consistent with the context.",
+        "truthfulness": "The score is 1.00 because the actual output has no contradictions with the contexts. It agrees with the algorithm in context 1 (reevaluation at 1–4 weeks, same assessment items, 1–3 month reassessment for stable patients). It matches contexts 2 and 3 on reevaluation at 30 days or fewer, and context 5 on 90 days as a starting standard with more frequent follow-up when risk changes. It does not mention the pain catastrophizing topic in context 4, but this is compatible and not a contradiction.",
+        "relevancy": "The score is 1.00 because the response stayed fully on topic. It addressed both parts of the question: when the first reevaluation should happen after starting opioids for chronic pain, and how often a stable patient with no added risk factors should be reassessed. There were no irrelevant statements. Great work!",
+        "groundedness": "The score is 1.00 because there are no contradictions between the actual output and the retrieval context. Every claim in the output is supported by the source material. Great work keeping the response accurate and faithful!"
+      },
+      "skipped": {},
+      "errors": {},
+      "timings_s": {
+        "accuracy": 5.35,
+        "truthfulness": 6.2,
+        "relevancy": 7.01,
+        "groundedness": 18.08
+      },
+      "cost_usd": 0.11603,
+      "question": "After initiating opioids for chronic pain, when should the first reevaluation happen, and if the patient is stable without added risk factors, how often should they be reassessed?",
+      "answer": "Assuming VA/DoD chronic pain opioid guidance: first reevaluation should be planned **within 30 days or fewer** after initiation; the algorithm frames this as **1–4 weeks after starting, not later than 30 days**. At that visit, reassess function/pain, opioid risks/benefits, AEs, adherence, co-occurring medical/behavioral/SUD issues, patient preference, and risk-mitigation steps.\n\nIf continuing opioids and the patient is medically/behaviorally stable **without added risk factors**, reassess about **every 1–3 months**; the discussion also describes **90 days/3 months** as a reasonable starting standard, with more frequent follow-up if risk changes.",
+      "expected_answer": "Reevaluate as needed clinically and based on risk factors, e.g., 1-4 weeks after initiation and not later than 30 days (plan to reevaluate at 30 days or fewer). With no factors that increase risk (Box 26 No -> Box 28), reassess in 1-3 months or more frequently as determined by risk factors (Sidebar G).",
+      "harness": {
+        "accuracy": "correct",
+        "groundedness": "0.4",
+        "claims_supported": "2",
+        "claims_partial": "3",
+        "claims_unsupported": "0",
+        "judge_reason": "Gives 1-4 weeks, not later than 30 days, and 1-3 months for stable patients without risk factors; extra detail doesn't contradict the reference."
+      }
+    },
+    {
+      "id": "V05",
+      "status": "answered",
+      "context_source": "trace.cited_evidence",
+      "n_context": 2,
+      "judge": "claude-sonnet-5-5",
+      "scores": {
+        "truthfulness": 1.0,
+        "contradicted_share": 0.0,
+        "accuracy": 0.9,
+        "relevancy": 1.0,
+        "groundedness": 1.0
+      },
+      "reasons": {
+        "truthfulness": "The score is 1.00 because the actual output fully aligns with the context and has no contradictions. It correctly follows the flowchart path from Box 32 to Box 33 ('No'), then Box 35 ('Yes'), then Box 36. It also lists every Box 36 action as the context does and correctly ends with 'Exit algorithm'.",
+        "accuracy": "The main conclusion is correct: evidence of diversion leads to Box 36. Every action in the Expected Output is present and accurate: address safety and misuse, assess elevated suicide risk, assess withdrawal and offer expedited taper, immediate discontinuation, or medically assisted withdrawal, continue monitoring for SUD/behavioral health comorbidities, consider a partial agonist opioid or taper to discontinuation, manage with non-opioid modalities, and exit the algorithm. The only omissions are the explicit 'Box 35 Yes' reference and the 'Sidebar J' citation. The added framing (repeat biopsychosocial assessment, no SUD signs) does not contradict the Expected Output. Those two small omissions keep the score from being perfect.",
+        "relevancy": "The score is 1.00 because every statement in the output was relevant to what the VA/DoD algorithm directs when evidence of diversion is found during review of long-term opioid therapy. Nothing off-topic was included. Great work staying focused on the question!",
+        "groundedness": "The score is 1.00 because there are no contradictions between the actual output and the retrieval context. Every claim in the output is supported by the source material. Keep up the great work!"
+      },
+      "skipped": {},
+      "errors": {},
+      "timings_s": {
+        "truthfulness": 4.62,
+        "accuracy": 4.92,
+        "relevancy": 6.45,
+        "groundedness": 12.97
+      },
+      "cost_usd": 0.07842,
+      "question": "During review of long-term opioid therapy, there is evidence of diversion. What does the VA/DoD algorithm direct?",
+      "answer": "In the VA/DoD Module C algorithm, after repeat biopsychosocial assessment, if there are **no SUD signs/symptoms** but **evidence of diversion**, the path goes to Box 36:\n\n1. **Address safety and misuse.**\n2. **Assess elevated suicide risk.**\n3. **Assess withdrawal** and offer **expedited taper, immediate discontinuation, or medically assisted withdrawal** as indicated.\n4. Continue monitoring for **SUD/behavioral health comorbidities** and offer treatment as indicated.\n5. Consider switch to a **partial agonist opioid** or taper to discontinuation.\n6. Manage pain with **non-opioid modalities**.\n7. **Exit algorithm.**",
+      "expected_answer": "Box 35 Yes -> Box 36: address safety and misuse; assess for elevated suicide risk; assess for withdrawal and offer expedited taper, immediate discontinuation, or medically-assisted withdrawal as indicated; continue to monitor for SUD and behavioral health comorbidities; consider switch to partial agonist opioids or taper to discontinuation (Sidebar J); manage with non-opioid modalities; exit algorithm.",
+      "harness": {
+        "accuracy": "correct",
+        "groundedness": "0.889",
+        "claims_supported": "8",
+        "claims_partial": "1",
+        "claims_unsupported": "0",
+        "judge_reason": "Matches Box 36 actions fully: safety/misuse, suicide risk, withdrawal with expedited taper options, SUD monitoring, partial agonist/taper, non-opioid modalities, exit."
+      }
+    },
+    {
+      "id": "V06",
+      "status": "answered",
+      "context_source": "trace.cited_evidence",
+      "n_context": 1,
+      "judge": "claude-sonnet-5-5",
+      "scores": {
+        "truthfulness": 1.0,
+        "contradicted_share": 0.0,
+        "accuracy": 1.0,
+        "relevancy": 1.0,
+        "groundedness": 1.0
+      },
+      "reasons": {
+        "truthfulness": "The score is 1.00 because the actual output fully aligns with the context and has no contradictions. It defines the HF composite as CV death plus HF hospitalization, as the footnote does. It also reports the chart values correctly: SGLT2 inhibitors -31, GLP-1 RA -7, sulfonylurea +23, and DPP-4 inhibitors 0. It states that negative numbers mean reduced risk, and its added note that positive values mean increased risk is a reasonable inference that does not conflict with the context.",
+        "accuracy": "The Actual Output gives the same main conclusion as the Expected Output. It reports Figure 2's heart failure composite as SGLT2 inhibitors -31%, GLP-1 RA -7%, sulfonylurea +23%, and DPP-4 inhibitors 0%. It also notes that negative numbers indicate risk reduction and that the positive sulfonylurea value is an increase. The one addition, defining the composite as CV death + HF hospitalization, does not contradict the Expected Output. Every fact is present and accurate.",
+        "relevancy": "The score is 1.00 because the output contained no irrelevant statements. Every part of the response addressed the question about the relative risk change in the heart failure composite for each drug class in the 2025 VA T2DM pharmacotherapy summary figure. Great job staying focused!",
+        "groundedness": "The score is 1.00 because there are no contradictions between the actual output and the retrieval context. Every claim is supported by the retrieved information. Great work keeping the output accurate and grounded!"
+      },
+      "skipped": {},
+      "errors": {},
+      "timings_s": {
+        "truthfulness": 3.67,
+        "accuracy": 4.58,
+        "relevancy": 5.53,
+        "groundedness": 12.12
+      },
+      "cost_usd": 0.06456,
+      "question": "In the 2025 VA T2DM pharmacotherapy summary's figure on cardiac and renal benefits, what relative risk change in the heart failure composite is shown for each drug class?",
+      "answer": "In Figure 2, the **heart failure composite** is defined as **CV death + HF hospitalization**. The relative risk changes shown are:\n\n| Drug class | HF composite relative risk change |\n|---|---:|\n| SGLT2 inhibitors | **-31%** |\n| GLP-1 RA | **-7%** |\n| Sulfonylurea | **+23%** |\n| DPP-4 inhibitors | **0%** |\n\nThe figure notes that **negative numbers indicate risk reduction**; positive values indicate increased relative risk in the plotted estimate.",
+      "expected_answer": "Figure 2 (heart failure composite): SGLT2 inhibitors -31%, GLP-1 RA -7%, sulfonylurea +23% (increase), DPP-4 inhibitors 0%. Negative numbers are reductions in risk.",
+      "harness": {
+        "accuracy": "correct",
+        "groundedness": "0.333",
+        "claims_supported": "2",
+        "claims_partial": "4",
+        "claims_unsupported": "0",
+        "judge_reason": "All four values match the reference exactly, with correct sign interpretation; the extra composite definition does not contradict the reference."
+      }
+    },
+    {
+      "id": "V07",
+      "status": "answered",
+      "context_source": "trace.cited_evidence",
+      "n_context": 1,
+      "judge": "claude-sonnet-5-5",
+      "scores": {
+        "truthfulness": 1.0,
+        "contradicted_share": 0.0,
+        "accuracy": 1.0,
+        "relevancy": 1.0,
+        "groundedness": 1.0
+      },
+      "reasons": {
+        "truthfulness": "The score is 1.00 because the output matches the context and has no contradictions. It correctly gives the basal insulin start (bedtime, 10 units or 0.1–0.2 units/kg), the titration (10–15% weekly or 2 units every 3 days), the 10–20% dose reduction for hypoglycemia, and the preference for glargine over NPH. It also correctly escalates from glargine U300 to degludec for recurrent hypoglycemia. Leaving out prandial insulin is an omission, not a contradiction.",
+        "accuracy": "The Actual Output's conclusion matches the Expected Output. It gives the same starting dose (10 units or 0.1–0.2 units/kg once daily), says to set an individualized FPG target range, and gives the same titration (10–15% weekly or 2 units every 3 days based on self-monitored FPG). It also says to decrease the dose by 10–20% if hypoglycemia occurs. Nothing from the Expected Output is missing or wrong. The extra details (bedtime injection, glargine preferred over NPH, switching to U300 or degludec for recurrent hypoglycemia) go beyond the Expected Output without contradicting it, so they are not penalized. The 'Figure 5' reference is only a source label and does not affect the facts.",
+        "relevancy": "The score is 1.00 because the response stayed fully on topic. It addressed how to start and titrate basal insulin and what to do if hypoglycemia occurs, as the input asked, and it contained no irrelevant statements. Great job!",
+        "groundedness": "The score is 1.00 because there are no contradictions between the actual output and the retrieval context. Every claim in the output is supported by the source material. Great work!"
+      },
+      "skipped": {},
+      "errors": {},
+      "timings_s": {
+        "truthfulness": 4.26,
+        "accuracy": 4.85,
+        "relevancy": 6.04,
+        "groundedness": 10.81
+      },
+      "cost_usd": 0.06462,
+      "question": "How does the 2025 VA pharmacotherapy summary say to start and titrate basal insulin, and what if hypoglycemia occurs?",
+      "answer": "The 2025 VA pharmacotherapy summary says to start **basal insulin** as **one injection daily at bedtime**. Initial dose: **10 units once daily** or **0.1–0.2 units/kg once daily**. Set an individualized **FPG target range**, then titrate based on self-monitored FPG by **10–15% weekly** or **2 units every 3 days**. If hypoglycemia occurs, **decrease the insulin dose by 10–20%**. It also notes glargine is preferred over NPH initially due to less hypoglycemia; for recurrent hypoglycemia despite dose adjustment, consider glargine U300, then degludec if it continues.",
+      "expected_answer": "Figure 5: start basal insulin at 10 units or 0.1-0.2 units/kg once daily; set an FPG target range; titrate 10-15% weekly or 2 units every 3 days based on self-monitored FPG; if hypoglycemia, decrease the dose by 10-20%.",
+      "harness": {
+        "accuracy": "correct",
+        "groundedness": "1.0",
+        "claims_supported": "7",
+        "claims_partial": "0",
+        "claims_unsupported": "0",
+        "judge_reason": "Includes the starting dose (10 units or 0.1–0.2 units/kg), FPG target, 10–15% weekly or 2 units/3 days titration, and 10–20% reduction for hypoglycemia."
+      }
+    },
+    {
+      "id": "V08",
+      "status": "answered",
+      "context_source": "trace.cited_evidence",
+      "n_context": 2,
+      "judge": "claude-sonnet-5-5",
+      "scores": {
+        "truthfulness": 1.0,
+        "contradicted_share": 0.0,
+        "relevancy": 1.0,
+        "accuracy": 0.5,
+        "groundedness": 1.0
+      },
+      "reasons": {
+        "truthfulness": "The score is 1.00 because the actual output fully aligns with the contexts and there are no contradictions. It correctly reports the recommendation to suggest real-time CGM for insulin-treated adults with T2DM not achieving glycemic goals, to reduce hypoglycemia and improve HbA1c. It also correctly gives the strength as 'Weak for' and the category as 'Reviewed, New-added', matching the evidence table (recommendation 11).",
+        "relevancy": "The score is 1.00 because the actual output had no irrelevant statements and stayed focused on the strength and category of the 2023 VA/DoD recommendation on real-time continuous glucose monitoring for insulin-treated adults. Great job staying on topic!",
+        "accuracy": "The main conclusion is correct: the Actual Output gives 'Weak for' with category 'Reviewed, New-added', matching the Expected Output. It also covers the conditions: real-time CGM for insulin-treated adults with T2DM not achieving glycemic goals, to decrease hypoglycemia and improve HbA1c. However, it omits that this is Recommendation 11 and falls under the Glycemic Management section, which the Expected Output states. Under the rubric, an omitted fact caps the score at the partial level.",
+        "groundedness": "The score is 1.00 because there are no contradictions between the actual output and the retrieval context. Every claim in the output is supported by the source material. Keep up the great work!"
+      },
+      "skipped": {},
+      "errors": {},
+      "timings_s": {
+        "truthfulness": 3.66,
+        "relevancy": 4.89,
+        "accuracy": 5.72,
+        "groundedness": 12.38
+      },
+      "cost_usd": 0.06483,
+      "question": "In the 2023 VA/DoD diabetes guideline's recommendation table, what are the strength and category of the recommendation on real-time continuous glucose monitoring for insulin-treated adults?",
+      "answer": "For the 2023 VA/DoD T2DM CPG recommendation on **real-time CGM in insulin-treated adults with T2DM who are not achieving glycemic goals**:\n\n- **2023 strength/direction:** **Weak for**\n- **Recommendation category:** **Reviewed, New-added**\n\nThe table’s wording is that VA/DoD “suggest” real-time CGM to decrease hypoglycemia and improve HbA1c; “suggest” corresponds to a weak-for recommendation.",
+      "expected_answer": "Recommendation 11 (Glycemic Management): Weak for; category Reviewed, New-added. It suggests real-time CGM for insulin-treated adults not achieving glycemic goals, to decrease hypoglycemia and improve HbA1c.",
+      "harness": {
+        "accuracy": "correct",
+        "groundedness": "0.75",
+        "claims_supported": "3",
+        "claims_partial": "1",
+        "claims_unsupported": "0",
+        "judge_reason": "States Weak for and Reviewed, New-added for real-time CGM in insulin-treated adults not at goal; matches reference. Recommendation number omitted but not essential."
+      }
+    }
+  ]
+}

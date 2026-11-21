@@ -1,0 +1,833 @@
+{
+  "question": "We received Suboxone 8/2 mg films, four daily, quantity 120 for 30 days, for OUD. The VA guide says the usual maximum is 24 mg, but NYRx lists up to 32 mg. Is this automatically excessive—and could we substitute the buprenorphine patch on the VA formulary?",
+  "request_id": "848bef90-3843-4358-8883-ef2b7f969d3b",
+  "status": "answered",
+  "agent_status": "answered",
+  "assumption": "Assuming NY Medicaid is the payer for the Suboxone claim, while VA documents are being used for clinical/formulary context.",
+  "answer": "Assuming NY Medicaid: **Suboxone 8/2 mg film 4 daily #120/30 days is not automatically excessive** under current NYRx MAT limits: 8/2 mg strength allows **4 SL films/day; max #120/30 days; not to exceed 32/8 mg daily**, when prescribed per accepted SUD guidelines. VA guidance is clinical: usual max **24 mg/day**, but higher doses may be used for uncontrolled withdrawal/cravings with careful monitoring and documented rationale.\n\n**Do not substitute the VA buprenorphine patch** for OUD Suboxone. The patch is VA formulary, but VA’s OUD formulations list does not include the patch; it’s a different dosage form/indication and needs prescriber direction.",
+  "citations": [
+    {
+      "doc_id": "ny_medicaid_pdl",
+      "page": 76,
+      "link": "https://newyork.fhsc.com/downloads/providers/NYRx_PDP_PDL.pdf#page=76",
+      "flag": null,
+      "locator": "ny_medicaid_pdl:p76"
+    },
+    {
+      "doc_id": "va_pbm_bup_oud",
+      "page": 1,
+      "link": "https://www.pbm.va.gov/PBM/AcademicDetailingService/Documents/508/10-1498_OUD_Provider_BuprenorphineforOUD_P97021.pdf#page=1",
+      "flag": null,
+      "locator": "va_pbm_bup_oud:p1"
+    },
+    {
+      "doc_id": "va_pbm_bup_oud",
+      "page": 2,
+      "link": "https://www.pbm.va.gov/PBM/AcademicDetailingService/Documents/508/10-1498_OUD_Provider_BuprenorphineforOUD_P97021.pdf#page=2",
+      "flag": null,
+      "locator": "va_pbm_bup_oud:p2"
+    },
+    {
+      "doc_id": "va_national_formulary_2026_09",
+      "page": null,
+      "link": "https://www.pbm.va.gov/PBM/nationalformulary/VA_National_Formulary_SEPT_2026.xlsx",
+      "flag": null,
+      "locator": "va_national_formulary_2026_09:r304",
+      "row": 304
+    }
+  ],
+  "conflicts_noted": [
+    "Apparent difference only: VA gives a clinical usual maximum (24 mg/day, with documented exceptions); NYRx gives a billing/quantity ceiling up to 32/8 mg daily for MAT."
+  ],
+  "flags": [],
+  "needs_review": false,
+  "words": {
+    "displayed": 101,
+    "rendered": 101
+  },
+  "answered_by": "gpt-5.5-2026-04-23",
+  "provider": "openai",
+  "model": "gpt-5.5-2026-04-23",
+  "fallback_used": false,
+  "timing_s": {
+    "total": 21.008,
+    "search": 4.76,
+    "read_page": 0,
+    "list_documents": 0,
+    "lookups": 0.098,
+    "model_calls": [
+      3.256,
+      12.892
+    ]
+  },
+  "lookups": 5,
+  "tokens": {
+    "input": 17232,
+    "output": 1122,
+    "cache_read": 3072,
+    "cache_write": 0
+  },
+  "cost_usd": 0.121356,
+  "pages_seen": [
+    "ny_medicaid_pdl:p1",
+    "ny_medicaid_pdl:p5",
+    "ny_medicaid_pdl:p66",
+    "ny_medicaid_pdl:p70",
+    "ny_medicaid_pdl:p76",
+    "ny_medicaid_pdl:p80",
+    "ny_medicaid_pdl:p81",
+    "ny_medicaid_pdl:p82",
+    "ny_medicaid_pharmacy_policy:p32",
+    "ny_medicaid_pharmacy_policy:p33",
+    "va_dod_cpg_opioids_2022:p104",
+    "va_dod_cpg_opioids_2022:p105",
+    "va_dod_cpg_opioids_2022:p120",
+    "va_dod_cpg_opioids_2022:p121",
+    "va_dod_cpg_opioids_2022:p33",
+    "va_dod_cpg_opioids_2022:p34",
+    "va_national_formulary_2026_09:r16",
+    "va_national_formulary_2026_09:r304",
+    "va_national_formulary_2026_09:r7",
+    "va_national_formulary_2026_09:r9",
+    "va_pbm_bup_chronic_pain:p3",
+    "va_pbm_bup_chronic_pain:p4",
+    "va_pbm_bup_oud:p1",
+    "va_pbm_bup_oud:p2",
+    "va_pbm_bup_oud:p4"
+  ],
+  "trace_id": null,
+  "started_at": "2026-10-18T16:26:57+00:00",
+  "config": {
+    "primary": "gpt-5.5",
+    "fallback": "claude-sonnet-5-5",
+    "effort": "medium",
+    "search": {
+      "mode": "hybrid",
+      "rrf_k": 60,
+      "fusion_depth": 100,
+      "return_parents": true,
+      "rerank": {
+        "model": "BAAI/bge-reranker-base",
+        "depth": 20,
+        "timeout_s": 8
+      }
+    },
+    "max_tool_calls": 6,
+    "deadline_s": 25,
+    "search_k": 8
+  },
+  "structured_lookups": true,
+  "context": {},
+  "model_answer": "Assuming NY Medicaid: **Suboxone 8/2 mg film 4 daily #120/30 days is not automatically excessive** under current NYRx MAT limits: 8/2 mg strength allows **4 SL films/day; max #120/30 days; not to exceed 32/8 mg daily**, when prescribed per accepted SUD guidelines. VA guidance is clinical: usual max **24 mg/day**, but higher doses may be used for uncontrolled withdrawal/cravings with careful monitoring and documented rationale.\n\n**Do not substitute the VA buprenorphine patch** for OUD Suboxone. The patch is VA formulary, but VA’s OUD formulations list does not include the patch; it’s a different dosage form/indication and needs prescriber direction.",
+  "model_citations": [
+    {
+      "doc_id": "ny_medicaid_pdl",
+      "page": 76,
+      "link": "https://newyork.fhsc.com/downloads/providers/NYRx_PDP_PDL.pdf#page=76",
+      "flag": null,
+      "locator": "ny_medicaid_pdl:p76"
+    },
+    {
+      "doc_id": "va_pbm_bup_oud",
+      "page": 1,
+      "link": "https://www.pbm.va.gov/PBM/AcademicDetailingService/Documents/508/10-1498_OUD_Provider_BuprenorphineforOUD_P97021.pdf#page=1",
+      "flag": null,
+      "locator": "va_pbm_bup_oud:p1"
+    },
+    {
+      "doc_id": "va_pbm_bup_oud",
+      "page": 2,
+      "link": "https://www.pbm.va.gov/PBM/AcademicDetailingService/Documents/508/10-1498_OUD_Provider_BuprenorphineforOUD_P97021.pdf#page=2",
+      "flag": null,
+      "locator": "va_pbm_bup_oud:p2"
+    },
+    {
+      "doc_id": "va_national_formulary_2026_09",
+      "page": null,
+      "link": "https://www.pbm.va.gov/PBM/nationalformulary/VA_National_Formulary_SEPT_2026.xlsx",
+      "flag": null,
+      "locator": "va_national_formulary_2026_09:r304",
+      "row": 304
+    }
+  ],
+  "model_calls": [
+    {
+      "t_start": 0.0,
+      "duration_s": 3.256,
+      "requested_model": "gpt-5.5",
+      "served_model": "gpt-5.5-2026-04-23",
+      "provider": "openai",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 359,
+        "output": 265,
+        "cache_read": 1536,
+        "cache_write": 0
+      },
+      "cost_usd": 0.010513,
+      "response_id": "resp_04a1fcb3c215468c016ad4f33cfbe087d28ff69bc22943b23f",
+      "input_messages": [
+        {
+          "role": "user",
+          "text": "Today's date: 2026-10-18\n\nQuestion: We received Suboxone 8/2 mg films, four daily, quantity 120 for 30 days, for OUD. The VA guide says the usual maximum is 24 mg, but NYRx lists up to 32 mg. Is this automatically excessive—and could we substitute the buprenorphine patch on the VA formulary?"
+        }
+      ],
+      "output": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "call_OsnY0XydoFa26fKMuQ3Zkgjk",
+            "name": "search_documents",
+            "arguments": {
+              "query": "Suboxone 8/2 mg films four daily 32 mg buprenorphine NYRx up to 32 mg OUD",
+              "program": "NY Medicaid",
+              "k": 5
+            }
+          },
+          {
+            "id": "call_JYEtnts0oZvENw0gcJerr6Ef",
+            "name": "search_documents",
+            "arguments": {
+              "query": "buprenorphine naloxone usual maximum 24 mg VA guide opioid use disorder",
+              "program": "VA",
+              "k": 5
+            }
+          },
+          {
+            "id": "call_95Y4QQhUrWsrYIdrfqL3mPKJ",
+            "name": "lookup_va_formulary",
+            "arguments": {
+              "drug": "buprenorphine",
+              "dosage_form": "patch"
+            }
+          },
+          {
+            "id": "call_YBSHgJhGeVHQFAwTRtw4cFyx",
+            "name": "lookup_va_formulary",
+            "arguments": {
+              "drug": "Suboxone",
+              "dosage_form": "film"
+            }
+          },
+          {
+            "id": "call_I3evon7usyeX7lXXszGET07U",
+            "name": "lookup_ny_medicaid_drug",
+            "arguments": {
+              "drug": "Suboxone film"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "t_start": 8.115,
+      "duration_s": 12.892,
+      "requested_model": "gpt-5.5",
+      "served_model": "gpt-5.5-2026-04-23",
+      "provider": "openai",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 16873,
+        "output": 857,
+        "cache_read": 1536,
+        "cache_write": 0
+      },
+      "cost_usd": 0.110843,
+      "response_id": "resp_04a1fcb3c215468c016ad4f3450e2887d2ad56c7dd0b8b169f",
+      "input_messages": [
+        {
+          "role": "tool",
+          "tool_results": [
+            {
+              "call_id": "call_OsnY0XydoFa26fKMuQ3Zkgjk",
+              "is_error": false,
+              "content": "[{\"doc_id\": \"ny_medicaid_pdl\", \"page\": 76, \"program\": \"NY Medicaid\", \"authority\": \"binding\", \"date\": \"2026-09-14\", \"text\": \"NYRx Preferred Drug Program (PDP) Preferred Drug List > Medication Assisted Treatment (MAT) Formulary\\n[p 76]\\n[Table] (PDF page 76)\\nColumns: **Prior authorization will not be required for medications used for the treatment of substance use disorder when prescribed according to generally accepted national professional guidelines for the treatment of a substance use disorder. ** | **Prior authorization will not be required for medications used for the treatment of substance use disorder when prescribed according to generally accepted national professional guidelines for the treatment of a substance use disorder. ** / Drugs | Coverage Parameters / Opioid Antagonists | Opioid Antagonists\\nKloxxado™ naloxone (syringe, vial, nasal spray) naloxone (nasal spray) OTC naltrexone Narcan ® (nasal spray) Narcan ® OTC Opvee ® Rextovy® Zimhi™ | \\nOpioid Dependence Agents - Injectable | Opioid Dependence Agents - Injectable\\nBrixadi™ Sublocade™ Vivitrol ® | \\nOpioid Dependence Agents - Oral/Transmucosal F/Q/D | Opioid Dependence Agents - Oral/Transmucosal F/Q/D\\nbuprenorphine (tablet) buprenorphine/naloxone (tablet) buprenorphine/naloxone (film) Suboxone ® (film) Zubsolv ® | QUANTITY LIMIT: • buprenorphine sublingual (SL): Eight tablets dispensed as a 2-day supply; not to exceed 32 mg per day • buprenorphine / naloxone tablet and film (Suboxone ® 2mg/0.5mg, Zubsolv ® 1.4mg/0.36mg, 0.7mg/0.18mg strength; Up to 12 sublingual tablets or films per day. • buprenorphine/naloxone tablet and film (Suboxone ® up to 4mg/1mg and 8mg/2mg strength, Zubsolv ® 2.9mg/0.71mg and 5.7mg/1.4mg strength; Four sublingual tablets or films per day; maximum of 120 tablets or films dispensed as a 30-day supply, not to exceed 32 mg-8 mg of Suboxone®, or its equivalent per day • buprenorphine/naloxone tablet: Suboxone ® 12mg/3mg, Zubsolv ® 8.6 mg/2.1 mg and Zubsolv ® 11.4 mg/2.9 mg strength: Maximum of 60 tablets dispensed as a 30-day supply RELATED CLINICAL CRITERIA (CC) • PA required for initiation of opioid therapy for patients established on opioid dependence therapy • PA required for initiation of a CNS stimulant for patients established on opioid dependence therapy\", \"pages\": [76], \"section\": \"Medication Assisted Treatment (MAT) Formulary\"}, {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 81, \"program\": \"NY Medicaid\", \"authority\": \"binding\", \"date\": \"2026-09-14\", \"text\": \"NYRx Preferred Drug Program (PDP) Preferred Drug List > NYS Medicaid NYRx Dose Optimization Program > Anticonvulsants\\n[p 81]\\n[Table] (PDF page 81)\\nColumns: Brand Name | Dose Optimization Limitations | Dose Optimization Limitations | Dose Optimization Limitations\\nCENTRAL NERVOUS SYSTEM | CENTRAL NERVOUS SYSTEM | CENTRAL NERVOUS SYSTEM | CENTRAL NERVOUS SYSTEM\\nFycompa ® 4 mg, 6 mg | 1 daily | Tablet | \\ntopiramate ER 100 mg (Qudexy ® XR, Trokendi XR ® ) | 1 daily | Capsule | \\nLamictal XR ® 50 mg | 1 daily | Tablet | NYRx will allow two doses per day for up to 90 days for dose titration.\\nOxtellar XR ® 300 mg | 1 daily | Tablet | NYRx will allow two doses per day for up to 90 days for dose titration.\\nLyrica ® 25 mg, 50 mg, 75 mg, 100 mg, 150 mg, 200 mg | 3 daily | Capsule | Electronic bypass for diagnosis of seizure disorder identified in medical claims data. NYRx will allow two doses per day for up to 90 days for dose titration.\\nQudexy ® XR 100 mg | 1 daily | Capsule | Electronic bypass for diagnosis of seizure disorder identified in medical claims data. NYRx will allow two doses per day for up to 90 days for dose titration.\\nLyrica ® 225 mg and 300 mg | 2 daily | Capsule | Electronic bypass for diagnosis of seizure disorder identified in medical claims data. NYRx will allow two doses per day for up to 90 days for dose titration.\\nTrokendi XR ® 100 mg | 1 daily | Capsule | Electronic bypass for diagnosis of seizure disorder identified in medical claims data. NYRx will allow tw"
+            },
+            {
+              "call_id": "call_JYEtnts0oZvENw0gcJerr6Ef",
+              "is_error": false,
+              "content": "[{\"doc_id\": \"va_pbm_bup_oud\", \"page\": 1, \"program\": \"VA\", \"authority\": \"advisory\", \"date\": \"2023-03\", \"text\": \"Buprenorphine for Opioid Use Disorder: Clinician Guide (IB 10-1498) > Buprenorphine formulations FDA approved for treatment of OUDReference 1, 2, 6, 7; Footnote A.\\n[p 1]\\nBuprenorphine formulations FDA approved for treatment of OUD 1,2,6,7;a\\n[Table] (PDF page 1)\\nColumns: Generic name (Brand name) | Buprenorphine and naloxone (Suboxone®) 8,9;b | Buprenorphine and naloxone (Suboxone®) 8,9;b | Buprenorphine (Subutex®) 10 | Buprenorphine (Sublocade®) 11\\nDosage form and strengths | Sublingual (SL) tablet: 2/0.5 mg, 8/2 mg | SL film: 2/0.5 mg, 4/1 mg, 8/2 mg, 12/3 mg | SL tablet: 2 mg, 8 mg | Extended release subcutaneous (SC) injection: 100 mg, 300 mg\\nPADR | Not required | Required | Not required | Required\\nREMS registration* | Not required b | Not required b | Not required | Required\\nWhen to use | • Preferred for initiation and maintenance in most patients • Reduced risk of misuse and diversion versus Subutex® | Adverse effects, intolerance, absorption issues with SL tablets (e.g., swallowing or spitting out tablets) | • Not recommended first line in most cases; naloxone combination is preferred • May be used in pregnant women | • After use of SL buprenorphine 8-24 mg/day for ≥7 days • If daily dosing is difficult or risky (e.g., homeless, unstable housing, living with children), or concern for diversion, misuse, or insufficient response with SL\\nFrequency of use | • Daily for OUD • When used to treat OUD and pain, or off-label for a primary pain indication, consider adjusting the dosage interval to twice or three times daily to provide adequate analgesia | • Daily for OUD • When used to treat OUD and pain, or off-label for a primary pain indication, consider adjusting the dosage interval to twice or three times daily to provide adequate analgesia | • Daily for OUD • When used to treat OUD and pain, or off-label for a primary pain indication, consider adjusting the dosage interval to twice or three times daily to provide adequate analgesia | • Monthly (≥26 days between doses) • Administer a missed dose as soon as possible, with the following dose given no less than 26 days later • Occasional delays in dosing <2 weeks should not have significant impact\\nPADR, prior authorization drug request. *REMS (risk evaluation and mitigation strategies) for all formulations: www.accessdata.fda.gov/scripts/cder/rems/index.cfm.\\na Buprenorphine perioperative guidance: https://dvagov.sharepoint.com/sites/VHAPBM/Formulary/Clinical%20Guidance/Forms/AllItems.aspx.\\nb REMS registration is required for injectable buprenorphine. For transmucosal buprenorphine, follow the checklist provided by the FDA: Buprenorphine Transmucosal Products for Opioid Dependence (BTOD) (www.accessdata.fda.gov/scripts/cder/rems/index.cfm?event=RemsDetails.page&REMS=9)\\n[p 2]\\nBuprenorphine formulations FDA approved for treatment of OUD 1,2,6,7;a (continued)\\n[Table] (PDF page 2)\\nColumns: Generic name (Brand name) | Buprenorphine and naloxone (Suboxone®) 8,9;b | Buprenorphine (Subutex®) 10 | Buprenorphine (Sublocade®) 11\\nTypical dosing | During initiation, titrate dose to treat withdrawal, cravings, and as tolerated. • DAY 1: Initiate • Suboxone® 2/0.5 mg or 4/1 mg; titrate by 2/0.5 mg or 4/1 mg every 1-2 hours to a target dose of 8/2 mg/day • Subutex® 2 or 4 mg; titrate by 2 or 4 mg every 1-2 hours to a target dose 8 mg/day • DAY 2: Start with Day 1 dose, continue titrating • Suboxone® in 2/0.5 mg or 4/1 mg increments to a target dose of 16/4 mg/day • Subutex® in 2 or 4 mg increments | to a target dose | • Initiate: 300 mg SC injection in abdominal adipose tissue monthly for 2 months • Maintenance: 100 mg monthly; can increase to 300 mg monthly if 100 mg tolerated but unsatisfactory clinical response (e.g., opioid cravings, withdrawal, use of non-prescribed opioids) • A 2-month dosing interval may be appropriate in some cases (e.g., extended travel). Admin"
+            },
+            {
+              "call_id": "call_95Y4QQhUrWsrYIdrfqL3mPKJ",
+              "is_error": false,
+              "content": "{\"source\": \"VA National Formulary, sheet Formulary (header row 16)\", \"query\": {\"drug\": \"buprenorphine\", \"dosage_form\": \"patch\"}, \"rule\": {\"cite\": {\"doc_id\": \"va_national_formulary_2026_09\", \"row\": 7}, \"text\": \"The VANF is dosage form specific.  If a specific dosage form is not listed, the specific product in question should be considered non-formulary (although other dosage forms of that molecular entity may be included as formulary).  Dosage forms such as TAB and CAP, ORAL are considered immediate release.  Sustained release products are listed individually.  Formulary products may also be available in many dosage forms and strengths.  In the case of products with multiple dosage forms and strengths, not all forms and strengths need to be stocked.  Facilities should make those dosages available that are necessary to meet their patient needs.”\"}, \"pa_levels\": {\"cite\": {\"doc_id\": \"va_national_formulary_2026_09\", \"row\": 9}, \"text\": \"PA- There are three levels of Prior Authorization\\n• Prior Authorization-National (PA-N) refers to medications that are formulary, but require prior approval at the national level before dispensing.\\n• Prior Authorization-VISN (PA-V) refers to medications that are formulary, but require prior approval at the VISN level before dispensing.\\n• Prior Authorization-Facility (PA-F) refers to medications that are formulary, but require prior approval at the facility level before dispensing.\\nPrior Authorization is used to insure that the medication is appropriate for each individual Veteran.\"}, \"result\": \"exact_match\", \"rows\": [{\"row_id\": \"va_national_formulary_2026_09#Formulary#row-304\", \"cite\": {\"doc_id\": \"va_national_formulary_2026_09\", \"row\": 304}, \"sheet\": \"Formulary\", \"row\": 304, \"matched_on\": \"generic name\", \"VA Class\": \"CN101\", \"Restriction\": \"\", \"Generic\": \"BUPRENORPHINE\", \"Dosage Form\": \"PATCH\", \"Comments\": \"\", \"U/E Formulary\": \"\", \"Clinical Guidance\": \"\", \"Restriction meaning\": \"no restriction listed\"}]}"
+            },
+            {
+              "call_id": "call_YBSHgJhGeVHQFAwTRtw4cFyx",
+              "is_error": false,
+              "content": "{\"source\": \"VA National Formulary, sheet Formulary (header row 16)\", \"query\": {\"drug\": \"Suboxone\", \"dosage_form\": \"film\"}, \"rule\": {\"cite\": {\"doc_id\": \"va_national_formulary_2026_09\", \"row\": 7}, \"text\": \"The VANF is dosage form specific.  If a specific dosage form is not listed, the specific product in question should be considered non-formulary (although other dosage forms of that molecular entity may be included as formulary).  Dosage forms such as TAB and CAP, ORAL are considered immediate release.  Sustained release products are listed individually.  Formulary products may also be available in many dosage forms and strengths.  In the case of products with multiple dosage forms and strengths, not all forms and strengths need to be stocked.  Facilities should make those dosages available that are necessary to meet their patient needs.”\"}, \"pa_levels\": {\"cite\": {\"doc_id\": \"va_national_formulary_2026_09\", \"row\": 9}, \"text\": \"PA- There are three levels of Prior Authorization\\n• Prior Authorization-National (PA-N) refers to medications that are formulary, but require prior approval at the national level before dispensing.\\n• Prior Authorization-VISN (PA-V) refers to medications that are formulary, but require prior approval at the VISN level before dispensing.\\n• Prior Authorization-Facility (PA-F) refers to medications that are formulary, but require prior approval at the facility level before dispensing.\\nPrior Authorization is used to insure that the medication is appropriate for each individual Veteran.\"}, \"result\": \"no_matching_row\", \"note\": \"No row matches this name. That doesn't mean the drug is non-formulary or not covered: the name may be spelled or listed differently.\"}"
+            },
+            {
+              "call_id": "call_I3evon7usyeX7lXXszGET07U",
+              "is_error": false,
+              "content": "{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"Suboxone film\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"no_matching_row\", \"note\": \"No row in the Preferred Drug Program pages (4–60) matches this name. That doesn't mean it isn't on the PDL or isn't covered: this lookup doesn't read the PDL's other sections (CDRP, DUR F/Q/D, MAT formulary p76, BLTG, mandatory generic, dose and cost optimization; pages 61–86), which search_documents does; drugs outside the PDL's classes can still be covered by NYRx (page 1); and the name may be listed differently.\"}"
+            }
+          ]
+        }
+      ],
+      "output": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "call_Jq8jENa56V8dUzlHeaGBaqbZ",
+            "name": "submit_answer",
+            "arguments": {
+              "status": "answered",
+              "assumption": "Assuming NY Medicaid is the payer for the Suboxone claim, while VA documents are being used for clinical/formulary context.",
+              "answer": "Assuming NY Medicaid: **Suboxone 8/2 mg film 4 daily #120/30 days is not automatically excessive** under current NYRx MAT limits: 8/2 mg strength allows **4 SL films/day; max #120/30 days; not to exceed 32/8 mg daily**, when prescribed per accepted SUD guidelines. VA guidance is clinical: usual max **24 mg/day**, but higher doses may be used for uncontrolled withdrawal/cravings with careful monitoring and documented rationale.\n\n**Do not substitute the VA buprenorphine patch** for OUD Suboxone. The patch is VA formulary, but VA’s OUD formulations list does not include the patch; it’s a different dosage form/indication and needs prescriber direction.",
+              "citations": [
+                {
+                  "doc_id": "ny_medicaid_pdl",
+                  "page": 76,
+                  "row": null
+                },
+                {
+                  "doc_id": "va_pbm_bup_oud",
+                  "page": 1,
+                  "row": null
+                },
+                {
+                  "doc_id": "va_pbm_bup_oud",
+                  "page": 2,
+                  "row": null
+                },
+                {
+                  "doc_id": "va_national_formulary_2026_09",
+                  "page": null,
+                  "row": 304
+                }
+              ],
+              "conflicts_noted": [
+                "Apparent difference only: VA gives a clinical usual maximum (24 mg/day, with documented exceptions); NYRx gives a billing/quantity ceiling up to 32/8 mg daily for MAT."
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "search_documents",
+      "input": {
+        "query": "Suboxone 8/2 mg films four daily 32 mg buprenorphine NYRx up to 32 mg OUD",
+        "program": "NY Medicaid",
+        "k": 5
+      },
+      "duration_s": 2.489,
+      "is_error": false,
+      "pages": [
+        "ny_medicaid_pdl:p5",
+        "ny_medicaid_pdl:p66",
+        "ny_medicaid_pdl:p70",
+        "ny_medicaid_pdl:p76",
+        "ny_medicaid_pdl:p80",
+        "ny_medicaid_pdl:p81",
+        "ny_medicaid_pdl:p82",
+        "ny_medicaid_pharmacy_policy:p32",
+        "ny_medicaid_pharmacy_policy:p33"
+      ],
+      "result": "[{\"doc_id\": \"ny_medicaid_pdl\", \"page\": 76, \"program\": \"NY Medicaid\", \"authority\": \"binding\", \"date\": \"2026-09-14\", \"text\": \"NYRx Preferred Drug Program (PDP) Preferred Drug List > Medication Assisted Treatment (MAT) Formulary\\n[p 76]\\n[Table] (PDF page 76)\\nColumns: **Prior authorization will not be required for medications used for the treatment of substance use disorder when prescribed according to generally accepted national professional guidelines for the treatment of a substance use disorder. ** | **Prior authorization will not be required for medications used for the treatment of substance use disorder when prescribed according to generally accepted national professional guidelines for the treatment of a substance use disorder. ** / Drugs | Coverage Parameters / Opioid Antagonists | Opioid Antagonists\\nKloxxado™ naloxone (syringe, vial, nasal spray) naloxone (nasal spray) OTC naltrexone Narcan ® (nasal spray) Narcan ® OTC Opvee ® Rextovy® Zimhi™ | \\nOpioid Dependence Agents - Injectable | Opioid Dependence Agents - Injectable\\nBrixadi™ Sublocade™ Vivitrol ® | \\nOpioid Dependence Agents - Oral/Transmucosal F/Q/D | Opioid Dependence Agents - Oral/Transmucosal F/Q/D\\nbuprenorphine (tablet) buprenorphine/naloxone (tablet) buprenorphine/naloxone (film) Suboxone ® (film) Zubsolv ® | QUANTITY LIMIT: • buprenorphine sublingual (SL): Eight tablets dispensed as a 2-day supply; not to exceed 32 mg per day • buprenorphine / naloxone tablet and film (Suboxone ® 2mg/0.5mg, Zubsolv ® 1.4mg/0.36mg, 0.7mg/0.18mg strength; Up to 12 sublingual tablets or films per day. • buprenorphine/naloxone tablet and film (Suboxone ® up to 4mg/1mg and 8mg/2mg strength, Zubsolv ® 2.9mg/0.71mg and 5.7mg/1.4mg strength; Four sublingual tablets or films per day; maximum of 120 tablets or films dispensed as a 30-day supply, not to exceed 32 mg-8 mg of Suboxone®, or its equivalent per day • buprenorphine/naloxone tablet: Suboxone ® 12mg/3mg, Zubsolv ® 8.6 mg/2.1 mg and Zubsolv ® 11.4 mg/2.9 mg strength: Maximum of 60 tablets dispensed as a 30-day supply RELATED CLINICAL CRITERIA (CC) • PA required for initiation of opioid therapy for patients established on opioid dependence therapy • PA required for initiation of a CNS stimulant for patients established on opioid dependence therapy\", \"pages\": [76], \"section\": \"Medication Assisted Treatment (MAT) Formulary\"}, {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 81, \"program\": \"NY Medicaid\", \"authority\": \"binding\", \"date\": \"2026-09-14\", \"text\": \"NYRx Preferred Drug Program (PDP) Preferred Drug List > NYS Medicaid NYRx Dose Optimization Program > Anticonvulsants\\n[p 81]\\n[Table] (PDF page 81)\\nColumns: Brand Name | Dose Optimization Limitations | Dose Optimization Limitations | Dose Optimization Limitations\\nCENTRAL NERVOUS SYSTEM | CENTRAL NERVOUS SYSTEM | CENTRAL NERVOUS SYSTEM | CENTRAL NERVOUS SYSTEM\\nFycompa ® 4 mg, 6 mg | 1 daily | Tablet | \\ntopiramate ER 100 mg (Qudexy ® XR, Trokendi XR ® ) | 1 daily | Capsule | \\nLamictal XR ® 50 mg | 1 daily | Tablet | NYRx will allow two doses per day for up to 90 days for dose titration.\\nOxtellar XR ® 300 mg | 1 daily | Tablet | NYRx will allow two doses per day for up to 90 days for dose titration.\\nLyrica ® 25 mg, 50 mg, 75 mg, 100 mg, 150 mg, 200 mg | 3 daily | Capsule | Electronic bypass for diagnosis of seizure disorder identified in medical claims data. NYRx will allow two doses per day for up to 90 days for dose titration.\\nQudexy ® XR 100 mg | 1 daily | Capsule | Electronic bypass for diagnosis of seizure disorder identified in medical claims data. NYRx will allow two doses per day for up to 90 days for dose titration.\\nLyrica ® 225 mg and 300 mg | 2 daily | Capsule | Electronic bypass for diagnosis of seizure disorder identified in medical claims data. NYRx will allow two doses per day for up to 90 days for dose titration.\\nTrokendi XR ® 100 mg | 1 daily | Capsule | Electronic bypass for diagnosis of seizure disorder identified in medical claims data. NYRx will allow tw",
+      "search": {
+        "original_query": "We received Suboxone 8/2 mg films, four daily, quantity 120 for 30 days, for OUD. The VA guide says the usual maximum is 24 mg, but NYRx lists up to 32 mg. Is this automatically excessive—and could we substitute the buprenorphine patch on the VA formulary?",
+        "agent_query": "Suboxone 8/2 mg films four daily 32 mg buprenorphine NYRx up to 32 mg OUD",
+        "executed": [
+          {
+            "source": "original",
+            "query": "We received Suboxone 8/2 mg films, four daily, quantity 120 for 30 days, for OUD. The VA guide says the usual maximum is 24 mg, but NYRx lists up to 32 mg. Is this automatically excessive—and could we substitute the buprenorphine patch on the VA formulary?",
+            "program": "NY Medicaid",
+            "k": 5,
+            "seconds": 1.401,
+            "cached": false,
+            "results": 5
+          },
+          {
+            "source": "agent",
+            "query": "Suboxone 8/2 mg films four daily 32 mg buprenorphine NYRx up to 32 mg OUD",
+            "program": "NY Medicaid",
+            "k": 5,
+            "seconds": 2.488,
+            "cached": false,
+            "results": 5
+          }
+        ],
+        "duplicates_merged": 2,
+        "returned": 8,
+        "from_both": 2,
+        "from_original_only": 3,
+        "from_agent_only": 3,
+        "provenance": [
+          {
+            "unit": "ny_medicaid_pdl:s133",
+            "found_by": {
+              "original": 1,
+              "agent": 1
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s138",
+            "found_by": {
+              "original": 5,
+              "agent": 3
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s3",
+            "found_by": {
+              "original": 2
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s122",
+            "found_by": {
+              "agent": 2
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s139",
+            "found_by": {
+              "original": 3
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s126",
+            "found_by": {
+              "original": 4
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s136",
+            "found_by": {
+              "agent": 4
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s48",
+            "found_by": {
+              "agent": 5
+            }
+          }
+        ],
+        "hits": [
+          {
+            "unit": "ny_medicaid_pdl:s133",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              76
+            ],
+            "ranks": {
+              "original": 1,
+              "agent": 1
+            },
+            "scores": {
+              "original": 0.22,
+              "agent": 0.7431
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s138",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              81
+            ],
+            "ranks": {
+              "original": 5,
+              "agent": 3
+            },
+            "scores": {
+              "original": 0.005,
+              "agent": 0.0178
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s3",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              5
+            ],
+            "ranks": {
+              "original": 2
+            },
+            "scores": {
+              "original": 0.0574
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s122",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              66
+            ],
+            "ranks": {
+              "agent": 2
+            },
+            "scores": {
+              "agent": 0.0246
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s139",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              82
+            ],
+            "ranks": {
+              "original": 3
+            },
+            "scores": {
+              "original": 0.0105
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s126",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              70
+            ],
+            "ranks": {
+              "original": 4
+            },
+            "scores": {
+              "original": 0.0052
+            }
+          },
+          {
+            "unit": "ny_medicaid_pdl:s136",
+            "doc_id": "ny_medicaid_pdl",
+            "pages": [
+              80
+            ],
+            "ranks": {
+              "agent": 4
+            },
+            "scores": {
+              "agent": 0.0122
+            }
+          },
+          {
+            "unit": "ny_medicaid_pharmacy_policy:s48",
+            "doc_id": "ny_medicaid_pharmacy_policy",
+            "pages": [
+              32,
+              33
+            ],
+            "ranks": {
+              "agent": 5
+            },
+            "scores": {
+              "agent": 0.0104
+            }
+          }
+        ]
+      },
+      "t_start": 3.256
+    },
+    {
+      "name": "search_documents",
+      "input": {
+        "query": "buprenorphine naloxone usual maximum 24 mg VA guide opioid use disorder",
+        "program": "VA",
+        "k": 5
+      },
+      "duration_s": 2.271,
+      "is_error": false,
+      "pages": [
+        "va_dod_cpg_opioids_2022:p104",
+        "va_dod_cpg_opioids_2022:p105",
+        "va_dod_cpg_opioids_2022:p120",
+        "va_dod_cpg_opioids_2022:p121",
+        "va_dod_cpg_opioids_2022:p33",
+        "va_dod_cpg_opioids_2022:p34",
+        "va_pbm_bup_chronic_pain:p3",
+        "va_pbm_bup_chronic_pain:p4",
+        "va_pbm_bup_oud:p1",
+        "va_pbm_bup_oud:p2",
+        "va_pbm_bup_oud:p4"
+      ],
+      "result": "[{\"doc_id\": \"va_pbm_bup_oud\", \"page\": 1, \"program\": \"VA\", \"authority\": \"advisory\", \"date\": \"2023-03\", \"text\": \"Buprenorphine for Opioid Use Disorder: Clinician Guide (IB 10-1498) > Buprenorphine formulations FDA approved for treatment of OUDReference 1, 2, 6, 7; Footnote A.\\n[p 1]\\nBuprenorphine formulations FDA approved for treatment of OUD 1,2,6,7;a\\n[Table] (PDF page 1)\\nColumns: Generic name (Brand name) | Buprenorphine and naloxone (Suboxone®) 8,9;b | Buprenorphine and naloxone (Suboxone®) 8,9;b | Buprenorphine (Subutex®) 10 | Buprenorphine (Sublocade®) 11\\nDosage form and strengths | Sublingual (SL) tablet: 2/0.5 mg, 8/2 mg | SL film: 2/0.5 mg, 4/1 mg, 8/2 mg, 12/3 mg | SL tablet: 2 mg, 8 mg | Extended release subcutaneous (SC) injection: 100 mg, 300 mg\\nPADR | Not required | Required | Not required | Required\\nREMS registration* | Not required b | Not required b | Not required | Required\\nWhen to use | • Preferred for initiation and maintenance in most patients • Reduced risk of misuse and diversion versus Subutex® | Adverse effects, intolerance, absorption issues with SL tablets (e.g., swallowing or spitting out tablets) | • Not recommended first line in most cases; naloxone combination is preferred • May be used in pregnant women | • After use of SL buprenorphine 8-24 mg/day for ≥7 days • If daily dosing is difficult or risky (e.g., homeless, unstable housing, living with children), or concern for diversion, misuse, or insufficient response with SL\\nFrequency of use | • Daily for OUD • When used to treat OUD and pain, or off-label for a primary pain indication, consider adjusting the dosage interval to twice or three times daily to provide adequate analgesia | • Daily for OUD • When used to treat OUD and pain, or off-label for a primary pain indication, consider adjusting the dosage interval to twice or three times daily to provide adequate analgesia | • Daily for OUD • When used to treat OUD and pain, or off-label for a primary pain indication, consider adjusting the dosage interval to twice or three times daily to provide adequate analgesia | • Monthly (≥26 days between doses) • Administer a missed dose as soon as possible, with the following dose given no less than 26 days later • Occasional delays in dosing <2 weeks should not have significant impact\\nPADR, prior authorization drug request. *REMS (risk evaluation and mitigation strategies) for all formulations: www.accessdata.fda.gov/scripts/cder/rems/index.cfm.\\na Buprenorphine perioperative guidance: https://dvagov.sharepoint.com/sites/VHAPBM/Formulary/Clinical%20Guidance/Forms/AllItems.aspx.\\nb REMS registration is required for injectable buprenorphine. For transmucosal buprenorphine, follow the checklist provided by the FDA: Buprenorphine Transmucosal Products for Opioid Dependence (BTOD) (www.accessdata.fda.gov/scripts/cder/rems/index.cfm?event=RemsDetails.page&REMS=9)\\n[p 2]\\nBuprenorphine formulations FDA approved for treatment of OUD 1,2,6,7;a (continued)\\n[Table] (PDF page 2)\\nColumns: Generic name (Brand name) | Buprenorphine and naloxone (Suboxone®) 8,9;b | Buprenorphine (Subutex®) 10 | Buprenorphine (Sublocade®) 11\\nTypical dosing | During initiation, titrate dose to treat withdrawal, cravings, and as tolerated. • DAY 1: Initiate • Suboxone® 2/0.5 mg or 4/1 mg; titrate by 2/0.5 mg or 4/1 mg every 1-2 hours to a target dose of 8/2 mg/day • Subutex® 2 or 4 mg; titrate by 2 or 4 mg every 1-2 hours to a target dose 8 mg/day • DAY 2: Start with Day 1 dose, continue titrating • Suboxone® in 2/0.5 mg or 4/1 mg increments to a target dose of 16/4 mg/day • Subutex® in 2 or 4 mg increments | to a target dose | • Initiate: 300 mg SC injection in abdominal adipose tissue monthly for 2 months • Maintenance: 100 mg monthly; can increase to 300 mg monthly if 100 mg tolerated but unsatisfactory clinical response (e.g., opioid cravings, withdrawal, use of non-prescribed opioids) • A 2-month dosing interval may be appropriate in some cases (e.g., extended travel). Admin",
+      "search": {
+        "original_query": "We received Suboxone 8/2 mg films, four daily, quantity 120 for 30 days, for OUD. The VA guide says the usual maximum is 24 mg, but NYRx lists up to 32 mg. Is this automatically excessive—and could we substitute the buprenorphine patch on the VA formulary?",
+        "agent_query": "buprenorphine naloxone usual maximum 24 mg VA guide opioid use disorder",
+        "executed": [
+          {
+            "source": "original",
+            "query": "We received Suboxone 8/2 mg films, four daily, quantity 120 for 30 days, for OUD. The VA guide says the usual maximum is 24 mg, but NYRx lists up to 32 mg. Is this automatically excessive—and could we substitute the buprenorphine patch on the VA formulary?",
+            "program": "VA",
+            "k": 5,
+            "seconds": 1.308,
+            "cached": false,
+            "results": 5
+          },
+          {
+            "source": "agent",
+            "query": "buprenorphine naloxone usual maximum 24 mg VA guide opioid use disorder",
+            "program": "VA",
+            "k": 5,
+            "seconds": 2.27,
+            "cached": false,
+            "results": 5
+          }
+        ],
+        "duplicates_merged": 2,
+        "returned": 8,
+        "from_both": 2,
+        "from_original_only": 3,
+        "from_agent_only": 3,
+        "provenance": [
+          {
+            "unit": "va_pbm_bup_oud:s1",
+            "found_by": {
+              "original": 4,
+              "agent": 1
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s80",
+            "found_by": {
+              "original": 2,
+              "agent": 3
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s93",
+            "found_by": {
+              "original": 1
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s34",
+            "found_by": {
+              "agent": 2
+            }
+          },
+          {
+            "unit": "va_pbm_bup_chronic_pain:s7",
+            "found_by": {
+              "original": 3
+            }
+          },
+          {
+            "unit": "va_pbm_bup_oud:s6",
+            "found_by": {
+              "agent": 4
+            }
+          },
+          {
+            "unit": "va_pbm_bup_chronic_pain:s3",
+            "found_by": {
+              "original": 5
+            }
+          },
+          {
+            "unit": "va_pbm_bup_oud:s0",
+            "found_by": {
+              "agent": 5
+            }
+          }
+        ],
+        "hits": [
+          {
+            "unit": "va_pbm_bup_oud:s1",
+            "doc_id": "va_pbm_bup_oud",
+            "pages": [
+              1,
+              2
+            ],
+            "ranks": {
+              "original": 4,
+              "agent": 1
+            },
+            "scores": {
+              "original": 0.1056,
+              "agent": 0.9487
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s80",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              104,
+              105
+            ],
+            "ranks": {
+              "original": 2,
+              "agent": 3
+            },
+            "scores": {
+              "original": 0.2432,
+              "agent": 0.9247
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s93",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              120,
+              121
+            ],
+            "ranks": {
+              "original": 1
+            },
+            "scores": {
+              "original": 0.4778
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s34",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              33,
+              34
+            ],
+            "ranks": {
+              "agent": 2
+            },
+            "scores": {
+              "agent": 0.9297
+            }
+          },
+          {
+            "unit": "va_pbm_bup_chronic_pain:s7",
+            "doc_id": "va_pbm_bup_chronic_pain",
+            "pages": [
+              4
+            ],
+            "ranks": {
+              "original": 3
+            },
+            "scores": {
+              "original": 0.1374
+            }
+          },
+          {
+            "unit": "va_pbm_bup_oud:s6",
+            "doc_id": "va_pbm_bup_oud",
+            "pages": [
+              4
+            ],
+            "ranks": {
+              "agent": 4
+            },
+            "scores": {
+              "agent": 0.9031
+            }
+          },
+          {
+            "unit": "va_pbm_bup_chronic_pain:s3",
+            "doc_id": "va_pbm_bup_chronic_pain",
+            "pages": [
+              3
+            ],
+            "ranks": {
+              "original": 5
+            },
+            "scores": {
+              "original": 0.1034
+            }
+          },
+          {
+            "unit": "va_pbm_bup_oud:s0",
+            "doc_id": "va_pbm_bup_oud",
+            "pages": [
+              1
+            ],
+            "ranks": {
+              "agent": 5
+            },
+            "scores": {
+              "agent": 0.8296
+            }
+          }
+        ]
+      },
+      "t_start": 5.745
+    },
+    {
+      "name": "lookup_va_formulary",
+      "input": {
+        "drug": "buprenorphine",
+        "dosage_form": "patch"
+      },
+      "duration_s": 0.008,
+      "is_error": false,
+      "pages": [
+        "va_national_formulary_2026_09:r16",
+        "va_national_formulary_2026_09:r304",
+        "va_national_formulary_2026_09:r7",
+        "va_national_formulary_2026_09:r9"
+      ],
+      "result": "{\"source\": \"VA National Formulary, sheet Formulary (header row 16)\", \"query\": {\"drug\": \"buprenorphine\", \"dosage_form\": \"patch\"}, \"rule\": {\"cite\": {\"doc_id\": \"va_national_formulary_2026_09\", \"row\": 7}, \"text\": \"The VANF is dosage form specific.  If a specific dosage form is not listed, the specific product in question should be considered non-formulary (although other dosage forms of that molecular entity may be included as formulary).  Dosage forms such as TAB and CAP, ORAL are considered immediate release.  Sustained release products are listed individually.  Formulary products may also be available in many dosage forms and strengths.  In the case of products with multiple dosage forms and strengths, not all forms and strengths need to be stocked.  Facilities should make those dosages available that are necessary to meet their patient needs.”\"}, \"pa_levels\": {\"cite\": {\"doc_id\": \"va_national_formulary_2026_09\", \"row\": 9}, \"text\": \"PA- There are three levels of Prior Authorization\\n• Prior Authorization-National (PA-N) refers to medications that are formulary, but require prior approval at the national level before dispensing.\\n• Prior Authorization-VISN (PA-V) refers to medications that are formulary, but require prior approval at the VISN level before dispensing.\\n• Prior Authorization-Facility (PA-F) refers to medications that are formulary, but require prior approval at the facility level before dispensing.\\nPrior Authorization is used to insure that the medication is appropriate for each individual Veteran.\"}, \"result\": \"exact_match\", \"rows\": [{\"row_id\": \"va_national_formulary_2026_09#Formulary#row-304\", \"cite\": {\"doc_id\": \"va_national_formulary_2026_09\", \"row\": 304}, \"sheet\": \"Formulary\", \"row\": 304, \"matched_on\": \"generic name\", \"VA Class\": \"CN101\", \"Restriction\": \"\", \"Generic\": \"BUPRENORPHINE\", \"Dosage Form\": \"PATCH\", \"Comments\": \"\", \"U/E Formulary\": \"\", \"Clinical Guidance\": \"\", \"Restriction meaning\": \"no restriction listed\"}]}",
+      "lookup": {
+        "result": "exact_match",
+        "rows": 1
+      },
+      "t_start": 8.016
+    },
+    {
+      "name": "lookup_va_formulary",
+      "input": {
+        "drug": "Suboxone",
+        "dosage_form": "film"
+      },
+      "duration_s": 0.005,
+      "is_error": false,
+      "pages": [
+        "va_national_formulary_2026_09:r16",
+        "va_national_formulary_2026_09:r7",
+        "va_national_formulary_2026_09:r9"
+      ],
+      "result": "{\"source\": \"VA National Formulary, sheet Formulary (header row 16)\", \"query\": {\"drug\": \"Suboxone\", \"dosage_form\": \"film\"}, \"rule\": {\"cite\": {\"doc_id\": \"va_national_formulary_2026_09\", \"row\": 7}, \"text\": \"The VANF is dosage form specific.  If a specific dosage form is not listed, the specific product in question should be considered non-formulary (although other dosage forms of that molecular entity may be included as formulary).  Dosage forms such as TAB and CAP, ORAL are considered immediate release.  Sustained release products are listed individually.  Formulary products may also be available in many dosage forms and strengths.  In the case of products with multiple dosage forms and strengths, not all forms and strengths need to be stocked.  Facilities should make those dosages available that are necessary to meet their patient needs.”\"}, \"pa_levels\": {\"cite\": {\"doc_id\": \"va_national_formulary_2026_09\", \"row\": 9}, \"text\": \"PA- There are three levels of Prior Authorization\\n• Prior Authorization-National (PA-N) refers to medications that are formulary, but require prior approval at the national level before dispensing.\\n• Prior Authorization-VISN (PA-V) refers to medications that are formulary, but require prior approval at the VISN level before dispensing.\\n• Prior Authorization-Facility (PA-F) refers to medications that are formulary, but require prior approval at the facility level before dispensing.\\nPrior Authorization is used to insure that the medication is appropriate for each individual Veteran.\"}, \"result\": \"no_matching_row\", \"note\": \"No row matches this name. That doesn't mean the drug is non-formulary or not covered: the name may be spelled or listed differently.\"}",
+      "lookup": {
+        "result": "no_matching_row",
+        "rows": 0
+      },
+      "t_start": 8.024
+    },
+    {
+      "name": "lookup_ny_medicaid_drug",
+      "input": {
+        "drug": "Suboxone film"
+      },
+      "duration_s": 0.085,
+      "is_error": false,
+      "pages": [
+        "ny_medicaid_pdl:p1"
+      ],
+      "result": "{\"source\": \"NYRx Preferred Drug List, Preferred Drug Program pages 4–60\", \"query\": {\"drug\": \"Suboxone film\", \"drug_class\": null}, \"rules\": {\"cite\": {\"doc_id\": \"ny_medicaid_pdl\", \"page\": 1}, \"text\": \"Non-preferred drugs in these classes require prior authorization (PA), unless indicated otherwise. Preferred drugs that require PA are indicated by footnote. Not all drugs covered by NYRx are subject to programs included in this document.\"}, \"result\": \"no_matching_row\", \"note\": \"No row in the Preferred Drug Program pages (4–60) matches this name. That doesn't mean it isn't on the PDL or isn't covered: this lookup doesn't read the PDL's other sections (CDRP, DUR F/Q/D, MAT formulary p76, BLTG, mandatory generic, dose and cost optimization; pages 61–86), which search_documents does; drugs outside the PDL's classes can still be covered by NYRx (page 1); and the name may be listed differently.\"}",
+      "lookup": {
+        "result": "no_matching_row",
+        "rows": 0
+      },
+      "t_start": 8.03
+    }
+  ],
+  "cited_evidence": {
+    "ny_medicaid_pdl:p76": "ny_medicaid_pdl (NY Medicaid, binding, 2026-09-14)\nNYRx Preferred Drug Program (PDP) Preferred Drug List > Medication Assisted Treatment (MAT) Formulary\n[p 76]\n[Table] (PDF page 76)\nColumns: **Prior authorization will not be required for medications used for the treatment of substance use disorder when prescribed according to generally accepted national professional guidelines for the treatment of a substance use disorder. ** | **Prior authorization will not be required for medications used for the treatment of substance use disorder when prescribed according to generally accepted national professional guidelines for the treatment of a substance use disorder. ** / Drugs | Coverage Parameters / Opioid Antagonists | Opioid Antagonists\nKloxxado™ naloxone (syringe, vial, nasal spray) naloxone (nasal spray) OTC naltrexone Narcan ® (nasal spray) Narcan ® OTC Opvee ® Rextovy® Zimhi™ | \nOpioid Dependence Agents - Injectable | Opioid Dependence Agents - Injectable\nBrixadi™ Sublocade™ Vivitrol ® | \nOpioid Dependence Agents - Oral/Transmucosal F/Q/D | Opioid Dependence Agents - Oral/Transmucosal F/Q/D\nbuprenorphine (tablet) buprenorphine/naloxone (tablet) buprenorphine/naloxone (film) Suboxone ® (film) Zubsolv ® | QUANTITY LIMIT: • buprenorphine sublingual (SL): Eight tablets dispensed as a 2-day supply; not to exceed 32 mg per day • buprenorphine / naloxone tablet and film (Suboxone ® 2mg/0.5mg, Zubsolv ® 1.4mg/0.36mg, 0.7mg/0.18mg strength; Up to 12 sublingual tablets or films per day. • buprenorphine/naloxone tablet and film (Suboxone ® up to 4mg/1mg and 8mg/2mg strength, Zubsolv ® 2.9mg/0.71mg and 5.7mg/1.4mg strength; Four sublingual tablets or films per day; maximum of 120 tablets or films dispensed as a 30-day supply, not to exceed 32 mg-8 mg of Suboxone®, or its equivalent per day • buprenorphine/naloxone tablet: Suboxone ® 12mg/3mg, Zubsolv ® 8.6 mg/2.1 mg and Zubsolv ® 11.4 mg/2.9 mg strength: Maximum of 60 tablets dispensed as a 30-day supply RELATED CLINICAL CRITERIA (CC) • PA required for initiation of opioid therapy for patients established on opioid dependence therapy • PA required for initiation of a CNS stimulant for patients established on opioid dependence therapy",
+    "va_pbm_bup_oud:p1": "va_pbm_bup_oud (VA, advisory, 2023-03)\nBuprenorphine for Opioid Use Disorder: Clinician Guide (IB 10-1498) > Buprenorphine formulations FDA approved for treatment of OUDReference 1, 2, 6, 7; Footnote A.\n[p 1]\nBuprenorphine formulations FDA approved for treatment of OUD 1,2,6,7;a\n[Table] (PDF page 1)\nColumns: Generic name (Brand name) | Buprenorphine and naloxone (Suboxone®) 8,9;b | Buprenorphine and naloxone (Suboxone®) 8,9;b | Buprenorphine (Subutex®) 10 | Buprenorphine (Sublocade®) 11\nDosage form and strengths | Sublingual (SL) tablet: 2/0.5 mg, 8/2 mg | SL film: 2/0.5 mg, 4/1 mg, 8/2 mg, 12/3 mg | SL tablet: 2 mg, 8 mg | Extended release subcutaneous (SC) injection: 100 mg, 300 mg\nPADR | Not required | Required | Not required | Required\nREMS registration* | Not required b | Not required b | Not required | Required\nWhen to use | • Preferred for initiation and maintenance in most patients • Reduced risk of misuse and diversion versus Subutex® | Adverse effects, intolerance, absorption issues with SL tablets (e.g., swallowing or spitting out tablets) | • Not recommended first line in most cases; naloxone combination is preferred • May be used in pregnant women | • After use of SL buprenorphine 8-24 mg/day for ≥7 days • If daily dosing is difficult or risky (e.g., homeless, unstable housing, living with children), or concern for diversion, misuse, or insufficient response with SL\nFrequency of use | • Daily for OUD • When used to treat OUD and pain, or off-label for a primary pain indication, consider adjusting the dosage interval to twice or three times daily to provide adequate analgesia | • Daily for OUD • When used to treat OUD and pain, or off-label for a primary pain indication, consider adjusting the dosage interval to twice or three times daily to provide adequate analgesia | • Daily for OUD • When used to treat OUD and pain, or off-label for a primary pain indication, consider adjusting the dosage interval to twice or three times daily to provide adequate analgesia | • Monthly (≥26 days between doses) • Administer a missed dose as soon as possible, with the following dose given no less than 26 days later • Occasional delays in dosing <2 weeks should not have significant impact\nPADR, prior authorization drug request. *REMS (risk evaluation and mitigation strategies) for all formulations: www.accessdata.fda.gov/scripts/cder/rems/index.cfm.\na Buprenorphine perioperative guidance: https://dvagov.sharepoint.com/sites/VHAPBM/Formulary/Clinical%20Guidance/Forms/AllItems.aspx.\nb REMS registration is required for injectable buprenorphine. For transmucosal buprenorphine, follow the checklist provided by the FDA: Buprenorphine Transmucosal Products for Opioid Dependence (BTOD) (www.accessdata.fda.gov/scripts/cder/rems/index.cfm?event=RemsDetails.page&REMS=9)\n[p 2]\nBuprenorphine formulations FDA approved for treatment of OUD 1,2,6,7;a (continued)\n[Table] (PDF page 2)\nColumns: Generic name (Brand name) | Buprenorphine and naloxone (Suboxone®) 8,9;b | Buprenorphine (Subutex®) 10 | Buprenorphine (Sublocade®) 11\nTypical dosing | During initiation, titrate dose to treat withdrawal, cravings, and as tolerated. • DAY 1: Initiate • Suboxone® 2/0.5 mg or 4/1 mg; titrate by 2/0.5 mg or 4/1 mg every 1-2 hours to a target dose of 8/2 mg/day • Subutex® 2 or 4 mg; titrate by 2 or 4 mg every 1-2 hours to a target dose 8 mg/day • DAY 2: Start with Day 1 dose, continue titrating • Suboxone® in 2/0.5 mg or 4/1 mg increments to a target dose of 16/4 mg/day • Subutex® in 2 or 4 mg increments | to a target dose | • Initiate: 300 mg SC injection in abdominal adipose tissue monthly for 2 months • Maintenance: 100 mg monthly; can increase to 300 mg monthly if 100 mg tolerated but unsatisfactory clinical response (e.g., opioid cravings, withdrawal, use of non-prescribed opioids) • A 2-month dosing interval may be appropriate in some cases (e.g., extended travel). Administer a single 300 mg dose to cover 2 months, then resume 100 mg\nUsual max dose | of 16mg/day Target maintenance dose: 16/4 mg/day or Subutex® 12-16 24 mg/day; higher doses may be used in some cases (e.g., uncontrolled withdrawal or cravings) but should be carefully monitored, and rationale | Suboxone® 12/3 mg to mg/day in a single daily use documented 12-15 | monthly. 300 mg/4 weeks\nClinical pearls | • Initiate when in sufficient withdrawal (e.g., Clinical Opiate Withdrawal Scale [COWS] score ≥8) to avoid precipitated withdrawal. c • SL tablet: Place under the tongue until dissolved. For doses requiring >1 tablet, place 2 tablets under the tongue at a time until fully dissolved and repeat with remaining tablets. • SL film: Place 1 film under the tongue close to the base on the left or right side and allow to completely dissolve. If a second film is needed, place on the opposite side of the mouth. If a third film is needed, wait for the first two to dissolve, the place inside the right or left cheek. Do not cut or chew. • Avoid swallowing due to reduced bioavailability. Avoid abrupt discontinuation to taper off. | gradually reduce dose | • Injection site pruritus and pain are common; apply a topical anesthetic (e.g., lidocaine 5% ointment) 10-30 minutes prior to injection; may dispense to patient to apply prior to appointment. • Peak effect occurs ~24 hours after injection, and 4-6 months needed to achieve steady-state. • After achieving steady-state, plasma levels remain detectable for ≥12 months after discontinuation and will decrease gradually over subsequent months.\n\nva_pbm_bup_oud (VA, advisory, 2023-03)\nBuprenorphine for Opioid Use Disorder: Clinician Guide (IB 10-1498) > Quick facts about buprenorphine for treatment of opioid use disorder (OUD)\n[p 1]\nMedications, like buprenorphine, are the gold-standard treatment for patients with OUD. Buprenorphine saves lives, reduces illicit opioid use and opioid cravings, and improves retention in treatment and well-being. 1-5\nOUD is a chronic, relapsing disease. While the optimal treatment duration for OUD ",
+    "va_pbm_bup_oud:p2": "va_pbm_bup_oud (VA, advisory, 2023-03)\nBuprenorphine for Opioid Use Disorder: Clinician Guide (IB 10-1498) > Buprenorphine formulations FDA approved for treatment of OUDReference 1, 2, 6, 7; Footnote A.\n[p 1]\nBuprenorphine formulations FDA approved for treatment of OUD 1,2,6,7;a\n[Table] (PDF page 1)\nColumns: Generic name (Brand name) | Buprenorphine and naloxone (Suboxone®) 8,9;b | Buprenorphine and naloxone (Suboxone®) 8,9;b | Buprenorphine (Subutex®) 10 | Buprenorphine (Sublocade®) 11\nDosage form and strengths | Sublingual (SL) tablet: 2/0.5 mg, 8/2 mg | SL film: 2/0.5 mg, 4/1 mg, 8/2 mg, 12/3 mg | SL tablet: 2 mg, 8 mg | Extended release subcutaneous (SC) injection: 100 mg, 300 mg\nPADR | Not required | Required | Not required | Required\nREMS registration* | Not required b | Not required b | Not required | Required\nWhen to use | • Preferred for initiation and maintenance in most patients • Reduced risk of misuse and diversion versus Subutex® | Adverse effects, intolerance, absorption issues with SL tablets (e.g., swallowing or spitting out tablets) | • Not recommended first line in most cases; naloxone combination is preferred • May be used in pregnant women | • After use of SL buprenorphine 8-24 mg/day for ≥7 days • If daily dosing is difficult or risky (e.g., homeless, unstable housing, living with children), or concern for diversion, misuse, or insufficient response with SL\nFrequency of use | • Daily for OUD • When used to treat OUD and pain, or off-label for a primary pain indication, consider adjusting the dosage interval to twice or three times daily to provide adequate analgesia | • Daily for OUD • When used to treat OUD and pain, or off-label for a primary pain indication, consider adjusting the dosage interval to twice or three times daily to provide adequate analgesia | • Daily for OUD • When used to treat OUD and pain, or off-label for a primary pain indication, consider adjusting the dosage interval to twice or three times daily to provide adequate analgesia | • Monthly (≥26 days between doses) • Administer a missed dose as soon as possible, with the following dose given no less than 26 days later • Occasional delays in dosing <2 weeks should not have significant impact\nPADR, prior authorization drug request. *REMS (risk evaluation and mitigation strategies) for all formulations: www.accessdata.fda.gov/scripts/cder/rems/index.cfm.\na Buprenorphine perioperative guidance: https://dvagov.sharepoint.com/sites/VHAPBM/Formulary/Clinical%20Guidance/Forms/AllItems.aspx.\nb REMS registration is required for injectable buprenorphine. For transmucosal buprenorphine, follow the checklist provided by the FDA: Buprenorphine Transmucosal Products for Opioid Dependence (BTOD) (www.accessdata.fda.gov/scripts/cder/rems/index.cfm?event=RemsDetails.page&REMS=9)\n[p 2]\nBuprenorphine formulations FDA approved for treatment of OUD 1,2,6,7;a (continued)\n[Table] (PDF page 2)\nColumns: Generic name (Brand name) | Buprenorphine and naloxone (Suboxone®) 8,9;b | Buprenorphine (Subutex®) 10 | Buprenorphine (Sublocade®) 11\nTypical dosing | During initiation, titrate dose to treat withdrawal, cravings, and as tolerated. • DAY 1: Initiate • Suboxone® 2/0.5 mg or 4/1 mg; titrate by 2/0.5 mg or 4/1 mg every 1-2 hours to a target dose of 8/2 mg/day • Subutex® 2 or 4 mg; titrate by 2 or 4 mg every 1-2 hours to a target dose 8 mg/day • DAY 2: Start with Day 1 dose, continue titrating • Suboxone® in 2/0.5 mg or 4/1 mg increments to a target dose of 16/4 mg/day • Subutex® in 2 or 4 mg increments | to a target dose | • Initiate: 300 mg SC injection in abdominal adipose tissue monthly for 2 months • Maintenance: 100 mg monthly; can increase to 300 mg monthly if 100 mg tolerated but unsatisfactory clinical response (e.g., opioid cravings, withdrawal, use of non-prescribed opioids) • A 2-month dosing interval may be appropriate in some cases (e.g., extended travel). Administer a single 300 mg dose to cover 2 months, then resume 100 mg\nUsual max dose | of 16mg/day Target maintenance dose: 16/4 mg/day or Subutex® 12-16 24 mg/day; higher doses may be used in some cases (e.g., uncontrolled withdrawal or cravings) but should be carefully monitored, and rationale | Suboxone® 12/3 mg to mg/day in a single daily use documented 12-15 | monthly. 300 mg/4 weeks\nClinical pearls | • Initiate when in sufficient withdrawal (e.g., Clinical Opiate Withdrawal Scale [COWS] score ≥8) to avoid precipitated withdrawal. c • SL tablet: Place under the tongue until dissolved. For doses requiring >1 tablet, place 2 tablets under the tongue at a time until fully dissolved and repeat with remaining tablets. • SL film: Place 1 film under the tongue close to the base on the left or right side and allow to completely dissolve. If a second film is needed, place on the opposite side of the mouth. If a third film is needed, wait for the first two to dissolve, the place inside the right or left cheek. Do not cut or chew. • Avoid swallowing due to reduced bioavailability. Avoid abrupt discontinuation to taper off. | gradually reduce dose | • Injection site pruritus and pain are common; apply a topical anesthetic (e.g., lidocaine 5% ointment) 10-30 minutes prior to injection; may dispense to patient to apply prior to appointment. • Peak effect occurs ~24 hours after injection, and 4-6 months needed to achieve steady-state. • After achieving steady-state, plasma levels remain detectable for ≥12 months after discontinuation and will decrease gradually over subsequent months.",
+    "va_national_formulary_2026_09:r304": "{\"source\": \"VA National Formulary, sheet Formulary (header row 16)\", \"query\": {\"drug\": \"buprenorphine\", \"dosage_form\": \"patch\"}, \"rule\": {\"cite\": {\"doc_id\": \"va_national_formulary_2026_09\", \"row\": 7}, \"text\": \"The VANF is dosage form specific.  If a specific dosage form is not listed, the specific product in question should be considered non-formulary (although other dosage forms of that molecular entity may be included as formulary).  Dosage forms such as TAB and CAP, ORAL are considered immediate release.  Sustained release products are listed individually.  Formulary products may also be available in many dosage forms and strengths.  In the case of products with multiple dosage forms and strengths, not all forms and strengths need to be stocked.  Facilities should make those dosages available that are necessary to meet their patient needs.”\"}, \"pa_levels\": {\"cite\": {\"doc_id\": \"va_national_formulary_2026_09\", \"row\": 9}, \"text\": \"PA- There are three levels of Prior Authorization\\n• Prior Authorization-National (PA-N) refers to medications that are formulary, but require prior approval at the national level before dispensing.\\n• Prior Authorization-VISN (PA-V) refers to medications that are formulary, but require prior approval at the VISN level before dispensing.\\n• Prior Authorization-Facility (PA-F) refers to medications that are formulary, but require prior approval at the facility level before dispensing.\\nPrior Authorization is used to insure that the medication is appropriate for each individual Veteran.\"}, \"result\": \"exact_match\", \"rows\": [{\"row_id\": \"va_national_formulary_2026_09#Formulary#row-304\", \"cite\": {\"doc_id\": \"va_national_formulary_2026_09\", \"row\": 304}, \"sheet\": \"Formulary\", \"row\": 304, \"matched_on\": \"generic name\", \"VA Class\": \"CN101\", \"Restriction\": \"\", \"Generic\": \"BUPRENORPHINE\", \"Dosage Form\": \"PATCH\", \"Comments\": \"\", \"U/E Formulary\": \"\", \"Clinical Guidance\": \"\", \"Restriction meaning\": \"no restriction listed\"}]}"
+  },
+  "cited_evidence_parts": {
+    "ny_medicaid_pdl:p76": [
+      "ny_medicaid_pdl (NY Medicaid, binding, 2026-09-14)\nNYRx Preferred Drug Program (PDP) Preferred Drug List > Medication Assisted Treatment (MAT) Formulary\n[p 76]\n[Table] (PDF page 76)\nColumns: **Prior authorization will not be required for medications used for the treatment of substance use disorder when prescribed according to generally accepted national professional guidelines for the treatment of a substance use disorder. ** | **Prior authorization will not be required for medications used for the treatment of substance use disorder when prescribed according to generally accepted national professional guidelines for the treatment of a substance use disorder. ** / Drugs | Coverage Parameters / Opioid Antagonists | Opioid Antagonists\nKloxxado™ naloxone (syringe, vial, nasal spray) naloxone (nasal spray) OTC naltrexone Narcan ® (nasal spray) Narcan ® OTC Opvee ® Rextovy® Zimhi™ | \nOpioid Dependence Agents - Injectable | Opioid Dependence Agents - Injectable\nBrixadi™ Sublocade™ Vivitrol ® | \nOpioid Dependence Agents - Oral/Transmucosal F/Q/D | Opioid Dependence Agents - Oral/Transmucosal F/Q/D\nbuprenorphine (tablet) buprenorphine/naloxone (tablet) buprenorphine/naloxone (film) Suboxone ® (film) Zubsolv ® | QUANTITY LIMIT: • buprenorphine sublingual (SL): Eight tablets dispensed as a 2-day supply; not to exceed 32 mg per day • buprenorphine / naloxone tablet and film (Suboxone ® 2mg/0.5mg, Zubsolv ® 1.4mg/0.36mg, 0.7mg/0.18mg strength; Up to 12 sublingual tablets or films per day. • buprenorphine/naloxone tablet and film (Suboxone ® up to 4mg/1mg and 8mg/2mg strength, Zubsolv ® 2.9mg/0.71mg and 5.7mg/1.4mg strength; Four sublingual tablets or films per day; maximum of 120 tablets or films dispensed as a 30-day supply, not to exceed 32 mg-8 mg of Suboxone®, or its equivalent per day • buprenorphine/naloxone tablet: Suboxone ® 12mg/3mg, Zubsolv ® 8.6 mg/2.1 mg and Zubsolv ® 11.4 mg/2.9 mg strength: Maximum of 60 tablets dispensed as a 30-day supply RELATED CLINICAL CRITERIA (CC) • PA required for initiation of opioid therapy for patients established on opioid dependence therapy • PA required for initiation of a CNS stimulant for patients established on opioid dependence therapy"
+    ],
+    "va_pbm_bup_oud:p1": [
+      "va_pbm_bup_oud (VA, advisory, 2023-03)\nBuprenorphine for Opioid Use Disorder: Clinician Guide (IB 10-1498) > Buprenorphine formulations FDA approved for treatment of OUDReference 1, 2, 6, 7; Footnote A.\n[p 1]\nBuprenorphine formulations FDA approved for treatment of OUD 1,2,6,7;a\n[Table] (PDF page 1)\nColumns: Generic name (Brand name) | Buprenorphine and naloxone (Suboxone®) 8,9;b | Buprenorphine and naloxone (Suboxone®) 8,9;b | Buprenorphine (Subutex®) 10 | Buprenorphine (Sublocade®) 11\nDosage form and strengths | Sublingual (SL) tablet: 2/0.5 mg, 8/2 mg | SL film: 2/0.5 mg, 4/1 mg, 8/2 mg, 12/3 mg | SL tablet: 2 mg, 8 mg | Extended release subcutaneous (SC) injection: 100 mg, 300 mg\nPADR | Not required | Required | Not required | Required\nREMS registration* | Not required b | Not required b | Not required | Required\nWhen to use | • Preferred for initiation and maintenance in most patients • Reduced risk of misuse and diversion versus Subutex® | Adverse effects, intolerance, absorption issues with SL tablets (e.g., swallowing or spitting out tablets) | • Not recommended first line in most cases; naloxone combination is preferred • May be used in pregnant women | • After use of SL buprenorphine 8-24 mg/day for ≥7 days • If daily dosing is difficult or risky (e.g., homeless, unstable housing, living with children), or concern for diversion, misuse, or insufficient response with SL\nFrequency of use | • Daily for OUD • When used to treat OUD and pain, or off-label for a primary pain indication, consider adjusting the dosage interval to twice or three times daily to provide adequate analgesia | • Daily for OUD • When used to treat OUD and pain, or off-label for a primary pain indication, consider adjusting the dosage interval to twice or three times daily to provide adequate analgesia | • Daily for OUD • When used to treat OUD and pain, or off-label for a primary pain indication, consider adjusting the dosage interval to twice or three times daily to provide adequate analgesia | • Monthly (≥26 days between doses) • Administer a missed dose as soon as possible, with the following dose given no less than 26 days later • Occasional delays in dosing <2 weeks should not have significant impact\nPADR, prior authorization drug request. *REMS (risk evaluation and mitigation strategies) for all formulations: www.accessdata.fda.gov/scripts/cder/rems/index.cfm.\na Buprenorphine perioperative guidance: https://dvagov.sharepoint.com/sites/VHAPBM/Formulary/Clinical%20Guidance/Forms/AllItems.aspx.\nb REMS registration is required for injectable buprenorphine. For transmucosal buprenorphine, follow the checklist provided by the FDA: Buprenorphine Transmucosal Products for Opioid Dependence (BTOD) (www.accessdata.fda.gov/scripts/cder/rems/index.cfm?event=RemsDetails.page&REMS=9)\n[p 2]\nBuprenorphine formulations FDA approved for treatment of OUD 1,2,6,7;a (continued)\n[Table] (PDF page 2)\nColumns: Generic name (Brand name) | Buprenorphine and naloxone (Suboxone®) 8,9;b | Buprenorphine (Subutex®) 10 | Buprenorphine (Sublocade®) 11\nTypical dosing | During initiation, titrate dose to treat withdrawal, cravings, and as tolerated. • DAY 1: Initiate • Suboxone® 2/0.5 mg or 4/1 mg; titrate by 2/0.5 mg or 4/1 mg every 1-2 hours to a target dose of 8/2 mg/day • Subutex® 2 or 4 mg; titrate by 2 or 4 mg every 1-2 hours to a target dose 8 mg/day • DAY 2: Start with Day 1 dose, continue titrating • Suboxone® in 2/0.5 mg or 4/1 mg increments to a target dose of 16/4 mg/day • Subutex® in 2 or 4 mg increments | to a target dose | • Initiate: 300 mg SC injection in abdominal adipose tissue monthly for 2 months • Maintenance: 100 mg monthly; can increase to 300 mg monthly if 100 mg tolerated but unsatisfactory clinical response (e.g., opioid cravings, withdrawal, use of non-prescribed opioids) • A 2-month dosing interval may be appropriate in some cases (e.g., extended travel). Administer a single 300 mg dose to cover 2 months, then resume 100 mg\nUsual max dose | of 16mg/day Target maintenance dose: 16/4 mg/day or Subutex® 12-16 24 mg/day; higher doses may be used in some cases (e.g., uncontrolled withdrawal or cravings) but should be carefully monitored, and rationale | Suboxone® 12/3 mg to mg/day in a single daily use documented 12-15 | monthly. 300 mg/4 weeks\nClinical pearls | • Initiate when in sufficient withdrawal (e.g., Clinical Opiate Withdrawal Scale [COWS] score ≥8) to avoid precipitated withdrawal. c • SL tablet: Place under the tongue until dissolved. For doses requiring >1 tablet, place 2 tablets under the tongue at a time until fully dissolved and repeat with remaining tablets. • SL film: Place 1 film under the tongue close to the base on the left or right side and allow to completely dissolve. If a second film is needed, place on the opposite side of the mouth. If a third film is needed, wait for the first two to dissolve, the place inside the right or left cheek. Do not cut or chew. • Avoid swallowing due to reduced bioavailability. Avoid abrupt discontinuation to taper off. | gradually reduce dose | • Injection site pruritus and pain are common; apply a topical anesthetic (e.g., lidocaine 5% ointment) 10-30 minutes prior to injection; may dispense to patient to apply prior to appointment. • Peak effect occurs ~24 hours after injection, and 4-6 months needed to achieve steady-state. • After achieving steady-state, plasma levels remain detectable for ≥12 months after discontinuation and will decrease gradually over subsequent months.\n\nva_pbm_bup_oud (VA, advisory, 2023-03)\nBuprenorphine for Opioid Use Disorder: Clinician Guide (IB 10-1498) > Quick facts about buprenorphine for treatment of opioid use disorder (OUD)\n[p 1]\nMedications, like buprenorphine, are the gold-standard treatment for patients with OUD. Buprenorphine saves lives, reduces illicit opioid use and opioid cravings, and improves retention in treatment and well-being. 1-5\nOUD is a chronic, relapsing disease. While the optimal treatment duration for OUD "
+    ],
+    "va_pbm_bup_oud:p2": [
+      "va_pbm_bup_oud (VA, advisory, 2023-03)\nBuprenorphine for Opioid Use Disorder: Clinician Guide (IB 10-1498) > Buprenorphine formulations FDA approved for treatment of OUDReference 1, 2, 6, 7; Footnote A.\n[p 1]\nBuprenorphine formulations FDA approved for treatment of OUD 1,2,6,7;a\n[Table] (PDF page 1)\nColumns: Generic name (Brand name) | Buprenorphine and naloxone (Suboxone®) 8,9;b | Buprenorphine and naloxone (Suboxone®) 8,9;b | Buprenorphine (Subutex®) 10 | Buprenorphine (Sublocade®) 11\nDosage form and strengths | Sublingual (SL) tablet: 2/0.5 mg, 8/2 mg | SL film: 2/0.5 mg, 4/1 mg, 8/2 mg, 12/3 mg | SL tablet: 2 mg, 8 mg | Extended release subcutaneous (SC) injection: 100 mg, 300 mg\nPADR | Not required | Required | Not required | Required\nREMS registration* | Not required b | Not required b | Not required | Required\nWhen to use | • Preferred for initiation and maintenance in most patients • Reduced risk of misuse and diversion versus Subutex® | Adverse effects, intolerance, absorption issues with SL tablets (e.g., swallowing or spitting out tablets) | • Not recommended first line in most cases; naloxone combination is preferred • May be used in pregnant women | • After use of SL buprenorphine 8-24 mg/day for ≥7 days • If daily dosing is difficult or risky (e.g., homeless, unstable housing, living with children), or concern for diversion, misuse, or insufficient response with SL\nFrequency of use | • Daily for OUD • When used to treat OUD and pain, or off-label for a primary pain indication, consider adjusting the dosage interval to twice or three times daily to provide adequate analgesia | • Daily for OUD • When used to treat OUD and pain, or off-label for a primary pain indication, consider adjusting the dosage interval to twice or three times daily to provide adequate analgesia | • Daily for OUD • When used to treat OUD and pain, or off-label for a primary pain indication, consider adjusting the dosage interval to twice or three times daily to provide adequate analgesia | • Monthly (≥26 days between doses) • Administer a missed dose as soon as possible, with the following dose given no less than 26 days later • Occasional delays in dosing <2 weeks should not have significant impact\nPADR, prior authorization drug request. *REMS (risk evaluation and mitigation strategies) for all formulations: www.accessdata.fda.gov/scripts/cder/rems/index.cfm.\na Buprenorphine perioperative guidance: https://dvagov.sharepoint.com/sites/VHAPBM/Formulary/Clinical%20Guidance/Forms/AllItems.aspx.\nb REMS registration is required for injectable buprenorphine. For transmucosal buprenorphine, follow the checklist provided by the FDA: Buprenorphine Transmucosal Products for Opioid Dependence (BTOD) (www.accessdata.fda.gov/scripts/cder/rems/index.cfm?event=RemsDetails.page&REMS=9)\n[p 2]\nBuprenorphine formulations FDA approved for treatment of OUD 1,2,6,7;a (continued)\n[Table] (PDF page 2)\nColumns: Generic name (Brand name) | Buprenorphine and naloxone (Suboxone®) 8,9;b | Buprenorphine (Subutex®) 10 | Buprenorphine (Sublocade®) 11\nTypical dosing | During initiation, titrate dose to treat withdrawal, cravings, and as tolerated. • DAY 1: Initiate • Suboxone® 2/0.5 mg or 4/1 mg; titrate by 2/0.5 mg or 4/1 mg every 1-2 hours to a target dose of 8/2 mg/day • Subutex® 2 or 4 mg; titrate by 2 or 4 mg every 1-2 hours to a target dose 8 mg/day • DAY 2: Start with Day 1 dose, continue titrating • Suboxone® in 2/0.5 mg or 4/1 mg increments to a target dose of 16/4 mg/day • Subutex® in 2 or 4 mg increments | to a target dose | • Initiate: 300 mg SC injection in abdominal adipose tissue monthly for 2 months • Maintenance: 100 mg monthly; can increase to 300 mg monthly if 100 mg tolerated but unsatisfactory clinical response (e.g., opioid cravings, withdrawal, use of non-prescribed opioids) • A 2-month dosing interval may be appropriate in some cases (e.g., extended travel). Administer a single 300 mg dose to cover 2 months, then resume 100 mg\nUsual max dose | of 16mg/day Target maintenance dose: 16/4 mg/day or Subutex® 12-16 24 mg/day; higher doses may be used in some cases (e.g., uncontrolled withdrawal or cravings) but should be carefully monitored, and rationale | Suboxone® 12/3 mg to mg/day in a single daily use documented 12-15 | monthly. 300 mg/4 weeks\nClinical pearls | • Initiate when in sufficient withdrawal (e.g., Clinical Opiate Withdrawal Scale [COWS] score ≥8) to avoid precipitated withdrawal. c • SL tablet: Place under the tongue until dissolved. For doses requiring >1 tablet, place 2 tablets under the tongue at a time until fully dissolved and repeat with remaining tablets. • SL film: Place 1 film under the tongue close to the base on the left or right side and allow to completely dissolve. If a second film is needed, place on the opposite side of the mouth. If a third film is needed, wait for the first two to dissolve, the place inside the right or left cheek. Do not cut or chew. • Avoid swallowing due to reduced bioavailability. Avoid abrupt discontinuation to taper off. | gradually reduce dose | • Injection site pruritus and pain are common; apply a topical anesthetic (e.g., lidocaine 5% ointment) 10-30 minutes prior to injection; may dispense to patient to apply prior to appointment. • Peak effect occurs ~24 hours after injection, and 4-6 months needed to achieve steady-state. • After achieving steady-state, plasma levels remain detectable for ≥12 months after discontinuation and will decrease gradually over subsequent months."
+    ],
+    "va_national_formulary_2026_09:r304": [
+      "{\"source\": \"VA National Formulary, sheet Formulary (header row 16)\", \"query\": {\"drug\": \"buprenorphine\", \"dosage_form\": \"patch\"}, \"rule\": {\"cite\": {\"doc_id\": \"va_national_formulary_2026_09\", \"row\": 7}, \"text\": \"The VANF is dosage form specific.  If a specific dosage form is not listed, the specific product in question should be considered non-formulary (although other dosage forms of that molecular entity may be included as formulary).  Dosage forms such as TAB and CAP, ORAL are considered immediate release.  Sustained release products are listed individually.  Formulary products may also be available in many dosage forms and strengths.  In the case of products with multiple dosage forms and strengths, not all forms and strengths need to be stocked.  Facilities should make those dosages available that are necessary to meet their patient needs.”\"}, \"pa_levels\": {\"cite\": {\"doc_id\": \"va_national_formulary_2026_09\", \"row\": 9}, \"text\": \"PA- There are three levels of Prior Authorization\\n• Prior Authorization-National (PA-N) refers to medications that are formulary, but require prior approval at the national level before dispensing.\\n• Prior Authorization-VISN (PA-V) refers to medications that are formulary, but require prior approval at the VISN level before dispensing.\\n• Prior Authorization-Facility (PA-F) refers to medications that are formulary, but require prior approval at the facility level before dispensing.\\nPrior Authorization is used to insure that the medication is appropriate for each individual Veteran.\"}, \"result\": \"exact_match\", \"rows\": [{\"row_id\": \"va_national_formulary_2026_09#Formulary#row-304\", \"cite\": {\"doc_id\": \"va_national_formulary_2026_09\", \"row\": 304}, \"sheet\": \"Formulary\", \"row\": 304, \"matched_on\": \"generic name\", \"VA Class\": \"CN101\", \"Restriction\": \"\", \"Generic\": \"BUPRENORPHINE\", \"Dosage Form\": \"PATCH\", \"Comments\": \"\", \"U/E Formulary\": \"\", \"Clinical Guidance\": \"\", \"Restriction meaning\": \"no restriction listed\"}]}"
+    ]
+  },
+  "cost_note": "each call priced at its serving role's rates (llm.<role>.prices_per_mtok)",
+  "request_started_utc": "2026-10-18T16:26:36.797812+00:00",
+  "citation_check": {
+    "t_start": 21.007,
+    "duration_s": 0.001
+  }
+}

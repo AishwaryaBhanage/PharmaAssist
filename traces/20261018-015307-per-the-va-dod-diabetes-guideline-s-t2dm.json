@@ -1,0 +1,399 @@
+{
+  "question": "Per the VA/DoD diabetes guideline's T2DM management algorithm, a patient has no ASCVD, nephropathy or heart failure and is not at their glycemic target. What is the next step?",
+  "status": "answered",
+  "assumption": "Assuming the VA/DoD T2DM CPG (2023, v6.0) Module A algorithm; metformin already started per Box 5.",
+  "answer": "Per Module A, with No to Box 6 (no ASCVD/high risk, nephropathy, or HF) you skip the GLP-1 RA/SGLT-2 step and go to Box 8 (target A1C 7.0–8.5% for most patients, or an individualized range). Not at target (No) leads to **Box 10: consider additional medications until the target A1C range is achieved.** Select the agent based on efficacy and risk-benefit, and see CPG Appendix B. Metformin is the starting point unless contraindicated (Box 5). The algorithm doesn't name a specific second agent. Appendix B has the agent comparison.",
+  "citations": [
+    {
+      "doc_id": "va_dod_cpg_diabetes_2023",
+      "page": 21,
+      "link": "https://www.healthquality.va.gov/guidelines/CD/diabetes/VADoD-Diabetes-CPG_Final_508.pdf#page=21",
+      "flag": null,
+      "locator": "va_dod_cpg_diabetes_2023:p21"
+    },
+    {
+      "doc_id": "va_dod_cpg_diabetes_2023",
+      "page": 145,
+      "link": "https://www.healthquality.va.gov/guidelines/CD/diabetes/VADoD-Diabetes-CPG_Final_508.pdf#page=145",
+      "flag": null,
+      "locator": "va_dod_cpg_diabetes_2023:p145"
+    }
+  ],
+  "conflicts_noted": [
+    "Appendix I text says 'diabetic neuropathy' in Box 6, while the algorithm figure says 'nephropathy'; the figure matches the sidebar content (nephropathy), and the answer is unaffected."
+  ],
+  "flags": [],
+  "needs_review": false,
+  "words": {
+    "displayed": 89,
+    "rendered": 89
+  },
+  "answered_by": "claude-sonnet-5-5",
+  "fallback_used": false,
+  "timing_s": {
+    "total": 7.065,
+    "search": 0.641,
+    "search_cold": 0,
+    "search_warm": 0.641,
+    "read_page": 0,
+    "list_documents": 0,
+    "model_calls": [
+      1.872,
+      4.543
+    ]
+  },
+  "index_warm_at_start": true,
+  "lookups": 1,
+  "tokens": {
+    "input": 6,
+    "output": 675,
+    "cache_read": 3635,
+    "cache_write": 16284
+  },
+  "cost_usd": 0.048199,
+  "pages_seen": [
+    "va_dod_cpg_diabetes_2023:p145",
+    "va_dod_cpg_diabetes_2023:p146",
+    "va_dod_cpg_diabetes_2023:p19",
+    "va_dod_cpg_diabetes_2023:p20",
+    "va_dod_cpg_diabetes_2023:p21",
+    "va_dod_cpg_diabetes_2023:p22",
+    "va_dod_cpg_diabetes_2023:p23",
+    "va_dod_cpg_diabetes_2023:p24",
+    "va_dod_cpg_diabetes_2023:p67",
+    "va_pbm_t2dm_clinicians_guide:p11",
+    "va_pbm_t2dm_clinicians_guide:p12",
+    "va_pbm_t2dm_clinicians_guide:p13",
+    "va_pbm_t2dm_clinicians_guide:p22",
+    "va_pbm_t2dm_pharmacotherapy_2025:p5",
+    "va_pbm_t2dm_pharmacotherapy_2025:p6"
+  ],
+  "started_at": "2026-10-18T05:53:07+00:00",
+  "config": {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium",
+    "setup": "docling_norerank_structured",
+    "max_tool_calls": 6,
+    "deadline_s": 25,
+    "search_k": 8
+  },
+  "structured_lookups": true,
+  "model_calls": [
+    {
+      "t_start": 0.0,
+      "duration_s": 1.872,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 4,
+        "output": 138,
+        "cache_read": 0,
+        "cache_write": 3635
+      }
+    },
+    {
+      "t_start": 2.513,
+      "duration_s": 4.543,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 2,
+        "output": 537,
+        "cache_read": 3635,
+        "cache_write": 12649
+      }
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "search_documents",
+      "input": {
+        "query": "VA/DoD diabetes guideline T2DM algorithm not at glycemic target no ASCVD, CKD, heart failure metformin next step",
+        "program": "VA",
+        "k": 8
+      },
+      "duration_s": 0.641,
+      "is_error": false,
+      "pages": [
+        "va_dod_cpg_diabetes_2023:p145",
+        "va_dod_cpg_diabetes_2023:p146",
+        "va_dod_cpg_diabetes_2023:p19",
+        "va_dod_cpg_diabetes_2023:p20",
+        "va_dod_cpg_diabetes_2023:p21",
+        "va_dod_cpg_diabetes_2023:p22",
+        "va_dod_cpg_diabetes_2023:p23",
+        "va_dod_cpg_diabetes_2023:p24",
+        "va_dod_cpg_diabetes_2023:p67",
+        "va_pbm_t2dm_clinicians_guide:p11",
+        "va_pbm_t2dm_clinicians_guide:p12",
+        "va_pbm_t2dm_clinicians_guide:p13",
+        "va_pbm_t2dm_clinicians_guide:p22",
+        "va_pbm_t2dm_pharmacotherapy_2025:p5",
+        "va_pbm_t2dm_pharmacotherapy_2025:p6"
+      ],
+      "index_loaded": true,
+      "search": {
+        "original_query": "Per the VA/DoD diabetes guideline's T2DM management algorithm, a patient has no ASCVD, nephropathy or heart failure and is not at their glycemic target. What is the next step?",
+        "agent_query": "VA/DoD diabetes guideline T2DM algorithm not at glycemic target no ASCVD, CKD, heart failure metformin next step",
+        "executed": [
+          {
+            "source": "original",
+            "query": "Per the VA/DoD diabetes guideline's T2DM management algorithm, a patient has no ASCVD, nephropathy or heart failure and is not at their glycemic target. What is the next step?",
+            "program": "VA",
+            "k": 8,
+            "seconds": 0.64,
+            "cached": false,
+            "results": 8
+          },
+          {
+            "source": "agent",
+            "query": "VA/DoD diabetes guideline T2DM algorithm not at glycemic target no ASCVD, CKD, heart failure metformin next step",
+            "program": "VA",
+            "k": 8,
+            "seconds": 0.594,
+            "cached": false,
+            "results": 8
+          }
+        ],
+        "duplicates_merged": 7,
+        "returned": 9,
+        "from_both": 7,
+        "from_original_only": 1,
+        "from_agent_only": 1,
+        "provenance": [
+          {
+            "unit": "va_dod_cpg_diabetes_2023:s17",
+            "found_by": {
+              "original": 1,
+              "agent": 1
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_clinicians_guide:s10",
+            "found_by": {
+              "original": 3,
+              "agent": 2
+            }
+          },
+          {
+            "unit": "va_dod_cpg_diabetes_2023:s135",
+            "found_by": {
+              "original": 2,
+              "agent": 4
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_clinicians_guide:s11",
+            "found_by": {
+              "original": 5,
+              "agent": 3
+            }
+          },
+          {
+            "unit": "va_dod_cpg_diabetes_2023:s18",
+            "found_by": {
+              "original": 4,
+              "agent": 6
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s4",
+            "found_by": {
+              "original": 8,
+              "agent": 5
+            }
+          },
+          {
+            "unit": "va_dod_cpg_diabetes_2023:s16",
+            "found_by": {
+              "original": 6,
+              "agent": 7
+            }
+          },
+          {
+            "unit": "va_dod_cpg_diabetes_2023:s68",
+            "found_by": {
+              "original": 7
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_clinicians_guide:s31",
+            "found_by": {
+              "agent": 8
+            }
+          }
+        ],
+        "hits": [
+          {
+            "unit": "va_dod_cpg_diabetes_2023:s17",
+            "doc_id": "va_dod_cpg_diabetes_2023",
+            "pages": [
+              21
+            ],
+            "ranks": {
+              "original": 1,
+              "agent": 1
+            },
+            "scores": {
+              "original": 0.0328,
+              "agent": 0.0325
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_clinicians_guide:s10",
+            "doc_id": "va_pbm_t2dm_clinicians_guide",
+            "pages": [
+              11,
+              12
+            ],
+            "ranks": {
+              "original": 3,
+              "agent": 2
+            },
+            "scores": {
+              "original": 0.0287,
+              "agent": 0.0312
+            }
+          },
+          {
+            "unit": "va_dod_cpg_diabetes_2023:s135",
+            "doc_id": "va_dod_cpg_diabetes_2023",
+            "pages": [
+              145,
+              146
+            ],
+            "ranks": {
+              "original": 2,
+              "agent": 4
+            },
+            "scores": {
+              "original": 0.0318,
+              "agent": 0.0278
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_clinicians_guide:s11",
+            "doc_id": "va_pbm_t2dm_clinicians_guide",
+            "pages": [
+              12,
+              13
+            ],
+            "ranks": {
+              "original": 5,
+              "agent": 3
+            },
+            "scores": {
+              "original": 0.0266,
+              "agent": 0.0282
+            }
+          },
+          {
+            "unit": "va_dod_cpg_diabetes_2023:s18",
+            "doc_id": "va_dod_cpg_diabetes_2023",
+            "pages": [
+              22,
+              23,
+              24
+            ],
+            "ranks": {
+              "original": 4,
+              "agent": 6
+            },
+            "scores": {
+              "original": 0.0269,
+              "agent": 0.0267
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_pharmacotherapy_2025:s4",
+            "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+            "pages": [
+              5,
+              6
+            ],
+            "ranks": {
+              "original": 8,
+              "agent": 5
+            },
+            "scores": {
+              "original": 0.0233,
+              "agent": 0.0278
+            }
+          },
+          {
+            "unit": "va_dod_cpg_diabetes_2023:s16",
+            "doc_id": "va_dod_cpg_diabetes_2023",
+            "pages": [
+              19,
+              20
+            ],
+            "ranks": {
+              "original": 6,
+              "agent": 7
+            },
+            "scores": {
+              "original": 0.026,
+              "agent": 0.0256
+            }
+          },
+          {
+            "unit": "va_dod_cpg_diabetes_2023:s68",
+            "doc_id": "va_dod_cpg_diabetes_2023",
+            "pages": [
+              67
+            ],
+            "ranks": {
+              "original": 7
+            },
+            "scores": {
+              "original": 0.0234
+            }
+          },
+          {
+            "unit": "va_pbm_t2dm_clinicians_guide:s31",
+            "doc_id": "va_pbm_t2dm_clinicians_guide",
+            "pages": [
+              22
+            ],
+            "ranks": {
+              "agent": 8
+            },
+            "scores": {
+              "agent": 0.0252
+            }
+          }
+        ]
+      },
+      "t_start": 1.872
+    }
+  ],
+  "cited_evidence": {
+    "va_dod_cpg_diabetes_2023:p21": "va_dod_cpg_diabetes_2023 (VA, advisory, 2023-05)\nVA/DoD Clinical Practice Guideline for the Management of Type 2 Diabetes Mellitus (Version 6.0) > VIII. Algorithm > A. Module A: T2DM Management\n[p 21]\n[Figure, flowchart] untitled in the image; see the section heading (PDF page 21). Machine-generated visual interpretation; status: machine-interpreted from the page image by a vision model; compared box by box against the page image (not clinician-verified).\nBox 1 (start): Patient with T2DM -> then box 2\nBox 2 (decision): Does the patient have an urgent or emergent care need (e.g., symptomatic hyperglycemia, severe hypoglycemia, concurrent medical issue, etc.)? -> if Yes: box 3; if No: box 4\nBox 3 (action): Treat and/or refer for acute care\nBox 4 (action): Assess barriers to success (e.g., psychosocial needs, navigating health care, health literacy/numeracy, patient/provider inertia, social determinants of health [e.g., transportation, economic or food insecurity]) -> then box 5\nBox 5 (action): Develop an individualized treatment plan Review non-pharmacologic therapies • Medical Nutrition Therapy (MNT) (including weight management) (see Module B) • Diabetes Self-Management Education and Support (DSMES) (see Module B) • Exercise If pharmacologic therapy is indicated, begin metformin unless contraindicated -> then box 6\nBox 6 (decision): Does the patient have any of the following: 1. Established ASCVD or high ASCVD risk 2. Diabetic nephropathy 3. Heart failure (see Sidebar 4) -> if Yes: box 7; if No: box 8\nBox 7 (action): Consider GLP-1 RA or SGLT-2 inhibitor if indicated -> then box 8\nBox 8 (decision): Has the patient's glycemic target been achieved (A1C 7.0-8.5% for most patients or alternative range based on individualization)? -> if Yes: box 9; if No: box 10\nBox 9 (action): Review treatment plan to minimize or treat complications and/or comorbidities (see Sidebars 1, 2, 3 and 4) -> then box 11\nBox 10 (action): Consider additional medications until target A1C range is achieved. Select agent based on efficacy and risk-benefit ratio. See CPG Appendix B.\nBox 11 (action): Review health promotion activities • Tobacco cessation • Vaccinations, age-related • Dental care -> then box 12\nBox 12 (end): Follow up as needed\nDecision path: 1 -> 2 -> [Yes] 3\nDecision path: 1 -> 2 -> [No] 4 -> 5 -> 6 -> [Yes] 7 -> 8 -> [Yes] 9 -> 11 -> 12\nDecision path: 1 -> 2 -> [No] 4 -> 5 -> 6 -> [Yes] 7 -> 8 -> [No] 10\nDecision path: 1 -> 2 -> [No] 4 -> 5 -> 6 -> [No] 8 -> [Yes] 9 -> 11 -> 12\nDecision path: 1 -> 2 -> [No] 4 -> 5 -> 6 -> [No] 8 -> [No] 10\nAbbreviations: ASCVD: atherosclerotic cardiovascular disease; GLP-1 RA: glucagon-like peptide 1 receptor agonist; SGLT-2 inhibitor: sodium-glucose transporter 2 inhibitor; MNT: Medical Nutrition Therapy; T2DM: type 2 diabetes mellitus",
+    "va_dod_cpg_diabetes_2023:p145": "va_dod_cpg_diabetes_2023 (VA, advisory, 2023-05)\nVA/DoD Clinical Practice Guideline for the Management of Type 2 Diabetes Mellitus (Version 6.0) > Appendix I: Alternative Text Descriptions of Algorithm\n[p 145]\nThe following outline narratively describes the Management of Type 2 Diabetes Mellitus Algorithm. An explanation of the purpose of the algorithm and description of the various shapes used within the algorithm can be found in the Algorithm section. The sidebars referenced within this outline can also be found in the Algorithm section.\nThe algorithm begins with Box 1, in the shape of a rounded rectangle: \"Patient with T2DM.\"\nBox 1 connects to Box 2, in the shape of a hexagon, which asks, \"Does the patient have an urgent or emergent care need (e.g., symptomatic hyperglycemia, severe hypoglycemia, concurrent medical issue)?\"\nIf the answer is \"Yes\" to Box 2, then Box 3, in the shape of a rectangle: \"Treat and/or refer for acute care.\"\nIf the answer is \"No\" to Box 2, then Box 4, in the shape of a rectangle: \"Assess barriers to success (e.g., psychosocial needs, navigating health care, health literacy/numeracy, patient/provider inertia, social determinants of health [e.g., transportation, economic or food insecurity]).\"\nBox 4 connects to Box 5, in the shape of a rectangle: \"Develop an individualized treatment plan. Review non-pharmacologic therapies: Medical Nutrition Therapy (MNT) (including weight management) (see Module B); Diabetes SelfManagement Education and Support (DSMES) (see Module B); Exercise. If pharmacologic therapy is indicated, begin metformin unless contraindicated.\"\nBox 5 connects to Box 6, in the shape of a hexagon, which asks, \"Does the patient have any of the following: 1. Established ASCVD or high ASCVD risk 2. Diabetic neuropathy 3. Heart failure (see Sidebar 4)?\"\nIf the answer is \"Yes\" to Box 6, then Box 7, in the shape of a rectangle: \"Consider GLP-1 RA or SGLT-2 inhibitor if indicated.\"\nIf the answer is \"No\" to Box 6, then Box 8, in the shape of a hexagon, asks, \"Has the patient's glycemic target been achieved (A1C 7.0-8.5% for most patients or alternative range based on individualization)?\"\nIf the answer is \"No\" to Box 8, then Box 10, in the shape of a rectangle: \"Consider additional medications until target A1C range is achieved. Select agent based on efficacy and risk-benefit ration. See CPG Appendix B.\"\nIf the answer is \"Yes\" to Box 8, then Box 9, in the shape of a rectangle: \"Review treatment plan to minimize or treat complications and/or comorbidities (see Sidebars 1, 2, 3, and 4).\"\n[p 146]\nBox 9 connects to Box 11, in the shape of a rectangle: \"Review health promotion activities: tobacco cessation; vaccinations, age-related; dental care.\"\nBox 11 connects to Box 12, in the shape of a rectangle: \"Follow up as needed.\"\nModule B starts with Box 13, in the shape of a rectangle: \"Patients with T2DM should be offered DSMES or MNT at all of the following times: At initial diagnosis; When not meeting treatment goals; Change in health status/barriers to self-management.\"\nBox 13 connects to Box 14, in the shape of a hexagon, which asks, \"Is the patient being treated in an acute setting?\"\nIf the answer is \"Yes\" to Box 14, then Box 15, in the shape of a rectangle: \"Train in survival skills (see Sidebar 5) and refer for DSMES or MNT following acute care.\"\nIf the answer is \"No\" to Box 14, then Box 16 in the shape of a rectangle: \"Consult/enroll the patient in an outpatient VA/DoD DSMES and MNT program.\"\nBox 15 also connects to Box 16.\nBox 16 connects to Box 17, in the shape of a rectangle: \"Conduct DSMES assessment (see Sidebar 6) and/or MNT screening and assessment (see Sidebar 7).\"\nBox 17 connects to Box 18, in the shape of a rectangle: \"Conduct comprehensive DSMES (see Sidebar 6) or ongoing support (see Sidebar 8) and MNT (see Sidebar 7).\""
+  },
+  "cited_evidence_parts": {
+    "va_dod_cpg_diabetes_2023:p21": [
+      "va_dod_cpg_diabetes_2023 (VA, advisory, 2023-05)\nVA/DoD Clinical Practice Guideline for the Management of Type 2 Diabetes Mellitus (Version 6.0) > VIII. Algorithm > A. Module A: T2DM Management\n[p 21]\n[Figure, flowchart] untitled in the image; see the section heading (PDF page 21). Machine-generated visual interpretation; status: machine-interpreted from the page image by a vision model; compared box by box against the page image (not clinician-verified).\nBox 1 (start): Patient with T2DM -> then box 2\nBox 2 (decision): Does the patient have an urgent or emergent care need (e.g., symptomatic hyperglycemia, severe hypoglycemia, concurrent medical issue, etc.)? -> if Yes: box 3; if No: box 4\nBox 3 (action): Treat and/or refer for acute care\nBox 4 (action): Assess barriers to success (e.g., psychosocial needs, navigating health care, health literacy/numeracy, patient/provider inertia, social determinants of health [e.g., transportation, economic or food insecurity]) -> then box 5\nBox 5 (action): Develop an individualized treatment plan Review non-pharmacologic therapies • Medical Nutrition Therapy (MNT) (including weight management) (see Module B) • Diabetes Self-Management Education and Support (DSMES) (see Module B) • Exercise If pharmacologic therapy is indicated, begin metformin unless contraindicated -> then box 6\nBox 6 (decision): Does the patient have any of the following: 1. Established ASCVD or high ASCVD risk 2. Diabetic nephropathy 3. Heart failure (see Sidebar 4) -> if Yes: box 7; if No: box 8\nBox 7 (action): Consider GLP-1 RA or SGLT-2 inhibitor if indicated -> then box 8\nBox 8 (decision): Has the patient's glycemic target been achieved (A1C 7.0-8.5% for most patients or alternative range based on individualization)? -> if Yes: box 9; if No: box 10\nBox 9 (action): Review treatment plan to minimize or treat complications and/or comorbidities (see Sidebars 1, 2, 3 and 4) -> then box 11\nBox 10 (action): Consider additional medications until target A1C range is achieved. Select agent based on efficacy and risk-benefit ratio. See CPG Appendix B.\nBox 11 (action): Review health promotion activities • Tobacco cessation • Vaccinations, age-related • Dental care -> then box 12\nBox 12 (end): Follow up as needed\nDecision path: 1 -> 2 -> [Yes] 3\nDecision path: 1 -> 2 -> [No] 4 -> 5 -> 6 -> [Yes] 7 -> 8 -> [Yes] 9 -> 11 -> 12\nDecision path: 1 -> 2 -> [No] 4 -> 5 -> 6 -> [Yes] 7 -> 8 -> [No] 10\nDecision path: 1 -> 2 -> [No] 4 -> 5 -> 6 -> [No] 8 -> [Yes] 9 -> 11 -> 12\nDecision path: 1 -> 2 -> [No] 4 -> 5 -> 6 -> [No] 8 -> [No] 10\nAbbreviations: ASCVD: atherosclerotic cardiovascular disease; GLP-1 RA: glucagon-like peptide 1 receptor agonist; SGLT-2 inhibitor: sodium-glucose transporter 2 inhibitor; MNT: Medical Nutrition Therapy; T2DM: type 2 diabetes mellitus"
+    ],
+    "va_dod_cpg_diabetes_2023:p145": [
+      "va_dod_cpg_diabetes_2023 (VA, advisory, 2023-05)\nVA/DoD Clinical Practice Guideline for the Management of Type 2 Diabetes Mellitus (Version 6.0) > Appendix I: Alternative Text Descriptions of Algorithm\n[p 145]\nThe following outline narratively describes the Management of Type 2 Diabetes Mellitus Algorithm. An explanation of the purpose of the algorithm and description of the various shapes used within the algorithm can be found in the Algorithm section. The sidebars referenced within this outline can also be found in the Algorithm section.\nThe algorithm begins with Box 1, in the shape of a rounded rectangle: \"Patient with T2DM.\"\nBox 1 connects to Box 2, in the shape of a hexagon, which asks, \"Does the patient have an urgent or emergent care need (e.g., symptomatic hyperglycemia, severe hypoglycemia, concurrent medical issue)?\"\nIf the answer is \"Yes\" to Box 2, then Box 3, in the shape of a rectangle: \"Treat and/or refer for acute care.\"\nIf the answer is \"No\" to Box 2, then Box 4, in the shape of a rectangle: \"Assess barriers to success (e.g., psychosocial needs, navigating health care, health literacy/numeracy, patient/provider inertia, social determinants of health [e.g., transportation, economic or food insecurity]).\"\nBox 4 connects to Box 5, in the shape of a rectangle: \"Develop an individualized treatment plan. Review non-pharmacologic therapies: Medical Nutrition Therapy (MNT) (including weight management) (see Module B); Diabetes SelfManagement Education and Support (DSMES) (see Module B); Exercise. If pharmacologic therapy is indicated, begin metformin unless contraindicated.\"\nBox 5 connects to Box 6, in the shape of a hexagon, which asks, \"Does the patient have any of the following: 1. Established ASCVD or high ASCVD risk 2. Diabetic neuropathy 3. Heart failure (see Sidebar 4)?\"\nIf the answer is \"Yes\" to Box 6, then Box 7, in the shape of a rectangle: \"Consider GLP-1 RA or SGLT-2 inhibitor if indicated.\"\nIf the answer is \"No\" to Box 6, then Box 8, in the shape of a hexagon, asks, \"Has the patient's glycemic target been achieved (A1C 7.0-8.5% for most patients or alternative range based on individualization)?\"\nIf the answer is \"No\" to Box 8, then Box 10, in the shape of a rectangle: \"Consider additional medications until target A1C range is achieved. Select agent based on efficacy and risk-benefit ration. See CPG Appendix B.\"\nIf the answer is \"Yes\" to Box 8, then Box 9, in the shape of a rectangle: \"Review treatment plan to minimize or treat complications and/or comorbidities (see Sidebars 1, 2, 3, and 4).\"\n[p 146]\nBox 9 connects to Box 11, in the shape of a rectangle: \"Review health promotion activities: tobacco cessation; vaccinations, age-related; dental care.\"\nBox 11 connects to Box 12, in the shape of a rectangle: \"Follow up as needed.\"\nModule B starts with Box 13, in the shape of a rectangle: \"Patients with T2DM should be offered DSMES or MNT at all of the following times: At initial diagnosis; When not meeting treatment goals; Change in health status/barriers to self-management.\"\nBox 13 connects to Box 14, in the shape of a hexagon, which asks, \"Is the patient being treated in an acute setting?\"\nIf the answer is \"Yes\" to Box 14, then Box 15, in the shape of a rectangle: \"Train in survival skills (see Sidebar 5) and refer for DSMES or MNT following acute care.\"\nIf the answer is \"No\" to Box 14, then Box 16 in the shape of a rectangle: \"Consult/enroll the patient in an outpatient VA/DoD DSMES and MNT program.\"\nBox 15 also connects to Box 16.\nBox 16 connects to Box 17, in the shape of a rectangle: \"Conduct DSMES assessment (see Sidebar 6) and/or MNT screening and assessment (see Sidebar 7).\"\nBox 17 connects to Box 18, in the shape of a rectangle: \"Conduct comprehensive DSMES (see Sidebar 6) or ongoing support (see Sidebar 8) and MNT (see Sidebar 7).\""
+    ]
+  },
+  "cost_note": "priced at the requested model's rates; a fallback hop bills at its own rates",
+  "request_id": "3a5251a4-a221-4ee1-a4d1-a33256c5b239",
+  "request_started_utc": "2026-10-18T05:53:00.897179+00:00",
+  "citation_check": {
+    "t_start": 7.056,
+    "duration_s": 0.009
+  },
+  "prices_per_mtok": {
+    "input": 2.0,
+    "output": 10.0,
+    "cache_read": 0.2,
+    "cache_write": 2.5
+  }
+}

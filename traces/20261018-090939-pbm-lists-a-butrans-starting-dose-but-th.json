@@ -1,0 +1,741 @@
+{
+  "question": "PBM lists a Butrans starting dose, but the CPG discourages opioid initiation. What applies to an opioid-naïve patient with chronic non-cancer pain?",
+  "request_id": "4931edab-27ed-4a99-aff2-d1898b6ac2ff",
+  "status": "answered",
+  "agent_status": "answered",
+  "assumption": "VA clinical guidance/PBM",
+  "answer": "Assuming VA: for an **opioid-naïve CNCP** patient, the **VA/DoD CPG recommendation applies clinically**: do **not initiate opioid therapy** for chronic non-cancer pain (Strong against). The PBM Butrans entry is a **dosing table**—it says if buprenorphine TDS is used in an opioid-naïve patient, the initial dose is **5 mcg/hr patch** and PADR is required—but it does not create an indication to start opioids. The CPG also recommends against long-acting opioids when initiating long-term opioid therapy. So treat PBM dose as “how to dose if approved/prescribed,” not “should start.”",
+  "citations": [
+    {
+      "doc_id": "va_dod_cpg_opioids_2022",
+      "page": 33,
+      "link": "https://www.healthquality.va.gov/guidelines/Pain/cot/VADoDOpioidsCPG.pdf#page=33",
+      "flag": null,
+      "locator": "va_dod_cpg_opioids_2022:p33"
+    },
+    {
+      "doc_id": "va_dod_cpg_opioids_2022",
+      "page": 35,
+      "link": "https://www.healthquality.va.gov/guidelines/Pain/cot/VADoDOpioidsCPG.pdf#page=35",
+      "flag": null,
+      "locator": "va_dod_cpg_opioids_2022:p35"
+    },
+    {
+      "doc_id": "va_pbm_bup_chronic_pain",
+      "page": 2,
+      "link": "https://www.pbm.va.gov/PBM/AcademicDetailingService/Documents/Academic_Detailing_Educational_Material_Catalog/IB_1497_Provider_BupChronicPain.pdf#page=2",
+      "flag": null,
+      "locator": "va_pbm_bup_chronic_pain:p2"
+    },
+    {
+      "doc_id": "va_dod_cpg_opioids_2022",
+      "page": 104,
+      "link": "https://www.healthquality.va.gov/guidelines/Pain/cot/VADoDOpioidsCPG.pdf#page=104",
+      "flag": null,
+      "locator": "va_dod_cpg_opioids_2022:p104"
+    }
+  ],
+  "conflicts_noted": [
+    "Apparent conflict only: PBM/CPG drug tables list Butrans/buprenorphine TDS initial dosing, while the CPG recommendation addresses whether to initiate opioids for CNCP; for this clinical question, the CPG recommendation governs."
+  ],
+  "flags": [],
+  "needs_review": false,
+  "words": {
+    "displayed": 89,
+    "rendered": 89
+  },
+  "answered_by": "gpt-5.5-2026-04-23",
+  "provider": "openai",
+  "model": "gpt-5.5-2026-04-23",
+  "fallback_used": false,
+  "timing_s": {
+    "total": 10.78,
+    "search": 0.494,
+    "read_page": 0,
+    "list_documents": 0,
+    "lookups": 0,
+    "model_calls": [
+      2.449,
+      7.836
+    ]
+  },
+  "lookups": 2,
+  "tokens": {
+    "input": 23123,
+    "output": 721,
+    "cache_read": 3072,
+    "cache_write": 0
+  },
+  "cost_usd": 0.138781,
+  "pages_seen": [
+    "va_dod_cpg_opioids_2022:p104",
+    "va_dod_cpg_opioids_2022:p105",
+    "va_dod_cpg_opioids_2022:p120",
+    "va_dod_cpg_opioids_2022:p121",
+    "va_dod_cpg_opioids_2022:p125",
+    "va_dod_cpg_opioids_2022:p126",
+    "va_dod_cpg_opioids_2022:p129",
+    "va_dod_cpg_opioids_2022:p130",
+    "va_dod_cpg_opioids_2022:p33",
+    "va_dod_cpg_opioids_2022:p34",
+    "va_dod_cpg_opioids_2022:p35",
+    "va_dod_cpg_opioids_2022:p36",
+    "va_dod_cpg_opioids_2022:p37",
+    "va_dod_cpg_opioids_2022:p38",
+    "va_dod_cpg_opioids_2022:p44",
+    "va_dod_cpg_opioids_2022:p45",
+    "va_pbm_bup_chronic_pain:p2",
+    "va_pbm_bup_chronic_pain:p3",
+    "va_pbm_bup_chronic_pain:p4"
+  ],
+  "trace_id": null,
+  "started_at": "2026-10-18T13:09:39+00:00",
+  "config": {
+    "primary": "gpt-5.5",
+    "fallback": "claude-sonnet-5-5",
+    "effort": "medium",
+    "search": {
+      "mode": "hybrid",
+      "rrf_k": 60,
+      "fusion_depth": 100,
+      "return_parents": true,
+      "rerank": null
+    },
+    "max_tool_calls": 6,
+    "deadline_s": 25,
+    "search_k": 8
+  },
+  "structured_lookups": true,
+  "context": {},
+  "model_answer": "Assuming VA: for an **opioid-naïve CNCP** patient, the **VA/DoD CPG recommendation applies clinically**: do **not initiate opioid therapy** for chronic non-cancer pain (Strong against). The PBM Butrans entry is a **dosing table**—it says if buprenorphine TDS is used in an opioid-naïve patient, the initial dose is **5 mcg/hr patch** and PADR is required—but it does not create an indication to start opioids. The CPG also recommends against long-acting opioids when initiating long-term opioid therapy. So treat PBM dose as “how to dose if approved/prescribed,” not “should start.”",
+  "model_citations": [
+    {
+      "doc_id": "va_dod_cpg_opioids_2022",
+      "page": 33,
+      "link": "https://www.healthquality.va.gov/guidelines/Pain/cot/VADoDOpioidsCPG.pdf#page=33",
+      "flag": null,
+      "locator": "va_dod_cpg_opioids_2022:p33"
+    },
+    {
+      "doc_id": "va_dod_cpg_opioids_2022",
+      "page": 35,
+      "link": "https://www.healthquality.va.gov/guidelines/Pain/cot/VADoDOpioidsCPG.pdf#page=35",
+      "flag": null,
+      "locator": "va_dod_cpg_opioids_2022:p35"
+    },
+    {
+      "doc_id": "va_pbm_bup_chronic_pain",
+      "page": 2,
+      "link": "https://www.pbm.va.gov/PBM/AcademicDetailingService/Documents/Academic_Detailing_Educational_Material_Catalog/IB_1497_Provider_BupChronicPain.pdf#page=2",
+      "flag": null,
+      "locator": "va_pbm_bup_chronic_pain:p2"
+    },
+    {
+      "doc_id": "va_dod_cpg_opioids_2022",
+      "page": 104,
+      "link": "https://www.healthquality.va.gov/guidelines/Pain/cot/VADoDOpioidsCPG.pdf#page=104",
+      "flag": null,
+      "locator": "va_dod_cpg_opioids_2022:p104"
+    }
+  ],
+  "model_calls": [
+    {
+      "t_start": 0.0,
+      "duration_s": 2.449,
+      "requested_model": "gpt-5.5",
+      "served_model": "gpt-5.5-2026-04-23",
+      "provider": "openai",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 324,
+        "output": 139,
+        "cache_read": 1536,
+        "cache_write": 0
+      },
+      "cost_usd": 0.006558,
+      "response_id": "resp_044f716ac9924ddb016ad4c5093d1887d29cc244debefb8de2",
+      "input_messages": [
+        {
+          "role": "user",
+          "text": "Today's date: 2026-10-18\n\nQuestion: PBM lists a Butrans starting dose, but the CPG discourages opioid initiation. What applies to an opioid-naïve patient with chronic non-cancer pain?"
+        }
+      ],
+      "output": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "call_Ynq9rmnHBejoPw68cuauKN7H",
+            "name": "search_documents",
+            "arguments": {
+              "query": "Butrans starting dose opioid-naive chronic non-cancer pain PBM buprenorphine transdermal",
+              "program": "VA",
+              "k": 5
+            }
+          },
+          {
+            "id": "call_O7W9QpQv0IGpvFgLUE1eb771",
+            "name": "search_documents",
+            "arguments": {
+              "query": "VA DoD clinical practice guideline opioid therapy chronic pain recommend against initiation opioid chronic non-cancer pain opioid naive",
+              "program": "VA",
+              "k": 5
+            }
+          }
+        ]
+      }
+    },
+    {
+      "t_start": 2.943,
+      "duration_s": 7.836,
+      "requested_model": "gpt-5.5",
+      "served_model": "gpt-5.5-2026-04-23",
+      "provider": "openai",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 22799,
+        "output": 582,
+        "cache_read": 1536,
+        "cache_write": 0
+      },
+      "cost_usd": 0.132223,
+      "response_id": "resp_044f716ac9924ddb016ad4c50c291887d2b2a776cd5d88fab2",
+      "input_messages": [
+        {
+          "role": "tool",
+          "tool_results": [
+            {
+              "call_id": "call_Ynq9rmnHBejoPw68cuauKN7H",
+              "is_error": false,
+              "content": "[{\"doc_id\": \"va_pbm_bup_chronic_pain\", \"page\": 3, \"program\": \"VA\", \"authority\": \"advisory\", \"date\": \"2021-05\", \"text\": \"Buprenorphine for Chronic Pain (IB 10-1497) > Alternative initiation approaches for buprenorphine buccal film\\n[p 3]\\nConsider an alternative initiation approach for patients unable to taper to 30 mg MEDD or with concern for/history of intolerable opioid withdrawal during buprenorphine initiation. Either convert directly to an equivalent dose, or cross-titrate for a short period of time. Provide a medication disposal bag for any remaining full agonist opioids.\\n\\u0007For patients taking ≥80 mg MEDD, convert directly to an equivalent dose of buprenorphine buccal film: 10\\n80-160 mg MEDD: initiate 300 mcg 8-12 hours after last dose of full agonist opioids, q12 hr\\n161-220 mg MEDD: initiate 450 mcg 8-12 hours after last dose of full agonist opioids, q12 hr\\n\\u0007Alternatively, continue current full agonist opioids for 4-8 days and gradually up-titrate buprenorphine buccal film to the lowest effective dose. 11-16 For patients who stabilize (no withdrawal, tolerable pain) before reaching the proposed end dose, it is not necessary to proceed with further buprenorphine dose escalations. For example:\\n[Table] (PDF page 3)\\nColumns:  | 30-59 mg MEDD | 30-59 mg MEDD | 60-89 mg MEDD | 60-89 mg MEDD | 90-120 mg MEDD | 90-120 mg MEDD | 121-160 mg MEDD | 121-160 mg MEDD / Day | Full agonist opioids | Buccal Bup | Full agonist opioids | Buccal Bup | Full agonist opioids | Buccal Bup | Full agonist opioids | Buccal Bup\\n1 | Continue | 150 mcg BID (300 mcg TDD) | Continue | 150 mcg BID (300 mcg TDD) | Continue | 300 mcg BID (600 mcg TDD) | Continue | 300 mcg BID (600 mcg TDD)\\n2 | Continue | 300 mcg BID (600 mcg TDD) | Continue | 300 mcg BID (600 mcg TDD) | Continue | 300 mcg QAM + 600 mcg QPM (900 mcg TDD) | Continue | 300 mcg QAM + 600 mcg QPM (900 mcg TDD)\\n3 | Continue | 450 mcg BID (900 mcg TDD) | Continue | 450 mcg BID (900 mcg TDD) | Continue | 600 mcg BID (1200 mcg TDD) | Continue | 600 mcg BID (1200 mcg TDD)\\n4 | Continue | 450 mcg BID (900 mcg TDD) | Continue | 600 mcg BID (1200 mcg TDD) | Continue | 600 mcg QAM + 900 mcg QPM (1500 mcg TDD) | Continue | 600 mcg QAM + 900 mcg QPM (1500 mcg TDD)\\n5 (+) | STOP | 450 mcg BID (900 mcg TDD) | STOP | 600 mcg BID (1200 mcg TDD) | STOP | 600 mcg QAM + 900 mcg QPM (1500 mcg TDD) | STOP | 900 mcg BID (1800 mcg TDD)\", \"pages\": [3], \"section\": \"Buprenorphine for Chronic Pain > Alternative initiation approaches for buprenorphine buccal film\"}, {\"doc_id\": \"va_dod_cpg_opioids_2022\", \"page\": 44, \"program\": \"VA\", \"authority\": \"advisory\", \"date\": \"2022-05\", \"text\": \"VA/DoD Clinical Practice Guideline for the Use of Opioids in the Management of Chronic Pain (Version 4.0) > IX. Recommendations > A. Initiation and Continuation of Opioids\\n[p 44]\\nTwo network meta-analyses included a separate analysis on buprenorphine compared to other opioids. Boya et al. (2021) evaluated a variety of opioid analgesics used in the management of chronic low back pain.(160) The authors compared pain reduction with buprenorphine to pain reduction with other opioids (hydrocodone, hydromorphone, morphine, oxycodone, oxymorphone, tramadol, and tapentadol), in most cases showing no difference. Low quality evidence from Boya et al. (2021) favors buprenorphine over tramadol for 30% reduction in pain.(160) The authors note that many of the included studies did not report the duration of chronic low back pain, previous use of opioid analgesics, or response to previous interventions. In general, given the complex nature of chronic low back pain and the narrowly defined inclusion criteria in the included clinical trials, generalizability to other populations and chronic pain conditions is limited. Freynhagen et al. (2021) compared tapentadol to a variety of other opioids, including buprenorphine, in chronic pain treatment.(161) They provided low quality evidence favoring buprenorphine for the outcome of any adverse "
+            },
+            {
+              "call_id": "call_O7W9QpQv0IGpvFgLUE1eb771",
+              "is_error": false,
+              "content": "[{\"doc_id\": \"va_dod_cpg_opioids_2022\", \"page\": 33, \"program\": \"VA\", \"authority\": \"advisory\", \"date\": \"2022-05\", \"text\": \"VA/DoD Clinical Practice Guideline for the Use of Opioids in the Management of Chronic Pain (Version 4.0) > IX. Recommendations\\n[p 33]\\nThe following evidence-based clinical practice recommendations were made using a systematic approach considering four domains as per the GRADE approach (see Summary of Guideline Development Methodology). These domains include: confidence in the quality of the evidence, balance of desirable and undesirable outcomes (i.e., benefits and harms), patient values and preferences, and other implications (e.g., resource use, equity, acceptability).\\n[Table] (PDF page 33)\\nColumns: Topic | Sub- topic | # | Recommendation | Strength a | Category b\\nInitiation and Continuation of Opioids |  | 1. | We recommend against the initiation of opioid therapy for the management of chronic non-cancer pain (for non-opioid treatments for chronic pain, see the VA/DoD CPGs for Low Back Pain, Headache, and Hip and Knee Osteoarthritis). c | Strong against | Reviewed, New-replaced\\nInitiation and Continuation of Opioids |  | 2. | We recommend against long-term opioid therapy, particularly for younger age groups, as age is inversely associated with the risk of opioid use disorder and overdose. | Strong against | Reviewed, New-replaced\\nInitiation and Continuation of Opioids |  | 3. | We recommend against long-term opioid therapy, particularly for patients with chronic pain who have a substance use disorder (refer to the VA/DoD CPG for the Management of Substance Use Disorders). d | Strong against | Reviewed, New-replaced\\nInitiation and Continuation of Opioids |  | 4. | For patients receiving medication for opioid use disorder, there is insufficient evidence to recommend for or against the selection of any one of the following medications over the other for the management of their co-occurring chronic pain: methadone, buprenorphine, or extended-release naltrexone injection. Treat the opioid use disorder according to the VA/DoD CPG for the Management of Substance Use Disorders. d | Neither for nor against | Reviewed, New-replaced\\nInitiation and Continuation of Opioids |  | 5. | For patients receiving daily opioids for the treatment of chronic pain, we suggest the use of buprenorphine instead of full agonist opioids due to lower risk of overdose and misuse. | Weak for | Reviewed, New-added\\nInitiation and Continuation of Opioids |  | 6. | We recommend against the concurrent use of benzodiazepines and opioids for chronic pain (refer to Recommendation 10 in the VA/DoD CPG for the Management of Substance Use Disorders d for further guidance related to tapering one or both agents). | Strong against | Reviewed, Amended\\n[p 34]\\n[Table] (PDF page 34)\\nColumns: Topic | Sub- topic | # | Recommendation | Strength a | Category b\\nDose, Duration, and Taper of Opioids |  | 7. | If prescribing opioids, we recommend using the lowest dose of opioids as indicated by patient-specific risks and benefits. | Strong for | Reviewed, Amended\\nDose, Duration, and Taper of Opioids |  | 8. | If considering an increase in opioid dosage, we recommend reevaluation of patient-specific risks and benefits and monitoring for adverse events including opioid use disorder and risk of overdose with increasing dosage. | Strong for | Reviewed, New-replaced\\nDose, Duration, and Taper of Opioids | Duration | 9. | When prescribing opioids, we recommend the shortest duration as indicated. | Strong for | Reviewed, New-replaced\\nDose, Duration, and Taper of Opioids | Dose and | 10. | After initiating opioid therapy, we recommend reevaluation at 30 days or fewer and frequent follow-up visits, if opioids are to be continued. | Strong for | Reviewed, New-replaced\\nDose, Duration, and Taper of Opioids |  | 11. | We recommend against prescribing long-acting opioids: · For acute pain · As an as-needed medication · When initiating long-term opioid therapy"
+            }
+          ]
+        }
+      ],
+      "output": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "call_CYMwsNPHbYdrOXYuzjSST89F",
+            "name": "submit_answer",
+            "arguments": {
+              "status": "answered",
+              "assumption": "VA clinical guidance/PBM",
+              "answer": "Assuming VA: for an **opioid-naïve CNCP** patient, the **VA/DoD CPG recommendation applies clinically**: do **not initiate opioid therapy** for chronic non-cancer pain (Strong against). The PBM Butrans entry is a **dosing table**—it says if buprenorphine TDS is used in an opioid-naïve patient, the initial dose is **5 mcg/hr patch** and PADR is required—but it does not create an indication to start opioids. The CPG also recommends against long-acting opioids when initiating long-term opioid therapy. So treat PBM dose as “how to dose if approved/prescribed,” not “should start.”",
+              "citations": [
+                {
+                  "doc_id": "va_dod_cpg_opioids_2022",
+                  "page": 33,
+                  "row": null
+                },
+                {
+                  "doc_id": "va_dod_cpg_opioids_2022",
+                  "page": 35,
+                  "row": null
+                },
+                {
+                  "doc_id": "va_pbm_bup_chronic_pain",
+                  "page": 2,
+                  "row": null
+                },
+                {
+                  "doc_id": "va_dod_cpg_opioids_2022",
+                  "page": 104,
+                  "row": null
+                }
+              ],
+              "conflicts_noted": [
+                "Apparent conflict only: PBM/CPG drug tables list Butrans/buprenorphine TDS initial dosing, while the CPG recommendation addresses whether to initiate opioids for CNCP; for this clinical question, the CPG recommendation governs."
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "search_documents",
+      "input": {
+        "query": "Butrans starting dose opioid-naive chronic non-cancer pain PBM buprenorphine transdermal",
+        "program": "VA",
+        "k": 5
+      },
+      "duration_s": 0.245,
+      "is_error": false,
+      "pages": [
+        "va_dod_cpg_opioids_2022:p104",
+        "va_dod_cpg_opioids_2022:p105",
+        "va_dod_cpg_opioids_2022:p120",
+        "va_dod_cpg_opioids_2022:p121",
+        "va_dod_cpg_opioids_2022:p33",
+        "va_dod_cpg_opioids_2022:p34",
+        "va_dod_cpg_opioids_2022:p35",
+        "va_dod_cpg_opioids_2022:p36",
+        "va_dod_cpg_opioids_2022:p44",
+        "va_dod_cpg_opioids_2022:p45",
+        "va_pbm_bup_chronic_pain:p2",
+        "va_pbm_bup_chronic_pain:p3",
+        "va_pbm_bup_chronic_pain:p4"
+      ],
+      "result": "[{\"doc_id\": \"va_pbm_bup_chronic_pain\", \"page\": 3, \"program\": \"VA\", \"authority\": \"advisory\", \"date\": \"2021-05\", \"text\": \"Buprenorphine for Chronic Pain (IB 10-1497) > Alternative initiation approaches for buprenorphine buccal film\\n[p 3]\\nConsider an alternative initiation approach for patients unable to taper to 30 mg MEDD or with concern for/history of intolerable opioid withdrawal during buprenorphine initiation. Either convert directly to an equivalent dose, or cross-titrate for a short period of time. Provide a medication disposal bag for any remaining full agonist opioids.\\n\\u0007For patients taking ≥80 mg MEDD, convert directly to an equivalent dose of buprenorphine buccal film: 10\\n80-160 mg MEDD: initiate 300 mcg 8-12 hours after last dose of full agonist opioids, q12 hr\\n161-220 mg MEDD: initiate 450 mcg 8-12 hours after last dose of full agonist opioids, q12 hr\\n\\u0007Alternatively, continue current full agonist opioids for 4-8 days and gradually up-titrate buprenorphine buccal film to the lowest effective dose. 11-16 For patients who stabilize (no withdrawal, tolerable pain) before reaching the proposed end dose, it is not necessary to proceed with further buprenorphine dose escalations. For example:\\n[Table] (PDF page 3)\\nColumns:  | 30-59 mg MEDD | 30-59 mg MEDD | 60-89 mg MEDD | 60-89 mg MEDD | 90-120 mg MEDD | 90-120 mg MEDD | 121-160 mg MEDD | 121-160 mg MEDD / Day | Full agonist opioids | Buccal Bup | Full agonist opioids | Buccal Bup | Full agonist opioids | Buccal Bup | Full agonist opioids | Buccal Bup\\n1 | Continue | 150 mcg BID (300 mcg TDD) | Continue | 150 mcg BID (300 mcg TDD) | Continue | 300 mcg BID (600 mcg TDD) | Continue | 300 mcg BID (600 mcg TDD)\\n2 | Continue | 300 mcg BID (600 mcg TDD) | Continue | 300 mcg BID (600 mcg TDD) | Continue | 300 mcg QAM + 600 mcg QPM (900 mcg TDD) | Continue | 300 mcg QAM + 600 mcg QPM (900 mcg TDD)\\n3 | Continue | 450 mcg BID (900 mcg TDD) | Continue | 450 mcg BID (900 mcg TDD) | Continue | 600 mcg BID (1200 mcg TDD) | Continue | 600 mcg BID (1200 mcg TDD)\\n4 | Continue | 450 mcg BID (900 mcg TDD) | Continue | 600 mcg BID (1200 mcg TDD) | Continue | 600 mcg QAM + 900 mcg QPM (1500 mcg TDD) | Continue | 600 mcg QAM + 900 mcg QPM (1500 mcg TDD)\\n5 (+) | STOP | 450 mcg BID (900 mcg TDD) | STOP | 600 mcg BID (1200 mcg TDD) | STOP | 600 mcg QAM + 900 mcg QPM (1500 mcg TDD) | STOP | 900 mcg BID (1800 mcg TDD)\", \"pages\": [3], \"section\": \"Buprenorphine for Chronic Pain > Alternative initiation approaches for buprenorphine buccal film\"}, {\"doc_id\": \"va_dod_cpg_opioids_2022\", \"page\": 44, \"program\": \"VA\", \"authority\": \"advisory\", \"date\": \"2022-05\", \"text\": \"VA/DoD Clinical Practice Guideline for the Use of Opioids in the Management of Chronic Pain (Version 4.0) > IX. Recommendations > A. Initiation and Continuation of Opioids\\n[p 44]\\nTwo network meta-analyses included a separate analysis on buprenorphine compared to other opioids. Boya et al. (2021) evaluated a variety of opioid analgesics used in the management of chronic low back pain.(160) The authors compared pain reduction with buprenorphine to pain reduction with other opioids (hydrocodone, hydromorphone, morphine, oxycodone, oxymorphone, tramadol, and tapentadol), in most cases showing no difference. Low quality evidence from Boya et al. (2021) favors buprenorphine over tramadol for 30% reduction in pain.(160) The authors note that many of the included studies did not report the duration of chronic low back pain, previous use of opioid analgesics, or response to previous interventions. In general, given the complex nature of chronic low back pain and the narrowly defined inclusion criteria in the included clinical trials, generalizability to other populations and chronic pain conditions is limited. Freynhagen et al. (2021) compared tapentadol to a variety of other opioids, including buprenorphine, in chronic pain treatment.(161) They provided low quality evidence favoring buprenorphine for the outcome of any adverse ",
+      "search": {
+        "original_query": "PBM lists a Butrans starting dose, but the CPG discourages opioid initiation. What applies to an opioid-naïve patient with chronic non-cancer pain?",
+        "agent_query": "Butrans starting dose opioid-naive chronic non-cancer pain PBM buprenorphine transdermal",
+        "executed": [
+          {
+            "source": "original",
+            "query": "PBM lists a Butrans starting dose, but the CPG discourages opioid initiation. What applies to an opioid-naïve patient with chronic non-cancer pain?",
+            "program": "VA",
+            "k": 5,
+            "seconds": 0.244,
+            "cached": false,
+            "results": 5
+          },
+          {
+            "source": "agent",
+            "query": "Butrans starting dose opioid-naive chronic non-cancer pain PBM buprenorphine transdermal",
+            "program": "VA",
+            "k": 5,
+            "seconds": 0.236,
+            "cached": false,
+            "results": 5
+          }
+        ],
+        "duplicates_merged": 2,
+        "returned": 8,
+        "from_both": 2,
+        "from_original_only": 3,
+        "from_agent_only": 3,
+        "provenance": [
+          {
+            "unit": "va_pbm_bup_chronic_pain:s4",
+            "found_by": {
+              "original": 4,
+              "agent": 5
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s41",
+            "found_by": {
+              "original": 5,
+              "agent": 4
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s34",
+            "found_by": {
+              "original": 1
+            }
+          },
+          {
+            "unit": "va_pbm_bup_chronic_pain:s1",
+            "found_by": {
+              "agent": 1
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s35",
+            "found_by": {
+              "original": 2
+            }
+          },
+          {
+            "unit": "va_pbm_bup_chronic_pain:s7",
+            "found_by": {
+              "agent": 2
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s80",
+            "found_by": {
+              "original": 3
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s93",
+            "found_by": {
+              "agent": 3
+            }
+          }
+        ],
+        "hits": [
+          {
+            "unit": "va_pbm_bup_chronic_pain:s4",
+            "doc_id": "va_pbm_bup_chronic_pain",
+            "pages": [
+              3
+            ],
+            "ranks": {
+              "original": 4,
+              "agent": 5
+            },
+            "scores": {
+              "original": 0.0242,
+              "agent": 0.025
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s41",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              44,
+              45
+            ],
+            "ranks": {
+              "original": 5,
+              "agent": 4
+            },
+            "scores": {
+              "original": 0.0239,
+              "agent": 0.0251
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s34",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              33,
+              34
+            ],
+            "ranks": {
+              "original": 1
+            },
+            "scores": {
+              "original": 0.0256
+            }
+          },
+          {
+            "unit": "va_pbm_bup_chronic_pain:s1",
+            "doc_id": "va_pbm_bup_chronic_pain",
+            "pages": [
+              2
+            ],
+            "ranks": {
+              "agent": 1
+            },
+            "scores": {
+              "agent": 0.0288
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s35",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              35,
+              36
+            ],
+            "ranks": {
+              "original": 2
+            },
+            "scores": {
+              "original": 0.0247
+            }
+          },
+          {
+            "unit": "va_pbm_bup_chronic_pain:s7",
+            "doc_id": "va_pbm_bup_chronic_pain",
+            "pages": [
+              4
+            ],
+            "ranks": {
+              "agent": 2
+            },
+            "scores": {
+              "agent": 0.027
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s80",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              104,
+              105
+            ],
+            "ranks": {
+              "original": 3
+            },
+            "scores": {
+              "original": 0.0245
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s93",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              120,
+              121
+            ],
+            "ranks": {
+              "agent": 3
+            },
+            "scores": {
+              "agent": 0.0262
+            }
+          }
+        ]
+      },
+      "t_start": 2.449
+    },
+    {
+      "name": "search_documents",
+      "input": {
+        "query": "VA DoD clinical practice guideline opioid therapy chronic pain recommend against initiation opioid chronic non-cancer pain opioid naive",
+        "program": "VA",
+        "k": 5
+      },
+      "duration_s": 0.249,
+      "is_error": false,
+      "pages": [
+        "va_dod_cpg_opioids_2022:p104",
+        "va_dod_cpg_opioids_2022:p105",
+        "va_dod_cpg_opioids_2022:p125",
+        "va_dod_cpg_opioids_2022:p126",
+        "va_dod_cpg_opioids_2022:p129",
+        "va_dod_cpg_opioids_2022:p130",
+        "va_dod_cpg_opioids_2022:p33",
+        "va_dod_cpg_opioids_2022:p34",
+        "va_dod_cpg_opioids_2022:p35",
+        "va_dod_cpg_opioids_2022:p36",
+        "va_dod_cpg_opioids_2022:p37",
+        "va_dod_cpg_opioids_2022:p38",
+        "va_dod_cpg_opioids_2022:p44",
+        "va_dod_cpg_opioids_2022:p45",
+        "va_pbm_bup_chronic_pain:p3"
+      ],
+      "result": "[{\"doc_id\": \"va_dod_cpg_opioids_2022\", \"page\": 33, \"program\": \"VA\", \"authority\": \"advisory\", \"date\": \"2022-05\", \"text\": \"VA/DoD Clinical Practice Guideline for the Use of Opioids in the Management of Chronic Pain (Version 4.0) > IX. Recommendations\\n[p 33]\\nThe following evidence-based clinical practice recommendations were made using a systematic approach considering four domains as per the GRADE approach (see Summary of Guideline Development Methodology). These domains include: confidence in the quality of the evidence, balance of desirable and undesirable outcomes (i.e., benefits and harms), patient values and preferences, and other implications (e.g., resource use, equity, acceptability).\\n[Table] (PDF page 33)\\nColumns: Topic | Sub- topic | # | Recommendation | Strength a | Category b\\nInitiation and Continuation of Opioids |  | 1. | We recommend against the initiation of opioid therapy for the management of chronic non-cancer pain (for non-opioid treatments for chronic pain, see the VA/DoD CPGs for Low Back Pain, Headache, and Hip and Knee Osteoarthritis). c | Strong against | Reviewed, New-replaced\\nInitiation and Continuation of Opioids |  | 2. | We recommend against long-term opioid therapy, particularly for younger age groups, as age is inversely associated with the risk of opioid use disorder and overdose. | Strong against | Reviewed, New-replaced\\nInitiation and Continuation of Opioids |  | 3. | We recommend against long-term opioid therapy, particularly for patients with chronic pain who have a substance use disorder (refer to the VA/DoD CPG for the Management of Substance Use Disorders). d | Strong against | Reviewed, New-replaced\\nInitiation and Continuation of Opioids |  | 4. | For patients receiving medication for opioid use disorder, there is insufficient evidence to recommend for or against the selection of any one of the following medications over the other for the management of their co-occurring chronic pain: methadone, buprenorphine, or extended-release naltrexone injection. Treat the opioid use disorder according to the VA/DoD CPG for the Management of Substance Use Disorders. d | Neither for nor against | Reviewed, New-replaced\\nInitiation and Continuation of Opioids |  | 5. | For patients receiving daily opioids for the treatment of chronic pain, we suggest the use of buprenorphine instead of full agonist opioids due to lower risk of overdose and misuse. | Weak for | Reviewed, New-added\\nInitiation and Continuation of Opioids |  | 6. | We recommend against the concurrent use of benzodiazepines and opioids for chronic pain (refer to Recommendation 10 in the VA/DoD CPG for the Management of Substance Use Disorders d for further guidance related to tapering one or both agents). | Strong against | Reviewed, Amended\\n[p 34]\\n[Table] (PDF page 34)\\nColumns: Topic | Sub- topic | # | Recommendation | Strength a | Category b\\nDose, Duration, and Taper of Opioids |  | 7. | If prescribing opioids, we recommend using the lowest dose of opioids as indicated by patient-specific risks and benefits. | Strong for | Reviewed, Amended\\nDose, Duration, and Taper of Opioids |  | 8. | If considering an increase in opioid dosage, we recommend reevaluation of patient-specific risks and benefits and monitoring for adverse events including opioid use disorder and risk of overdose with increasing dosage. | Strong for | Reviewed, New-replaced\\nDose, Duration, and Taper of Opioids | Duration | 9. | When prescribing opioids, we recommend the shortest duration as indicated. | Strong for | Reviewed, New-replaced\\nDose, Duration, and Taper of Opioids | Dose and | 10. | After initiating opioid therapy, we recommend reevaluation at 30 days or fewer and frequent follow-up visits, if opioids are to be continued. | Strong for | Reviewed, New-replaced\\nDose, Duration, and Taper of Opioids |  | 11. | We recommend against prescribing long-acting opioids: · For acute pain · As an as-needed medication · When initiating long-term opioid therapy",
+      "search": {
+        "original_query": "PBM lists a Butrans starting dose, but the CPG discourages opioid initiation. What applies to an opioid-naïve patient with chronic non-cancer pain?",
+        "agent_query": "VA DoD clinical practice guideline opioid therapy chronic pain recommend against initiation opioid chronic non-cancer pain opioid naive",
+        "executed": [
+          {
+            "source": "original",
+            "query": "PBM lists a Butrans starting dose, but the CPG discourages opioid initiation. What applies to an opioid-naïve patient with chronic non-cancer pain?",
+            "program": "VA",
+            "k": 5,
+            "seconds": 0.0,
+            "cached": true,
+            "results": 5
+          },
+          {
+            "source": "agent",
+            "query": "VA DoD clinical practice guideline opioid therapy chronic pain recommend against initiation opioid chronic non-cancer pain opioid naive",
+            "program": "VA",
+            "k": 5,
+            "seconds": 0.248,
+            "cached": false,
+            "results": 5
+          }
+        ],
+        "duplicates_merged": 2,
+        "returned": 8,
+        "from_both": 2,
+        "from_original_only": 3,
+        "from_agent_only": 3,
+        "provenance": [
+          {
+            "unit": "va_dod_cpg_opioids_2022:s34",
+            "found_by": {
+              "original": 1,
+              "agent": 1
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s35",
+            "found_by": {
+              "original": 2,
+              "agent": 3
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s97",
+            "found_by": {
+              "agent": 2
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s80",
+            "found_by": {
+              "original": 3
+            }
+          },
+          {
+            "unit": "va_pbm_bup_chronic_pain:s4",
+            "found_by": {
+              "original": 4
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s95",
+            "found_by": {
+              "agent": 4
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s41",
+            "found_by": {
+              "original": 5
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s36",
+            "found_by": {
+              "agent": 5
+            }
+          }
+        ],
+        "hits": [
+          {
+            "unit": "va_dod_cpg_opioids_2022:s34",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              33,
+              34
+            ],
+            "ranks": {
+              "original": 1,
+              "agent": 1
+            },
+            "scores": {
+              "original": 0.0256,
+              "agent": 0.0298
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s35",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              35,
+              36
+            ],
+            "ranks": {
+              "original": 2,
+              "agent": 3
+            },
+            "scores": {
+              "original": 0.0247,
+              "agent": 0.0287
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s97",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              129,
+              130
+            ],
+            "ranks": {
+              "agent": 2
+            },
+            "scores": {
+              "agent": 0.0296
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s80",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              104,
+              105
+            ],
+            "ranks": {
+              "original": 3
+            },
+            "scores": {
+              "original": 0.0245
+            }
+          },
+          {
+            "unit": "va_pbm_bup_chronic_pain:s4",
+            "doc_id": "va_pbm_bup_chronic_pain",
+            "pages": [
+              3
+            ],
+            "ranks": {
+              "original": 4
+            },
+            "scores": {
+              "original": 0.0242
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s95",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              125,
+              126
+            ],
+            "ranks": {
+              "agent": 4
+            },
+            "scores": {
+              "agent": 0.0271
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s41",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              44,
+              45
+            ],
+            "ranks": {
+              "original": 5
+            },
+            "scores": {
+              "original": 0.0239
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s36",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              36,
+              37,
+              38
+            ],
+            "ranks": {
+              "agent": 5
+            },
+            "scores": {
+              "agent": 0.0267
+            }
+          }
+        ]
+      },
+      "t_start": 2.694
+    }
+  ],
+  "cited_evidence": {
+    "va_dod_cpg_opioids_2022:p33": "va_dod_cpg_opioids_2022 (VA, advisory, 2022-05)\nVA/DoD Clinical Practice Guideline for the Use of Opioids in the Management of Chronic Pain (Version 4.0) > IX. Recommendations\n[p 33]\nThe following evidence-based clinical practice recommendations were made using a systematic approach considering four domains as per the GRADE approach (see Summary of Guideline Development Methodology). These domains include: confidence in the quality of the evidence, balance of desirable and undesirable outcomes (i.e., benefits and harms), patient values and preferences, and other implications (e.g., resource use, equity, acceptability).\n[Table] (PDF page 33)\nColumns: Topic | Sub- topic | # | Recommendation | Strength a | Category b\nInitiation and Continuation of Opioids |  | 1. | We recommend against the initiation of opioid therapy for the management of chronic non-cancer pain (for non-opioid treatments for chronic pain, see the VA/DoD CPGs for Low Back Pain, Headache, and Hip and Knee Osteoarthritis). c | Strong against | Reviewed, New-replaced\nInitiation and Continuation of Opioids |  | 2. | We recommend against long-term opioid therapy, particularly for younger age groups, as age is inversely associated with the risk of opioid use disorder and overdose. | Strong against | Reviewed, New-replaced\nInitiation and Continuation of Opioids |  | 3. | We recommend against long-term opioid therapy, particularly for patients with chronic pain who have a substance use disorder (refer to the VA/DoD CPG for the Management of Substance Use Disorders). d | Strong against | Reviewed, New-replaced\nInitiation and Continuation of Opioids |  | 4. | For patients receiving medication for opioid use disorder, there is insufficient evidence to recommend for or against the selection of any one of the following medications over the other for the management of their co-occurring chronic pain: methadone, buprenorphine, or extended-release naltrexone injection. Treat the opioid use disorder according to the VA/DoD CPG for the Management of Substance Use Disorders. d | Neither for nor against | Reviewed, New-replaced\nInitiation and Continuation of Opioids |  | 5. | For patients receiving daily opioids for the treatment of chronic pain, we suggest the use of buprenorphine instead of full agonist opioids due to lower risk of overdose and misuse. | Weak for | Reviewed, New-added\nInitiation and Continuation of Opioids |  | 6. | We recommend against the concurrent use of benzodiazepines and opioids for chronic pain (refer to Recommendation 10 in the VA/DoD CPG for the Management of Substance Use Disorders d for further guidance related to tapering one or both agents). | Strong against | Reviewed, Amended\n[p 34]\n[Table] (PDF page 34)\nColumns: Topic | Sub- topic | # | Recommendation | Strength a | Category b\nDose, Duration, and Taper of Opioids |  | 7. | If prescribing opioids, we recommend using the lowest dose of opioids as indicated by patient-specific risks and benefits. | Strong for | Reviewed, Amended\nDose, Duration, and Taper of Opioids |  | 8. | If considering an increase in opioid dosage, we recommend reevaluation of patient-specific risks and benefits and monitoring for adverse events including opioid use disorder and risk of overdose with increasing dosage. | Strong for | Reviewed, New-replaced\nDose, Duration, and Taper of Opioids | Duration | 9. | When prescribing opioids, we recommend the shortest duration as indicated. | Strong for | Reviewed, New-replaced\nDose, Duration, and Taper of Opioids | Dose and | 10. | After initiating opioid therapy, we recommend reevaluation at 30 days or fewer and frequent follow-up visits, if opioids are to be continued. | Strong for | Reviewed, New-replaced\nDose, Duration, and Taper of Opioids |  | 11. | We recommend against prescribing long-acting opioids: · For acute pain · As an as-needed medication · When initiating long-term opioid therapy | Strong against | Reviewed, Amended\nDose, Duration, and Taper of Opioids | Tapering | 12. | We suggest a collaborative, patient-centered approach to opioid tapering. | Weak for | Reviewed, New-replaced\nDose, Duration, and Taper of Opioids |  | 13. | There is insufficient evidence to recommend for or against any specific tapering strategies. | Neither for nor against | Reviewed, New-replaced\nScreening, Assessment, and Evaluation |  | 14. | We recommend assessing risk of suicide and self-directed violence when initiating, continuing, changing, or discontinuing long-term opioid therapy (refer to the VA/DoD CPG for the Assessment and Management of Patients at Risk for Suicide e for guidance on intervention timing and strategies). | Strong for | Reviewed, New-replaced\nScreening, Assessment, and Evaluation |  | 15. | For patients with chronic pain, we recommend assessing for behavioral health conditions, history of traumatic brain injury, and psychological factors (e.g., negative affect, pain catastrophizing) when considering long-term opioid therapy, as these conditions are associated with a higher risk of harm. | Strong for | Reviewed, New-added\nScreening, Assessment, and Evaluation |  | 16. | For patients with acute pain when opioids are being considered, we suggest screening for pain catastrophizing and co-occurring behavioral health conditions to identify those at higher risk for negative outcomes. | Weak for | Reviewed, New-added\nScreening, Assessment, and Evaluation |  | 17. | For patients on opioids, we suggest ongoing reevaluation of the benefits and harms of continued opioid prescribing based on individual patient risk characteristics. | Weak for | Reviewed, New-replaced\nRisk Mitigation |  | 18. | We suggest urine drug testing for patients on long-term opioids. | Weak for | Reviewed, New-replaced\nRisk Mitigation |  | 19. | We suggest interdisciplinary care that addresses pain and/or behavioral health problems, including substance use disorders, for patients presenting with high risk and/or aberrant behavior. | Weak for | Not reviewed, Amended\nRisk M",
+    "va_dod_cpg_opioids_2022:p35": "va_dod_cpg_opioids_2022 (VA, advisory, 2022-05)\nVA/DoD Clinical Practice Guideline for the Use of Opioids in the Management of Chronic Pain (Version 4.0) > IX. Recommendations > A. Initiation and Continuation of Opioids\n[p 35]\nRecommendation\nWe recommend against the initiation of opioid therapy for the management of chronic non-cancer pain (for non-opioid treatments for chronic pain, see the VA/DoD CPGs for Low Back Pain, Headache, and Hip and Knee Osteoarthritis i ).\n(Strong against | Reviewed, New-replaced)\nDiscussion\nEvidence from SRs of RCTs suggests that the use of opioids for the management of chronic pain is mixed, and the balance between the risks versus benefits is questionable in whether it will result in a meaningful benefit for the patient while also increasing adverse events (AEs) as compared to controls. The Work Group, in their review of the impact of opioids on underlying pain conditions (e.g., worsening of pain/opioid-induced hyperalgesia), considered findings related to the following outcomes: pain (pain severity, pain interference, chronification of pain), functional status, QoL, and serious AEs.\nBusse et al. (2018) was the largest and most comprehensive SR included in the systematic evidence review.(121) It encompassed over 26,000 patients from 96 RCTs and found that, in patients with chronic non-cancer pain (CNCP), prescribed oral or transdermal opioids provided small and not clinically significant improvements in pain and physical functioning compared to non-opioid controls.(121) In 87 trials, patients in an opioid group had an average follow up of only 60 days (interquartile range [IQR]: 30-84 days). Such a short average follow-up can be seen as a significant limitation of this SR. It is also important to note that 79% of these trials received industry funding, 12% did not specify funding type, and only 9% reported no industry funding.(121)\nHuang et al. (2019) and Ma et al. (2016), both SRs with 3 and 11 RCTs respectively, found treatment with opioids was associated with no improvement in pain, pain severity, or functional status in patients with cancer-related pain.(122, 123)\nHowever, there was some evidence suggesting opioids can improve pain severity and functional status, particularly for those with musculoskeletal pain, including chronic low back pain (124) and osteoarthritis (OA).(125, 126) Sommer et al. (2020) and Derry et al. (2016) found treatment with opioids was associated with some improvement for those with non-cancer neuropathic pain.(127, 128) However, this relief and improved function must be weighed against the known risks associated with opioids (see below). The evidence for QoL was limited and included only three studies (124, 125, 127) with mixed results in terms of impact and clinical relevance.\nOverall, the evidence for serious AEs did not differ between opioid and placebo groups for the SRs included in the evidence review.(124, 125, 127) The SRs included in the evidence had a maximum follow up of one to six months. Thus, the Work Group considered findings of non-controlled, observational studies that examined opioid misuse, dosage, overdose, and opioid-related mortality.(120, 129-134) The evidence from observational studies indicated that serious AEs can occur with long-term opioid use. At least two observational studies showed that a higher dose of opioids prescribed to individuals increased the risk of being treated for OUD.(132, 134) Three retrospective studies found that higher doses of opioids resulted in increased risk of fatal overdoses, both intentional and unintentional.(120, 129, 130) The Work Group noted that observational studies often followed patients for much longer than the average of one to six months, which was the case for the SRs included in this evidence review. This analysis over an extended period of time provides insight on serious AEs for long-term opioid use for more than six months.\ni Other VA/DoD CPGs are available at: https://www.healthquality.va.gov/\n[p 36]\nConsistently, the use of opioids for six months or less did not show evidence of serious AEs but did show a level of harm when measuring AEs. As noted in Huang et al. (2019), a major limitation of the SRs is the assumption that all types of opioids and dosing are equivalent.(122) The evidence from one SR and metaanalysis of five RCTs suggests that serious AEs did not differ between opioid and placebo groups at limited follow-up periods of four and 12 weeks in patients with non-cancer neuropathic pain.(127) Evidence from another SR using data from six RCTs also suggests no difference between groups for serious AEs at four and 15 weeks in patients with low back pain.(124) Finally, an SR and meta-analysis of data from 13 RCTs found no difference in serious AEs between groups at four and 24 weeks in patients with OA.(125) One study suggests serious AEs occurred more often with tramadol than with placebo at one and 12 week follow-ups among patients with OA.(126)The are several factors to take into consideration regarding AEs. Busse et al. (2018) suggests a level of harm associated with adding opioids to a non-opioid therapy regime.(121) At follow-ups between one and six months, AEs such as vomiting, nausea, constipation, and dizziness were more likely to occur in patients receiving opioids than in patients receiving placebo. Also, Busse et al. (2018) excluded patients at the highest risk of poor outcomes.(121) Sixty-nine trials excluded patients with current or prior SUD and 45 trials excluded patients with diagnosed behavioral health disorders or patients who were taking a psychotropic medication.\nIt is important to make considerations for certain subsets of patients, including those experiencing acute pain conditions, acute pain conditions who also have chronic pain, or an acute exacerbation of a chronic pain condition. These patients should be treated according to best medical evidence for the acute condition, including opioids, if clinically appropriate. In the",
+    "va_pbm_bup_chronic_pain:p2": "va_pbm_bup_chronic_pain (VA, advisory, 2021-05)\nBuprenorphine for Chronic Pain (IB 10-1497) > Buprenorphine formulations FDA approved for treatment of chronic paina,b\n[p 2]\nBuprenorphine formulations FDA approved for treatment of chronic pain a,b\n[Table] (PDF page 2)\nColumns: Brand | Butrans® (transdermal patch) 5,7 | Belbuca® (buccal film) 5,8\nStrengths | 5, 7.5, 10, 15, and 20 mcg/hour | 75, 150, 300, 450, 600, 750, and 900 mcg\nPADR | Required | Required\nX-waiver | Not required | Not required\nREMS | Must complete an accredited continuing education program to prescribe: https://opioidanalgesicrems.com | Must complete an accredited continuing education program to prescribe: https://opioidanalgesicrems.com\nInitial dosing* | • Opioid-naïve: 5 mcg/hour patch • <30 mg MEDD: 5 mcg/hour when next dose is due • 30-80 mg MEDD: taper to <30 mg MEDD c , then 10 mcg/hour when next dose is due • >80 mg MEDD: may not be adequate analgesia, consider buprenorphine buccal film • Change patch and rotate site every 7 days | • Opioid-naïve: 75 mcg film 1x daily or q12 hr, as tolerated • <30 mg MEDD: 75 mcg film when next dose is due, 1x daily or q12 hr • 30-89 mg MEDD: taper to <30 mg MEDD c , then 150 mcg q12 hr when next dose is due • 90-160 mg MEDD: taper to 30 mg MEDD c , then 300 mcg q12 hr when next dose is due • >160 mg MEDD: may not provide adequate analgesia, consider referral to X-waivered provider for buprenorphine/naloxone\nHepatic impairment | • Severe: has not been studied, consider alternative • Mild-moderate: no adjustments needed | • Apply film to mucosa every 12 hours • Severe (Child-Pugh C): reduce starting dose and titration by 50% • Mild-moderate (Child-Pugh A and B): no adjustments needed\nTitration | • Titrate dose no sooner than every 72 hours based on analgesic response and adverse effects • May apply two 5, 7.5, or 10 mcg/hr patches at one time for dose individualization • Short-term, short acting analgesia may be used for break-through pain as dose is titrated | • Titrate no sooner than every 4 days based on response and adverse effects: • If dose 75 mcg q12 hr, titrate to 150 mcg q12hr • If dose 150 mcg q12hr or higher, titrate in 150 mcg increments q12hr • Short-term, short acting analgesia may be used for break-through pain as needed as dose is titrated\nMax dose* | • 20 mcg/hour | • 900 mcg every 12 hours\nAdministration | • Apply to clean, dry, hairless/nearly hairless skin on upper chest, upper back, side of chest, upper outer arm • Change patch and rotate application site every 3 weeks • Do not cut patch; may secure edges with first aid tape or cover with transparent adhesive film dressing | • Lick inside of cheek or rinse with water if mouth is dry to moisten the area • Hold buccal film with clean dry fingers with yellow side facing up • Place yellow side of buccal film on the middle inside of cheek inside of mouth, hold for 5 seconds, leave in place until dissolved (approximately 30 minutes)\nClinical pearls | • Clean application site with lukewarm water and air dry • Avoid soaps, alcohol, oils, lotions, or abrasives on site • Avoid shaving site or applying to hairy/sweaty areas • Avoid exposing site to heat, direct sunlight, or hot water to prevent increase in drug delivery, overdose, and death • Can cause rash and erythema but is not a reason for discontinuation; treat with hydrocortisone cream • Avoid abrupt discontinuation; gradually taper if indicated | • Avoid eating, drinking acidic beverages, and using toothpaste or mouthwash 30 minutes before, during, or 30 minutes after application • Avoid application on open sores, lesions, too high or far back in cheek • Avoid touching/moving the film until dissolved; if film is not fully dissolved after 30 minutes, remove residue and rinse with water; avoid chewing or swallowing buccal film • Avoid abrupt discontinuation and gradually reduce dose to taper off • Patients with dexterity issues may have challenges with application\nDisposal | • Fold adhesive side to itself and flush down the toilet | • Remove from foil packaging and flush down the toilet\nTable note: *FDA-approved. PADR, prior authorization drug request; REMS, risk evaluation and mitigation strategy.\nTable note: a Buprenorphine perioperative guidance: https://dvagov.sharepoint.com/sites/VHAPBM/Formulary/Clinical%20Guidance/Forms/AllItems.aspx.\nTable note: b \u0007 Buprenex® (buprenorphine hydrochloride injection solution) is intended for use in acute treatment settings via deep intramuscular or slow intravenous injection over at least 2 minutes. 8 The starting dose is typically 0.3 mg, a second dose of 0.3 mg may be given 30-60 minutes later, and subsequent doses are given every 6-8 hours based on patient response. 9\nTable note: c \u0007 For strategies to taper full agonist opioids prior to starting buprenorphine: https://dvagov.sharepoint.com/sites/vhaacademicdetailing/ClassicMigration/SitePages/ Pain%20Management.aspx. Consider providing a medication disposal bag for disposal of any remaining full agonist opioids.",
+    "va_dod_cpg_opioids_2022:p104": "va_dod_cpg_opioids_2022 (VA, advisory, 2022-05)\nVA/DoD Clinical Practice Guideline for the Use of Opioids in the Management of Chronic Pain (Version 4.0) > Appendix D: Drug Tables > B. Long-acting/Extended-release Opioids\n[p 104]\n[Table] (PDF page 104)\nColumns: Long-Acting/ER Opioids a | Initial Dosage (in opioid- naïve, unless specified) | Other Dosing Information | Dosing In Special Populations | Other Considerations\nBuprenorphine buccal film · Available in strengths of 75, 150, 300, 450, 600, 750 and 900 mcg/film for twice daily administration | · 75 mcg once or twice daily for at least 4 days, then increase dose to 150 mcg every 12 hr · There is potential for buprenorphine buccal film to precipitate withdrawal in patients already on opioids; to reduce risk, the dose of other opioids should be tapered to ≤30 mg MEDD before initiating buprenorphine buccal film · See Section E. Additional Buprenorphine Guidance for alternate dosing instructions | · After initial dosing, dosing changes as necessary can proceed in increments of 150 mcg every 12 hr, no more frequently than every 4 days · Patients on prior dose of opioid 30 to 89 mg MEDD may initiate buprenorphine film at 150 mcg every 12 hr, 90 to 160 mg MEDD may initiate at 300 mcg every 12 hr; if prior opioid is >160 mg MEDD - consider an alternative analgesic · Time to steady state ~3 days with every 12 hr dosing | · Elderly: Initiation at the low end of the dosing range is recommended · Renal dysfunction: No dose adjustment recommended · Hepatic dysfunction: Patients with severe hepatic impairment should have starting and titration doses reduced by half that of patients with normal liver function | · QTc prolongation reported with recommended doses of buprenorphine; maximum dose of 900 mcg every 12 hr established due to the potential for this adverse effect; avoid in patients with long QT syndrome, family history of long QT syndrome, or those taking Class IA or Class III antiarrhythmic drugs · Buprenorphine buccal film is a potential treatment option for patients with significant renal impairment and those with gastrointestinal structural or functional abnormality that interferes with swallowing or absorption of orally administered medications\nBuprenorphine TDS · Available in every 7 day patch formulation that delivers transdermal buprenorphine at the following rates: 5 mcg/hr, 7.5 mcg/hr, 10 mcg/hr, 15 mcg/hr, and 20 mcg/hr | · In opioid-naïve or in patients on <30 mg MEDD of alternate agent: Initiate treatment with 5 mcg/hr patch · There is potential for buprenorphine to precipitate withdrawal in patients already on opioids; to reduce risk, the dose of other opioid should be tapered to ≤30 mg MEDD before initiating buprenorphine; the 10 mcg/ hr patch may then be initiated at the next dosing interval | · Initial buprenorphine TDS dose based on previous oral morphine equivalent: 5mcg/hr for <30mg MEDD, 10 mcg/hr for 30-80mg MEDD · The maximum dose of buprenorphine TDS 20 mcg/hr may not provide adequate analgesia for patients requiring greater than 80 mg MEDD; an alternate analgesic should be considered | · Dosage does not need to be adjusted in patients with mild or moderate hepatic impairment, renal impairment, or in the elderly | · Dose of one 20 mcg/hr patch per week should not be exceeded due to risk of QTc prolongation · Avoid use in patients with long QT syndrome, family history of long QT syndrome, or those taking Class IA or Class III antiarrhythmic medications · Advise patients that application of external heat (e.g., hot baths, sunbathing, saunas, heating pads) increases maximum plasma concentration of buprenorphine and risk of fatal overdose\n[p 105]\n[Table] (PDF page 105)\nColumns: Long-Acting/ER Opioids a | Initial Dosage (in opioid- naïve, unless specified) | Other Dosing Information | Dosing In Special Populations | Other Considerations\nBuprenorphine TDS (cont.) |  | · Because steady-state plasma concentrations are achieved within 72 hours, buprenorphine TDS dosage may be adjusted every 3 days |  | · Potential treatment option for patients with significant renal impairment or those with gastrointestinal structural or functional abnormality that interferes with swallowing or absorption of oral medications\nBuprenorphine and Buprenorphine/ Naloxone · Buprenorphine is available in 2 mg and 8 mg SL tabs · Buprenorphine/ naloxone is available in 2-0.5 and 8-2 mg/ SL tablets and 2-0.5, 4-1, 8-2, and 12-3 mg film | · Used off-label for pain management: FDA approved for the treatment of opioid dependence or OUD · 2 to 4 mg of buprenorphine or 2/0.5 mg to 4/1 mg of buprenorphine/ naloxone in divided doses should be adequate for most patients | · For patients who are on buprenorphine or buprenorphine naloxone for OUD, the current 24-hour dose could be split and divided for BID or TID dosing for pain management · To avoid precipitating withdrawal in patients that are being converted from other opioids, initiation with buprenorphine/naloxone SL tablet should be undertaken when objective and clear signs of mild withdrawal are evident; 2 to 4 mg of buprenorphine or 2/0.5 mg to 4/1 mg of buprenorphine/ naloxone in divided doses should be adequate for most patients | · Elderly: Use cautiously and monitor closely · Dosage does not need to be adjusted in patients with mild or moderate hepatic impairment or renal impairment; avoid in patients with severe hepatic impairment | · BUP sublingual tablet contains no naloxone and may be preferred during pregnancy · Buprenorphine/naloxone may be the preferred opioid in patients with comorbid pain and OUD"
+  },
+  "cited_evidence_parts": {
+    "va_dod_cpg_opioids_2022:p33": [
+      "va_dod_cpg_opioids_2022 (VA, advisory, 2022-05)\nVA/DoD Clinical Practice Guideline for the Use of Opioids in the Management of Chronic Pain (Version 4.0) > IX. Recommendations\n[p 33]\nThe following evidence-based clinical practice recommendations were made using a systematic approach considering four domains as per the GRADE approach (see Summary of Guideline Development Methodology). These domains include: confidence in the quality of the evidence, balance of desirable and undesirable outcomes (i.e., benefits and harms), patient values and preferences, and other implications (e.g., resource use, equity, acceptability).\n[Table] (PDF page 33)\nColumns: Topic | Sub- topic | # | Recommendation | Strength a | Category b\nInitiation and Continuation of Opioids |  | 1. | We recommend against the initiation of opioid therapy for the management of chronic non-cancer pain (for non-opioid treatments for chronic pain, see the VA/DoD CPGs for Low Back Pain, Headache, and Hip and Knee Osteoarthritis). c | Strong against | Reviewed, New-replaced\nInitiation and Continuation of Opioids |  | 2. | We recommend against long-term opioid therapy, particularly for younger age groups, as age is inversely associated with the risk of opioid use disorder and overdose. | Strong against | Reviewed, New-replaced\nInitiation and Continuation of Opioids |  | 3. | We recommend against long-term opioid therapy, particularly for patients with chronic pain who have a substance use disorder (refer to the VA/DoD CPG for the Management of Substance Use Disorders). d | Strong against | Reviewed, New-replaced\nInitiation and Continuation of Opioids |  | 4. | For patients receiving medication for opioid use disorder, there is insufficient evidence to recommend for or against the selection of any one of the following medications over the other for the management of their co-occurring chronic pain: methadone, buprenorphine, or extended-release naltrexone injection. Treat the opioid use disorder according to the VA/DoD CPG for the Management of Substance Use Disorders. d | Neither for nor against | Reviewed, New-replaced\nInitiation and Continuation of Opioids |  | 5. | For patients receiving daily opioids for the treatment of chronic pain, we suggest the use of buprenorphine instead of full agonist opioids due to lower risk of overdose and misuse. | Weak for | Reviewed, New-added\nInitiation and Continuation of Opioids |  | 6. | We recommend against the concurrent use of benzodiazepines and opioids for chronic pain (refer to Recommendation 10 in the VA/DoD CPG for the Management of Substance Use Disorders d for further guidance related to tapering one or both agents). | Strong against | Reviewed, Amended\n[p 34]\n[Table] (PDF page 34)\nColumns: Topic | Sub- topic | # | Recommendation | Strength a | Category b\nDose, Duration, and Taper of Opioids |  | 7. | If prescribing opioids, we recommend using the lowest dose of opioids as indicated by patient-specific risks and benefits. | Strong for | Reviewed, Amended\nDose, Duration, and Taper of Opioids |  | 8. | If considering an increase in opioid dosage, we recommend reevaluation of patient-specific risks and benefits and monitoring for adverse events including opioid use disorder and risk of overdose with increasing dosage. | Strong for | Reviewed, New-replaced\nDose, Duration, and Taper of Opioids | Duration | 9. | When prescribing opioids, we recommend the shortest duration as indicated. | Strong for | Reviewed, New-replaced\nDose, Duration, and Taper of Opioids | Dose and | 10. | After initiating opioid therapy, we recommend reevaluation at 30 days or fewer and frequent follow-up visits, if opioids are to be continued. | Strong for | Reviewed, New-replaced\nDose, Duration, and Taper of Opioids |  | 11. | We recommend against prescribing long-acting opioids: · For acute pain · As an as-needed medication · When initiating long-term opioid therapy | Strong against | Reviewed, Amended\nDose, Duration, and Taper of Opioids | Tapering | 12. | We suggest a collaborative, patient-centered approach to opioid tapering. | Weak for | Reviewed, New-replaced\nDose, Duration, and Taper of Opioids |  | 13. | There is insufficient evidence to recommend for or against any specific tapering strategies. | Neither for nor against | Reviewed, New-replaced\nScreening, Assessment, and Evaluation |  | 14. | We recommend assessing risk of suicide and self-directed violence when initiating, continuing, changing, or discontinuing long-term opioid therapy (refer to the VA/DoD CPG for the Assessment and Management of Patients at Risk for Suicide e for guidance on intervention timing and strategies). | Strong for | Reviewed, New-replaced\nScreening, Assessment, and Evaluation |  | 15. | For patients with chronic pain, we recommend assessing for behavioral health conditions, history of traumatic brain injury, and psychological factors (e.g., negative affect, pain catastrophizing) when considering long-term opioid therapy, as these conditions are associated with a higher risk of harm. | Strong for | Reviewed, New-added\nScreening, Assessment, and Evaluation |  | 16. | For patients with acute pain when opioids are being considered, we suggest screening for pain catastrophizing and co-occurring behavioral health conditions to identify those at higher risk for negative outcomes. | Weak for | Reviewed, New-added\nScreening, Assessment, and Evaluation |  | 17. | For patients on opioids, we suggest ongoing reevaluation of the benefits and harms of continued opioid prescribing based on individual patient risk characteristics. | Weak for | Reviewed, New-replaced\nRisk Mitigation |  | 18. | We suggest urine drug testing for patients on long-term opioids. | Weak for | Reviewed, New-replaced\nRisk Mitigation |  | 19. | We suggest interdisciplinary care that addresses pain and/or behavioral health problems, including substance use disorders, for patients presenting with high risk and/or aberrant behavior. | Weak for | Not reviewed, Amended\nRisk M"
+    ],
+    "va_dod_cpg_opioids_2022:p35": [
+      "va_dod_cpg_opioids_2022 (VA, advisory, 2022-05)\nVA/DoD Clinical Practice Guideline for the Use of Opioids in the Management of Chronic Pain (Version 4.0) > IX. Recommendations > A. Initiation and Continuation of Opioids\n[p 35]\nRecommendation\nWe recommend against the initiation of opioid therapy for the management of chronic non-cancer pain (for non-opioid treatments for chronic pain, see the VA/DoD CPGs for Low Back Pain, Headache, and Hip and Knee Osteoarthritis i ).\n(Strong against | Reviewed, New-replaced)\nDiscussion\nEvidence from SRs of RCTs suggests that the use of opioids for the management of chronic pain is mixed, and the balance between the risks versus benefits is questionable in whether it will result in a meaningful benefit for the patient while also increasing adverse events (AEs) as compared to controls. The Work Group, in their review of the impact of opioids on underlying pain conditions (e.g., worsening of pain/opioid-induced hyperalgesia), considered findings related to the following outcomes: pain (pain severity, pain interference, chronification of pain), functional status, QoL, and serious AEs.\nBusse et al. (2018) was the largest and most comprehensive SR included in the systematic evidence review.(121) It encompassed over 26,000 patients from 96 RCTs and found that, in patients with chronic non-cancer pain (CNCP), prescribed oral or transdermal opioids provided small and not clinically significant improvements in pain and physical functioning compared to non-opioid controls.(121) In 87 trials, patients in an opioid group had an average follow up of only 60 days (interquartile range [IQR]: 30-84 days). Such a short average follow-up can be seen as a significant limitation of this SR. It is also important to note that 79% of these trials received industry funding, 12% did not specify funding type, and only 9% reported no industry funding.(121)\nHuang et al. (2019) and Ma et al. (2016), both SRs with 3 and 11 RCTs respectively, found treatment with opioids was associated with no improvement in pain, pain severity, or functional status in patients with cancer-related pain.(122, 123)\nHowever, there was some evidence suggesting opioids can improve pain severity and functional status, particularly for those with musculoskeletal pain, including chronic low back pain (124) and osteoarthritis (OA).(125, 126) Sommer et al. (2020) and Derry et al. (2016) found treatment with opioids was associated with some improvement for those with non-cancer neuropathic pain.(127, 128) However, this relief and improved function must be weighed against the known risks associated with opioids (see below). The evidence for QoL was limited and included only three studies (124, 125, 127) with mixed results in terms of impact and clinical relevance.\nOverall, the evidence for serious AEs did not differ between opioid and placebo groups for the SRs included in the evidence review.(124, 125, 127) The SRs included in the evidence had a maximum follow up of one to six months. Thus, the Work Group considered findings of non-controlled, observational studies that examined opioid misuse, dosage, overdose, and opioid-related mortality.(120, 129-134) The evidence from observational studies indicated that serious AEs can occur with long-term opioid use. At least two observational studies showed that a higher dose of opioids prescribed to individuals increased the risk of being treated for OUD.(132, 134) Three retrospective studies found that higher doses of opioids resulted in increased risk of fatal overdoses, both intentional and unintentional.(120, 129, 130) The Work Group noted that observational studies often followed patients for much longer than the average of one to six months, which was the case for the SRs included in this evidence review. This analysis over an extended period of time provides insight on serious AEs for long-term opioid use for more than six months.\ni Other VA/DoD CPGs are available at: https://www.healthquality.va.gov/\n[p 36]\nConsistently, the use of opioids for six months or less did not show evidence of serious AEs but did show a level of harm when measuring AEs. As noted in Huang et al. (2019), a major limitation of the SRs is the assumption that all types of opioids and dosing are equivalent.(122) The evidence from one SR and metaanalysis of five RCTs suggests that serious AEs did not differ between opioid and placebo groups at limited follow-up periods of four and 12 weeks in patients with non-cancer neuropathic pain.(127) Evidence from another SR using data from six RCTs also suggests no difference between groups for serious AEs at four and 15 weeks in patients with low back pain.(124) Finally, an SR and meta-analysis of data from 13 RCTs found no difference in serious AEs between groups at four and 24 weeks in patients with OA.(125) One study suggests serious AEs occurred more often with tramadol than with placebo at one and 12 week follow-ups among patients with OA.(126)The are several factors to take into consideration regarding AEs. Busse et al. (2018) suggests a level of harm associated with adding opioids to a non-opioid therapy regime.(121) At follow-ups between one and six months, AEs such as vomiting, nausea, constipation, and dizziness were more likely to occur in patients receiving opioids than in patients receiving placebo. Also, Busse et al. (2018) excluded patients at the highest risk of poor outcomes.(121) Sixty-nine trials excluded patients with current or prior SUD and 45 trials excluded patients with diagnosed behavioral health disorders or patients who were taking a psychotropic medication.\nIt is important to make considerations for certain subsets of patients, including those experiencing acute pain conditions, acute pain conditions who also have chronic pain, or an acute exacerbation of a chronic pain condition. These patients should be treated according to best medical evidence for the acute condition, including opioids, if clinically appropriate. In the"
+    ],
+    "va_pbm_bup_chronic_pain:p2": [
+      "va_pbm_bup_chronic_pain (VA, advisory, 2021-05)\nBuprenorphine for Chronic Pain (IB 10-1497) > Buprenorphine formulations FDA approved for treatment of chronic paina,b\n[p 2]\nBuprenorphine formulations FDA approved for treatment of chronic pain a,b\n[Table] (PDF page 2)\nColumns: Brand | Butrans® (transdermal patch) 5,7 | Belbuca® (buccal film) 5,8\nStrengths | 5, 7.5, 10, 15, and 20 mcg/hour | 75, 150, 300, 450, 600, 750, and 900 mcg\nPADR | Required | Required\nX-waiver | Not required | Not required\nREMS | Must complete an accredited continuing education program to prescribe: https://opioidanalgesicrems.com | Must complete an accredited continuing education program to prescribe: https://opioidanalgesicrems.com\nInitial dosing* | • Opioid-naïve: 5 mcg/hour patch • <30 mg MEDD: 5 mcg/hour when next dose is due • 30-80 mg MEDD: taper to <30 mg MEDD c , then 10 mcg/hour when next dose is due • >80 mg MEDD: may not be adequate analgesia, consider buprenorphine buccal film • Change patch and rotate site every 7 days | • Opioid-naïve: 75 mcg film 1x daily or q12 hr, as tolerated • <30 mg MEDD: 75 mcg film when next dose is due, 1x daily or q12 hr • 30-89 mg MEDD: taper to <30 mg MEDD c , then 150 mcg q12 hr when next dose is due • 90-160 mg MEDD: taper to 30 mg MEDD c , then 300 mcg q12 hr when next dose is due • >160 mg MEDD: may not provide adequate analgesia, consider referral to X-waivered provider for buprenorphine/naloxone\nHepatic impairment | • Severe: has not been studied, consider alternative • Mild-moderate: no adjustments needed | • Apply film to mucosa every 12 hours • Severe (Child-Pugh C): reduce starting dose and titration by 50% • Mild-moderate (Child-Pugh A and B): no adjustments needed\nTitration | • Titrate dose no sooner than every 72 hours based on analgesic response and adverse effects • May apply two 5, 7.5, or 10 mcg/hr patches at one time for dose individualization • Short-term, short acting analgesia may be used for break-through pain as dose is titrated | • Titrate no sooner than every 4 days based on response and adverse effects: • If dose 75 mcg q12 hr, titrate to 150 mcg q12hr • If dose 150 mcg q12hr or higher, titrate in 150 mcg increments q12hr • Short-term, short acting analgesia may be used for break-through pain as needed as dose is titrated\nMax dose* | • 20 mcg/hour | • 900 mcg every 12 hours\nAdministration | • Apply to clean, dry, hairless/nearly hairless skin on upper chest, upper back, side of chest, upper outer arm • Change patch and rotate application site every 3 weeks • Do not cut patch; may secure edges with first aid tape or cover with transparent adhesive film dressing | • Lick inside of cheek or rinse with water if mouth is dry to moisten the area • Hold buccal film with clean dry fingers with yellow side facing up • Place yellow side of buccal film on the middle inside of cheek inside of mouth, hold for 5 seconds, leave in place until dissolved (approximately 30 minutes)\nClinical pearls | • Clean application site with lukewarm water and air dry • Avoid soaps, alcohol, oils, lotions, or abrasives on site • Avoid shaving site or applying to hairy/sweaty areas • Avoid exposing site to heat, direct sunlight, or hot water to prevent increase in drug delivery, overdose, and death • Can cause rash and erythema but is not a reason for discontinuation; treat with hydrocortisone cream • Avoid abrupt discontinuation; gradually taper if indicated | • Avoid eating, drinking acidic beverages, and using toothpaste or mouthwash 30 minutes before, during, or 30 minutes after application • Avoid application on open sores, lesions, too high or far back in cheek • Avoid touching/moving the film until dissolved; if film is not fully dissolved after 30 minutes, remove residue and rinse with water; avoid chewing or swallowing buccal film • Avoid abrupt discontinuation and gradually reduce dose to taper off • Patients with dexterity issues may have challenges with application\nDisposal | • Fold adhesive side to itself and flush down the toilet | • Remove from foil packaging and flush down the toilet\nTable note: *FDA-approved. PADR, prior authorization drug request; REMS, risk evaluation and mitigation strategy.\nTable note: a Buprenorphine perioperative guidance: https://dvagov.sharepoint.com/sites/VHAPBM/Formulary/Clinical%20Guidance/Forms/AllItems.aspx.\nTable note: b \u0007 Buprenex® (buprenorphine hydrochloride injection solution) is intended for use in acute treatment settings via deep intramuscular or slow intravenous injection over at least 2 minutes. 8 The starting dose is typically 0.3 mg, a second dose of 0.3 mg may be given 30-60 minutes later, and subsequent doses are given every 6-8 hours based on patient response. 9\nTable note: c \u0007 For strategies to taper full agonist opioids prior to starting buprenorphine: https://dvagov.sharepoint.com/sites/vhaacademicdetailing/ClassicMigration/SitePages/ Pain%20Management.aspx. Consider providing a medication disposal bag for disposal of any remaining full agonist opioids."
+    ],
+    "va_dod_cpg_opioids_2022:p104": [
+      "va_dod_cpg_opioids_2022 (VA, advisory, 2022-05)\nVA/DoD Clinical Practice Guideline for the Use of Opioids in the Management of Chronic Pain (Version 4.0) > Appendix D: Drug Tables > B. Long-acting/Extended-release Opioids\n[p 104]\n[Table] (PDF page 104)\nColumns: Long-Acting/ER Opioids a | Initial Dosage (in opioid- naïve, unless specified) | Other Dosing Information | Dosing In Special Populations | Other Considerations\nBuprenorphine buccal film · Available in strengths of 75, 150, 300, 450, 600, 750 and 900 mcg/film for twice daily administration | · 75 mcg once or twice daily for at least 4 days, then increase dose to 150 mcg every 12 hr · There is potential for buprenorphine buccal film to precipitate withdrawal in patients already on opioids; to reduce risk, the dose of other opioids should be tapered to ≤30 mg MEDD before initiating buprenorphine buccal film · See Section E. Additional Buprenorphine Guidance for alternate dosing instructions | · After initial dosing, dosing changes as necessary can proceed in increments of 150 mcg every 12 hr, no more frequently than every 4 days · Patients on prior dose of opioid 30 to 89 mg MEDD may initiate buprenorphine film at 150 mcg every 12 hr, 90 to 160 mg MEDD may initiate at 300 mcg every 12 hr; if prior opioid is >160 mg MEDD - consider an alternative analgesic · Time to steady state ~3 days with every 12 hr dosing | · Elderly: Initiation at the low end of the dosing range is recommended · Renal dysfunction: No dose adjustment recommended · Hepatic dysfunction: Patients with severe hepatic impairment should have starting and titration doses reduced by half that of patients with normal liver function | · QTc prolongation reported with recommended doses of buprenorphine; maximum dose of 900 mcg every 12 hr established due to the potential for this adverse effect; avoid in patients with long QT syndrome, family history of long QT syndrome, or those taking Class IA or Class III antiarrhythmic drugs · Buprenorphine buccal film is a potential treatment option for patients with significant renal impairment and those with gastrointestinal structural or functional abnormality that interferes with swallowing or absorption of orally administered medications\nBuprenorphine TDS · Available in every 7 day patch formulation that delivers transdermal buprenorphine at the following rates: 5 mcg/hr, 7.5 mcg/hr, 10 mcg/hr, 15 mcg/hr, and 20 mcg/hr | · In opioid-naïve or in patients on <30 mg MEDD of alternate agent: Initiate treatment with 5 mcg/hr patch · There is potential for buprenorphine to precipitate withdrawal in patients already on opioids; to reduce risk, the dose of other opioid should be tapered to ≤30 mg MEDD before initiating buprenorphine; the 10 mcg/ hr patch may then be initiated at the next dosing interval | · Initial buprenorphine TDS dose based on previous oral morphine equivalent: 5mcg/hr for <30mg MEDD, 10 mcg/hr for 30-80mg MEDD · The maximum dose of buprenorphine TDS 20 mcg/hr may not provide adequate analgesia for patients requiring greater than 80 mg MEDD; an alternate analgesic should be considered | · Dosage does not need to be adjusted in patients with mild or moderate hepatic impairment, renal impairment, or in the elderly | · Dose of one 20 mcg/hr patch per week should not be exceeded due to risk of QTc prolongation · Avoid use in patients with long QT syndrome, family history of long QT syndrome, or those taking Class IA or Class III antiarrhythmic medications · Advise patients that application of external heat (e.g., hot baths, sunbathing, saunas, heating pads) increases maximum plasma concentration of buprenorphine and risk of fatal overdose\n[p 105]\n[Table] (PDF page 105)\nColumns: Long-Acting/ER Opioids a | Initial Dosage (in opioid- naïve, unless specified) | Other Dosing Information | Dosing In Special Populations | Other Considerations\nBuprenorphine TDS (cont.) |  | · Because steady-state plasma concentrations are achieved within 72 hours, buprenorphine TDS dosage may be adjusted every 3 days |  | · Potential treatment option for patients with significant renal impairment or those with gastrointestinal structural or functional abnormality that interferes with swallowing or absorption of oral medications\nBuprenorphine and Buprenorphine/ Naloxone · Buprenorphine is available in 2 mg and 8 mg SL tabs · Buprenorphine/ naloxone is available in 2-0.5 and 8-2 mg/ SL tablets and 2-0.5, 4-1, 8-2, and 12-3 mg film | · Used off-label for pain management: FDA approved for the treatment of opioid dependence or OUD · 2 to 4 mg of buprenorphine or 2/0.5 mg to 4/1 mg of buprenorphine/ naloxone in divided doses should be adequate for most patients | · For patients who are on buprenorphine or buprenorphine naloxone for OUD, the current 24-hour dose could be split and divided for BID or TID dosing for pain management · To avoid precipitating withdrawal in patients that are being converted from other opioids, initiation with buprenorphine/naloxone SL tablet should be undertaken when objective and clear signs of mild withdrawal are evident; 2 to 4 mg of buprenorphine or 2/0.5 mg to 4/1 mg of buprenorphine/ naloxone in divided doses should be adequate for most patients | · Elderly: Use cautiously and monitor closely · Dosage does not need to be adjusted in patients with mild or moderate hepatic impairment or renal impairment; avoid in patients with severe hepatic impairment | · BUP sublingual tablet contains no naloxone and may be preferred during pregnancy · Buprenorphine/naloxone may be the preferred opioid in patients with comorbid pain and OUD"
+    ]
+  },
+  "cost_note": "each call priced at its serving role's rates (llm.<role>.prices_per_mtok)",
+  "request_started_utc": "2026-10-18T13:09:29.059222+00:00",
+  "citation_check": {
+    "t_start": 10.779,
+    "duration_s": 0.001
+  }
+}

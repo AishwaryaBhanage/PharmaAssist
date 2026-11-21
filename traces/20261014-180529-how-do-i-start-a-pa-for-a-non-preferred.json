@@ -1,0 +1,120 @@
+{
+  "question": "How do I start a PA for a non-preferred drug for an NY Medicaid pt: who do I contact and what form?",
+  "status": "answered",
+  "assumption": "Assuming NY Medicaid FFS (NYRx), as stated in the question.",
+  "answer": "Assuming NY Medicaid FFS (NYRx): only the prescriber or their authorized agent can submit the PA. You can't submit it as a third party, but you can start it.\n\n1. **Pharmacy-initiated ePA:** If you use CoverMyMeds, start the ePA there. It routes to the prescriber's queue, and the prescriber completes and submits it to NYRx.\n2. **Prescriber options:**\n   - CoverMyMeds ePA.\n   - PAXpress (web, via eMedNY).\n   - The NYRx Clinical Call Center at 1-877-309-9493.\n   - The PA fax form at newyork.fhsc.com/providers/PA_forms.asp.\n3. **Questions:** Call NYRx Education & Outreach at 1-833-967-7310 or email NYRxEO@primetherapeutics.com.\n4. **Emergency supply:** If you can't reach the prescriber, you may obtain a PA for up to a 72-hour emergency supply.",
+  "citations": [
+    {
+      "doc_id": "ny_medicaid_pharmacy_policy",
+      "page": 15,
+      "link": "https://www.emedny.org/ProviderManuals/Pharmacy/PDFS/Pharmacy_Policy_Guidelines.pdf#page=15",
+      "flag": null
+    },
+    {
+      "doc_id": "ny_medicaid_pharmacy_policy",
+      "page": 16,
+      "link": "https://www.emedny.org/ProviderManuals/Pharmacy/PDFS/Pharmacy_Policy_Guidelines.pdf#page=16",
+      "flag": null
+    },
+    {
+      "doc_id": "ny_medicaid_pdl",
+      "page": 1,
+      "link": "https://newyork.fhsc.com/downloads/providers/NYRx_PDP_PDL.pdf#page=1",
+      "flag": null
+    }
+  ],
+  "conflicts_noted": [],
+  "flags": [],
+  "answered_by": "claude-sonnet-5-5",
+  "fallback_used": false,
+  "timing_s": {
+    "total": 6.143,
+    "search": 0.108,
+    "search_cold": 0,
+    "search_warm": 0.108,
+    "read_page": 0,
+    "list_documents": 0,
+    "model_calls": [
+      1.773,
+      4.262
+    ]
+  },
+  "index_warm_at_start": true,
+  "lookups": 1,
+  "tokens": {
+    "input": 6,
+    "output": 704,
+    "cache_read": 2252,
+    "cache_write": 6366
+  },
+  "cost_usd": 0.023417,
+  "pages_seen": [
+    "ny_medicaid_pdl:p1",
+    "ny_medicaid_pharmacy_policy:p10",
+    "ny_medicaid_pharmacy_policy:p15",
+    "ny_medicaid_pharmacy_policy:p16",
+    "ny_medicaid_pharmacy_policy:p28",
+    "ny_medicaid_pharmacy_policy:p38"
+  ],
+  "started_at": "2026-10-14T22:05:29+00:00",
+  "config": {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium",
+    "setup": "baseline",
+    "max_tool_calls": 6,
+    "deadline_s": 25,
+    "search_k": 8
+  },
+  "model_calls": [
+    {
+      "duration_s": 1.773,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 4,
+        "output": 121,
+        "cache_read": 0,
+        "cache_write": 2252
+      }
+    },
+    {
+      "duration_s": 4.262,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 2,
+        "output": 583,
+        "cache_read": 2252,
+        "cache_write": 4114
+      }
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "search_documents",
+      "input": {
+        "query": "prior authorization non-preferred drug how to request contact phone fax form prescriber",
+        "program": "NY Medicaid",
+        "k": 8
+      },
+      "duration_s": 0.108,
+      "is_error": false,
+      "pages": [
+        "ny_medicaid_pharmacy_policy:p16",
+        "ny_medicaid_pharmacy_policy:p15",
+        "ny_medicaid_pdl:p1",
+        "ny_medicaid_pdl:p1",
+        "ny_medicaid_pharmacy_policy:p10",
+        "ny_medicaid_pharmacy_policy:p38",
+        "ny_medicaid_pharmacy_policy:p28",
+        "ny_medicaid_pharmacy_policy:p15"
+      ],
+      "index_loaded": true
+    }
+  ],
+  "cost_note": "priced at the requested model's rates; a fallback hop bills at its own rates"
+}

@@ -1,0 +1,157 @@
+{
+  "question": "Ozempic pen is preferred, but the patient takes Januvia and has commercial insurance. Do we need PA, and who gets billed first?",
+  "status": "answered",
+  "assumption": "Assuming NY Medicaid (patient has Medicaid plus commercial insurance as TPL); the question didn't name the program.",
+  "answer": "Assuming NY Medicaid with commercial as TPL:\n\n1. **Bill the commercial plan first.** Medicaid is payer of last resort; a claim sent to Medicaid first denies with NCPDP 717 (\"Client Has Other Insurance\"). Bypassing the TPL is treated as fraudulent billing. Keep the TPL denial/payment records for 6 years.\n2. **Then bill Medicaid as secondary** for patient responsibility. A Medicaid PA does not replace the TPL's obligation.\n3. **PA:** Ozempic pen is preferred on the PDL, but PA is required when a GLP-1 and a DPP-4 (Januvia) are used concurrently. Januvia is listed as preferred (BLTG/DO). The prescriber, not the pharmacy, submits the PA (ePA via CoverMyMeds can be initiated by the pharmacy). Preferred/non-preferred changes take effect 10/22/2026.\n\nThe commercial plan's own PA rules aren't in these documents.",
+  "citations": [
+    {
+      "doc_id": "ny_medicaid_pdl",
+      "page": 34,
+      "link": "https://newyork.fhsc.com/downloads/providers/NYRx_PDP_PDL.pdf#page=34",
+      "flag": null
+    },
+    {
+      "doc_id": "ny_medicaid_pdl",
+      "page": 33,
+      "link": "https://newyork.fhsc.com/downloads/providers/NYRx_PDP_PDL.pdf#page=33",
+      "flag": null
+    },
+    {
+      "doc_id": "ny_medicaid_pharmacy_policy",
+      "page": 17,
+      "link": "https://www.emedny.org/ProviderManuals/Pharmacy/PDFS/Pharmacy_Policy_Guidelines.pdf#page=17",
+      "flag": null
+    },
+    {
+      "doc_id": "ny_medicaid_pharmacy_policy",
+      "page": 18,
+      "link": "https://www.emedny.org/ProviderManuals/Pharmacy/PDFS/Pharmacy_Policy_Guidelines.pdf#page=18",
+      "flag": null
+    },
+    {
+      "doc_id": "ny_medicaid_pharmacy_policy",
+      "page": 15,
+      "link": "https://www.emedny.org/ProviderManuals/Pharmacy/PDFS/Pharmacy_Policy_Guidelines.pdf#page=15",
+      "flag": null
+    }
+  ],
+  "conflicts_noted": [],
+  "flags": [],
+  "answered_by": "claude-sonnet-5-5",
+  "fallback_used": false,
+  "timing_s": {
+    "total": 7.566,
+    "search": 0.109,
+    "search_cold": 0,
+    "search_warm": 0.109,
+    "read_page": 0,
+    "list_documents": 0,
+    "model_calls": [
+      2.955,
+      4.501
+    ]
+  },
+  "index_warm_at_start": true,
+  "lookups": 2,
+  "tokens": {
+    "input": 6,
+    "output": 957,
+    "cache_read": 2261,
+    "cache_write": 11107
+  },
+  "cost_usd": 0.037802,
+  "pages_seen": [
+    "ny_medicaid_pdl:p1",
+    "ny_medicaid_pdl:p33",
+    "ny_medicaid_pdl:p34",
+    "ny_medicaid_pdl:p45",
+    "ny_medicaid_pdl:p77",
+    "ny_medicaid_pharmacy_policy:p15",
+    "ny_medicaid_pharmacy_policy:p17",
+    "ny_medicaid_pharmacy_policy:p18",
+    "ny_medicaid_pharmacy_policy:p19",
+    "ny_medicaid_pharmacy_policy:p27",
+    "ny_medicaid_pharmacy_policy:p3",
+    "ny_medicaid_pharmacy_policy:p39"
+  ],
+  "started_at": "2026-10-14T22:02:45+00:00",
+  "config": {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium",
+    "setup": "baseline",
+    "max_tool_calls": 6,
+    "deadline_s": 25,
+    "search_k": 8
+  },
+  "model_calls": [
+    {
+      "duration_s": 2.955,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 4,
+        "output": 295,
+        "cache_read": 0,
+        "cache_write": 2261
+      }
+    },
+    {
+      "duration_s": 4.501,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 2,
+        "output": 662,
+        "cache_read": 2261,
+        "cache_write": 8846
+      }
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "search_documents",
+      "input": {
+        "query": "Ozempic Januvia preferred prior authorization GLP-1 DPP-4 PDL",
+        "program": "NY Medicaid"
+      },
+      "duration_s": 0.087,
+      "is_error": false,
+      "pages": [
+        "ny_medicaid_pdl:p34",
+        "ny_medicaid_pdl:p33",
+        "ny_medicaid_pdl:p33",
+        "ny_medicaid_pharmacy_policy:p15",
+        "ny_medicaid_pdl:p1",
+        "ny_medicaid_pdl:p45",
+        "ny_medicaid_pharmacy_policy:p15",
+        "ny_medicaid_pdl:p77"
+      ],
+      "index_loaded": true
+    },
+    {
+      "name": "search_documents",
+      "input": {
+        "query": "third party liability other insurance commercial bill primary first Medicaid payer of last resort pharmacy",
+        "program": "NY Medicaid"
+      },
+      "duration_s": 0.022,
+      "is_error": false,
+      "pages": [
+        "ny_medicaid_pharmacy_policy:p18",
+        "ny_medicaid_pharmacy_policy:p17",
+        "ny_medicaid_pharmacy_policy:p18",
+        "ny_medicaid_pharmacy_policy:p3",
+        "ny_medicaid_pharmacy_policy:p39",
+        "ny_medicaid_pharmacy_policy:p3",
+        "ny_medicaid_pharmacy_policy:p19",
+        "ny_medicaid_pharmacy_policy:p27"
+      ],
+      "index_loaded": true
+    }
+  ],
+  "cost_note": "priced at the requested model's rates; a fallback hop bills at its own rates"
+}

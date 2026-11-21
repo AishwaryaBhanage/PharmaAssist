@@ -1,0 +1,1681 @@
+{
+  "question": "For OUD with chronic pain, can buprenorphine continue long term, can doses be split, and what monitoring is needed?",
+  "request_id": "6704cb02-42bf-4b4a-acb3-62f97b174fb9",
+  "status": "answered",
+  "agent_status": "answered",
+  "assumption": "Assuming VA clinical guidance for a patient with OUD plus chronic pain.",
+  "answer": "Assuming VA clinical guidance: **yes—continue buprenorphine long term when treating OUD.** OUD is chronic/relapsing; optimal duration is undefined, and MOUD is often continued indefinitely. Don’t stop solely for return to non-prescribed opioid use; any taper should be collaborative and based on recovery stability.\n\nFor analgesia, the **current 24‑hr SL buprenorphine or buprenorphine/naloxone dose may be split BID or TID**; VA also says BUP/NX may be preferred in comorbid pain + OUD.\n\nMonitoring: pain tool (PEG), withdrawal/cravings scales, PDMP, UDS, CBC/renal/hepatic, infectious disease testing, pregnancy test if applicable, suicide screen, QTc-risk ECG, and OEND/naloxone.",
+  "citations": [
+    {
+      "doc_id": "va_pbm_bup_oud",
+      "page": 1,
+      "link": "https://www.pbm.va.gov/PBM/AcademicDetailingService/Documents/508/10-1498_OUD_Provider_BuprenorphineforOUD_P97021.pdf#page=1",
+      "flag": null,
+      "locator": "va_pbm_bup_oud:p1"
+    },
+    {
+      "doc_id": "va_dod_cpg_opioids_2022",
+      "page": 105,
+      "link": "https://www.healthquality.va.gov/guidelines/Pain/cot/VADoDOpioidsCPG.pdf#page=105",
+      "flag": null,
+      "locator": "va_dod_cpg_opioids_2022:p105"
+    },
+    {
+      "doc_id": "va_pbm_bup_oud",
+      "page": 4,
+      "link": "https://www.pbm.va.gov/PBM/AcademicDetailingService/Documents/508/10-1498_OUD_Provider_BuprenorphineforOUD_P97021.pdf#page=4",
+      "flag": null,
+      "locator": "va_pbm_bup_oud:p4"
+    }
+  ],
+  "conflicts_noted": [
+    "Apparent conflict: chronic-pain guidance recommends against long-term opioid therapy in SUD, but OUD-specific guidance treats buprenorphine as MOUD often continued indefinitely; clinical context (OUD treatment) decides."
+  ],
+  "flags": [],
+  "needs_review": false,
+  "words": {
+    "displayed": 94,
+    "rendered": 94
+  },
+  "answered_by": "gpt-5.5-2026-04-23",
+  "provider": "openai",
+  "model": "gpt-5.5-2026-04-23",
+  "fallback_used": false,
+  "timing_s": {
+    "total": 14.619,
+    "search": 1.213,
+    "read_page": 0,
+    "list_documents": 0,
+    "lookups": 0,
+    "model_calls": [
+      2.125,
+      1.891,
+      2.164,
+      7.224
+    ]
+  },
+  "lookups": 4,
+  "tokens": {
+    "input": 63935,
+    "output": 791,
+    "cache_read": 77824,
+    "cache_write": 0
+  },
+  "cost_usd": 0.382317,
+  "pages_seen": [
+    "va_dod_cpg_opioids_2022:p104",
+    "va_dod_cpg_opioids_2022:p105",
+    "va_dod_cpg_opioids_2022:p106",
+    "va_dod_cpg_opioids_2022:p107",
+    "va_dod_cpg_opioids_2022:p108",
+    "va_dod_cpg_opioids_2022:p11",
+    "va_dod_cpg_opioids_2022:p12",
+    "va_dod_cpg_opioids_2022:p14",
+    "va_dod_cpg_opioids_2022:p15",
+    "va_dod_cpg_opioids_2022:p29",
+    "va_dod_cpg_opioids_2022:p33",
+    "va_dod_cpg_opioids_2022:p34",
+    "va_dod_cpg_opioids_2022:p39",
+    "va_dod_cpg_opioids_2022:p40",
+    "va_dod_cpg_opioids_2022:p41",
+    "va_dod_cpg_opioids_2022:p42",
+    "va_dod_cpg_opioids_2022:p43",
+    "va_dod_cpg_opioids_2022:p44",
+    "va_dod_cpg_opioids_2022:p45",
+    "va_dod_cpg_opioids_2022:p52",
+    "va_dod_cpg_opioids_2022:p53",
+    "va_pbm_bup_chronic_pain:p1",
+    "va_pbm_bup_chronic_pain:p2",
+    "va_pbm_bup_chronic_pain:p3",
+    "va_pbm_bup_chronic_pain:p4",
+    "va_pbm_bup_oud:p1",
+    "va_pbm_bup_oud:p2",
+    "va_pbm_bup_oud:p4"
+  ],
+  "trace_id": null,
+  "started_at": "2026-10-18T13:07:56+00:00",
+  "config": {
+    "primary": "gpt-5.5",
+    "fallback": "claude-sonnet-5-5",
+    "effort": "medium",
+    "search": {
+      "mode": "hybrid",
+      "rrf_k": 60,
+      "fusion_depth": 100,
+      "return_parents": true,
+      "rerank": null
+    },
+    "max_tool_calls": 6,
+    "deadline_s": 25,
+    "search_k": 8
+  },
+  "structured_lookups": true,
+  "context": {},
+  "model_answer": "Assuming VA clinical guidance: **yes—continue buprenorphine long term when treating OUD.** OUD is chronic/relapsing; optimal duration is undefined, and MOUD is often continued indefinitely. Don’t stop solely for return to non-prescribed opioid use; any taper should be collaborative and based on recovery stability.\n\nFor analgesia, the **current 24‑hr SL buprenorphine or buprenorphine/naloxone dose may be split BID or TID**; VA also says BUP/NX may be preferred in comorbid pain + OUD.\n\nMonitoring: pain tool (PEG), withdrawal/cravings scales, PDMP, UDS, CBC/renal/hepatic, infectious disease testing, pregnancy test if applicable, suicide screen, QTc-risk ECG, and OEND/naloxone.",
+  "model_citations": [
+    {
+      "doc_id": "va_pbm_bup_oud",
+      "page": 1,
+      "link": "https://www.pbm.va.gov/PBM/AcademicDetailingService/Documents/508/10-1498_OUD_Provider_BuprenorphineforOUD_P97021.pdf#page=1",
+      "flag": null,
+      "locator": "va_pbm_bup_oud:p1"
+    },
+    {
+      "doc_id": "va_dod_cpg_opioids_2022",
+      "page": 105,
+      "link": "https://www.healthquality.va.gov/guidelines/Pain/cot/VADoDOpioidsCPG.pdf#page=105",
+      "flag": null,
+      "locator": "va_dod_cpg_opioids_2022:p105"
+    },
+    {
+      "doc_id": "va_pbm_bup_oud",
+      "page": 4,
+      "link": "https://www.pbm.va.gov/PBM/AcademicDetailingService/Documents/508/10-1498_OUD_Provider_BuprenorphineforOUD_P97021.pdf#page=4",
+      "flag": null,
+      "locator": "va_pbm_bup_oud:p4"
+    }
+  ],
+  "model_calls": [
+    {
+      "t_start": 0.0,
+      "duration_s": 2.125,
+      "requested_model": "gpt-5.5",
+      "served_model": "gpt-5.5-2026-04-23",
+      "provider": "openai",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 317,
+        "output": 112,
+        "cache_read": 1536,
+        "cache_write": 0
+      },
+      "cost_usd": 0.005713,
+      "response_id": "resp_00107236c8f25d0e016ad4c49e203c87d2800c5da7253e6bcb",
+      "input_messages": [
+        {
+          "role": "user",
+          "text": "Today's date: 2026-10-18\n\nQuestion: For OUD with chronic pain, can buprenorphine continue long term, can doses be split, and what monitoring is needed?"
+        }
+      ],
+      "output": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "call_1khJOlJh0MnflNp5NtlewcKc",
+            "name": "search_documents",
+            "arguments": {
+              "query": "OUD chronic pain buprenorphine continue long term split dosing monitoring",
+              "program": "VA",
+              "k": 8
+            }
+          },
+          {
+            "id": "call_qE6U19GvBFw2Gwv2YntZKIiA",
+            "name": "search_documents",
+            "arguments": {
+              "query": "buprenorphine opioid use disorder chronic pain split doses urine drug monitoring long term",
+              "program": "VA",
+              "k": 8
+            }
+          }
+        ]
+      }
+    },
+    {
+      "t_start": 2.607,
+      "duration_s": 1.891,
+      "requested_model": "gpt-5.5",
+      "served_model": "gpt-5.5-2026-04-23",
+      "provider": "openai",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 25188,
+        "output": 64,
+        "cache_read": 1536,
+        "cache_write": 0
+      },
+      "cost_usd": 0.128628,
+      "response_id": "resp_00107236c8f25d0e016ad4c4a0babc87d2a2603d5c14b4cd7c",
+      "input_messages": [
+        {
+          "role": "tool",
+          "tool_results": [
+            {
+              "call_id": "call_1khJOlJh0MnflNp5NtlewcKc",
+              "is_error": false,
+              "content": "[{\"doc_id\": \"va_pbm_bup_chronic_pain\", \"page\": 4, \"program\": \"VA\", \"authority\": \"advisory\", \"date\": \"2021-05\", \"text\": \"Buprenorphine for Chronic Pain (IB 10-1497) > Initial assessment and monitoring1,5,7,8,17 > Diagnosis, assessment, treatment Concurrent conditions Databases, labs, procedures > REFERENCES\\n[p 4]\\n1. The Opioid Therapy for Chronic Pain Work Group. VA/DoD clinical practice guideline for opioid therapy for chronic pain. VA/DoD. 2017;Version 3.0:1-198. 2. Webster L, Gudin J, Raffa RB, et al. Understanding Buprenorphine for Use in Chronic Pain: Expert Opinion. Pain Medicine. 2020;21(4):714-723. 3. Davis MP, Pasternak G, Behm B. Treating Chronic Pain: An Overview of Clinical Studies Centered on the Buprenorphine Option. Drugs. 2018;78(12):1211-1228. 4. Gudin J, Fudin J. A Narrative Pharmacological Review of Buprenorphine: A Unique Opioid for the Treatment of Chronic Pain. Pain Ther. 2020;9(1):41-54. 5. Buprenorphine Formulations for Chronic Pain Management in Patients with Opioid Use Disorder or on Long-Term Opioid Therapy with Physiologic Tolerance: Buprenorphine Inj, Buprenorphine TDS, Buprenorphine SL Film, Buprenorphine/Naloxone SL tabs Recommendations for Use. March 2020. VA Pharmacy Benefits Management Services, Medical Advisory Panel, and VISN Pharmacist Executives; National Mental Health Office - Substance Use Disorders; National Pain Management Strategic Coordinating Committee. Accessed Jan 4, 2021. 6. Buprenorphine Transdermal System (TDS) (Butrans) C-III Buprenorphine Buccal Film (BBF) (Belvuca) C-III Criteria for Use. VA Pharmacy Benefits Management Services, Medical Advisory Panel, and VISN Pharmacist Executives. Accessed February 9, 2021. 7. Purdue Pharma L.P. Buprenorphine (Butrans) [package insert]. U.S. Food and Drug Administration Website. https://www.accessdata.fda.gov/drugsatfda_docs/label/2019/ 021306s035lbl.pdf. Revised Oct 2019. Accessed August 25, 2020. 8. BioDelivery Sciences International, Inc. Buprenorphine (Belbuca) [package insert]. U.S. Food and Drug Administration Website. https://www.accessdata.fda.gov/drugsatfda_docs/label/2019/207932s012lbl.pdf. Revised Oct 2019. Accessed August 25, 2020. 9. Indivior, Inc. Buprenorphine (Buprenex) [package insert]. U.S. Food and Drug Administration Website. https://www.accessdata.fda.gov/drugsatfda_docs/label/2019/018401s025lbl.pdf. Revised Oct 2019. Accessed August 25, 2020. 10. Webster L, Gruener D, Kirby T, Xiang Q, Tzanis E, Finn A. Evaluation of the Tolerability of Switching Patients on Chronic Full μ-Opioid Agonist Therapy to Buccal Buprenorphine. Pain Med. 2016;17(5):899-907. 11. Weimer MB, Guerra M, Morrow G, Adams K. Hospital-based Buprenorphine Micro-dose Initiation [published online ahead of print, 2020 Sep 21]. J Addict Med. 2020;10.1097/ADM.0000000000000745. 12. Becker WC, Frank JW, Edens EL. Switching From High-Dose, Long-Term Opioids to Buprenorphine: A Case Series. Ann Intern Med. 2020;173(1):70-71. 13. Edens EL, Abelleira A, Declan B, Becker WC. You say Pain. I say addiction. Let's call the whole thing off. Psychiatric Times. 2020 Nov 9;37(11):47-51. 14. Randhawa PA, Brar R, Nolan S. Buprenorphine-naloxone \\\"microdosing\\\": an alternative induction approach for the treatment of opioid use disorder in the wake of North America's increasingly potent illicit drug market. CMAJ. 2020;192(3):E73. 15. Hämmig R, Kemter A, Strasser J, et al. Use of microdoses for induction of buprenorphine treatment with overlapping full opioid agonist use: the Bernese method. Subst Abuse Rehabil. 2016;7:99-105. 16. Brar R, Fairbairn N, Sutherland C, Nolan S. Use of a novel prescribing approach for the treatment of opioid use disorder: Buprenorphine/naloxone micro-dosing - a case series. Drug Alcohol Rev. 2020;39(5):588-594. 17. Dowell D, Haegerich TM, Chou R. CDC Guideline for Prescribing Opioids for Chronic Pain - United States, 2016 [published correction appears in MMWR Recomm Rep. 2016;65(11):295]. MMWR Recomm Rep. 2016;65(1):1-49. Published 2016 Mar 18."
+            },
+            {
+              "call_id": "call_qE6U19GvBFw2Gwv2YntZKIiA",
+              "is_error": false,
+              "content": "[{\"doc_id\": \"va_pbm_bup_chronic_pain\", \"page\": 4, \"program\": \"VA\", \"authority\": \"advisory\", \"date\": \"2021-05\", \"text\": \"Buprenorphine for Chronic Pain (IB 10-1497) > Initial assessment and monitoring1,5,7,8,17 > Diagnosis, assessment, treatment Concurrent conditions Databases, labs, procedures > REFERENCES\\n[p 4]\\n1. The Opioid Therapy for Chronic Pain Work Group. VA/DoD clinical practice guideline for opioid therapy for chronic pain. VA/DoD. 2017;Version 3.0:1-198. 2. Webster L, Gudin J, Raffa RB, et al. Understanding Buprenorphine for Use in Chronic Pain: Expert Opinion. Pain Medicine. 2020;21(4):714-723. 3. Davis MP, Pasternak G, Behm B. Treating Chronic Pain: An Overview of Clinical Studies Centered on the Buprenorphine Option. Drugs. 2018;78(12):1211-1228. 4. Gudin J, Fudin J. A Narrative Pharmacological Review of Buprenorphine: A Unique Opioid for the Treatment of Chronic Pain. Pain Ther. 2020;9(1):41-54. 5. Buprenorphine Formulations for Chronic Pain Management in Patients with Opioid Use Disorder or on Long-Term Opioid Therapy with Physiologic Tolerance: Buprenorphine Inj, Buprenorphine TDS, Buprenorphine SL Film, Buprenorphine/Naloxone SL tabs Recommendations for Use. March 2020. VA Pharmacy Benefits Management Services, Medical Advisory Panel, and VISN Pharmacist Executives; National Mental Health Office - Substance Use Disorders; National Pain Management Strategic Coordinating Committee. Accessed Jan 4, 2021. 6. Buprenorphine Transdermal System (TDS) (Butrans) C-III Buprenorphine Buccal Film (BBF) (Belvuca) C-III Criteria for Use. VA Pharmacy Benefits Management Services, Medical Advisory Panel, and VISN Pharmacist Executives. Accessed February 9, 2021. 7. Purdue Pharma L.P. Buprenorphine (Butrans) [package insert]. U.S. Food and Drug Administration Website. https://www.accessdata.fda.gov/drugsatfda_docs/label/2019/ 021306s035lbl.pdf. Revised Oct 2019. Accessed August 25, 2020. 8. BioDelivery Sciences International, Inc. Buprenorphine (Belbuca) [package insert]. U.S. Food and Drug Administration Website. https://www.accessdata.fda.gov/drugsatfda_docs/label/2019/207932s012lbl.pdf. Revised Oct 2019. Accessed August 25, 2020. 9. Indivior, Inc. Buprenorphine (Buprenex) [package insert]. U.S. Food and Drug Administration Website. https://www.accessdata.fda.gov/drugsatfda_docs/label/2019/018401s025lbl.pdf. Revised Oct 2019. Accessed August 25, 2020. 10. Webster L, Gruener D, Kirby T, Xiang Q, Tzanis E, Finn A. Evaluation of the Tolerability of Switching Patients on Chronic Full μ-Opioid Agonist Therapy to Buccal Buprenorphine. Pain Med. 2016;17(5):899-907. 11. Weimer MB, Guerra M, Morrow G, Adams K. Hospital-based Buprenorphine Micro-dose Initiation [published online ahead of print, 2020 Sep 21]. J Addict Med. 2020;10.1097/ADM.0000000000000745. 12. Becker WC, Frank JW, Edens EL. Switching From High-Dose, Long-Term Opioids to Buprenorphine: A Case Series. Ann Intern Med. 2020;173(1):70-71. 13. Edens EL, Abelleira A, Declan B, Becker WC. You say Pain. I say addiction. Let's call the whole thing off. Psychiatric Times. 2020 Nov 9;37(11):47-51. 14. Randhawa PA, Brar R, Nolan S. Buprenorphine-naloxone \\\"microdosing\\\": an alternative induction approach for the treatment of opioid use disorder in the wake of North America's increasingly potent illicit drug market. CMAJ. 2020;192(3):E73. 15. Hämmig R, Kemter A, Strasser J, et al. Use of microdoses for induction of buprenorphine treatment with overlapping full opioid agonist use: the Bernese method. Subst Abuse Rehabil. 2016;7:99-105. 16. Brar R, Fairbairn N, Sutherland C, Nolan S. Use of a novel prescribing approach for the treatment of opioid use disorder: Buprenorphine/naloxone micro-dosing - a case series. Drug Alcohol Rev. 2020;39(5):588-594. 17. Dowell D, Haegerich TM, Chou R. CDC Guideline for Prescribing Opioids for Chronic Pain - United States, 2016 [published correction appears in MMWR Recomm Rep. 2016;65(11):295]. MMWR Recomm Rep. 2016;65(1):1-49. Published 2016 Mar 18."
+            }
+          ]
+        }
+      ],
+      "output": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "call_jR7pFYQ96S6I9UwjpmkOuWFf",
+            "name": "search_documents",
+            "arguments": {
+              "query": "buprenorphine opioid use disorder long term maintenance duration continue indefinitely taper discontinuation VA",
+              "program": "VA",
+              "k": 10
+            }
+          }
+        ]
+      }
+    },
+    {
+      "t_start": 4.782,
+      "duration_s": 2.164,
+      "requested_model": "gpt-5.5",
+      "served_model": "gpt-5.5-2026-04-23",
+      "provider": "openai",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 23041,
+        "output": 77,
+        "cache_read": 26112,
+        "cache_write": 0
+      },
+      "cost_usd": 0.130571,
+      "response_id": "resp_00107236c8f25d0e016ad4c4a2e00c87d2b115ff61c6226d11",
+      "input_messages": [
+        {
+          "role": "tool",
+          "tool_results": [
+            {
+              "call_id": "call_jR7pFYQ96S6I9UwjpmkOuWFf",
+              "is_error": false,
+              "content": "[{\"doc_id\": \"va_pbm_bup_chronic_pain\", \"page\": 4, \"program\": \"VA\", \"authority\": \"advisory\", \"date\": \"2021-05\", \"text\": \"Buprenorphine for Chronic Pain (IB 10-1497) > Initial assessment and monitoring1,5,7,8,17 > Diagnosis, assessment, treatment Concurrent conditions Databases, labs, procedures > REFERENCES\\n[p 4]\\n1. The Opioid Therapy for Chronic Pain Work Group. VA/DoD clinical practice guideline for opioid therapy for chronic pain. VA/DoD. 2017;Version 3.0:1-198. 2. Webster L, Gudin J, Raffa RB, et al. Understanding Buprenorphine for Use in Chronic Pain: Expert Opinion. Pain Medicine. 2020;21(4):714-723. 3. Davis MP, Pasternak G, Behm B. Treating Chronic Pain: An Overview of Clinical Studies Centered on the Buprenorphine Option. Drugs. 2018;78(12):1211-1228. 4. Gudin J, Fudin J. A Narrative Pharmacological Review of Buprenorphine: A Unique Opioid for the Treatment of Chronic Pain. Pain Ther. 2020;9(1):41-54. 5. Buprenorphine Formulations for Chronic Pain Management in Patients with Opioid Use Disorder or on Long-Term Opioid Therapy with Physiologic Tolerance: Buprenorphine Inj, Buprenorphine TDS, Buprenorphine SL Film, Buprenorphine/Naloxone SL tabs Recommendations for Use. March 2020. VA Pharmacy Benefits Management Services, Medical Advisory Panel, and VISN Pharmacist Executives; National Mental Health Office - Substance Use Disorders; National Pain Management Strategic Coordinating Committee. Accessed Jan 4, 2021. 6. Buprenorphine Transdermal System (TDS) (Butrans) C-III Buprenorphine Buccal Film (BBF) (Belvuca) C-III Criteria for Use. VA Pharmacy Benefits Management Services, Medical Advisory Panel, and VISN Pharmacist Executives. Accessed February 9, 2021. 7. Purdue Pharma L.P. Buprenorphine (Butrans) [package insert]. U.S. Food and Drug Administration Website. https://www.accessdata.fda.gov/drugsatfda_docs/label/2019/ 021306s035lbl.pdf. Revised Oct 2019. Accessed August 25, 2020. 8. BioDelivery Sciences International, Inc. Buprenorphine (Belbuca) [package insert]. U.S. Food and Drug Administration Website. https://www.accessdata.fda.gov/drugsatfda_docs/label/2019/207932s012lbl.pdf. Revised Oct 2019. Accessed August 25, 2020. 9. Indivior, Inc. Buprenorphine (Buprenex) [package insert]. U.S. Food and Drug Administration Website. https://www.accessdata.fda.gov/drugsatfda_docs/label/2019/018401s025lbl.pdf. Revised Oct 2019. Accessed August 25, 2020. 10. Webster L, Gruener D, Kirby T, Xiang Q, Tzanis E, Finn A. Evaluation of the Tolerability of Switching Patients on Chronic Full μ-Opioid Agonist Therapy to Buccal Buprenorphine. Pain Med. 2016;17(5):899-907. 11. Weimer MB, Guerra M, Morrow G, Adams K. Hospital-based Buprenorphine Micro-dose Initiation [published online ahead of print, 2020 Sep 21]. J Addict Med. 2020;10.1097/ADM.0000000000000745. 12. Becker WC, Frank JW, Edens EL. Switching From High-Dose, Long-Term Opioids to Buprenorphine: A Case Series. Ann Intern Med. 2020;173(1):70-71. 13. Edens EL, Abelleira A, Declan B, Becker WC. You say Pain. I say addiction. Let's call the whole thing off. Psychiatric Times. 2020 Nov 9;37(11):47-51. 14. Randhawa PA, Brar R, Nolan S. Buprenorphine-naloxone \\\"microdosing\\\": an alternative induction approach for the treatment of opioid use disorder in the wake of North America's increasingly potent illicit drug market. CMAJ. 2020;192(3):E73. 15. Hämmig R, Kemter A, Strasser J, et al. Use of microdoses for induction of buprenorphine treatment with overlapping full opioid agonist use: the Bernese method. Subst Abuse Rehabil. 2016;7:99-105. 16. Brar R, Fairbairn N, Sutherland C, Nolan S. Use of a novel prescribing approach for the treatment of opioid use disorder: Buprenorphine/naloxone micro-dosing - a case series. Drug Alcohol Rev. 2020;39(5):588-594. 17. Dowell D, Haegerich TM, Chou R. CDC Guideline for Prescribing Opioids for Chronic Pain - United States, 2016 [published correction appears in MMWR Recomm Rep. 2016;65(11):295]. MMWR Recomm Rep. 2016;65(1):1-49. Published 2016 Mar 18."
+            }
+          ]
+        }
+      ],
+      "output": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "call_0n6cFvkfTG18XYIDx7SKKtza",
+            "name": "search_documents",
+            "arguments": {
+              "query": "Buprenorphine for Opioid Use Disorder monitoring urine drug screen PDMP naloxone suicide renal hepatic pregnancy QTc",
+              "program": "VA",
+              "k": 8
+            }
+          }
+        ]
+      }
+    },
+    {
+      "t_start": 7.394,
+      "duration_s": 7.224,
+      "requested_model": "gpt-5.5",
+      "served_model": "gpt-5.5-2026-04-23",
+      "provider": "openai",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 15389,
+        "output": 538,
+        "cache_read": 48640,
+        "cache_write": 0
+      },
+      "cost_usd": 0.117405,
+      "response_id": "resp_00107236c8f25d0e016ad4c4a5841487d286d41f088195cf1e",
+      "input_messages": [
+        {
+          "role": "tool",
+          "tool_results": [
+            {
+              "call_id": "call_0n6cFvkfTG18XYIDx7SKKtza",
+              "is_error": false,
+              "content": "[{\"doc_id\": \"va_pbm_bup_chronic_pain\", \"page\": 4, \"program\": \"VA\", \"authority\": \"advisory\", \"date\": \"2021-05\", \"text\": \"Buprenorphine for Chronic Pain (IB 10-1497) > Initial assessment and monitoring1,5,7,8,17 > Diagnosis, assessment, treatment Concurrent conditions Databases, labs, procedures > REFERENCES\\n[p 4]\\n1. The Opioid Therapy for Chronic Pain Work Group. VA/DoD clinical practice guideline for opioid therapy for chronic pain. VA/DoD. 2017;Version 3.0:1-198. 2. Webster L, Gudin J, Raffa RB, et al. Understanding Buprenorphine for Use in Chronic Pain: Expert Opinion. Pain Medicine. 2020;21(4):714-723. 3. Davis MP, Pasternak G, Behm B. Treating Chronic Pain: An Overview of Clinical Studies Centered on the Buprenorphine Option. Drugs. 2018;78(12):1211-1228. 4. Gudin J, Fudin J. A Narrative Pharmacological Review of Buprenorphine: A Unique Opioid for the Treatment of Chronic Pain. Pain Ther. 2020;9(1):41-54. 5. Buprenorphine Formulations for Chronic Pain Management in Patients with Opioid Use Disorder or on Long-Term Opioid Therapy with Physiologic Tolerance: Buprenorphine Inj, Buprenorphine TDS, Buprenorphine SL Film, Buprenorphine/Naloxone SL tabs Recommendations for Use. March 2020. VA Pharmacy Benefits Management Services, Medical Advisory Panel, and VISN Pharmacist Executives; National Mental Health Office - Substance Use Disorders; National Pain Management Strategic Coordinating Committee. Accessed Jan 4, 2021. 6. Buprenorphine Transdermal System (TDS) (Butrans) C-III Buprenorphine Buccal Film (BBF) (Belvuca) C-III Criteria for Use. VA Pharmacy Benefits Management Services, Medical Advisory Panel, and VISN Pharmacist Executives. Accessed February 9, 2021. 7. Purdue Pharma L.P. Buprenorphine (Butrans) [package insert]. U.S. Food and Drug Administration Website. https://www.accessdata.fda.gov/drugsatfda_docs/label/2019/ 021306s035lbl.pdf. Revised Oct 2019. Accessed August 25, 2020. 8. BioDelivery Sciences International, Inc. Buprenorphine (Belbuca) [package insert]. U.S. Food and Drug Administration Website. https://www.accessdata.fda.gov/drugsatfda_docs/label/2019/207932s012lbl.pdf. Revised Oct 2019. Accessed August 25, 2020. 9. Indivior, Inc. Buprenorphine (Buprenex) [package insert]. U.S. Food and Drug Administration Website. https://www.accessdata.fda.gov/drugsatfda_docs/label/2019/018401s025lbl.pdf. Revised Oct 2019. Accessed August 25, 2020. 10. Webster L, Gruener D, Kirby T, Xiang Q, Tzanis E, Finn A. Evaluation of the Tolerability of Switching Patients on Chronic Full μ-Opioid Agonist Therapy to Buccal Buprenorphine. Pain Med. 2016;17(5):899-907. 11. Weimer MB, Guerra M, Morrow G, Adams K. Hospital-based Buprenorphine Micro-dose Initiation [published online ahead of print, 2020 Sep 21]. J Addict Med. 2020;10.1097/ADM.0000000000000745. 12. Becker WC, Frank JW, Edens EL. Switching From High-Dose, Long-Term Opioids to Buprenorphine: A Case Series. Ann Intern Med. 2020;173(1):70-71. 13. Edens EL, Abelleira A, Declan B, Becker WC. You say Pain. I say addiction. Let's call the whole thing off. Psychiatric Times. 2020 Nov 9;37(11):47-51. 14. Randhawa PA, Brar R, Nolan S. Buprenorphine-naloxone \\\"microdosing\\\": an alternative induction approach for the treatment of opioid use disorder in the wake of North America's increasingly potent illicit drug market. CMAJ. 2020;192(3):E73. 15. Hämmig R, Kemter A, Strasser J, et al. Use of microdoses for induction of buprenorphine treatment with overlapping full opioid agonist use: the Bernese method. Subst Abuse Rehabil. 2016;7:99-105. 16. Brar R, Fairbairn N, Sutherland C, Nolan S. Use of a novel prescribing approach for the treatment of opioid use disorder: Buprenorphine/naloxone micro-dosing - a case series. Drug Alcohol Rev. 2020;39(5):588-594. 17. Dowell D, Haegerich TM, Chou R. CDC Guideline for Prescribing Opioids for Chronic Pain - United States, 2016 [published correction appears in MMWR Recomm Rep. 2016;65(11):295]. MMWR Recomm Rep. 2016;65(1):1-49. Published 2016 Mar 18."
+            }
+          ]
+        }
+      ],
+      "output": {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "call_QHtt03jHX8Ap2ufUBN8sOAZj",
+            "name": "submit_answer",
+            "arguments": {
+              "status": "answered",
+              "assumption": "Assuming VA clinical guidance for a patient with OUD plus chronic pain.",
+              "answer": "Assuming VA clinical guidance: **yes—continue buprenorphine long term when treating OUD.** OUD is chronic/relapsing; optimal duration is undefined, and MOUD is often continued indefinitely. Don’t stop solely for return to non-prescribed opioid use; any taper should be collaborative and based on recovery stability.\n\nFor analgesia, the **current 24‑hr SL buprenorphine or buprenorphine/naloxone dose may be split BID or TID**; VA also says BUP/NX may be preferred in comorbid pain + OUD.\n\nMonitoring: pain tool (PEG), withdrawal/cravings scales, PDMP, UDS, CBC/renal/hepatic, infectious disease testing, pregnancy test if applicable, suicide screen, QTc-risk ECG, and OEND/naloxone.",
+              "citations": [
+                {
+                  "doc_id": "va_pbm_bup_oud",
+                  "page": 1,
+                  "row": null
+                },
+                {
+                  "doc_id": "va_dod_cpg_opioids_2022",
+                  "page": 105,
+                  "row": null
+                },
+                {
+                  "doc_id": "va_pbm_bup_oud",
+                  "page": 4,
+                  "row": null
+                }
+              ],
+              "conflicts_noted": [
+                "Apparent conflict: chronic-pain guidance recommends against long-term opioid therapy in SUD, but OUD-specific guidance treats buprenorphine as MOUD often continued indefinitely; clinical context (OUD treatment) decides."
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "search_documents",
+      "input": {
+        "query": "OUD chronic pain buprenorphine continue long term split dosing monitoring",
+        "program": "VA",
+        "k": 8
+      },
+      "duration_s": 0.254,
+      "is_error": false,
+      "pages": [
+        "va_dod_cpg_opioids_2022:p104",
+        "va_dod_cpg_opioids_2022:p105",
+        "va_dod_cpg_opioids_2022:p106",
+        "va_dod_cpg_opioids_2022:p107",
+        "va_dod_cpg_opioids_2022:p108",
+        "va_dod_cpg_opioids_2022:p44",
+        "va_dod_cpg_opioids_2022:p45",
+        "va_pbm_bup_chronic_pain:p1",
+        "va_pbm_bup_chronic_pain:p2",
+        "va_pbm_bup_chronic_pain:p3",
+        "va_pbm_bup_chronic_pain:p4",
+        "va_pbm_bup_oud:p1",
+        "va_pbm_bup_oud:p2"
+      ],
+      "result": "[{\"doc_id\": \"va_pbm_bup_chronic_pain\", \"page\": 4, \"program\": \"VA\", \"authority\": \"advisory\", \"date\": \"2021-05\", \"text\": \"Buprenorphine for Chronic Pain (IB 10-1497) > Initial assessment and monitoring1,5,7,8,17 > Diagnosis, assessment, treatment Concurrent conditions Databases, labs, procedures > REFERENCES\\n[p 4]\\n1. The Opioid Therapy for Chronic Pain Work Group. VA/DoD clinical practice guideline for opioid therapy for chronic pain. VA/DoD. 2017;Version 3.0:1-198. 2. Webster L, Gudin J, Raffa RB, et al. Understanding Buprenorphine for Use in Chronic Pain: Expert Opinion. Pain Medicine. 2020;21(4):714-723. 3. Davis MP, Pasternak G, Behm B. Treating Chronic Pain: An Overview of Clinical Studies Centered on the Buprenorphine Option. Drugs. 2018;78(12):1211-1228. 4. Gudin J, Fudin J. A Narrative Pharmacological Review of Buprenorphine: A Unique Opioid for the Treatment of Chronic Pain. Pain Ther. 2020;9(1):41-54. 5. Buprenorphine Formulations for Chronic Pain Management in Patients with Opioid Use Disorder or on Long-Term Opioid Therapy with Physiologic Tolerance: Buprenorphine Inj, Buprenorphine TDS, Buprenorphine SL Film, Buprenorphine/Naloxone SL tabs Recommendations for Use. March 2020. VA Pharmacy Benefits Management Services, Medical Advisory Panel, and VISN Pharmacist Executives; National Mental Health Office - Substance Use Disorders; National Pain Management Strategic Coordinating Committee. Accessed Jan 4, 2021. 6. Buprenorphine Transdermal System (TDS) (Butrans) C-III Buprenorphine Buccal Film (BBF) (Belvuca) C-III Criteria for Use. VA Pharmacy Benefits Management Services, Medical Advisory Panel, and VISN Pharmacist Executives. Accessed February 9, 2021. 7. Purdue Pharma L.P. Buprenorphine (Butrans) [package insert]. U.S. Food and Drug Administration Website. https://www.accessdata.fda.gov/drugsatfda_docs/label/2019/ 021306s035lbl.pdf. Revised Oct 2019. Accessed August 25, 2020. 8. BioDelivery Sciences International, Inc. Buprenorphine (Belbuca) [package insert]. U.S. Food and Drug Administration Website. https://www.accessdata.fda.gov/drugsatfda_docs/label/2019/207932s012lbl.pdf. Revised Oct 2019. Accessed August 25, 2020. 9. Indivior, Inc. Buprenorphine (Buprenex) [package insert]. U.S. Food and Drug Administration Website. https://www.accessdata.fda.gov/drugsatfda_docs/label/2019/018401s025lbl.pdf. Revised Oct 2019. Accessed August 25, 2020. 10. Webster L, Gruener D, Kirby T, Xiang Q, Tzanis E, Finn A. Evaluation of the Tolerability of Switching Patients on Chronic Full μ-Opioid Agonist Therapy to Buccal Buprenorphine. Pain Med. 2016;17(5):899-907. 11. Weimer MB, Guerra M, Morrow G, Adams K. Hospital-based Buprenorphine Micro-dose Initiation [published online ahead of print, 2020 Sep 21]. J Addict Med. 2020;10.1097/ADM.0000000000000745. 12. Becker WC, Frank JW, Edens EL. Switching From High-Dose, Long-Term Opioids to Buprenorphine: A Case Series. Ann Intern Med. 2020;173(1):70-71. 13. Edens EL, Abelleira A, Declan B, Becker WC. You say Pain. I say addiction. Let's call the whole thing off. Psychiatric Times. 2020 Nov 9;37(11):47-51. 14. Randhawa PA, Brar R, Nolan S. Buprenorphine-naloxone \\\"microdosing\\\": an alternative induction approach for the treatment of opioid use disorder in the wake of North America's increasingly potent illicit drug market. CMAJ. 2020;192(3):E73. 15. Hämmig R, Kemter A, Strasser J, et al. Use of microdoses for induction of buprenorphine treatment with overlapping full opioid agonist use: the Bernese method. Subst Abuse Rehabil. 2016;7:99-105. 16. Brar R, Fairbairn N, Sutherland C, Nolan S. Use of a novel prescribing approach for the treatment of opioid use disorder: Buprenorphine/naloxone micro-dosing - a case series. Drug Alcohol Rev. 2020;39(5):588-594. 17. Dowell D, Haegerich TM, Chou R. CDC Guideline for Prescribing Opioids for Chronic Pain - United States, 2016 [published correction appears in MMWR Recomm Rep. 2016;65(11):295]. MMWR Recomm Rep. 2016;65(1):1-49. Published 2016 Mar 18.",
+      "search": {
+        "original_query": "For OUD with chronic pain, can buprenorphine continue long term, can doses be split, and what monitoring is needed?",
+        "agent_query": "OUD chronic pain buprenorphine continue long term split dosing monitoring",
+        "executed": [
+          {
+            "source": "original",
+            "query": "For OUD with chronic pain, can buprenorphine continue long term, can doses be split, and what monitoring is needed?",
+            "program": "VA",
+            "k": 8,
+            "seconds": 0.254,
+            "cached": false,
+            "results": 8
+          },
+          {
+            "source": "agent",
+            "query": "OUD chronic pain buprenorphine continue long term split dosing monitoring",
+            "program": "VA",
+            "k": 8,
+            "seconds": 0.228,
+            "cached": false,
+            "results": 8
+          }
+        ],
+        "duplicates_merged": 7,
+        "returned": 9,
+        "from_both": 7,
+        "from_original_only": 1,
+        "from_agent_only": 1,
+        "provenance": [
+          {
+            "unit": "va_pbm_bup_chronic_pain:s7",
+            "found_by": {
+              "original": 1,
+              "agent": 1
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s41",
+            "found_by": {
+              "original": 2,
+              "agent": 2
+            }
+          },
+          {
+            "unit": "va_pbm_bup_chronic_pain:s0",
+            "found_by": {
+              "original": 3,
+              "agent": 3
+            }
+          },
+          {
+            "unit": "va_pbm_bup_chronic_pain:s1",
+            "found_by": {
+              "original": 4,
+              "agent": 4
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s80",
+            "found_by": {
+              "original": 5,
+              "agent": 5
+            }
+          },
+          {
+            "unit": "va_pbm_bup_chronic_pain:s3",
+            "found_by": {
+              "original": 7,
+              "agent": 6
+            }
+          },
+          {
+            "unit": "va_pbm_bup_oud:s1",
+            "found_by": {
+              "original": 6,
+              "agent": 8
+            }
+          },
+          {
+            "unit": "va_pbm_bup_chronic_pain:s4",
+            "found_by": {
+              "agent": 7
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s81",
+            "found_by": {
+              "original": 8
+            }
+          }
+        ],
+        "hits": [
+          {
+            "unit": "va_pbm_bup_chronic_pain:s7",
+            "doc_id": "va_pbm_bup_chronic_pain",
+            "pages": [
+              4
+            ],
+            "ranks": {
+              "original": 1,
+              "agent": 1
+            },
+            "scores": {
+              "original": 0.0315,
+              "agent": 0.0313
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s41",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              44,
+              45
+            ],
+            "ranks": {
+              "original": 2,
+              "agent": 2
+            },
+            "scores": {
+              "original": 0.031,
+              "agent": 0.03
+            }
+          },
+          {
+            "unit": "va_pbm_bup_chronic_pain:s0",
+            "doc_id": "va_pbm_bup_chronic_pain",
+            "pages": [
+              1,
+              2
+            ],
+            "ranks": {
+              "original": 3,
+              "agent": 3
+            },
+            "scores": {
+              "original": 0.0284,
+              "agent": 0.0285
+            }
+          },
+          {
+            "unit": "va_pbm_bup_chronic_pain:s1",
+            "doc_id": "va_pbm_bup_chronic_pain",
+            "pages": [
+              2
+            ],
+            "ranks": {
+              "original": 4,
+              "agent": 4
+            },
+            "scores": {
+              "original": 0.0247,
+              "agent": 0.0243
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s80",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              104,
+              105
+            ],
+            "ranks": {
+              "original": 5,
+              "agent": 5
+            },
+            "scores": {
+              "original": 0.0232,
+              "agent": 0.0239
+            }
+          },
+          {
+            "unit": "va_pbm_bup_chronic_pain:s3",
+            "doc_id": "va_pbm_bup_chronic_pain",
+            "pages": [
+              3
+            ],
+            "ranks": {
+              "original": 7,
+              "agent": 6
+            },
+            "scores": {
+              "original": 0.0223,
+              "agent": 0.023
+            }
+          },
+          {
+            "unit": "va_pbm_bup_oud:s1",
+            "doc_id": "va_pbm_bup_oud",
+            "pages": [
+              1,
+              2
+            ],
+            "ranks": {
+              "original": 6,
+              "agent": 8
+            },
+            "scores": {
+              "original": 0.0225,
+              "agent": 0.0223
+            }
+          },
+          {
+            "unit": "va_pbm_bup_chronic_pain:s4",
+            "doc_id": "va_pbm_bup_chronic_pain",
+            "pages": [
+              3
+            ],
+            "ranks": {
+              "agent": 7
+            },
+            "scores": {
+              "agent": 0.0227
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s81",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              106,
+              107,
+              108
+            ],
+            "ranks": {
+              "original": 8
+            },
+            "scores": {
+              "original": 0.0219
+            }
+          }
+        ]
+      },
+      "t_start": 2.126
+    },
+    {
+      "name": "search_documents",
+      "input": {
+        "query": "buprenorphine opioid use disorder chronic pain split doses urine drug monitoring long term",
+        "program": "VA",
+        "k": 8
+      },
+      "duration_s": 0.227,
+      "is_error": false,
+      "pages": [
+        "va_dod_cpg_opioids_2022:p104",
+        "va_dod_cpg_opioids_2022:p105",
+        "va_dod_cpg_opioids_2022:p106",
+        "va_dod_cpg_opioids_2022:p107",
+        "va_dod_cpg_opioids_2022:p108",
+        "va_dod_cpg_opioids_2022:p33",
+        "va_dod_cpg_opioids_2022:p34",
+        "va_dod_cpg_opioids_2022:p44",
+        "va_dod_cpg_opioids_2022:p45",
+        "va_pbm_bup_chronic_pain:p1",
+        "va_pbm_bup_chronic_pain:p2",
+        "va_pbm_bup_chronic_pain:p3",
+        "va_pbm_bup_chronic_pain:p4",
+        "va_pbm_bup_oud:p1",
+        "va_pbm_bup_oud:p2",
+        "va_pbm_bup_oud:p4"
+      ],
+      "result": "[{\"doc_id\": \"va_pbm_bup_chronic_pain\", \"page\": 4, \"program\": \"VA\", \"authority\": \"advisory\", \"date\": \"2021-05\", \"text\": \"Buprenorphine for Chronic Pain (IB 10-1497) > Initial assessment and monitoring1,5,7,8,17 > Diagnosis, assessment, treatment Concurrent conditions Databases, labs, procedures > REFERENCES\\n[p 4]\\n1. The Opioid Therapy for Chronic Pain Work Group. VA/DoD clinical practice guideline for opioid therapy for chronic pain. VA/DoD. 2017;Version 3.0:1-198. 2. Webster L, Gudin J, Raffa RB, et al. Understanding Buprenorphine for Use in Chronic Pain: Expert Opinion. Pain Medicine. 2020;21(4):714-723. 3. Davis MP, Pasternak G, Behm B. Treating Chronic Pain: An Overview of Clinical Studies Centered on the Buprenorphine Option. Drugs. 2018;78(12):1211-1228. 4. Gudin J, Fudin J. A Narrative Pharmacological Review of Buprenorphine: A Unique Opioid for the Treatment of Chronic Pain. Pain Ther. 2020;9(1):41-54. 5. Buprenorphine Formulations for Chronic Pain Management in Patients with Opioid Use Disorder or on Long-Term Opioid Therapy with Physiologic Tolerance: Buprenorphine Inj, Buprenorphine TDS, Buprenorphine SL Film, Buprenorphine/Naloxone SL tabs Recommendations for Use. March 2020. VA Pharmacy Benefits Management Services, Medical Advisory Panel, and VISN Pharmacist Executives; National Mental Health Office - Substance Use Disorders; National Pain Management Strategic Coordinating Committee. Accessed Jan 4, 2021. 6. Buprenorphine Transdermal System (TDS) (Butrans) C-III Buprenorphine Buccal Film (BBF) (Belvuca) C-III Criteria for Use. VA Pharmacy Benefits Management Services, Medical Advisory Panel, and VISN Pharmacist Executives. Accessed February 9, 2021. 7. Purdue Pharma L.P. Buprenorphine (Butrans) [package insert]. U.S. Food and Drug Administration Website. https://www.accessdata.fda.gov/drugsatfda_docs/label/2019/ 021306s035lbl.pdf. Revised Oct 2019. Accessed August 25, 2020. 8. BioDelivery Sciences International, Inc. Buprenorphine (Belbuca) [package insert]. U.S. Food and Drug Administration Website. https://www.accessdata.fda.gov/drugsatfda_docs/label/2019/207932s012lbl.pdf. Revised Oct 2019. Accessed August 25, 2020. 9. Indivior, Inc. Buprenorphine (Buprenex) [package insert]. U.S. Food and Drug Administration Website. https://www.accessdata.fda.gov/drugsatfda_docs/label/2019/018401s025lbl.pdf. Revised Oct 2019. Accessed August 25, 2020. 10. Webster L, Gruener D, Kirby T, Xiang Q, Tzanis E, Finn A. Evaluation of the Tolerability of Switching Patients on Chronic Full μ-Opioid Agonist Therapy to Buccal Buprenorphine. Pain Med. 2016;17(5):899-907. 11. Weimer MB, Guerra M, Morrow G, Adams K. Hospital-based Buprenorphine Micro-dose Initiation [published online ahead of print, 2020 Sep 21]. J Addict Med. 2020;10.1097/ADM.0000000000000745. 12. Becker WC, Frank JW, Edens EL. Switching From High-Dose, Long-Term Opioids to Buprenorphine: A Case Series. Ann Intern Med. 2020;173(1):70-71. 13. Edens EL, Abelleira A, Declan B, Becker WC. You say Pain. I say addiction. Let's call the whole thing off. Psychiatric Times. 2020 Nov 9;37(11):47-51. 14. Randhawa PA, Brar R, Nolan S. Buprenorphine-naloxone \\\"microdosing\\\": an alternative induction approach for the treatment of opioid use disorder in the wake of North America's increasingly potent illicit drug market. CMAJ. 2020;192(3):E73. 15. Hämmig R, Kemter A, Strasser J, et al. Use of microdoses for induction of buprenorphine treatment with overlapping full opioid agonist use: the Bernese method. Subst Abuse Rehabil. 2016;7:99-105. 16. Brar R, Fairbairn N, Sutherland C, Nolan S. Use of a novel prescribing approach for the treatment of opioid use disorder: Buprenorphine/naloxone micro-dosing - a case series. Drug Alcohol Rev. 2020;39(5):588-594. 17. Dowell D, Haegerich TM, Chou R. CDC Guideline for Prescribing Opioids for Chronic Pain - United States, 2016 [published correction appears in MMWR Recomm Rep. 2016;65(11):295]. MMWR Recomm Rep. 2016;65(1):1-49. Published 2016 Mar 18.",
+      "search": {
+        "original_query": "For OUD with chronic pain, can buprenorphine continue long term, can doses be split, and what monitoring is needed?",
+        "agent_query": "buprenorphine opioid use disorder chronic pain split doses urine drug monitoring long term",
+        "executed": [
+          {
+            "source": "original",
+            "query": "For OUD with chronic pain, can buprenorphine continue long term, can doses be split, and what monitoring is needed?",
+            "program": "VA",
+            "k": 8,
+            "seconds": 0.0,
+            "cached": true,
+            "results": 8
+          },
+          {
+            "source": "agent",
+            "query": "buprenorphine opioid use disorder chronic pain split doses urine drug monitoring long term",
+            "program": "VA",
+            "k": 8,
+            "seconds": 0.227,
+            "cached": false,
+            "results": 8
+          }
+        ],
+        "duplicates_merged": 5,
+        "returned": 11,
+        "from_both": 5,
+        "from_original_only": 3,
+        "from_agent_only": 3,
+        "provenance": [
+          {
+            "unit": "va_pbm_bup_chronic_pain:s7",
+            "found_by": {
+              "original": 1,
+              "agent": 1
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s41",
+            "found_by": {
+              "original": 2,
+              "agent": 3
+            }
+          },
+          {
+            "unit": "va_pbm_bup_chronic_pain:s0",
+            "found_by": {
+              "original": 3,
+              "agent": 2
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s80",
+            "found_by": {
+              "original": 5,
+              "agent": 5
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s81",
+            "found_by": {
+              "original": 8,
+              "agent": 7
+            }
+          },
+          {
+            "unit": "va_pbm_bup_chronic_pain:s1",
+            "found_by": {
+              "original": 4
+            }
+          },
+          {
+            "unit": "va_pbm_bup_chronic_pain:s6",
+            "found_by": {
+              "agent": 4
+            }
+          },
+          {
+            "unit": "va_pbm_bup_oud:s1",
+            "found_by": {
+              "original": 6
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s34",
+            "found_by": {
+              "agent": 6
+            }
+          },
+          {
+            "unit": "va_pbm_bup_chronic_pain:s3",
+            "found_by": {
+              "original": 7
+            }
+          },
+          {
+            "unit": "va_pbm_bup_oud:s6",
+            "found_by": {
+              "agent": 8
+            }
+          }
+        ],
+        "hits": [
+          {
+            "unit": "va_pbm_bup_chronic_pain:s7",
+            "doc_id": "va_pbm_bup_chronic_pain",
+            "pages": [
+              4
+            ],
+            "ranks": {
+              "original": 1,
+              "agent": 1
+            },
+            "scores": {
+              "original": 0.0315,
+              "agent": 0.0323
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s41",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              44,
+              45
+            ],
+            "ranks": {
+              "original": 2,
+              "agent": 3
+            },
+            "scores": {
+              "original": 0.031,
+              "agent": 0.0236
+            }
+          },
+          {
+            "unit": "va_pbm_bup_chronic_pain:s0",
+            "doc_id": "va_pbm_bup_chronic_pain",
+            "pages": [
+              1,
+              2
+            ],
+            "ranks": {
+              "original": 3,
+              "agent": 2
+            },
+            "scores": {
+              "original": 0.0284,
+              "agent": 0.032
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s80",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              104,
+              105
+            ],
+            "ranks": {
+              "original": 5,
+              "agent": 5
+            },
+            "scores": {
+              "original": 0.0232,
+              "agent": 0.022
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s81",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              106,
+              107,
+              108
+            ],
+            "ranks": {
+              "original": 8,
+              "agent": 7
+            },
+            "scores": {
+              "original": 0.0219,
+              "agent": 0.0208
+            }
+          },
+          {
+            "unit": "va_pbm_bup_chronic_pain:s1",
+            "doc_id": "va_pbm_bup_chronic_pain",
+            "pages": [
+              2
+            ],
+            "ranks": {
+              "original": 4
+            },
+            "scores": {
+              "original": 0.0247
+            }
+          },
+          {
+            "unit": "va_pbm_bup_chronic_pain:s6",
+            "doc_id": "va_pbm_bup_chronic_pain",
+            "pages": [
+              4
+            ],
+            "ranks": {
+              "agent": 4
+            },
+            "scores": {
+              "agent": 0.0229
+            }
+          },
+          {
+            "unit": "va_pbm_bup_oud:s1",
+            "doc_id": "va_pbm_bup_oud",
+            "pages": [
+              1,
+              2
+            ],
+            "ranks": {
+              "original": 6
+            },
+            "scores": {
+              "original": 0.0225
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s34",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              33,
+              34
+            ],
+            "ranks": {
+              "agent": 6
+            },
+            "scores": {
+              "agent": 0.0218
+            }
+          },
+          {
+            "unit": "va_pbm_bup_chronic_pain:s3",
+            "doc_id": "va_pbm_bup_chronic_pain",
+            "pages": [
+              3
+            ],
+            "ranks": {
+              "original": 7
+            },
+            "scores": {
+              "original": 0.0223
+            }
+          },
+          {
+            "unit": "va_pbm_bup_oud:s6",
+            "doc_id": "va_pbm_bup_oud",
+            "pages": [
+              4
+            ],
+            "ranks": {
+              "agent": 8
+            },
+            "scores": {
+              "agent": 0.0198
+            }
+          }
+        ]
+      },
+      "t_start": 2.38
+    },
+    {
+      "name": "search_documents",
+      "input": {
+        "query": "buprenorphine opioid use disorder long term maintenance duration continue indefinitely taper discontinuation VA",
+        "program": "VA",
+        "k": 10
+      },
+      "duration_s": 0.284,
+      "is_error": false,
+      "pages": [
+        "va_dod_cpg_opioids_2022:p104",
+        "va_dod_cpg_opioids_2022:p105",
+        "va_dod_cpg_opioids_2022:p106",
+        "va_dod_cpg_opioids_2022:p107",
+        "va_dod_cpg_opioids_2022:p108",
+        "va_dod_cpg_opioids_2022:p11",
+        "va_dod_cpg_opioids_2022:p12",
+        "va_dod_cpg_opioids_2022:p14",
+        "va_dod_cpg_opioids_2022:p15",
+        "va_dod_cpg_opioids_2022:p33",
+        "va_dod_cpg_opioids_2022:p34",
+        "va_dod_cpg_opioids_2022:p39",
+        "va_dod_cpg_opioids_2022:p40",
+        "va_dod_cpg_opioids_2022:p41",
+        "va_dod_cpg_opioids_2022:p42",
+        "va_dod_cpg_opioids_2022:p43",
+        "va_dod_cpg_opioids_2022:p44",
+        "va_dod_cpg_opioids_2022:p45",
+        "va_dod_cpg_opioids_2022:p52",
+        "va_dod_cpg_opioids_2022:p53",
+        "va_pbm_bup_chronic_pain:p1",
+        "va_pbm_bup_chronic_pain:p2",
+        "va_pbm_bup_chronic_pain:p3",
+        "va_pbm_bup_chronic_pain:p4",
+        "va_pbm_bup_oud:p1",
+        "va_pbm_bup_oud:p2",
+        "va_pbm_bup_oud:p4"
+      ],
+      "result": "[{\"doc_id\": \"va_pbm_bup_chronic_pain\", \"page\": 4, \"program\": \"VA\", \"authority\": \"advisory\", \"date\": \"2021-05\", \"text\": \"Buprenorphine for Chronic Pain (IB 10-1497) > Initial assessment and monitoring1,5,7,8,17 > Diagnosis, assessment, treatment Concurrent conditions Databases, labs, procedures > REFERENCES\\n[p 4]\\n1. The Opioid Therapy for Chronic Pain Work Group. VA/DoD clinical practice guideline for opioid therapy for chronic pain. VA/DoD. 2017;Version 3.0:1-198. 2. Webster L, Gudin J, Raffa RB, et al. Understanding Buprenorphine for Use in Chronic Pain: Expert Opinion. Pain Medicine. 2020;21(4):714-723. 3. Davis MP, Pasternak G, Behm B. Treating Chronic Pain: An Overview of Clinical Studies Centered on the Buprenorphine Option. Drugs. 2018;78(12):1211-1228. 4. Gudin J, Fudin J. A Narrative Pharmacological Review of Buprenorphine: A Unique Opioid for the Treatment of Chronic Pain. Pain Ther. 2020;9(1):41-54. 5. Buprenorphine Formulations for Chronic Pain Management in Patients with Opioid Use Disorder or on Long-Term Opioid Therapy with Physiologic Tolerance: Buprenorphine Inj, Buprenorphine TDS, Buprenorphine SL Film, Buprenorphine/Naloxone SL tabs Recommendations for Use. March 2020. VA Pharmacy Benefits Management Services, Medical Advisory Panel, and VISN Pharmacist Executives; National Mental Health Office - Substance Use Disorders; National Pain Management Strategic Coordinating Committee. Accessed Jan 4, 2021. 6. Buprenorphine Transdermal System (TDS) (Butrans) C-III Buprenorphine Buccal Film (BBF) (Belvuca) C-III Criteria for Use. VA Pharmacy Benefits Management Services, Medical Advisory Panel, and VISN Pharmacist Executives. Accessed February 9, 2021. 7. Purdue Pharma L.P. Buprenorphine (Butrans) [package insert]. U.S. Food and Drug Administration Website. https://www.accessdata.fda.gov/drugsatfda_docs/label/2019/ 021306s035lbl.pdf. Revised Oct 2019. Accessed August 25, 2020. 8. BioDelivery Sciences International, Inc. Buprenorphine (Belbuca) [package insert]. U.S. Food and Drug Administration Website. https://www.accessdata.fda.gov/drugsatfda_docs/label/2019/207932s012lbl.pdf. Revised Oct 2019. Accessed August 25, 2020. 9. Indivior, Inc. Buprenorphine (Buprenex) [package insert]. U.S. Food and Drug Administration Website. https://www.accessdata.fda.gov/drugsatfda_docs/label/2019/018401s025lbl.pdf. Revised Oct 2019. Accessed August 25, 2020. 10. Webster L, Gruener D, Kirby T, Xiang Q, Tzanis E, Finn A. Evaluation of the Tolerability of Switching Patients on Chronic Full μ-Opioid Agonist Therapy to Buccal Buprenorphine. Pain Med. 2016;17(5):899-907. 11. Weimer MB, Guerra M, Morrow G, Adams K. Hospital-based Buprenorphine Micro-dose Initiation [published online ahead of print, 2020 Sep 21]. J Addict Med. 2020;10.1097/ADM.0000000000000745. 12. Becker WC, Frank JW, Edens EL. Switching From High-Dose, Long-Term Opioids to Buprenorphine: A Case Series. Ann Intern Med. 2020;173(1):70-71. 13. Edens EL, Abelleira A, Declan B, Becker WC. You say Pain. I say addiction. Let's call the whole thing off. Psychiatric Times. 2020 Nov 9;37(11):47-51. 14. Randhawa PA, Brar R, Nolan S. Buprenorphine-naloxone \\\"microdosing\\\": an alternative induction approach for the treatment of opioid use disorder in the wake of North America's increasingly potent illicit drug market. CMAJ. 2020;192(3):E73. 15. Hämmig R, Kemter A, Strasser J, et al. Use of microdoses for induction of buprenorphine treatment with overlapping full opioid agonist use: the Bernese method. Subst Abuse Rehabil. 2016;7:99-105. 16. Brar R, Fairbairn N, Sutherland C, Nolan S. Use of a novel prescribing approach for the treatment of opioid use disorder: Buprenorphine/naloxone micro-dosing - a case series. Drug Alcohol Rev. 2020;39(5):588-594. 17. Dowell D, Haegerich TM, Chou R. CDC Guideline for Prescribing Opioids for Chronic Pain - United States, 2016 [published correction appears in MMWR Recomm Rep. 2016;65(11):295]. MMWR Recomm Rep. 2016;65(1):1-49. Published 2016 Mar 18.",
+      "search": {
+        "original_query": "For OUD with chronic pain, can buprenorphine continue long term, can doses be split, and what monitoring is needed?",
+        "agent_query": "buprenorphine opioid use disorder long term maintenance duration continue indefinitely taper discontinuation VA",
+        "executed": [
+          {
+            "source": "original",
+            "query": "For OUD with chronic pain, can buprenorphine continue long term, can doses be split, and what monitoring is needed?",
+            "program": "VA",
+            "k": 10,
+            "seconds": 0.282,
+            "cached": false,
+            "results": 10
+          },
+          {
+            "source": "agent",
+            "query": "buprenorphine opioid use disorder long term maintenance duration continue indefinitely taper discontinuation VA",
+            "program": "VA",
+            "k": 10,
+            "seconds": 0.283,
+            "cached": false,
+            "results": 10
+          }
+        ],
+        "duplicates_merged": 2,
+        "returned": 18,
+        "from_both": 2,
+        "from_original_only": 8,
+        "from_agent_only": 8,
+        "provenance": [
+          {
+            "unit": "va_pbm_bup_chronic_pain:s7",
+            "found_by": {
+              "original": 1,
+              "agent": 4
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s41",
+            "found_by": {
+              "original": 2,
+              "agent": 8
+            }
+          },
+          {
+            "unit": "va_pbm_bup_oud:s6",
+            "found_by": {
+              "agent": 1
+            }
+          },
+          {
+            "unit": "va_pbm_bup_oud:s0",
+            "found_by": {
+              "agent": 2
+            }
+          },
+          {
+            "unit": "va_pbm_bup_chronic_pain:s0",
+            "found_by": {
+              "original": 3
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s34",
+            "found_by": {
+              "agent": 3
+            }
+          },
+          {
+            "unit": "va_pbm_bup_chronic_pain:s1",
+            "found_by": {
+              "original": 4
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s80",
+            "found_by": {
+              "original": 5
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s6",
+            "found_by": {
+              "agent": 5
+            }
+          },
+          {
+            "unit": "va_pbm_bup_oud:s1",
+            "found_by": {
+              "original": 6
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s39",
+            "found_by": {
+              "agent": 6
+            }
+          },
+          {
+            "unit": "va_pbm_bup_chronic_pain:s3",
+            "found_by": {
+              "original": 7
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s47",
+            "found_by": {
+              "agent": 7
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s81",
+            "found_by": {
+              "original": 8
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s40",
+            "found_by": {
+              "original": 9
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s9",
+            "found_by": {
+              "agent": 9
+            }
+          },
+          {
+            "unit": "va_pbm_bup_chronic_pain:s4",
+            "found_by": {
+              "original": 10
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s38",
+            "found_by": {
+              "agent": 10
+            }
+          }
+        ],
+        "hits": [
+          {
+            "unit": "va_pbm_bup_chronic_pain:s7",
+            "doc_id": "va_pbm_bup_chronic_pain",
+            "pages": [
+              4
+            ],
+            "ranks": {
+              "original": 1,
+              "agent": 4
+            },
+            "scores": {
+              "original": 0.0315,
+              "agent": 0.0255
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s41",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              44,
+              45
+            ],
+            "ranks": {
+              "original": 2,
+              "agent": 8
+            },
+            "scores": {
+              "original": 0.031,
+              "agent": 0.0222
+            }
+          },
+          {
+            "unit": "va_pbm_bup_oud:s6",
+            "doc_id": "va_pbm_bup_oud",
+            "pages": [
+              4
+            ],
+            "ranks": {
+              "agent": 1
+            },
+            "scores": {
+              "agent": 0.0299
+            }
+          },
+          {
+            "unit": "va_pbm_bup_oud:s0",
+            "doc_id": "va_pbm_bup_oud",
+            "pages": [
+              1
+            ],
+            "ranks": {
+              "agent": 2
+            },
+            "scores": {
+              "agent": 0.0274
+            }
+          },
+          {
+            "unit": "va_pbm_bup_chronic_pain:s0",
+            "doc_id": "va_pbm_bup_chronic_pain",
+            "pages": [
+              1,
+              2
+            ],
+            "ranks": {
+              "original": 3
+            },
+            "scores": {
+              "original": 0.0284
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s34",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              33,
+              34
+            ],
+            "ranks": {
+              "agent": 3
+            },
+            "scores": {
+              "agent": 0.0266
+            }
+          },
+          {
+            "unit": "va_pbm_bup_chronic_pain:s1",
+            "doc_id": "va_pbm_bup_chronic_pain",
+            "pages": [
+              2
+            ],
+            "ranks": {
+              "original": 4
+            },
+            "scores": {
+              "original": 0.0247
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s80",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              104,
+              105
+            ],
+            "ranks": {
+              "original": 5
+            },
+            "scores": {
+              "original": 0.0232
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s6",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              11,
+              12
+            ],
+            "ranks": {
+              "agent": 5
+            },
+            "scores": {
+              "agent": 0.0249
+            }
+          },
+          {
+            "unit": "va_pbm_bup_oud:s1",
+            "doc_id": "va_pbm_bup_oud",
+            "pages": [
+              1,
+              2
+            ],
+            "ranks": {
+              "original": 6
+            },
+            "scores": {
+              "original": 0.0225
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s39",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              41,
+              42
+            ],
+            "ranks": {
+              "agent": 6
+            },
+            "scores": {
+              "agent": 0.0236
+            }
+          },
+          {
+            "unit": "va_pbm_bup_chronic_pain:s3",
+            "doc_id": "va_pbm_bup_chronic_pain",
+            "pages": [
+              3
+            ],
+            "ranks": {
+              "original": 7
+            },
+            "scores": {
+              "original": 0.0223
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s47",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              52,
+              53
+            ],
+            "ranks": {
+              "agent": 7
+            },
+            "scores": {
+              "agent": 0.0231
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s81",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              106,
+              107,
+              108
+            ],
+            "ranks": {
+              "original": 8
+            },
+            "scores": {
+              "original": 0.0219
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s40",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              42,
+              43,
+              44
+            ],
+            "ranks": {
+              "original": 9
+            },
+            "scores": {
+              "original": 0.0215
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s9",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              14,
+              15
+            ],
+            "ranks": {
+              "agent": 9
+            },
+            "scores": {
+              "agent": 0.0221
+            }
+          },
+          {
+            "unit": "va_pbm_bup_chronic_pain:s4",
+            "doc_id": "va_pbm_bup_chronic_pain",
+            "pages": [
+              3
+            ],
+            "ranks": {
+              "original": 10
+            },
+            "scores": {
+              "original": 0.0204
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s38",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              39,
+              40
+            ],
+            "ranks": {
+              "agent": 10
+            },
+            "scores": {
+              "agent": 0.022
+            }
+          }
+        ]
+      },
+      "t_start": 4.498
+    },
+    {
+      "name": "search_documents",
+      "input": {
+        "query": "Buprenorphine for Opioid Use Disorder monitoring urine drug screen PDMP naloxone suicide renal hepatic pregnancy QTc",
+        "program": "VA",
+        "k": 8
+      },
+      "duration_s": 0.448,
+      "is_error": false,
+      "pages": [
+        "va_dod_cpg_opioids_2022:p104",
+        "va_dod_cpg_opioids_2022:p105",
+        "va_dod_cpg_opioids_2022:p106",
+        "va_dod_cpg_opioids_2022:p107",
+        "va_dod_cpg_opioids_2022:p108",
+        "va_dod_cpg_opioids_2022:p29",
+        "va_dod_cpg_opioids_2022:p33",
+        "va_dod_cpg_opioids_2022:p34",
+        "va_dod_cpg_opioids_2022:p44",
+        "va_dod_cpg_opioids_2022:p45",
+        "va_pbm_bup_chronic_pain:p1",
+        "va_pbm_bup_chronic_pain:p2",
+        "va_pbm_bup_chronic_pain:p3",
+        "va_pbm_bup_chronic_pain:p4",
+        "va_pbm_bup_oud:p1",
+        "va_pbm_bup_oud:p2",
+        "va_pbm_bup_oud:p4"
+      ],
+      "result": "[{\"doc_id\": \"va_pbm_bup_chronic_pain\", \"page\": 4, \"program\": \"VA\", \"authority\": \"advisory\", \"date\": \"2021-05\", \"text\": \"Buprenorphine for Chronic Pain (IB 10-1497) > Initial assessment and monitoring1,5,7,8,17 > Diagnosis, assessment, treatment Concurrent conditions Databases, labs, procedures > REFERENCES\\n[p 4]\\n1. The Opioid Therapy for Chronic Pain Work Group. VA/DoD clinical practice guideline for opioid therapy for chronic pain. VA/DoD. 2017;Version 3.0:1-198. 2. Webster L, Gudin J, Raffa RB, et al. Understanding Buprenorphine for Use in Chronic Pain: Expert Opinion. Pain Medicine. 2020;21(4):714-723. 3. Davis MP, Pasternak G, Behm B. Treating Chronic Pain: An Overview of Clinical Studies Centered on the Buprenorphine Option. Drugs. 2018;78(12):1211-1228. 4. Gudin J, Fudin J. A Narrative Pharmacological Review of Buprenorphine: A Unique Opioid for the Treatment of Chronic Pain. Pain Ther. 2020;9(1):41-54. 5. Buprenorphine Formulations for Chronic Pain Management in Patients with Opioid Use Disorder or on Long-Term Opioid Therapy with Physiologic Tolerance: Buprenorphine Inj, Buprenorphine TDS, Buprenorphine SL Film, Buprenorphine/Naloxone SL tabs Recommendations for Use. March 2020. VA Pharmacy Benefits Management Services, Medical Advisory Panel, and VISN Pharmacist Executives; National Mental Health Office - Substance Use Disorders; National Pain Management Strategic Coordinating Committee. Accessed Jan 4, 2021. 6. Buprenorphine Transdermal System (TDS) (Butrans) C-III Buprenorphine Buccal Film (BBF) (Belvuca) C-III Criteria for Use. VA Pharmacy Benefits Management Services, Medical Advisory Panel, and VISN Pharmacist Executives. Accessed February 9, 2021. 7. Purdue Pharma L.P. Buprenorphine (Butrans) [package insert]. U.S. Food and Drug Administration Website. https://www.accessdata.fda.gov/drugsatfda_docs/label/2019/ 021306s035lbl.pdf. Revised Oct 2019. Accessed August 25, 2020. 8. BioDelivery Sciences International, Inc. Buprenorphine (Belbuca) [package insert]. U.S. Food and Drug Administration Website. https://www.accessdata.fda.gov/drugsatfda_docs/label/2019/207932s012lbl.pdf. Revised Oct 2019. Accessed August 25, 2020. 9. Indivior, Inc. Buprenorphine (Buprenex) [package insert]. U.S. Food and Drug Administration Website. https://www.accessdata.fda.gov/drugsatfda_docs/label/2019/018401s025lbl.pdf. Revised Oct 2019. Accessed August 25, 2020. 10. Webster L, Gruener D, Kirby T, Xiang Q, Tzanis E, Finn A. Evaluation of the Tolerability of Switching Patients on Chronic Full μ-Opioid Agonist Therapy to Buccal Buprenorphine. Pain Med. 2016;17(5):899-907. 11. Weimer MB, Guerra M, Morrow G, Adams K. Hospital-based Buprenorphine Micro-dose Initiation [published online ahead of print, 2020 Sep 21]. J Addict Med. 2020;10.1097/ADM.0000000000000745. 12. Becker WC, Frank JW, Edens EL. Switching From High-Dose, Long-Term Opioids to Buprenorphine: A Case Series. Ann Intern Med. 2020;173(1):70-71. 13. Edens EL, Abelleira A, Declan B, Becker WC. You say Pain. I say addiction. Let's call the whole thing off. Psychiatric Times. 2020 Nov 9;37(11):47-51. 14. Randhawa PA, Brar R, Nolan S. Buprenorphine-naloxone \\\"microdosing\\\": an alternative induction approach for the treatment of opioid use disorder in the wake of North America's increasingly potent illicit drug market. CMAJ. 2020;192(3):E73. 15. Hämmig R, Kemter A, Strasser J, et al. Use of microdoses for induction of buprenorphine treatment with overlapping full opioid agonist use: the Bernese method. Subst Abuse Rehabil. 2016;7:99-105. 16. Brar R, Fairbairn N, Sutherland C, Nolan S. Use of a novel prescribing approach for the treatment of opioid use disorder: Buprenorphine/naloxone micro-dosing - a case series. Drug Alcohol Rev. 2020;39(5):588-594. 17. Dowell D, Haegerich TM, Chou R. CDC Guideline for Prescribing Opioids for Chronic Pain - United States, 2016 [published correction appears in MMWR Recomm Rep. 2016;65(11):295]. MMWR Recomm Rep. 2016;65(1):1-49. Published 2016 Mar 18.",
+      "search": {
+        "original_query": "For OUD with chronic pain, can buprenorphine continue long term, can doses be split, and what monitoring is needed?",
+        "agent_query": "Buprenorphine for Opioid Use Disorder monitoring urine drug screen PDMP naloxone suicide renal hepatic pregnancy QTc",
+        "executed": [
+          {
+            "source": "original",
+            "query": "For OUD with chronic pain, can buprenorphine continue long term, can doses be split, and what monitoring is needed?",
+            "program": "VA",
+            "k": 8,
+            "seconds": 0.0,
+            "cached": true,
+            "results": 8
+          },
+          {
+            "source": "agent",
+            "query": "Buprenorphine for Opioid Use Disorder monitoring urine drug screen PDMP naloxone suicide renal hepatic pregnancy QTc",
+            "program": "VA",
+            "k": 8,
+            "seconds": 0.447,
+            "cached": false,
+            "results": 8
+          }
+        ],
+        "duplicates_merged": 3,
+        "returned": 13,
+        "from_both": 3,
+        "from_original_only": 5,
+        "from_agent_only": 5,
+        "provenance": [
+          {
+            "unit": "va_pbm_bup_chronic_pain:s7",
+            "found_by": {
+              "original": 1,
+              "agent": 4
+            }
+          },
+          {
+            "unit": "va_pbm_bup_chronic_pain:s0",
+            "found_by": {
+              "original": 3,
+              "agent": 5
+            }
+          },
+          {
+            "unit": "va_pbm_bup_oud:s1",
+            "found_by": {
+              "original": 6,
+              "agent": 6
+            }
+          },
+          {
+            "unit": "va_pbm_bup_chronic_pain:s6",
+            "found_by": {
+              "agent": 1
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s41",
+            "found_by": {
+              "original": 2
+            }
+          },
+          {
+            "unit": "va_pbm_bup_oud:s5",
+            "found_by": {
+              "agent": 2
+            }
+          },
+          {
+            "unit": "va_pbm_bup_oud:s6",
+            "found_by": {
+              "agent": 3
+            }
+          },
+          {
+            "unit": "va_pbm_bup_chronic_pain:s1",
+            "found_by": {
+              "original": 4
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s80",
+            "found_by": {
+              "original": 5
+            }
+          },
+          {
+            "unit": "va_pbm_bup_chronic_pain:s3",
+            "found_by": {
+              "original": 7
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s34",
+            "found_by": {
+              "agent": 7
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s81",
+            "found_by": {
+              "original": 8
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s24",
+            "found_by": {
+              "agent": 8
+            }
+          }
+        ],
+        "hits": [
+          {
+            "unit": "va_pbm_bup_chronic_pain:s7",
+            "doc_id": "va_pbm_bup_chronic_pain",
+            "pages": [
+              4
+            ],
+            "ranks": {
+              "original": 1,
+              "agent": 4
+            },
+            "scores": {
+              "original": 0.0315,
+              "agent": 0.025
+            }
+          },
+          {
+            "unit": "va_pbm_bup_chronic_pain:s0",
+            "doc_id": "va_pbm_bup_chronic_pain",
+            "pages": [
+              1,
+              2
+            ],
+            "ranks": {
+              "original": 3,
+              "agent": 5
+            },
+            "scores": {
+              "original": 0.0284,
+              "agent": 0.0247
+            }
+          },
+          {
+            "unit": "va_pbm_bup_oud:s1",
+            "doc_id": "va_pbm_bup_oud",
+            "pages": [
+              1,
+              2
+            ],
+            "ranks": {
+              "original": 6,
+              "agent": 6
+            },
+            "scores": {
+              "original": 0.0225,
+              "agent": 0.0233
+            }
+          },
+          {
+            "unit": "va_pbm_bup_chronic_pain:s6",
+            "doc_id": "va_pbm_bup_chronic_pain",
+            "pages": [
+              4
+            ],
+            "ranks": {
+              "agent": 1
+            },
+            "scores": {
+              "agent": 0.0325
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s41",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              44,
+              45
+            ],
+            "ranks": {
+              "original": 2
+            },
+            "scores": {
+              "original": 0.031
+            }
+          },
+          {
+            "unit": "va_pbm_bup_oud:s5",
+            "doc_id": "va_pbm_bup_oud",
+            "pages": [
+              4
+            ],
+            "ranks": {
+              "agent": 2
+            },
+            "scores": {
+              "agent": 0.0318
+            }
+          },
+          {
+            "unit": "va_pbm_bup_oud:s6",
+            "doc_id": "va_pbm_bup_oud",
+            "pages": [
+              4
+            ],
+            "ranks": {
+              "agent": 3
+            },
+            "scores": {
+              "agent": 0.0283
+            }
+          },
+          {
+            "unit": "va_pbm_bup_chronic_pain:s1",
+            "doc_id": "va_pbm_bup_chronic_pain",
+            "pages": [
+              2
+            ],
+            "ranks": {
+              "original": 4
+            },
+            "scores": {
+              "original": 0.0247
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s80",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              104,
+              105
+            ],
+            "ranks": {
+              "original": 5
+            },
+            "scores": {
+              "original": 0.0232
+            }
+          },
+          {
+            "unit": "va_pbm_bup_chronic_pain:s3",
+            "doc_id": "va_pbm_bup_chronic_pain",
+            "pages": [
+              3
+            ],
+            "ranks": {
+              "original": 7
+            },
+            "scores": {
+              "original": 0.0223
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s34",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              33,
+              34
+            ],
+            "ranks": {
+              "agent": 7
+            },
+            "scores": {
+              "agent": 0.0223
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s81",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              106,
+              107,
+              108
+            ],
+            "ranks": {
+              "original": 8
+            },
+            "scores": {
+              "original": 0.0219
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s24",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              29
+            ],
+            "ranks": {
+              "agent": 8
+            },
+            "scores": {
+              "agent": 0.0201
+            }
+          }
+        ]
+      },
+      "t_start": 6.946
+    }
+  ],
+  "cited_evidence": {
+    "va_pbm_bup_oud:p1": "va_pbm_bup_oud (VA, advisory, 2023-03)\nBuprenorphine for Opioid Use Disorder: Clinician Guide (IB 10-1498) > Buprenorphine formulations FDA approved for treatment of OUDReference 1, 2, 6, 7; Footnote A.\n[p 1]\nBuprenorphine formulations FDA approved for treatment of OUD 1,2,6,7;a\n[Table] (PDF page 1)\nColumns: Generic name (Brand name) | Buprenorphine and naloxone (Suboxone®) 8,9;b | Buprenorphine and naloxone (Suboxone®) 8,9;b | Buprenorphine (Subutex®) 10 | Buprenorphine (Sublocade®) 11\nDosage form and strengths | Sublingual (SL) tablet: 2/0.5 mg, 8/2 mg | SL film: 2/0.5 mg, 4/1 mg, 8/2 mg, 12/3 mg | SL tablet: 2 mg, 8 mg | Extended release subcutaneous (SC) injection: 100 mg, 300 mg\nPADR | Not required | Required | Not required | Required\nREMS registration* | Not required b | Not required b | Not required | Required\nWhen to use | • Preferred for initiation and maintenance in most patients • Reduced risk of misuse and diversion versus Subutex® | Adverse effects, intolerance, absorption issues with SL tablets (e.g., swallowing or spitting out tablets) | • Not recommended first line in most cases; naloxone combination is preferred • May be used in pregnant women | • After use of SL buprenorphine 8-24 mg/day for ≥7 days • If daily dosing is difficult or risky (e.g., homeless, unstable housing, living with children), or concern for diversion, misuse, or insufficient response with SL\nFrequency of use | • Daily for OUD • When used to treat OUD and pain, or off-label for a primary pain indication, consider adjusting the dosage interval to twice or three times daily to provide adequate analgesia | • Daily for OUD • When used to treat OUD and pain, or off-label for a primary pain indication, consider adjusting the dosage interval to twice or three times daily to provide adequate analgesia | • Daily for OUD • When used to treat OUD and pain, or off-label for a primary pain indication, consider adjusting the dosage interval to twice or three times daily to provide adequate analgesia | • Monthly (≥26 days between doses) • Administer a missed dose as soon as possible, with the following dose given no less than 26 days later • Occasional delays in dosing <2 weeks should not have significant impact\nPADR, prior authorization drug request. *REMS (risk evaluation and mitigation strategies) for all formulations: www.accessdata.fda.gov/scripts/cder/rems/index.cfm.\na Buprenorphine perioperative guidance: https://dvagov.sharepoint.com/sites/VHAPBM/Formulary/Clinical%20Guidance/Forms/AllItems.aspx.\nb REMS registration is required for injectable buprenorphine. For transmucosal buprenorphine, follow the checklist provided by the FDA: Buprenorphine Transmucosal Products for Opioid Dependence (BTOD) (www.accessdata.fda.gov/scripts/cder/rems/index.cfm?event=RemsDetails.page&REMS=9)\n[p 2]\nBuprenorphine formulations FDA approved for treatment of OUD 1,2,6,7;a (continued)\n[Table] (PDF page 2)\nColumns: Generic name (Brand name) | Buprenorphine and naloxone (Suboxone®) 8,9;b | Buprenorphine (Subutex®) 10 | Buprenorphine (Sublocade®) 11\nTypical dosing | During initiation, titrate dose to treat withdrawal, cravings, and as tolerated. • DAY 1: Initiate • Suboxone® 2/0.5 mg or 4/1 mg; titrate by 2/0.5 mg or 4/1 mg every 1-2 hours to a target dose of 8/2 mg/day • Subutex® 2 or 4 mg; titrate by 2 or 4 mg every 1-2 hours to a target dose 8 mg/day • DAY 2: Start with Day 1 dose, continue titrating • Suboxone® in 2/0.5 mg or 4/1 mg increments to a target dose of 16/4 mg/day • Subutex® in 2 or 4 mg increments | to a target dose | • Initiate: 300 mg SC injection in abdominal adipose tissue monthly for 2 months • Maintenance: 100 mg monthly; can increase to 300 mg monthly if 100 mg tolerated but unsatisfactory clinical response (e.g., opioid cravings, withdrawal, use of non-prescribed opioids) • A 2-month dosing interval may be appropriate in some cases (e.g., extended travel). Administer a single 300 mg dose to cover 2 months, then resume 100 mg\nUsual max dose | of 16mg/day Target maintenance dose: 16/4 mg/day or Subutex® 12-16 24 mg/day; higher doses may be used in some cases (e.g., uncontrolled withdrawal or cravings) but should be carefully monitored, and rationale | Suboxone® 12/3 mg to mg/day in a single daily use documented 12-15 | monthly. 300 mg/4 weeks\nClinical pearls | • Initiate when in sufficient withdrawal (e.g., Clinical Opiate Withdrawal Scale [COWS] score ≥8) to avoid precipitated withdrawal. c • SL tablet: Place under the tongue until dissolved. For doses requiring >1 tablet, place 2 tablets under the tongue at a time until fully dissolved and repeat with remaining tablets. • SL film: Place 1 film under the tongue close to the base on the left or right side and allow to completely dissolve. If a second film is needed, place on the opposite side of the mouth. If a third film is needed, wait for the first two to dissolve, the place inside the right or left cheek. Do not cut or chew. • Avoid swallowing due to reduced bioavailability. Avoid abrupt discontinuation to taper off. | gradually reduce dose | • Injection site pruritus and pain are common; apply a topical anesthetic (e.g., lidocaine 5% ointment) 10-30 minutes prior to injection; may dispense to patient to apply prior to appointment. • Peak effect occurs ~24 hours after injection, and 4-6 months needed to achieve steady-state. • After achieving steady-state, plasma levels remain detectable for ≥12 months after discontinuation and will decrease gradually over subsequent months.\n\nva_pbm_bup_oud (VA, advisory, 2023-03)\nBuprenorphine for Opioid Use Disorder: Clinician Guide (IB 10-1498) > Quick facts about buprenorphine for treatment of opioid use disorder (OUD)\n[p 1]\nMedications, like buprenorphine, are the gold-standard treatment for patients with OUD. Buprenorphine saves lives, reduces illicit opioid use and opioid cravings, and improves retention in treatment and well-being. 1-5\nOUD is a chronic, relapsing disease. While the optimal treatment duration for OUD ",
+    "va_dod_cpg_opioids_2022:p105": "va_dod_cpg_opioids_2022 (VA, advisory, 2022-05)\nVA/DoD Clinical Practice Guideline for the Use of Opioids in the Management of Chronic Pain (Version 4.0) > Appendix D: Drug Tables > B. Long-acting/Extended-release Opioids\n[p 104]\n[Table] (PDF page 104)\nColumns: Long-Acting/ER Opioids a | Initial Dosage (in opioid- naïve, unless specified) | Other Dosing Information | Dosing In Special Populations | Other Considerations\nBuprenorphine buccal film · Available in strengths of 75, 150, 300, 450, 600, 750 and 900 mcg/film for twice daily administration | · 75 mcg once or twice daily for at least 4 days, then increase dose to 150 mcg every 12 hr · There is potential for buprenorphine buccal film to precipitate withdrawal in patients already on opioids; to reduce risk, the dose of other opioids should be tapered to ≤30 mg MEDD before initiating buprenorphine buccal film · See Section E. Additional Buprenorphine Guidance for alternate dosing instructions | · After initial dosing, dosing changes as necessary can proceed in increments of 150 mcg every 12 hr, no more frequently than every 4 days · Patients on prior dose of opioid 30 to 89 mg MEDD may initiate buprenorphine film at 150 mcg every 12 hr, 90 to 160 mg MEDD may initiate at 300 mcg every 12 hr; if prior opioid is >160 mg MEDD - consider an alternative analgesic · Time to steady state ~3 days with every 12 hr dosing | · Elderly: Initiation at the low end of the dosing range is recommended · Renal dysfunction: No dose adjustment recommended · Hepatic dysfunction: Patients with severe hepatic impairment should have starting and titration doses reduced by half that of patients with normal liver function | · QTc prolongation reported with recommended doses of buprenorphine; maximum dose of 900 mcg every 12 hr established due to the potential for this adverse effect; avoid in patients with long QT syndrome, family history of long QT syndrome, or those taking Class IA or Class III antiarrhythmic drugs · Buprenorphine buccal film is a potential treatment option for patients with significant renal impairment and those with gastrointestinal structural or functional abnormality that interferes with swallowing or absorption of orally administered medications\nBuprenorphine TDS · Available in every 7 day patch formulation that delivers transdermal buprenorphine at the following rates: 5 mcg/hr, 7.5 mcg/hr, 10 mcg/hr, 15 mcg/hr, and 20 mcg/hr | · In opioid-naïve or in patients on <30 mg MEDD of alternate agent: Initiate treatment with 5 mcg/hr patch · There is potential for buprenorphine to precipitate withdrawal in patients already on opioids; to reduce risk, the dose of other opioid should be tapered to ≤30 mg MEDD before initiating buprenorphine; the 10 mcg/ hr patch may then be initiated at the next dosing interval | · Initial buprenorphine TDS dose based on previous oral morphine equivalent: 5mcg/hr for <30mg MEDD, 10 mcg/hr for 30-80mg MEDD · The maximum dose of buprenorphine TDS 20 mcg/hr may not provide adequate analgesia for patients requiring greater than 80 mg MEDD; an alternate analgesic should be considered | · Dosage does not need to be adjusted in patients with mild or moderate hepatic impairment, renal impairment, or in the elderly | · Dose of one 20 mcg/hr patch per week should not be exceeded due to risk of QTc prolongation · Avoid use in patients with long QT syndrome, family history of long QT syndrome, or those taking Class IA or Class III antiarrhythmic medications · Advise patients that application of external heat (e.g., hot baths, sunbathing, saunas, heating pads) increases maximum plasma concentration of buprenorphine and risk of fatal overdose\n[p 105]\n[Table] (PDF page 105)\nColumns: Long-Acting/ER Opioids a | Initial Dosage (in opioid- naïve, unless specified) | Other Dosing Information | Dosing In Special Populations | Other Considerations\nBuprenorphine TDS (cont.) |  | · Because steady-state plasma concentrations are achieved within 72 hours, buprenorphine TDS dosage may be adjusted every 3 days |  | · Potential treatment option for patients with significant renal impairment or those with gastrointestinal structural or functional abnormality that interferes with swallowing or absorption of oral medications\nBuprenorphine and Buprenorphine/ Naloxone · Buprenorphine is available in 2 mg and 8 mg SL tabs · Buprenorphine/ naloxone is available in 2-0.5 and 8-2 mg/ SL tablets and 2-0.5, 4-1, 8-2, and 12-3 mg film | · Used off-label for pain management: FDA approved for the treatment of opioid dependence or OUD · 2 to 4 mg of buprenorphine or 2/0.5 mg to 4/1 mg of buprenorphine/ naloxone in divided doses should be adequate for most patients | · For patients who are on buprenorphine or buprenorphine naloxone for OUD, the current 24-hour dose could be split and divided for BID or TID dosing for pain management · To avoid precipitating withdrawal in patients that are being converted from other opioids, initiation with buprenorphine/naloxone SL tablet should be undertaken when objective and clear signs of mild withdrawal are evident; 2 to 4 mg of buprenorphine or 2/0.5 mg to 4/1 mg of buprenorphine/ naloxone in divided doses should be adequate for most patients | · Elderly: Use cautiously and monitor closely · Dosage does not need to be adjusted in patients with mild or moderate hepatic impairment or renal impairment; avoid in patients with severe hepatic impairment | · BUP sublingual tablet contains no naloxone and may be preferred during pregnancy · Buprenorphine/naloxone may be the preferred opioid in patients with comorbid pain and OUD",
+    "va_pbm_bup_oud:p4": "va_pbm_bup_oud (VA, advisory, 2023-03)\nBuprenorphine for Opioid Use Disorder: Clinician Guide (IB 10-1498) > Diagnosis, assessment, treatment Concurrent conditions Databases, labs, procedures > REFERENCES\n[p 4]\n1. American Society of Addiction Medicine. The ASAM national practice guideline for the treatment of opioid use disorder: 2020 focused update. Rockville, MD: American Society of Addiction Medicine;2020. 2. Substance Abuse and Mental Health Services Administration. Medications for opioid use disorder. Treatment Improvement Protocol (TIP) Series 63, Full Document. Rockville, MD: Substance Abuse and Mental Health Services Administration;2020. 3. Kakko J, Svanborg KD, Kreek MJ, Heilig M. 1-year retention and social function after buprenorphine-assisted relapse prevention treatment for heroin dependence in Sweden: a randomised, placebo-controlled trial. Lancet. 2003;361(9358):662-668. 4. Evans EA, Zhu Y, Yoo C, Huang D, Hser YI. Criminal justice outcomes over 5 years after randomization to buprenorphine-naloxone or methadone treatment for opioid use disorder. Addiction. 2019;114(8):1396-1404. 5. Schackman BR, Leff JA, Botsko M, et al. The cost of integrated HIV care and buprenorphine/ naloxone treatment: results of a cross-site evaluation. J Acquir Immune Defic Syndr. 2011;56 Suppl 1(Suppl 1):S76-S82. 6. Buprenorphine Formulations for Chronic Pain Management in Patients with Opioid Use Disorder or on Long-Term Opioid Therapy with Physiologic Tolerance: Buprenorphine Inj, Buprenorphine TDS, Buprenorphine SL Film, Buprenorphine/Naloxone SL tabs Recommendations for Use. March 2020. VA Pharmacy Benefits Management Services, Medical Advisory Panel, and VISN Pharmacist Executives; National Mental Health Office - Substance Use Disorders; National Pain Management Strategic Coordinating Committee. Accessed Jan 4, 2021. 7. The Management of Substance Abuse Disorders Work Group. VA/DOD Clinical practice guideline for the management of substance use disorders. VA/DoD. 2015;Version 3.0(December 2015):1-169. 8. Reckitt Benckiser Pharmaceuticals, Inc. Buprenorphine and naloxone (Suboxone) [package insert]. U.S. Food and Drug Administration Website. https://www.accessdata.fda.gov/drugsatfda_docs/label/2011/020733s007s008lbl.pdf. Issued December 2011. Accessed February 2, 2021. 9. Indivior, Inc. Buprenorphine and naloxone (Suboxone) [package insert]. U.S. Food and Drug Administration Website. https://www.accessdata.fda.gov/drugsatfda_docs/label/2021/022410s042lbl.pdf. Revised October 2019. Accessed August 30, 2020. 10. Indivior, Inc. Buprenorphine (Subutex) [package insert]. U.S. Food and Drug Administration Website. https://www.accessdata.fda.gov/drugsatfda_docs/label/2011/020732s006s007lbl.pdf. Revised Oct 2019. Accessed August 30, 2020. 11. Indivior, Inc. Buprenorphine (Sublocade) [package insert]. U.S. Food and Drug Administration Website. https://www.accessdata.fda.gov/drugsatfda_docs/label/2020/209819s012lbl.pdf. Revised February 2020. Accessed August 30, 2020. 12. Danilewitz M, McLean M. High-dose buprenorphine for treatment of high potency opioid use disorder. Drug Alcohol Rev. 2020;39(2):135-137. 13. Ahmadi J, Sarani EM, Jahromi MS. Rapid effect of a single-dose buprenorphine on reduction of opioid craving and suicidal ideation: A randomized, double blind, placebo-controlled study. Ci Ji Yi Xue Za Zhi. 2019;32(1):58-64. 14. Ahmadi J, Jahromi MS, Ghahremani D, London ED. Single high-dose buprenorphine for opioid craving during withdrawal. Trials. 2018;19(1):675. 15. Ahmadi J, Jahromi MS, Ehsaei Z. The effectiveness of different singly administered high doses of buprenorphine in reducing suicidal ideation in acutely depressed people with co-morbid opiate dependence: a randomized, double-blind, clinical trial. Trials. 2018;19(1):462. 16. BioDelivery Sciences International, Inc. Buprenorphine and naloxone (Bunavail) [package insert]. U.S. Food and Drug Administration Website. https://www.accessdata.fda.gov/drugsatfda_docs/label/2019/205637s020lbl.pdf. Revised Oct 2019. Accessed August 30, 2020. 17. Orexo US, Inc. Buprenorphine and naloxone (Zubsolv) [package insert]. U.S. Food and Drug Administration Website. https://www.accessdata.fda.gov/drugsatfda_docs/label/2019/204242s017lbl.pdf. Revised October 2019. Accessed August 30, 2020. 18. TEVA Pharmaceuticals USA, Inc. Buprenorphine and naloxone (Cassipa) [package insert]. U.S. Food and Drug Administration Website. https://www.accessdata.fda.gov/drugsatfda_docs/label/2018/208042s000lbl.pdf. Issued September 2018. Accessed January 28, 2021. 19. Becker WC, Frank JW, Edens EL. Switching From High-Dose, Long-Term Opioids to Buprenorphine: A Case Series. Ann Intern Med. 2020;173(1):70-71. 20. Edens EL, Abelleira A, Declan B, Becker WC. You say Pain. I say addiction. Let's call the whole thing off. Psychiatric Times. 2020 Nov 9;37(11):47-51. 21. Randhawa PA, Brar R, Nolan S. Buprenorphine-naloxone \"microdosing\": an alternative induction approach for the treatment of opioid use disorder in the wake of North America's increasingly potent illicit drug market. CMAJ. 2020;192(3):E73. 22. Hämmig R, Kemter A, Strasser J, et al. Use of microdoses for induction of buprenorphine treatment with overlapping full opioid agonist use: the Bernese method. Subst Abuse Rehabil. 2016;7:99-105. 23. Brar R, Fairbairn N, Sutherland C, Nolan S. Use of a novel prescribing approach for the treatment of opioid use disorder: Buprenorphine/naloxone micro-dosing - a case series. Drug Alcohol Rev. 2020;39(5):588-594. 24. Northrup TF, Stotts AL, Green C, et al. Opioid withdrawal, craving, and use during and after outpatient buprenorphine stabilization and taper: a discrete survival and growth mixture model. Addict Behav. 2015;41:20-28. 25. Naloxone Rescue: Recommendations for Issuing. Naloxone Rescue [Naloxone HCl nasal spray (Narcan®) and Intramuscular Naloxone Kit] for the VA Opioid Overdose Education and Naloxone Distribution (OEND) Program. Nov 2020. VA Pharmacy Benefits Management "
+  },
+  "cited_evidence_parts": {
+    "va_pbm_bup_oud:p1": [
+      "va_pbm_bup_oud (VA, advisory, 2023-03)\nBuprenorphine for Opioid Use Disorder: Clinician Guide (IB 10-1498) > Buprenorphine formulations FDA approved for treatment of OUDReference 1, 2, 6, 7; Footnote A.\n[p 1]\nBuprenorphine formulations FDA approved for treatment of OUD 1,2,6,7;a\n[Table] (PDF page 1)\nColumns: Generic name (Brand name) | Buprenorphine and naloxone (Suboxone®) 8,9;b | Buprenorphine and naloxone (Suboxone®) 8,9;b | Buprenorphine (Subutex®) 10 | Buprenorphine (Sublocade®) 11\nDosage form and strengths | Sublingual (SL) tablet: 2/0.5 mg, 8/2 mg | SL film: 2/0.5 mg, 4/1 mg, 8/2 mg, 12/3 mg | SL tablet: 2 mg, 8 mg | Extended release subcutaneous (SC) injection: 100 mg, 300 mg\nPADR | Not required | Required | Not required | Required\nREMS registration* | Not required b | Not required b | Not required | Required\nWhen to use | • Preferred for initiation and maintenance in most patients • Reduced risk of misuse and diversion versus Subutex® | Adverse effects, intolerance, absorption issues with SL tablets (e.g., swallowing or spitting out tablets) | • Not recommended first line in most cases; naloxone combination is preferred • May be used in pregnant women | • After use of SL buprenorphine 8-24 mg/day for ≥7 days • If daily dosing is difficult or risky (e.g., homeless, unstable housing, living with children), or concern for diversion, misuse, or insufficient response with SL\nFrequency of use | • Daily for OUD • When used to treat OUD and pain, or off-label for a primary pain indication, consider adjusting the dosage interval to twice or three times daily to provide adequate analgesia | • Daily for OUD • When used to treat OUD and pain, or off-label for a primary pain indication, consider adjusting the dosage interval to twice or three times daily to provide adequate analgesia | • Daily for OUD • When used to treat OUD and pain, or off-label for a primary pain indication, consider adjusting the dosage interval to twice or three times daily to provide adequate analgesia | • Monthly (≥26 days between doses) • Administer a missed dose as soon as possible, with the following dose given no less than 26 days later • Occasional delays in dosing <2 weeks should not have significant impact\nPADR, prior authorization drug request. *REMS (risk evaluation and mitigation strategies) for all formulations: www.accessdata.fda.gov/scripts/cder/rems/index.cfm.\na Buprenorphine perioperative guidance: https://dvagov.sharepoint.com/sites/VHAPBM/Formulary/Clinical%20Guidance/Forms/AllItems.aspx.\nb REMS registration is required for injectable buprenorphine. For transmucosal buprenorphine, follow the checklist provided by the FDA: Buprenorphine Transmucosal Products for Opioid Dependence (BTOD) (www.accessdata.fda.gov/scripts/cder/rems/index.cfm?event=RemsDetails.page&REMS=9)\n[p 2]\nBuprenorphine formulations FDA approved for treatment of OUD 1,2,6,7;a (continued)\n[Table] (PDF page 2)\nColumns: Generic name (Brand name) | Buprenorphine and naloxone (Suboxone®) 8,9;b | Buprenorphine (Subutex®) 10 | Buprenorphine (Sublocade®) 11\nTypical dosing | During initiation, titrate dose to treat withdrawal, cravings, and as tolerated. • DAY 1: Initiate • Suboxone® 2/0.5 mg or 4/1 mg; titrate by 2/0.5 mg or 4/1 mg every 1-2 hours to a target dose of 8/2 mg/day • Subutex® 2 or 4 mg; titrate by 2 or 4 mg every 1-2 hours to a target dose 8 mg/day • DAY 2: Start with Day 1 dose, continue titrating • Suboxone® in 2/0.5 mg or 4/1 mg increments to a target dose of 16/4 mg/day • Subutex® in 2 or 4 mg increments | to a target dose | • Initiate: 300 mg SC injection in abdominal adipose tissue monthly for 2 months • Maintenance: 100 mg monthly; can increase to 300 mg monthly if 100 mg tolerated but unsatisfactory clinical response (e.g., opioid cravings, withdrawal, use of non-prescribed opioids) • A 2-month dosing interval may be appropriate in some cases (e.g., extended travel). Administer a single 300 mg dose to cover 2 months, then resume 100 mg\nUsual max dose | of 16mg/day Target maintenance dose: 16/4 mg/day or Subutex® 12-16 24 mg/day; higher doses may be used in some cases (e.g., uncontrolled withdrawal or cravings) but should be carefully monitored, and rationale | Suboxone® 12/3 mg to mg/day in a single daily use documented 12-15 | monthly. 300 mg/4 weeks\nClinical pearls | • Initiate when in sufficient withdrawal (e.g., Clinical Opiate Withdrawal Scale [COWS] score ≥8) to avoid precipitated withdrawal. c • SL tablet: Place under the tongue until dissolved. For doses requiring >1 tablet, place 2 tablets under the tongue at a time until fully dissolved and repeat with remaining tablets. • SL film: Place 1 film under the tongue close to the base on the left or right side and allow to completely dissolve. If a second film is needed, place on the opposite side of the mouth. If a third film is needed, wait for the first two to dissolve, the place inside the right or left cheek. Do not cut or chew. • Avoid swallowing due to reduced bioavailability. Avoid abrupt discontinuation to taper off. | gradually reduce dose | • Injection site pruritus and pain are common; apply a topical anesthetic (e.g., lidocaine 5% ointment) 10-30 minutes prior to injection; may dispense to patient to apply prior to appointment. • Peak effect occurs ~24 hours after injection, and 4-6 months needed to achieve steady-state. • After achieving steady-state, plasma levels remain detectable for ≥12 months after discontinuation and will decrease gradually over subsequent months.",
+      "va_pbm_bup_oud (VA, advisory, 2023-03)\nBuprenorphine for Opioid Use Disorder: Clinician Guide (IB 10-1498) > Quick facts about buprenorphine for treatment of opioid use disorder (OUD)\n[p 1]\nMedications, like buprenorphine, are the gold-standard treatment for patients with OUD. Buprenorphine saves lives, reduces illicit opioid use and opioid cravings, and improves retention in treatment and well-being. 1-5\nOUD is a chronic, relapsing disease. While the optimal treatment duration for OUD has not been defined, medications are often continued indefinitely. Discontinuation should be based on collaborative discussion and the patient's ability to maintain recovery without medication. Medication should NOT be discontinued upon return to non-prescribed opioid use. 1,6\nFor questions about buprenorphine or assistance evaluating for OUD, contact your local pain and/or addiction specialists, your Stepped Care for OUD Train the Trainer (SCOUTT) Team: https://dvagov.sharepoint.com/sites/VHASUD/SCOUTT, or send an email to the Ask the Expert-SUD email service: AskTheExpert-SubstanceUseDisorder@va.gov (no PHI).\n\nva_pbm_bup_oud (VA, advisory, 2023-03)\nBuprenorphine for Opioid Use Disorder: Clinician Guide (IB 10-1498) > Buprenorphine formulations FDA approved for treatment of OUDReference 1, 2, 6, 7; Footnote A.\n[p 1]\nBuprenorphine formulations FDA approved for treatment of OUD 1,2,6,7;a\n[Table] (PDF page 1)\nColumns: Generic name (Brand name) | Buprenorphine and naloxone (Suboxone®) 8,9;b | Buprenorphine and naloxone (Suboxone®) 8,9;b | Buprenorphine (Subutex®) 10 | Buprenorphine (Sublocade®) 11\nDosage form and strengths | Sublingual (SL) tablet: 2/0.5 mg, 8/2 mg | SL film: 2/0.5 mg, 4/1 mg, 8/2 mg, 12/3 mg | SL tablet: 2 mg, 8 mg | Extended release subcutaneous (SC) injection: 100 mg, 300 mg\nPADR | Not required | Required | Not required | Required\nREMS registration* | Not required b | Not required b | Not required | Required\nWhen to use | • Preferred for initiation and maintenance in most patients • Reduced risk of misuse and diversion versus Subutex® | Adverse effects, intolerance, absorption issues with SL tablets (e.g., swallowing or spitting out tablets) | • Not recommended first line in most cases; naloxone combination is preferred • May be used in pregnant women | • After use of SL buprenorphine 8-24 mg/day for ≥7 days • If daily dosing is difficult or risky (e.g., homeless, unstable housing, living with children), or concern for diversion, misuse, or insufficient response with SL\nFrequency of use | • Daily for OUD • When used to treat OUD and pain, or off-label for a primary pain indication, consider adjusting the dosage interval to twice or three times daily to provide adequate analgesia | • Daily for OUD • When used to treat OUD and pain, or off-label for a primary pain indication, consider adjusting the dosage interval to twice or three times daily to provide adequate analgesia | • Daily for OUD • When used to treat OUD and pain, or off-label for a primary pain indication, consider adjusting the dosage interval to twice or three times daily to provide adequate analgesia | • Monthly (≥26 days between doses) • Administer a missed dose as soon as possible, with the following dose given no less than 26 days later • Occasional delays in dosing <2 weeks should not have significant impact\nPADR, prior authorization drug request. *REMS (risk evaluation and mitigation strategies) for all formulations: www.accessdata.fda.gov/scripts/cder/rems/index.cfm.\na Buprenorphine perioperative guidance: https://dvagov.sharepoint.com/sites/VHAPBM/Formulary/Clinical%20Guidance/Forms/AllItems.aspx.\nb REMS registration is required for injectable buprenorphine. For transmucosal buprenorphine, follow the checklist provided by the FDA: Buprenorphine Transmucosal Products for Opioid Dependence (BTOD) (www.accessdata.fda.gov/scripts/cder/rems/index.cfm?event=RemsDetails.page&REMS=9)\n[p 2]\nBuprenorphine formulations FDA approved for treatment of OUD 1,2,6,7;a (continued)\n[Table] (PDF page 2)\nColumns: Generic name (Brand name) | Buprenorphine and naloxone (Suboxone®) 8,9;b | Buprenorphine (Subutex®) 10 | Buprenorphine (Sublocade®) 11\nTypical dosing | During initiation, titrate dose to treat withdrawal, cravings, and as tolerated. • DAY 1: Initiate • Suboxone® 2/0.5 mg or 4/1 mg; titrate by 2/0.5 mg or 4/1 mg every 1-2 hours to a target dose of 8/2 mg/day • Subutex® 2 or 4 mg; titrate by 2 or 4 mg every 1-2 hours to a target dose 8 mg/day • DAY 2: Start with Day 1 dose, continue titrating • Suboxone® in 2/0.5 mg or 4/1 mg increments to a target dose of 16/4 mg/day • Subutex® in 2 or 4 mg increments | to a target dose | • Initiate: 300 mg SC injection in abdominal adipose tissue monthly for 2 months • Maintenance: 100 mg monthly; can increase to 300 mg monthly if 100 mg tolerated but unsatisfactory clinical response (e.g., opioid cravings, withdrawal, use of non-prescribed opioids) • A 2-month dosing interval may be appropriate in some cases (e.g., extended travel). Administer a single 300 mg dose to cover 2 months, then resume 100 mg\nUsual max dose | of 16mg/day Target maintenance dose: 16/4 mg/day or Subutex® 12-16 24 mg/day; higher doses may be used in some cases (e.g., uncontrolled withdrawal or cravings) but should be carefully monitored, and rationale | Suboxone® 12/3 mg to mg/day in a single daily use documented 12-15 | monthly. 300 mg/4 weeks\nClinical pearls | • Initiate when in sufficient withdrawal (e.g., Clinical Opiate Withdrawal Scale [COWS] score ≥8) to avoid precipitated withdrawal. c • SL tablet: Place under the tongue until dissolved. For doses requiring >1 tablet, place 2 tablets under the tongue at a time until fully dissolved and repeat with remaining tablets. • SL film: Place 1 film under the tongue close to the base on the left or right side and allow to completely dissolve. If a second film is needed, place on the opposite side of the mouth. If a third film is needed, wait for the first two to dissolve, the"
+    ],
+    "va_dod_cpg_opioids_2022:p105": [
+      "va_dod_cpg_opioids_2022 (VA, advisory, 2022-05)\nVA/DoD Clinical Practice Guideline for the Use of Opioids in the Management of Chronic Pain (Version 4.0) > Appendix D: Drug Tables > B. Long-acting/Extended-release Opioids\n[p 104]\n[Table] (PDF page 104)\nColumns: Long-Acting/ER Opioids a | Initial Dosage (in opioid- naïve, unless specified) | Other Dosing Information | Dosing In Special Populations | Other Considerations\nBuprenorphine buccal film · Available in strengths of 75, 150, 300, 450, 600, 750 and 900 mcg/film for twice daily administration | · 75 mcg once or twice daily for at least 4 days, then increase dose to 150 mcg every 12 hr · There is potential for buprenorphine buccal film to precipitate withdrawal in patients already on opioids; to reduce risk, the dose of other opioids should be tapered to ≤30 mg MEDD before initiating buprenorphine buccal film · See Section E. Additional Buprenorphine Guidance for alternate dosing instructions | · After initial dosing, dosing changes as necessary can proceed in increments of 150 mcg every 12 hr, no more frequently than every 4 days · Patients on prior dose of opioid 30 to 89 mg MEDD may initiate buprenorphine film at 150 mcg every 12 hr, 90 to 160 mg MEDD may initiate at 300 mcg every 12 hr; if prior opioid is >160 mg MEDD - consider an alternative analgesic · Time to steady state ~3 days with every 12 hr dosing | · Elderly: Initiation at the low end of the dosing range is recommended · Renal dysfunction: No dose adjustment recommended · Hepatic dysfunction: Patients with severe hepatic impairment should have starting and titration doses reduced by half that of patients with normal liver function | · QTc prolongation reported with recommended doses of buprenorphine; maximum dose of 900 mcg every 12 hr established due to the potential for this adverse effect; avoid in patients with long QT syndrome, family history of long QT syndrome, or those taking Class IA or Class III antiarrhythmic drugs · Buprenorphine buccal film is a potential treatment option for patients with significant renal impairment and those with gastrointestinal structural or functional abnormality that interferes with swallowing or absorption of orally administered medications\nBuprenorphine TDS · Available in every 7 day patch formulation that delivers transdermal buprenorphine at the following rates: 5 mcg/hr, 7.5 mcg/hr, 10 mcg/hr, 15 mcg/hr, and 20 mcg/hr | · In opioid-naïve or in patients on <30 mg MEDD of alternate agent: Initiate treatment with 5 mcg/hr patch · There is potential for buprenorphine to precipitate withdrawal in patients already on opioids; to reduce risk, the dose of other opioid should be tapered to ≤30 mg MEDD before initiating buprenorphine; the 10 mcg/ hr patch may then be initiated at the next dosing interval | · Initial buprenorphine TDS dose based on previous oral morphine equivalent: 5mcg/hr for <30mg MEDD, 10 mcg/hr for 30-80mg MEDD · The maximum dose of buprenorphine TDS 20 mcg/hr may not provide adequate analgesia for patients requiring greater than 80 mg MEDD; an alternate analgesic should be considered | · Dosage does not need to be adjusted in patients with mild or moderate hepatic impairment, renal impairment, or in the elderly | · Dose of one 20 mcg/hr patch per week should not be exceeded due to risk of QTc prolongation · Avoid use in patients with long QT syndrome, family history of long QT syndrome, or those taking Class IA or Class III antiarrhythmic medications · Advise patients that application of external heat (e.g., hot baths, sunbathing, saunas, heating pads) increases maximum plasma concentration of buprenorphine and risk of fatal overdose\n[p 105]\n[Table] (PDF page 105)\nColumns: Long-Acting/ER Opioids a | Initial Dosage (in opioid- naïve, unless specified) | Other Dosing Information | Dosing In Special Populations | Other Considerations\nBuprenorphine TDS (cont.) |  | · Because steady-state plasma concentrations are achieved within 72 hours, buprenorphine TDS dosage may be adjusted every 3 days |  | · Potential treatment option for patients with significant renal impairment or those with gastrointestinal structural or functional abnormality that interferes with swallowing or absorption of oral medications\nBuprenorphine and Buprenorphine/ Naloxone · Buprenorphine is available in 2 mg and 8 mg SL tabs · Buprenorphine/ naloxone is available in 2-0.5 and 8-2 mg/ SL tablets and 2-0.5, 4-1, 8-2, and 12-3 mg film | · Used off-label for pain management: FDA approved for the treatment of opioid dependence or OUD · 2 to 4 mg of buprenorphine or 2/0.5 mg to 4/1 mg of buprenorphine/ naloxone in divided doses should be adequate for most patients | · For patients who are on buprenorphine or buprenorphine naloxone for OUD, the current 24-hour dose could be split and divided for BID or TID dosing for pain management · To avoid precipitating withdrawal in patients that are being converted from other opioids, initiation with buprenorphine/naloxone SL tablet should be undertaken when objective and clear signs of mild withdrawal are evident; 2 to 4 mg of buprenorphine or 2/0.5 mg to 4/1 mg of buprenorphine/ naloxone in divided doses should be adequate for most patients | · Elderly: Use cautiously and monitor closely · Dosage does not need to be adjusted in patients with mild or moderate hepatic impairment or renal impairment; avoid in patients with severe hepatic impairment | · BUP sublingual tablet contains no naloxone and may be preferred during pregnancy · Buprenorphine/naloxone may be the preferred opioid in patients with comorbid pain and OUD"
+    ],
+    "va_pbm_bup_oud:p4": [
+      "va_pbm_bup_oud (VA, advisory, 2023-03)\nBuprenorphine for Opioid Use Disorder: Clinician Guide (IB 10-1498) > Diagnosis, assessment, treatment Concurrent conditions Databases, labs, procedures > REFERENCES\n[p 4]\n1. American Society of Addiction Medicine. The ASAM national practice guideline for the treatment of opioid use disorder: 2020 focused update. Rockville, MD: American Society of Addiction Medicine;2020. 2. Substance Abuse and Mental Health Services Administration. Medications for opioid use disorder. Treatment Improvement Protocol (TIP) Series 63, Full Document. Rockville, MD: Substance Abuse and Mental Health Services Administration;2020. 3. Kakko J, Svanborg KD, Kreek MJ, Heilig M. 1-year retention and social function after buprenorphine-assisted relapse prevention treatment for heroin dependence in Sweden: a randomised, placebo-controlled trial. Lancet. 2003;361(9358):662-668. 4. Evans EA, Zhu Y, Yoo C, Huang D, Hser YI. Criminal justice outcomes over 5 years after randomization to buprenorphine-naloxone or methadone treatment for opioid use disorder. Addiction. 2019;114(8):1396-1404. 5. Schackman BR, Leff JA, Botsko M, et al. The cost of integrated HIV care and buprenorphine/ naloxone treatment: results of a cross-site evaluation. J Acquir Immune Defic Syndr. 2011;56 Suppl 1(Suppl 1):S76-S82. 6. Buprenorphine Formulations for Chronic Pain Management in Patients with Opioid Use Disorder or on Long-Term Opioid Therapy with Physiologic Tolerance: Buprenorphine Inj, Buprenorphine TDS, Buprenorphine SL Film, Buprenorphine/Naloxone SL tabs Recommendations for Use. March 2020. VA Pharmacy Benefits Management Services, Medical Advisory Panel, and VISN Pharmacist Executives; National Mental Health Office - Substance Use Disorders; National Pain Management Strategic Coordinating Committee. Accessed Jan 4, 2021. 7. The Management of Substance Abuse Disorders Work Group. VA/DOD Clinical practice guideline for the management of substance use disorders. VA/DoD. 2015;Version 3.0(December 2015):1-169. 8. Reckitt Benckiser Pharmaceuticals, Inc. Buprenorphine and naloxone (Suboxone) [package insert]. U.S. Food and Drug Administration Website. https://www.accessdata.fda.gov/drugsatfda_docs/label/2011/020733s007s008lbl.pdf. Issued December 2011. Accessed February 2, 2021. 9. Indivior, Inc. Buprenorphine and naloxone (Suboxone) [package insert]. U.S. Food and Drug Administration Website. https://www.accessdata.fda.gov/drugsatfda_docs/label/2021/022410s042lbl.pdf. Revised October 2019. Accessed August 30, 2020. 10. Indivior, Inc. Buprenorphine (Subutex) [package insert]. U.S. Food and Drug Administration Website. https://www.accessdata.fda.gov/drugsatfda_docs/label/2011/020732s006s007lbl.pdf. Revised Oct 2019. Accessed August 30, 2020. 11. Indivior, Inc. Buprenorphine (Sublocade) [package insert]. U.S. Food and Drug Administration Website. https://www.accessdata.fda.gov/drugsatfda_docs/label/2020/209819s012lbl.pdf. Revised February 2020. Accessed August 30, 2020. 12. Danilewitz M, McLean M. High-dose buprenorphine for treatment of high potency opioid use disorder. Drug Alcohol Rev. 2020;39(2):135-137. 13. Ahmadi J, Sarani EM, Jahromi MS. Rapid effect of a single-dose buprenorphine on reduction of opioid craving and suicidal ideation: A randomized, double blind, placebo-controlled study. Ci Ji Yi Xue Za Zhi. 2019;32(1):58-64. 14. Ahmadi J, Jahromi MS, Ghahremani D, London ED. Single high-dose buprenorphine for opioid craving during withdrawal. Trials. 2018;19(1):675. 15. Ahmadi J, Jahromi MS, Ehsaei Z. The effectiveness of different singly administered high doses of buprenorphine in reducing suicidal ideation in acutely depressed people with co-morbid opiate dependence: a randomized, double-blind, clinical trial. Trials. 2018;19(1):462. 16. BioDelivery Sciences International, Inc. Buprenorphine and naloxone (Bunavail) [package insert]. U.S. Food and Drug Administration Website. https://www.accessdata.fda.gov/drugsatfda_docs/label/2019/205637s020lbl.pdf. Revised Oct 2019. Accessed August 30, 2020. 17. Orexo US, Inc. Buprenorphine and naloxone (Zubsolv) [package insert]. U.S. Food and Drug Administration Website. https://www.accessdata.fda.gov/drugsatfda_docs/label/2019/204242s017lbl.pdf. Revised October 2019. Accessed August 30, 2020. 18. TEVA Pharmaceuticals USA, Inc. Buprenorphine and naloxone (Cassipa) [package insert]. U.S. Food and Drug Administration Website. https://www.accessdata.fda.gov/drugsatfda_docs/label/2018/208042s000lbl.pdf. Issued September 2018. Accessed January 28, 2021. 19. Becker WC, Frank JW, Edens EL. Switching From High-Dose, Long-Term Opioids to Buprenorphine: A Case Series. Ann Intern Med. 2020;173(1):70-71. 20. Edens EL, Abelleira A, Declan B, Becker WC. You say Pain. I say addiction. Let's call the whole thing off. Psychiatric Times. 2020 Nov 9;37(11):47-51. 21. Randhawa PA, Brar R, Nolan S. Buprenorphine-naloxone \"microdosing\": an alternative induction approach for the treatment of opioid use disorder in the wake of North America's increasingly potent illicit drug market. CMAJ. 2020;192(3):E73. 22. Hämmig R, Kemter A, Strasser J, et al. Use of microdoses for induction of buprenorphine treatment with overlapping full opioid agonist use: the Bernese method. Subst Abuse Rehabil. 2016;7:99-105. 23. Brar R, Fairbairn N, Sutherland C, Nolan S. Use of a novel prescribing approach for the treatment of opioid use disorder: Buprenorphine/naloxone micro-dosing - a case series. Drug Alcohol Rev. 2020;39(5):588-594. 24. Northrup TF, Stotts AL, Green C, et al. Opioid withdrawal, craving, and use during and after outpatient buprenorphine stabilization and taper: a discrete survival and growth mixture model. Addict Behav. 2015;41:20-28. 25. Naloxone Rescue: Recommendations for Issuing. Naloxone Rescue [Naloxone HCl nasal spray (Narcan®) and Intramuscular Naloxone Kit] for the VA Opioid Overdose Education and Naloxone Distribution (OEND) Program. Nov 2020. VA Pharmacy Benefits Management ",
+      "va_pbm_bup_oud (VA, advisory, 2023-03)\nBuprenorphine for Opioid Use Disorder: Clinician Guide (IB 10-1498) > Diagnosis, assessment, treatment Concurrent conditions Databases, labs, procedures\n[p 4]\nDiagnosis, assessment, treatment\nConcurrent conditions\nDatabases, labs, procedures\nEvaluate OUD diagnosis and update the problem list (current OUD, in early remission, or in full sustained remission)\nFor patients with co-occurring pain, assess using a validated tool (e.g., PEG score)\nReview state PDMP\nUrine drug screen\nCBC, renal and hepatic function\nInfectious disease testing: tuberculosis, hepatitis B and C, HIV\nAssess psychological functioning, substance use, and any treatments received\nEvaluate for opioid withdrawal and cravings using objective scales (e.g., COWS, Opioid Craving Scale) 24\nPregnancy test (if child-bearing age)\nElectrocardiogram in patients at risk for QTc prolongation, e.g.:\nScreen for suicide risk using a validated tool (e.g., Columbia-Suicide Severity Rating Scale [C-SSRS] Screener) 26\n-hypokalemia, clinically unstable cardiac disease, personal or family history of Long QT Syndrome, or taking Class Ia or Class III antiarrhythmic drugs, or drugs that prolong the QT interval*\nOffer opioid overdose education and naloxone 25\nPDMP, prescription drug monitoring program; CBC, complete blood count; HIV, human immunodeficiency virus.\n*Buprenorphine mildly inhibits cardiac repolarization. 6 QTc prolongation has been observed in clinical studies with buprenorphine extended-release injection (Sublocade®). 11 Buprenorphine may be preferred over methadone in patients with QT prolongation or arrhythmia (Torsades de Pointes). 1,2\n\nva_pbm_bup_oud (VA, advisory, 2023-03)\nBuprenorphine for Opioid Use Disorder: Clinician Guide (IB 10-1498) > Diagnosis, assessment, treatment Concurrent conditions Databases, labs, procedures > REFERENCES\n[p 4]\n1. American Society of Addiction Medicine. The ASAM national practice guideline for the treatment of opioid use disorder: 2020 focused update. Rockville, MD: American Society of Addiction Medicine;2020. 2. Substance Abuse and Mental Health Services Administration. Medications for opioid use disorder. Treatment Improvement Protocol (TIP) Series 63, Full Document. Rockville, MD: Substance Abuse and Mental Health Services Administration;2020. 3. Kakko J, Svanborg KD, Kreek MJ, Heilig M. 1-year retention and social function after buprenorphine-assisted relapse prevention treatment for heroin dependence in Sweden: a randomised, placebo-controlled trial. Lancet. 2003;361(9358):662-668. 4. Evans EA, Zhu Y, Yoo C, Huang D, Hser YI. Criminal justice outcomes over 5 years after randomization to buprenorphine-naloxone or methadone treatment for opioid use disorder. Addiction. 2019;114(8):1396-1404. 5. Schackman BR, Leff JA, Botsko M, et al. The cost of integrated HIV care and buprenorphine/ naloxone treatment: results of a cross-site evaluation. J Acquir Immune Defic Syndr. 2011;56 Suppl 1(Suppl 1):S76-S82. 6. Buprenorphine Formulations for Chronic Pain Management in Patients with Opioid Use Disorder or on Long-Term Opioid Therapy with Physiologic Tolerance: Buprenorphine Inj, Buprenorphine TDS, Buprenorphine SL Film, Buprenorphine/Naloxone SL tabs Recommendations for Use. March 2020. VA Pharmacy Benefits Management Services, Medical Advisory Panel, and VISN Pharmacist Executives; National Mental Health Office - Substance Use Disorders; National Pain Management Strategic Coordinating Committee. Accessed Jan 4, 2021. 7. The Management of Substance Abuse Disorders Work Group. VA/DOD Clinical practice guideline for the management of substance use disorders. VA/DoD. 2015;Version 3.0(December 2015):1-169. 8. Reckitt Benckiser Pharmaceuticals, Inc. Buprenorphine and naloxone (Suboxone) [package insert]. U.S. Food and Drug Administration Website. https://www.accessdata.fda.gov/drugsatfda_docs/label/2011/020733s007s008lbl.pdf. Issued December 2011. Accessed February 2, 2021. 9. Indivior, Inc. Buprenorphine and naloxone (Suboxone) [package insert]. U.S. Food and Drug Administration Website. https://www.accessdata.fda.gov/drugsatfda_docs/label/2021/022410s042lbl.pdf. Revised October 2019. Accessed August 30, 2020. 10. Indivior, Inc. Buprenorphine (Subutex) [package insert]. U.S. Food and Drug Administration Website. https://www.accessdata.fda.gov/drugsatfda_docs/label/2011/020732s006s007lbl.pdf. Revised Oct 2019. Accessed August 30, 2020. 11. Indivior, Inc. Buprenorphine (Sublocade) [package insert]. U.S. Food and Drug Administration Website. https://www.accessdata.fda.gov/drugsatfda_docs/label/2020/209819s012lbl.pdf. Revised February 2020. Accessed August 30, 2020. 12. Danilewitz M, McLean M. High-dose buprenorphine for treatment of high potency opioid use disorder. Drug Alcohol Rev. 2020;39(2):135-137. 13. Ahmadi J, Sarani EM, Jahromi MS. Rapid effect of a single-dose buprenorphine on reduction of opioid craving and suicidal ideation: A randomized, double blind, placebo-controlled study. Ci Ji Yi Xue Za Zhi. 2019;32(1):58-64. 14. Ahmadi J, Jahromi MS, Ghahremani D, London ED. Single high-dose buprenorphine for opioid craving during withdrawal. Trials. 2018;19(1):675. 15. Ahmadi J, Jahromi MS, Ehsaei Z. The effectiveness of different singly administered high doses of buprenorphine in reducing suicidal ideation in acutely depressed people with co-morbid opiate dependence: a randomized, double-blind, clinical trial. Trials. 2018;19(1):462. 16. BioDelivery Sciences International, Inc. Buprenorphine and naloxone (Bunavail) [package insert]. U.S. Food and Drug Administration Website. https://www.accessdata.fda.gov/drugsatfda_docs/label/2019/205637s020lbl.pdf. Revised Oct 2019. Accessed August 30, 2020. 17. Orexo US, Inc. Buprenorphine and naloxone (Zubsolv) [package insert]. U.S. Food and Drug Administration Website. https://www.accessdata.fda.gov/drugsatfda_docs/label/2019/204242s017lbl.pdf. Revised October 2019. Accessed August 30, 2020. 18. TEVA Pharmaceuticals USA, Inc. Bupr"
+    ]
+  },
+  "cost_note": "each call priced at its serving role's rates (llm.<role>.prices_per_mtok)",
+  "request_started_utc": "2026-10-18T13:07:41.961419+00:00",
+  "citation_check": {
+    "t_start": 14.618,
+    "duration_s": 0.001
+  }
+}

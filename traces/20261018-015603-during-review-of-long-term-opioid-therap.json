@@ -1,0 +1,431 @@
+{
+  "question": "During review of long-term opioid therapy, there is evidence of diversion. What does the VA/DoD algorithm direct?",
+  "status": "answered",
+  "assumption": "Assuming the VA/DoD Opioids CPG (2022, v4.0) Module C algorithm.",
+  "answer": "Assuming the VA/DoD Opioids CPG (2022) Module C: if SUD signs are absent (Box 33 = No) and diversion is evident (Box 35 = Yes), Box 36 directs:\n\n1. Address safety and misuse.\n2. Assess for elevated suicide risk.\n3. Assess for withdrawal symptoms. Offer expedited taper, immediate discontinuation, or medically-assisted withdrawal as indicated.\n4. Keep monitoring for SUD and behavioral health comorbidities, and offer treatment as indicated.\n5. Consider switching to a partial agonist opioid, or tapering to discontinuation (Sidebar J).\n6. Manage with non-opioid modalities.\n7. Exit the algorithm.\n\nIf SUD signs are present, Box 34 applies instead. The CPG is advisory guidance.",
+  "citations": [
+    {
+      "doc_id": "va_dod_cpg_opioids_2022",
+      "page": 27,
+      "link": "https://www.healthquality.va.gov/guidelines/Pain/cot/VADoDOpioidsCPG.pdf#page=27",
+      "flag": null,
+      "locator": "va_dod_cpg_opioids_2022:p27"
+    },
+    {
+      "doc_id": "va_dod_cpg_opioids_2022",
+      "page": 156,
+      "link": "https://www.healthquality.va.gov/guidelines/Pain/cot/VADoDOpioidsCPG.pdf#page=156",
+      "flag": null,
+      "locator": "va_dod_cpg_opioids_2022:p156"
+    },
+    {
+      "doc_id": "va_dod_cpg_opioids_2022",
+      "page": 30,
+      "link": "https://www.healthquality.va.gov/guidelines/Pain/cot/VADoDOpioidsCPG.pdf#page=30",
+      "flag": null,
+      "locator": "va_dod_cpg_opioids_2022:p30"
+    }
+  ],
+  "conflicts_noted": [],
+  "flags": [],
+  "needs_review": false,
+  "words": {
+    "displayed": 105,
+    "rendered": 105
+  },
+  "answered_by": "claude-sonnet-5-5",
+  "fallback_used": false,
+  "timing_s": {
+    "total": 6.015,
+    "search": 0.434,
+    "search_cold": 0,
+    "search_warm": 0.434,
+    "read_page": 0,
+    "list_documents": 0,
+    "model_calls": [
+      1.423,
+      4.158
+    ]
+  },
+  "index_warm_at_start": true,
+  "lookups": 1,
+  "tokens": {
+    "input": 6,
+    "output": 678,
+    "cache_read": 3609,
+    "cache_write": 22950
+  },
+  "cost_usd": 0.064889,
+  "pages_seen": [
+    "va_dod_cpg_opioids_2022:p127",
+    "va_dod_cpg_opioids_2022:p128",
+    "va_dod_cpg_opioids_2022:p155",
+    "va_dod_cpg_opioids_2022:p156",
+    "va_dod_cpg_opioids_2022:p157",
+    "va_dod_cpg_opioids_2022:p26",
+    "va_dod_cpg_opioids_2022:p27",
+    "va_dod_cpg_opioids_2022:p30",
+    "va_dod_cpg_opioids_2022:p31",
+    "va_dod_cpg_opioids_2022:p33",
+    "va_dod_cpg_opioids_2022:p34",
+    "va_dod_cpg_opioids_2022:p38",
+    "va_dod_cpg_opioids_2022:p39",
+    "va_dod_cpg_opioids_2022:p50",
+    "va_dod_cpg_opioids_2022:p51",
+    "va_dod_cpg_opioids_2022:p52",
+    "va_dod_cpg_opioids_2022:p54",
+    "va_dod_cpg_opioids_2022:p55"
+  ],
+  "started_at": "2026-10-18T05:56:03+00:00",
+  "config": {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium",
+    "setup": "docling_norerank_structured",
+    "max_tool_calls": 6,
+    "deadline_s": 25,
+    "search_k": 8
+  },
+  "structured_lookups": true,
+  "model_calls": [
+    {
+      "t_start": 0.0,
+      "duration_s": 1.423,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 4,
+        "output": 116,
+        "cache_read": 0,
+        "cache_write": 3609
+      }
+    },
+    {
+      "t_start": 1.857,
+      "duration_s": 4.158,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 2,
+        "output": 562,
+        "cache_read": 3609,
+        "cache_write": 19341
+      }
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "search_documents",
+      "input": {
+        "query": "long-term opioid therapy evidence of diversion algorithm discontinue taper",
+        "program": "VA",
+        "k": 8
+      },
+      "duration_s": 0.434,
+      "is_error": false,
+      "pages": [
+        "va_dod_cpg_opioids_2022:p127",
+        "va_dod_cpg_opioids_2022:p128",
+        "va_dod_cpg_opioids_2022:p155",
+        "va_dod_cpg_opioids_2022:p156",
+        "va_dod_cpg_opioids_2022:p157",
+        "va_dod_cpg_opioids_2022:p26",
+        "va_dod_cpg_opioids_2022:p27",
+        "va_dod_cpg_opioids_2022:p30",
+        "va_dod_cpg_opioids_2022:p31",
+        "va_dod_cpg_opioids_2022:p33",
+        "va_dod_cpg_opioids_2022:p34",
+        "va_dod_cpg_opioids_2022:p38",
+        "va_dod_cpg_opioids_2022:p39",
+        "va_dod_cpg_opioids_2022:p50",
+        "va_dod_cpg_opioids_2022:p51",
+        "va_dod_cpg_opioids_2022:p52",
+        "va_dod_cpg_opioids_2022:p54",
+        "va_dod_cpg_opioids_2022:p55"
+      ],
+      "index_loaded": true,
+      "search": {
+        "original_query": "During review of long-term opioid therapy, there is evidence of diversion. What does the VA/DoD algorithm direct?",
+        "agent_query": "long-term opioid therapy evidence of diversion algorithm discontinue taper",
+        "executed": [
+          {
+            "source": "original",
+            "query": "During review of long-term opioid therapy, there is evidence of diversion. What does the VA/DoD algorithm direct?",
+            "program": "VA",
+            "k": 8,
+            "seconds": 0.279,
+            "cached": false,
+            "results": 8
+          },
+          {
+            "source": "agent",
+            "query": "long-term opioid therapy evidence of diversion algorithm discontinue taper",
+            "program": "VA",
+            "k": 8,
+            "seconds": 0.431,
+            "cached": false,
+            "results": 8
+          }
+        ],
+        "duplicates_merged": 6,
+        "returned": 10,
+        "from_both": 6,
+        "from_original_only": 2,
+        "from_agent_only": 2,
+        "provenance": [
+          {
+            "unit": "va_dod_cpg_opioids_2022:s117",
+            "found_by": {
+              "original": 1,
+              "agent": 1
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s21",
+            "found_by": {
+              "original": 2,
+              "agent": 2
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s34",
+            "found_by": {
+              "original": 3,
+              "agent": 7
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s45",
+            "found_by": {
+              "original": 5,
+              "agent": 6
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s27",
+            "found_by": {
+              "original": 6,
+              "agent": 5
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s96",
+            "found_by": {
+              "original": 4,
+              "agent": 8
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s20",
+            "found_by": {
+              "agent": 3
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s31",
+            "found_by": {
+              "agent": 4
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s37",
+            "found_by": {
+              "original": 7
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s48",
+            "found_by": {
+              "original": 8
+            }
+          }
+        ],
+        "hits": [
+          {
+            "unit": "va_dod_cpg_opioids_2022:s117",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              155,
+              156,
+              157
+            ],
+            "ranks": {
+              "original": 1,
+              "agent": 1
+            },
+            "scores": {
+              "original": 0.0323,
+              "agent": 0.0325
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s21",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              27
+            ],
+            "ranks": {
+              "original": 2,
+              "agent": 2
+            },
+            "scores": {
+              "original": 0.0308,
+              "agent": 0.0313
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s34",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              33,
+              34
+            ],
+            "ranks": {
+              "original": 3,
+              "agent": 7
+            },
+            "scores": {
+              "original": 0.0255,
+              "agent": 0.024
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s45",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              50,
+              51,
+              52
+            ],
+            "ranks": {
+              "original": 5,
+              "agent": 6
+            },
+            "scores": {
+              "original": 0.0242,
+              "agent": 0.0241
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s27",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              30
+            ],
+            "ranks": {
+              "original": 6,
+              "agent": 5
+            },
+            "scores": {
+              "original": 0.0224,
+              "agent": 0.0249
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s96",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              127,
+              128
+            ],
+            "ranks": {
+              "original": 4,
+              "agent": 8
+            },
+            "scores": {
+              "original": 0.025,
+              "agent": 0.0231
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s20",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              26
+            ],
+            "ranks": {
+              "agent": 3
+            },
+            "scores": {
+              "agent": 0.0258
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s31",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              31
+            ],
+            "ranks": {
+              "agent": 4
+            },
+            "scores": {
+              "agent": 0.0254
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s37",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              38,
+              39
+            ],
+            "ranks": {
+              "original": 7
+            },
+            "scores": {
+              "original": 0.022
+            }
+          },
+          {
+            "unit": "va_dod_cpg_opioids_2022:s48",
+            "doc_id": "va_dod_cpg_opioids_2022",
+            "pages": [
+              54,
+              55
+            ],
+            "ranks": {
+              "original": 8
+            },
+            "scores": {
+              "original": 0.0219
+            }
+          }
+        ]
+      },
+      "t_start": 1.424
+    }
+  ],
+  "cited_evidence": {
+    "va_dod_cpg_opioids_2022:p27": "va_dod_cpg_opioids_2022 (VA, advisory, 2022-05)\nVA/DoD Clinical Practice Guideline for the Use of Opioids in the Management of Chronic Pain (Version 4.0) > VIII. Algorithm > C. Module C: Maintaining, Tapering, Discontinuing, or Switching from Full Agonist Opioids\n[p 27]\n[Figure, flowchart] untitled in the image; see the section heading (PDF page 27). Machine-generated visual interpretation; status: machine-interpreted from the page image by a vision model; compared box by box against the page image (not clinician-verified).\nBox 31 (start): Indication to maintain, taper, discontinue, or switch from full agonist opioids (see Sidebars H and I) -> then box 32\nBox 32 (action): Repeat comprehensive biopsychosocial assessment (see Sidebars A and C) -> then box 33\nBox 33 (decision): Does the patient demonstrate signs or symptoms of SUD? (see VA/DoD SUD CPG*) -> if Yes: box 34; if No: box 35\nBox 34 (end): • Initiate or refer to SUD treatment with appropriate monitoring and follow-up (e.g., MOUD, treatment for comorbidities) (see VA/DoD SUD CPG*) • Consider switch to partial agonist opioids or taper opioids to discontinuation (see Sidebar J) • Manage with non-opioid modalities (see Sidebar B) • Exit algorithm\nBox 35 (decision): Is there evidence of diversion?** -> if Yes: box 36; if No: box 37\nBox 36 (end): • Address safety and misuse • Assess for elevated suicide risk • Assess for withdrawal symptoms and offer expedited taper, immediate discontinuation, or medically-assisted withdrawal as indicated • Continue to monitor for SUD and behavioral health comorbidities and offer treatment as indicated (see VA/DoD SUD CPG* and Academic Detailing Tapering Document) • Consider switch to partial agonist opioids or taper opioids to discontinuation (see Sidebar J) • Manage with non-opioid modalities (see Sidebar B) • Exit algorithm\nBox 37 (decision): Is there high risk or dangerous behavior (e.g., intentional/self-harm overdose event, accidents, threatening provider)? -> if Yes: box 36; if No: box 38\nBox 38 (action): Develop individualized treatment plan (including pace of tapering if applicable and setting of care) based on patient and treatment characteristics (see Sidebar J and Recommendations 12 and 13) -> then box 39\nBox 39 (action): • Follow-up as clinically indicated after each change in dosage and after discontinuation, considering patient and treatment characteristics • Consider the following at each interaction with patient: ▪ Educate on self-management and risks of opioids (see Sidebar K) ▪ Optimize whole person approach to pain care ▪ Optimize treatment of co-occurring behavioral health conditions ▪ Optimize non-opioid pain treatment modalities ▪ Reassess for OUD and readiness for OUD treatment as indicated • If continuing treatment with opioids, use the following approach: ▪ Shortest duration ▪ Use lowest effective dose (recognizing that no dose is completely safe and overdose risk increases at doses >20 – 50 mg MEDD) (see Sidebar L) ▪ Continual assessment of improvement in pain and functional status and adverse effects -> then box 40\nBox 40 (decision): Are one of the following present? • Patient resistance to taper • High risk or dangerous behaviors (including elevated risk of suicide) • Increase in patient distress -> if Yes: box 32; if No: box 39\nDecision path: 31 -> 32 -> 33 -> [Yes] 34\nDecision path: 31 -> 32 -> 33 -> [No] 35 -> [Yes] 36\nDecision path: 31 -> 32 -> 33 -> [No] 35 -> [No] 37 -> [Yes] 36\nDecision path: 31 -> 32 -> 33 -> [No] 35 -> [No] 37 -> [No] 38 -> 39 -> 40 -> [Yes] back to box 32\nDecision path: 31 -> 32 -> 33 -> [No] 35 -> [No] 37 -> [No] 38 -> 39 -> 40 -> [No] back to box 39\nAbbreviations: MEDD: morphine equivalent daily dose; mg: milligram(s); MOUD: medication for opioid use disorder; OUD: opioid use disorder; SUD: substance use disorders; VA/DoD SUD CPG: VA/DoD Clinical Practice Guideline for the Management of Substance Use Disorders",
+    "va_dod_cpg_opioids_2022:p156": "va_dod_cpg_opioids_2022 (VA, advisory, 2022-05)\nVA/DoD Clinical Practice Guideline for the Use of Opioids in the Management of Chronic Pain (Version 4.0) > Appendix J: Alternative Text Descriptions of Algorithm > C. Module C: Maintaining, Tapering, Discontinuing, or Switching from Full agonist Opioids\n[p 155]\nIf the answer is \"Yes\" to Box 21, then Box 23, in the shape of a hexagon, asks the question: \"Is there clinically meaningful improvement in function and pain that outweighs risks?\"\nIf the answer is \"No\" to Box 23, then continue to Box 22.\nIf the answer is \"Yes\" to Box 23, then Box 24, in the shape of a hexagon, asks the question: \"Is the patent sufficiently medically and behaviorally stable to continue opioid medication?\"\nIf the answer is \"No\" to Box 24, then continue to Box 25, in the shape of a rectangle: \"Provide medical and/or behavioral health treatment to stabilize as indicated; consider tapering opioids to discontinuation (consult Module C)\"\nIf the answer is \"Yes\" to Box 24, then Box 26, in the shape of a hexagon, asks the question: \"Are there factors that increase risks of opioids (e.g., non-adherence, co-occurring conditions, indications of OUD)\"\nIf the answer is \"No\" to Box 26, then continue to Box 28, in the shape of a rectangle: \"Reassess in 1-3 months or more frequently as determined by patient risk factors (see Sidebar G)\". This connects back to Box 20.\nIf the answer is \"Yes\" to Box 26, then continue to Box 27, in the shape of a rectangle: \"Consider one or more of the following:\nShortening prescribing interval\nIntensifying risk mitigation strategies (see Sidebar E)\nReferring to interdisciplinary care\nConsulting with or referring to specialty care\nSwitching to partial agonist opioids\nSee VA/DoD SUD CPG if there are indications of OUD\"; VA/DoD SUD CPG is available here: https://www.healthquality.va.gov/\nBox 27 connects to Box 29, in the shape of a hexagon, and asks the question: \"Are there indications to discontinue or taper? (see Sidebar F)\"\nIf the answer is \"No\" to Box 29, then continue to Box 28.\nIf the answer is \"Yes\" to Box 29, then continue to Box 30, in the shape of an oval: \"Taper to reduced dose or taper to discontinuation; proceed to Module C\"\nModule C begins with Box 31 in the shape of a rounded rectangle: \"Indication to maintain, taper, discontinue, or switch from full agonist opioids (see Sidebars H and I)\"\nBox 31 connects to Box 32, in the shape of a rectangle: \"Repeat comprehensive biopsychosocial assessment (see Sidebars A and C)\"\n[p 156]\nBox 32 connects to Box 33, in the shape of a hexagon, and asks the question: \"Does the patient demonstrate signs or symptoms of SUD? (VA/DoD SUD CPG is available here: https://www.healthquality.va.gov/)\"\nIf the answer is \"Yes\" to Box 33, then continue to Box 34, in the shape of a rectangle:\n\"Initiate or refer to SUD treatment with appropriate monitoring and follow-up (e.g., MOUD, treatment for comorbidities) (VA/DoD SUD CPG is available here: https://www.healthquality.va.gov/)\"\nConsider switch to partial agonist opioids or taper opioids to discontinuation (see Sidebar J)\nManage with non-opioid modalities (see Sidebar B)\nExit algorithm\"\nIf the answer is \"No\" to Box 33, then Box 35, in the shape of a hexagon, asks the question: \"Is there evidence of diversion (according to the CDC, drug diversion is when prescription medicines are obtained or used illegally)?\"\nIf the answer is \"Yes\" to Box 35, then continue to Box 36, in the shape of a rectangle:\n\"Address safety and misuse\nAssess for elevated suicide risk\nAssess for withdrawal symptoms and offer expedited taper, immediate discontinuation, or medically-assisted withdrawal as indicated\nContinue to monitor for SUD and behavioral health comorbidities and offer treatment as indicated (VA/DoD SUD CPG is available here: https://www.healthquality.va.gov/ and Academic Detailing Tapering Document)\nConsider switch to partial agonist opioids or taper opioids to discontinuation (see Sidebar J)\nManage with non-opioid modalities (see Sidebar B)\nExit algorithm\"\nIf the answer is \"No\" to Box 35, then Box 37, in the shape of a hexagon, asks the question: \"Is there high risk or dangerous behavior (e.g., intentional/self-harm overdose event, accidents, threatening provider)?\"\nIf the answer is \"Yes\" to Box 37, then continue to Box 36.\nIf the answer is \"No\" to Box 37, then continue to Box 38, in the shape of a rectangle: \"Develop individualized treatment plan (including pace of tapering if applicable and setting of care) based on patient and treatment characteristics (see Sidebar J and Recommendations 12 and 13)\"\n[p 157]\nBox 38 connects to Box 39, in the shape of a rectangle:\n\"Follow-up as clinically indicated after each change in dosage and after discontinuation, considering patient and treatment characteristics.\nConsider the following at each interaction with patient:\n¨ Educate on self-management and risks of opioids (see Sidebar K)\n¨ Optimize whole person approach to pain care\n¨ Optimize treatment of co-occurring behavioral health conditions\n¨ Optimize non-opioid pain treatment modalities\n¨ Reassess for OUD and readiness for OUD treatment as indicated\nIf continuing treatment with opioids, use the following approach:\n¨ Shortest duration\n¨ Use lowest effective dose (recognizing that no dose is completely safe and overdose risk increases at doses >20 - 50 mg MEDD) (see Sidebar L)\n¨ Continual assessment of improvement in pain and functional status and adverse effects\"\nBox 39 connects to Box 40, in the shape of a hexagon, and asks the question: \"Are one of the following present?\nPatient resistance to taper\nHigh risk or dangerous behaviors (including elevated risk of suicide)\nIncrease in patient distress\"\nIf the answer is \"No\" to Box 40, then continue to Box 39.\nIf the answer is \"Yes\" to Box 40, then continue to Box 32.",
+    "va_dod_cpg_opioids_2022:p30": "va_dod_cpg_opioids_2022 (VA, advisory, 2022-05)\nVA/DoD Clinical Practice Guideline for the Use of Opioids in the Management … 4.0) > VIII. Algorithm > C. Module C: Maintaining, Tapering, Discontinuing, or Switching from Full Agonist Opioids > Sidebar F: Considerations for Tapering, Dosage Reduction, and Discontinuation\n[p 30]\nPatient preference\nPatient characteristics and needs\nLack of clinically meaningful improvement in functional goals (review treatment goals at onset of treatment)\nConcomitant use of medications that increase risk of overdose\nCo-occurring medical or behavioral health conditions, including SUD, that increase risk\nPatient non-compliance with opioid safety measures and opioid risk mitigation strategies\nPatient non-participation in a comprehensive pain care plan\nHigher dosage which increases risk of adverse events (see Sidebar L)\nPain condition not effectively treated with opioids (e.g., back pain with normal MRI; fibromyalgia)\nImprovement in the underlying pain condition being treated\nSignificant side effects\nExperiences overdose or other serious adverse events\nDiversion\nAbbreviations: MRI: magnetic resonance imaging"
+  },
+  "cited_evidence_parts": {
+    "va_dod_cpg_opioids_2022:p27": [
+      "va_dod_cpg_opioids_2022 (VA, advisory, 2022-05)\nVA/DoD Clinical Practice Guideline for the Use of Opioids in the Management of Chronic Pain (Version 4.0) > VIII. Algorithm > C. Module C: Maintaining, Tapering, Discontinuing, or Switching from Full Agonist Opioids\n[p 27]\n[Figure, flowchart] untitled in the image; see the section heading (PDF page 27). Machine-generated visual interpretation; status: machine-interpreted from the page image by a vision model; compared box by box against the page image (not clinician-verified).\nBox 31 (start): Indication to maintain, taper, discontinue, or switch from full agonist opioids (see Sidebars H and I) -> then box 32\nBox 32 (action): Repeat comprehensive biopsychosocial assessment (see Sidebars A and C) -> then box 33\nBox 33 (decision): Does the patient demonstrate signs or symptoms of SUD? (see VA/DoD SUD CPG*) -> if Yes: box 34; if No: box 35\nBox 34 (end): • Initiate or refer to SUD treatment with appropriate monitoring and follow-up (e.g., MOUD, treatment for comorbidities) (see VA/DoD SUD CPG*) • Consider switch to partial agonist opioids or taper opioids to discontinuation (see Sidebar J) • Manage with non-opioid modalities (see Sidebar B) • Exit algorithm\nBox 35 (decision): Is there evidence of diversion?** -> if Yes: box 36; if No: box 37\nBox 36 (end): • Address safety and misuse • Assess for elevated suicide risk • Assess for withdrawal symptoms and offer expedited taper, immediate discontinuation, or medically-assisted withdrawal as indicated • Continue to monitor for SUD and behavioral health comorbidities and offer treatment as indicated (see VA/DoD SUD CPG* and Academic Detailing Tapering Document) • Consider switch to partial agonist opioids or taper opioids to discontinuation (see Sidebar J) • Manage with non-opioid modalities (see Sidebar B) • Exit algorithm\nBox 37 (decision): Is there high risk or dangerous behavior (e.g., intentional/self-harm overdose event, accidents, threatening provider)? -> if Yes: box 36; if No: box 38\nBox 38 (action): Develop individualized treatment plan (including pace of tapering if applicable and setting of care) based on patient and treatment characteristics (see Sidebar J and Recommendations 12 and 13) -> then box 39\nBox 39 (action): • Follow-up as clinically indicated after each change in dosage and after discontinuation, considering patient and treatment characteristics • Consider the following at each interaction with patient: ▪ Educate on self-management and risks of opioids (see Sidebar K) ▪ Optimize whole person approach to pain care ▪ Optimize treatment of co-occurring behavioral health conditions ▪ Optimize non-opioid pain treatment modalities ▪ Reassess for OUD and readiness for OUD treatment as indicated • If continuing treatment with opioids, use the following approach: ▪ Shortest duration ▪ Use lowest effective dose (recognizing that no dose is completely safe and overdose risk increases at doses >20 – 50 mg MEDD) (see Sidebar L) ▪ Continual assessment of improvement in pain and functional status and adverse effects -> then box 40\nBox 40 (decision): Are one of the following present? • Patient resistance to taper • High risk or dangerous behaviors (including elevated risk of suicide) • Increase in patient distress -> if Yes: box 32; if No: box 39\nDecision path: 31 -> 32 -> 33 -> [Yes] 34\nDecision path: 31 -> 32 -> 33 -> [No] 35 -> [Yes] 36\nDecision path: 31 -> 32 -> 33 -> [No] 35 -> [No] 37 -> [Yes] 36\nDecision path: 31 -> 32 -> 33 -> [No] 35 -> [No] 37 -> [No] 38 -> 39 -> 40 -> [Yes] back to box 32\nDecision path: 31 -> 32 -> 33 -> [No] 35 -> [No] 37 -> [No] 38 -> 39 -> 40 -> [No] back to box 39\nAbbreviations: MEDD: morphine equivalent daily dose; mg: milligram(s); MOUD: medication for opioid use disorder; OUD: opioid use disorder; SUD: substance use disorders; VA/DoD SUD CPG: VA/DoD Clinical Practice Guideline for the Management of Substance Use Disorders"
+    ],
+    "va_dod_cpg_opioids_2022:p156": [
+      "va_dod_cpg_opioids_2022 (VA, advisory, 2022-05)\nVA/DoD Clinical Practice Guideline for the Use of Opioids in the Management of Chronic Pain (Version 4.0) > Appendix J: Alternative Text Descriptions of Algorithm > C. Module C: Maintaining, Tapering, Discontinuing, or Switching from Full agonist Opioids\n[p 155]\nIf the answer is \"Yes\" to Box 21, then Box 23, in the shape of a hexagon, asks the question: \"Is there clinically meaningful improvement in function and pain that outweighs risks?\"\nIf the answer is \"No\" to Box 23, then continue to Box 22.\nIf the answer is \"Yes\" to Box 23, then Box 24, in the shape of a hexagon, asks the question: \"Is the patent sufficiently medically and behaviorally stable to continue opioid medication?\"\nIf the answer is \"No\" to Box 24, then continue to Box 25, in the shape of a rectangle: \"Provide medical and/or behavioral health treatment to stabilize as indicated; consider tapering opioids to discontinuation (consult Module C)\"\nIf the answer is \"Yes\" to Box 24, then Box 26, in the shape of a hexagon, asks the question: \"Are there factors that increase risks of opioids (e.g., non-adherence, co-occurring conditions, indications of OUD)\"\nIf the answer is \"No\" to Box 26, then continue to Box 28, in the shape of a rectangle: \"Reassess in 1-3 months or more frequently as determined by patient risk factors (see Sidebar G)\". This connects back to Box 20.\nIf the answer is \"Yes\" to Box 26, then continue to Box 27, in the shape of a rectangle: \"Consider one or more of the following:\nShortening prescribing interval\nIntensifying risk mitigation strategies (see Sidebar E)\nReferring to interdisciplinary care\nConsulting with or referring to specialty care\nSwitching to partial agonist opioids\nSee VA/DoD SUD CPG if there are indications of OUD\"; VA/DoD SUD CPG is available here: https://www.healthquality.va.gov/\nBox 27 connects to Box 29, in the shape of a hexagon, and asks the question: \"Are there indications to discontinue or taper? (see Sidebar F)\"\nIf the answer is \"No\" to Box 29, then continue to Box 28.\nIf the answer is \"Yes\" to Box 29, then continue to Box 30, in the shape of an oval: \"Taper to reduced dose or taper to discontinuation; proceed to Module C\"\nModule C begins with Box 31 in the shape of a rounded rectangle: \"Indication to maintain, taper, discontinue, or switch from full agonist opioids (see Sidebars H and I)\"\nBox 31 connects to Box 32, in the shape of a rectangle: \"Repeat comprehensive biopsychosocial assessment (see Sidebars A and C)\"\n[p 156]\nBox 32 connects to Box 33, in the shape of a hexagon, and asks the question: \"Does the patient demonstrate signs or symptoms of SUD? (VA/DoD SUD CPG is available here: https://www.healthquality.va.gov/)\"\nIf the answer is \"Yes\" to Box 33, then continue to Box 34, in the shape of a rectangle:\n\"Initiate or refer to SUD treatment with appropriate monitoring and follow-up (e.g., MOUD, treatment for comorbidities) (VA/DoD SUD CPG is available here: https://www.healthquality.va.gov/)\"\nConsider switch to partial agonist opioids or taper opioids to discontinuation (see Sidebar J)\nManage with non-opioid modalities (see Sidebar B)\nExit algorithm\"\nIf the answer is \"No\" to Box 33, then Box 35, in the shape of a hexagon, asks the question: \"Is there evidence of diversion (according to the CDC, drug diversion is when prescription medicines are obtained or used illegally)?\"\nIf the answer is \"Yes\" to Box 35, then continue to Box 36, in the shape of a rectangle:\n\"Address safety and misuse\nAssess for elevated suicide risk\nAssess for withdrawal symptoms and offer expedited taper, immediate discontinuation, or medically-assisted withdrawal as indicated\nContinue to monitor for SUD and behavioral health comorbidities and offer treatment as indicated (VA/DoD SUD CPG is available here: https://www.healthquality.va.gov/ and Academic Detailing Tapering Document)\nConsider switch to partial agonist opioids or taper opioids to discontinuation (see Sidebar J)\nManage with non-opioid modalities (see Sidebar B)\nExit algorithm\"\nIf the answer is \"No\" to Box 35, then Box 37, in the shape of a hexagon, asks the question: \"Is there high risk or dangerous behavior (e.g., intentional/self-harm overdose event, accidents, threatening provider)?\"\nIf the answer is \"Yes\" to Box 37, then continue to Box 36.\nIf the answer is \"No\" to Box 37, then continue to Box 38, in the shape of a rectangle: \"Develop individualized treatment plan (including pace of tapering if applicable and setting of care) based on patient and treatment characteristics (see Sidebar J and Recommendations 12 and 13)\"\n[p 157]\nBox 38 connects to Box 39, in the shape of a rectangle:\n\"Follow-up as clinically indicated after each change in dosage and after discontinuation, considering patient and treatment characteristics.\nConsider the following at each interaction with patient:\n¨ Educate on self-management and risks of opioids (see Sidebar K)\n¨ Optimize whole person approach to pain care\n¨ Optimize treatment of co-occurring behavioral health conditions\n¨ Optimize non-opioid pain treatment modalities\n¨ Reassess for OUD and readiness for OUD treatment as indicated\nIf continuing treatment with opioids, use the following approach:\n¨ Shortest duration\n¨ Use lowest effective dose (recognizing that no dose is completely safe and overdose risk increases at doses >20 - 50 mg MEDD) (see Sidebar L)\n¨ Continual assessment of improvement in pain and functional status and adverse effects\"\nBox 39 connects to Box 40, in the shape of a hexagon, and asks the question: \"Are one of the following present?\nPatient resistance to taper\nHigh risk or dangerous behaviors (including elevated risk of suicide)\nIncrease in patient distress\"\nIf the answer is \"No\" to Box 40, then continue to Box 39.\nIf the answer is \"Yes\" to Box 40, then continue to Box 32."
+    ],
+    "va_dod_cpg_opioids_2022:p30": [
+      "va_dod_cpg_opioids_2022 (VA, advisory, 2022-05)\nVA/DoD Clinical Practice Guideline for the Use of Opioids in the Management … 4.0) > VIII. Algorithm > C. Module C: Maintaining, Tapering, Discontinuing, or Switching from Full Agonist Opioids > Sidebar F: Considerations for Tapering, Dosage Reduction, and Discontinuation\n[p 30]\nPatient preference\nPatient characteristics and needs\nLack of clinically meaningful improvement in functional goals (review treatment goals at onset of treatment)\nConcomitant use of medications that increase risk of overdose\nCo-occurring medical or behavioral health conditions, including SUD, that increase risk\nPatient non-compliance with opioid safety measures and opioid risk mitigation strategies\nPatient non-participation in a comprehensive pain care plan\nHigher dosage which increases risk of adverse events (see Sidebar L)\nPain condition not effectively treated with opioids (e.g., back pain with normal MRI; fibromyalgia)\nImprovement in the underlying pain condition being treated\nSignificant side effects\nExperiences overdose or other serious adverse events\nDiversion\nAbbreviations: MRI: magnetic resonance imaging"
+    ]
+  },
+  "cost_note": "priced at the requested model's rates; a fallback hop bills at its own rates",
+  "request_id": "e8583a1e-1ae4-4e71-ab4c-c0c6551619a6",
+  "request_started_utc": "2026-10-18T05:55:57.413587+00:00",
+  "citation_check": {
+    "t_start": 6.015,
+    "duration_s": 0.0
+  },
+  "prices_per_mtok": {
+    "input": 2.0,
+    "output": 10.0,
+    "cache_read": 0.2,
+    "cache_write": 2.5
+  }
+}

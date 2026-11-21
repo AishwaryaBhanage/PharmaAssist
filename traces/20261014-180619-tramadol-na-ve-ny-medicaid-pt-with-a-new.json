@@ -1,0 +1,119 @@
+{
+  "question": "Tramadol-naïve NY Medicaid pt with a new Rx for tramadol ER. What do they have to try first?",
+  "status": "answered",
+  "assumption": "Assuming NY Medicaid (NYRx PDL, revised 9/14/2026).",
+  "answer": "Assuming NY Medicaid: a tramadol-naïve patient must first try an **IR tramadol formulation** before tramadol ER (or ConZip). Both tramadol ER and ConZip are Non-Preferred with ST on the Long-Acting Opioids PDL.\n\nAlso check:\n- Long-acting opioid initiation in opioid-naïve patients requires PA.\n- ≥90 MME/day for non-acute pain requires PA.\n- PA is required for patients <12 years.\n- The limit is 4 opioid Rxs per 30 days. Exemptions apply for cancer, sickle cell disease, hospice or palliative care.\n\nThe PDL doesn't state how long or how much of an IR trial is needed. The prescriber submits any PA, not the pharmacy.",
+  "citations": [
+    {
+      "doc_id": "ny_medicaid_pdl",
+      "page": 5,
+      "link": "https://newyork.fhsc.com/downloads/providers/NYRx_PDP_PDL.pdf#page=5",
+      "flag": null
+    },
+    {
+      "doc_id": "ny_medicaid_pdl",
+      "page": 6,
+      "link": "https://newyork.fhsc.com/downloads/providers/NYRx_PDP_PDL.pdf#page=6",
+      "flag": null
+    }
+  ],
+  "conflicts_noted": [],
+  "flags": [],
+  "answered_by": "claude-sonnet-5-5",
+  "fallback_used": false,
+  "timing_s": {
+    "total": 6.102,
+    "search": 0.071,
+    "search_cold": 0,
+    "search_warm": 0.071,
+    "read_page": 0,
+    "list_documents": 0,
+    "model_calls": [
+      2.328,
+      3.704
+    ]
+  },
+  "index_warm_at_start": true,
+  "lookups": 1,
+  "tokens": {
+    "input": 6,
+    "output": 595,
+    "cache_read": 2255,
+    "cache_write": 8508
+  },
+  "cost_usd": 0.027683,
+  "pages_seen": [
+    "ny_medicaid_pdl:p5",
+    "ny_medicaid_pdl:p6",
+    "ny_medicaid_pdl:p62",
+    "ny_medicaid_pdl:p63",
+    "ny_medicaid_pdl:p66",
+    "ny_medicaid_pdl:p68",
+    "ny_medicaid_pdl:p71",
+    "ny_medicaid_pharmacy_policy:p15",
+    "ny_medicaid_pharmacy_policy:p16"
+  ],
+  "started_at": "2026-10-14T22:06:19+00:00",
+  "config": {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium",
+    "setup": "baseline",
+    "max_tool_calls": 6,
+    "deadline_s": 25,
+    "search_k": 8
+  },
+  "model_calls": [
+    {
+      "duration_s": 2.328,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 4,
+        "output": 116,
+        "cache_read": 0,
+        "cache_write": 2255
+      }
+    },
+    {
+      "duration_s": 3.704,
+      "requested_model": "claude-sonnet-5-5",
+      "served_model": "claude-sonnet-5-5",
+      "fallback": false,
+      "stop_reason": "tool_use",
+      "usage": {
+        "input": 2,
+        "output": 479,
+        "cache_read": 2255,
+        "cache_write": 6253
+      }
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "search_documents",
+      "input": {
+        "query": "tramadol ER extended-release prior authorization step therapy try first",
+        "program": "NY Medicaid",
+        "k": 10
+      },
+      "duration_s": 0.071,
+      "is_error": false,
+      "pages": [
+        "ny_medicaid_pdl:p5",
+        "ny_medicaid_pdl:p68",
+        "ny_medicaid_pdl:p62",
+        "ny_medicaid_pdl:p66",
+        "ny_medicaid_pdl:p6",
+        "ny_medicaid_pdl:p5",
+        "ny_medicaid_pdl:p63",
+        "ny_medicaid_pdl:p71",
+        "ny_medicaid_pharmacy_policy:p16",
+        "ny_medicaid_pharmacy_policy:p15"
+      ],
+      "index_loaded": true
+    }
+  ],
+  "cost_note": "priced at the requested model's rates; a fallback hop bills at its own rates"
+}
