@@ -1,0 +1,20 @@
+# Overlay for deploy/docker-compose.yml: the two application images come from a public registry instead
+# of being built here (no Node, no multi-minute build; Intel and Apple Silicon). The checkout is still
+# needed because the seed service reads docs/, index/ and storage/figures from it. Run from
+# the repository root (the .env there is picked up by --env-file):
+#
+#   docker compose -f deploy/docker-compose.yml -f deploy/prebuilt.override.yml --env-file .env up
+#
+# Images: https://hub.docker.com/r/abhanage/pharmassist-v2-web and .../pharmassist-v2-ingest (public, arm64 + amd64).
+# PHARMASSIST_IMAGES selects another registry path, PHARMASSIST_TAG another tag (defaults below).
+services:
+  api:
+    image: ${PHARMASSIST_IMAGES:-docker.io/abhanage}/pharmassist-v2-web:${PHARMASSIST_TAG:-latest}
+    build: !reset null
+  migrate:
+    image: ${PHARMASSIST_IMAGES:-docker.io/abhanage}/pharmassist-v2-web:${PHARMASSIST_TAG:-latest}
+  seed:
+    image: ${PHARMASSIST_IMAGES:-docker.io/abhanage}/pharmassist-v2-web:${PHARMASSIST_TAG:-latest}
+  worker:
+    image: ${PHARMASSIST_IMAGES:-docker.io/abhanage}/pharmassist-v2-ingest:${PHARMASSIST_TAG:-latest}
+    build: !reset null

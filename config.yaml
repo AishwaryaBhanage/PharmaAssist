@@ -1,0 +1,174 @@
+# Settings that experiments change. Paths are relative to this file.
+# API keys never go here; they live in .env (git-ignored).
+
+paths:
+  docs: docs
+  reports: reports
+  index: index         # built indexes, one folder per setup (git-ignored)
+  traces: traces       # one JSON trace per ask() call (git-ignored)
+
+# The chunking the checked-in build (index/docling_sections) and the ingestion worker share:
+# pharmassist.ingest.pipeline.chunker_sizes follows chunks_from to the chunker's token sizes, which
+# are counted with bge-small's tokenizer so re-indexed chunks match the build's boundaries.
+setups:
+  docling_sections_bge:
+    chunker:
+      name: docling_sections
+      child_tokens: 350
+      overlap_tokens: 100
+      parent_max_tokens: 1500
+  docling_sections:
+    chunks_from: docling_sections_bge
+
+# The agent loop (agent/loop.py, agent/tools.py); the models and their prices are under llm.
+agent:
+  search_k: 8
+  max_tool_calls: 6         # search/read/list calls; submit_answer doesn't count
+  deadline_s: 25            # past this, the model is told to submit with what it has
+  prompt_extras: []        # optional prompt sections: multipart, checklist (agent/prompt.py PROMPT_EXTRAS; measured 2026-10-18, off)
+  min_lookups: 1            # 2 refuses an 'answered' submit after one lookup once (nudge to look again); measured 2026-10-18 with the completeness pass: no accuracy gain, +8 s p50
+  completeness_pass: false  # one extra model turn after an answered submit to add omitted limits/dates/steps; measured 2026-10-18: groundedness 0.937->0.942, hallucination 2.5%->1.2%, accuracy unchanged, p95 21->29 s, +57% cost -> off
+  completeness_min_remaining_s: 8   # the pass runs only when at least this many of the 30 s remain
+  read_page_chars: 8000     # read_page truncates longer pages
+  trace_evidence_chars: 6000  # per cited page kept in the trace for the offline checks
+
+# The staff web app (app/server.py): the agent behind POST /api/v1/ask; usage limits are under limits_v2.
+app:
+  timeout_s: 35                       # server-side ceiling per question, a little over the 30 s target
+  max_concurrent: 4                   # questions answered at once; more wait for a slot
+  question_chars: [3, 2000]           # accepted question length after trimming
+  max_body_bytes: 16384               # larger JSON requests get 413 (uploads are capped by uploads.max_bytes)
+
+# The eval runner (scripts/run_eval.py). The judge is a stronger Claude model than the agent's.
+eval:
+  golden: evals/golden.jsonl
+  judge_model: claude-opus-5-5
+  judge_effort: medium
+  judge_max_tokens: 8000
+  judge_passes: 3           # accuracy = majority grade; groundedness = the median pass
+  page_chars: 8000          # per cited page given to the groundedness judge (same cut as read_page)
+  answer_words: [60, 120]   # target answer length from REQUIREMENTS.md
+  prices_per_mtok: {input: 4.00, output: 20.00, cache_read: 0.20, cache_write: 5.00}
+  # optional offline deterministic checks (agent/offline.py; free): never on the live path
+  offline_checks:
+    enabled: false
+  # optional offline audit: one batched model call per answer, after it was given; never on the live path
+  claim_audit:
+    enabled: false
+    model: claude-sonnet-5-5
+    effort: low
+    max_tokens: 4000
+    timeout_s: 60
+    evidence_chars: 6000
+    prices_per_mtok: {input: 2.00, output: 10.00, cache_read: 0.20, cache_write: 2.50}
+
+# Figure extraction (scripts/extract_figures.py): one vision call per non-decorative image, cached.
+figures:
+  model: claude-opus-5-5          # the strongest vision model; ~20 figures, so cost stays small
+  max_tokens: 16000               # thinking is always on for this model and counts toward it
+  prices_per_mtok: {input: 4.00, output: 20.00}
+  max_spend_usd: 8.00             # the script stops before a call that would pass this
+
+# ============================================================================ v2 (DESIGN.md)
+# Values below are the v2 contracts: PostgreSQL + pgvector storage, OpenAI-first LLM routing, the
+# Valkey semantic cache, JWT auth and the queue-fed ingestion worker. Secrets stay in .env / SSM.
+
+llm:
+  primary:
+    provider: openai
+    model: gpt-5.5                      # newest general GPT-5 model on the account (2026-10-18)
+    effort: medium                      # reasoning effort
+    max_tokens: 8000                    # max_output_tokens includes reasoning tokens on the Responses API
+    # https://developers.openai.com/api/docs/pricing (read 2026-10-18): $5.00 input, $0.50 cached input,
+    # $30.00 output per 1M tokens under 272K context; cache writes aren't charged (cache_read is the
+    # cached-input rate). Long-context (>272K) rates are $10 / $1 / $45 and never apply to the agent.
+    prices_per_mtok: {input: 5.00, output: 30.00, cache_read: 0.50, cache_write: 0}
+  fallback:
+    provider: anthropic
+    model: claude-sonnet-5-5
+    effort: medium
+    max_tokens: 4096
+    refusal_fallback: true              # v1's server-side beta: an eligible Claude model answers a question Sonnet declines
+    prices_per_mtok: {input: 2.00, output: 10.00, cache_read: 0.20, cache_write: 2.50}
+  retry:
+    attempts: 2                         # primary attempts on a retryable error before falling back
+    backoff_s: 0.8
+  call_timeout_s: 25
+  embedding:
+    provider: openai
+    model: text-embedding-3-large
+    dimension: 3072
+    timeout_s: 20
+    batch_size: 128                     # texts per embedding request (ingestion)
+    max_retries: 3                      # retries of one batch on a transient error before the job is retried
+
+search:                                 # pharmassist.search.hybrid over PostgreSQL (replaces index.search's files)
+  mode: hybrid                          # dense | keyword | hybrid
+  rrf_k: 60
+  fusion_depth: 100
+  return_parents: true
+  rerank: null                          # off: the measured best under the 30 s rule (golden 0.85). Measured 2026-10-18:
+                                        # bge-reranker-large 19 s/search on CPU (depth 50); bge-reranker-base depth 20
+                                        # gave 0.70. To enable: {model: BAAI/bge-reranker-base, depth: 50, timeout_s: 8};
+                                        # the Dockerfile then bakes the model in and uvicorn needs --workers 1.
+  hnsw_ef_search: 80
+
+cache:
+  enabled: true
+  backend: valkey                       # valkey | memory | null
+  url_env: REDIS_URL                    # redis://host:6379/0 (ElastiCache Valkey; local docker-compose)
+  threshold: 0.90                       # cosine similarity for a hit
+  max_entries: 20000
+  ttl_days: 30
+  index_name: pa_answers               # the Valkey vector index
+
+auth:
+  jwt_secret_env: JWT_SECRET            # 256-bit random, from Secrets Manager / .env
+  access_token_minutes: 15
+  refresh_token_days: 14
+  refresh_cookie: pa_refresh
+  password_min_chars: 10
+  signup_enabled: true
+  default_role: staff
+
+database:
+  url_env: DATABASE_URL                 # postgresql://user:pass@host:5432/pharmassist
+  pool_min: 2
+  pool_max: 10
+  statement_timeout_ms: 20000
+
+queue:
+  backend: sqs                          # sqs | local (SQLite, for a laptop without ElasticMQ) | memory (tests)
+  queue_url_env: INGEST_QUEUE_URL
+  dlq_url_env: INGEST_DLQ_URL
+  endpoint_env: SQS_ENDPOINT_URL        # set for ElasticMQ locally; unset on AWS
+  visibility_timeout_s: 1800
+  heartbeat_s: 300                      # the worker extends visibility this often while a job runs
+  max_attempts: 3
+  retry_backoff_s: 30                   # base delay before a transient failure is retried (doubles per attempt)
+  shutdown_grace_s: 110                 # SIGTERM: finish the current job within this, below the task's stopTimeout
+  local_db: storage/queue.sqlite
+
+storage:
+  backend: s3                           # s3 | local (files under local_dir, for a laptop without S3/MinIO)
+  local_dir: storage/objects
+  bucket_env: PHARMASSIST_BUCKET
+  endpoint_env: S3_ENDPOINT_URL         # MinIO locally; unset on AWS
+  presign_seconds: 600
+  pdf_cache_dir: storage/pdf_cache      # read_page fetches source PDFs here on first use
+
+uploads:
+  max_bytes: 52428800                   # 50 MB
+  max_pages: 400
+  content_types: [application/pdf, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet]
+
+limits_v2:                              # per authenticated user, plus the global caps; counters in Valkey
+  per_user_per_minute: 10
+  per_user_per_day: 100
+  questions_per_day: 500
+  spend_usd_per_day: 10.00
+  estimate_usd: 0.08
+
+tracing_v2:
+  content: full                         # full: LangSmith gets question, answer, citations; metadata: v1 behaviour
+  project_env: LANGSMITH_PROJECT

@@ -1,0 +1,19 @@
+# Images hold code, config and the compiled frontend only; documents live in S3, data in PostgreSQL.
+**
+!src/
+!app/
+!db/
+!scripts/
+!frontend/
+!config.yaml
+!pyproject.toml
+!docs/catalog.yaml
+!docs/figure_reviews.yaml
+!deploy/aws/
+**/__pycache__
+**/*.pyc
+**/.pytest_cache
+frontend/node_modules
+frontend/dist
+frontend/.vite
+frontend/coverage

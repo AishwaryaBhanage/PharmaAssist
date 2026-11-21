@@ -1,0 +1,5 @@
+# `docker compose up --build` from this directory: the whole local stack (see deploy/docker-compose.yml
+# for the services and the header there for the one-time .env step). Kept here so compose finds .env.
+name: pharmassist
+include:
+  - deploy/docker-compose.yml

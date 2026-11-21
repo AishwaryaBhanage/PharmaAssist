@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <meta
+      name="description"
+      content="PharmAssist: cited answers to pharmacy policy and formulary questions for pharmacy staff."
+    />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <title>PharmAssist</title>
+    <script>
+      // Apply the stored theme before paint so there is no flash.
+      try {
+        var t = localStorage.getItem('pa_theme');
+        if (t === 'dark' || t === 'light') document.documentElement.dataset.theme = t;
+        else if (window.matchMedia('(prefers-color-scheme: dark)').matches)
+          document.documentElement.dataset.theme = 'dark';
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

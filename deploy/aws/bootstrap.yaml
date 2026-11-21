@@ -1,0 +1,294 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: >
+  pharmassist deploy identity, created once by an account administrator and re-applied for v2.
+  pharmassist-deployer is the role people and scripts assume to build, deploy and run one-off tasks;
+  it can touch only pharmassist* resources. CloudFormation changes the app stacks (v1 "pharmassist",
+  v2 "pharmassist-v2") through pharmassist-cfn-exec, so the deployer itself never needs broad IAM or
+  service permissions. Re-apply (as an administrator, from the repository root):
+    aws cloudformation deploy --stack-name pharmassist-bootstrap --template-file deploy/aws/bootstrap.yaml
+      --capabilities CAPABILITY_NAMED_IAM --tags Project=pharmassist
+
+Resources:
+  CfnExecRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: pharmassist-cfn-exec
+      Tags: [{Key: Project, Value: pharmassist}]
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement: [{Effect: Allow, Principal: {Service: cloudformation.amazonaws.com}, Action: sts:AssumeRole}]
+      Policies:
+        - PolicyName: pharmassist-resources
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              # ---- v1 (Lambda stack; stays until cutover) ----
+              - Effect: Allow
+                Action: dynamodb:*
+                Resource: !Sub arn:${AWS::Partition}:dynamodb:${AWS::Region}:${AWS::AccountId}:table/pharmassist-*
+              - Effect: Allow
+                Action: lambda:*
+                Resource: !Sub arn:${AWS::Partition}:lambda:${AWS::Region}:${AWS::AccountId}:function:pharmassist-*
+              - Effect: Allow
+                Action: logs:*
+                Resource:
+                  - !Sub arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/pharmassist-*
+                  - !Sub arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/ecs/pharmassist-*
+                  - !Sub arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/ec2/pharmassist-*
+              - Effect: Allow
+                Action: [logs:DescribeLogGroups, logs:ListTagsForResource]
+                Resource: "*"
+              - Effect: Allow
+                Action: [iam:CreateRole, iam:DeleteRole, iam:GetRole, iam:UpdateRole, iam:PassRole, iam:TagRole,
+                         iam:UntagRole, iam:UpdateAssumeRolePolicy, iam:PutRolePolicy, iam:DeleteRolePolicy,
+                         iam:GetRolePolicy, iam:ListRolePolicies, iam:ListAttachedRolePolicies,
+                         iam:AttachRolePolicy, iam:DetachRolePolicy, iam:ListInstanceProfilesForRole]
+                Resource: !Sub arn:${AWS::Partition}:iam::${AWS::AccountId}:role/pharmassist-*
+              - Effect: Allow   # v2: the EC2 instance profile
+                Action: [iam:CreateInstanceProfile, iam:DeleteInstanceProfile, iam:GetInstanceProfile,
+                         iam:AddRoleToInstanceProfile, iam:RemoveRoleFromInstanceProfile, iam:TagInstanceProfile,
+                         iam:UntagInstanceProfile]
+                Resource: !Sub arn:${AWS::Partition}:iam::${AWS::AccountId}:instance-profile/pharmassist-*
+              - Effect: Allow   # service-linked roles the v2 services create on first use (no-op when they exist)
+                Action: [iam:CreateServiceLinkedRole]
+                Resource: !Sub arn:${AWS::Partition}:iam::${AWS::AccountId}:role/aws-service-role/*
+                Condition:
+                  StringEquals:
+                    iam:AWSServiceName: [ecs.amazonaws.com, ecs.application-autoscaling.amazonaws.com,
+                                         elasticache.amazonaws.com, rds.amazonaws.com,
+                                         elasticloadbalancing.amazonaws.com, autoscaling.amazonaws.com]
+              - Effect: Allow
+                Action: s3:*
+                Resource: ["arn:aws:s3:::pharmassist-*", "arn:aws:s3:::pharmassist-*/*"]
+              - Effect: Allow
+                Action: [ecs:CreateCluster, ecs:DeleteCluster, ecs:DescribeClusters, ecs:UpdateCluster,
+                         ecs:PutClusterCapacityProviders, ecs:TagResource, ecs:UntagResource,
+                         ecs:RegisterTaskDefinition, ecs:DeregisterTaskDefinition, ecs:DescribeTaskDefinition,
+                         ecs:CreateService, ecs:UpdateService, ecs:DeleteService, ecs:DescribeServices]
+                Resource: "*"   # task-definition registration can't be scoped by name; clusters/services are pharmassist-* by template
+              - Effect: Allow
+                Action: [ecr:DescribeRepositories]
+                Resource: !Sub arn:${AWS::Partition}:ecr:${AWS::Region}:${AWS::AccountId}:repository/pharmassist-*
+              # ---- v2 (deploy/aws/v2/template.yaml) ----
+              - Effect: Allow   # security groups, Elastic IPs, launch templates: EC2 create calls have no name to scope on
+                Action: [ec2:Describe*, ec2:CreateSecurityGroup, ec2:DeleteSecurityGroup,
+                         ec2:AuthorizeSecurityGroupIngress, ec2:AuthorizeSecurityGroupEgress,
+                         ec2:RevokeSecurityGroupIngress, ec2:RevokeSecurityGroupEgress,
+                         ec2:UpdateSecurityGroupRuleDescriptionsIngress, ec2:UpdateSecurityGroupRuleDescriptionsEgress,
+                         ec2:AllocateAddress, ec2:ReleaseAddress, ec2:AssociateAddress, ec2:DisassociateAddress,
+                         ec2:CreateLaunchTemplate, ec2:CreateLaunchTemplateVersion, ec2:DeleteLaunchTemplate,
+                         ec2:DeleteLaunchTemplateVersions, ec2:ModifyLaunchTemplate, ec2:GetLaunchTemplateData,
+                         ec2:RunInstances, ec2:TerminateInstances, ec2:CreateTags, ec2:DeleteTags]
+                Resource: "*"
+              - Effect: Allow
+                Action: elasticloadbalancing:*
+                Resource:
+                  - !Sub arn:${AWS::Partition}:elasticloadbalancing:${AWS::Region}:${AWS::AccountId}:loadbalancer/app/pharmassist-*
+                  - !Sub arn:${AWS::Partition}:elasticloadbalancing:${AWS::Region}:${AWS::AccountId}:loadbalancer/net/pharmassist-*
+                  - !Sub arn:${AWS::Partition}:elasticloadbalancing:${AWS::Region}:${AWS::AccountId}:targetgroup/pharmassist-*
+                  - !Sub arn:${AWS::Partition}:elasticloadbalancing:${AWS::Region}:${AWS::AccountId}:listener/app/pharmassist-*
+                  - !Sub arn:${AWS::Partition}:elasticloadbalancing:${AWS::Region}:${AWS::AccountId}:listener/net/pharmassist-*
+                  - !Sub arn:${AWS::Partition}:elasticloadbalancing:${AWS::Region}:${AWS::AccountId}:listener-rule/app/pharmassist-*
+              - Effect: Allow
+                Action: [elasticloadbalancing:Describe*, elasticloadbalancing:SetWebAcl]
+                Resource: "*"   # Describe* has no resource-level support; SetWebAcl is called by WAF on association
+              - Effect: Allow
+                Action: wafv2:*
+                Resource:
+                  - !Sub arn:${AWS::Partition}:wafv2:${AWS::Region}:${AWS::AccountId}:regional/webacl/pharmassist-*
+                  - !Sub arn:${AWS::Partition}:wafv2:${AWS::Region}:${AWS::AccountId}:regional/managedruleset/*
+                  - !Sub arn:${AWS::Partition}:elasticloadbalancing:${AWS::Region}:${AWS::AccountId}:loadbalancer/app/pharmassist-*
+              - Effect: Allow
+                Action: [wafv2:ListWebACLs, wafv2:GetWebACLForResource, wafv2:CheckCapacity, wafv2:DescribeManagedRuleGroup,
+                         wafv2:ListTagsForResource]
+                Resource: "*"   # list/capacity checks have no resource
+              - Effect: Allow
+                Action: autoscaling:*
+                Resource: !Sub arn:${AWS::Partition}:autoscaling:${AWS::Region}:${AWS::AccountId}:autoScalingGroup:*:autoScalingGroupName/pharmassist-*
+              - Effect: Allow
+                Action: autoscaling:Describe*
+                Resource: "*"
+              - Effect: Allow
+                Action: application-autoscaling:*
+                Resource: "*"   # Application Auto Scaling has no usable resource ARNs for register/put-policy
+              - Effect: Allow
+                Action: rds:*
+                Resource:
+                  - !Sub arn:${AWS::Partition}:rds:${AWS::Region}:${AWS::AccountId}:db:pharmassist-*
+                  - !Sub arn:${AWS::Partition}:rds:${AWS::Region}:${AWS::AccountId}:subgrp:pharmassist-*
+                  - !Sub arn:${AWS::Partition}:rds:${AWS::Region}:${AWS::AccountId}:snapshot:pharmassist-*
+                  - !Sub arn:${AWS::Partition}:rds:${AWS::Region}:${AWS::AccountId}:pg:*
+              - Effect: Allow
+                Action: rds:Describe*
+                Resource: "*"
+              - Effect: Allow
+                Action: elasticache:*
+                Resource:
+                  - !Sub arn:${AWS::Partition}:elasticache:${AWS::Region}:${AWS::AccountId}:replicationgroup:pharmassist-*
+                  - !Sub arn:${AWS::Partition}:elasticache:${AWS::Region}:${AWS::AccountId}:cluster:pharmassist-*
+                  - !Sub arn:${AWS::Partition}:elasticache:${AWS::Region}:${AWS::AccountId}:subnetgroup:pharmassist-*
+                  - !Sub arn:${AWS::Partition}:elasticache:${AWS::Region}:${AWS::AccountId}:parametergroup:*
+              - Effect: Allow
+                Action: elasticache:Describe*
+                Resource: "*"
+              - Effect: Allow
+                Action: sqs:*
+                Resource: !Sub arn:${AWS::Partition}:sqs:${AWS::Region}:${AWS::AccountId}:pharmassist-*
+              - Effect: Allow   # app secrets; also resolves {{resolve:secretsmanager:...}} for the cache token
+                Action: secretsmanager:*
+                Resource: !Sub arn:${AWS::Partition}:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:pharmassist/*
+              - Effect: Allow   # GenerateSecretString (the JWT secret, the cache token): not a resource-level action
+                Action: secretsmanager:GetRandomPassword
+                Resource: "*"
+              - Effect: Allow   # RDS ManageMasterUserPassword creates and rotates the master secret as the caller
+                Action: secretsmanager:*
+                Resource: !Sub arn:${AWS::Partition}:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:rds!*
+              - Effect: Allow   # the AWS-managed keys (aws/rds, aws/secretsmanager, aws/elasticache, aws/ebs) used by
+                Action: [kms:DescribeKey, kms:ListAliases, kms:ListKeys]   # StorageEncrypted, ManageMasterUserPassword
+                Resource: "*"                                              # and the encrypted root volumes
+              - Effect: Allow
+                Action: [kms:CreateGrant, kms:Encrypt, kms:Decrypt, kms:ReEncrypt*, kms:GenerateDataKey*]
+                Resource: "*"
+                Condition:
+                  StringEquals:
+                    kms:ViaService: [!Sub "rds.${AWS::Region}.amazonaws.com", !Sub "secretsmanager.${AWS::Region}.amazonaws.com",
+                                     !Sub "elasticache.${AWS::Region}.amazonaws.com", !Sub "ec2.${AWS::Region}.amazonaws.com"]
+              - Effect: Allow
+                Action: [cloudwatch:PutMetricAlarm, cloudwatch:DeleteAlarms, cloudwatch:DescribeAlarms,
+                         cloudwatch:TagResource, cloudwatch:UntagResource, cloudwatch:ListTagsForResource]
+                Resource: !Sub arn:${AWS::Partition}:cloudwatch:${AWS::Region}:${AWS::AccountId}:alarm:pharmassist-*
+              - Effect: Allow   # the latest-AL2023 AMI id (template parameter of type AWS::SSM::Parameter::Value)
+                Action: [ssm:GetParameter, ssm:GetParameters]
+                Resource: !Sub arn:${AWS::Partition}:ssm:${AWS::Region}::parameter/aws/service/ami-amazon-linux-latest/*
+
+  DeployerRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: pharmassist-deployer
+      Tags: [{Key: Project, Value: pharmassist}]
+      MaxSessionDuration: 14400
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:   # any principal in this account that is itself allowed sts:AssumeRole on it
+          - {Effect: Allow, Principal: {AWS: !Sub "arn:${AWS::Partition}:iam::${AWS::AccountId}:root"}, Action: sts:AssumeRole}
+      Policies:
+        - PolicyName: pharmassist-deploy
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action: [cloudformation:CreateStack, cloudformation:UpdateStack, cloudformation:DeleteStack,
+                         cloudformation:CreateChangeSet, cloudformation:ExecuteChangeSet,
+                         cloudformation:DescribeChangeSet, cloudformation:DeleteChangeSet,
+                         cloudformation:DescribeStacks, cloudformation:DescribeStackEvents,
+                         cloudformation:DescribeStackResources, cloudformation:DescribeStackResource,
+                         cloudformation:GetTemplate, cloudformation:GetTemplateSummary,
+                         cloudformation:ListStackResources, cloudformation:TagResource,
+                         cloudformation:ListChangeSets, cloudformation:DescribeEvents,
+                         cloudformation:CancelUpdateStack, cloudformation:ContinueUpdateRollback]
+                Resource:
+                  - !Sub arn:${AWS::Partition}:cloudformation:${AWS::Region}:${AWS::AccountId}:stack/pharmassist/*
+                  - !Sub arn:${AWS::Partition}:cloudformation:${AWS::Region}:${AWS::AccountId}:stack/pharmassist-*/*
+              - Effect: Allow
+                Action: [cloudformation:ValidateTemplate, cloudformation:GetTemplateSummary]
+                Resource: "*"
+              - Effect: Allow
+                Action: iam:PassRole
+                Resource: !Sub arn:${AWS::Partition}:iam::${AWS::AccountId}:role/pharmassist-*
+              - Effect: Allow
+                Action: ecr:GetAuthorizationToken
+                Resource: "*"
+              - Effect: Allow
+                Action: [ecr:CreateRepository, ecr:DescribeRepositories, ecr:DescribeImages, ecr:PutLifecyclePolicy,
+                         ecr:TagResource, ecr:BatchCheckLayerAvailability, ecr:InitiateLayerUpload,
+                         ecr:UploadLayerPart, ecr:CompleteLayerUpload, ecr:PutImage, ecr:BatchGetImage,
+                         ecr:GetDownloadUrlForLayer, ecr:ListImages, ecr:SetRepositoryPolicy, ecr:GetRepositoryPolicy]
+                Resource: !Sub arn:${AWS::Partition}:ecr:${AWS::Region}:${AWS::AccountId}:repository/pharmassist-*
+              - Effect: Allow   # documents, builds and the uploaded CloudFormation template (deploy.sh --s3-bucket)
+                Action: [s3:ListBucket, s3:GetObject, s3:PutObject, s3:DeleteObject, s3:GetBucketLocation]
+                Resource: ["arn:aws:s3:::pharmassist-*", "arn:aws:s3:::pharmassist-*/*"]
+              - Effect: Allow
+                Action: [ssm:PutParameter, ssm:GetParameter, ssm:GetParameters, ssm:GetParametersByPath,
+                         ssm:AddTagsToResource, ssm:ListTagsForResource]
+                Resource: !Sub arn:${AWS::Partition}:ssm:${AWS::Region}:${AWS::AccountId}:parameter/pharmassist/*
+              - Effect: Allow   # the public AMI parameter is resolved with the caller's credentials too
+                Action: [ssm:GetParameter, ssm:GetParameters]
+                Resource: !Sub arn:${AWS::Partition}:ssm:${AWS::Region}::parameter/aws/service/ami-amazon-linux-latest/*
+              - Effect: Allow
+                Action: ssm:DescribeParameters
+                Resource: "*"
+              - Effect: Allow
+                Action: [kms:Encrypt, kms:Decrypt, kms:GenerateDataKey]
+                Resource: "*"
+                Condition: {StringEquals: {kms:ViaService: !Sub "ssm.${AWS::Region}.amazonaws.com"}}
+              - Effect: Allow   # v2: put_secrets.py fills pharmassist/v2/app-keys; destroy.sh force-deletes the names
+                Action: [secretsmanager:DescribeSecret, secretsmanager:PutSecretValue, secretsmanager:UpdateSecret,
+                         secretsmanager:DeleteSecret, secretsmanager:TagResource, secretsmanager:ListSecretVersionIds]
+                Resource: !Sub arn:${AWS::Partition}:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:pharmassist/*
+              - Effect: Allow
+                Action: secretsmanager:ListSecrets
+                Resource: "*"
+              - Effect: Allow
+                Action: ecs:RunTask
+                Resource: !Sub arn:${AWS::Partition}:ecs:${AWS::Region}:${AWS::AccountId}:task-definition/pharmassist-*
+              - Effect: Allow   # tags applied when a one-off task is launched
+                Action: ecs:TagResource
+                Resource: !Sub arn:${AWS::Partition}:ecs:${AWS::Region}:${AWS::AccountId}:task/pharmassist*/*
+                Condition: {StringEquals: {ecs:CreateAction: RunTask}}
+              - Effect: Allow
+                Action: [ecs:DescribeTasks, ecs:StopTask, ecs:ListTasks, ecs:DescribeClusters,
+                         ecs:DescribeServices, ecs:UpdateService, ecs:ListServices]
+                Resource: "*"
+                Condition: {ArnLike: {ecs:cluster: !Sub "arn:${AWS::Partition}:ecs:${AWS::Region}:${AWS::AccountId}:cluster/pharmassist*"}}
+              - Effect: Allow
+                Action: ecs:DescribeTaskDefinition
+                Resource: "*"   # no resource-level support
+              - Effect: Allow   # resolve the default VPC/subnets, print instances and EIPs, check SG state
+                Action: [ec2:DescribeSubnets, ec2:DescribeVpcs, ec2:DescribeSecurityGroups, ec2:DescribeAddresses,
+                         ec2:DescribeInstances, ec2:DescribeLaunchTemplates, ec2:DescribeLaunchTemplateVersions,
+                         ec2:DescribeImages]
+                Resource: "*"
+              - Effect: Allow   # destroy.sh releases any Elastic IP the stack left behind (tagged ones only)
+                Action: ec2:ReleaseAddress
+                Resource: "*"
+                Condition: {StringEquals: {aws:ResourceTag/Project: pharmassist}}
+              - Effect: Allow   # deploy.sh/destroy.sh watch the rolling update and the worker service
+                Action: [autoscaling:DescribeAutoScalingGroups, autoscaling:DescribeInstanceRefreshes,
+                         autoscaling:DescribeScalingActivities, elasticloadbalancing:DescribeLoadBalancers,
+                         elasticloadbalancing:DescribeTargetGroups, elasticloadbalancing:DescribeTargetHealth,
+                         application-autoscaling:DescribeScalableTargets, application-autoscaling:DescribeScalingActivities,
+                         cloudwatch:DescribeAlarms, rds:DescribeDBInstances, elasticache:DescribeReplicationGroups,
+                         sqs:GetQueueAttributes, acm:ListCertificates, acm:DescribeCertificate]
+                Resource: "*"
+              - Effect: Allow
+                Action: autoscaling:StartInstanceRefresh
+                Resource: !Sub arn:${AWS::Partition}:autoscaling:${AWS::Region}:${AWS::AccountId}:autoScalingGroup:*:autoScalingGroupName/pharmassist-*
+              - Effect: Allow   # request_cert.sh: ACM certificate for the hostname (DNS validation at GoDaddy)
+                Action: [acm:RequestCertificate, acm:AddTagsToCertificate, acm:DeleteCertificate, acm:ListTagsForCertificate]
+                Resource: "*"   # RequestCertificate has no ARN before the certificate exists
+              - Effect: Allow
+                Action: [logs:GetLogEvents, logs:FilterLogEvents, logs:DescribeLogStreams, logs:StartLiveTail,
+                         logs:DeleteLogStream]   # seed-users.sh deletes the stream that showed the one-time passwords
+                Resource:
+                  - !Sub arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/pharmassist-*
+                  - !Sub arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/pharmassist-*:*
+                  - !Sub arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/ecs/pharmassist-*
+                  - !Sub arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/ecs/pharmassist-*:*
+                  - !Sub arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/ec2/pharmassist-*
+                  - !Sub arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/ec2/pharmassist-*:*
+              - Effect: Allow
+                Action: logs:DescribeLogGroups
+                Resource: "*"
+              - Effect: Allow
+                Action: [lambda:GetFunction, lambda:GetFunctionConfiguration, lambda:GetFunctionUrlConfig,
+                         lambda:UpdateFunctionConfiguration]
+                Resource: !Sub arn:${AWS::Partition}:lambda:${AWS::Region}:${AWS::AccountId}:function:pharmassist-*
+              - Effect: Allow
+                Action: [dynamodb:DescribeTable, dynamodb:Scan]
+                Resource: !Sub arn:${AWS::Partition}:dynamodb:${AWS::Region}:${AWS::AccountId}:table/pharmassist-*
+
+Outputs:
+  DeployerRoleArn:
+    Value: !GetAtt DeployerRole.Arn
+  CfnExecRoleArn:
+    Value: !GetAtt CfnExecRole.Arn

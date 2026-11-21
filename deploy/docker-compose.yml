@@ -1,0 +1,175 @@
+# Local PharmAssist v2: the same shape as the AWS stack (deploy/aws/v2/README.md) on one laptop, in one command.
+#
+#   cp .env.example .env            # once: OPENAI_API_KEY (and ANTHROPIC_API_KEY for the fallback)
+#   docker compose up --build       # from the repository root (compose.yaml there includes this file)
+#
+# That starts Postgres+pgvector, Valkey, ElasticMQ (SQS) and an S3-compatible store, runs the schema
+# migration, seeds the corpus (11 documents, their figure crops and sources; no model spend) and the
+# demo accounts, then serves the app at http://localhost:8000 and runs the ingestion worker.
+# Sign in as admin@pharmassist.local / admin-password-1 or staff1@pharmassist.local / staff-password-1
+# (override with DEMO_ADMIN_PASSWORD / DEMO_STAFF_PASSWORD in .env).
+# Infra only: `docker compose up -d postgres valkey elasticmq s3 createbuckets`.
+#
+# Model keys come from .env (gitignored); everything else below is fixed local-only credentials. Ports on
+# the host: API 8000, Postgres 5432, Valkey 6379, ElasticMQ 9324 (+9325 stats), S3 9000 (+9001 console).
+#
+# From the host (.venv), point the app at the same services with:
+#   DATABASE_URL=postgresql://pharmassist:pharmassist@localhost:5432/pharmassist
+#   REDIS_URL=redis://localhost:6379/0
+#   SQS_ENDPOINT_URL=http://localhost:9324  INGEST_QUEUE_URL=http://localhost:9324/000000000000/pharmassist-ingest
+#   S3_ENDPOINT_URL=http://localhost:9000   PHARMASSIST_BUCKET=pharmassist-docs
+#   AWS_ACCESS_KEY_ID=pharmassist AWS_SECRET_ACCESS_KEY=pharmassist-local AWS_REGION=us-east-1
+
+name: pharmassist
+
+x-app-env: &app-env
+  # inside the compose network the services are reached by name; see the header for host values
+  DATABASE_URL: postgresql://pharmassist:pharmassist@postgres:5432/pharmassist
+  REDIS_URL: redis://valkey:6379/0
+  JWT_SECRET: ${JWT_SECRET:-local-dev-only-change-me-0123456789abcdef0123456789abcdef}
+  SQS_ENDPOINT_URL: http://elasticmq:9324
+  INGEST_QUEUE_URL: http://elasticmq:9324/000000000000/pharmassist-ingest
+  INGEST_DLQ_URL: http://elasticmq:9324/000000000000/pharmassist-ingest-dlq
+  S3_ENDPOINT_URL: http://s3:9000
+  S3_PUBLIC_ENDPOINT_URL: http://localhost:9000   # what the browser can reach: presigned source/figure links use it
+  PHARMASSIST_BUCKET: pharmassist-docs
+  AWS_REGION: us-east-1
+  AWS_DEFAULT_REGION: us-east-1
+  AWS_ACCESS_KEY_ID: pharmassist             # MinIO + ElasticMQ accept any key; boto3 needs one set
+  AWS_SECRET_ACCESS_KEY: pharmassist-local
+  OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+  ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+  LANGSMITH_TRACING: ${LANGSMITH_TRACING:-false}
+  LANGSMITH_API_KEY: ${LANGSMITH_API_KEY:-}
+  LANGSMITH_PROJECT: ${LANGSMITH_PROJECT:-pharmassist-local}
+  APP_CORS_ORIGINS: http://localhost:5173,http://localhost:8000   # the Vite dev server and the built SPA
+
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    environment:
+      POSTGRES_DB: pharmassist
+      POSTGRES_USER: pharmassist
+      POSTGRES_PASSWORD: pharmassist
+    ports: ["5432:5432"]
+    volumes: [pgdata:/var/lib/postgresql/data]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U pharmassist -d pharmassist"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  valkey:
+    # valkey-bundle ships the search module (FT.CREATE / FT.SEARCH), which the semantic cache uses;
+    # plain valkey images have no vector search. ElastiCache's "Valkey 8.2" has it built in; the OSS
+    # bundle has no 8.2 tag (8.1 then 9.x), so 8.1 is the closest local equivalent.
+    image: valkey/valkey-bundle:8.1
+    ports: ["6379:6379"]
+    volumes: [valkeydata:/data]
+    healthcheck:
+      test: ["CMD", "valkey-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  elasticmq:
+    image: softwaremill/elasticmq-native:1.7.1
+    ports: ["9324:9324", "9325:9325"]
+    volumes: [./elasticmq.conf:/opt/elasticmq.conf:ro]
+    healthcheck:
+      # the native image is busybox-based (wget, no curl); healthy once the configured queues exist
+      test: ["CMD-SHELL", "wget -qO- 'http://127.0.0.1:9324/?Action=ListQueues' | grep -q pharmassist-ingest-dlq"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  s3:
+    # S3-compatible object store. MinIO's public images were withdrawn from Docker Hub/quay in 2025;
+    # RustFS is API-compatible (same ports, accepts the MINIO_ROOT_* variables). Console on :9001.
+    image: rustfs/rustfs:1.0.3
+    environment:
+      MINIO_ROOT_USER: pharmassist
+      MINIO_ROOT_PASSWORD: pharmassist-local
+      RUSTFS_CONSOLE_ENABLE: "true"
+    ports: ["9000:9000", "9001:9001"]
+    volumes: [s3data:/data]
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:9000/health/live || curl -fsS http://127.0.0.1:9000/minio/health/live"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  createbuckets:
+    # one-shot: creates the bucket the app and worker expect, then exits
+    image: public.ecr.aws/aws-cli/aws-cli:2.37.6
+    depends_on:
+      s3: {condition: service_healthy}
+    environment:
+      AWS_ACCESS_KEY_ID: pharmassist
+      AWS_SECRET_ACCESS_KEY: pharmassist-local
+      AWS_DEFAULT_REGION: us-east-1
+    entrypoint: ["/bin/sh", "-c"]
+    command:
+      - |
+        aws --endpoint-url http://s3:9000 s3api head-bucket --bucket pharmassist-docs 2>/dev/null \
+          || aws --endpoint-url http://s3:9000 s3 mb s3://pharmassist-docs
+        echo "bucket pharmassist-docs ready"
+
+  api:
+    build:
+      context: ..
+      dockerfile: deploy/aws/Dockerfile
+    image: pharmassist-v2-web:local
+    ports: ["8000:8000"]
+    environment:
+      <<: *app-env
+      APP_INSECURE_COOKIES: "1"     # plain http on localhost: the refresh cookie must not be Secure
+    depends_on:
+      postgres: {condition: service_healthy}
+      valkey: {condition: service_healthy}
+      elasticmq: {condition: service_healthy}
+      createbuckets: {condition: service_completed_successfully}
+      migrate: {condition: service_completed_successfully}
+      seed: {condition: service_completed_successfully}
+
+  migrate:
+    # one-shot schema migration with the API image (same command as the Fargate migration task)
+    image: pharmassist-v2-web:local
+    environment: *app-env
+    command: ["python", "-m", "alembic", "-c", "db/alembic.ini", "upgrade", "head"]
+    depends_on:
+      postgres: {condition: service_healthy}
+
+  seed:
+    # one-shot: sources and figure crops into the local bucket, the corpus into Postgres, demo accounts
+    # (scripts/seed_local.py; idempotent, so `up` again is safe). The repository is mounted read-only
+    # because the image holds code only: docs/, index/ and storage/figures live in the checkout.
+    image: pharmassist-v2-web:local
+    environment:
+      <<: *app-env
+      DEMO_ADMIN_PASSWORD: ${DEMO_ADMIN_PASSWORD:-admin-password-1}
+      DEMO_STAFF_PASSWORD: ${DEMO_STAFF_PASSWORD:-staff-password-1}
+    volumes: ["..:/src:ro"]
+    working_dir: /src
+    command: ["python", "/src/scripts/seed_local.py", "--source-root", "/src"]
+    depends_on:
+      migrate: {condition: service_completed_successfully}
+      createbuckets: {condition: service_completed_successfully}
+
+  worker:
+    build:
+      context: ..
+      dockerfile: deploy/aws/Dockerfile.ingest
+    image: pharmassist-v2-ingest:local
+    command: ["python", "scripts/ingest_worker.py"]
+    environment: *app-env
+    depends_on:
+      postgres: {condition: service_healthy}
+      elasticmq: {condition: service_healthy}
+      createbuckets: {condition: service_completed_successfully}
+      migrate: {condition: service_completed_successfully}
+
+volumes:
+  pgdata:
+  valkeydata:
+  s3data:

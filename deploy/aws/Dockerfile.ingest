@@ -1,0 +1,37 @@
+# The ingestion worker (scripts/ingest_worker.py) as an ECS Fargate service (arm64, 4 vCPU, 16 GB),
+# scaled from queue depth: consumes SQS, runs Docling, figure vision, chunking and embeddings, writes
+# each document version to PostgreSQL and activates it. Build from the repository root:
+#   docker build --platform linux/arm64 -f deploy/aws/Dockerfile.ingest .
+# Nothing secret is in the image: keys come from SSM (SSM_PARAMETER_PREFIX) or the task's environment.
+
+FROM public.ecr.aws/docker/library/python:3.12-slim-bookworm
+
+ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 PIP_NO_CACHE_DIR=1 \
+    HOME=/root HF_HOME=/opt/hf PYTHONPATH=/app/src OMP_NUM_THREADS=4
+
+RUN apt-get update && apt-get install -y --no-install-recommends libgl1 libglib2.0-0 && rm -rf /var/lib/apt/lists/*
+WORKDIR /app
+COPY pyproject.toml ./
+# base + ingest + rerank groups from pyproject.toml; torch first from the CPU wheel index (no CUDA libraries)
+RUN pip install torch==2.14.1 torchvision --index-url https://download.pytorch.org/whl/cpu \
+ && python -c "import tomllib; d = tomllib.load(open('pyproject.toml', 'rb')); o = d['project']['optional-dependencies']; print('\n'.join(d['project']['dependencies'] + [x for x in o['ingest'] if not x.startswith('pharmassist')] + o['rerank']))" > /tmp/requirements.txt \
+ && pip install -r /tmp/requirements.txt
+
+# models baked in (a task shouldn't download them on every start): bge-small (its tokenizer sizes
+# the chunks) and Docling's layout, table, picture classifier and OCR models (warmed by converting a
+# generated one-page PDF with an image)
+RUN python -c "from sentence_transformers import SentenceTransformer; SentenceTransformer('BAAI/bge-small-en-v1.5')"
+COPY deploy/aws/warm_docling.py /tmp/warm_docling.py
+RUN python /tmp/warm_docling.py
+
+COPY config.yaml ./
+COPY src/ src/
+COPY app/runtime_env.py app/__init__.py app/
+COPY scripts/ingest_worker.py scripts/
+COPY docs/figure_reviews.yaml docs/figure_reviews.yaml
+RUN mkdir -p /app/storage
+
+# ECS sends SIGTERM: the worker stops receiving and gives the running job queue.shutdown_grace_s
+# (keep it under the task's stopTimeout) before releasing its message to another worker.
+STOPSIGNAL SIGTERM
+CMD ["python", "scripts/ingest_worker.py"]

@@ -1,0 +1,1049 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: >
+  PharmAssist v2 (DESIGN.md, Architecture): a Network Load Balancer with two Elastic IPs in front of an
+  Application Load Balancer (ACM certificate, cookie stickiness, WAF) that balances an Auto Scaling
+  group of arm64 EC2 instances running the API container; RDS PostgreSQL 16 with pgvector; ElastiCache
+  for Valkey (semantic cache, limits); SQS ingestion queue + DLQ feeding an ECS Fargate worker service
+  that scales 0-2 from queue depth; one-off Fargate migration task. The S3 document bucket is the
+  existing v1 bucket and is not created here. Everything is tagged Project=pharmassist.
+
+Parameters:
+  AppName:
+    Type: String
+    Default: pharmassist
+    Description: name prefix; the bootstrap roles only allow pharmassist* names
+  HostName:
+    Type: String
+    Default: pharmassist.aishwaryabhanage.com
+    Description: public hostname (DNS at GoDaddy; A records point at the two Elastic IPs). May be empty.
+  CertificateArn:
+    Type: String
+    Default: ""
+    Description: >
+      ACM certificate for HostName (deploy/aws/v2/request_cert.sh). Empty = HTTP-only listeners until the
+      certificate is issued; set = HTTPS on 443 and 80 redirects to 443.
+  ApiImageUri:
+    Type: String
+    Description: API image by digest (deploy.sh passes it)
+  IngestImageUri:
+    Type: String
+    Description: ingestion worker image by digest (deploy.sh passes it)
+  VpcId:
+    Type: AWS::EC2::VPC::Id
+    Description: the default VPC (deploy.sh resolves it)
+  VpcCidr:
+    Type: String
+    Default: 172.31.0.0/16
+    Description: the VPC's CIDR; lets the NLB health checks reach the ALB when AllowedCidr is narrowed
+  SubnetIds:
+    Type: List<AWS::EC2::Subnet::Id>
+    Description: exactly two public subnets in different AZs (deploy.sh resolves them)
+  AmiId:
+    Type: AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>
+    Default: /aws/service/ami-amazon-linux-latest/al2023-ami-kernel-default-arm64
+    Description: latest Amazon Linux 2023 arm64 AMI; re-resolved on each deploy (rolling refresh)
+  InstanceType:
+    Type: String
+    Default: t4g.large
+  WorkerMinCount:
+    Type: Number
+    Default: 1
+    MinValue: 0
+    MaxValue: 2
+    Description: ingestion worker tasks kept running when the queue is empty (1 = an upload starts indexing at once, about $144/month on Fargate 4 vCPU/16 GB; 0 = scale to zero, a few minutes' start-up per upload)
+  DesiredCapacity:
+    Type: Number
+    Default: 2
+    MinValue: 2
+    MaxValue: 4
+  DbInstanceClass:
+    Type: String
+    Default: db.t4g.small
+  DbEngineVersion:
+    Type: String
+    Default: "16"
+    Description: PostgreSQL major (RDS picks the current minor) or an exact version such as 16.8
+  CacheNodeType:
+    Type: String
+    Default: cache.t4g.small
+    Description: >
+      cache.t4g.micro leaves only ~0.25 GB for ~400 MB of 3072-d cache entries once memory is reserved,
+      so small is the floor (stream D's finding)
+  CacheEngineVersion:
+    Type: String
+    Default: "8.2"
+    Description: ElastiCache for Valkey version; 8.2 has vector search (FT.*) built in
+  CacheAuthEnabled:
+    Type: String
+    Default: "false"
+    AllowedValues: ["true", "false"]
+    Description: >
+      true adds an AUTH token (generated into Secrets Manager, fetched at boot). TLS is always on; the
+      cache is reachable only from the app security group either way.
+  AllowedCidr:
+    Type: String
+    Default: 0.0.0.0/0
+    Description: who may reach the load balancers on 80/443
+  BucketName:
+    Type: String
+    Default: pharmassist-docs-095453158391
+    Description: the existing v1 document bucket (created by the v1 stack with DeletionPolicy Retain)
+  LangsmithTracing:
+    Type: String
+    Default: "false"
+    AllowedValues: ["true", "false"]
+  LangsmithProject:
+    Type: String
+    Default: pharmassist
+  SsmParameterPrefix:
+    Type: String
+    Default: ""
+    Description: optional; SecureStrings under it become env vars (app/runtime_env.py). Empty = off.
+
+Conditions:
+  HasCert: !Not [!Equals [!Ref CertificateArn, ""]]
+  HasHostName: !Not [!Equals [!Ref HostName, ""]]
+  CacheAuth: !Equals [!Ref CacheAuthEnabled, "true"]
+  CacheIsMicro: !Equals [!Ref CacheNodeType, cache.t4g.micro]
+  HasSsmPrefix: !Not [!Equals [!Ref SsmParameterPrefix, ""]]
+
+Resources:
+  # ============================================================================ secrets and logs
+  JwtSecret:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Name: !Sub ${AppName}/v2/jwt
+      Description: HS256 signing key for access tokens; generated once, read at boot
+      GenerateSecretString: {PasswordLength: 64, ExcludePunctuation: true}
+      Tags: [{Key: Project, Value: !Ref AppName}]
+
+  AppKeysSecret:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Name: !Sub ${AppName}/v2/app-keys
+      Description: model/tracing API keys; placeholder filled by deploy/aws/v2/put_secrets.py (keys must exist for ECS secret injection)
+      SecretString: '{"OPENAI_API_KEY": "", "ANTHROPIC_API_KEY": "", "LANGSMITH_API_KEY": ""}'
+      Tags: [{Key: Project, Value: !Ref AppName}]
+
+  CacheAuthSecret:
+    Type: AWS::SecretsManager::Secret
+    Condition: CacheAuth
+    Properties:
+      Name: !Sub ${AppName}/v2/cache-auth
+      Description: ElastiCache AUTH token (alphanumeric; ElastiCache forbids / " @ and spaces)
+      GenerateSecretString: {PasswordLength: 48, ExcludePunctuation: true}
+      Tags: [{Key: Project, Value: !Ref AppName}]
+
+  ApiLogs:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub /ec2/${AppName}-api
+      RetentionInDays: 30
+      Tags: [{Key: Project, Value: !Ref AppName}]
+
+  WorkerLogs:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub /ecs/${AppName}-v2-ingest
+      RetentionInDays: 30
+      Tags: [{Key: Project, Value: !Ref AppName}]
+
+  MigrateLogs:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub /ecs/${AppName}-v2-migrate
+      RetentionInDays: 14
+      Tags: [{Key: Project, Value: !Ref AppName}]
+
+  # ============================================================================ security groups
+  AlbSg:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupName: !Sub ${AppName}-v2-alb
+      GroupDescription: ALB; 80/443 from the allowed CIDR (the NLB preserves client IPs) and the VPC (NLB health checks)
+      VpcId: !Ref VpcId
+      SecurityGroupIngress:
+        - {IpProtocol: tcp, FromPort: 80, ToPort: 80, CidrIp: !Ref AllowedCidr}
+        - {IpProtocol: tcp, FromPort: 443, ToPort: 443, CidrIp: !Ref AllowedCidr}
+        - {IpProtocol: tcp, FromPort: 80, ToPort: 80, CidrIp: !Ref VpcCidr}
+        - {IpProtocol: tcp, FromPort: 443, ToPort: 443, CidrIp: !Ref VpcCidr}
+      Tags: [{Key: Project, Value: !Ref AppName}, {Key: Name, Value: !Sub "${AppName}-v2-alb"}]
+
+  AppSg:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupName: !Sub ${AppName}-v2-app
+      GroupDescription: API instances; 8000 from the ALB only (SSH is not opened; use SSM Session Manager)
+      VpcId: !Ref VpcId
+      SecurityGroupIngress:
+        - {IpProtocol: tcp, FromPort: 8000, ToPort: 8000, SourceSecurityGroupId: !Ref AlbSg}
+      Tags: [{Key: Project, Value: !Ref AppName}, {Key: Name, Value: !Sub "${AppName}-v2-app"}]
+
+  WorkerSg:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupName: !Sub ${AppName}-v2-worker
+      GroupDescription: ingestion worker tasks; no ingress
+      VpcId: !Ref VpcId
+      Tags: [{Key: Project, Value: !Ref AppName}, {Key: Name, Value: !Sub "${AppName}-v2-worker"}]
+
+  MigrateSg:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupName: !Sub ${AppName}-v2-migrate
+      GroupDescription: one-off migration/seed tasks; no ingress
+      VpcId: !Ref VpcId
+      Tags: [{Key: Project, Value: !Ref AppName}, {Key: Name, Value: !Sub "${AppName}-v2-migrate"}]
+
+  DbSg:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupName: !Sub ${AppName}-v2-db
+      GroupDescription: PostgreSQL; 5432 from app, worker and migration security groups only
+      VpcId: !Ref VpcId
+      SecurityGroupIngress:
+        - {IpProtocol: tcp, FromPort: 5432, ToPort: 5432, SourceSecurityGroupId: !Ref AppSg}
+        - {IpProtocol: tcp, FromPort: 5432, ToPort: 5432, SourceSecurityGroupId: !Ref WorkerSg}
+        - {IpProtocol: tcp, FromPort: 5432, ToPort: 5432, SourceSecurityGroupId: !Ref MigrateSg}
+      Tags: [{Key: Project, Value: !Ref AppName}, {Key: Name, Value: !Sub "${AppName}-v2-db"}]
+
+  CacheSg:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupName: !Sub ${AppName}-v2-cache
+      GroupDescription: Valkey; 6379 from the app security group only (the worker invalidates through Postgres)
+      VpcId: !Ref VpcId
+      SecurityGroupIngress:
+        - {IpProtocol: tcp, FromPort: 6379, ToPort: 6379, SourceSecurityGroupId: !Ref AppSg}
+      Tags: [{Key: Project, Value: !Ref AppName}, {Key: Name, Value: !Sub "${AppName}-v2-cache"}]
+
+  # ============================================================================ static IPs: NLB -> ALB
+  # An ALB cannot hold an Elastic IP, so an NLB with one EIP per AZ passes TCP 80/443 through to the
+  # ALB (target type alb). Client IPs are preserved, so WAF and the ALB see the real source address.
+  Eip1:
+    Type: AWS::EC2::EIP
+    Properties:
+      Domain: vpc
+      Tags: [{Key: Project, Value: !Ref AppName}, {Key: Name, Value: !Sub "${AppName}-v2-a"}]
+  Eip2:
+    Type: AWS::EC2::EIP
+    Properties:
+      Domain: vpc
+      Tags: [{Key: Project, Value: !Ref AppName}, {Key: Name, Value: !Sub "${AppName}-v2-b"}]
+
+  Nlb:
+    Type: AWS::ElasticLoadBalancingV2::LoadBalancer
+    Properties:
+      Name: !Sub ${AppName}-v2-nlb
+      Type: network
+      Scheme: internet-facing
+      IpAddressType: ipv4
+      SubnetMappings:
+        - {SubnetId: !Select [0, !Ref SubnetIds], AllocationId: !GetAtt Eip1.AllocationId}
+        - {SubnetId: !Select [1, !Ref SubnetIds], AllocationId: !GetAtt Eip2.AllocationId}
+      LoadBalancerAttributes:
+        - {Key: load_balancing.cross_zone.enabled, Value: "true"}   # either EIP reaches the ALB in both AZs
+      Tags: [{Key: Project, Value: !Ref AppName}]
+
+  NlbTg80:
+    Type: AWS::ElasticLoadBalancingV2::TargetGroup
+    DependsOn: AlbListener80          # an ALB can only be registered once it listens on the target port
+    Properties:
+      Name: !Sub ${AppName}-v2-nlb-80
+      TargetType: alb
+      Protocol: TCP
+      Port: 80
+      VpcId: !Ref VpcId
+      Targets: [{Id: !Ref Alb, Port: 80}]
+      HealthCheckProtocol: HTTP
+      HealthCheckPath: /health/live
+      Matcher: {HttpCode: 200-399}     # 301 when the ALB redirects 80 -> 443
+      Tags: [{Key: Project, Value: !Ref AppName}]
+
+  NlbTg443:
+    Type: AWS::ElasticLoadBalancingV2::TargetGroup
+    Condition: HasCert
+    DependsOn: AlbListener443
+    Properties:
+      Name: !Sub ${AppName}-v2-nlb-443
+      TargetType: alb
+      Protocol: TCP
+      Port: 443
+      VpcId: !Ref VpcId
+      Targets: [{Id: !Ref Alb, Port: 443}]
+      HealthCheckProtocol: HTTPS
+      HealthCheckPath: /health/live
+      Matcher: {HttpCode: 200-399}
+      Tags: [{Key: Project, Value: !Ref AppName}]
+
+  NlbListener80:
+    Type: AWS::ElasticLoadBalancingV2::Listener
+    Properties:
+      LoadBalancerArn: !Ref Nlb
+      Protocol: TCP
+      Port: 80
+      DefaultActions: [{Type: forward, TargetGroupArn: !Ref NlbTg80}]
+
+  NlbListener443:
+    Type: AWS::ElasticLoadBalancingV2::Listener
+    Condition: HasCert
+    Properties:
+      LoadBalancerArn: !Ref Nlb
+      Protocol: TCP
+      Port: 443
+      DefaultActions: [{Type: forward, TargetGroupArn: !Ref NlbTg443}]
+
+  # ============================================================================ ALB + WAF
+  Alb:
+    Type: AWS::ElasticLoadBalancingV2::LoadBalancer
+    Properties:
+      Name: !Sub ${AppName}-v2-alb
+      Type: application
+      Scheme: internet-facing
+      IpAddressType: ipv4
+      Subnets: !Ref SubnetIds
+      SecurityGroups: [!Ref AlbSg]
+      LoadBalancerAttributes:
+        - {Key: idle_timeout.timeout_seconds, Value: "120"}   # an agent answer can take ~30 s plus upload time
+        - {Key: routing.http.drop_invalid_header_fields.enabled, Value: "true"}
+      Tags: [{Key: Project, Value: !Ref AppName}]
+
+  AppTg:
+    Type: AWS::ElasticLoadBalancingV2::TargetGroup
+    Properties:
+      Name: !Sub ${AppName}-v2-api
+      TargetType: instance
+      Protocol: HTTP
+      Port: 8000
+      VpcId: !Ref VpcId
+      HealthCheckPath: /health/ready
+      HealthCheckIntervalSeconds: 30
+      HealthCheckTimeoutSeconds: 5
+      HealthyThresholdCount: 2
+      UnhealthyThresholdCount: 3
+      Matcher: {HttpCode: "200"}
+      TargetGroupAttributes:
+        - {Key: stickiness.enabled, Value: "true"}
+        - {Key: stickiness.type, Value: lb_cookie}
+        - {Key: stickiness.lb_cookie.duration_seconds, Value: "86400"}
+        - {Key: deregistration_delay.timeout_seconds, Value: "30"}
+      Tags: [{Key: Project, Value: !Ref AppName}]
+
+  AlbListener80:
+    Type: AWS::ElasticLoadBalancingV2::Listener
+    Properties:
+      LoadBalancerArn: !Ref Alb
+      Protocol: HTTP
+      Port: 80
+      DefaultActions:
+        - !If
+          - HasCert
+          - Type: redirect
+            RedirectConfig: {Protocol: HTTPS, Port: "443", StatusCode: HTTP_301}
+          - Type: forward
+            TargetGroupArn: !Ref AppTg
+
+  AlbListener443:
+    Type: AWS::ElasticLoadBalancingV2::Listener
+    Condition: HasCert
+    Properties:
+      LoadBalancerArn: !Ref Alb
+      Protocol: HTTPS
+      Port: 443
+      SslPolicy: ELBSecurityPolicy-TLS13-1-2-2021-06
+      Certificates: [{CertificateArn: !Ref CertificateArn}]
+      DefaultActions: [{Type: forward, TargetGroupArn: !Ref AppTg}]
+
+  WebAcl:
+    Type: AWS::WAFv2::WebACL
+    Properties:
+      Name: !Sub ${AppName}-v2
+      Scope: REGIONAL
+      DefaultAction: {Allow: {}}
+      VisibilityConfig: {SampledRequestsEnabled: true, CloudWatchMetricsEnabled: true, MetricName: !Sub "${AppName}-v2-waf"}
+      Rules:
+        - Name: rate-per-ip        # 300 requests per 5 minutes per source IP (the app has its own per-user limits)
+          Priority: 1
+          Action: {Block: {}}
+          Statement:
+            RateBasedStatement: {Limit: 300, EvaluationWindowSec: 300, AggregateKeyType: IP}
+          VisibilityConfig: {SampledRequestsEnabled: true, CloudWatchMetricsEnabled: true, MetricName: !Sub "${AppName}-v2-rate"}
+        - Name: aws-common          # count only: the common rule set would otherwise block 50 MB uploads and some JSON bodies
+          Priority: 2
+          OverrideAction: {Count: {}}
+          Statement:
+            ManagedRuleGroupStatement: {VendorName: AWS, Name: AWSManagedRulesCommonRuleSet}
+          VisibilityConfig: {SampledRequestsEnabled: true, CloudWatchMetricsEnabled: true, MetricName: !Sub "${AppName}-v2-common"}
+      Tags: [{Key: Project, Value: !Ref AppName}]
+
+  WebAclAssociation:
+    Type: AWS::WAFv2::WebACLAssociation
+    Properties:
+      ResourceArn: !Ref Alb
+      WebACLArn: !GetAtt WebAcl.Arn
+
+  # ============================================================================ IAM
+  InstanceRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Sub ${AppName}-v2-instance
+      Tags: [{Key: Project, Value: !Ref AppName}]
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement: [{Effect: Allow, Principal: {Service: ec2.amazonaws.com}, Action: sts:AssumeRole}]
+      ManagedPolicyArns:
+        - !Sub arn:${AWS::Partition}:iam::aws:policy/AmazonSSMManagedInstanceCore   # Session Manager instead of SSH
+      Policies:
+        - PolicyName: api
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action: ecr:GetAuthorizationToken
+                Resource: "*"           # no resource-level support
+              - Effect: Allow
+                Action: [ecr:BatchGetImage, ecr:GetDownloadUrlForLayer, ecr:BatchCheckLayerAvailability]
+                Resource: !Sub arn:${AWS::Partition}:ecr:${AWS::Region}:${AWS::AccountId}:repository/${AppName}-*
+              - Effect: Allow
+                Action: secretsmanager:GetSecretValue
+                Resource:
+                  - !Ref JwtSecret
+                  - !Ref AppKeysSecret
+                  - !GetAtt Db.MasterUserSecret.SecretArn
+                  - !If [CacheAuth, !Ref CacheAuthSecret, !Ref AWS::NoValue]
+              - Effect: Allow           # sources, figure crops, uploads (presigned links need GetObject)
+                Action: [s3:GetObject, s3:PutObject, s3:DeleteObject, s3:ListBucket]
+                Resource: [!Sub "arn:${AWS::Partition}:s3:::${BucketName}", !Sub "arn:${AWS::Partition}:s3:::${BucketName}/*"]
+              - Effect: Allow           # the upload endpoint enqueues jobs; admin pages read queue depth
+                Action: [sqs:SendMessage, sqs:GetQueueAttributes, sqs:GetQueueUrl]
+                Resource: [!GetAtt Queue.Arn, !GetAtt Dlq.Arn]
+              - Effect: Allow
+                Action: [logs:CreateLogStream, logs:PutLogEvents, logs:DescribeLogStreams]
+                Resource: !Sub ${ApiLogs.Arn}:*
+              - Effect: Allow           # user-data tells CloudFormation when the container is healthy
+                Action: cloudformation:SignalResource
+                Resource: !Ref AWS::StackId
+              - !If
+                - HasSsmPrefix
+                - Effect: Allow
+                  Action: ssm:GetParametersByPath
+                  Resource: !Sub arn:${AWS::Partition}:ssm:${AWS::Region}:${AWS::AccountId}:parameter${SsmParameterPrefix}
+                - !Ref AWS::NoValue
+              - !If
+                - HasSsmPrefix
+                - Effect: Allow
+                  Action: kms:Decrypt
+                  Resource: "*"
+                  Condition: {StringEquals: {kms:ViaService: !Sub "ssm.${AWS::Region}.amazonaws.com"}}
+                - !Ref AWS::NoValue
+
+  InstanceProfile:
+    Type: AWS::IAM::InstanceProfile
+    Properties:
+      InstanceProfileName: !Sub ${AppName}-v2-instance
+      Roles: [!Ref InstanceRole]
+
+  TaskExecRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Sub ${AppName}-v2-task-exec
+      Tags: [{Key: Project, Value: !Ref AppName}]
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement: [{Effect: Allow, Principal: {Service: ecs-tasks.amazonaws.com}, Action: sts:AssumeRole}]
+      ManagedPolicyArns: [!Sub "arn:${AWS::Partition}:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy"]
+      Policies:
+        - PolicyName: secrets           # ECS injects these into the task environment (Secrets: below)
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action: secretsmanager:GetSecretValue
+                Resource: [!Ref JwtSecret, !Ref AppKeysSecret, !GetAtt Db.MasterUserSecret.SecretArn]
+
+  WorkerTaskRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Sub ${AppName}-v2-worker
+      Tags: [{Key: Project, Value: !Ref AppName}]
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement: [{Effect: Allow, Principal: {Service: ecs-tasks.amazonaws.com}, Action: sts:AssumeRole}]
+      Policies:
+        - PolicyName: ingest
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action: [s3:GetObject, s3:PutObject, s3:DeleteObject, s3:ListBucket]
+                Resource: [!Sub "arn:${AWS::Partition}:s3:::${BucketName}", !Sub "arn:${AWS::Partition}:s3:::${BucketName}/*"]
+              - Effect: Allow
+                Action: [sqs:ReceiveMessage, sqs:DeleteMessage, sqs:ChangeMessageVisibility, sqs:GetQueueAttributes, sqs:GetQueueUrl]
+                Resource: !GetAtt Queue.Arn
+              - Effect: Allow
+                Action: [sqs:SendMessage, sqs:GetQueueAttributes, sqs:GetQueueUrl]
+                Resource: !GetAtt Dlq.Arn
+              - Effect: Allow
+                Action: secretsmanager:GetSecretValue
+                Resource: [!Ref AppKeysSecret, !GetAtt Db.MasterUserSecret.SecretArn]
+              - !If
+                - HasSsmPrefix
+                - Effect: Allow
+                  Action: ssm:GetParametersByPath
+                  Resource: !Sub arn:${AWS::Partition}:ssm:${AWS::Region}:${AWS::AccountId}:parameter${SsmParameterPrefix}
+                - !Ref AWS::NoValue
+              - !If
+                - HasSsmPrefix
+                - Effect: Allow
+                  Action: kms:Decrypt
+                  Resource: "*"
+                  Condition: {StringEquals: {kms:ViaService: !Sub "ssm.${AWS::Region}.amazonaws.com"}}
+                - !Ref AWS::NoValue
+
+  MigrateTaskRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Sub ${AppName}-v2-migrate
+      Tags: [{Key: Project, Value: !Ref AppName}]
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement: [{Effect: Allow, Principal: {Service: ecs-tasks.amazonaws.com}, Action: sts:AssumeRole}]
+      Policies:
+        - PolicyName: migrate           # migrations and seeding only touch Postgres; the catalog seed may read sources
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action: [s3:GetObject, s3:ListBucket]
+                Resource: [!Sub "arn:${AWS::Partition}:s3:::${BucketName}", !Sub "arn:${AWS::Partition}:s3:::${BucketName}/*"]
+              - Effect: Allow
+                Action: secretsmanager:GetSecretValue
+                Resource: !GetAtt Db.MasterUserSecret.SecretArn
+
+  # ============================================================================ RDS PostgreSQL 16
+  DbSubnetGroup:
+    Type: AWS::RDS::DBSubnetGroup
+    Properties:
+      DBSubnetGroupName: !Sub ${AppName}-v2
+      DBSubnetGroupDescription: the two app subnets (the instance itself is not publicly accessible)
+      SubnetIds: !Ref SubnetIds
+      Tags: [{Key: Project, Value: !Ref AppName}]
+
+  Db:
+    Type: AWS::RDS::DBInstance
+    DeletionPolicy: Snapshot          # deletion protection is off for the assessment; a final snapshot is kept
+    UpdateReplacePolicy: Snapshot
+    Properties:
+      DBInstanceIdentifier: !Sub ${AppName}-v2
+      Engine: postgres
+      EngineVersion: !Ref DbEngineVersion
+      DBInstanceClass: !Ref DbInstanceClass
+      DBName: pharmassist
+      MasterUsername: pharmassist
+      ManageMasterUserPassword: true    # RDS generates and rotates the password in Secrets Manager
+      AllocatedStorage: "20"
+      MaxAllocatedStorage: 100
+      StorageType: gp3
+      StorageEncrypted: true
+      PubliclyAccessible: false
+      MultiAZ: false
+      DBSubnetGroupName: !Ref DbSubnetGroup
+      VPCSecurityGroups: [!GetAtt DbSg.GroupId]
+      BackupRetentionPeriod: 7
+      PreferredBackupWindow: 06:00-07:00
+      PreferredMaintenanceWindow: sun:07:30-sun:08:30
+      CopyTagsToSnapshot: true
+      AutoMinorVersionUpgrade: true
+      DeletionProtection: false
+      Tags: [{Key: Project, Value: !Ref AppName}]
+
+  # ============================================================================ ElastiCache for Valkey
+  CacheSubnetGroup:
+    Type: AWS::ElastiCache::SubnetGroup
+    Properties:
+      CacheSubnetGroupName: !Sub ${AppName}-v2
+      Description: the two app subnets
+      SubnetIds: !Ref SubnetIds
+      Tags: [{Key: Project, Value: !Ref AppName}]
+
+  # Burstable node types need a custom parameter group: ElastiCache's default reserves 25 % of memory
+  # for overhead, and stream D measured that micro/small nodes need 50 % / 30 % headroom for the search
+  # module's index on 3072-d entries. Vector search itself (FT.*) is built into ElastiCache for Valkey
+  # 8.2 (node-based, cluster mode off); no module flag is needed.
+  CacheParameterGroup:
+    Type: AWS::ElastiCache::ParameterGroup
+    Properties:
+      CacheParameterGroupFamily: valkey8
+      Description: !Sub ${AppName}-v2 reserved memory for burstable nodes
+      Properties:
+        reserved-memory-percent: !If [CacheIsMicro, "50", "30"]
+      Tags: [{Key: Project, Value: !Ref AppName}]
+
+  Cache:
+    Type: AWS::ElastiCache::ReplicationGroup
+    Properties:
+      ReplicationGroupId: !Sub ${AppName}-v2
+      ReplicationGroupDescription: semantic answer cache, per-user limits and spend counters
+      Engine: valkey
+      EngineVersion: !Ref CacheEngineVersion
+      CacheNodeType: !Ref CacheNodeType
+      NumCacheClusters: 1               # single node; raise to 2 with AutomaticFailoverEnabled for HA
+      AutomaticFailoverEnabled: false
+      MultiAZEnabled: false
+      Port: 6379
+      CacheParameterGroupName: !Ref CacheParameterGroup
+      CacheSubnetGroupName: !Ref CacheSubnetGroup
+      SecurityGroupIds: [!GetAtt CacheSg.GroupId]
+      TransitEncryptionEnabled: true    # clients must use rediss:// (redis-py: ssl=True)
+      TransitEncryptionMode: required
+      AtRestEncryptionEnabled: true
+      AuthToken: !If [CacheAuth, !Sub "{{resolve:secretsmanager:${CacheAuthSecret}}}", !Ref AWS::NoValue]
+      AutoMinorVersionUpgrade: true
+      SnapshotRetentionLimit: 0         # the cache is rebuildable; nothing durable lives here
+      Tags: [{Key: Project, Value: !Ref AppName}]
+
+  # ============================================================================ SQS
+  Dlq:
+    Type: AWS::SQS::Queue
+    Properties:
+      QueueName: !Sub ${AppName}-v2-ingest-dlq
+      MessageRetentionPeriod: 1209600   # 14 days to inspect failed jobs
+      SqsManagedSseEnabled: true
+      Tags: [{Key: Project, Value: !Ref AppName}]
+
+  Queue:
+    Type: AWS::SQS::Queue
+    Properties:
+      QueueName: !Sub ${AppName}-v2-ingest
+      VisibilityTimeout: 1800           # a Docling parse of a long PDF; the worker heartbeats every 5 min
+      ReceiveMessageWaitTimeSeconds: 20 # long polling
+      MessageRetentionPeriod: 345600
+      SqsManagedSseEnabled: true
+      RedrivePolicy: {deadLetterTargetArn: !GetAtt Dlq.Arn, maxReceiveCount: 3}
+      Tags: [{Key: Project, Value: !Ref AppName}]
+
+  # ============================================================================ ECS: worker service + migration task
+  Cluster:
+    Type: AWS::ECS::Cluster
+    Properties:
+      ClusterName: !Sub ${AppName}-v2   # the v1 cluster "pharmassist" stays until cutover
+      ClusterSettings: [{Name: containerInsights, Value: disabled}]
+      Tags: [{Key: Project, Value: !Ref AppName}]
+
+  # Both task definitions wrap their command in a tiny shell entrypoint that composes DATABASE_URL from
+  # the RDS-managed secret (username/password injected by ECS) and the endpoint, URL-encoding the
+  # password; ECS cannot compose a secret into a URL by itself. "$@" is the container Command, so
+  # `ecs run-task --overrides` can swap the command (seed users, --drain) and keep the environment.
+  WorkerTaskDef:
+    Type: AWS::ECS::TaskDefinition
+    Properties:
+      Family: !Sub ${AppName}-v2-ingest
+      RequiresCompatibilities: [FARGATE]
+      NetworkMode: awsvpc
+      Cpu: "4096"
+      Memory: "16384"
+      RuntimePlatform: {CpuArchitecture: ARM64, OperatingSystemFamily: LINUX}
+      EphemeralStorage: {SizeInGiB: 40}
+      ExecutionRoleArn: !GetAtt TaskExecRole.Arn
+      TaskRoleArn: !GetAtt WorkerTaskRole.Arn
+      Tags: [{Key: Project, Value: !Ref AppName}]
+      ContainerDefinitions:
+        - Name: ingest
+          Image: !Ref IngestImageUri
+          Essential: true
+          StopTimeout: 120              # Fargate maximum: lets a job finish its current stage on scale-in
+          EntryPoint:
+            - /bin/sh
+            - -c
+            - |
+              set -eu
+              export DATABASE_URL="$(python -c 'import os, urllib.parse as u; print("postgresql://%s:%s@%s:%s/%s?sslmode=require" % (u.quote(os.environ["DB_USER"], safe=""), u.quote(os.environ["DB_PASSWORD"], safe=""), os.environ["DB_HOST"], os.environ["DB_PORT"], os.environ["DB_NAME"]))')"
+              unset DB_PASSWORD
+              exec "$@"
+            - pharmassist
+          Command: [python, scripts/ingest_worker.py]
+          Environment:
+            - {Name: PHARMASSIST_BUCKET, Value: !Ref BucketName}
+            - {Name: INGEST_QUEUE_URL, Value: !Ref Queue}
+            - {Name: INGEST_DLQ_URL, Value: !Ref Dlq}
+            - {Name: AWS_REGION, Value: !Ref AWS::Region}
+            - {Name: AWS_DEFAULT_REGION, Value: !Ref AWS::Region}
+            - {Name: DB_HOST, Value: !GetAtt Db.Endpoint.Address}
+            - {Name: DB_PORT, Value: !GetAtt Db.Endpoint.Port}
+            - {Name: DB_NAME, Value: pharmassist}
+            - {Name: LANGSMITH_TRACING, Value: !Ref LangsmithTracing}
+            - {Name: LANGSMITH_PROJECT, Value: !Ref LangsmithProject}
+            - !If [HasSsmPrefix, {Name: SSM_PARAMETER_PREFIX, Value: !Ref SsmParameterPrefix}, !Ref AWS::NoValue]
+          Secrets:
+            - {Name: DB_USER, ValueFrom: !Sub "${Db.MasterUserSecret.SecretArn}:username::"}
+            - {Name: DB_PASSWORD, ValueFrom: !Sub "${Db.MasterUserSecret.SecretArn}:password::"}
+            - {Name: OPENAI_API_KEY, ValueFrom: !Sub "${AppKeysSecret}:OPENAI_API_KEY::"}
+            - {Name: ANTHROPIC_API_KEY, ValueFrom: !Sub "${AppKeysSecret}:ANTHROPIC_API_KEY::"}
+            - {Name: LANGSMITH_API_KEY, ValueFrom: !Sub "${AppKeysSecret}:LANGSMITH_API_KEY::"}
+          LogConfiguration:
+            LogDriver: awslogs
+            Options:
+              awslogs-group: !Ref WorkerLogs
+              awslogs-region: !Ref AWS::Region
+              awslogs-stream-prefix: ingest
+
+  MigrateTaskDef:
+    Type: AWS::ECS::TaskDefinition
+    Properties:
+      Family: !Sub ${AppName}-v2-migrate
+      RequiresCompatibilities: [FARGATE]
+      NetworkMode: awsvpc
+      Cpu: "512"
+      Memory: "1024"
+      RuntimePlatform: {CpuArchitecture: ARM64, OperatingSystemFamily: LINUX}
+      ExecutionRoleArn: !GetAtt TaskExecRole.Arn
+      TaskRoleArn: !GetAtt MigrateTaskRole.Arn
+      Tags: [{Key: Project, Value: !Ref AppName}]
+      ContainerDefinitions:
+        - Name: migrate
+          Image: !Ref ApiImageUri
+          Essential: true
+          EntryPoint:
+            - /bin/sh
+            - -c
+            - |
+              set -eu
+              export DATABASE_URL="$(python -c 'import os, urllib.parse as u; print("postgresql://%s:%s@%s:%s/%s?sslmode=require" % (u.quote(os.environ["DB_USER"], safe=""), u.quote(os.environ["DB_PASSWORD"], safe=""), os.environ["DB_HOST"], os.environ["DB_PORT"], os.environ["DB_NAME"]))')"
+              unset DB_PASSWORD
+              exec "$@"
+            - pharmassist
+          Command: [python, -m, alembic, -c, db/alembic.ini, upgrade, head]
+          Environment:
+            - {Name: PHARMASSIST_BUCKET, Value: !Ref BucketName}
+            - {Name: AWS_REGION, Value: !Ref AWS::Region}
+            - {Name: AWS_DEFAULT_REGION, Value: !Ref AWS::Region}
+            - {Name: DB_HOST, Value: !GetAtt Db.Endpoint.Address}
+            - {Name: DB_PORT, Value: !GetAtt Db.Endpoint.Port}
+            - {Name: DB_NAME, Value: pharmassist}
+            - {Name: LANGSMITH_TRACING, Value: "false"}
+          Secrets:
+            - {Name: DB_USER, ValueFrom: !Sub "${Db.MasterUserSecret.SecretArn}:username::"}
+            - {Name: DB_PASSWORD, ValueFrom: !Sub "${Db.MasterUserSecret.SecretArn}:password::"}
+            - {Name: JWT_SECRET, ValueFrom: !Ref JwtSecret}
+          LogConfiguration:
+            LogDriver: awslogs
+            Options:
+              awslogs-group: !Ref MigrateLogs
+              awslogs-region: !Ref AWS::Region
+              awslogs-stream-prefix: migrate
+
+  WorkerService:
+    Type: AWS::ECS::Service
+    Properties:
+      ServiceName: !Sub ${AppName}-v2-ingest
+      Cluster: !Ref Cluster
+      TaskDefinition: !Ref WorkerTaskDef
+      LaunchType: FARGATE
+      PlatformVersion: LATEST
+      DesiredCount: !Ref WorkerMinCount # Application Auto Scaling raises it from queue depth; scale-in returns to this
+      DeploymentConfiguration: {MinimumHealthyPercent: 0, MaximumPercent: 200}
+      NetworkConfiguration:
+        AwsvpcConfiguration:
+          AssignPublicIp: ENABLED       # public subnets, no NAT gateway: the task needs a public IP for S3/OpenAI
+          SecurityGroups: [!GetAtt WorkerSg.GroupId]
+          Subnets: !Ref SubnetIds
+      PropagateTags: SERVICE
+      Tags: [{Key: Project, Value: !Ref AppName}]
+
+  WorkerScalableTarget:
+    Type: AWS::ApplicationAutoScaling::ScalableTarget
+    Properties:
+      ServiceNamespace: ecs
+      ScalableDimension: ecs:service:DesiredCount
+      ResourceId: !Sub service/${Cluster}/${WorkerService.Name}
+      MinCapacity: !Ref WorkerMinCount
+      MaxCapacity: 2
+      # RoleARN omitted: Application Auto Scaling uses (and creates) its ECS service-linked role
+
+  WorkerScaleOut:
+    Type: AWS::ApplicationAutoScaling::ScalingPolicy
+    Properties:
+      PolicyName: !Sub ${AppName}-v2-ingest-scale-out
+      PolicyType: StepScaling
+      ScalingTargetId: !Ref WorkerScalableTarget
+      StepScalingPolicyConfiguration:
+        AdjustmentType: ExactCapacity
+        MetricAggregationType: Maximum
+        Cooldown: 60
+        StepAdjustments:                # bounds are relative to the alarm threshold (1): 1-9 messages -> 1 task, 10+ -> 2
+          - {MetricIntervalLowerBound: 0, MetricIntervalUpperBound: 9, ScalingAdjustment: 1}
+          - {MetricIntervalLowerBound: 9, ScalingAdjustment: 2}
+
+  WorkerScaleIn:
+    Type: AWS::ApplicationAutoScaling::ScalingPolicy
+    Properties:
+      PolicyName: !Sub ${AppName}-v2-ingest-scale-in
+      PolicyType: StepScaling
+      ScalingTargetId: !Ref WorkerScalableTarget
+      StepScalingPolicyConfiguration:
+        AdjustmentType: ExactCapacity
+        MetricAggregationType: Maximum
+        Cooldown: 60
+        StepAdjustments:
+          - {MetricIntervalUpperBound: 0, ScalingAdjustment: !Ref WorkerMinCount}
+
+  # Backlog = visible + in-flight messages, so a task mid-job keeps its capacity until the message is deleted.
+  WorkerBacklogAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmName: !Sub ${AppName}-v2-ingest-backlog
+      AlarmDescription: ingestion messages waiting or in flight; scales the worker service out
+      ComparisonOperator: GreaterThanOrEqualToThreshold
+      Threshold: 1
+      EvaluationPeriods: 1
+      TreatMissingData: notBreaching
+      Metrics:
+        - Id: backlog
+          Expression: visible + inflight
+          Label: backlog
+          ReturnData: true
+        - Id: visible
+          ReturnData: false
+          MetricStat:
+            Period: 60
+            Stat: Maximum
+            Metric:
+              Namespace: AWS/SQS
+              MetricName: ApproximateNumberOfMessagesVisible
+              Dimensions: [{Name: QueueName, Value: !GetAtt Queue.QueueName}]
+        - Id: inflight
+          ReturnData: false
+          MetricStat:
+            Period: 60
+            Stat: Maximum
+            Metric:
+              Namespace: AWS/SQS
+              MetricName: ApproximateNumberOfMessagesNotVisible
+              Dimensions: [{Name: QueueName, Value: !GetAtt Queue.QueueName}]
+      AlarmActions: [!Ref WorkerScaleOut]
+
+  WorkerIdleAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmName: !Sub ${AppName}-v2-ingest-idle
+      AlarmDescription: queue empty for 15 minutes; scales the worker service to 0
+      ComparisonOperator: LessThanOrEqualToThreshold
+      Threshold: 0
+      EvaluationPeriods: 15
+      DatapointsToAlarm: 15
+      TreatMissingData: breaching       # SQS stops reporting for an idle queue; no data means empty
+      Metrics:
+        - Id: backlog
+          Expression: visible + inflight
+          Label: backlog
+          ReturnData: true
+        - Id: visible
+          ReturnData: false
+          MetricStat:
+            Period: 60
+            Stat: Maximum
+            Metric:
+              Namespace: AWS/SQS
+              MetricName: ApproximateNumberOfMessagesVisible
+              Dimensions: [{Name: QueueName, Value: !GetAtt Queue.QueueName}]
+        - Id: inflight
+          ReturnData: false
+          MetricStat:
+            Period: 60
+            Stat: Maximum
+            Metric:
+              Namespace: AWS/SQS
+              MetricName: ApproximateNumberOfMessagesNotVisible
+              Dimensions: [{Name: QueueName, Value: !GetAtt Queue.QueueName}]
+      AlarmActions: [!Ref WorkerScaleIn]
+
+  # ============================================================================ EC2: launch template + ASG
+  LaunchTemplate:
+    Type: AWS::EC2::LaunchTemplate
+    Properties:
+      LaunchTemplateName: !Sub ${AppName}-v2-api
+      TagSpecifications:
+        - {ResourceType: launch-template, Tags: [{Key: Project, Value: !Ref AppName}]}
+      LaunchTemplateData:
+        ImageId: !Ref AmiId
+        InstanceType: !Ref InstanceType
+        IamInstanceProfile: {Arn: !GetAtt InstanceProfile.Arn}
+        SecurityGroupIds: [!GetAtt AppSg.GroupId]
+        MetadataOptions:
+          HttpEndpoint: enabled
+          HttpTokens: required            # IMDSv2 only
+          HttpPutResponseHopLimit: 2      # the API container (bridge network) must reach IMDS for its role credentials
+        BlockDeviceMappings:
+          - DeviceName: /dev/xvda
+            Ebs: {VolumeSize: 30, VolumeType: gp3, Encrypted: true, DeleteOnTermination: true}
+        Monitoring: {Enabled: false}
+        TagSpecifications:
+          - {ResourceType: instance, Tags: [{Key: Project, Value: !Ref AppName}, {Key: Name, Value: !Sub "${AppName}-v2-api"}]}
+          - {ResourceType: volume, Tags: [{Key: Project, Value: !Ref AppName}]}
+        UserData:
+          # Boot: install Docker, pull the API image, build the env file from Secrets Manager with the
+          # instance role (nothing secret is in this script or in the launch template), run the
+          # container with CloudWatch logging, then signal CloudFormation once the app answers.
+          # CloudFormation substitutes ${...} here, so the script avoids ${} for shell variables.
+          Fn::Base64: !Sub
+            - |
+              #!/bin/bash
+              set -euo pipefail
+              exec > >(tee -a /var/log/pharmassist-boot.log | logger -t pharmassist-boot) 2>&1
+              REGION=${AWS::Region}
+              IMAGE=${ApiImageUri}
+              TOKEN=$(curl -sS -X PUT http://169.254.169.254/latest/api/token -H "X-aws-ec2-metadata-token-ttl-seconds: 300")
+              INSTANCE_ID=$(curl -sS -H "X-aws-ec2-metadata-token: $TOKEN" http://169.254.169.254/latest/meta-data/instance-id)
+              signal() {
+                aws cloudformation signal-resource --region "$REGION" --stack-name ${AWS::StackName} \
+                  --logical-resource-id ApiAsg --unique-id "$INSTANCE_ID" --status "$1" || true
+              }
+              trap 'signal FAILURE' ERR
+
+              dnf install -y docker
+              systemctl enable --now docker
+
+              REGISTRY=$(echo "$IMAGE" | cut -d/ -f1)
+              aws ecr get-login-password --region "$REGION" | docker login --username AWS --password-stdin "$REGISTRY"
+              docker pull "$IMAGE"
+
+              # env file (root-only) composed from Secrets Manager; values never reach stdout or the logs
+              install -d -m 700 /etc/pharmassist
+              umask 077
+              get_secret() { aws secretsmanager get-secret-value --region "$REGION" --secret-id "$1" --query SecretString --output text; }
+              RDS_JSON=$(get_secret ${DbSecretArn}) KEYS_JSON=$(get_secret ${AppKeysSecret}) JWT=$(get_secret ${JwtSecret}) \
+              CACHE_TOKEN=$(${CacheTokenCmd}) python3 - > /etc/pharmassist/api.env <<'PY'
+              import json, os, urllib.parse as u
+              rds = json.loads(os.environ["RDS_JSON"])
+              keys = json.loads(os.environ["KEYS_JSON"])
+              tok = os.environ.get("CACHE_TOKEN", "")
+              env = {
+                  "DATABASE_URL": "postgresql://%s:%s@${DbHost}:${DbPort}/pharmassist?sslmode=require"
+                                  % (u.quote(rds["username"], safe=""), u.quote(rds["password"], safe="")),
+                  "REDIS_URL": "rediss://%s${CacheHost}:${CachePort}/0" % ((":" + u.quote(tok, safe="") + "@") if tok else ""),
+                  "JWT_SECRET": os.environ["JWT"],
+                  "OPENAI_API_KEY": keys.get("OPENAI_API_KEY", ""),
+                  "ANTHROPIC_API_KEY": keys.get("ANTHROPIC_API_KEY", ""),
+                  "LANGSMITH_API_KEY": keys.get("LANGSMITH_API_KEY", ""),
+                  "LANGSMITH_TRACING": "${LangsmithTracing}",
+                  "LANGSMITH_PROJECT": "${LangsmithProject}",
+                  "PHARMASSIST_BUCKET": "${BucketName}",
+                  "INGEST_QUEUE_URL": "${Queue}",
+                  "INGEST_DLQ_URL": "${Dlq}",
+                  "APP_CORS_ORIGINS": "${CorsOrigins}",
+                  "SSM_PARAMETER_PREFIX": "${SsmParameterPrefix}",
+                  "AWS_REGION": "${AWS::Region}",
+                  "AWS_DEFAULT_REGION": "${AWS::Region}",
+              }
+              for k, v in env.items():
+                  if v:
+                      print(f"{k}={v}")
+              PY
+              umask 022
+
+              docker run -d --name pharmassist-api --restart always -p 8000:8000 \
+                --env-file /etc/pharmassist/api.env --memory 6g --stop-timeout 30 \
+                --log-driver awslogs --log-opt awslogs-region="$REGION" \
+                --log-opt awslogs-group=${ApiLogs} --log-opt awslogs-stream="$INSTANCE_ID" \
+                "$IMAGE"
+
+              # healthy = /health/ready (Postgres + cache reachable). Before the first migration the
+              # schema may be missing; a live process is then accepted and the target group decides.
+              for i in $(seq 1 48); do
+                if curl -fsS -o /dev/null http://127.0.0.1:8000/health/ready; then
+                  echo "ready after $((i * 5)) s"; signal SUCCESS; exit 0
+                fi
+                sleep 5
+              done
+              if curl -fsS -o /dev/null http://127.0.0.1:8000/health/live; then
+                echo "live but not ready after 240 s (schema not migrated yet?)"; signal SUCCESS; exit 0
+              fi
+              echo "the API container did not come up"; docker logs --tail 50 pharmassist-api || true
+              signal FAILURE; exit 1
+            - DbSecretArn: !GetAtt Db.MasterUserSecret.SecretArn
+              DbHost: !GetAtt Db.Endpoint.Address
+              DbPort: !GetAtt Db.Endpoint.Port
+              CacheHost: !GetAtt Cache.PrimaryEndPoint.Address
+              CachePort: !GetAtt Cache.PrimaryEndPoint.Port
+              CacheTokenCmd: !If [CacheAuth, !Sub "get_secret ${CacheAuthSecret}", "true"]
+              CorsOrigins: !If [HasHostName, !Sub "https://${HostName}", ""]
+
+  ApiAsg:
+    Type: AWS::AutoScaling::AutoScalingGroup
+    Properties:
+      AutoScalingGroupName: !Sub ${AppName}-v2-api
+      LaunchTemplate: {LaunchTemplateId: !Ref LaunchTemplate, Version: !GetAtt LaunchTemplate.LatestVersionNumber}
+      MinSize: "2"
+      MaxSize: "4"
+      DesiredCapacity: !Ref DesiredCapacity
+      VPCZoneIdentifier: !Ref SubnetIds
+      TargetGroupARNs: [!Ref AppTg]
+      HealthCheckType: ELB
+      HealthCheckGracePeriod: 300
+      Tags:
+        - {Key: Project, Value: !Ref AppName, PropagateAtLaunch: true}
+        - {Key: Name, Value: !Sub "${AppName}-v2-api", PropagateAtLaunch: true}
+    CreationPolicy:
+      ResourceSignal: {Count: !Ref DesiredCapacity, Timeout: PT20M}
+    UpdatePolicy:
+      AutoScalingRollingUpdate:         # new image or AMI: replace one instance at a time, one always serving
+        MinInstancesInService: 1
+        MaxBatchSize: 1
+        PauseTime: PT10M
+        WaitOnResourceSignals: true
+        SuspendProcesses: [HealthCheck, ReplaceUnhealthy, AZRebalance, AlarmNotification, ScheduledActions]
+
+  ApiCpuScaling:
+    Type: AWS::AutoScaling::ScalingPolicy
+    Properties:
+      AutoScalingGroupName: !Ref ApiAsg
+      PolicyType: TargetTrackingScaling
+      TargetTrackingConfiguration:
+        PredefinedMetricSpecification: {PredefinedMetricType: ASGAverageCPUUtilization}
+        TargetValue: 60
+
+Outputs:
+  ElasticIp1:
+    Value: !Ref Eip1
+  ElasticIp2:
+    Value: !Ref Eip2
+  NlbDns:
+    Value: !GetAtt Nlb.DNSName
+  AlbDns:
+    Value: !GetAtt Alb.DNSName
+  Url:
+    Value: !If [HasCert, !Sub "https://${HostName}", !Sub "http://${Nlb.DNSName}"]
+  HostName:
+    Value: !Ref HostName
+  Cluster:
+    Value: !Ref Cluster
+  WorkerService:
+    Value: !GetAtt WorkerService.Name
+  WorkerTaskDef:
+    Value: !Ref WorkerTaskDef
+  MigrationTaskDef:
+    Value: !Ref MigrateTaskDef
+  WorkerSecurityGroup:
+    Value: !GetAtt WorkerSg.GroupId
+  MigrateSecurityGroup:
+    Value: !GetAtt MigrateSg.GroupId
+  SubnetIds:
+    Value: !Join [",", !Ref SubnetIds]
+  QueueUrl:
+    Value: !Ref Queue
+  DlqUrl:
+    Value: !Ref Dlq
+  DbEndpoint:
+    Value: !Sub "${Db.Endpoint.Address}:${Db.Endpoint.Port}"
+  DbSecretArn:
+    Value: !GetAtt Db.MasterUserSecret.SecretArn
+  CacheEndpoint:
+    Value: !Sub "${Cache.PrimaryEndPoint.Address}:${Cache.PrimaryEndPoint.Port}"
+  AppKeysSecret:
+    Value: !Ref AppKeysSecret
+  ApiLogGroup:
+    Value: !Ref ApiLogs
+  AutoScalingGroup:
+    Value: !Ref ApiAsg
+  Bucket:
+    Value: !Ref BucketName
