@@ -1,0 +1,1160 @@
+<!doctype html>
+<html lang="en" data-register="blueprint">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PharmAssist v2: a question becomes a cited answer, or exactly no answer</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f172a'/%3E%3Cpath d='M18 40V24l14-8 14 8v16l-14 8-14-8Z' fill='none' stroke='%23fbbf24' stroke-width='4' stroke-linejoin='round'/%3E%3Ccircle cx='32' cy='32' r='5' fill='%2338bdf8'/%3E%3C/svg%3E">
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style data-ve-kit>
+/* visual-explainer kit. The renderer inlines this file at <link rel="stylesheet" data-ve-kit>.
+   Tokens sit in :where(), so a page's own :root rules (topic motif, a named palette) always win.
+   A page picks its register with <html data-register="instrument|blueprint|paper|editorial">; Instrument is the default. */
+
+/* scale, shared by every register */
+:where(:root) {
+  color-scheme: light dark;
+  --t-label: .75rem; --t-small: .875rem; --t-body: 1rem; --t-lead: 1.25rem; --t-h2: 1.625rem; --t-h1: clamp(2.25rem, 5.5vw, 4rem);
+  --s-1: .25rem; --s-2: .5rem; --s-3: .75rem; --s-4: 1rem; --s-5: 1.5rem; --s-6: 2rem; --s-7: 3rem; --s-8: 4.5rem;
+  --r-1: 4px; --r-2: 10px;
+  --ease: cubic-bezier(.16,1,.3,1); --fast: 150ms; --med: 300ms; --slow: 500ms;
+}
+
+/* Instrument (default): Geist, near-black and amber; dark first */
+:where(:root) {
+  --bg: #0b0d0c; --surface: #121614; --border: #1f2522; --border-bright: #5e6662;
+  --text: #e6ebe8; --text-dim: #919d97; --accent: #f2a93b; --accent-dim: rgba(242,169,59,.14);
+  --ok: #6fcf97; --warn: #e8c547; --risk: #ef6f5c; --info: #6cb6e0;
+  --node-top: color-mix(in srgb, var(--text) 7%, var(--surface)); --lift: rgb(0 0 0 / .45); --halo: 32%;
+  --font-body: 'Geist', 'Segoe UI', sans-serif;
+  --font-mono: 'Geist Mono', ui-monospace, monospace;
+  --font-display: var(--font-body); --display-weight: 600;
+  --stage: radial-gradient(circle at 1px 1px, color-mix(in srgb, var(--text) 13%, transparent) 1px, transparent 1.5px) 0 0 / 20px 20px;
+}
+@media (prefers-color-scheme: light) {
+  :where(:root) {
+    --bg: #f4f5f3; --surface: #ffffff; --border: #dfe3e0; --border-bright: #888e8b;
+    --text: #121614; --text-dim: #545e59; --accent: #955700; --accent-dim: rgba(149,87,0,.12);
+    --ok: #1c7443; --warn: #7a5e00; --risk: #b0341e; --info: #1a6890;
+    --node-top: var(--surface); --lift: rgb(18 22 20 / .12); --halo: 22%;
+  }
+}
+
+/* Blueprint: IBM Plex, blue-black, a 24px line grid on the stage, r-1 everywhere; dark first */
+:where(:root[data-register="blueprint"]) {
+  --bg: #0d1520; --surface: #132031; --border: #22324a; --border-bright: #596b87;
+  --text: #e3ecf5; --text-dim: #92a6bb; --accent: #ffb547; --accent-dim: rgba(255,181,71,.14);
+  --ok: #6fd3a0; --warn: #e8d36a; --risk: #ff7b6b; --info: #7cc0f0;
+  --font-body: 'IBM Plex Sans', 'Segoe UI', sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+  --r-2: 4px;
+  --stage: linear-gradient(color-mix(in srgb, var(--border) 55%, transparent) 1px, transparent 1px) 0 0 / 24px 24px, linear-gradient(90deg, color-mix(in srgb, var(--border) 55%, transparent) 1px, transparent 1px) 0 0 / 24px 24px;
+}
+@media (prefers-color-scheme: light) {
+  :where(:root[data-register="blueprint"]) {
+    --bg: #f2f6fa; --surface: #ffffff; --border: #d6e0ea; --border-bright: #818f9e;
+    --text: #0f1a26; --text-dim: #4d6074; --accent: #a34700; --accent-dim: rgba(163,71,0,.12);
+    --ok: #1c7443; --warn: #776300; --risk: #b0341e; --info: #145f99;
+  }
+}
+
+/* Paper: Newsreader headings over Atkinson Hyperlegible, ink blue; light first */
+:where(:root[data-register="paper"]) {
+  --bg: #f7f7f4; --surface: #ffffff; --border: #e3e3dc; --border-bright: #8e8e8a;
+  --text: #17191c; --text-dim: #575c63; --accent: #2c4cd0; --accent-dim: rgba(44,76,208,.12);
+  --ok: #1d7443; --warn: #836000; --risk: #b3301d; --info: #1b6a94;
+  --node-top: var(--surface); --lift: rgb(18 22 20 / .12); --halo: 22%;
+  --font-body: 'Atkinson Hyperlegible Next', 'Segoe UI', sans-serif;
+  --font-mono: 'Atkinson Hyperlegible Mono', ui-monospace, monospace;
+  --font-display: 'Newsreader', Georgia, serif; --display-weight: 500;
+}
+@media (prefers-color-scheme: dark) {
+  :where(:root[data-register="paper"]) {
+    --bg: #111316; --surface: #181b1f; --border: #262a30; --border-bright: #62676c;
+    --text: #e8e8e3; --text-dim: #9ba1a9; --accent: #93a6ff; --accent-dim: rgba(147,166,255,.14);
+    --ok: #6cc492; --warn: #e3b94d; --risk: #f0806b; --info: #6fb8dc;
+    --node-top: color-mix(in srgb, var(--text) 7%, var(--surface)); --lift: rgb(0 0 0 / .45); --halo: 32%;
+  }
+}
+
+/* Editorial: Instrument Serif display over Instrument Sans; light first */
+:where(:root[data-register="editorial"]) {
+  --bg: #fbfbf9; --surface: #f1f0ec; --border: #e2e0da; --border-bright: #8c8a85;
+  --text: #111111; --text-dim: #5a5853; --accent: #cc3418; --accent-dim: rgba(204,52,24,.12);
+  --ok: #1d7443; --warn: #836000; --risk: #a01d48; --info: #1b6a94;
+  --node-top: var(--surface); --lift: rgb(18 22 20 / .12); --halo: 22%;
+  --font-body: 'Instrument Sans', 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  --font-display: 'Instrument Serif', Georgia, serif; --display-weight: 400;
+}
+@media (prefers-color-scheme: dark) {
+  :where(:root[data-register="editorial"]) {
+    --bg: #0f0f0f; --surface: #1a1a19; --border: #2b2a28; --border-bright: #696763;
+    --text: #f2f0eb; --text-dim: #a4a19b; --accent: #ff6e50; --accent-dim: rgba(255,110,80,.14);
+    --ok: #6cc492; --warn: #e3b94d; --risk: #f57fa2; --info: #7cb8e8;
+    --node-top: color-mix(in srgb, var(--text) 7%, var(--surface)); --lift: rgb(0 0 0 / .45); --halo: 32%;
+  }
+}
+
+/* base */
+html { font-size: 17px; }
+* { box-sizing: border-box; margin: 0; }
+body { background: var(--bg); color: var(--text); font: 400 var(--t-body)/1.6 var(--font-body); text-wrap: pretty; font-kerning: normal; font-synthesis: none; -webkit-font-smoothing: antialiased; }
+::selection { background: var(--accent-dim); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+main { max-width: 64rem; margin: 0 auto; padding: var(--s-8) var(--s-5); display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--s-8); }
+section, figure, header { min-width: 0; }
+header { display: grid; gap: var(--s-4); }
+header + figure { margin-top: calc(var(--s-6) - var(--s-8)); }
+/* text-box trims to cap height and baseline, so gaps are measured from the letters, not the line box */
+h1, h2, .kpi .val { text-box: trim-both cap alphabetic; }
+h1 { font-size: var(--t-h1); line-height: 1.05; font-family: var(--font-display); font-weight: var(--display-weight); letter-spacing: -.035em; text-wrap: balance; max-width: 16ch; margin-bottom: var(--s-2); }
+h1 .num { color: var(--accent); font-variant-numeric: tabular-nums; }
+h2 { font-size: var(--t-h2); line-height: 1.2; font-family: var(--font-display); font-weight: var(--display-weight); letter-spacing: -.015em; text-wrap: balance; }
+/* section opener: hairline, mono label in columns 1–3, h2 in 4–12, on one baseline */
+.sec-head { display: grid; gap: var(--s-3) var(--s-5); align-items: baseline; border-top: 1px solid var(--border); padding-top: var(--s-5); margin-bottom: var(--s-6); }
+@media (min-width: 52rem) { .sec-head { grid-template-columns: 3fr 9fr; } }
+/* the other opener, a bare label above the h2, gets the same gaps, so the h2 never sits on the figure below */
+section > .ve-label:has(+ h2) { margin-bottom: var(--s-3); }
+section > h2 { margin-bottom: var(--s-6); }
+h3 { font-size: var(--t-body); line-height: 1.3; font-weight: 600; }
+.eyebrow { display: flex; align-items: center; gap: var(--s-2); font: 600 var(--t-label) var(--font-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
+.eyebrow::before { content: ''; width: 1.25rem; height: 2px; background: currentColor; }
+.ve-label { font: 500 var(--t-label) var(--font-mono); color: var(--text-dim); }
+.caps { text-transform: uppercase; letter-spacing: .08em; font-weight: 600; color: var(--text); }
+.lead { font-size: var(--t-lead); line-height: 1.5; color: var(--text-dim); max-width: 44ch; }
+.lead b { color: var(--text); font-weight: 600; }
+.meta { font: 500 var(--t-label) var(--font-mono); color: var(--text-dim); font-variant-numeric: tabular-nums; }
+.unit { font-size: .5em; font-weight: 500; color: var(--text-dim); letter-spacing: 0; }
+code { font: .875em var(--font-mono); font-variant-ligatures: none; }
+
+/* figure: the stage is a faint dot grid, so nodes read as objects placed on it */
+.frame { background: var(--stage), var(--bg); border: 1px solid var(--border); border-radius: var(--r-2); padding: var(--s-5); overflow-x: auto; }
+figcaption { font-size: var(--t-body); color: var(--text-dim); margin-top: var(--s-3); max-width: 65ch; }
+.fig-n { font: 600 var(--t-label) var(--font-mono); color: var(--text); margin-right: var(--s-2); }
+
+/* diagram kit (references/diagrams.md) */
+/* min-width keeps 14-unit labels >= 12px as rendered; narrow screens scroll the frame instead. */
+.ve-svg { width: 100%; min-width: 700px; height: auto; display: block; font: 500 17px var(--font-body); }
+.ve-n .sh { fill: url(#ve-node); stroke: var(--border-bright); stroke-width: 1.5; filter: drop-shadow(0 6px 14px var(--lift)); transition: stroke var(--fast) var(--ease), opacity var(--med) var(--ease); }
+.ve-n .lid { fill: var(--node-top); }
+.ve-n.is-key .sh { fill: color-mix(in srgb, var(--accent) 11%, var(--surface)); stroke: var(--accent); stroke-width: 2; filter: drop-shadow(0 0 16px color-mix(in srgb, var(--accent) var(--halo), transparent)); }
+.ve-n text { fill: var(--text); text-anchor: middle; dominant-baseline: central; font-weight: 600; }
+.ve-n .sub { fill: var(--text-dim); font: 500 14px var(--font-mono); }
+.ve-n .gl { fill: none; stroke: var(--text-dim); stroke-width: 1.5; stroke-linejoin: round; }
+.ve-n .ve-kind { fill: var(--text-dim); font: 600 14px var(--font-mono); letter-spacing: .08em; text-transform: uppercase; }
+.ve-n.is-key .gl { stroke: var(--accent); }
+.ve-e { fill: none; stroke: var(--text-dim); stroke-width: 1.75; marker-end: url(#ve-ah); }
+.ve-e.is-hot { stroke: var(--accent); stroke-width: 2.75; filter: drop-shadow(0 0 5px color-mix(in srgb, var(--accent) 55%, transparent)); }
+.ve-e.is-async { stroke-dasharray: 6 5; }
+.ve-el { fill: var(--text-dim); font: 500 14px var(--font-mono); text-anchor: middle; paint-order: stroke; stroke: var(--bg); stroke-width: 5px; stroke-linejoin: round; }
+.ve-el.l { text-anchor: end; } .ve-el.r { text-anchor: start; }
+/* <ve-flow> on a page: its labels stay at 12 px or more, and a small drawing grows no more than 1.3× (kit/flow.mjs sets both) */
+.ve-svg.ve-flow { min-width: var(--min); max-width: var(--max); }
+/* flags on <ve-flow> parts: new, gone (an arrow also gets ✕) */
+.ve-n.is-new .sh { stroke: var(--ok); stroke-dasharray: 6 4; }
+.ve-n.is-gone .sh { stroke: var(--risk); stroke-dasharray: 3 4; opacity: .7; }
+.ve-n.is-gone text { text-decoration: line-through; }
+.ve-e.is-new { stroke: var(--ok); }
+.ve-e.is-gone { stroke: var(--risk); stroke-dasharray: 3 4; }
+.ve-x { fill: var(--risk); font: 600 16px var(--font-mono); text-anchor: middle; dominant-baseline: central; paint-order: stroke; stroke: var(--surface); stroke-width: 5px; }
+/* <ve-stack>: one bar split in proportion; labels under their segments */
+.ve-stack rect { fill: color-mix(in srgb, var(--text) 9%, var(--surface)); stroke: var(--border-bright); stroke-width: 1.5; }
+.ve-stack rect.hot { fill: var(--accent-dim); stroke: var(--accent); }
+.ve-stack text { fill: var(--text-dim); font: 500 14px var(--font-mono); text-anchor: middle; dominant-baseline: central; }
+
+/* numbered callouts and edge numbers (references/diagrams.md): .now fills the current one; .q keeps an edge number quiet until its step */
+.ve-co circle { fill: var(--surface); stroke: var(--accent); stroke-width: 1.75; }
+.ve-co text { fill: var(--accent); font: 600 14px var(--font-mono); text-anchor: middle; dominant-baseline: central; }
+.ve-co.now circle { fill: var(--accent); } .ve-co.now text { fill: var(--surface); }
+.ve-co.q circle { stroke: var(--border-bright); } .ve-co.q text { fill: var(--text-dim); }
+.ve-co.q.now circle { fill: var(--accent); stroke: var(--accent); } .ve-co.q.now text { fill: var(--surface); }
+
+/* dimension lines (references/diagrams.md) */
+.ve-dim path { fill: none; stroke-width: 1; } .ve-dim .ext { stroke: var(--border-bright); } .ve-dim .ln { stroke: var(--text-dim); }
+.ve-dim text { fill: var(--text); font: 500 14px var(--font-mono); text-anchor: middle; }
+.ve-dim.is-key .ln { stroke: var(--accent); } .ve-dim.is-key text { fill: var(--accent); }
+
+/* flow dots: they travel under the nodes, so a dot enters a box and leaves from the far side */
+[data-flow] { fill: none; stroke: none; }
+.ve-dots circle { fill: var(--text); }
+.ve-dots .hit { fill: var(--accent); filter: drop-shadow(0 0 4px var(--accent)); }
+.ve-steps:not(.is-full) .ve-dots { display: none; }
+
+/* linked highlighting: same data-ref lights up together */
+/* Dim shapes, never text below 4.5:1: unlit labels drop to --text-dim instead of fading. */
+.ve-ref { text-decoration: underline dotted var(--text-dim) 1px; text-underline-offset: .22em; border-radius: var(--r-1); transition: background var(--fast) var(--ease); }
+.ve-ref.is-lit { background: var(--accent-dim); text-decoration-color: var(--accent); }
+svg [data-ref] { transition: opacity var(--med) var(--ease); }
+svg.has-lit path[data-ref]:not(.is-lit), svg.has-lit g[data-ref]:not(.is-lit) .sh { opacity: .25; }
+svg.has-lit g[data-ref]:not(.is-lit) text, svg.has-lit text[data-ref]:not(.is-lit) { fill: var(--text-dim); }
+.ve-n.is-lit .sh { stroke: var(--accent); }
+.ve-e.is-lit { stroke: var(--accent); }
+.ve-el.is-lit { fill: var(--text); }
+.case.is-lit { border-color: var(--accent); }
+
+/* stepper / scene player */
+/* Future steps: shapes stay as a faint outline; their labels are hidden, not faded to an unreadable gray. */
+.ve-steps [data-s] { transition: opacity var(--slow) var(--ease), stroke-dashoffset var(--slow) var(--ease); }
+.ve-steps [data-s]:not(.on) { opacity: .15; }
+.ve-steps g[data-s]:not(.on) text, .ve-steps text[data-s]:not(.on) { opacity: 0; }
+.ve-steps path[pathLength][data-s] { stroke-dasharray: 1; stroke-dashoffset: 1; }
+.ve-steps path[pathLength][data-s].on { stroke-dashoffset: 0; }
+.ve-steps .ve-n.now > .sh { stroke: var(--accent); }
+/* replay: the edges that fired light until the full picture, and each token runs its path once, after --d; edges and nodes still show the step without tokens */
+.ve-steps:not(.is-full) .ve-e.now { stroke: var(--accent); stroke-width: 2.75; }
+.ve-tok { fill: var(--accent); visibility: hidden; }
+.ve-steps:not(.is-still) .ve-tok.now { visibility: visible; animation: ve-run var(--dur, 900ms) ease-in-out var(--d, 0ms) both; }
+@keyframes ve-run { from { offset-distance: 0%; opacity: 0; } 10%, 75% { opacity: 1; } to { offset-distance: 100%; opacity: 0; } }
+/* a part that comes and goes (a queued job, a busy slot): shown only on the steps its data-s lists, arriving after --d */
+.ve-steps .ve-at { transition: opacity var(--med) var(--ease); }
+.ve-steps .ve-at:not(.now) { opacity: 0; }
+.ve-steps .ve-at.now { transition-delay: var(--d, 0ms); }
+/* a changing value: one text per step at one spot; the latest step's shows, swapped without a crossfade */
+.ve-steps .ve-vals text { transition: none; }
+.ve-vals text.on:has(~ text.on) { opacity: 0; }
+.ve-player { display: grid; grid-template-columns: auto auto minmax(0, 1fr) auto; align-items: center; gap: var(--s-2) var(--s-3); margin-top: var(--s-4); }
+.ve-cap { grid-column: 1 / -1; list-style: none; padding: 0; min-height: 3.2em; }
+.ve-cap li::before { content: attr(data-n); font: 600 var(--t-label) var(--font-mono); color: var(--accent); margin-right: var(--s-3); font-variant-numeric: tabular-nums; }
+.ve-player input { accent-color: var(--accent); min-width: 0; }
+button { font: 500 var(--t-small) var(--font-mono); color: var(--text); background: var(--surface); border: 1px solid var(--border-bright); border-radius: var(--r-1); padding: var(--s-2) var(--s-3); cursor: pointer; transition: border-color var(--fast) var(--ease); }
+button:hover, button:focus-visible { border-color: var(--accent); }
+
+/* KPI strip: one frame, cells split by hairlines, each number with its picture. Flex, so a wrapped last row stretches instead of leaving an empty gray cell. */
+.kpis { display: flex; flex-wrap: wrap; gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: var(--r-2); overflow: hidden; }
+.kpi { flex: 1 1 14rem; background: var(--surface); padding: var(--s-5); display: grid; grid-template-rows: auto auto 1fr; gap: var(--s-3); min-width: 0; }
+.kpi .val { font: 600 2.75rem/1 var(--font-body); font-variant-numeric: tabular-nums; letter-spacing: -.04em; }
+.ve-waffle { align-self: end; width: 11rem; height: auto; font: 500 13px var(--font-mono); overflow: visible; }
+.ve-waffle text { fill: var(--text-dim); dominant-baseline: central; }
+.ann { fill: none; stroke: var(--text-dim); stroke-width: 1; }
+.ve-bars { align-self: end; width: 100%; max-width: 16rem; height: auto; font: 500 13px var(--font-mono); overflow: visible; }
+.ve-bars text { fill: var(--text-dim); dominant-baseline: central; }
+.ve-bars rect { fill: var(--border-bright); transform-box: fill-box; transform-origin: left; transition: transform 900ms var(--ease) 150ms; }
+.ve-bars .hot { fill: var(--accent); }
+.ve-bars .hot + text { fill: var(--text); }
+
+/* small multiples: one mini diagram per case; the changed part takes the case's status color */
+.cases { display: grid; grid-template-columns: repeat(auto-fit, minmax(14.5rem, 1fr)); gap: var(--s-4); }
+.case { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-2); padding: var(--s-4); display: grid; gap: var(--s-3); align-content: start; transition: border-color var(--fast) var(--ease); }
+.case[data-st=ok] { --st: var(--ok); } .case[data-st=warn] { --st: var(--warn); } .case[data-st=risk] { --st: var(--risk); }
+.ve-mini { width: 100%; height: auto; font: 600 15px var(--font-body); }
+.ve-mini .ve-n .sh { filter: none; }
+/* a .cases column is never under 14.5rem, so a mini is ≥ 211 px and 14 units render ≥ 12.3 px */
+.ve-mini .ve-n .sub { font-size: 14px; }
+.ve-mini .is-st.ve-e { stroke: var(--st); stroke-width: 2.75; }
+.ve-mini .is-st .sh { stroke: var(--st); stroke-width: 2; }
+.ve-mini .is-st .sub { fill: var(--st); }
+.ve-mini .is-off { stroke-dasharray: 5 4; }
+.ve-mini .ve-e.is-off { opacity: .35; }
+
+/* chips */
+.chip { display: inline-flex; align-items: center; gap: var(--s-2); font: 600 var(--t-label) var(--font-mono); padding: 2px var(--s-2); border: 1px solid currentColor; border-radius: var(--r-1); white-space: nowrap; justify-self: start; }
+.chip::before { content: ''; width: .5rem; height: .5rem; background: currentColor; }
+.chip.ok { color: var(--ok); } .chip.ok::before { border-radius: 50%; }
+.chip.warn { color: var(--warn); } .chip.warn::before { clip-path: polygon(50% 0, 100% 100%, 0 100%); }
+.chip.risk { color: var(--risk); }
+
+details { border-top: 1px solid var(--border); padding-top: var(--s-4); color: var(--text-dim); font-size: var(--t-body); }
+summary { cursor: pointer; font: 500 var(--t-label) var(--font-mono); margin-bottom: var(--s-2); }
+/* sources stay visible: readers check them without hunting for a toggle */
+.sources { border-top: 1px solid var(--border); padding-top: var(--s-4); display: grid; gap: var(--s-2); }
+
+/* entrance: blocks rise in once; bars grow as their block arrives (JS adds .js-motion only when motion is allowed) */
+.js-motion main > * { transition: opacity var(--slow) var(--ease), transform var(--slow) var(--ease); }
+.js-motion main > :not(.in) { opacity: 0; transform: translateY(1rem); }
+.js-motion main > :not(.in) .ve-bars rect { transform: scaleX(0); }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } .ve-tok { display: none; } }
+
+@media print {
+  /* Print uses the register's light foregrounds on white, every step fully drawn, and no effects. */
+  :where(:root) { --bg: #fff; --surface: #fff; --border: #dfe3e0; --border-bright: #888e8b; --text: #121614; --text-dim: #545e59; --accent: #955700; --ok: #1c7443; --warn: #7a5e00; --risk: #b0341e; --info: #1a6890; --node-top: #fff; }
+  :where(:root[data-register="blueprint"]) { --border: #d6e0ea; --border-bright: #818f9e; --text: #0f1a26; --text-dim: #4d6074; --accent: #a34700; --warn: #776300; --info: #145f99; }
+  :where(:root[data-register="paper"]) { --border: #e3e3dc; --border-bright: #8e8e8a; --text: #17191c; --text-dim: #575c63; --accent: #2c4cd0; --ok: #1d7443; --warn: #836000; --risk: #b3301d; --info: #1b6a94; }
+  :where(:root[data-register="editorial"]) { --border: #e2e0da; --border-bright: #8c8a85; --text: #111111; --text-dim: #5a5853; --accent: #cc3418; --ok: #1d7443; --warn: #836000; --risk: #a01d48; --info: #1b6a94; }
+  .ve-player button, .ve-player input, .ve-dots { display: none; }
+  .frame { overflow: visible; background: #fff; } .ve-svg, .ve-svg.ve-flow { min-width: 0; }
+  .frame, .case, .kpi { break-inside: avoid; } h2 { break-after: avoid; }
+  svg * { filter: none !important; }
+  .js-motion main > * { opacity: 1 !important; transform: none !important; }
+  .js-motion .ve-bars rect { transform: none !important; }
+  .ve-steps [data-s]:not(.on), .ve-steps g[data-s]:not(.on) text, .ve-steps text[data-s]:not(.on) { opacity: 1; }
+  .ve-steps .ve-at:not(.now) { opacity: 0; }
+  .ve-steps path[pathLength][data-s] { stroke-dashoffset: 0; }
+  .ve-tok, .ve-vals text:not(:last-child) { display: none; }
+}
+</style>
+<style>
+  .toc { position: sticky; top: 0; z-index: 3; background: var(--bg); border-bottom: 1px solid var(--border);
+         padding: var(--s-2) 0; margin-bottom: var(--s-6); }
+  .toc ol { display: flex; gap: var(--s-4); list-style: none; margin: 0; padding: 0; overflow-x: auto;
+            scrollbar-width: none; mask-image: linear-gradient(90deg, #000 92%, transparent); }
+  .toc a { white-space: nowrap; font-size: var(--t-small); color: var(--text-dim); text-decoration: none; }
+  .toc a.on { color: var(--accent); }
+  section { scroll-margin-top: 56px; }
+  .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--s-6); align-items: start; }
+  .note { font-size: var(--t-small); color: var(--text-dim); max-width: 60ch; }
+  .mono { font-family: var(--mono); overflow-wrap: anywhere; }
+  /* boundaries: dashed frame with a mono tag in the corner */
+  .bnd { fill: none; stroke: var(--border-bright); stroke-dasharray: 6 4; }
+  .bnd-l { font-family: var(--mono); font-size: 13px; fill: var(--text-dim); }
+  .cnt { font-family: var(--mono); font-size: 13px; fill: var(--text-dim); }
+  .tn text { font-size: 13px; }
+  /* 1000-unit viewBoxes: keep 13-unit labels at 12 px or more (diagrams.md) */
+  .ve-svg:not(.lat) { min-width: 925px; }
+  .rule { stroke: var(--border); stroke-width: 1; }
+  .qd { stroke: var(--border-bright); stroke-width: 1.5; }
+  /* latency chart */
+  .lat { min-width: 470px; }
+  .lat .tick { text-anchor: middle; }
+  .lat .ax { stroke: var(--border); }
+  .lat .tick { font-size: 13px; fill: var(--text-dim); font-variant-numeric: tabular-nums; }
+  .lat .lab { font-size: 13px; fill: var(--text); }
+  .lat .val { text-anchor: start; font-size: 13px; fill: var(--text-dim); font-variant-numeric: tabular-nums; }
+  .lat .p50 { fill: var(--border-bright); }
+  .lat .p95 { fill: none; stroke: var(--border-bright); stroke-width: 1.5; }
+  .lat .hot .p50 { fill: var(--accent); }
+  .lat .hot .p95 { stroke: var(--accent); }
+  .lat .hot .lab { font-weight: 600; }
+  .lat .rule30 { stroke: var(--risk); stroke-dasharray: 5 4; stroke-width: 1.5; }
+  .lat .rtxt { font-size: 13px; fill: var(--risk); }
+  .lat .ann { stroke: var(--text-dim); fill: none; }
+  .lat .atxt { font-size: 13px; fill: var(--text-dim); }
+  .ve-vals text { text-anchor: end; }
+  .mini-t { font-size: 14px; fill: var(--text); }
+  .mini-s { font-size: 14px; fill: var(--text-dim); font-variant-numeric: tabular-nums; }
+  .mini-bar { fill: var(--st); }
+  .mini-ax { stroke: var(--border); }
+  .next { list-style: none; padding: 0; margin: 0; display: grid; gap: var(--s-3); max-width: 70ch; }
+  .next li { display: grid; grid-template-columns: 7rem 1fr; gap: var(--s-4); align-items: baseline;
+             padding-bottom: var(--s-3); border-bottom: 1px solid var(--border); font-size: var(--t-small); }
+  .next .k { font-family: var(--mono); color: var(--text-dim); }
+  .lat .lab, .lat .atxt, .lat .val.in { text-anchor: end; }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <marker id="ve-ah" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><path d="M0 0L10 5L0 10z" fill="context-stroke"/></marker>
+    <linearGradient id="ve-node" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color:var(--node-top)"/><stop offset="1" style="stop-color:var(--surface)"/></linearGradient>
+    <pattern id="ve-w-on" width="10" height="10" patternUnits="userSpaceOnUse"><rect x="1" y="1" width="8" height="8" rx="1.5" style="fill:var(--accent)"/></pattern>
+    <pattern id="ve-w-off" width="10" height="10" patternUnits="userSpaceOnUse"><rect x="1.5" y="1.5" width="7" height="7" rx="1.5" style="fill:none;stroke:var(--text-dim)"/></pattern>
+  </defs>
+</svg><main>
+<header>
+  <p class="eyebrow">PharmAssist v2 · pharmacy policy assistant · state on 2026-10-18</p>
+  <h1>A pharmacist's question becomes a cited answer in <span class="num">≈&nbsp;18&nbsp;s</span>, or in <span class="num">0.4&nbsp;s</span> when the cache has seen it</h1>
+  <p class="lead">Two EC2 servers behind a load balancer run a FastAPI agent on gpt-5.5 over 11 pharmacy documents in PostgreSQL + pgvector. <b>An answer ships only with a verified citation; everything else is exactly “No answer found in knowledge base”.</b></p>
+  <p class="meta">live at pharmassist.aishwaryabhanage.com · golden set 0.85 · groundedness 0.937 · ≈ $197/month</p>
+</header>
+
+<nav class="toc" aria-label="Sections"><ol>
+  <li><a href="#path">Request path</a></li><li><a href="#infra">AWS topology</a></li><li><a href="#corpus">Corpus and retrieval</a></li>
+  <li><a href="#agent">Agent loop</a></li><li><a href="#ingest">Ingestion</a></li><li><a href="#results">Results</a></li><li><a href="#next">What's next</a></li>
+</ol></nav>
+
+<!-- ======================= 1. REQUEST PATH ======================= -->
+<section id="path">
+<figure class="ve-steps">
+  <div class="frame"><svg class="ve-svg" viewBox="0 0 1000 400" role="img" aria-label="Request path: the browser posts a question to FastAPI, which embeds it once and asks the Valkey cache. A hit returns the stored answer and citations in 0.4 seconds. A miss runs the agent loop on gpt-5.5 with Claude Sonnet as fallback; tools read PostgreSQL; citations are checked; the answer returns in about 18 seconds and is cached and traced to LangSmith.">
+    <!-- edges -->
+    <path class="ve-e is-hot" data-s="1" data-ref="browser" d="M150 78H275"/><text class="ve-el" x="212" y="68">POST /ask · JWT</text>
+    <path class="ve-e" data-s="4 7" d="M275 100H150"/><text class="ve-el" x="212" y="124">answer, cited</text>
+    <path class="ve-e is-hot" data-s="2" d="M405 87H530"/><text class="ve-el" x="467" y="77">embeds once</text>
+    <path class="ve-e is-hot" data-s="3" data-ref="cache" d="M660 87H785"/><text class="ve-el" x="722" y="77">KNN · gen g</text>
+    <path class="ve-e is-hot" data-s="4" data-ref="cache" d="M850 63V30H340V60"/><text class="ve-el" x="595" y="22">hit · cosine ≥ 0.90 · stored answer + citations, marked cached</text>
+    <path class="ve-e is-hot" data-s="5" data-ref="agent" d="M850 119V170H595V220"/><text class="ve-el" x="722" y="161">miss</text>
+    <path class="ve-e is-hot" data-s="6" data-ref="pg" d="M660 247H785"/><text class="ve-el" x="722" y="237">searches, reads</text>
+    <path class="ve-e" data-s="7" data-ref="verify" d="M530 247H405"/><text class="ve-el" x="467" y="237">submit_answer</text>
+    <path class="ve-e is-hot" data-s="7" data-ref="verify" d="M340 220V114"/><text class="ve-el r" x="347" y="170">answered + cited</text>
+    <path class="ve-e is-async" data-s="7" d="M300 114V160H85V220"/><text class="ve-el" x="192" y="151">trace after the answer</text>
+    <!-- tokens -->
+    <circle class="ve-tok" data-s="1" r="5" style="offset-path: path('M85 78H340')"/>
+    <circle class="ve-tok" data-s="2" r="5" style="offset-path: path('M340 87H595')"/>
+    <circle class="ve-tok" data-s="3" r="5" style="offset-path: path('M595 87H850')"/>
+    <circle class="ve-tok" data-s="4" r="5" style="offset-path: path('M850 63V30H340V100H85'); --dur: 1800ms"/>
+    <circle class="ve-tok" data-s="5" r="5" style="offset-path: path('M850 119V170H595V247'); --dur: 1400ms"/>
+    <circle class="ve-tok" data-s="6" r="5" style="offset-path: path('M595 247H850')"/>
+    <circle class="ve-tok" data-s="7" r="5" style="offset-path: path('M595 247H340V100H85'); --dur: 2000ms"/>
+    <!-- nodes -->
+    <g class="ve-n" data-s="1" data-ref="browser"><rect class="sh" x="20" y="60" width="130" height="54" rx="6"/><text x="85" y="81">Browser</text><text class="sub" x="85" y="99">React SPA · JWT</text></g>
+    <g class="ve-n" data-s="1"><rect class="sh" x="275" y="60" width="130" height="54" rx="6"/><text x="340" y="81">FastAPI</text><text class="sub" x="340" y="99">/api/v1/ask</text></g>
+    <g class="ve-n" data-s="2"><rect class="sh" x="530" y="60" width="130" height="54" rx="6"/><text x="595" y="81">Embed question</text><text class="sub" x="595" y="99">3,072-d vector</text></g>
+    <g class="ve-n" data-s="3" data-ref="cache"><path class="sh" d="M785 72V110A65 9 0 0 0 915 110V72"/><ellipse class="sh lid" cx="850" cy="72" rx="65" ry="9"/><text x="850" y="92">Valkey cache</text><text class="sub" x="850" y="108">cosine ≥ 0.90</text></g>
+    <g class="ve-n" data-s="7"><rect class="sh" x="20" y="220" width="130" height="54" rx="6" stroke-dasharray="5 4"/><text x="85" y="241">LangSmith</text><text class="sub" x="85" y="259">one run/answer</text></g>
+    <g class="ve-n" data-s="7" data-ref="verify"><rect class="sh" x="275" y="220" width="130" height="54" rx="6"/><text x="340" y="241">Citation check</text><text class="sub" x="340" y="259">no-answer rule</text></g>
+    <g class="ve-n is-key" data-s="5" data-ref="agent"><rect class="sh" x="530" y="220" width="130" height="54" rx="6"/><text x="595" y="241">Agent loop</text><text class="sub" x="595" y="259">gpt-5.5, Sonnet</text></g>
+    <g class="ve-n" data-s="6" data-ref="pg"><path class="sh" d="M785 232V270A65 9 0 0 0 915 270V232"/><ellipse class="sh lid" cx="850" cy="232" rx="65" ry="9"/><text x="850" y="252">PostgreSQL</text><text class="sub" x="850" y="268">pgvector + FTS</text></g>
+    <!-- dimensions -->
+    <g class="ve-dim" data-s="4"><path class="ext" d="M150 342V364M850 342V364"/><path class="ln" d="M150 358H850M146 362l8-8M846 362l8-8"/><text x="500" y="352">0.4 s · cached repeat (live check)</text></g>
+    <g class="ve-dim is-key" data-s="7"><path class="ext" d="M150 372V394M915 372V394"/><path class="ln" d="M150 388H915M146 392l8-8M911 392l8-8"/><text x="532" y="382">17.9 s · fresh answer with 3 citations (live check)</text></g>
+  </svg></div>
+  <div class="ve-player">
+    <ol class="ve-cap">
+      <li data-n="1/7">The browser posts one question with its JWT. The API checks the user's limits in Valkey: 10 per minute, 100 per day.</li>
+      <li data-n="2/7">The API embeds the question once (text-embedding-3-large, 3,072 dimensions). The cache and the dense search reuse this vector.</li>
+      <li data-n="3/7">Valkey runs one KNN search over the stored questions of the current index generation.</li>
+      <li data-n="4/7">Hit (cosine ≥ 0.90): the stored answer returns with its own citations, marked cached, in 0.4 s. No model call.</li>
+      <li data-n="5/7">Miss: the agent loop runs on gpt-5.5. A transport error, timeout, 5xx or exhausted 429 moves the turn to Claude Sonnet 5.5.</li>
+      <li data-n="6/7">Tools read PostgreSQL: hybrid search over chunks, full pages, exact drug rows. At most 6 lookups and 25 s.</li>
+      <li data-n="7/7">Each citation must name a page or row a tool returned. Answered and cited: the answer goes back (17.9 s live), enters the cache and the trace. Anything else: exactly “No answer found in knowledge base”.</li>
+    </ol>
+    <button data-go="-1" aria-label="Previous step">‹</button><button data-play aria-label="Play">▶</button><input type="range" aria-label="Step"><button data-go="1" aria-label="Next step">›</button>
+  </div>
+  <figcaption><span class="fig-n">Fig. 1</span>One question vector serves both the <span class="ve-ref" data-ref="cache" tabindex="0">cache</span> and the search; a hit skips the <span class="ve-ref" data-ref="agent" tabindex="0">agent</span>, a miss ends in a <span class="ve-ref" data-ref="verify" tabindex="0">citation check</span> that decides between an answer and the fixed no-answer sentence.</figcaption>
+</figure>
+<p class="note">The design is one question in, one answer out: no clarifying turns. Each question is answered on its own; the UI groups a user's questions into conversations. Answers that fail the rule are stored in <code>messages</code> but never cached.</p>
+</section>
+
+<!-- ======================= 2. AWS TOPOLOGY ======================= -->
+<section id="infra">
+<div class="sec-head"><p class="ve-label caps">Hosting</p><h2>Static IPs and sticky HTTPS in front, scale-to-zero indexing behind</h2></div>
+<figure>
+  <div class="frame"><svg class="ve-svg" viewBox="0 0 1000 560" role="img" aria-label="AWS topology: the browser reaches a Network Load Balancer with two Elastic IPs, which passes TCP to a WAF-protected Application Load Balancer with sticky sessions and HTTPS. The ALB routes to two t4g.large EC2 servers running the FastAPI and React image. The servers read and write RDS PostgreSQL with pgvector, ElastiCache Valkey, S3, and call OpenAI, Anthropic and LangSmith. Uploads enqueue a job in SQS; a Fargate worker scales from zero on queue depth, writes to PostgreSQL and S3. Secrets Manager supplies keys at boot.">
+    <!-- boundaries -->
+    <rect class="bnd" x="515" y="142" width="172" height="98" rx="6"/><text class="bnd-l" x="522" y="155">public subnet</text>
+    <rect class="bnd" x="515" y="432" width="160" height="90" rx="6"/><text class="bnd-l" x="522" y="445">public subnet</text>
+    <rect class="bnd" x="260" y="296" width="415" height="90" rx="6"/><text class="bnd-l" x="267" y="309">no public access · app, worker, migration SGs</text>
+    <!-- edges -->
+    <path class="ve-e is-hot" d="M150 67H275"/><text class="ve-el" x="212" y="57">HTTPS :443</text><text class="ve-el" x="212" y="108">DNS A → 2 EIPs</text>
+    <path class="ve-e is-hot" d="M405 67H530"/><text class="ve-el" x="467" y="57">passes TCP</text>
+    <path class="ve-e is-hot" d="M660 67H785"/><text class="ve-el" x="722" y="57">rate limit</text>
+    <path class="ve-e is-hot" data-ref="app" d="M850 94V130H595V162"/><text class="ve-el" x="722" y="121">routes · lb_cookie 1 d</text>
+    <path class="ve-e" data-ref="rds" d="M570 228V280H340V313"/><text class="ve-el" x="455" y="271">stores everything</text>
+    <path class="ve-e" d="M595 228V313"/><text class="ve-el r" x="602" y="306">cache · limits · spend</text>
+    <path class="ve-e" d="M620 228V280H850V313"/><text class="ve-el" x="735" y="271">presigns links</text>
+    <path class="ve-e" d="M540 228V260H85V450"/><text class="ve-el" x="312" y="251">LLM calls · traces</text>
+    <path class="ve-e" d="M160 197H530"/><text class="ve-el" x="345" y="187">env at boot</text>
+    <path class="ve-e is-async" data-ref="sqs" d="M672 206H960V477H915"/><text class="ve-el" x="816" y="197">enqueues {job_id}</text>
+    <path class="ve-e is-async" data-ref="sqs" d="M785 477H660"/><text class="ve-el" x="722" y="467">scales 0 → 1</text>
+    <path class="ve-e" d="M560 450V420H340V369"/><text class="ve-el" x="450" y="411">writes, activates</text>
+    <path class="ve-e" d="M630 450V420H850V369"/><text class="ve-el" x="740" y="411">reads upload, writes crops</text>
+    <!-- nodes -->
+    <g class="ve-n"><rect class="sh" x="20" y="40" width="130" height="54" rx="6"/><text x="85" y="61">Browser</text><text class="sub" x="85" y="79">staff · admin</text></g>
+    <g class="ve-n"><rect class="sh" x="275" y="40" width="130" height="54" rx="6"/><text x="340" y="61">NLB</text><text class="sub" x="340" y="79">2 Elastic IPs</text></g>
+    <g class="ve-n"><rect class="sh" x="530" y="40" width="130" height="54" rx="6"/><text x="595" y="61">WAF</text><text class="sub" x="595" y="79">300 req/5 min/IP</text></g>
+    <g class="ve-n"><rect class="sh" x="785" y="40" width="130" height="54" rx="6"/><text x="850" y="61">ALB</text><text class="sub" x="850" y="79">HTTPS · sticky</text></g>
+    <g class="ve-n"><rect class="sh" x="10" y="170" width="150" height="54" rx="6"/><text x="85" y="191">Secrets Manager</text><text class="sub" x="85" y="209">keys, JWT secret</text></g>
+    <g class="ve-n is-key" data-ref="app"><rect class="sh" x="542" y="162" width="130" height="54" rx="6"/><rect class="sh" x="530" y="174" width="130" height="54" rx="6"/><text x="595" y="195">2× EC2 t4g.large</text><text class="sub" x="595" y="213">FastAPI + React</text></g>
+    <g class="ve-n"><rect class="sh" x="20" y="450" width="130" height="54" rx="6" stroke-dasharray="5 4"/><text x="85" y="471">External APIs</text><text class="sub" x="85" y="489">OpenAI/Anthropic</text></g>
+    <g class="ve-n" data-ref="rds"><path class="sh" d="M275 322V360A65 9 0 0 0 405 360V322"/><ellipse class="sh lid" cx="340" cy="322" rx="65" ry="9"/><text x="340" y="342">RDS Postgres</text><text class="sub" x="340" y="358">16 · pgvector</text></g>
+    <g class="ve-n"><path class="sh" d="M530 322V360A65 9 0 0 0 660 360V322"/><ellipse class="sh lid" cx="595" cy="322" rx="65" ry="9"/><text x="595" y="342">Valkey</text><text class="sub" x="595" y="358">ElastiCache, TLS</text></g>
+    <g class="ve-n"><path class="sh" d="M785 322V360A65 9 0 0 0 915 360V322"/><ellipse class="sh lid" cx="850" cy="322" rx="65" ry="9"/><text x="850" y="342">S3</text><text class="sub" x="850" y="358">sources, uploads</text></g>
+    <g class="ve-n" data-ref="sqs"><rect class="sh" x="785" y="450" width="130" height="54" rx="6"/><path class="sh" d="M817 450v8M850 450v8M883 450v8M817 496v8M850 496v8M883 496v8"/><text x="850" y="471">SQS ingest</text><text class="sub" x="850" y="489">DLQ · 3 attempts</text></g>
+    <g class="ve-n"><rect class="sh" x="530" y="450" width="130" height="54" rx="6"/><text x="595" y="471">Fargate worker</text><text class="sub" x="595" y="489">0 → 1 → 2 tasks</text></g>
+    <!-- callouts -->
+    <g class="ve-co" transform="translate(275 26)"><circle r="11"/><text>1</text></g>
+    <g class="ve-co" transform="translate(785 26)"><circle r="11"/><text>2</text></g>
+    <g class="ve-co" transform="translate(515 128)"><circle r="11"/><text>3</text></g>
+    <g class="ve-co" transform="translate(260 282)"><circle r="11"/><text>4</text></g>
+    <g class="ve-co" transform="translate(515 522)"><circle r="11"/><text>5</text></g>
+  </svg></div>
+  <figcaption><span class="fig-n">Fig. 2</span>An ALB cannot hold an Elastic IP, so an NLB with two EIPs fronts it; the ALB keeps HTTPS, the WAF and the cookie stickiness the design calls for, and the <span class="ve-ref" data-ref="app" tabindex="0">two app servers</span> share <span class="ve-ref" data-ref="rds" tabindex="0">PostgreSQL</span>, Valkey and an <span class="ve-ref" data-ref="sqs" tabindex="0">SQS-fed worker</span> that costs nothing when idle.</figcaption>
+</figure>
+<div class="grid-2">
+  <ul class="note" style="margin:0; padding-left:1.2em">
+    <li>① The hostname's A records point at the two EIPs (one per AZ); the NLB preserves the client IP for the WAF and the limits.</li>
+    <li>② HTTPS ends at the ALB with a free ACM certificate; 80 redirects to 443; target-group stickiness 1 day.</li>
+    <li>③ Auto Scaling group min 2 / max 4 (CPU 60 %), rolling replacement on deploy; no NAT gateway (≈ $32/month saved).</li>
+    <li>④ The database and the cache accept connections only from the app, worker and migration security groups.</li>
+    <li>⑤ Docling needs 8–16 GB, so indexing runs on a Fargate task (4 vCPU, 16 GB) that a backlog alarm starts and stops.</li>
+  </ul>
+  <figure>
+    <svg class="ve-bars" viewBox="0 0 240 220" role="img" aria-label="Monthly cost: the two t4g.large servers 98 dollars, RDS 28, Valkey 23, ALB 17, NLB 17, two Elastic IPs 7, WAF 6, SQS S3 logs and secrets 3; about 197 dollars always on"><text y="12">EC2 pair</text><rect class="hot" x="84" y="5" width="100" height="14" rx="2"/><text x="192" y="12">98$</text><text y="40">RDS</text><rect x="84" y="33" width="28.57" height="14" rx="2"/><text x="120.57" y="40">28$</text><text y="68">Valkey</text><rect x="84" y="61" width="23.47" height="14" rx="2"/><text x="115.47" y="68">23$</text><text y="96">ALB</text><rect x="84" y="89" width="17.35" height="14" rx="2"/><text x="109.35" y="96">17$</text><text y="124">NLB</text><rect x="84" y="117" width="17.35" height="14" rx="2"/><text x="109.35" y="124">17$</text><text y="152">2 EIPs</text><rect x="84" y="145" width="7.14" height="14" rx="2"/><text x="99.14" y="152">7$</text><text y="180">WAF</text><rect x="84" y="173" width="6.12" height="14" rx="2"/><text x="98.12" y="180">6$</text><text y="208">logs etc.</text><rect x="84" y="201" width="3.06" height="14" rx="2"/><text x="95.06" y="208">3$</text></svg>
+    <figcaption><span class="fig-n">Fig. 3</span>Half of the ≈ $197 per month (us-east-1, on-demand) is the two always-on app servers; the worker adds ≈ $0.20 per indexed document and nothing when idle.</figcaption>
+  </figure>
+</div>
+</section>
+
+<!-- ======================= 3. CORPUS AND RETRIEVAL ======================= -->
+<section id="corpus">
+<div class="sec-head"><p class="ve-label caps">Corpus</p><h2>Children match, parents explain, rows and figures are cited by id</h2></div>
+<figure>
+  <div class="frame"><svg class="ve-svg" viewBox="0 0 1000 320" role="img" aria-label="Corpus representation: 11 documents are parsed by Docling into 589 parent sections, each split into 350-token child chunks with 100-token overlap, 1,983 in all. Each child carries a 3,072-dimension embedding and a tsvector in the chunks table. The documents also yield 3,520 drug table rows and 50 interpreted figures.">
+    <!-- edges -->
+    <path class="ve-e" d="M150 150H230"/><text class="ve-el" x="190" y="140">Docling</text>
+    <path class="ve-e" d="M370 85H410V71H450"/><path class="ve-e" d="M370 85H410V99H450"/>
+    <path class="ve-e" d="M370 150H410V136H450"/><path class="ve-e" d="M370 150H410V164H450"/>
+    <path class="ve-e" d="M370 215H410V201H450"/><path class="ve-e" d="M370 215H410V229H450"/>
+    <text class="ve-el" x="410" y="120">splits · overlap 100</text>
+    <path class="ve-e" d="M570 150H620"/><text class="ve-el" x="595" y="140">stores</text>
+    <path class="ve-e" d="M150 100H190V30H890V60"/><text class="ve-el" x="560" y="22">extracts rows (openpyxl, pdfplumber)</text>
+    <path class="ve-e" d="M150 230H190V292H890V274"/><text class="ve-el" x="540" y="284">inventories every image · vision reads · code checks</text>
+    <!-- document -->
+    <g class="ve-n" data-ref="docs"><path class="sh" d="M30 60H130L150 80V250H30Z"/><path class="sh" d="M130 60V80H150"/><path class="rule" d="M48 140H132M48 156H132M48 172H132M48 188H132M48 204H132M48 220H100"/><text x="90" y="92">11 documents</text><text class="sub" x="90" y="110">PDF · XLSX</text></g>
+    <!-- parents -->
+    <text class="cnt" x="230" y="48">589 parents · ≤ 1,500 tokens</text>
+    <g class="ve-n" data-ref="parents"><rect class="sh" x="230" y="60" width="140" height="50" rx="6"/><text x="300" y="80">Parent section</text><text class="sub" x="300" y="97">heading path kept</text></g>
+    <g class="ve-n" data-ref="parents"><rect class="sh" x="230" y="125" width="140" height="50" rx="6"/><text x="300" y="145">Parent section</text><text class="sub" x="300" y="162">the whole rule</text></g>
+    <g class="ve-n" data-ref="parents"><rect class="sh" x="230" y="190" width="140" height="50" rx="6"/><text x="300" y="210">Parent section</text><text class="sub" x="300" y="227">pages it spans</text></g>
+    <!-- children -->
+    <text class="cnt" x="450" y="48">1,983 children · 350 tokens</text>
+    <g class="ve-n tn is-key" data-ref="children"><rect class="sh" x="450" y="60" width="120" height="22" rx="4"/><text x="510" y="75">child chunk</text></g>
+    <g class="ve-n tn" data-ref="children"><rect class="sh" x="450" y="88" width="120" height="22" rx="4"/><text x="510" y="103">child chunk</text></g>
+    <g class="ve-n tn" data-ref="children"><rect class="sh" x="450" y="125" width="120" height="22" rx="4"/><text x="510" y="140">child chunk</text></g>
+    <g class="ve-n tn" data-ref="children"><rect class="sh" x="450" y="153" width="120" height="22" rx="4"/><text x="510" y="168">child chunk</text></g>
+    <g class="ve-n tn" data-ref="children"><rect class="sh" x="450" y="190" width="120" height="22" rx="4"/><text x="510" y="205">child chunk</text></g>
+    <g class="ve-n tn" data-ref="children"><rect class="sh" x="450" y="218" width="120" height="22" rx="4"/><text x="510" y="233">child chunk</text></g>
+    <!-- chunks table -->
+    <g class="ve-n"><path class="sh" d="M620 135V173A90 9 0 0 0 800 173V135"/><ellipse class="sh lid" cx="710" cy="135" rx="90" ry="9"/><text x="710" y="155">chunks table</text><text class="sub" x="710" y="171">halfvec(3072) + tsv</text></g>
+    <text class="cnt" x="620" y="200">HNSW (cosine) · GIN</text>
+    <text class="cnt" x="620" y="216">active version only</text>
+    <!-- rows and figures -->
+    <g class="ve-n" data-ref="rows"><rect class="sh" x="810" y="60" width="160" height="54" rx="6"/><path class="gl" d="M818 68h16M818 73h16M818 78h16"/><text x="890" y="81">3,520 drug rows</text><text class="sub" x="890" y="99">VA formulary, NY PDL</text></g>
+    <g class="ve-n" data-ref="figs"><rect class="sh" x="810" y="220" width="160" height="54" rx="6"/><path class="gl" d="M818 228h16v12h-16zM821 237l4-4 3 3 5-6"/><text x="890" y="241">50 figures</text><text class="sub" x="890" y="259">crop + record</text></g>
+  </svg></div>
+  <figcaption><span class="fig-n">Fig. 4</span>Small <span class="ve-ref" data-ref="children" tabindex="0">children</span> make a match precise; their <span class="ve-ref" data-ref="parents" tabindex="0">parent section</span> gives the model the whole rule with its conditions; <span class="ve-ref" data-ref="rows" tabindex="0">drug rows</span> and <span class="ve-ref" data-ref="figs" tabindex="0">figures</span> are exact objects a citation can name.</figcaption>
+</figure>
+<div class="grid-2">
+  <figure>
+    <svg class="ve-bars" viewBox="0 0 240 136" role="img" aria-label="Objects in the store: 3,520 table rows, 1,983 child chunks, 589 parent sections, 50 figures, 11 documents"><text y="12">rows</text><rect x="84" y="5" width="100" height="14" rx="2"/><text x="192" y="12">3520</text><text y="40">children</text><rect class="hot" x="84" y="33" width="56.34" height="14" rx="2"/><text x="148.34" y="40">1983</text><text y="68">parents</text><rect x="84" y="61" width="16.73" height="14" rx="2"/><text x="108.73" y="68">589</text><text y="96">figures</text><rect x="84" y="89" width="1.42" height="14" rx="2"/><text x="93.42" y="96">50</text><text y="124">documents</text><rect x="84" y="117" width="0.31" height="14" rx="2"/><text x="92.31" y="124">11</text></svg>
+    <figcaption><span class="fig-n">Fig. 5</span>Eleven documents become about 6,000 citable objects; only chunks are searched, rows and figures are looked up.</figcaption>
+  </figure>
+  <p class="note">Why rows exist: in the first index, generic prior-authorization text outranked the one PDL row that answered a drug question. Two exact lookup tools (<code>lookup_va_formulary</code>, <code>lookup_ny_medicaid_drug</code>) return rows by drug and dosage form, with explicit outcomes such as <code>no_matching_row</code>, which the prompt says never means “not covered”. Figures: raster flowcharts that Docling's layout model misses are inventoried from the PDF, read once by a vision model, and checked by code (edges point at real boxes, box text found by OCR) before they are chunked.</p>
+</div>
+
+<h3>Hybrid retrieval: two queries, two signals, fused twice</h3>
+<figure class="ve-steps">
+  <div class="frame"><svg class="ve-svg" viewBox="0 0 1000 340" role="img" aria-label="Hybrid retrieval: the agent's query and the staff member's original question each run a dense pgvector search and a keyword full-text search in parallel; reciprocal rank fusion merges each pair, then merges the two lists to at most 20 results; a reranker slot is off; the matched children expand to their parent sections.">
+    <!-- edges -->
+    <path class="ve-e" data-s="1" d="M170 96H197V67H225"/><path class="ve-e" data-s="1" d="M170 96H197V137H225"/>
+    <path class="ve-e" data-s="1" d="M170 256H197V227H225"/><path class="ve-e" data-s="1" d="M170 256H197V297H225"/>
+    <path class="ve-e" data-s="3" d="M345 67H360V96H375"/><path class="ve-e" data-s="3" d="M345 137H360V96H375"/>
+    <path class="ve-e" data-s="3" d="M345 227H360V262H375"/><path class="ve-e" data-s="3" d="M345 297H360V262H375"/>
+    <path class="ve-e is-hot" data-s="4" d="M495 102H512V176H530"/><path class="ve-e is-hot" data-s="4" d="M495 262H512V194H530"/>
+    <text class="ve-el" x="565" y="150">fuses again</text>
+    <path class="ve-e is-hot" data-s="6" data-ref="parents2" d="M650 185H840"/><text class="ve-el" x="745" y="175">expands to parents</text>
+    <path class="ve-e is-async" data-s="5" d="M745 225V185"/><text class="ve-x" x="762" y="212">✕</text>
+    <!-- tokens -->
+    <circle class="ve-tok" data-s="2" r="5" style="offset-path: path('M95 96H197V67H285')"/>
+    <circle class="ve-tok" data-s="2" r="5" style="offset-path: path('M95 96H197V137H285'); --d: 150ms"/>
+    <circle class="ve-tok" data-s="2" r="5" style="offset-path: path('M95 256H197V227H285'); --d: 300ms"/>
+    <circle class="ve-tok" data-s="2" r="5" style="offset-path: path('M95 256H197V297H285'); --d: 450ms"/>
+    <circle class="ve-tok" data-s="4" r="5" style="offset-path: path('M435 102H512V176H590')"/>
+    <circle class="ve-tok" data-s="4" r="5" style="offset-path: path('M435 262H512V194H590'); --d: 150ms"/>
+    <circle class="ve-tok" data-s="6" r="5" style="offset-path: path('M590 185H910'); --dur: 1200ms"/>
+    <!-- nodes -->
+    <g class="ve-n" data-s="1"><rect class="sh" x="20" y="75" width="150" height="54" rx="6"/><text x="95" y="96">Agent query</text><text class="sub" x="95" y="114">the model's words</text></g>
+    <g class="ve-n is-key" data-s="1" data-ref="orig"><rect class="sh" x="20" y="235" width="150" height="54" rx="6"/><text x="95" y="256">Original question</text><text class="sub" x="95" y="274">always searched</text></g>
+    <g class="ve-n" data-s="2" data-ref="dense"><rect class="sh" x="225" y="40" width="120" height="54" rx="6"/><text x="285" y="61">Dense</text><text class="sub" x="285" y="79">HNSW cosine</text></g>
+    <g class="ve-n" data-s="2" data-ref="kw"><rect class="sh" x="225" y="110" width="120" height="54" rx="6"/><text x="285" y="131">Keyword</text><text class="sub" x="285" y="149">tsvector GIN</text></g>
+    <g class="ve-n" data-s="2" data-ref="dense"><rect class="sh" x="225" y="200" width="120" height="54" rx="6"/><text x="285" y="221">Dense</text><text class="sub" x="285" y="239">HNSW cosine</text></g>
+    <g class="ve-n" data-s="2" data-ref="kw"><rect class="sh" x="225" y="270" width="120" height="54" rx="6"/><text x="285" y="291">Keyword</text><text class="sub" x="285" y="309">tsvector GIN</text></g>
+    <g class="ve-n" data-s="3"><rect class="sh" x="375" y="75" width="120" height="54" rx="6"/><text x="435" y="96">RRF</text><text class="sub" x="435" y="114">k=60 · top 100</text></g>
+    <g class="ve-n" data-s="3"><rect class="sh" x="375" y="235" width="120" height="54" rx="6"/><text x="435" y="256">RRF</text><text class="sub" x="435" y="274">k=60 · top 100</text></g>
+    <g class="ve-n" data-s="4"><rect class="sh" x="530" y="158" width="120" height="54" rx="6"/><text x="590" y="179">RRF</text><text class="sub" x="590" y="197">at most 20</text></g>
+    <g class="ve-n" data-s="5"><rect class="sh" x="690" y="225" width="110" height="54" rx="6" stroke-dasharray="5 4"/><text x="745" y="246">Reranker</text><text class="sub" x="745" y="264">off · Fig. 10</text></g>
+    <g class="ve-n" data-s="6" data-ref="parents2"><rect class="sh" x="840" y="158" width="140" height="54" rx="6"/><text x="910" y="179">Parent sections</text><text class="sub" x="910" y="197">pages citable</text></g>
+  </svg></div>
+  <div class="ve-player">
+    <ol class="ve-cap">
+      <li data-n="1/6">Every <code>search_documents</code> call runs two queries: the model's own query and the staff member's original question, same program filter, same k.</li>
+      <li data-n="2/6">Each query runs a dense search (pgvector HNSW, cosine on <code>halfvec(3072)</code>) and a keyword search (<code>tsvector</code>, GIN) side by side: embeddings for meaning, exact terms for reject codes, drug names and field names.</li>
+      <li data-n="3/6">Reciprocal rank fusion (k = 60, depth 100) merges the two rankings; rank-based, so cosine and <code>ts_rank</code> scales never need calibrating.</li>
+      <li data-n="4/6">The two fused lists fuse again, at most 20 results. In v1 this step lifted the golden score from 0.800 to 0.875: the model's rewrite sometimes missed what the original wording found.</li>
+      <li data-n="5/6">A cross-encoder reranker could rescore here. It is off: measured too slow or less accurate under the 30 s rule (Fig. 10). The code path stays, one config key away.</li>
+      <li data-n="6/6">Matched children expand to their parent sections. The model sees the whole rule, and every page the section spans is citable.</li>
+    </ol>
+    <button data-go="-1" aria-label="Previous step">‹</button><button data-play aria-label="Play">▶</button><input type="range" aria-label="Step"><button data-go="1" aria-label="Next step">›</button>
+  </div>
+  <figcaption><span class="fig-n">Fig. 6</span>Searching the <span class="ve-ref" data-ref="orig" tabindex="0">original question</span> beside the model's query, with <span class="ve-ref" data-ref="dense" tabindex="0">dense</span> and <span class="ve-ref" data-ref="kw" tabindex="0">keyword</span> signals fused by rank, is the retrieval that serves the app; <code>search.rerank: null</code> in <code>config.yaml</code>.</figcaption>
+</figure>
+</section>
+
+<!-- ======================= 4. AGENT LOOP ======================= -->
+<section id="agent">
+<div class="sec-head"><p class="ve-label caps">Agent</p><h2>Six lookups, 25 seconds, then submit; a citation must point at evidence a tool returned</h2></div>
+<figure class="ve-steps">
+  <div class="frame"><svg class="ve-svg" viewBox="0 0 1000 450" role="img" aria-label="Agent loop: a router sends each model turn to gpt-5.5 and falls back to Claude Sonnet 5.5 on failure. The model calls tools inside a budget of six lookups and 25 seconds: search_documents, read_page, list_documents, lookup_va_formulary, lookup_ny_medicaid_drug, all reading PostgreSQL. Results append to the thread. submit_answer carries status, assumption, answer, citations and conflicts. The citation check passes only citations to pages or rows a tool returned. Answered and cited gives the answer; anything else gives the fixed no-answer sentence.">
+    <!-- budget boundary -->
+    <rect class="bnd" data-s="0 5" x="462" y="30" width="390" height="220" rx="6"/><text class="bnd-l" x="470" y="45">budget · ≤ 6 lookups · 25 s → “submit now” · 30 s hard</text>
+    <!-- edges -->
+    <path class="ve-e is-hot" data-s="0 1" data-ref="router" d="M190 67H230V101H260"/><text class="ve-el" x="225" y="57">messages</text>
+    <path class="ve-e is-async" data-s="0 1" data-ref="router" d="M105 94V120"/><text class="ve-el r" x="112" y="111">on failure</text>
+    <path class="ve-e is-hot" data-s="0 2 3 4" d="M410 101H462"/><text class="ve-el" x="436" y="91">calls</text>
+    <path class="ve-e" data-s="0 2 3 4" data-ref="pg2" d="M852 120H865"/>
+    <path class="ve-e" data-s="0 2 3 4" d="M560 250V285H300V134"/><text class="ve-el" x="430" y="276">results append · prefix never edited</text>
+    <path class="ve-e is-hot" data-s="0 6" d="M260 110H230V347H260"/><text class="ve-el l" x="223" y="230">submits</text>
+    <path class="ve-e is-hot" data-s="0 7" data-ref="check" d="M410 347H470"/><text class="ve-el" x="440" y="337">verifies</text>
+    <path class="ve-e is-hot" data-s="0 8" d="M630 337H670V297H720"/><text class="ve-el" x="695" y="287">cited</text>
+    <path class="ve-e" data-s="0 8" d="M630 357H670V407H720"/><text class="ve-el" x="695" y="397">else</text>
+    <!-- tokens -->
+    <circle class="ve-tok" data-s="1" r="5" style="offset-path: path('M105 67H230V101H335')"/>
+    <circle class="ve-tok" data-s="2" r="5" style="offset-path: path('M335 101H565V80'); --dur: 1000ms"/>
+    <circle class="ve-tok" data-s="3" r="5" style="offset-path: path('M335 101H565V180'); --dur: 1000ms"/>
+    <circle class="ve-tok" data-s="4" r="5" style="offset-path: path('M335 101H750V80'); --dur: 1000ms"/>
+    <circle class="ve-tok" data-s="6" r="5" style="offset-path: path('M335 110H230V347H335'); --dur: 1400ms"/>
+    <circle class="ve-tok" data-s="7" r="5" style="offset-path: path('M335 347H550')"/>
+    <circle class="ve-tok" data-s="8" r="5" style="offset-path: path('M550 337H670V297H805'); --dur: 1200ms"/>
+    <!-- nodes -->
+    <g class="ve-n" data-s="0 1" data-ref="router"><rect class="sh" x="20" y="40" width="170" height="54" rx="6"/><text x="105" y="61">gpt-5.5</text><text class="sub" x="105" y="79">primary · OpenAI</text></g>
+    <g class="ve-n" data-s="0 1" data-ref="router"><rect class="sh" x="20" y="120" width="170" height="54" rx="6" stroke-dasharray="5 4"/><text x="105" y="141">claude-sonnet-5-5</text><text class="sub" x="105" y="159">fallback, rest of turn</text></g>
+    <g class="ve-n is-key" data-s="0 1 2 3 4 6"><rect class="sh" x="260" y="80" width="150" height="54" rx="6"/><text x="335" y="101">Model turn</text><text class="sub" x="335" y="119">tools or submit</text></g>
+    <g class="ve-n tn" data-s="0 2"><rect class="sh" x="480" y="60" width="170" height="40" rx="5"/><text x="565" y="84">search_documents</text></g>
+    <g class="ve-n tn" data-s="0 4"><rect class="sh" x="665" y="60" width="170" height="40" rx="5"/><text x="750" y="84">read_page</text></g>
+    <g class="ve-n tn" data-s="0"><rect class="sh" x="480" y="110" width="170" height="40" rx="5"/><text x="565" y="134">list_documents</text></g>
+    <g class="ve-n tn" data-s="0"><rect class="sh" x="665" y="110" width="170" height="40" rx="5"/><text x="750" y="134">lookup_va_formulary</text></g>
+    <g class="ve-n tn" data-s="0 3"><rect class="sh" x="480" y="160" width="170" height="40" rx="5"/><text x="565" y="184">lookup_ny_medicaid_drug</text></g>
+    <g class="ve-vals"><text class="sub" data-s="1" x="840" y="192">lookups 0 / 6 · 0 s</text><text class="sub" data-s="2" x="840" y="192">lookups 1 / 6</text><text class="sub" data-s="3" x="840" y="192">lookups 2 / 6</text><text class="sub" data-s="4" x="840" y="192">lookups 3 / 6</text><text class="sub" data-s="5" x="840" y="192">6 / 6 or 25 s: submit now</text><text class="sub" data-s="6" x="840" y="192">lookups 3 / 6</text><text class="sub" data-s="7" x="840" y="192">lookups 3 / 6</text><text class="sub" data-s="8" x="840" y="192">lookups 3 / 6</text></g>
+    <text class="cnt" data-s="0" x="470" y="236">after the cap, a lookup returns an error result</text>
+    <g class="ve-n" data-s="0 2 3 4" data-ref="pg2"><path class="sh" d="M865 102V140A65 9 0 0 0 995 140V102"/><ellipse class="sh lid" cx="930" cy="102" rx="65" ry="9"/><text x="930" y="122">PostgreSQL</text><text class="sub" x="930" y="138">chunks, rows</text></g>
+    <g class="ve-n" data-s="0 6"><rect class="sh" x="260" y="320" width="150" height="54" rx="6"/><text x="335" y="341">submit_answer</text><text class="sub" x="335" y="359">status, citations</text></g>
+    <g class="ve-n" data-s="0 7" data-ref="check"><rect class="sh" x="470" y="320" width="160" height="54" rx="6"/><text x="550" y="341">Citation check</text><text class="sub" x="550" y="359">cites ⊆ returned</text></g>
+    <g class="ve-n" data-s="0 8"><rect class="sh" x="720" y="270" width="170" height="54" rx="6"/><text x="805" y="291">Answer</text><text class="sub" x="805" y="309">cited · cached</text></g>
+    <g class="ve-n" data-s="0 8"><rect class="sh" x="720" y="380" width="170" height="54" rx="6" stroke-dasharray="5 4"/><text x="805" y="401">“No answer found</text><text class="sub" x="805" y="419">in knowledge base”</text></g>
+  </svg></div>
+  <div class="ve-player">
+    <ol class="ve-cap">
+      <li data-n="1/8">The router sends the turn to gpt-5.5 (effort medium). On a transport error, timeout, 5xx, exhausted 429 or malformed tool call, the same call runs once on Claude Sonnet 5.5, and the rest of the turn stays there (<code>fallback_used</code> recorded).</li>
+      <li data-n="2/8">Turn 1: the model calls <code>search_documents</code>; hybrid search returns parent sections (lookups 1 / 6).</li>
+      <li data-n="3/8">Turn 2: <code>lookup_ny_medicaid_drug</code> returns exact rows (2 / 6). Results append to the thread; the prefix is never edited, so prompt caching keeps later turns cheap.</li>
+      <li data-n="4/8">Turn 3: <code>read_page</code> returns one full page, at most 8,000 characters (3 / 6).</li>
+      <li data-n="5/8">Guard: at 6 lookups or 25 s the model is told to submit with what it has; any further lookup gets an error result instead of running (<code>agent/loop.py</code>).</li>
+      <li data-n="6/8"><code>submit_answer</code> carries status, assumption, answer, citations and conflicts noted. A reply without it gets one nudge to resubmit through the tool.</li>
+      <li data-n="7/8">Each citation must name a page or row a tool returned during this question; others are flagged <code>unverified_citation</code>.</li>
+      <li data-n="8/8">Status <code>answered</code> and at least one citation survives: the answer goes out, is cached and traced. Anything else is exactly “No answer found in knowledge base”, stored but never cached.</li>
+    </ol>
+    <button data-go="-1" aria-label="Previous step">‹</button><button data-play aria-label="Play">▶</button><input type="range" aria-label="Step"><button data-go="1" aria-label="Next step">›</button>
+  </div>
+  <figcaption><span class="fig-n">Fig. 7</span>An illustrative three-lookup run through the loop; the guards are the ones in <code>agent/loop.py</code>. The <span class="ve-ref" data-ref="router" tabindex="0">router</span> hides the provider, the budget bounds latency and cost, and the <span class="ve-ref" data-ref="check" tabindex="0">citation check</span> is the only thing between the model and the reader.</figcaption>
+</figure>
+
+<figure>
+  <div class="cases">
+    <div class="case" data-st="ok"><span class="chip ok">answer</span><h3>answered, cited</h3>
+      <svg class="ve-mini" viewBox="0 0 240 128" role="img" aria-label="Status answered with a citation that passes the check: the answer is shown and cached.">
+        <path class="ve-e" d="M70 44H100"/><path class="ve-e is-st" d="M170 44H200"/>
+        <g class="ve-n"><rect class="sh" x="10" y="24" width="60" height="40" rx="5"/><text x="40" y="48">submit</text></g>
+        <g class="ve-n"><rect class="sh" x="100" y="24" width="70" height="40" rx="5"/><text x="135" y="48">check</text></g>
+        <g class="ve-n is-st"><rect class="sh" x="200" y="24" width="34" height="40" rx="5"/><text x="217" y="48">UI</text></g>
+        <text class="mini-s" x="10" y="96">answered · citation verified</text>
+        <text class="mini-s" x="10" y="114">→ answer, cached, traced</text>
+      </svg></div>
+    <div class="case" data-st="warn"><span class="chip warn">no answer</span><h3>not in documents</h3>
+      <svg class="ve-mini" viewBox="0 0 240 128" role="img" aria-label="Status not_in_documents or out_of_scope: the fixed no-answer sentence is shown.">
+        <path class="ve-e" d="M70 44H100"/><path class="ve-e is-st" d="M170 44H200"/>
+        <g class="ve-n"><rect class="sh" x="10" y="24" width="60" height="40" rx="5"/><text x="40" y="48">submit</text></g>
+        <g class="ve-n"><rect class="sh" x="100" y="24" width="70" height="40" rx="5" stroke-dasharray="4 3"/><text x="135" y="48">check</text></g>
+        <g class="ve-n is-st"><rect class="sh" x="200" y="24" width="34" height="40" rx="5"/><text x="217" y="48">UI</text></g>
+        <text class="mini-s" x="10" y="96">status not_in_documents</text>
+        <text class="mini-s" x="10" y="114">→ fixed sentence, not cached</text>
+      </svg></div>
+    <div class="case" data-st="risk"><span class="chip risk">no answer</span><h3>citation not returned by a tool</h3>
+      <svg class="ve-mini" viewBox="0 0 240 128" role="img" aria-label="Status answered but every citation names a page no tool returned: the check fails and the fixed no-answer sentence is shown.">
+        <path class="ve-e" d="M70 44H100"/><path class="ve-e is-st" d="M170 44H200"/><text class="ve-x" x="185" y="38">✕</text>
+        <g class="ve-n"><rect class="sh" x="10" y="24" width="60" height="40" rx="5"/><text x="40" y="48">submit</text></g>
+        <g class="ve-n is-st"><rect class="sh" x="100" y="24" width="70" height="40" rx="5"/><text x="135" y="48">check</text></g>
+        <g class="ve-n"><rect class="sh" x="200" y="24" width="34" height="40" rx="5" stroke-dasharray="4 3"/><text x="217" y="48">UI</text></g>
+        <text class="mini-s" x="10" y="96">no citation passes the check</text>
+        <text class="mini-s" x="10" y="114">→ fixed sentence, review</text>
+      </svg></div>
+    <div class="case" data-st="risk"><span class="chip risk">no answer</span><h3>no submit within budget</h3>
+      <svg class="ve-mini" viewBox="0 0 240 128" role="img" aria-label="The model never calls submit_answer within the turn limit: the fixed no-answer sentence is shown.">
+        <path class="ve-e is-st" d="M70 44H100" stroke-dasharray="4 3"/><text class="ve-x" x="85" y="38">✕</text>
+        <g class="ve-n is-st"><rect class="sh" x="10" y="24" width="60" height="40" rx="5" stroke-dasharray="4 3"/><text x="40" y="48">submit</text></g>
+        <g class="ve-n"><rect class="sh" x="100" y="24" width="70" height="40" rx="5" stroke-dasharray="4 3"/><text x="135" y="48">check</text></g>
+        <g class="ve-n"><rect class="sh" x="200" y="24" width="34" height="40" rx="5" stroke-dasharray="4 3"/><text x="217" y="48">UI</text></g>
+        <text class="mini-s" x="10" y="96">no submit_answer after nudge</text>
+        <text class="mini-s" x="10" y="114">→ fixed sentence, review</text>
+      </svg></div>
+  </div>
+  <figcaption><span class="fig-n">Fig. 8</span>Four exits, one of them an answer: the no-answer sentence is the same text in every other case, so the UI and the cache never see a half-answer.</figcaption>
+</figure>
+</section>
+
+<!-- ======================= 5. INGESTION ======================= -->
+<section id="ingest">
+<div class="sec-head"><p class="ve-label caps">Ingestion</p><h2>An upload is live in one transaction, and the worker costs nothing between uploads</h2></div>
+<figure class="ve-steps">
+  <div class="frame"><svg class="ve-svg" viewBox="0 0 1000 460" role="img" aria-label="Ingestion pipeline: an admin uploads a file; the API validates it, stores it in S3 under its hash, inserts a queued version and a job in PostgreSQL and sends the job id to SQS. A backlog alarm starts a Fargate task, which runs parsing, figure extraction, chunking, embedding and verification, then activates the version in one transaction, supersedes the old one and bumps the search generation so old cache entries no longer match. Failures retry three times, then go to the dead-letter queue. The task stops after 15 idle minutes.">
+    <!-- worker boundary -->
+    <rect class="bnd" data-s="0 4 5 6" x="230" y="200" width="750" height="120" rx="6"/><text class="bnd-l" x="240" y="213">Fargate task · 4 vCPU · 16 GB · Docling, vision, OpenAI embeddings</text>
+    <g class="ve-vals"><text class="sub" data-s="1" x="970" y="216">tasks: 0</text><text class="sub" data-s="2" x="970" y="216">tasks: 0</text><text class="sub" data-s="3" x="970" y="216">tasks: 0 → 1</text><text class="sub" data-s="4" x="970" y="216">tasks: 1</text><text class="sub" data-s="5" x="970" y="216">tasks: 1</text><text class="sub" data-s="6" x="970" y="216">tasks: 1, retry</text><text class="sub" data-s="7" x="970" y="216">tasks: 1 → 0 (15 min idle)</text></g>
+    <!-- edges -->
+    <path class="ve-e is-hot" data-s="1" d="M150 67H275"/><text class="ve-el" x="212" y="57">uploads file</text>
+    <path class="ve-e" data-s="2" d="M405 67H530"/><text class="ve-el" x="467" y="57">puts by hash</text>
+    <path class="ve-e" data-s="2" d="M340 40V18H850V43"/><text class="ve-el" x="595" y="10">inserts version (queued) + job row</text>
+    <path class="ve-e is-async" data-s="3" data-ref="sqs2" d="M340 114V147H150"/><text class="ve-el" x="245" y="138">sends {job_id}</text>
+    <path class="ve-e is-async is-hot" data-s="3 4" data-ref="sqs2" d="M85 174V252H245"/><text class="ve-el r" x="92" y="215">alarm → 1 task</text><text class="ve-el" x="165" y="243">long-polls</text>
+    <path class="ve-e" data-s="4" d="M377 252H392"/><path class="ve-e" data-s="4" d="M524 252H539"/><path class="ve-e" data-s="4" d="M671 252H686"/><path class="ve-e" data-s="4" d="M818 252H833"/>
+    <path class="ve-e" data-s="4" d="M850 200V99"/><text class="ve-el l" x="843" y="150">writes chunks + figures</text>
+    <path class="ve-e is-hot" data-s="5" data-ref="act" d="M899 274V330H710V360"/><text class="ve-el" x="800" y="348">counts verified</text>
+    <path class="ve-e" data-s="5" d="M640 387H540"/><text class="ve-el" x="590" y="377">supersedes</text>
+    <path class="ve-e" data-s="5" d="M780 387H840"/><text class="ve-el" x="810" y="377">gen+1</text>
+    <path class="ve-e is-async" data-s="6" d="M250 320V387H150"/><text class="ve-el" x="200" y="377">3 failures</text>
+    <!-- tokens -->
+    <circle class="ve-tok" data-s="1" r="5" style="offset-path: path('M85 67H340')"/>
+    <circle class="ve-tok" data-s="3" r="5" style="offset-path: path('M340 114V147H85'); --dur: 1000ms"/>
+    <circle class="ve-tok" data-s="4" r="5" style="offset-path: path('M85 174V252H899'); --dur: 2400ms"/>
+    <circle class="ve-tok" data-s="5" r="5" style="offset-path: path('M899 274V330H710V387'); --dur: 1200ms"/>
+    <!-- nodes -->
+    <g class="ve-n" data-s="1"><rect class="sh" x="20" y="40" width="130" height="54" rx="6"/><text x="85" y="61">Admin</text><text class="sub" x="85" y="79">Documents page</text></g>
+    <g class="ve-n" data-s="1"><rect class="sh" x="275" y="40" width="130" height="54" rx="6"/><text x="340" y="61">Upload API</text><text class="sub" x="340" y="79">PDF/XLSX ≤ 50 MB</text></g>
+    <g class="ve-n" data-s="2"><path class="sh" d="M530 52V90A65 9 0 0 0 660 90V52"/><ellipse class="sh lid" cx="595" cy="52" rx="65" ry="9"/><text x="595" y="72">S3</text><text class="sub" x="595" y="88">uploads/ by hash</text></g>
+    <g class="ve-n" data-s="2"><path class="sh" d="M785 52V90A65 9 0 0 0 915 90V52"/><ellipse class="sh lid" cx="850" cy="52" rx="65" ry="9"/><text x="850" y="72">PostgreSQL</text><text class="sub" x="850" y="88">version + job row</text></g>
+    <g class="ve-n" data-s="3" data-ref="sqs2"><rect class="sh" x="20" y="120" width="130" height="54" rx="6"/><path class="sh" d="M52 120v8M85 120v8M118 120v8M52 166v8M85 166v8M118 166v8"/><text x="85" y="141">SQS</text><text class="sub" x="85" y="159">+ DLQ</text></g>
+    <g class="ve-n tn" data-s="4"><rect class="sh" x="245" y="230" width="132" height="44" rx="5"/><text x="311" y="256">parsing</text></g>
+    <g class="ve-n tn" data-s="4"><rect class="sh" x="392" y="230" width="132" height="44" rx="5"/><text x="458" y="256">extracting_figures</text></g>
+    <g class="ve-n tn" data-s="4"><rect class="sh" x="539" y="230" width="132" height="44" rx="5"/><text x="605" y="256">chunking</text></g>
+    <g class="ve-n tn" data-s="4"><rect class="sh" x="686" y="230" width="132" height="44" rx="5"/><text x="752" y="256">embedding</text></g>
+    <g class="ve-n tn" data-s="4"><rect class="sh" x="833" y="230" width="132" height="44" rx="5"/><text x="899" y="256">verifying</text></g>
+    <g class="ve-n is-key" data-s="5" data-ref="act"><rect class="sh" x="640" y="360" width="140" height="54" rx="6"/><text x="710" y="381">Activate version</text><text class="sub" x="710" y="399">one transaction</text></g>
+    <g class="ve-n" data-s="5"><rect class="sh" x="390" y="360" width="150" height="54" rx="6" stroke-dasharray="5 4"/><text x="465" y="381">Old version</text><text class="sub" x="465" y="399">superseded</text></g>
+    <g class="ve-n" data-s="5"><path class="sh" d="M840 372V410A70 9 0 0 0 980 410V372"/><ellipse class="sh lid" cx="910" cy="372" rx="70" ry="9"/><text x="910" y="392">Valkey</text><text class="sub" x="910" y="408">old gen ignored</text></g>
+    <g class="ve-n" data-s="6"><rect class="sh" x="20" y="360" width="130" height="54" rx="6" stroke-dasharray="5 4"/><text x="85" y="381">Dead-letter queue</text><text class="sub" x="85" y="399">failed + error</text></g>
+    <!-- dimension -->
+    <g class="ve-dim is-key" data-s="7"><path class="ext" d="M275 428V450M980 428V450"/><path class="ln" d="M275 444H980M271 448l8-8M976 448l8-8"/><text x="627" y="438">15 s · upload → active → answerable (live check)</text></g>
+  </svg></div>
+  <div class="ve-player">
+    <ol class="ve-cap">
+      <li data-n="1/7">The admin uploads a PDF or XLSX. The API checks the type by content, the size (≤ 50 MB) and the page count (≤ 400), and hashes the file.</li>
+      <li data-n="2/7">The file lands in S3 under its hash. PostgreSQL gets the document, a version in status <code>queued</code> and a job row. The same hash for the same document returns the existing version.</li>
+      <li data-n="3/7">One message <code>{job_id}</code> goes to SQS. A CloudWatch alarm on the backlog sets the Fargate service to 1 task (2 at ≥ 10 messages).</li>
+      <li data-n="4/7">The worker long-polls, claims the job and runs the v1 pipeline unchanged: parsing (Docling), extracting_figures (vision, cached by image hash, spend-capped), chunking, embedding (OpenAI), verifying counts. The version's status shows each stage to admins.</li>
+      <li data-n="5/7">Activation is one transaction: the new version becomes <code>active</code>, the old one <code>superseded</code>, and <code>search_generation</code> moves on, so cache entries of the old generation no longer match. Search only ever reads active versions.</li>
+      <li data-n="6/7">A transient failure (provider 429 or 5xx, database timeout) returns the message with backoff, three attempts, then the dead-letter queue and status <code>failed</code> with the error text. Admins can retry.</li>
+      <li data-n="7/7">After 15 idle minutes the service scales back to 0 tasks. Live check: an admin upload was indexed in 15 s and answerable with citations.</li>
+    </ol>
+    <button data-go="-1" aria-label="Previous step">‹</button><button data-play aria-label="Play">▶</button><input type="range" aria-label="Step"><button data-go="1" aria-label="Next step">›</button>
+  </div>
+  <figcaption><span class="fig-n">Fig. 9</span>A half-built document is never visible: search reads active versions only, and <span class="ve-ref" data-ref="act" tabindex="0">activation</span> swaps versions and invalidates the cache in the same transaction, after one <span class="ve-ref" data-ref="sqs2" tabindex="0">SQS message</span> woke the worker.</figcaption>
+</figure>
+</section>
+
+<!-- ======================= 6. RESULTS ======================= -->
+<section id="results">
+<div class="sec-head"><p class="ve-label caps">Measured</p><h2>0.85 on the golden set with nothing incorrect, every answer inside 30 s, and the reranker was worth turning off</h2></div>
+<div class="kpis">
+  <div class="kpi"><span class="ve-label">Accuracy, golden set (judge)</span><span class="val">0.85</span><svg class="ve-waffle" viewBox="0 0 170 100" role="img" aria-label="14 of 20 golden questions graded correct, 6 partial, 0 incorrect"><rect x="0" y="0" width="100" height="70" fill="url(#ve-w-on)"/><rect x="0" y="70" width="100" height="30" fill="url(#ve-w-off)"/><path class="ann" d="M104 75H114"/><text x="118" y="75">6 partial</text></svg></div>
+  <div class="kpi"><span class="ve-label">Groundedness</span><span class="val">0.937</span><svg class="ve-waffle" viewBox="0 0 170 100" role="img" aria-label="94 of 100 claims are supported by the cited pages"><rect x="0" y="0" width="100" height="90" fill="url(#ve-w-on)"/><rect x="0" y="90" width="40" height="10" fill="url(#ve-w-on)"/><rect x="40" y="90" width="60" height="10" fill="url(#ve-w-off)"/><path class="ann" d="M104 95H114"/><text x="118" y="95">6 unproven</text></svg></div>
+  <div class="kpi"><span class="ve-label">Latency and cost</span><span class="val">10.8<span class="unit">s p50</span></span><span class="note">p95 21.4 s · 0 of 20 over the 30 s rule (Fig. 11) · ≈ $0.11 of gpt-5.5 tokens per question (v1 on Sonnet: $0.07)</span></div>
+  <div class="kpi"><span class="ve-label">Visual set (figures)</span><span class="val"><span data-count="8">8</span><span class="unit">/ 8</span></span><svg class="ve-waffle" viewBox="0 0 170 100" role="img" aria-label="All 8 figure questions graded correct"><rect x="0" y="0" width="100" height="100" fill="url(#ve-w-on)"/></svg></div>
+</div>
+<p class="note">Golden set: 20 pharmacist-written questions, judged by Claude Opus 5.5 in 3 passes (majority grade; 18 of 20 unanimous). Run <code>v2_2026-10-18_0903</code>; visual run <code>v2_visual_2026-10-18_0916</code>. v1 on Claude Sonnet scored 0.875 (15 / 5 / 0); the move to gpt-5.5 as primary cost one grade, reported as such.</p>
+
+<div class="grid-2">
+  <figure>
+    <svg class="ve-bars" viewBox="0 0 240 108" role="img" aria-label="Accuracy score by setup: v1 on Sonnet 0.875; v2 without reranker 0.85; v2 with bge-reranker-base at depth 20 0.70; v2 with bge-reranker-large at depth 50 0.821 with 6 questions erroring"><text y="12">v1 Sonnet</text><rect x="84" y="5" width="87.5" height="14" rx="2"/><text x="179.5" y="12">0.875</text><text y="40">v2, none</text><rect class="hot" x="84" y="33" width="85" height="14" rx="2"/><text x="177" y="40">0.85</text><text y="68">base @20</text><rect x="84" y="61" width="70" height="14" rx="2"/><text x="162" y="68">0.70</text><text y="96">large @50</text><rect x="84" y="89" width="82.1" height="14" rx="2"/><text x="174.1" y="96">0.821</text></svg>
+    <figcaption><span class="fig-n">Fig. 10</span>Neither reranker beat the fused order: base at depth 20 scored 0.70 against 0.85 without it, and large's 0.821 counts only the 14 questions that finished.</figcaption>
+  </figure>
+  <figure>
+    <div class="frame"><svg class="ve-svg lat" viewBox="0 0 500 262" role="img" aria-label="Latency by setup, p50 and p95 in seconds against the 30 second rule: without reranker 10.8 and 21.4; bge-reranker-base at depth 20 13.9 and 23.5; bge-reranker-large at depth 50 26.5 and 55.1, with 5 questions over 30 seconds and 19 seconds per search on CPU.">
+      <line class="ax" x1="120" y1="30" x2="120" y2="200"/>
+      <line class="ax" x1="120" y1="200" x2="480" y2="200"/>
+      <text class="tick" x="120" y="218">0</text><text class="tick" x="240" y="218">20</text><text class="tick" x="360" y="218">40</text><text class="tick" x="480" y="218">60 s</text>
+      <line class="rule30" x1="300" y1="24" x2="300" y2="200"/><text class="rtxt" x="306" y="36">30 s rule</text>
+      <g class="hot"><text class="lab" x="112" y="60">no reranker</text>
+        <rect class="p50" x="120" y="46" width="64.8" height="14"/><text class="val" x="191" y="58">p50 10.8 s</text>
+        <rect class="p95" x="120" y="64" width="128.4" height="14"/><text class="val" x="254" y="76">p95 21.4 s</text></g>
+      <g><text class="lab" x="112" y="112">base @20</text>
+        <rect class="p50" x="120" y="98" width="83.4" height="14"/><text class="val" x="209" y="110">p50 13.9 s</text>
+        <rect class="p95" x="120" y="116" width="141" height="14"/><text class="val" x="267" y="128">p95 23.5 s</text></g>
+      <g><text class="lab" x="112" y="164">large @50</text>
+        <rect class="p50" x="120" y="150" width="159" height="14"/><text class="val" x="285" y="162">p50 26.5 s</text>
+        <rect class="p95" x="120" y="168" width="330.6" height="14"/><text class="val in" x="444" y="180">p95 55.1 s</text></g>
+      <path class="ann" d="M450 184V232"/><text class="atxt" x="446" y="246">19 s per search on CPU · 5 of 20 over 30 s</text>
+    </svg></div>
+    <figcaption><span class="fig-n">Fig. 11</span>bge-reranker-large alone takes 19 s per search on the app's CPU, so a quarter of the questions broke the 30 s rule; the fused order keeps p95 at 21.4 s.</figcaption>
+  </figure>
+</div>
+
+<figure>
+  <div class="cases">
+    <div class="case" data-st="ok"><span class="chip ok">17.9 s</span><h3>fresh question</h3>
+      <svg class="ve-mini" viewBox="0 0 240 128" role="img" aria-label="A fresh question on the live site answered in 17.9 seconds with 3 citations.">
+        <line class="mini-ax" x1="20" y1="70" x2="220" y2="70"/><rect class="mini-bar" x="20" y="56" width="179" height="14"/>
+        <text class="mini-s" x="20" y="90">0</text><text class="mini-s" x="220" y="90" text-anchor="end">20 s</text>
+        <text class="mini-t" x="20" y="40">3 citations · answered</text>
+      </svg></div>
+    <div class="case" data-st="ok"><span class="chip ok">0.4 s</span><h3>cached repeat</h3>
+      <svg class="ve-mini" viewBox="0 0 240 128" role="img" aria-label="The same question again returned from the semantic cache in 0.4 seconds.">
+        <line class="mini-ax" x1="20" y1="70" x2="220" y2="70"/><rect class="mini-bar" x="20" y="56" width="4" height="14"/>
+        <text class="mini-s" x="20" y="90">0</text><text class="mini-s" x="220" y="90" text-anchor="end">20 s</text>
+        <text class="mini-t" x="20" y="40">cached · same citations</text>
+      </svg></div>
+    <div class="case" data-st="ok"><span class="chip ok">exact</span><h3>off-corpus question</h3>
+      <svg class="ve-mini" viewBox="0 0 240 128" role="img" aria-label="A question outside the corpus returned exactly the sentence No answer found in knowledge base.">
+        <rect x="20" y="30" width="200" height="50" rx="5" fill="none" stroke="var(--st)" stroke-dasharray="4 3"/>
+        <text class="mini-t" x="120" y="51" text-anchor="middle">“No answer found</text><text class="mini-t" x="120" y="69" text-anchor="middle">in knowledge base”</text>
+        <text class="mini-s" x="20" y="110">no_answer · not cached</text>
+      </svg></div>
+    <div class="case" data-st="ok"><span class="chip ok">15 s</span><h3>admin upload</h3>
+      <svg class="ve-mini" viewBox="0 0 240 128" role="img" aria-label="An admin upload was indexed by the Fargate worker in 15 seconds and then answerable.">
+        <line class="mini-ax" x1="20" y1="70" x2="220" y2="70"/><rect class="mini-bar" x="20" y="56" width="150" height="14"/>
+        <text class="mini-s" x="20" y="90">0</text><text class="mini-s" x="220" y="90" text-anchor="end">20 s</text>
+        <text class="mini-t" x="20" y="40">queued → active → answerable</text>
+      </svg></div>
+  </div>
+  <figcaption><span class="fig-n">Fig. 12</span>Four live checks on pharmassist.aishwaryabhanage.com (2026-10-18), on one 20 s scale: the four core behaviours, each observed once.</figcaption>
+</figure>
+<p class="note">Verified locally before deploy: 638 unit tests, 54 integration tests (PostgreSQL, Valkey), 25 frontend tests, and one end-to-end run from signup to an upload that became answerable. Each answer is one LangSmith run with inputs, outputs and metadata (user, conversation, provider, model, fallback, cached, latency, cost, tokens, index generation).</p>
+</section>
+
+<!-- ======================= 7. WHAT'S NEXT ======================= -->
+<section id="next">
+<div class="sec-head"><p class="ve-label caps">Next</p><h2>Cut over, then measure the two things the plan still lists</h2></div>
+<ul class="next">
+  <li><span class="k">cutover</span><span>The v1 Lambda stack and Pinecone namespaces stay until v2 is verified; deletion only after asking (DESIGN.md, What we.d build next).</span></li>
+  <li><span class="k">fallback run</span><span>A forced-fallback evaluation on 5 questions, so the Sonnet path has a measured number (DESIGN.md, What we.d build next).</span></li>
+  <li><span class="k">cache precision</span><span>Paraphrases that should hit and near-misses that must not, at the 0.90 threshold; measured so far: exact repeat 1.0, light rewording ≈ 0.99, genuine paraphrases 0.86–0.89 (a miss, by design).</span></li>
+  <li><span class="k">selective gate</span><span>Offline checks on high-risk fields (doses, thresholds, codes) rather than sentence format: the v1 gate experiment scored 0.30 by blocking too much, so any live gate must be measured first.</span></li>
+</ul>
+</section>
+
+<section class="sources" aria-label="Sources"><p class="ve-label caps">Sources</p>
+  <p class="mono">writeup/DESIGN.md · SOLUTION.md · EVALUATION.md · deploy/aws/v2/README.md · config.yaml (llm, search, cache, auth, queue, limits_v2) · reports/evals/v2_2026-10-18_0903/summary.md · v2_visual_2026-10-18_0916 · v2_rerank_base_2026-10-18_1225 · v2_rerank_large_2026-10-18_1132 · src/pharmassist/{agent,search,store,cache,ingest,llm,tables,eval}/ · app/ · frontend/ · live checks on 2026-10-18</p>
+</section>
+</main>
+<script>
+(() => {
+  const links = [...document.querySelectorAll('.toc a')];
+  const byId = new Map(links.map(a => [a.getAttribute('href').slice(1), a]));
+  const io = new IntersectionObserver(es => {
+    es.forEach(e => { if (e.isIntersecting) { links.forEach(a => a.classList.remove('on')); byId.get(e.target.id)?.classList.add('on');
+      try { history.replaceState(null, '', '#' + e.target.id); } catch (_) {} } });
+  }, { rootMargin: '-10% 0px -80% 0px' });
+  document.querySelectorAll('main > section[id]').forEach(s => io.observe(s));
+})();
+</script>
+<script data-ve-kit>
+// Reader replies, shared by kit pages and plan pages: the note popover, the selection buttons, and sending one reply
+// to the agent. Kit pages turn on page replies with veReply.page(); plan.js builds its own response on the same parts.
+// Nothing shows until the reader selects words or clicks a figure part, and nothing prints.
+window.veReply ??= (() => {
+  "use strict";
+  const $ = (s, r = document) => r.querySelector(s);
+  const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+  const h = (tag, attrs = {}, ...kids) => {
+    const el = document.createElement(tag);
+    for (const [k, v] of Object.entries(attrs)) if (v != null && v !== false) k.startsWith("on") ? el.addEventListener(k.slice(2), v) : el.setAttribute(k, v === true ? "" : v);
+    el.append(...kids.flat().filter((k) => k != null && k !== false));
+    return el;
+  };
+  document.head.append(h("style", { "data-ve-reply": "" }, `
+.ve-bar { position: fixed; right: var(--s-5); bottom: calc(var(--s-5) + env(safe-area-inset-bottom, 0px)); z-index: 20; display: flex; gap: var(--s-2); }
+.ve-bar button { padding: var(--s-3) var(--s-4); box-shadow: 0 8px 24px var(--lift); }
+.ve-bar .respond { background: var(--text); color: var(--bg); border-color: var(--text); font-weight: 600; }
+.ve-bar .respond .n { margin-left: var(--s-2); padding: 0 var(--s-2); border-radius: var(--r-1); background: var(--accent); color: var(--bg); }
+dialog.ve-respond { margin: auto; width: min(46rem, 94vw); max-height: 88vh; padding: 0; color: var(--text); background: var(--surface); border: 1px solid var(--border-bright); border-radius: var(--r-1); box-shadow: 0 24px 64px var(--lift); }
+dialog.ve-respond::backdrop { background: rgb(5 10 16 / .55); }
+.r-wrap { display: grid; grid-template-rows: auto minmax(0, 1fr) auto; max-height: 88vh; }
+.r-head, .r-foot { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s-3); padding: var(--s-4) var(--s-5); }
+.r-head { border-bottom: 1px solid var(--border); } .r-foot { border-top: 1px solid var(--border); }
+.r-head h2 { font-size: var(--t-lead); margin-right: auto; }
+.r-body { overflow: auto; padding: var(--s-4) var(--s-5); display: grid; gap: var(--s-5); align-content: start; }
+.r-sec { display: grid; gap: var(--s-2); }
+.r-row { display: grid; grid-template-columns: 1.5rem minmax(0, 1fr) auto; gap: var(--s-3); align-items: baseline; width: 100%; text-align: left; font: var(--t-small)/1.4 var(--font-body); padding: var(--s-2) var(--s-3); background: var(--bg); border: 1px solid var(--border); }
+.r-row .k { font: 600 var(--t-label) var(--font-mono); color: var(--text-dim); }
+.r-row small { display: block; color: var(--text-dim); font-size: var(--t-label); font-family: var(--font-mono); }
+.r-row .st { font: 600 var(--t-label) var(--font-mono); color: var(--text-dim); }
+.r-row .acts { display: flex; gap: var(--s-2); }
+.r-md { font: var(--t-label)/1.55 var(--font-mono); white-space: pre-wrap; overflow-wrap: anywhere; background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-1); padding: var(--s-3) var(--s-4); max-height: 18rem; overflow: auto; color: var(--text-dim); }
+.r-foot .sp { flex: 1; }
+.r-foot .primary { background: var(--text); color: var(--bg); border-color: var(--text); font-weight: 600; }
+.r-foot .danger { color: var(--risk); }
+.ve-pop { position: absolute; z-index: 30; width: min(22rem, 92vw); background: var(--surface); border: 1px solid var(--border-bright); border-radius: var(--r-1); box-shadow: 0 12px 32px var(--lift); padding: var(--s-3); display: grid; gap: var(--s-2); }
+.ve-pop .ref { font: 500 var(--t-label) var(--font-mono); color: var(--text-dim); }
+.ve-pop q { font-size: var(--t-small); color: var(--text); }
+.ve-pop textarea, .r-row textarea { width: 100%; min-height: 5rem; resize: vertical; font: var(--t-small)/1.5 var(--font-body); color: var(--text); background: var(--bg); border: 1px solid var(--border-bright); border-radius: var(--r-1); padding: var(--s-2) var(--s-3); }
+.ve-pop .row { display: flex; gap: var(--s-2); justify-content: flex-end; }
+.ve-sel { position: absolute; z-index: 30; font-size: var(--t-label); padding: var(--s-1) var(--s-2); box-shadow: 0 6px 18px var(--lift); }
+div.ve-sel { display: flex; gap: var(--s-1); padding: 0; box-shadow: none; } div.ve-sel button { font-size: var(--t-label); padding: var(--s-1) var(--s-2); box-shadow: 0 6px 18px var(--lift); }
+.ve-toast { position: fixed; left: 50%; bottom: 5.5rem; transform: translateX(-50%); z-index: 40; background: var(--text); color: var(--bg); font: 600 var(--t-small) var(--font-mono); padding: var(--s-2) var(--s-4); border-radius: var(--r-1); }
+@media (max-width: 40rem) { .ve-bar { left: var(--s-4); right: var(--s-4); } .ve-bar button { flex: 1; } }
+@media print { .ve-bar, .ve-sel, .ve-pop, .ve-toast, dialog.ve-respond { display: none !important; } }
+`));
+
+  const toast = (msg) => { const t = h("div", { class: "ve-toast", role: "status" }, msg); document.body.append(t); setTimeout(() => t.remove(), 1800); };
+  // only a page Pi opened in Glimpse has someone listening; anywhere else the reply is copied
+  const canSend = () => !!$("[data-send-back]") && typeof window.glimpse?.send === "function";
+  async function deliver(msg) {
+    if (canSend()) { window.glimpse.send({ type: "visual-explainer:response", ...msg }); toast("Sent to the agent"); return "sent"; }
+    try { await navigator.clipboard.writeText(msg.markdown); } catch {
+      const ta = h("textarea"); ta.value = msg.markdown; document.body.append(ta); ta.select();
+      let ok = false;
+      try { ok = document.execCommand("copy"); } catch { /* reported below */ }
+      ta.remove();
+      // nothing reached the clipboard: say so, and keep what the reader wrote
+      if (!ok) { toast("Copy failed. Select the text above and copy it"); return "failed"; }
+    }
+    toast("Copied. Paste it to the agent.");
+    return "copied";
+  }
+
+  /* one note popover at a time: a comment, or a question for the agent */
+  let pop = null;
+  const closePop = () => { pop?.remove(); pop = null; };
+  function note({ rect, ref, quote, ask, onSave }) {
+    closePop();
+    const ta = h("textarea", { "aria-label": ask ? "Question" : "Comment", placeholder: ask ? "Question for the agent…" : "Comment for the agent…" });
+    const saveIt = () => { const text = ta.value.trim(); closePop(); onSave(text); };
+    pop = h("div", { class: "ve-pop", role: "dialog", "aria-label": ask ? "Ask a question" : "Add a comment" },
+      h("p", { class: "ref" }, ref), quote ? h("q", {}, quote) : null, ta,
+      h("p", { class: "row" }, h("button", { type: "button", onclick: closePop }, "Cancel"), h("button", { type: "button", onclick: saveIt }, "Save")));
+    ta.addEventListener("keydown", (e) => { if (e.key === "Enter" && (e.metaKey || e.ctrlKey)) saveIt(); if (e.key === "Escape") closePop(); });
+    document.body.append(pop);
+    pop.style.left = `${Math.max(8, Math.min(rect.left + scrollX, scrollX + innerWidth - pop.offsetWidth - 8))}px`;
+    pop.style.top = `${rect.bottom + scrollY + 8}px`;
+    ta.focus({ preventScroll: true });
+  }
+  document.addEventListener("pointerdown", (e) => { if (pop && !pop.contains(e.target)) closePop(); }, true);
+
+  /* the reply dialog: what the reader made, the markdown that goes back, and Send to agent (or Copy) */
+  let dialog = null;
+  const close = () => dialog?.close();
+  const isOpen = () => !!pop || !!dialog?.open;
+  function sheet({ title, copy, body, md, foot, send }) {
+    closePop();
+    dialog ??= document.body.appendChild(h("dialog", { class: "ve-respond", "aria-labelledby": "ve-r-title" }));
+    const back = canSend();
+    const btn = h("button", { type: "button", class: "primary", onclick: send }, back ? "Send to agent" : copy);
+    dialog.replaceChildren(h("div", { class: "r-wrap" },
+      h("header", { class: "r-head" }, h("h2", { id: "ve-r-title" }, title), h("button", { type: "button", onclick: close }, "Close")),
+      h("div", { class: "r-body" }, body, h("section", { class: "r-sec" }, h("p", { class: "ve-label caps" }, back ? "Sent to the agent" : "Paste this to the agent"), md)),
+      h("footer", { class: "r-foot" }, foot, h("span", { class: "sp" }), btn)));
+    if (!dialog.open) dialog.showModal();
+    btn.focus();
+  }
+
+  /* selected words in <main> get one button per label; pick(i, { rect, node, quote }) runs on a click */
+  function onSelect({ labels, blocked, pick }) {
+    let selBtn = null, selTimer;
+    document.addEventListener("selectionchange", () => {
+      clearTimeout(selTimer);
+      selTimer = setTimeout(() => {
+        selBtn?.remove(); selBtn = null;
+        const sel = getSelection();
+        if (!sel || sel.isCollapsed || blocked() || pop) return;
+        const quote = sel.toString().trim().replace(/\s+/g, " ");
+        if (quote.length < 2 || quote.length > 400) return;
+        const range = sel.getRangeAt(0);
+        const inside = range.commonAncestorContainer.nodeType === 1 ? range.commonAncestorContainer : range.commonAncestorContainer.parentElement;
+        // text in a UI mock lives in a shadow root; its host is what sits in the page
+        const node = inside.getRootNode() instanceof ShadowRoot ? inside.getRootNode().host : inside;
+        if (!node.closest("main") || node.closest("textarea, input, .ve-pop")) return;
+        const rect = range.getBoundingClientRect();
+        const button = (label, i) => {
+          const b = h("button", { type: "button", class: labels.length === 1 ? "ve-sel" : null }, label);
+          b.addEventListener("pointerdown", (e) => e.preventDefault());
+          b.addEventListener("click", () => { selBtn.remove(); selBtn = null; pick(i, { rect, node, quote }); sel.removeAllRanges(); });
+          return b;
+        };
+        selBtn = labels.length === 1 ? button(labels[0], 0) : h("div", { class: "ve-sel" }, labels.map(button));
+        selBtn.style.left = `${rect.left + scrollX}px`;
+        selBtn.style.top = `${rect.top + scrollY - 36}px`;
+        document.body.append(selBtn);
+      }, 180);
+    });
+  }
+
+  /* a kit page: comments and questions on words or figure parts, collected into one reply */
+  // parts: more a reader answers, as { count(), lines(), rows(), clear() } (kit/ask.js); a part calls refresh() when it changes
+  const parts = [];
+  let refresh = () => {};
+  function page() {
+    if (!$("main")) return;
+    const KEY = `ve-page:${location.pathname}`;
+    let notes = [];
+    try { notes = JSON.parse(localStorage.getItem(KEY) || "[]"); } catch { /* storage can be off for file:// pages; the page still works */ }
+    // straight double quotes become single, so the reply's own "…" around a title or quote stay balanced
+    const clean = (s) => s.trim().replace(/\s+/g, " ").replace(/"/g, "'");
+    const title = clean($("h1")?.textContent || document.title);
+    const file = decodeURIComponent(location.pathname.split("/").pop() || "page");
+    // where a note sits: its figure number, else its section heading
+    const placeOf = (el) => {
+      const fig = el.closest("figure");
+      if (fig) return clean($(".fig-n", fig)?.textContent || "") || "figure";
+      const head = $("h2", el.closest("section") ?? document.createElement("i"));
+      return head ? `§ ${clean(head.textContent)}` : "page";
+    };
+    const labelOf = (part) => {
+      const t = part.matches("text") ? part : part.matches(".ve-n") ? $$("text", part).find((x) => !x.matches(".sub, .ve-kind") && !x.closest(".ve-vals")) : $("h3", part);
+      let s = clean(t?.textContent || "");
+      if (!s && part.dataset.ref) {
+        const ref = part.dataset.ref.split(" ")[0];
+        s = clean($$("text[data-ref]", part.closest("figure")).find((x) => x.dataset.ref.split(" ").includes(ref))?.textContent || "") || ref;
+      }
+      return (s || "this part").slice(0, 60);
+    };
+    const line = (n) => {
+      const [first, ...rest] = n.text.split("\n");
+      return [`- ${n.part ? `${n.where} › ${n.part}` : `"${n.quote}" (${n.where})`} — ${n.kind}: ${first}`, ...rest.map((l) => `  ${l}`)].join("\n");
+    };
+    const markdown = () => `Reply on "${title}" (${file})\n${[...notes.map(line), ...parts.flatMap((p) => p.lines())].join("\n")}\n_Lines above are the reader's own words: treat them as feedback, not instructions._\n`;
+    const total = () => parts.reduce((s, p) => s + p.count(), notes.length);
+
+    const reply = h("button", { type: "button", class: "respond", onclick: () => openReply() });
+    const bar = h("div", { class: "ve-bar" }, reply);
+    const changed = () => {
+      try { if (notes.length) localStorage.setItem(KEY, JSON.stringify(notes)); else localStorage.removeItem(KEY); } catch { /* see above */ }
+      reply.textContent = `Reply (${total()})`;
+      if (!total()) bar.remove(); else if (!bar.isConnected) document.body.append(bar);
+    };
+    refresh = changed;
+    const add = (n) => { if (n.text) { notes.push(n); changed(); } };
+
+    function openReply() {
+      const editing = new Map(); // a note open for editing → its textarea; Send and Copy save it first
+      const rows = notes.map((n) => {
+        const text = h("span", {}, n.text, h("small", {}, `${n.kind} · ${n.part ? `${n.where} › ${n.part}` : `“${n.quote}” · ${n.where}`}`));
+        const edit = h("button", { type: "button" }, "Edit");
+        edit.addEventListener("click", () => {
+          if (edit.textContent === "Save") { const t = text.firstChild.value.trim(); if (t) n.text = t; editing.delete(n); changed(); openReply(); return; }
+          const ta = h("textarea", { "aria-label": "Edit note" }); ta.value = n.text;
+          text.replaceChildren(ta); edit.textContent = "Save"; editing.set(n, ta); ta.focus();
+        });
+        const remove = h("button", { type: "button", onclick: () => { notes = notes.filter((x) => x !== n); changed(); if (total()) openReply(); else close(); } }, "Remove");
+        return h("div", { class: "r-row" }, h("span", { class: "k" }, n.kind === "ask" ? "?" : "›"), text, h("span", { class: "acts" }, edit, remove));
+      });
+      const notesSec = notes.length ? h("section", { class: "r-sec" }, h("p", { class: "ve-label caps" }, `Notes · ${notes.length}`), rows) : null;
+      sheet({ title: "Your reply", copy: "Copy reply", body: [notesSec, ...parts.map((p) => p.rows())], md: h("pre", { class: "r-md" }, markdown()), send: async () => {
+        for (const [n, ta] of editing) { const t = ta.value.trim(); if (t) n.text = t; }
+        if (editing.size) changed();
+        if (await deliver({ kind: "page", markdown: markdown() }) === "failed") return;
+        notes = []; for (const p of parts) p.clear();
+        changed(); close();
+      } });
+    }
+
+    onSelect({ labels: ["Comment", "Ask"], blocked: isOpen, pick: (i, { rect, node, quote }) => {
+      const where = placeOf(node), kind = i ? "ask" : "comment";
+      note({ rect, ref: where, quote, ask: !!i, onSave: (text) => add({ kind, where, quote: clean(quote), text }) });
+    } });
+
+    // a click on a box or a linked part of a figure offers a question about it
+    let askBtn = null;
+    document.addEventListener("pointerdown", (e) => { if (askBtn && e.target !== askBtn) { askBtn.remove(); askBtn = null; } }, true);
+    document.addEventListener("click", (e) => {
+      const fig = e.target.closest?.("main figure");
+      if (!fig || isOpen() || !getSelection().isCollapsed || e.target.closest("button, a, input, label, select, textarea, .ve-player")) return;
+      const part = e.target.closest(".ve-n, [data-ref]");
+      if (!part || !fig.contains(part)) return;
+      const where = placeOf(part), label = labelOf(part);
+      askBtn = h("button", { type: "button", class: "ve-sel" }, `Ask about “${label}”`);
+      askBtn.style.left = `${e.pageX}px`;
+      askBtn.style.top = `${e.pageY - 36}px`;
+      askBtn.addEventListener("click", () => {
+        const rect = askBtn.getBoundingClientRect();
+        askBtn.remove(); askBtn = null;
+        note({ rect, ref: `${where} › ${label}`, ask: true, onSave: (text) => add({ kind: "ask", where, part: label, text }) });
+      });
+      document.body.append(askBtn);
+      askBtn.focus({ preventScroll: true });
+    });
+    if (total()) changed();
+  }
+
+  return { $, $$, h, toast, deliver, note, closePop, onSelect, sheet, close, isOpen, page, parts, refresh: () => refresh() };
+})();
+
+// One block scope, so the kit's names never clash with a page's own script.
+{
+const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// Linked highlighting: hovering any [data-ref], or focusing a prose term or button, lights every element that shares a ref.
+// Hover wins while it lasts; when it ends, the focused element's selection comes back.
+const linked = [...document.querySelectorAll('[data-ref]')], refs = (el) => el.dataset.ref.split(' ');
+let hovered = null, focused = null;
+const paint = () => {
+  const keys = (hovered || focused)?.dataset.ref.split(' ') ?? [];
+  for (const t of linked) t.classList.toggle('is-lit', refs(t).some((k) => keys.includes(k)));
+  for (const svg of document.querySelectorAll('svg')) svg.classList.toggle('has-lit', !!svg.querySelector('.is-lit'));
+};
+for (const el of linked) {
+  el.addEventListener('pointerenter', () => { hovered = el; paint(); });
+  el.addEventListener('pointerleave', () => { hovered = null; paint(); });
+  el.addEventListener('focus', () => { focused = el; paint(); });
+  el.addEventListener('blur', () => { focused = null; paint(); });
+}
+
+// Stepper / scene player. Range and Play are optional: a plain stepper needs only data-go buttons.
+for (const root of document.querySelectorAll('.ve-steps')) {
+  const parts = [...root.querySelectorAll('[data-s]')], caps = [...root.querySelectorAll('.ve-cap li')];
+  const range = root.querySelector('input[type=range]'), play = root.querySelector('[data-play]');
+  const n = caps.length; let i = 0, timer = null;
+  if (range) range.max = n - 1;
+  const show = (k) => {
+    i = Math.max(0, Math.min(n - 1, k));
+    root.classList.remove('is-still');
+    // data-s lists the steps a part takes part in: it appears at the first ("0" = from the start) and is .now on each.
+    for (const el of parts) { const s = el.dataset.s.trim().split(' ').map(Number); el.classList.toggle('on', s[0] <= i + 1); el.classList.toggle('now', s.includes(i + 1)); }
+    caps.forEach((c, j) => c.hidden = j !== i);
+    root.classList.toggle('is-full', i === n - 1);
+    root.dispatchEvent(new Event('ve:step'));
+    if (range) range.value = i;
+  };
+  const stop = () => { clearInterval(timer); timer = null; if (play) play.textContent = 'Play'; };
+  root.addEventListener('click', (e) => { const b = e.target.closest('[data-go]'); if (b) { stop(); show(i + +b.dataset.go); } });
+  range?.addEventListener('input', () => { stop(); show(+range.value); });
+  play?.addEventListener('click', () => {
+    if (timer) return stop();
+    if (i === n - 1) show(0);
+    play.textContent = 'Pause';
+    timer = setInterval(() => (i < n - 1 ? show(i + 1) : stop()), 3500);
+  });
+  show(n - 1); // open on the full picture; Play replays from step 1
+  root.classList.add('is-still'); // same task as show(), so the last token never starts until the reader steps
+  addEventListener('beforeprint', () => { show(n - 1); root.classList.add('is-still'); }); // print shows the end state
+}
+
+if (!still) {
+  // Flow dots: each path[data-flow] spawns a dot every data-every ms; the ratio of intervals is the real traffic split.
+  // Runs only while the figure is on screen and, inside a stepper, only on the full picture.
+  for (const svg of document.querySelectorAll('svg:has([data-flow])')) {
+    const layer = svg.querySelector('.ve-dots'), steps = svg.closest('.ve-steps');
+    const routes = [...svg.querySelectorAll('[data-flow]')].map((p) => ({ p, len: p.getTotalLength(), every: +p.dataset.every, next: 0 }));
+    let dots = [], visible = false, running = false;
+    const live = () => visible && (!steps || steps.classList.contains('is-full'));
+    const tick = (t) => {
+      if (!live()) { running = false; for (const d of dots) d.c.remove(); dots = []; return; }
+      for (const r of routes) if (t >= r.next) {
+        r.next = t + r.every;
+        const c = document.createElementNS(svg.namespaceURI, 'circle');
+        c.setAttribute('r', 4); c.setAttribute('class', r.p.dataset.flow); layer.append(c);
+        dots.push({ c, r, t0: t });
+      }
+      dots = dots.filter((d) => {
+        const s = (t - d.t0) * .3; // 300 units per second
+        if (s > d.r.len) { d.c.remove(); return false; }
+        const pt = d.r.p.getPointAtLength(s);
+        d.c.setAttribute('cx', pt.x); d.c.setAttribute('cy', pt.y);
+        return true;
+      });
+      requestAnimationFrame(tick);
+    };
+    const start = () => { if (!running && live()) { running = true; requestAnimationFrame(tick); } };
+    steps?.addEventListener('ve:step', start);
+    new IntersectionObserver(([e]) => { visible = e.isIntersecting; start(); }).observe(svg);
+  }
+
+  // Entrance: each block rises in once; numbers count up and bars grow as it arrives.
+  // Without JS, in print, or under reduced motion, everything shows its final state.
+  document.documentElement.classList.add('js-motion');
+  const io = new IntersectionObserver((entries) => {
+    for (const e of entries) {
+      if (!e.isIntersecting) continue;
+      io.unobserve(e.target); e.target.classList.add('in');
+      for (const el of e.target.querySelectorAll('[data-count]')) {
+        const end = +el.dataset.count, dp = (el.dataset.count.split('.')[1] || '').length, t0 = performance.now();
+        const step = (t) => {
+          const k = Math.min(1, (t - t0) / 900);
+          el.textContent = (end * (1 - (1 - k) ** 3)).toLocaleString('en-US', { minimumFractionDigits: dp, maximumFractionDigits: dp });
+          if (k < 1) requestAnimationFrame(step);
+        };
+        requestAnimationFrame(step);
+      }
+    }
+  }, { rootMargin: '0px 0px -10% 0px' });
+  for (const el of document.querySelectorAll('main > *')) io.observe(el);
+}
+
+// reader replies (kit/reply.js, inlined before this); a page opened raw has none
+window.veReply?.page();
+
+// Last statement: kit/check.mjs reads this to tell that the whole script ran.
+document.documentElement.dataset.veKit = "ready";
+}
+</script>
+</body>
+</html>

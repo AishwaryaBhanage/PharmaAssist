@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en" data-register="blueprint">
+<head>
+<title>PharmAssist solution: one command runs it, one request path explains it</title>
+<link rel="stylesheet" href="kit.css" data-ve-kit>
+<style>
+  .crumbs { display: flex; flex-wrap: wrap; gap: var(--s-4); font-size: var(--t-small); color: var(--text-dim); margin-bottom: var(--s-5); }
+  .crumbs a { color: var(--text-dim); }
+  .toc { position: sticky; top: 0; z-index: 3; background: var(--bg); border-bottom: 1px solid var(--border);
+         padding: var(--s-2) 0; margin-bottom: var(--s-6); }
+  .toc ol { display: flex; gap: var(--s-4); list-style: none; margin: 0; padding: 0; overflow-x: auto;
+            scrollbar-width: none; mask-image: linear-gradient(90deg, #000 92%, transparent); }
+  .toc a { white-space: nowrap; font-size: var(--t-small); color: var(--text-dim); text-decoration: none; }
+  .toc a.on { color: var(--accent); }
+  section { scroll-margin-top: 56px; }
+  .note { font-size: var(--t-small); color: var(--text-dim); max-width: 65ch; }
+  .tbl { overflow-x: auto; border: 1px solid var(--border); border-radius: var(--r-2); }
+  .tbl table { width: 100%; border-collapse: collapse; font-size: var(--t-small); }
+  .tbl th { text-align: left; font-weight: 500; color: var(--text-dim); background: var(--surface); padding: var(--s-3) var(--s-4); }
+  .tbl td { padding: var(--s-3) var(--s-4); border-top: 1px solid var(--border); vertical-align: top; }
+  .tbl code, .sources p, .sources code, .note code, .co code, .links a { overflow-wrap: anywhere; }
+  .two { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--s-6); align-items: start; }
+  .two > * { min-width: 0; }
+  .two h3 { margin: 0 0 var(--s-3); font-size: var(--t-body); }
+  .ve-svg { min-width: 925px; }
+  .bnd { fill: none; stroke: var(--border-bright); stroke-dasharray: 6 4; }
+  .bnd-l { font-family: var(--mono); font-size: 13px; fill: var(--text-dim); }
+  .tn { font-size: 13px; fill: var(--text-dim); }
+  pre.cmd { font-family: var(--mono); font-size: var(--t-small); background: var(--surface); border-radius: var(--r-2);
+            padding: var(--s-4); overflow-x: auto; margin: 0; line-height: 1.5; }
+  pre.cmd .c { color: var(--text-dim); }
+  .co { background: var(--surface); border-radius: var(--r-2); padding: var(--s-4); font-size: var(--t-small); }
+  .co h3 { margin: 0 0 var(--s-2); font-size: var(--t-body); display: flex; gap: var(--s-3); align-items: center; flex-wrap: wrap; }
+  .co p { margin: 0 0 var(--s-2); } .co p:last-child { margin: 0; }
+  .cos { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--s-4); }
+  ol.try { font-size: var(--t-small); padding-left: 1.2rem; margin: var(--s-3) 0 0; } ol.try li { margin-bottom: var(--s-2); }
+  ul.links { font-size: var(--t-small); padding-left: 1.2rem; margin: 0; columns: 2; column-gap: var(--s-6); } ul.links li { margin-bottom: var(--s-2); break-inside: avoid; }
+  @media (max-width: 700px) { ul.links { columns: 1; } }
+  .ve-vals text { text-anchor: end; }
+</style>
+</head>
+<body><main>
+<header>
+  <p class="crumbs"><a href="index.html">← Overview</a> · <a href="../SOLUTION.md">Rendered from SOLUTION.md</a> · <a href="pharmassist-v2.html">The system explainer</a> · <a href="design.html">Design</a></p>
+  <p class="eyebrow">PharmAssist · the solution</p>
+  <h1>One Docker command, <span class="num">no Node or Python</span>, and the corpus is answerable</h1>
+  <p class="lead">A web app for pharmacy staff: one operational question in, one cited answer out in about 15 seconds of reading, grounded only in 11 public VA, Medicare Part D and NY Medicaid documents. <b>Staff ask and rate; admins see every conversation, upload, re-index or remove documents, and watch spend.</b> Deployed on AWS at pharmassist.aishwaryabhanage.com (not kept running); runs locally from public images.</p>
+  <p class="meta">images <code>abhanage/pharmassist-v2-web</code>, <code>abhanage/pharmassist-v2-ingest</code> · Intel and Apple Silicon · <code>deploy/prebuilt.override.yml</code></p>
+</header>
+
+<nav class="toc" aria-label="Sections"><ol>
+  <li><a href="#run">Run it in 2 minutes</a></li><li><a href="#works">How it works</a></li><li><a href="#ingest">Ingestion</a></li><li><a href="#ops">Operations</a></li><li><a href="#source">From source</a></li>
+</ol></nav>
+
+<!-- ======================= 1. RUN ======================= -->
+<section id="run">
+<pre class="cmd">git clone https://github.com/AishwaryaBhanage/PharmaAssist.git && cd PharmaAssist
+cp .env.example .env          <span class="c"># put your OPENAI_API_KEY in it (ANTHROPIC_API_KEY too for the fallback model)</span>
+docker compose -f deploy/docker-compose.yml -f deploy/prebuilt.override.yml --env-file .env up</pre>
+<figure>
+  <div class="frame"><svg class="ve-svg" viewBox="0 0 1000 300" role="img" aria-label="What the one command starts: docker compose pulls two public images, the web API and the ingestion worker, and starts Postgres 16 with pgvector, Valkey, a local SQS and a local S3. The seed step loads the 11 documents from the checked-in build, 1,983 chunks with vectors, 3,520 table rows and 50 figure records, and creates demo accounts, with no model spend. The app opens at localhost:8000.">
+    <rect class="bnd" x="300" y="30" width="680" height="250" rx="6"/><text class="bnd-l" x="308" y="44">docker compose · local stack</text>
+    <!-- edges -->
+    <path class="ve-e is-hot" d="M180 90H340"/><text class="ve-el" x="260" y="80">pulls, starts</text>
+    <path class="ve-e" d="M510 90H570"/><text class="ve-el" x="540" y="80">seeds</text>
+    <path class="ve-e" d="M510 115H540V200H570"/><text class="ve-el" x="540" y="166">writes</text>
+    <path class="ve-e" d="M425 117V200"/><text class="ve-el r" x="433" y="160">queues</text>
+    <path class="ve-e is-hot" d="M110 117V200"/><text class="ve-el r" x="118" y="160">open</text>
+    <!-- nodes -->
+    <g class="ve-n"><rect class="sh" x="40" y="63" width="140" height="54" rx="6"/><text x="110" y="84">one command</text><text class="sub" x="110" y="102">about 2 minutes</text></g>
+    <g class="ve-n is-key"><rect class="sh" x="340" y="63" width="170" height="54" rx="6"/><text x="425" y="84">pharmassist-v2-web</text><text class="sub" x="425" y="102">API + React UI</text></g>
+    <g class="ve-n"><rect class="sh" x="340" y="200" width="170" height="54" rx="6"/><text x="425" y="221">pharmassist-v2-ingest</text><text class="sub" x="425" y="239">worker</text></g>
+    <g class="ve-n"><path class="sh" d="M570 75V113A65 9 0 0 0 700 113V75"/><ellipse class="sh lid" cx="635" cy="75" rx="65" ry="9"/><text x="635" y="95">Postgres 16</text><text class="sub" x="635" y="111">+ pgvector</text></g>
+    <g class="ve-n"><path class="sh" d="M570 200V238A65 9 0 0 0 700 238V200"/><ellipse class="sh lid" cx="635" cy="200" rx="65" ry="9"/><text x="635" y="220">local S3 · SQS</text><text class="sub" x="635" y="236">+ Valkey cache</text></g>
+    <g class="ve-n"><rect class="sh" x="740" y="55" width="230" height="110" rx="6"/><text x="855" y="79">seed, no model spend</text><text class="sub" x="855" y="97">11 documents</text><text class="sub" x="855" y="113">1,983 chunks with vectors</text><text class="sub" x="855" y="129">3,520 table rows</text><text class="sub" x="855" y="145">50 figures · demo accounts</text></g>
+    <g class="ve-n"><rect class="sh" x="40" y="200" width="140" height="54" rx="6"/><text x="110" y="221">localhost:8000</text><text class="sub" x="110" y="239">sign in, ask</text></g>
+    <path class="ve-e" d="M740 110H700"/>
+    <text class="tn" x="308" y="272">scripts/seed_local.py · docker compose down -v removes the data</text>
+  </svg></div>
+  <figcaption><span class="fig-n">Fig. 1</span>The command pulls two public images and starts Postgres + pgvector, Valkey, a local SQS and S3, then seeds the 11 documents from the checked-in build with no model spend.</figcaption>
+</figure>
+<div class="two">
+  <div>
+    <h3>Try, in order</h3>
+    <ol class="try">
+      <li>“Is Trulicity preferred under NY Medicaid?”: a cited answer; 5.1 s in production (<code>evidence/screenshots/ask-answer.png</code>).</li>
+      <li>The same question again: from the cache, 0.4 s in production (<code>evidence/live_check_2026-10-18.log</code>).</li>
+      <li>“What is the capital of France?”: exactly <code>No answer found in knowledge base</code> (<code>evidence/screenshots/ask-no-answer.png</code>).</li>
+      <li>As admin, upload a one-page PDF under Documents and watch the job go queued → active and the content become answerable.</li>
+    </ol>
+  </div>
+  <div>
+    <h3>Accounts and cost</h3>
+    <p class="note">Open <a href="http://localhost:8000">http://localhost:8000</a>. Two demo accounts are seeded, <code>admin@pharmassist.local</code> (Ask + Admin: conversations, ratings, documents, jobs, users, cache, spend) and <code>staff1@pharmassist.local</code> (Ask + own conversations); their passwords are in <a href="../SOLUTION.md#run-it-in-2-minutes">SOLUTION.md</a>. Fresh answers use your API key, about $0.11 each (<code>reports/evals/v2_2026-10-18_0903/summary.md</code>); repeats are free. To build from this checkout instead: <code>docker compose up --build</code> (<code>compose.yaml</code>; a few minutes the first time).</p>
+  </div>
+</div>
+</section>
+
+<!-- ======================= 2. HOW IT WORKS ======================= -->
+<section id="works">
+<div class="sec-head"><p class="ve-label caps">How it works</p><h2>One question vector serves the cache and the search; the citation check decides the answer</h2></div>
+<figure class="ve-steps">
+  <div class="frame"><svg class="ve-svg" viewBox="0 0 1000 400" role="img" aria-label="Request path: the browser posts a question to FastAPI, which embeds it once and asks the Valkey cache. A hit within cosine 0.90 returns the stored answer and citations in under a second with a cached badge. A miss runs an agent on gpt-5.5, Claude Sonnet on failure, with at most 6 lookups and a 25 second deadline; tools search PostgreSQL with pgvector and full-text fused by RRF, read pages, and look drugs up in the VA formulary and NY PDL rows. An answer is returned only when the model answered and at least one citation points at a page or row a tool returned; anything else is exactly No answer found in knowledge base and is never cached.">
+    <!-- edges -->
+    <path class="ve-e is-hot" data-s="1" d="M150 78H275"/><text class="ve-el" x="212" y="68">POST /ask · JWT</text>
+    <path class="ve-e" data-s="4 7" d="M275 100H150"/><text class="ve-el" x="212" y="124">answer, cited</text>
+    <path class="ve-e is-hot" data-s="2" d="M405 87H530"/><text class="ve-el" x="467" y="77">embeds once</text>
+    <path class="ve-e is-hot" data-s="3" d="M660 87H785"/><text class="ve-el" x="722" y="77">cosine ≥ 0.90?</text>
+    <path class="ve-e is-hot" data-s="4" d="M850 63V30H340V60"/><text class="ve-el" x="595" y="22">hit · stored answer + citations · “cached” badge names the matched question</text>
+    <path class="ve-e is-hot" data-s="5" d="M850 119V170H595V220"/><text class="ve-el" x="722" y="161">miss</text>
+    <path class="ve-e is-hot" data-s="6" d="M660 247H785"/><text class="ve-el" x="722" y="237">tools</text>
+    <path class="ve-e" data-s="7" d="M530 247H405"/><text class="ve-el" x="467" y="237">submit_answer</text>
+    <path class="ve-e is-hot" data-s="7" d="M340 220V114"/><text class="ve-el r" x="347" y="170">answered + cited</text>
+    <path class="ve-e is-async" data-s="7" d="M300 114V160H85V220"/><text class="ve-el" x="192" y="151">stored, traced</text>
+    <!-- tokens -->
+    <circle class="ve-tok" data-s="1" r="5" style="offset-path: path('M85 78H340')"/>
+    <circle class="ve-tok" data-s="2" r="5" style="offset-path: path('M340 87H595')"/>
+    <circle class="ve-tok" data-s="3" r="5" style="offset-path: path('M595 87H850')"/>
+    <circle class="ve-tok" data-s="4" r="5" style="offset-path: path('M850 63V30H340V100H85'); --dur: 1800ms"/>
+    <circle class="ve-tok" data-s="5" r="5" style="offset-path: path('M850 119V170H595V247'); --dur: 1400ms"/>
+    <circle class="ve-tok" data-s="6" r="5" style="offset-path: path('M595 247H850')"/>
+    <circle class="ve-tok" data-s="7" r="5" style="offset-path: path('M595 247H340V100H85'); --dur: 2000ms"/>
+    <!-- nodes -->
+    <g class="ve-n" data-s="1"><rect class="sh" x="20" y="60" width="130" height="54" rx="6"/><text x="85" y="81">Browser</text><text class="sub" x="85" y="99">React · JWT</text></g>
+    <g class="ve-n" data-s="1"><rect class="sh" x="275" y="60" width="130" height="54" rx="6"/><text x="340" y="81">FastAPI</text><text class="sub" x="340" y="99">/api/v1/ask</text></g>
+    <g class="ve-n" data-s="2"><rect class="sh" x="530" y="60" width="130" height="54" rx="6"/><text x="595" y="81">Embed question</text><text class="sub" x="595" y="99">once per question</text></g>
+    <g class="ve-n" data-s="3"><path class="sh" d="M785 72V110A65 9 0 0 0 915 110V72"/><ellipse class="sh lid" cx="850" cy="72" rx="65" ry="9"/><text x="850" y="92">Valkey cache</text><text class="sub" x="850" y="108">semantic</text></g>
+    <g class="ve-n" data-s="7"><rect class="sh" x="20" y="220" width="130" height="54" rx="6" stroke-dasharray="5 4"/><text x="85" y="241">Conversation</text><text class="sub" x="85" y="259">+ LangSmith run</text></g>
+    <g class="ve-n" data-s="7"><rect class="sh" x="275" y="220" width="130" height="54" rx="6"/><text x="340" y="241">Citation check</text><text class="sub" x="340" y="259">no-answer rule</text></g>
+    <g class="ve-n is-key" data-s="5"><rect class="sh" x="530" y="220" width="130" height="54" rx="6"/><text x="595" y="241">Agent</text><text class="sub" x="595" y="259">gpt-5.5 → Sonnet</text></g>
+    <g class="ve-n" data-s="6"><path class="sh" d="M785 232V270A65 9 0 0 0 915 270V232"/><ellipse class="sh lid" cx="850" cy="232" rx="65" ry="9"/><text x="850" y="252">PostgreSQL</text><text class="sub" x="850" y="268">pgvector + FTS</text></g>
+    <!-- dimensions -->
+    <g class="ve-dim" data-s="4"><path class="ext" d="M150 342V364M850 342V364"/><path class="ln" d="M150 358H850M146 362l8-8M846 362l8-8"/><text x="500" y="352">0.4 s · the same question again, from the cache (production)</text></g>
+    <g class="ve-dim is-key" data-s="7"><path class="ext" d="M150 372V394M915 372V394"/><path class="ln" d="M150 388H915M146 392l8-8M911 392l8-8"/><text x="532" y="382">5.1 s · “Is Trulicity preferred under NY Medicaid?” (production)</text></g>
+  </svg></div>
+  <div class="ve-player">
+    <ol class="ve-cap">
+      <li data-n="1/7">The browser posts one question with its JWT. Each question stands alone; the UI only groups them into conversations.</li>
+      <li data-n="2/7">The API embeds the question once; the cache and the dense search reuse this vector.</li>
+      <li data-n="3/7">Valkey looks for a stored question within cosine 0.90.</li>
+      <li data-n="4/7">Hit: the stored answer and citations return in under a second with a “cached” badge naming the matched question. No model call.</li>
+      <li data-n="5/7">Miss: an agent with at most 6 lookups and a 25 s deadline runs on OpenAI gpt-5.5; Claude Sonnet takes over on failure.</li>
+      <li data-n="6/7">Tools search PostgreSQL (pgvector dense search plus full-text, fused with RRF), read pages, and look drugs up in the VA formulary and NY PDL rows.</li>
+      <li data-n="7/7">An answer is returned only when the model answered and at least one citation points at a page or row a tool returned in this request; anything else is exactly “No answer found in knowledge base” and is never cached.</li>
+    </ol>
+    <button data-go="-1" aria-label="Previous step">‹</button><button data-play aria-label="Play">▶</button><input type="range" aria-label="Step"><button data-go="1" aria-label="Next step">›</button>
+  </div>
+  <figcaption><span class="fig-n">Fig. 2</span>A cached repeat answers in 0.4 s; a fresh question runs the agent and returns only if the citation check passes (measured: 0 answers without citations, 0 citations failing the check, Q20 declined correctly).</figcaption>
+</figure>
+<div class="cos">
+  <div class="co"><h3>Answering</h3><p>The agent answers only from returned text, states the program assumption, names the precedence rule it applied, and declines non-pharmacy questions (<code>out_of_scope</code>, <code>docs/PROMPTS.md</code>). Code: <code>src/pharmassist/agent/</code>, <code>src/pharmassist/cache/valkey.py</code>, <code>app/answer_service.py</code>.</p></div>
+  <div class="co"><h3>Retrieval</h3><p>Small chunks (350 tokens, with heading path) are matched; the enclosing section (≤ 1,500 tokens) is read. Formulary and PDL rows are exact lookups; flowcharts printed as images were interpreted once by a vision model and checked against OCR (<code>reports/parsing/VISUAL_EXTRACTION.md</code>). Why: <a href="design.html#architecture">DESIGN.md “Architecture”</a>.</p></div>
+  <div class="co"><h3>Citations</h3><p>Each citation is a document title plus page, opening the stored PDF at that page (<code>evidence/screenshots/citation-source.png</code>); a page with an interpreted figure links the crop (<code>frontend/src/components/ask/CitationList.tsx</code>, <code>FigureNote.tsx</code>).</p></div>
+</div>
+</section>
+
+<!-- ======================= 3. INGESTION ======================= -->
+<section id="ingest">
+<div class="sec-head"><p class="ve-label caps">Ingestion</p><h2>An upload is answerable 5 s after submission with the warm worker</h2></div>
+<figure>
+  <div class="frame"><svg class="ve-svg" viewBox="0 0 1000 310" role="img" aria-label="Ingestion path: an admin posts a document; the API validates it by content as PDF or XLSX, up to 50 MB and 400 pages, stores it in S3, records a version and a job, and queues it in SQS. The worker parses with Docling, interprets figures, chunks, embeds, verifies counts and activates the version in one transaction; the old version is superseded and the cache generation moves on. Failures retry three times, then land in a dead-letter queue with the error shown in the admin UI. Measured on production: 15 seconds with a cold worker, 5 seconds warm.">
+    <!-- edges -->
+    <path class="ve-e is-hot" d="M170 100H230"/><text class="ve-el" x="200" y="90">POST</text>
+    <path class="ve-e is-hot" d="M410 100H470"/><text class="ve-el" x="440" y="90">stores</text>
+    <path class="ve-e is-hot is-async" d="M600 100H660"/><text class="ve-el" x="630" y="90">queues</text>
+    <path class="ve-e is-hot" d="M740 127V200H640"/><text class="ve-el" x="690" y="191">activates</text>
+    <path class="ve-e is-async" d="M850 127V200H890"/><text class="ve-el" x="870" y="191">3 retries</text>
+    <!-- nodes -->
+    <g class="ve-n"><rect class="sh" x="40" y="73" width="130" height="54" rx="6"/><text x="105" y="94">Admin</text><text class="sub" x="105" y="112">PDF or XLSX</text></g>
+    <g class="ve-n"><rect class="sh" x="230" y="65" width="180" height="70" rx="6"/><text x="320" y="89">API validates</text><text class="sub" x="320" y="107">type by content</text><text class="sub" x="320" y="123">50 MB · 400 pages</text></g>
+    <g class="ve-n"><rect class="sh" x="470" y="65" width="130" height="70" rx="6"/><text x="535" y="89">S3 + job row</text><text class="sub" x="535" y="107">file, version,</text><text class="sub" x="535" y="123">ingestion_jobs</text></g>
+    <g class="ve-n is-key"><rect class="sh" x="660" y="55" width="200" height="72" rx="6"/><text x="760" y="79">Worker (Fargate)</text><text class="sub" x="760" y="97">Docling · vision · chunk</text><text class="sub" x="760" y="113">embed · verify counts</text></g>
+    <g class="ve-n"><path class="sh" d="M480 212V250A80 9 0 0 0 640 250V212"/><ellipse class="sh lid" cx="560" cy="212" rx="80" ry="9"/><text x="560" y="232">PostgreSQL</text><text class="sub" x="560" y="248">new version active</text></g>
+    <g class="ve-n"><rect class="sh" x="890" y="200" width="90" height="54" rx="6" stroke-dasharray="5 4"/><text x="935" y="221">DLQ</text><text class="sub" x="935" y="239">error in UI</text></g>
+    <text class="tn" x="40" y="170">one transaction: the old version is superseded,</text>
+    <text class="tn" x="40" y="188">the cache generation moves on, search reads active only</text>
+    <text class="tn" x="40" y="206">admins re-index, or remove from the index keeping the file</text>
+    <text class="tn" x="40" y="224">DELETE /api/v1/admin/documents/{id}/index</text>
+    <text class="tn" x="40" y="242">scanned, image-only PDFs chunk from OCR text</text>
+    <!-- dimensions -->
+    <g class="ve-dim is-key"><path class="ext" d="M105 275V297M640 275V297"/><path class="ln" d="M105 291H640M101 295l8-8M636 295l8-8"/><text x="372" y="285">upload → active: 5 s warm · 15 s cold (production, 2026-10-18)</text></g>
+  </svg></div>
+  <figcaption><span class="fig-n">Fig. 3</span>Upload, validate, store, queue, parse, activate in one transaction; measured on production: 15 s with a cold worker, 5 s warm, and a removed document re-indexed in 5 s.</figcaption>
+</figure>
+<p class="note">Measured on production, 2026-10-18: remove-from-index returned 200 with counts, the document's question then returned the no-answer sentence, re-indexing took 5 s and it was answerable again (production run, admin API). Code: <code>src/pharmassist/ingest/</code>, <code>app/admin.py</code>; limits in <code>config.yaml</code> <code>uploads</code>.</p>
+</section>
+
+<!-- ======================= 4. OPERATIONS ======================= -->
+<section id="ops">
+<div class="sec-head"><p class="ve-label caps">Operations</p><h2>One CloudFormation stack in us-east-1: static IPs in front, a warm worker behind</h2></div>
+  <figure>
+    <div class="frame"><svg class="ve-svg" viewBox="0 0 1000 300" role="img" aria-label="Hosting topology on AWS us-east-1: a Network Load Balancer with two Elastic IPs passes traffic to WAF and an Application Load Balancer with HTTPS, which routes to two t4g.large app servers. The servers use RDS PostgreSQL, ElastiCache Valkey and SQS; a Fargate ingestion worker with one task kept warm consumes the queue. One CloudFormation stack.">
+      <rect class="bnd" x="30" y="30" width="950" height="250" rx="6"/><text class="bnd-l" x="38" y="44">AWS us-east-1 · one CloudFormation stack · deploy/aws/v2/template.yaml</text>
+      <path class="ve-e is-hot" d="M170 100H230"/><text class="ve-el" x="200" y="90">TCP</text>
+      <path class="ve-e is-hot" d="M360 100H420"/><text class="ve-el" x="390" y="90">HTTPS</text>
+      <path class="ve-e" d="M580 100H640"/><text class="ve-el" x="610" y="90">jobs</text>
+      <path class="ve-e is-async" d="M740 100H870"/><text class="ve-el" x="805" y="90">polls</text>
+      <path class="ve-e" d="M500 127V203"/><text class="ve-el r" x="508" y="170">reads, writes</text>
+      <path class="ve-e" d="M540 127V165H720V203"/><text class="ve-el" x="630" y="156">cache</text>
+      <path class="ve-e" d="M920 127V275H510V259"/><text class="ve-el" x="715" y="266">writes chunks, versions</text>
+      <g class="ve-n"><rect class="sh" x="40" y="73" width="130" height="54" rx="6"/><text x="105" y="94">NLB</text><text class="sub" x="105" y="112">2 Elastic IPs</text></g>
+      <g class="ve-n"><rect class="sh" x="230" y="73" width="130" height="54" rx="6"/><text x="295" y="94">WAF → ALB</text><text class="sub" x="295" y="112">HTTPS</text></g>
+      <g class="ve-n is-key"><rect class="sh" x="420" y="73" width="160" height="54" rx="6"/><text x="500" y="94">2 × t4g.large</text><text class="sub" x="500" y="112">API + UI</text></g>
+      <g class="ve-n"><rect class="sh" x="640" y="73" width="100" height="54" rx="6"/><text x="690" y="94">SQS</text><text class="sub" x="690" y="112">+ DLQ</text></g>
+      <g class="ve-n"><rect class="sh" x="870" y="73" width="100" height="54" rx="6"/><text x="920" y="94">Fargate</text><text class="sub" x="920" y="112">1 task warm</text></g>
+      <g class="ve-n"><path class="sh" d="M440 212V250A70 9 0 0 0 580 250V212"/><ellipse class="sh lid" cx="510" cy="212" rx="70" ry="9"/><text x="510" y="232">RDS PostgreSQL</text></g>
+      <g class="ve-n"><path class="sh" d="M660 212V250A60 9 0 0 0 780 250V212"/><ellipse class="sh lid" cx="720" cy="212" rx="60" ry="9"/><text x="720" y="232">ElastiCache</text><text class="sub" x="720" y="248">Valkey</text></g>
+    </svg></div>
+    <figcaption><span class="fig-n">Fig. 4</span>NLB with two Elastic IPs → WAF → ALB (HTTPS) → two <code>t4g.large</code> app servers, RDS PostgreSQL, ElastiCache Valkey, SQS and a Fargate ingestion worker with one task kept warm (<code>WorkerMinCount</code>).</figcaption>
+  </figure>
+<div class="cos" style="margin-top: var(--s-5)">
+  <div class="co"><h3>Configuration</h3><p><code>config.yaml</code> holds what experiments change: <code>llm</code> (primary and fallback models, prices, retries, embeddings), <code>search</code>, <code>cache</code> (threshold 0.90, TTL), <code>auth</code>, <code>uploads</code>, <code>limits_v2</code> (10/min and 100/day per user, 500/day global, $10/day spend) and <code>tracing_v2</code>. <code>.env</code> holds keys and URLs; never commit it.</p></div>
+  <div class="co"><h3>Authentication and roles</h3><p>Signup creates a <code>staff</code> account; admins promote or deactivate users. Access tokens are 15-minute JWTs; the refresh token is a rotating HttpOnly cookie, revoked on logout and on any role change (<code>app/auth.py</code>, <code>config.yaml</code> <code>auth</code>). Set <code>APP_INSECURE_COOKIES=1</code> on plain http.</p></div>
+  <div class="co"><h3>Tracing</h3><p>With <code>LANGSMITH_TRACING=true</code> each answer is one LangSmith run (project <code>pharmassist</code>) with question, answer, citations, provider, model, fallback, cached flag, latency, cost and tokens, and child runs per model call, tool call and retrieval. <code>LANGSMITH_CONTENT_MODE=metadata</code> keeps content out.</p></div>
+</div>
+<div class="two" style="margin-top: var(--s-6)">
+  <figure>
+    <ve-bars unit="" max="250" label="Monthly infrastructure cost in US dollars: about 197 always on, plus about 144 for the warm ingestion worker"><ve-bar value="197" hot>always on</ve-bar><ve-bar value="144">warm wkr</ve-bar></ve-bars>
+    <figcaption><span class="fig-n">Fig. 5</span>Cost: ≈ $197/month always on plus ≈ $144/month for the warm worker (<code>deploy/aws/v2/README.md</code> “Cost”), plus model spend bounded by the $10/day cap.</figcaption>
+  </figure>
+  <div>
+<h3>Console views (account access required)</h3>
+<ul class="links">
+  <li><a href="https://us-east-1.console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks?filteringText=pharmassist">CloudFormation stack</a></li>
+  <li><a href="https://us-east-1.console.aws.amazon.com/cloudwatch/home?region=us-east-1#logsV2:log-groups/log-group/$252Fec2$252Fpharmassist-api">API logs</a></li>
+  <li><a href="https://us-east-1.console.aws.amazon.com/cloudwatch/home?region=us-east-1#logsV2:log-groups/log-group/$252Fecs$252Fpharmassist-v2-ingest">worker logs</a></li>
+  <li><a href="https://us-east-1.console.aws.amazon.com/ecs/v2/clusters/pharmassist-v2/services?region=us-east-1">ECS cluster</a></li>
+  <li><a href="https://us-east-1.console.aws.amazon.com/rds/home?region=us-east-1#database:id=pharmassist-v2;is-cluster=false">RDS</a></li>
+  <li><a href="https://us-east-1.console.aws.amazon.com/sqs/v3/home?region=us-east-1#/queues">SQS</a></li>
+  <li><a href="https://us-east-1.console.aws.amazon.com/wafv2/homev2/web-acls?region=us-east-1">WAF</a></li>
+  <li><a href="https://smith.langchain.com">LangSmith</a></li>
+</ul>
+  </div>
+</div>
+<p class="note">Bootstrap, certificate, DNS, deploy and teardown: <a href="../../deploy/aws/v2/README.md">deploy/aws/v2/README.md</a>.</p>
+</section>
+
+<!-- ======================= 5. FROM SOURCE ======================= -->
+<section id="source">
+<div class="sec-head"><p class="ve-label caps">From source</p><h2>Nine steps from a checkout: services, install, seed, build, run, test, evaluate</h2></div>
+<div class="tbl"><table>
+  <thead><tr><th>Step</th><th>Command (from the repository root, Python 3.12 in the repo's <code>.venv</code>)</th></tr></thead>
+  <tbody>
+    <tr><td>Services</td><td><code>docker compose up -d postgres valkey elasticmq s3 createbuckets</code></td></tr>
+    <tr><td>Install</td><td><code>uv pip install --python .venv/bin/python -e ".[all]"</code> (one dependency list in <code>pyproject.toml</code>; on a machine without a GPU install <code>torch==2.14.1</code> from the CPU index first)</td></tr>
+    <tr><td>Env</td><td><code>cp .env.example .env</code>; set <code>OPENAI_API_KEY</code>, <code>ANTHROPIC_API_KEY</code>, <code>JWT_SECRET</code></td></tr>
+    <tr><td>Schema + data</td><td><code>PYTHONPATH=src .venv/bin/python scripts/seed_local.py</code> (≈ 30 s, no API spend)</td></tr>
+    <tr><td>Frontend</td><td><code>cd frontend &amp;&amp; npm ci &amp;&amp; npm run build</code> (the API serves <code>frontend/dist</code>)</td></tr>
+    <tr><td>API</td><td><code>.venv/bin/uvicorn app.main:app --port 8000</code> (<code>/health/ready</code> checks Postgres, cache, storage)</td></tr>
+    <tr><td>Worker</td><td><code>.venv/bin/python scripts/ingest_worker.py</code> (<code>--once</code> drains the queue and exits)</td></tr>
+    <tr><td>Tests</td><td><code>.venv/bin/python -m pytest -q</code> (657 collected, 57 of them integration; <code>cd frontend &amp;&amp; npm test</code> for the 28 frontend tests)</td></tr>
+    <tr><td>Evaluation</td><td><code>.venv/bin/python scripts/run_eval.py --label my_change --deepeval</code> (paid; method and all runs in <a href="evaluation.html#data">EVALUATION.md §6</a>)</td></tr>
+  </tbody>
+</table></div>
+<p class="note">Design: <a href="design.html">design.html</a>; measured results: <a href="evaluation.html">evaluation.html</a>; eight answers verbatim: <a href="examples.html">examples.html</a>.</p>
+</section>
+
+<section class="sources" aria-label="Sources"><p class="ve-label caps">Sources</p>
+<p><a href="../SOLUTION.md">SOLUTION.md</a> · <code>deploy/prebuilt.override.yml</code>, <code>deploy/docker-compose.yml</code>, <code>compose.yaml</code> · <code>scripts/seed_local.py</code> · <code>evidence/live_check_2026-10-18.log</code>, <code>evidence/screenshots/ask-answer.png</code>, <code>ask-no-answer.png</code>, <code>citation-source.png</code> · <code>reports/evals/v2_2026-10-18_0903/summary.md</code> · <code>config.yaml</code> · <code>app/auth.py</code>, <code>app/admin.py</code>, <code>app/answer_service.py</code> · <code>src/pharmassist/agent/</code>, <code>cache/valkey.py</code>, <code>ingest/</code> · <code>deploy/aws/v2/template.yaml</code>, <code>deploy/aws/v2/README.md</code></p>
+</section>
+</main>
+<script>
+(() => {
+  const links = [...document.querySelectorAll('.toc a')];
+  const byId = new Map(links.map(a => [a.getAttribute('href').slice(1), a]));
+  const io = new IntersectionObserver(es => {
+    es.forEach(e => { if (e.isIntersecting) { links.forEach(a => a.classList.remove('on')); byId.get(e.target.id)?.classList.add('on');
+      try { history.replaceState(null, '', '#' + e.target.id); } catch (_) {} } });
+  }, { rootMargin: '-10% 0px -80% 0px' });
+  document.querySelectorAll('main > section[id]').forEach(s => io.observe(s));
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en" data-register="instrument">
+<head>
+<title>PharmAssist evaluation: 14 runs on one frozen set, from 0.70 to production</title>
+<link rel="stylesheet" href="kit.css" data-ve-kit>
+<style>
+  .crumbs { display: flex; flex-wrap: wrap; gap: var(--s-4); font-size: var(--t-small); color: var(--text-dim); margin-bottom: var(--s-5); }
+  .crumbs a { color: var(--text-dim); }
+  .toc { position: sticky; top: 0; z-index: 3; background: var(--bg); border-bottom: 1px solid var(--border);
+         padding: var(--s-2) 0; margin-bottom: var(--s-6); }
+  .toc ol { display: flex; gap: var(--s-4); list-style: none; margin: 0; padding: 0; overflow-x: auto;
+            scrollbar-width: none; mask-image: linear-gradient(90deg, #000 92%, transparent); }
+  .toc a { white-space: nowrap; font-size: var(--t-small); color: var(--text-dim); text-decoration: none; }
+  .toc a.on { color: var(--accent); }
+  section { scroll-margin-top: 56px; }
+  .note { font-size: var(--t-small); color: var(--text-dim); max-width: 65ch; }
+  .tbl { overflow-x: auto; border: 1px solid var(--border); border-radius: var(--r-2); }
+  .tbl table { width: 100%; border-collapse: collapse; font-size: var(--t-small); }
+  .tbl th { text-align: left; font-weight: 500; color: var(--text-dim); background: var(--surface); padding: var(--s-3) var(--s-4); }
+  .tbl td { padding: var(--s-3) var(--s-4); border-top: 1px solid var(--border); vertical-align: top; }
+  .tbl td.n, .tbl th.n { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .tbl tr.hot td { font-weight: 600; }
+  .tbl code, .sources p, .sources code, .note code, .co code { overflow-wrap: anywhere; }
+  .two { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--s-6); align-items: start; }
+  .two > * { min-width: 0; }
+  .ve-svg { min-width: 925px; }
+  pre.cmd { font-family: var(--mono); font-size: var(--t-small); background: var(--surface); border-radius: var(--r-2);
+            padding: var(--s-4); overflow-x: auto; margin: 0; line-height: 1.5; }
+  pre.cmd .c { color: var(--text-dim); }
+  .co { background: var(--surface); border-radius: var(--r-2); padding: var(--s-4); font-size: var(--t-small); }
+  .co h3 { margin: 0 0 var(--s-2); font-size: var(--t-body); display: flex; gap: var(--s-3); align-items: center; flex-wrap: wrap; }
+  .co p { margin: 0 0 var(--s-2); } .co p:last-child { margin: 0; }
+  .cos { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--s-4); }
+  details { font-size: var(--t-small); } summary { cursor: pointer; color: var(--text-dim); margin-bottom: var(--s-3); }
+  ul.data { font-size: var(--t-small); padding-left: 1.2rem; } ul.data li { margin-bottom: var(--s-2); }
+  /* history chart */
+  .hist .ax { stroke: var(--border); } .hist .grid { stroke: var(--border); stroke-dasharray: 2 4; }
+  .hist .tick { font-size: 13px; fill: var(--text-dim); font-variant-numeric: tabular-nums; }
+  .hist .ttl { font-size: 14px; font-weight: 600; fill: var(--text); }
+  .hist .ln { fill: none; stroke: var(--border-bright); stroke-width: 1.75; }
+  .hist .ln.g { stroke-dasharray: 4 3; }
+  .hist .pt { fill: var(--text); stroke: var(--bg); stroke-width: 1.5; }
+  .hist .pt.exp { fill: var(--bg); stroke: var(--text-dim); stroke-width: 1.75; }
+  .hist .sq { fill: var(--text-dim); } .hist .sq.exp { fill: var(--bg); stroke: var(--text-dim); stroke-width: 1.75; }
+  .hist .hot .pt, .hist .hot .sq { fill: var(--accent); stroke: var(--accent); }
+  .hist .v { font-size: 13px; fill: var(--text); text-anchor: middle; font-variant-numeric: tabular-nums; paint-order: stroke; stroke: var(--bg); stroke-width: 4px; stroke-linejoin: round; }
+  .hist .hot .v { font-weight: 600; }
+  .hist .lab { font-size: 13px; fill: var(--text-dim); text-anchor: middle; }
+  .hist .hot .lab { fill: var(--accent); font-weight: 600; }
+  .hist .band { fill: var(--surface); }
+  .hist .ann { font-size: 13px; fill: var(--text-dim); }
+  /* paired bars */
+  .pair .lab { font-size: 13px; fill: var(--text); } .pair .ttl { font-size: 14px; font-weight: 600; fill: var(--text); }
+  .pair .h { fill: var(--accent); } .pair .d { fill: var(--border-bright); }
+  .pair .v { font-size: 13px; fill: var(--text-dim); font-variant-numeric: tabular-nums; }
+  .pair .key { font-size: 13px; fill: var(--text-dim); }
+  .pair .rule { stroke: var(--border); }
+</style>
+</head>
+<body><main>
+<header>
+  <p class="crumbs"><a href="index.html">← Overview</a> · <a href="../EVALUATION.md">Rendered from EVALUATION.md</a> · <a href="examples.html">Examples</a> · <a href="design.html">Design</a></p>
+  <p class="eyebrow">PharmAssist · evaluation</p>
+  <h1><span class="num">14 runs</span> on one frozen set, same judge, baseline to production</h1>
+  <p class="lead">20 pharmacist questions and 8 figure questions, measured after every change from 2026-10-14 to 2026-10-18. <b>Production: accuracy 0.85 with 0 incorrect, groundedness 0.937, p95 21.4 s against the 30 s rule, $0.110 per question.</b> A second, independent scorer (DeepEval) ranks the versions the same way. Every number is copied from a run folder under <code>reports/</code>; nothing is estimated.</p>
+  <p class="meta">judge Claude Opus 5.5, 3 passes · golden <code>2664dd7d24fb</code> · visual <code>0823626fe0c3</code> · production run <code>v2_2026-10-18_0903</code></p>
+</header>
+
+<nav class="toc" aria-label="Sections"><ol>
+  <li><a href="#history">Every run</a></li><li><a href="#sets">Question sets</a></li><li><a href="#method">Method</a></li><li><a href="#unsupported">Unsupported claims</a></li>
+  <li><a href="#judges">Two judges</a></li><li><a href="#visual">Visual set</a></li><li><a href="#retrieval">Retrieval alone</a></li><li><a href="#reading">Reading the results</a></li><li><a href="#data">Data and re-runs</a></li>
+</ol></nav>
+
+<!-- ======================= 1. HISTORY ======================= -->
+<section id="history">
+<div class="kpis">
+  <div class="kpi"><span class="ve-label">Accuracy, production</span><span class="val"><span data-count="0.85">0.85</span></span><span class="ve-label">14 / 6 / 0 · v1 best 0.925 on a laptop</span></div>
+  <div class="kpi"><span class="ve-label">Groundedness</span><span class="val"><span data-count="0.937">0.937</span></span><span class="ve-label">highest on the shipped path</span></div>
+  <div class="kpi"><span class="ve-label">Latency p50 / p95</span><span class="val"><span data-count="10.8">10.8</span><span class="unit">/ 21.4 s</span></span><span class="ve-label">0 questions over 30 s</span></div>
+  <div class="kpi"><span class="ve-label">Agent cost</span><span class="val"><span class="unit">$</span><span data-count="0.110">0.110</span></span><span class="ve-label">per question · judge $2.61 per run</span></div>
+</div>
+<figure>
+  <div class="frame"><svg class="ve-svg hist" viewBox="0 0 1000 440" role="img" aria-label="Accuracy and groundedness for 14 evaluation runs in date order. Accuracy on the shipped path rises from 0.70 at the baseline through 0.75, 0.775, 0.80, 0.85 and 0.875 to 0.925 for the v1 best run on a laptop, then 0.85 hosted and 0.85 for v2 production. Rejected experiments: the live safety gate at 0.30, reranker-large at 0.821 on 14 answered, reranker-base at 0.70, the completeness pass at 0.85 and the checklist at 0.825. Groundedness ranges from 0.859 to 0.957; v2 production scores 0.937, the completeness pass 0.942 and the checklist 0.957.">
+    <rect class="band" x="640" y="14" width="56" height="400"/>
+    <!-- accuracy panel -->
+    <text class="ttl" x="40" y="30">Accuracy, golden set (judge score)</text>
+    <path class="grid" d="M90 40H940"/><text class="tick" x="84" y="44" text-anchor="end">1.00</text>
+    <path class="grid" d="M90 111.4H940"/><text class="tick" x="84" y="115" text-anchor="end">0.75</text>
+    <path class="grid" d="M90 182.9H940"/><text class="tick" x="84" y="187" text-anchor="end">0.50</text>
+    <path class="ax" d="M90 240H940"/><text class="tick" x="84" y="244" text-anchor="end">0.30</text>
+    <polyline class="ln" points="110,125.7 172,111.4 234,104.3 296,97.1 358,82.9 420,75.7 544,61.4 606,82.9 668,82.9"/>
+    <g><circle class="pt" cx="110" cy="125.7" r="5"/><text class="v" x="110" y="146">0.70</text></g>
+    <g><circle class="pt" cx="172" cy="111.4" r="5"/><text class="v" x="172" y="132">0.75</text></g>
+    <g><circle class="pt" cx="234" cy="104.3" r="5"/><text class="v" x="234" y="125">0.775</text></g>
+    <g><circle class="pt" cx="296" cy="97.1" r="5"/><text class="v" x="296" y="118">0.80</text></g>
+    <g><circle class="pt" cx="358" cy="82.9" r="5"/><text class="v" x="358" y="103">0.85</text></g>
+    <g><circle class="pt" cx="420" cy="75.7" r="5"/><text class="v" x="420" y="68">0.875</text></g>
+    <g><circle class="pt exp" cx="482" cy="240" r="5"/><text class="v" x="482" y="232">0.30</text></g>
+    <g><circle class="pt" cx="544" cy="61.4" r="5"/><text class="v" x="544" y="54">0.925</text></g>
+    <g><circle class="pt" cx="606" cy="82.9" r="5"/><text class="v" x="606" y="103">0.85</text></g>
+    <g class="hot"><circle class="pt" cx="668" cy="82.9" r="6"/><text class="v" x="668" y="104">0.85</text></g>
+    <g><circle class="pt exp" cx="730" cy="91.1" r="5"/><text class="v" x="730" y="112">0.821</text></g>
+    <g><circle class="pt exp" cx="792" cy="125.7" r="5"/><text class="v" x="792" y="146">0.70</text></g>
+    <g><circle class="pt exp" cx="854" cy="82.9" r="5"/><text class="v" x="854" y="103">0.85</text></g>
+    <g><circle class="pt exp" cx="916" cy="90" r="5"/><text class="v" x="916" y="111">0.825</text></g>
+    <text class="ann" x="482" y="260" text-anchor="middle">rejected</text>
+    <text class="ann" x="730" y="128" text-anchor="middle">14 answered</text>
+    <!-- groundedness panel -->
+    <text class="ttl" x="40" y="284">Groundedness (supported claims / claims)</text>
+    <path class="grid" d="M90 298.3H940"/><text class="tick" x="84" y="302" text-anchor="end">0.95</text>
+    <path class="grid" d="M90 340H940"/><text class="tick" x="84" y="344" text-anchor="end">0.90</text>
+    <path class="ax" d="M90 381.7H940"/><text class="tick" x="84" y="385" text-anchor="end">0.85</text>
+    <polyline class="ln g" points="110,331.7 172,360 234,355 296,349.2 358,374.2 420,349.2 544,350.8 606,358.3 668,309.2"/>
+    <g><rect class="sq" x="105" y="326.7" width="10" height="10"/><text class="v" x="110" y="324">0.910</text></g>
+    <g><rect class="sq" x="167" y="355" width="10" height="10"/><text class="v" x="172" y="380">0.876</text></g>
+    <g><rect class="sq" x="229" y="350" width="10" height="10"/><text class="v" x="234" y="347">0.882</text></g>
+    <g><rect class="sq" x="291" y="344.2" width="10" height="10"/><text class="v" x="296" y="341">0.889</text></g>
+    <g><rect class="sq" x="353" y="369.2" width="10" height="10"/><text class="v" x="358" y="395">0.859</text></g>
+    <g><rect class="sq" x="415" y="344.2" width="10" height="10"/><text class="v" x="420" y="341">0.889</text></g>
+    <g><rect class="sq exp" x="477" y="355" width="10" height="10"/><text class="v" x="482" y="380">0.876</text></g>
+    <g><rect class="sq" x="539" y="345.8" width="10" height="10"/><text class="v" x="544" y="342">0.887</text></g>
+    <g><rect class="sq" x="601" y="353.3" width="10" height="10"/><text class="v" x="606" y="378">0.878</text></g>
+    <g class="hot"><rect class="sq" x="662" y="303.2" width="12" height="12"/><text class="v" x="668" y="300">0.937</text></g>
+    <g><rect class="sq exp" x="725" y="370.8" width="10" height="10"/><text class="v" x="730" y="396">0.857</text></g>
+    <g><rect class="sq exp" x="787" y="362.5" width="10" height="10"/><text class="v" x="792" y="388">0.867</text></g>
+    <g><rect class="sq exp" x="849" y="300" width="10" height="10"/><text class="v" x="854" y="297">0.942</text></g>
+    <g><rect class="sq exp" x="911" y="287.5" width="10" height="10"/><text class="v" x="916" y="284">0.957</text></g>
+    <!-- column labels -->
+    <g class="lab"><text class="lab" x="110" y="412">Oct 14</text><text class="lab" x="110" y="428">baseline</text></g>
+    <g><text class="lab" x="172" y="412">Oct 16</text><text class="lab" x="172" y="428">+lookups</text></g>
+    <g><text class="lab" x="234" y="412">Oct 16</text><text class="lab" x="234" y="428">+OA emb</text></g>
+    <g><text class="lab" x="296" y="412">Oct 16</text><text class="lab" x="296" y="428">+sections</text></g>
+    <g><text class="lab" x="358" y="412">Oct 16</text><text class="lab" x="358" y="428">+schema</text></g>
+    <g><text class="lab" x="420" y="412">Oct 17</text><text class="lab" x="420" y="428">+fused q</text></g>
+    <g><text class="lab" x="482" y="412">Oct 17</text><text class="lab" x="482" y="428">gate</text></g>
+    <g><text class="lab" x="544" y="412">Oct 17</text><text class="lab" x="544" y="428">v1 best</text></g>
+    <g><text class="lab" x="606" y="412">Oct 18</text><text class="lab" x="606" y="428">v1 host</text></g>
+    <g class="hot"><text class="lab" x="668" y="412">Oct 18</text><text class="lab" x="668" y="428">v2 prod</text></g>
+    <g><text class="lab" x="730" y="412">Oct 18</text><text class="lab" x="730" y="428">+rrk L</text></g>
+    <g><text class="lab" x="792" y="412">Oct 18</text><text class="lab" x="792" y="428">+rrk B</text></g>
+    <g><text class="lab" x="854" y="412">Oct 18</text><text class="lab" x="854" y="428">+compl.</text></g>
+    <g><text class="lab" x="916" y="412">Oct 18</text><text class="lab" x="916" y="428">+chklist</text></g>
+  </svg></div>
+  <figcaption><span class="fig-n">Fig. 1</span>Accuracy climbs from 0.70 to 0.925 on the laptop, settles at 0.85 under hosting, and v2 production carries the best groundedness of the shipped path, 0.937; hollow marks are experiments that did not ship.</figcaption>
+</figure>
+<p class="note">Judge Claude Opus 5.5, three passes unless marked; same harness throughout. The baseline row is the re-judged run (the same answers re-scored under the current judge prompts). Safe was not printed before 2026-10-17 (n/r). One grade step on one question moves the score by 0.025 (§4.6).</p>
+<div class="tbl"><table>
+  <thead><tr><th>Date</th><th>Setup (run folder)</th><th>Accuracy (correct / partial / incorrect)</th><th class="n">Groundedness</th><th class="n">Unsupported</th><th class="n">Safe</th><th class="n">p50 / p95</th><th class="n">Agent $/q</th></tr></thead>
+  <tbody>
+    <tr><td>Oct 14, re-judged Oct 16</td><td>Baseline: Sonnet, fixed 350-token chunks, bge-small embeddings (<code>baseline_2026-10-14_1800_rejudged_2026-10-16_0133</code>)</td><td>0.70 (8 / 12 / 0)</td><td class="n">0.910</td><td class="n">2.0%</td><td class="n">n/r</td><td class="n">7.2 s / 11.0 s</td><td class="n">$0.033</td></tr>
+    <tr><td>Oct 16</td><td>+ structured drug lookups (<code>structured_2026-10-16_0040_rejudged_2026-10-16_1224</code>)</td><td>0.75 (11 / 8 / 1)</td><td class="n">0.876</td><td class="n">—</td><td class="n">n/r</td><td class="n">7.5 s / 13.8 s</td><td class="n">$0.031</td></tr>
+    <tr><td>Oct 16</td><td>+ OpenAI <code>text-embedding-3-large</code>, fixed chunks (<code>fixed_openai_structured_2026-10-16_0132</code>)</td><td>0.775 (12 / 7 / 1)</td><td class="n">0.882</td><td class="n">—</td><td class="n">n/r</td><td class="n">7.6 s / 10.2 s</td><td class="n">$0.033</td></tr>
+    <tr><td>Oct 16</td><td>+ parent/child sections, hybrid search, <code>bge-reranker-base</code> (<code>sections_rerank_structured_2026-10-16_1241</code>)</td><td>0.80 (13 / 6 / 1)</td><td class="n">0.889</td><td class="n">—</td><td class="n">n/r</td><td class="n">10.0 s / 20.0 s</td><td class="n">$0.052</td></tr>
+    <tr><td>Oct 16</td><td>+ search-query schema fix (<code>sections_rerank_structured_local_post-query-schema-fix_2026-10-16_2054</code>)</td><td>0.85 (14 / 6 / 0)</td><td class="n">0.859</td><td class="n">—</td><td class="n">n/r</td><td class="n">9.2 s / 13.9 s</td><td class="n">$0.050</td></tr>
+    <tr><td>Oct 17</td><td>+ original question searched beside the agent's query, fused (<code>evalB_ungated_d804f38_answers_2026-10-17_1525_rejudged_2026-10-17_1530</code>; 1 judge pass)</td><td>0.875 (15 / 5 / 0)</td><td class="n">0.889</td><td class="n">—</td><td class="n">18/20</td><td class="n">11.7 s / 20.1 s</td><td class="n">$0.069</td></tr>
+    <tr><td>Oct 17</td><td>Live safety gate experiment, rejected (<code>sections_rerank_structured_2026-10-17_1516</code>; 1 judge pass)</td><td>0.30 (4 / 4 / 12)</td><td class="n">0.876</td><td class="n">—</td><td class="n">20/20</td><td class="n">12.6 s / 20.1 s</td><td class="n">$0.081</td></tr>
+    <tr><td>Oct 17</td><td><b>v1 best</b>: Docling sections + figure records + reranker, local (<code>docling_rerank_structured_orig_2026-10-17_2342</code>)</td><td><b>0.925</b> (17 / 3 / 0)</td><td class="n">0.887</td><td class="n">2.5%</td><td class="n">16/20</td><td class="n">10.6 s / 22.2 s</td><td class="n">$0.064</td></tr>
+    <tr><td>Oct 18</td><td>v1 hosted on Lambda, no reranker (<code>docling_norerank_structured_orig-hosted_2026-10-18_0152</code>)</td><td>0.85 (15 / 4 / 1)</td><td class="n">0.878</td><td class="n">4.3%</td><td class="n">15/20</td><td class="n">7.2 s / 12.0 s</td><td class="n">$0.067</td></tr>
+    <tr class="hot"><td>Oct 18</td><td>v2 production: <code>gpt-5.5</code>, Postgres hybrid search, semantic cache, no reranker (<code>v2_2026-10-18_0903</code>)</td><td>0.85 (14 / 6 / 0)</td><td class="n">0.937</td><td class="n">2.5%</td><td class="n">17/20</td><td class="n">10.8 s / 21.4 s</td><td class="n">$0.110</td></tr>
+    <tr><td>Oct 18</td><td>v2 + <code>bge-reranker-large</code>, depth 50 (<code>v2_rerank_large_2026-10-18_1132</code>)</td><td>6 of 20 errored (5 over 30 s); 0.821 (9 / 5 / 0) on the 14 answered</td><td class="n">0.857</td><td class="n">—</td><td class="n">13/14</td><td class="n">26.5 s / 55.1 s</td><td class="n">$0.056 (14 answered)</td></tr>
+    <tr><td>Oct 18</td><td>v2 + <code>bge-reranker-base</code>, depth 20 (<code>v2_rerank_base_2026-10-18_1225</code>)</td><td>0.70 (8 / 12 / 0)</td><td class="n">0.867</td><td class="n">—</td><td class="n">14/20</td><td class="n">13.9 s / 23.5 s</td><td class="n">$0.100</td></tr>
+    <tr><td>Oct 18</td><td>v2 + minimum-lookups nudge + completeness pass (<code>v2_complete_2026-10-18_1819</code>; flags, off in production)</td><td>0.85 (14 / 6 / 0)</td><td class="n">0.942</td><td class="n">1.2%</td><td class="n">18/20</td><td class="n">19.2 s / 30.6 s (1 over 30 s)</td><td class="n">$0.173</td></tr>
+    <tr><td>Oct 18</td><td>v2 + pre-submit checklist + one search per sub-question (<code>v2_checklist_2026-10-18_1926</code>; prompt extras, off in production)</td><td>0.825 (13 / 7 / 0)</td><td class="n">0.957</td><td class="n">0.0%</td><td class="n">20/20</td><td class="n">12.7 s / 18.2 s</td><td class="n">$0.136</td></tr>
+  </tbody>
+</table></div>
+<p class="note">Production-run details (<code>v2_2026-10-18_0903/summary.md</code>, prompt hash <code>8c05de6fe23a</code>): judge passes unanimous on 18/20 grades; must_include 52/54 by the judge, 21/54 by literal substring; retrieval recall 0.931 (53 of 59 gold sources returned by some tool); citation precision / recall 0.743 / 0.793; 0 citations failing the in-code check; 0 answers without citations; useful 19/19; over-abstention 0; Q20 abstained correctly; 0 questions over 30 s; 19/20 within 60–120 words; failure classes: ingested but not retrieved 3, retrieved but answered wrong 3, answered right but cited wrong 5; cost agent $2.20, judge $2.61.</p>
+</section>
+
+<!-- ======================= 2. QUESTION SETS ======================= -->
+<section id="sets">
+<div class="sec-head"><p class="ve-label caps">1 · Sets</p><h2>Two frozen sets: 20 pharmacist questions and 8 that only a figure can answer</h2></div>
+<div class="tbl"><table>
+  <thead><tr><th>Set</th><th>File</th><th class="n">Questions</th><th>sha256 (first 12)</th><th>Frozen since</th><th>Covers</th></tr></thead>
+  <tbody>
+    <tr><td>Golden</td><td><code>evals/golden.jsonl</code></td><td class="n">20</td><td><code>2664dd7d24fb</code></td><td>2026-10-14 (unchanged since added)</td><td>conflicts across versions, multi-document, synthesis, structured rows, reject codes, the prior-auth process, effective dates, no program stated, silence versus absence, plus one unanswerable question (Q20)</td></tr>
+    <tr><td>Visual</td><td><code>evals/visual.jsonl</code></td><td class="n">8</td><td><code>0823626fe0c3</code></td><td>2026-10-18</td><td>V01–V08: flowcharts, charts and tables printed as images in the VA/DoD guidelines</td></tr>
+  </tbody>
+</table></div>
+<p class="note">Each golden record has the question, a pharmacist-style <code>expected_answer</code>, <code>must_include</code> terms and <code>gold</code> pages or rows. Every run writes the set's hash into <code>meta.json</code>. Eight answers with the weak ones explained: <a href="examples.html">examples.html</a>.</p>
+</section>
+
+<!-- ======================= 3. METHOD ======================= -->
+<section id="method">
+<div class="sec-head"><p class="ve-label caps">2 · Method</p><h2>Each question is asked once through the production <code>ask()</code>, then judged three times</h2></div>
+<figure>
+  <div class="frame"><svg class="ve-svg" viewBox="0 0 1000 330" role="img" aria-label="An evaluation run: warm the store, drug tables and search, timed separately; ask each of the 20 questions once through the same ask() the API serves; write the full trace; judge with Claude Opus 5.5 in three passes, majority grade and median groundedness; write results.csv, summary.md and meta.json. DeepEval with claude-sonnet-5-5 scores the same answers independently in one pass. Re-judging re-scores saved answers; offline checks never run while answering.">
+    <!-- edges -->
+    <path class="ve-e" d="M190 100H250"/><text class="ve-el" x="220" y="90">then</text>
+    <path class="ve-e is-hot" d="M440 100H500"/><text class="ve-el" x="470" y="90">trace</text>
+    <path class="ve-e is-hot" d="M720 100H780"/><text class="ve-el" x="750" y="90">writes</text>
+    <path class="ve-e is-async" d="M900 140V230H820"/><text class="ve-el r" x="908" y="190">answers</text>
+    <path class="ve-e is-async" d="M820 125H750V170H610V150"/><text class="ve-el" x="680" y="161">--rejudge</text>
+    <!-- nodes -->
+    <g class="ve-n"><rect class="sh" x="40" y="65" width="150" height="70" rx="6"/><text x="115" y="89">Warm</text><text class="sub" x="115" y="107">store, tables,</text><text class="sub" x="115" y="123">search · timed</text></g>
+    <g class="ve-n is-key"><rect class="sh" x="250" y="65" width="190" height="70" rx="6"/><text x="345" y="89">ask() · once each</text><text class="sub" x="345" y="107">the API's own path</text><text class="sub" x="345" y="123">≤ 6 lookups · 25 s</text></g>
+    <g class="ve-n"><rect class="sh" x="500" y="60" width="220" height="90" rx="6"/><text x="610" y="84">Opus judge · 3 passes</text><text class="sub" x="610" y="102">grade: majority vote</text><text class="sub" x="610" y="118">groundedness: median</text><text class="sub" x="610" y="134">cited pages, rows only</text></g>
+    <g class="ve-n"><rect class="sh" x="780" y="60" width="200" height="80" rx="6"/><text x="880" y="84">reports/evals/&lt;run&gt;/</text><text class="sub" x="880" y="102">results.csv · summary.md</text><text class="sub" x="880" y="118">meta.json · hashes</text></g>
+    <g class="ve-n"><rect class="sh" x="640" y="200" width="180" height="70" rx="6"/><text x="730" y="224">DeepEval</text><text class="sub" x="730" y="242">claude-sonnet-5-5</text><text class="sub" x="730" y="258">one pass · ≈ $0.09/q</text></g>
+    <g class="ve-n"><rect class="sh" x="250" y="200" width="190" height="70" rx="6" stroke-dasharray="5 4"/><text x="345" y="224">Offline checks</text><text class="sub" x="345" y="242">--checks, --audit</text><text class="sub" x="345" y="258">not while answering</text></g>
+    <text x="40" y="300" style="font-size:13px; fill: var(--text-dim)">traces/&lt;timestamp&gt;-&lt;slug&gt;.json: model turns, tool calls and results, citations, timings, tokens</text>
+    <text x="40" y="318" style="font-size:13px; fill: var(--text-dim)">declining an answerable question is incorrect; declining Q20 is correct · no outside knowledge for the judge</text>
+  </svg></div>
+  <figcaption><span class="fig-n">Fig. 2</span>The agent is judged on the same path staff use; the Opus judge sees the reference and the cited text only, and no checker runs while an answer is produced.</figcaption>
+</figure>
+<details><summary>All 18 metric definitions (§2.3)</summary>
+<div class="tbl"><table>
+  <thead><tr><th>Metric</th><th>Definition</th><th>Method</th></tr></thead>
+  <tbody>
+    <tr><td><b>Accuracy grade</b></td><td>correct / partial / incorrect; score = correct 1, partial 0.5</td><td>Opus judge against the reference and notes only</td></tr>
+    <tr><td>must_include</td><td>share of key terms conveyed</td><td>Judge (paraphrase counts) and a literal substring check, side by side</td></tr>
+    <tr><td><b>Groundedness</b></td><td>supported claims / claims, per answer</td><td>Groundedness judge, cited pages and rows only</td></tr>
+    <tr><td><b>Unsupported-claim rate</b></td><td>unsupported claims / evaluated claims</td><td>Same judge; claims the cited evidence does not back</td></tr>
+    <tr><td>Citation support rate</td><td>fully supported claims / evaluated claims</td><td>Same judge; partial support counts as not supported</td></tr>
+    <tr><td>Citation validity</td><td>cited references that exist / references</td><td>Deterministic, against the catalog and the formulary sheet</td></tr>
+    <tr><td>Citation coverage</td><td>answered cases with ≥ 1 citation / answered cases</td><td>Answer-level proxy</td></tr>
+    <tr><td>Citation precision / recall</td><td>cited gold / cited; cited gold / gold</td><td>Against the golden <code>gold</code>; precision is a lower bound</td></tr>
+    <tr><td>Retrieval recall</td><td>gold pages any tool returned / gold pages</td><td>From the trace</td></tr>
+    <tr><td>Recall@5 / @10</td><td>gold pages in a direct search's top k</td><td>No agent; isolates retrieval</td></tr>
+    <tr><td><b>Safe</b></td><td>no unsupported claim shown (or abstained)</td><td>From the groundedness judge</td></tr>
+    <tr><td><b>Useful</b></td><td>answerable question that got a non-abstaining answer</td><td>From status and grade</td></tr>
+    <tr><td>Over-abstention</td><td>abstained on an answerable question</td><td>Deterministic</td></tr>
+    <tr><td>Failure class</td><td>source not ingested / ingested but not retrieved / retrieved but answered wrong / answered right but cited wrong</td><td>Earliest stage that explains the miss; ambiguous cases set by hand in <code>evals/failure_overrides.yaml</code></td></tr>
+    <tr><td>Latency</td><td>end-to-end <code>ask()</code> seconds, p50 and p95</td><td>Per question</td></tr>
+    <tr><td>Cost</td><td>agent tokens × configured prices</td><td>From API usage; excludes judge and embeddings</td></tr>
+  </tbody>
+</table></div>
+</details>
+<p class="note">Accuracy alone hides <i>why</i> an answer failed: groundedness separates “wrong” from “unsupported”; retrieval recall and the failure classes say whether to fix ingestion, retrieval or generation; safe / useful / over-abstention exposed the trade-off of the live safety gate (§4.3). Limits: groundedness judges against the text of a cited page, so a claim drawn from a figure printed on it reads as unsupported (§4.5); accuracy grades against one reference. Both judge prompts are verbatim in <code>docs/PROMPTS.md</code> §2. DeepEval 4.3.1: <code>GEval</code> correctness with the harness's 1 / 0.5 / 0 rubric, <code>FaithfulnessMetric</code>, <code>HallucinationMetric</code>, <code>AnswerRelevancyMetric</code>; abstentions carry no context and are skipped.</p>
+</section>
+
+<!-- ======================= 4. UNSUPPORTED ======================= -->
+<section id="unsupported">
+<div class="sec-head"><p class="ve-label caps">3.1 · Unsupported claims</p><h2>v2 writes shorter answers with far fewer partially supported claims</h2></div>
+<div class="two">
+  <figure>
+    <ve-bars unit="%" max="5" label="Unsupported-claim rate by version: baseline 2.0, v1 best 2.5, v1 hosted 4.3, v2 production 2.5, v2 with the completeness pass 1.2 percent"><ve-bar value="2.0">baseline</ve-bar><ve-bar value="2.5">v1 best</ve-bar><ve-bar value="4.3">v1 hosted</ve-bar><ve-bar value="2.5" hot>v2 prod</ve-bar><ve-bar value="1.2">+complete</ve-bar></ve-bars>
+    <figcaption><span class="fig-n">Fig. 3</span>The unsupported-claim rate stays at 2.5% from v1 best to v2 production; v1 hosted was the worst at 4.3% with the run's one incorrect answer.</figcaption>
+  </figure>
+  <div class="tbl"><table>
+    <thead><tr><th>Version</th><th class="n">Claims</th><th class="n">Unsupported</th><th class="n">Rate</th><th class="n">Answers with ≥ 1</th><th class="n">Incorrect</th></tr></thead>
+    <tbody>
+      <tr><td>Baseline (Sonnet, fixed chunks)</td><td class="n">152</td><td class="n">3</td><td class="n">2.0%</td><td class="n">3 / 20</td><td class="n">0</td></tr>
+      <tr><td>v1 best (Docling + reranker, local)</td><td class="n">160</td><td class="n">4</td><td class="n">2.5%</td><td class="n">4 / 20</td><td class="n">0</td></tr>
+      <tr><td>v1 hosted (no reranker)</td><td class="n">161</td><td class="n">7</td><td class="n">4.3%</td><td class="n">5 / 20</td><td class="n">1</td></tr>
+      <tr class="hot"><td>v2 production</td><td class="n">118</td><td class="n">3</td><td class="n">2.5%</td><td class="n">3 / 20</td><td class="n">0</td></tr>
+      <tr><td>v2 + completeness pass (not shipped)</td><td class="n">163</td><td class="n">2</td><td class="n">1.2%</td><td class="n">2 / 20</td><td class="n">0</td></tr>
+    </tbody>
+  </table></div>
+</div>
+<p class="note">v2 makes 118 claims against 152–163 and has 4 partially supported claims against 13–16 in v1, which is where its 0.937 comes from. “Answers with ≥ 1 unsupported” is the staff-facing view.</p>
+</section>
+
+<!-- ======================= 5. TWO JUDGES ======================= -->
+<section id="judges">
+<div class="sec-head"><p class="ve-label caps">3.2 · Two judges</p><h2>DeepEval and the Opus harness rank the versions alike and disagree on the scale</h2></div>
+<figure>
+  <div class="frame"><svg class="ve-svg pair" viewBox="0 0 1000 360" role="img" aria-label="Paired bars for six golden runs. Accuracy, harness then DeepEval: baseline 0.700 and 0.570; v1 best 0.925 and 0.625; v1 hosted 0.850 and 0.528; v2 production 0.850 and 0.515; completeness pass 0.850 and 0.500; checklist 0.825 and 0.410. Groundedness, harness then DeepEval: 0.910 and 0.976; 0.887 and 1.000; 0.878 and 1.000; 0.937 and 1.000; 0.942 and 0.995; 0.957 and 1.000.">
+    <text class="ttl" x="40" y="28">Accuracy</text><rect class="h" x="120" y="18" width="12" height="12"/><text class="key" x="138" y="28">Opus harness</text><rect class="d" x="250" y="18" width="12" height="12"/><text class="key" x="268" y="28">DeepEval GEval</text>
+    <text class="ttl" x="540" y="28">Groundedness</text><rect class="h" x="660" y="18" width="12" height="12"/><text class="key" x="678" y="28">harness</text><rect class="d" x="750" y="18" width="12" height="12"/><text class="key" x="768" y="28">DeepEval faithfulness</text>
+    <!-- rows: y0 = 60 + i*48; bars 300 wide = 1.0 -->
+    <g><text class="lab" x="40" y="76">baseline</text><rect class="h" x="140" y="62" width="210" height="12"/><text class="v" x="356" y="72">0.700</text><rect class="d" x="140" y="78" width="171" height="12"/><text class="v" x="317" y="88">0.570</text>
+       <text class="lab" x="540" y="76">baseline</text><rect class="h" x="640" y="62" width="273" height="12"/><text class="v" x="919" y="72">0.910</text><rect class="d" x="640" y="78" width="292.8" height="12"/><text class="v" x="939" y="88">0.976</text></g>
+    <g><text class="lab" x="40" y="124">v1 best</text><rect class="h" x="140" y="110" width="277.5" height="12"/><text class="v" x="423" y="120">0.925</text><rect class="d" x="140" y="126" width="187.5" height="12"/><text class="v" x="333" y="136">0.625</text>
+       <text class="lab" x="540" y="124">v1 best</text><rect class="h" x="640" y="110" width="266.1" height="12"/><text class="v" x="912" y="120">0.887</text><rect class="d" x="640" y="126" width="300" height="12"/><text class="v" x="946" y="136">1.000</text></g>
+    <g><text class="lab" x="40" y="172">v1 hosted</text><rect class="h" x="140" y="158" width="255" height="12"/><text class="v" x="401" y="168">0.850</text><rect class="d" x="140" y="174" width="158.4" height="12"/><text class="v" x="304" y="184">0.528</text>
+       <text class="lab" x="540" y="172">v1 hosted</text><rect class="h" x="640" y="158" width="263.4" height="12"/><text class="v" x="909" y="168">0.878</text><rect class="d" x="640" y="174" width="300" height="12"/><text class="v" x="946" y="184">1.000</text></g>
+    <g><text class="lab" x="40" y="220" font-weight="600">v2 prod</text><rect class="h" x="140" y="206" width="255" height="12"/><text class="v" x="401" y="216">0.850</text><rect class="d" x="140" y="222" width="154.5" height="12"/><text class="v" x="300" y="232">0.515</text>
+       <text class="lab" x="540" y="220" font-weight="600">v2 prod</text><rect class="h" x="640" y="206" width="281.1" height="12"/><text class="v" x="927" y="216">0.937</text><rect class="d" x="640" y="222" width="300" height="12"/><text class="v" x="946" y="232">1.000</text></g>
+    <g><text class="lab" x="40" y="268">+complete</text><rect class="h" x="140" y="254" width="255" height="12"/><text class="v" x="401" y="264">0.850</text><rect class="d" x="140" y="270" width="150" height="12"/><text class="v" x="296" y="280">0.500</text>
+       <text class="lab" x="540" y="268">+complete</text><rect class="h" x="640" y="254" width="282.6" height="12"/><text class="v" x="928" y="264">0.942</text><rect class="d" x="640" y="270" width="298.5" height="12"/><text class="v" x="944" y="280">0.995</text></g>
+    <g><text class="lab" x="40" y="316">+checklist</text><rect class="h" x="140" y="302" width="247.5" height="12"/><text class="v" x="393" y="312">0.825</text><rect class="d" x="140" y="318" width="123" height="12"/><text class="v" x="269" y="328">0.410</text>
+       <text class="lab" x="540" y="316">+checklist</text><rect class="h" x="640" y="302" width="287.1" height="12"/><text class="v" x="933" y="312">0.957</text><rect class="d" x="640" y="318" width="300" height="12"/><text class="v" x="946" y="328">1.000</text></g>
+    <path class="rule" d="M140 56V336M640 56V336"/>
+    <text class="key" x="40" y="352">bars share one scale, 0 to 1 · DeepEval groundedness 0.98–1.00 everywhere because faithfulness penalises contradiction, not missing support</text>
+  </svg></div>
+  <figcaption><span class="fig-n">Fig. 4</span>Both scorers put the v1 best run first; GEval sits 0.2–0.3 below Opus because its rubric asks for every fact in the expected answer, so one missing secondary point costs half the score.</figcaption>
+</figure>
+<details><summary>All ten DeepEval runs, golden and visual (§3.2)</summary>
+<div class="tbl"><table>
+  <thead><tr><th>Run</th><th>Set</th><th class="n">n</th><th class="n">DE accuracy</th><th class="n">DE truthfulness</th><th class="n">DE groundedness</th><th class="n">DE relevancy</th><th class="n">Harness accuracy</th><th class="n">Harness groundedness</th><th class="n">Harness unsupported %</th><th class="n">Judge cost $</th></tr></thead>
+  <tbody>
+    <tr><td><code>baseline_2026-10-14_1800_rejudged_2026-10-16_0133</code></td><td>golden</td><td class="n">20</td><td class="n">0.570</td><td class="n">0.930</td><td class="n">0.976 (19)</td><td class="n">0.951</td><td class="n">0.700</td><td class="n">0.910</td><td class="n">2.0</td><td class="n">1.76</td></tr>
+    <tr><td><code>docling_rerank_structured_orig_2026-10-17_2342</code></td><td>golden</td><td class="n">20</td><td class="n">0.625</td><td class="n">0.963</td><td class="n">1.000 (19)</td><td class="n">0.958</td><td class="n">0.925</td><td class="n">0.887</td><td class="n">2.5</td><td class="n">1.85</td></tr>
+    <tr><td><code>docling_norerank_structured_orig-hosted_2026-10-18_0152</code></td><td>golden</td><td class="n">20</td><td class="n">0.528</td><td class="n">1.000</td><td class="n">1.000 (18)</td><td class="n">0.949</td><td class="n">0.850</td><td class="n">0.878</td><td class="n">4.3</td><td class="n">1.95</td></tr>
+    <tr class="hot"><td><code>v2_2026-10-18_0903</code></td><td>golden</td><td class="n">20</td><td class="n">0.515</td><td class="n">0.989</td><td class="n">1.000 (19)</td><td class="n">0.903</td><td class="n">0.850</td><td class="n">0.937</td><td class="n">2.5</td><td class="n">1.78</td></tr>
+    <tr><td><code>v2_complete_2026-10-18_1819</code></td><td>golden</td><td class="n">20</td><td class="n">0.500</td><td class="n">1.000</td><td class="n">0.995 (19)</td><td class="n">0.931</td><td class="n">0.850</td><td class="n">0.942</td><td class="n">1.2</td><td class="n">2.09</td></tr>
+    <tr><td><code>v2_checklist_2026-10-18_1926</code></td><td>golden</td><td class="n">20</td><td class="n">0.410</td><td class="n">0.974</td><td class="n">1.000 (19)</td><td class="n">0.916</td><td class="n">0.825</td><td class="n">0.957</td><td class="n">0.0</td><td class="n">1.73</td></tr>
+    <tr><td><code>docling_rerank_structured_visual_2026-10-17_2342</code></td><td>visual</td><td class="n">8</td><td class="n">0.988</td><td class="n">0.875</td><td class="n">0.984 (8)</td><td class="n">0.961</td><td class="n">1.000</td><td class="n">0.703</td><td class="n">8.5</td><td class="n">0.71</td></tr>
+    <tr><td><code>docling_norerank_structured_visual-hosted_2026-10-18_0152</code></td><td>visual</td><td class="n">8</td><td class="n">0.988</td><td class="n">0.938</td><td class="n">1.000 (8)</td><td class="n">0.948</td><td class="n">1.000</td><td class="n">0.667</td><td class="n">11.7</td><td class="n">0.72</td></tr>
+    <tr><td><code>v2_visual_2026-10-18_0916</code></td><td>visual</td><td class="n">8</td><td class="n">0.975</td><td class="n">1.000</td><td class="n">1.000 (8)</td><td class="n">0.982</td><td class="n">1.000</td><td class="n">0.614</td><td class="n">17.0</td><td class="n">0.56</td></tr>
+    <tr><td><code>v2_checklist_visual_2026-10-18_1939</code></td><td>visual</td><td class="n">8</td><td class="n">0.875</td><td class="n">1.000</td><td class="n">0.975 (8)</td><td class="n">0.972</td><td class="n">1.000</td><td class="n">0.619</td><td class="n">13.0</td><td class="n">0.60</td></tr>
+  </tbody>
+</table></div>
+</details>
+<p class="note">Total DeepEval judge spend $13.73. Not scored (the <code>--budget-usd</code> guard stopped first): <code>evalB_ungated_d804f38_answers_2026-10-17_1525_rejudged_2026-10-17_1530</code>, <code>v2_rerank_base_2026-10-18_1225</code>. DeepEval's truthfulness flags are real detail errors (baseline Q19 attributes a PDL marking to the wrong drug; V01 says “nephropathy” where the flowchart says “neuropathy”). Two judges that agree on the ranking and disagree on the scale is the useful outcome: the harness numbers are the strict ones.</p>
+</section>
+
+<!-- ======================= 6. VISUAL SET ======================= -->
+<section id="visual">
+<div class="sec-head"><p class="ve-label caps">3.3 · Visual set</p><h2>Every figure answer is correct; the low groundedness is a measurement effect</h2></div>
+<div class="two">
+  <figure>
+    <ve-bars unit="" max="1" label="Visual-set groundedness: v1 best 0.703, v1 hosted 0.667, v2 production 0.614, completeness pass 0.783, checklist 0.619; accuracy is 1.00 in every run"><ve-bar value="0.703">v1 best</ve-bar><ve-bar value="0.667">v1 hosted</ve-bar><ve-bar value="0.614" hot>v2 prod</ve-bar><ve-bar value="0.783">+complete</ve-bar><ve-bar value="0.619">+checklst</ve-bar></ve-bars>
+    <figcaption><span class="fig-n">Fig. 5</span>Accuracy is 1.00 (8 / 0 / 0) in all five visual runs while groundedness sits at 0.61–0.78: the judge reads a flowchart page's text, which is a heading and an abbreviation list.</figcaption>
+  </figure>
+  <div class="tbl"><table>
+    <thead><tr><th>Run folder</th><th class="n">Accuracy</th><th class="n">Groundedness</th><th class="n">Safe</th><th class="n">p50 / p95</th><th class="n">Agent $/q</th></tr></thead>
+    <tbody>
+      <tr><td><code>docling_rerank_structured_visual_2026-10-17_2342</code> (v1 best)</td><td class="n">1.00 (8 / 0 / 0)</td><td class="n">0.703</td><td class="n">5/8</td><td class="n">12.7 s / 26.5 s</td><td class="n">$0.065</td></tr>
+      <tr><td><code>docling_norerank_structured_visual-hosted_2026-10-18_0152</code> (v1 hosted)</td><td class="n">1.00 (8 / 0 / 0)</td><td class="n">0.667</td><td class="n">4/8</td><td class="n">6.0 s / 6.9 s</td><td class="n">$0.059</td></tr>
+      <tr class="hot"><td><code>v2_visual_2026-10-18_0916</code> (v2 production)</td><td class="n">1.00 (8 / 0 / 0)</td><td class="n">0.614</td><td class="n">5/8</td><td class="n">6.5 s / 6.9 s</td><td class="n">$0.052</td></tr>
+      <tr><td><code>v2_complete_visual_2026-10-18_1838</code> (completeness pass, off)</td><td class="n">1.00 (8 / 0 / 0)</td><td class="n">0.783</td><td class="n">7/8</td><td class="n">17.0 s / 20.9 s</td><td class="n">$0.155</td></tr>
+      <tr><td><code>v2_checklist_visual_2026-10-18_1939</code> (checklist, off)</td><td class="n">1.00 (8 / 0 / 0)</td><td class="n">0.619</td><td class="n">6/8</td><td class="n">7.1 s / 10.7 s</td><td class="n">$0.081</td></tr>
+    </tbody>
+  </table></div>
+</div>
+<p class="note">5 of 8 production answers are classed “answered right but cited wrong” (§4.5). The worked case is <a href="examples.html#v01">V01</a>.</p>
+</section>
+
+<!-- ======================= 7. RETRIEVAL ======================= -->
+<section id="retrieval">
+<div class="sec-head"><p class="ve-label caps">3.4 · Retrieval alone</p><h2>Sections beat fixed chunks on Recall@10; the reranker lifts the tail at 5–19 s per search</h2></div>
+<div class="two">
+  <figure>
+    <ve-bars unit="" max="1" label="Recall at 10 on 19 golden questions: A fixed chunks with bge-small 0.646; B fixed chunks with text-embedding-3-large 0.713; C sections with bge-small 0.750; D sections with text-embedding-3-large 0.833; E sections with the embedder and bge-reranker-base 0.882"><ve-bar value="0.646">A fix/bge</ve-bar><ve-bar value="0.713">B fix/oa</ve-bar><ve-bar value="0.750">C sec/bge</ve-bar><ve-bar value="0.833" hot>D sec/oa</ve-bar><ve-bar value="0.882">E +rerank</ve-bar></ve-bars>
+    <figcaption><span class="fig-n">Fig. 6</span>One variable changed per setup: the embedder adds 0.07, sections add 0.12 on top, the reranker 0.05 more at a CPU cost production cannot pay (<code>reports/retrieval/2026-10-16_0121/results.md</code>).</figcaption>
+  </figure>
+  <div class="co"><h3>What the numbers mean</h3><p>Direct hybrid search (dense + BM25, RRF k = 60) on the questions with PDF gold pages. Recall@k counts gold pages covered by the top-k returned units; <i>recall at matched tokens</i> gives every setup the same text budget, so bigger units cannot win by returning more text.</p><p>In production the single hybrid search on the question text gives Recall@5 / @10 of 0.636 / 0.768, while the agent's searches and lookups together reach 0.931 of the gold sources (<code>v2_2026-10-18_0903/summary.md</code>). A v1 parity test of Pinecone against the local dense matrix gave identical Recall@5 / @10 / @20 and MRR; that path was removed with v2.</p></div>
+</div>
+<div class="tbl" style="margin-top: var(--s-5)"><table>
+  <thead><tr><th>Setup</th><th>Chunks (parents)</th><th>Embedder</th><th>Reranker</th><th class="n">Recall@5</th><th class="n">Recall@10</th><th class="n">Recall at matched tokens</th></tr></thead>
+  <tbody>
+    <tr><td>A <code>baseline</code></td><td>fixed 350 / 50 overlap (1,521)</td><td>bge-small-en-v1.5</td><td>–</td><td class="n">0.552</td><td class="n">0.646</td><td class="n">0.838</td></tr>
+    <tr><td>B <code>fixed_openai</code></td><td>same as A</td><td>text-embedding-3-large</td><td>–</td><td class="n">0.567</td><td class="n">0.713</td><td class="n">0.877</td></tr>
+    <tr><td>C <code>sections_bge</code></td><td>sections (1,962 children, 581 parents)</td><td>bge-small-en-v1.5</td><td>–</td><td class="n">0.652</td><td class="n">0.750</td><td class="n">0.732</td></tr>
+    <tr class="hot"><td>D <code>sections_openai</code></td><td>same as C</td><td>text-embedding-3-large</td><td>–</td><td class="n">0.687</td><td class="n">0.833</td><td class="n">0.833</td></tr>
+    <tr><td>E <code>sections_openai_rerank</code></td><td>same as C</td><td>text-embedding-3-large</td><td>bge-reranker-base</td><td class="n">0.675</td><td class="n">0.882</td><td class="n">0.864</td></tr>
+  </tbody>
+</table></div>
+<div class="tbl" style="margin-top: var(--s-4)"><table>
+  <thead><tr><th>Docling index (<code>2026-10-18_0042</code>, <code>_0043</code>)</th><th>Chunks (parents)</th><th>Reranker</th><th class="n">Golden Recall@5</th><th class="n">Golden Recall@10</th><th class="n">Visual Recall@5</th><th class="n">Visual Recall@10</th></tr></thead>
+  <tbody>
+    <tr><td>D <code>sections_openai</code></td><td>1,962 (581)</td><td>–</td><td class="n">0.687</td><td class="n">0.833</td><td class="n">0.646</td><td class="n">0.875</td></tr>
+    <tr><td>E <code>sections_openai_rerank</code></td><td>1,962 (581)</td><td>bge-reranker-base</td><td class="n">0.675</td><td class="n">0.882</td><td class="n">0.750</td><td class="n">0.875</td></tr>
+    <tr class="hot"><td>F0 <code>docling_norerank</code></td><td>1,983 (589)</td><td>–</td><td class="n">0.744</td><td class="n">0.820</td><td class="n">0.875</td><td class="n">0.958</td></tr>
+    <tr><td>F <code>docling_sections</code></td><td>1,983 (589)</td><td>bge-reranker-base</td><td class="n">0.729</td><td class="n">0.842</td><td class="n">0.708</td><td class="n">1.000</td></tr>
+  </tbody>
+</table></div>
+</section>
+
+<!-- ======================= 8. READING ======================= -->
+<section id="reading">
+<div class="sec-head"><p class="ve-label caps">4 · Reading the results</p><h2>Why v2 ships at 0.85, what was rejected, and how much is noise</h2></div>
+<div class="cos">
+  <div class="co"><h3><span class="chip ok">4.1</span>Why v2 is in production although v1 best scored higher</h3><p>The 0.925 was measured on a laptop. Its one ingredient that does not survive hosting is the cross-encoder reranker: 15–23 s per search on a 2-vCPU server, two to four searches per question, so it cannot meet the 30-second rule. Hosted v1 without it scored 0.85. Under the same constraint v2 matches the 0.85 and improves what staff see: groundedness 0.937 against 0.878, 17/20 answers with no unsupported claim against 15/20, no incorrect answer, cached repeats in under a second.</p><p>Two ways to recover the 0.925 remain open: the reranker at depth 50 on a Graviton3 or GPU box (about +$115/month), or Sonnet as v2's primary model (one line in <code>config.yaml</code>).</p></div>
+  <div class="co"><h3><span class="chip risk">4.2</span>The reranker inside v2</h3><p>Retried on 2026-10-18 on the production hardware. <code>bge-reranker-large</code> at depth 50 took 19 s per search on CPU: 5 answers went over 30 s and 6 of 20 questions ended in provider timeouts, with 0.821 on the 14 that answered. <code>bge-reranker-base</code> at the depth the CPU can afford (20) scored 0.70 against 0.85 without it. So v2 ships with <code>search.rerank: null</code>; the code path stays behind the flag.</p></div>
+  <div class="co"><h3><span class="chip risk">4.3</span>The live safety gate (rejected)</h3><p>On 2026-10-17 the agent submitted atomic claims, each checked deterministically against only the pages it cited; one failing direct claim made the whole answer abstain. The gated agent scored 0.300 (4 / 4 / 12), answering 7 of 19 answerable questions, against 0.875 (15 / 5 / 0) and 19 of 19 ungated; the gate removed the 2 unsupported claims the ungated run showed. Decision: the in-code citation check stays live; every other check runs offline on saved traces, and a test proves no checker is called while answering. Safe / useful / over-abstention entered the harness because of this experiment.</p></div>
+  <div class="co"><h3><span class="chip warn">4.4</span>The six partial answers in production</h3><ve-bars unit="" max="6" label="Of six partial answers, three are retrieval misses and three are omissions with the evidence in hand"><ve-bar value="3" hot>retrieval</ve-bar><ve-bar value="3">omission</ve-bar></ve-bars><p>No answer was graded incorrect. Three retrieval misses (Q06, Q07, Q10: the gold page was never returned by any tool) and three omissions with the evidence in hand (Q01, Q13, Q18: recall@10 1.0). The references are shorter than the answers (median 67 against 92 words): the model spends words on clinical detail and drops the reference's secondary points. Per question: <a href="examples.html#partials">examples.html</a>.</p></div>
+  <div class="co"><h3><span class="chip warn">4.5</span>Two answer-side experiments, kept as switches, off</h3><p>The <b>completeness pass</b> (<code>agent.min_lookups</code>, <code>agent.completeness_pass</code>) raised groundedness to 0.942, halved the unsupported-claim rate (2.5% → 1.2%) and fixed Q18, but left accuracy at 0.85 and added 8 s of median latency with one answer over 30 s. The <b>pre-submit checklist</b> with one search per sub-question (<code>agent.prompt_extras</code>) cut unsupported claims to 0 (groundedness 0.957, Safe 20/20) but ended at 0.825. Three of the remaining partials are retrieval misses no prompt can fix; DESIGN.md §5's rule is that accuracy must rise and groundedness and recall must not fall.</p><p><b>Figure-derived answers.</b> Every visual answer is correct, yet visual groundedness is 0.61–0.70: the judge gets the cited page's extracted text. The fix is in measurement (give the judge the figure interpretation) and in the product (cite the figure plus the appendix page); neither changes an answer.</p></div>
+  <div class="co"><h3><span class="chip warn">4.6</span>Judge noise on 20 questions</h3><p>Each question runs once and the agent is not deterministic; one grade step on one question moves the score by 0.025, so a one-question difference between runs is within noise. The passes were unanimous on 18 of 20 grades in the production run. The judge is a Claude model and may share the agent's blind spots; each <code>summary.md</code> prints the lowest-scoring answers and a random correct sample for human spot checks, and DeepEval is the independent cross-check. The re-judged baseline differs from its original judging (0.70 against 0.725), which is why one judging configuration is used for every row of §3.1.</p></div>
+</div>
+</section>
+
+<!-- ======================= 9. DATA ======================= -->
+<section id="data">
+<div class="sec-head"><p class="ve-label caps">5–6 · Data and re-runs</p><h2>Every number has a folder; a golden run costs about $5 and must keep three things fixed</h2></div>
+<div class="two">
+  <ul class="data">
+    <li><code>reports/evals/&lt;run&gt;/</code>: <code>summary.md</code>, <code>results.csv</code> (one row per question: grade and judge reason, groundedness, failure class, retrieval and citation metrics, timing, cost, the full answer, <code>trace_path</code>) and <code>meta.json</code>; the folders kept are exactly those named in §3.</li>
+    <li><code>traces/&lt;timestamp&gt;-&lt;question-slug&gt;.json</code>: the trace each <code>trace_path</code> points at (milestone runs committed).</li>
+    <li><code>reports/deepeval/&lt;run&gt;/deepeval.json</code> and <code>deepeval.csv</code>: DeepEval scores and reasons for the ten runs of §3.2.</li>
+    <li><code>reports/retrieval/&lt;timestamp&gt;/results.md</code> and <code>per_question.csv</code>: the three retrieval-only experiments of §3.4.</li>
+    <li><code>reports/parsing/VISUAL_EXTRACTION.md</code>, <code>FIGURES.json</code>, <code>PARSE_REPORT.json</code>: parsing and figure extraction.</li>
+    <li>LangSmith project <code>pharmassist</code>: one run per answer with child runs per model call, tool call and retrieval. Access by invitation; not checked in.</li>
+    <li><code>evidence/</code>: the production live check and screenshots (<a href="../evidence/README.md">evidence/README.md</a>).</li>
+  </ul>
+  <div>
+<pre class="cmd"><span class="c"># from the repository root with the local stack up</span>
+.venv/bin/python scripts/run_eval.py --label my_change --deepeval            <span class="c"># golden set, DeepEval scorer</span>
+.venv/bin/python scripts/run_eval.py --label my_change_visual --deepeval \
+    --golden evals/visual.jsonl --tag visual                                     <span class="c"># figure questions</span>
+.venv/bin/python scripts/run_eval.py --label my_change                       <span class="c"># Opus three-pass judge instead</span>
+.venv/bin/python scripts/run_eval.py --rejudge reports/evals/&lt;run&gt;           <span class="c"># re-score saved answers</span>
+.venv/bin/python scripts/deepeval_score.py --run reports/evals/&lt;run&gt;         <span class="c"># DeepEval on a finished run</span></pre>
+    <p class="note" style="margin-top: var(--s-3)">A golden run costs about $5 and a visual run about $1.25 including the Opus judge; DeepEval adds about $0.09 per question. Acceptance rule (DESIGN.md §5): golden accuracy ≥ 0.85 with 0 incorrect; Q20 returns the exact no-answer sentence; 0 questions over 30 s; 0 answers without citations; 0 citations failing the in-code check; ≥ 18/20 answers within 60–120 words.</p>
+    <ul class="data" style="margin-top: var(--s-3)">
+      <li><b>Must not change:</b> <code>evals/golden.jsonl</code> and <code>evals/visual.jsonl</code> are frozen; hashes <code>2664dd7d24fb</code>, <code>0823626fe0c3</code> go into every run's <code>meta.json</code>, and a run whose hash differs is not comparable with §3.</li>
+      <li><code>meta.json</code> also records the prompt hash, models, effort, passes, tool cap, deadline, commit and seed; compare these before comparing numbers, and use <code>--rejudge</code> when the judge changed.</li>
+      <li>The judge model, passes and prompts (<code>docs/PROMPTS.md</code> §2) stay fixed for any row added to §3.1; a different judge gets its own column, as DeepEval does.</li>
+      <li>Run folders under <code>reports/evals/</code> are never edited after the run.</li>
+    </ul>
+  </div>
+</div>
+</section>
+
+<section class="sources" aria-label="Sources"><p class="ve-label caps">Sources</p>
+<p><a href="../EVALUATION.md">EVALUATION.md</a> · <code>reports/evals/*/summary.md</code>, <code>results.csv</code>, <code>meta.json</code> (the 14 run folders of §3.1 and the 5 visual runs of §3.3) · <code>reports/deepeval/&lt;run&gt;/deepeval.json</code> · <code>reports/retrieval/2026-10-16_0121</code>, <code>2026-10-18_0042</code>, <code>2026-10-18_0043</code> · <code>evals/golden.jsonl</code>, <code>evals/visual.jsonl</code> · <code>docs/PROMPTS.md</code> §2 · <code>scripts/run_eval.py</code>, <code>scripts/deepeval_score.py</code> · <a href="../DESIGN.md">DESIGN.md</a> §4–5 · <a href="../EXAMPLES.md">EXAMPLES.md</a></p>
+</section>
+</main>
+<script>
+(() => {
+  const links = [...document.querySelectorAll('.toc a')];
+  const byId = new Map(links.map(a => [a.getAttribute('href').slice(1), a]));
+  const io = new IntersectionObserver(es => {
+    es.forEach(e => { if (e.isIntersecting) { links.forEach(a => a.classList.remove('on')); byId.get(e.target.id)?.classList.add('on');
+      try { history.replaceState(null, '', '#' + e.target.id); } catch (_) {} } });
+  }, { rootMargin: '-10% 0px -80% 0px' });
+  document.querySelectorAll('main > section[id]').forEach(s => io.observe(s));
+})();
+</script>
+</body>
+</html>

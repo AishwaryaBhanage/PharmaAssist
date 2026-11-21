@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en" data-register="instrument">
+<head>
+<title>PharmAssist overview: one question in, one cited answer out, or exactly no answer</title>
+<link rel="stylesheet" href="kit.css" data-ve-kit>
+<style>
+  .crumbs { display: flex; flex-wrap: wrap; gap: var(--s-4); font-size: var(--t-small); color: var(--text-dim); margin-bottom: var(--s-5); }
+  .crumbs a { color: var(--text-dim); }
+  .toc { position: sticky; top: 0; z-index: 3; background: var(--bg); border-bottom: 1px solid var(--border);
+         padding: var(--s-2) 0; margin-bottom: var(--s-6); }
+  .toc ol { display: flex; gap: var(--s-4); list-style: none; margin: 0; padding: 0; overflow-x: auto;
+            scrollbar-width: none; mask-image: linear-gradient(90deg, #000 92%, transparent); }
+  .toc a { white-space: nowrap; font-size: var(--t-small); color: var(--text-dim); text-decoration: none; }
+  .toc a.on { color: var(--accent); }
+  section { scroll-margin-top: 56px; }
+  .note { font-size: var(--t-small); color: var(--text-dim); max-width: 65ch; }
+  .tbl { overflow-x: auto; border: 1px solid var(--border); border-radius: var(--r-2); }
+  .tbl table { width: 100%; border-collapse: collapse; font-size: var(--t-small); }
+  .tbl th { text-align: left; font-weight: 500; color: var(--text-dim); background: var(--surface); padding: var(--s-3) var(--s-4); }
+  .tbl td { padding: var(--s-3) var(--s-4); border-top: 1px solid var(--border); vertical-align: top; }
+  .tbl td.n, .tbl th.n { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .tbl td.hot { font-weight: 600; }
+  .tbl code, .sources p, .sources code, .note code { overflow-wrap: anywhere; }
+  pre.cmd { font-family: var(--mono); font-size: var(--t-small); background: var(--surface); border-radius: var(--r-2);
+            padding: var(--s-4); overflow-x: auto; margin: 0; line-height: 1.5; }
+  pre.cmd .c { color: var(--text-dim); }
+  .two { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--s-6); align-items: start; }
+  .two > * { min-width: 0; }
+  .two h3 { margin: 0 0 var(--s-3); font-size: var(--t-body); }
+  /* headline small multiples */
+  .hl { min-width: 980px; }
+  .hl .ttl { font-size: 14px; font-weight: 600; fill: var(--text); }
+  .hl .unit { font-size: 13px; fill: var(--text-dim); }
+  .hl .lab { font-size: 13px; fill: var(--text); }
+  .hl .val { font-size: 13px; fill: var(--text-dim); font-variant-numeric: tabular-nums; paint-order: stroke; stroke: var(--bg); stroke-width: 4px; stroke-linejoin: round; }
+  .hl .bar { fill: var(--border-bright); }
+  .hl .hot .bar { fill: var(--accent); }
+  .hl .hot .lab { font-weight: 600; }
+  .hl .hot .val { fill: var(--text); }
+  .hl .lim { stroke: var(--risk); stroke-dasharray: 5 4; stroke-width: 1.5; }
+  .hl .ltxt { font-size: 13px; fill: var(--risk); }
+  .hl .rule { stroke: var(--border); }
+  .hl .ann { stroke: var(--text-dim); fill: none; }
+  .hl .atxt { font-size: 13px; fill: var(--text-dim); }
+  .pages { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--s-4); }
+  .pages li { border-top: 1px solid var(--border-bright); padding-top: var(--s-3); }
+  .pages a { font-weight: 600; }
+  .pages p { margin: var(--s-2) 0 0; font-size: var(--t-small); color: var(--text-dim); }
+</style>
+</head>
+<body><main>
+<header>
+  <p class="crumbs"><a href="../../README.md">Project README</a> · <a href="pharmassist-v2.html">The system explainer</a></p>
+  <p class="eyebrow">PharmAssist · overview · 2026-10-18</p>
+  <h1><span class="num">0.85</span> accuracy, 0 incorrect, every answer cited</h1>
+  <p class="lead">One pharmacy question in, one short cited answer out, grounded only in the 11 public VA, Medicare Part D and NY Medicaid documents in its corpus; when they do not answer, exactly <b>“No answer found in knowledge base”</b>. Groundedness 0.937, 21.4 s at p95 against a 30 s limit, $0.110 per fresh question. Deployed on AWS at pharmassist.aishwaryabhanage.com (not kept running); runs locally with one Docker command.</p>
+  <p class="meta">golden set of 20 questions · Claude Opus 5.5 judge, 3 passes · run <code>v2_2026-10-18_0903</code></p>
+</header>
+
+<nav class="toc" aria-label="Sections"><ol>
+  <li><a href="#numbers">Headline numbers</a></li><li><a href="#where">What is where</a></li><li><a href="#production">Production check</a></li>
+  <li><a href="#run">Run it</a></li><li><a href="#pages">The pages</a></li>
+</ol></nav>
+
+<!-- ======================= 1. HEADLINE NUMBERS ======================= -->
+<section id="numbers">
+<div class="kpis">
+  <div class="kpi"><span class="ve-label">Accuracy, golden set</span><span class="val"><span data-count="0.85">0.85</span></span><span class="ve-label">14 correct · 6 partial · 0 incorrect</span></div>
+  <div class="kpi"><span class="ve-label">Groundedness</span><span class="val"><span data-count="0.937">0.937</span></span><span class="ve-label">supported claims / claims</span></div>
+  <div class="kpi"><span class="ve-label">Latency p95</span><span class="val"><span data-count="21.4">21.4</span><span class="unit">s</span></span><span class="ve-label">limit 30 s · p50 10.8 s</span></div>
+  <div class="kpi"><span class="ve-label">Cost per fresh question</span><span class="val"><span class="unit">$</span><span data-count="0.110">0.110</span></span><span class="ve-label">cached repeats: embedding only</span></div>
+</div>
+
+<figure>
+  <div class="frame"><svg class="ve-svg hl" viewBox="0 0 980 250" role="img" aria-label="Four small bar charts comparing v1 best (local, reranker), v1 hosted and v2 production. Accuracy: 0.925, 0.85, 0.85. Groundedness: 0.887, 0.878, 0.937. Latency p95 against a 30 second limit: 22.2, 12.0, 21.4 seconds. Agent cost per question: 0.064, 0.067, 0.110 dollars.">
+    <!-- scale: 120 units = 1.0 / 30 s / $0.12 -->
+    <g transform="translate(10 0)">
+      <text class="ttl" x="0" y="28">Accuracy</text><text class="unit" x="0" y="46">judge score, 20 questions</text>
+      <g><text class="lab" x="0" y="80">v1 best</text><rect class="bar" x="78" y="66" width="111" height="18"/><text class="val" x="195.0" y="80">0.925</text></g>
+      <g><text class="lab" x="0" y="120">v1 hosted</text><rect class="bar" x="78" y="106" width="102" height="18"/><text class="val" x="186.0" y="120">0.85</text></g>
+      <g class="hot"><text class="lab" x="0" y="160">v2 prod</text><rect class="bar" x="78" y="146" width="102" height="18"/><text class="val" x="186.0" y="160">0.85</text></g>
+      <path class="rule" d="M78 60V172"/>
+
+      <text class="atxt" x="0" y="214">0.925 needed a reranker: 15–23 s</text><text class="atxt" x="0" y="230">per search on the hosted CPUs</text>
+    </g>
+    <g transform="translate(250 0)">
+      <text class="ttl" x="0" y="28">Groundedness</text><text class="unit" x="0" y="46">supported claims / claims</text>
+      <g><text class="lab" x="0" y="80">v1 best</text><rect class="bar" x="78" y="66" width="106.4" height="18"/><text class="val" x="190.4" y="80">0.887</text></g>
+      <g><text class="lab" x="0" y="120">v1 hosted</text><rect class="bar" x="78" y="106" width="105.4" height="18"/><text class="val" x="189.4" y="120">0.878</text></g>
+      <g class="hot"><text class="lab" x="0" y="160">v2 prod</text><rect class="bar" x="78" y="146" width="112.4" height="18"/><text class="val" x="196.4" y="160">0.937</text></g>
+      <path class="rule" d="M78 60V172"/>
+
+      <text class="atxt" x="0" y="214">unsupported claims 2.5% · 4.3% · 2.5%</text><text class="atxt" x="0" y="230">v2: 0 incorrect answers</text>
+    </g>
+    <g transform="translate(490 0)">
+      <text class="ttl" x="0" y="28">Latency p95</text><text class="unit" x="0" y="46">seconds, limit 30 s</text>
+      <g><text class="lab" x="0" y="80">v1 best</text><rect class="bar" x="78" y="66" width="88.8" height="18"/><text class="val" x="172.8" y="80">22.2 s</text></g>
+      <g><text class="lab" x="0" y="120">v1 hosted</text><rect class="bar" x="78" y="106" width="48" height="18"/><text class="val" x="132.0" y="120">12.0 s</text></g>
+      <g class="hot"><text class="lab" x="0" y="160">v2 prod</text><rect class="bar" x="78" y="146" width="85.6" height="18"/><text class="val" x="169.6" y="160">21.4 s</text></g>
+      <path class="rule" d="M78 60V172"/>
+      <path class="lim" d="M198 58V174"/><text class="ltxt" x="198" y="188" text-anchor="middle">30 s limit</text>
+      <text class="atxt" x="0" y="214">p50: 10.6 s · 7.2 s · 10.8 s</text><text class="atxt" x="0" y="230">0 questions over 30 s in v2</text>
+    </g>
+    <g transform="translate(730 0)">
+      <text class="ttl" x="0" y="28">Agent cost</text><text class="unit" x="0" y="46">USD per question</text>
+      <g><text class="lab" x="0" y="80">v1 best</text><rect class="bar" x="78" y="66" width="64" height="18"/><text class="val" x="148.0" y="80">$0.064</text></g>
+      <g><text class="lab" x="0" y="120">v1 hosted</text><rect class="bar" x="78" y="106" width="67" height="18"/><text class="val" x="151.0" y="120">$0.067</text></g>
+      <g class="hot"><text class="lab" x="0" y="160">v2 prod</text><rect class="bar" x="78" y="146" width="110" height="18"/><text class="val" x="194.0" y="160">$0.110</text></g>
+      <path class="rule" d="M78 60V172"/>
+
+      <text class="atxt" x="0" y="214">visual set (8 figure questions):</text><text class="atxt" x="0" y="230">accuracy 1.00 in all three</text>
+    </g>
+  </svg></div>
+  <figcaption><span class="fig-n">Fig. 1</span>Under the 30 s rule, v1 hosted and v2 both score 0.85; v2 is better grounded (0.937 against 0.878) with no incorrect answer, so v2 is in production.</figcaption>
+</figure>
+<p class="note">v1's 0.925 needed a cross-encoder reranker that takes 15–23 s per search on the hosted CPUs and cannot meet the 30 s rule (<a href="evaluation.html#reading">EVALUATION.md §4.1</a>). Judge grades are estimates from a Claude model; each question ran once.</p>
+
+<div class="tbl"><table>
+  <thead><tr><th>Golden set, 20 questions</th><th class="n">v1 best (local, reranker)</th><th class="n">v1 hosted</th><th class="n">v2 production</th></tr></thead>
+  <tbody>
+    <tr><td>Accuracy (correct / partial / incorrect)</td><td class="n">0.925 (17 / 3 / 0)</td><td class="n">0.85 (15 / 4 / 1)</td><td class="n hot">0.85 (14 / 6 / 0)</td></tr>
+    <tr><td>Groundedness (supported claims / claims)</td><td class="n">0.887</td><td class="n">0.878</td><td class="n hot">0.937</td></tr>
+    <tr><td>Unsupported claims</td><td class="n">2.5%</td><td class="n">4.3%</td><td class="n hot">2.5%</td></tr>
+    <tr><td>p50 / p95 latency (limit 30 s)</td><td class="n">10.6 s / 22.2 s</td><td class="n">7.2 s / 12.0 s</td><td class="n">10.8 s / 21.4 s</td></tr>
+    <tr><td>Agent cost per question</td><td class="n">$0.064</td><td class="n">$0.067</td><td class="n">$0.110</td></tr>
+    <tr><td>Visual set (8 flowchart/table questions), accuracy</td><td class="n">1.00</td><td class="n">1.00</td><td class="n">1.00</td></tr>
+    <tr><td>Run folder under <code>reports/evals/</code></td><td><code>docling_rerank_structured_orig_2026-10-17_2342</code></td><td><code>docling_norerank_structured_orig-hosted_2026-10-18_0152</code></td><td><code>v2_2026-10-18_0903</code></td></tr>
+  </tbody>
+</table></div>
+</section>
+
+<!-- ======================= 2. REQUIREMENT → WHERE ======================= -->
+<section id="where">
+<div class="sec-head"><p class="ve-label caps">Index</p><h2>Every part of the project has a file and a page</h2></div>
+<div class="tbl"><table>
+  <thead><tr><th>What</th><th>Markdown</th><th>Page</th></tr></thead>
+  <tbody>
+    <tr><td>Live application and where it runs</td><td>pharmassist.aishwaryabhanage.com when deployed (sign-in required); AWS console links and the stack diagram in <a href="../../README.md#hosting-on-aws">README.md § Hosting on AWS</a></td><td><a href="solution.html#ops">solution.html § Operations</a></td></tr>
+    <tr><td>Example questions to test it (used in the recording)</td><td><a href="../Example_Questions_Expected_vs_Assistant_Answers.pdf">Example_Questions_Expected_vs_Assistant_Answers.pdf</a>: 5 pairs, 4 question shapes + 1 weak answer with where it fails and why, expected answer with source page and the live application’s answer</td><td>—</td></tr>
+    <tr><td>Working assistant through a CLI</td><td><code>scripts/ask.py</code> (answer, citations, timing, cost) and the web UI; both call the API in <code>app/</code></td><td><a href="#run">below</a></td></tr>
+    <tr><td>Code and a short README to run it</td><td>this repository; <a href="../SOLUTION.md">SOLUTION.md</a> (run in 2 minutes, how it works, operations)</td><td><a href="solution.html">solution.html</a></td></tr>
+    <tr><td>DESIGN.md: Brief; Key decisions and tradeoffs; Risks and failure modes; Key metrics and alert triggers; Test plan / acceptance criteria; AI usage; Tool selection; what we cut; what we'd build next</td><td><a href="../DESIGN.md">DESIGN.md</a>, sections 1–7 and the two that follow</td><td><a href="design.html">design.html</a></td></tr>
+    <tr><td>DESIGN.md: Architecture (retrieval unit and why), Quality (groundedness, hallucination, regression), Continuous improvement, Output shape</td><td><a href="../DESIGN.md#architecture">DESIGN.md</a>, the four sections with those titles</td><td><a href="design.html#architecture">design.html § Architecture</a></td></tr>
+    <tr><td>Example Q/A pairs across the question shapes, with real weak answers explained</td><td><a href="../EXAMPLES.md">EXAMPLES.md</a>: 8 pairs verbatim from the evaluation runs, judge grades included, 3 weak answers with the fix</td><td><a href="examples.html">examples.html</a></td></tr>
+    <tr><td>Evidence it works end to end</td><td><a href="../evidence/README.md">evidence/README.md</a>: production API transcript, 7 screenshots, index of every report and trace</td><td><a href="#production">below</a></td></tr>
+    <tr><td>One-command Docker run</td><td><code>docker compose -f deploy/docker-compose.yml -f deploy/prebuilt.override.yml --env-file .env up</code> from the repository root: public images <code>abhanage/pharmassist-v2-web</code> and <code>-ingest</code> on Docker Hub, Intel + Apple Silicon (<a href="../../deploy/prebuilt.override.yml">deploy/prebuilt.override.yml</a>); plus the live site</td><td><a href="#run">below</a></td></tr>
+    <tr><td>Corpus fetched into <code>docs/</code>, preprocessing documented</td><td><a href="../../docs/catalog.yaml">docs/catalog.yaml</a>, <a href="../../docs/SOURCES.md">docs/SOURCES.md</a>, <a href="../DESIGN.md#architecture">DESIGN.md “Architecture”</a>, <a href="../../reports/parsing/VISUAL_EXTRACTION.md">reports/parsing/VISUAL_EXTRACTION.md</a></td><td><a href="design.html#architecture">design.html § Architecture</a></td></tr>
+    <tr><td>Evaluation (method, every run, how to re-run)</td><td><a href="../EVALUATION.md">EVALUATION.md</a>; raw data in <a href="../../reports/evals/">reports/evals/</a>, <a href="../../reports/deepeval/">reports/deepeval/</a>, <a href="../../reports/retrieval/">reports/retrieval/</a></td><td><a href="evaluation.html">evaluation.html</a></td></tr>
+    <tr><td>Every LLM prompt</td><td><a href="../../docs/PROMPTS.md">docs/PROMPTS.md</a></td><td>—</td></tr>
+    <tr><td>Visual explainer of the system</td><td><a href="pharmassist-v2.html">html/pharmassist-v2.html</a></td><td><a href="pharmassist-v2.html">the system explainer</a></td></tr>
+    <tr><td>AWS deployment and run-book</td><td><a href="../../deploy/aws/v2/README.md">deploy/aws/v2/README.md</a></td><td><a href="solution.html#ops">solution.html § Operations</a></td></tr>
+  </tbody>
+</table></div>
+</section>
+
+<!-- ======================= 3. PRODUCTION CHECK ======================= -->
+<section id="production">
+<div class="sec-head"><p class="ve-label caps">Evidence</p><h2>Production passed every API check on 2026-10-18</h2></div>
+<div class="two">
+  <figure>
+    <ve-bars unit="s" max="20" label="Upload to active took 15 seconds with a cold worker and 5 seconds with the warm worker; a cached repeat answered in 0.4 seconds"><ve-bar value="15">cold</ve-bar><ve-bar value="5" hot>warm</ve-bar><ve-bar value="0.4">cache hit</ve-bar></ve-bars>
+    <figcaption><span class="fig-n">Fig. 2</span>An upload is answerable 15 s after submission with a cold worker, 5 s with the warm worker now in the stack; a cached repeat returns in 0.4 s.</figcaption>
+  </figure>
+  <figure>
+    <ve-bars unit="" max="700" label="657 tests collected by pytest, 57 of them integration tests, plus 28 frontend tests"><ve-bar value="657" hot>pytest</ve-bar><ve-bar value="57">integr.</ve-bar><ve-bar value="28">frontend</ve-bar></ve-bars>
+    <figcaption><span class="fig-n">Fig. 3</span>657 tests collected by <code>pytest</code> (57 integration) and 28 frontend tests back the live check.</figcaption>
+  </figure>
+</div>
+<p class="note">The API transcript (<code>evidence/live_check_2026-10-18.log</code>) ends <code>ALL PASS</code>: login, cited answer, cache hit in 0.4 s, exact no-answer sentence, role enforcement, upload indexed in 15 s and answerable. A document can be removed from the index and re-indexed in 5 s (production run, admin API). Seven screenshots: <a href="../evidence/README.md">evidence/README.md</a>.</p>
+</section>
+
+<!-- ======================= 5. RUN IT ======================= -->
+<section id="run">
+<div class="sec-head"><p class="ve-label caps">Demo</p><h2>One command runs it from public images; one more builds it from this checkout</h2></div>
+<div class="two">
+  <div>
+    <h3>From Docker Hub (no build, no Node, no Python)</h3>
+<pre class="cmd"><span class="c"># from the repo root</span>
+cp .env.example .env   <span class="c"># put your OPENAI_API_KEY in it (ANTHROPIC_API_KEY too for the fallback model)</span>
+docker compose -f deploy/docker-compose.yml \
+  -f deploy/prebuilt.override.yml --env-file .env up</pre>
+    <p class="note">Pulls <code>abhanage/pharmassist-v2-web</code> and <code>abhanage/pharmassist-v2-ingest</code> (Intel and Apple Silicon), starts Postgres 16 + pgvector, Valkey, a local SQS and S3, the API and the ingestion worker, and seeds the 11 documents with no model spend. Open <a href="http://localhost:8000">http://localhost:8000</a>; demo accounts are listed in <a href="../SOLUTION.md#run-it-in-2-minutes">SOLUTION.md</a>.</p>
+  </div>
+  <div>
+    <h3>From this checkout</h3>
+<pre class="cmd">cp .env.example .env
+docker compose up --build   <span class="c"># compose.yaml; a few minutes the first time</span></pre>
+    <p class="note">Fresh answers use your API key, about $0.11 each; repeats are free. <code>docker compose down -v</code> removes the data. Step by step: <a href="solution.html#run">solution.html</a>.</p>
+  </div>
+</div>
+</section>
+
+<!-- ======================= 6. THE PAGES ======================= -->
+<section id="pages">
+<div class="sec-head"><p class="ve-label caps">Read on</p><h2>Five pages render the five write-ups; each links back to its Markdown</h2></div>
+<ul class="pages">
+  <li><a href="pharmassist-v2.html">The system explainer</a><p>Request path, AWS topology, corpus and retrieval, agent loop, ingestion, results, what's next.</p></li>
+  <li><a href="design.html">Design</a><p>Brief, decisions and tradeoffs, risks, metrics and alerts, test plan, tool selection, cut and next, architecture, quality, continuous improvement, output shape. <a href="../DESIGN.md">DESIGN.md</a></p></li>
+  <li><a href="evaluation.html">Evaluation</a><p>Question sets, method, every run from baseline to production, two judges, retrieval-only recall, reading the results. <a href="../EVALUATION.md">EVALUATION.md</a></p></li>
+  <li><a href="examples.html">Examples</a><p>Eight Q/A pairs verbatim with the judge's verdict; three weak answers with the fix; the six partials by mechanism. <a href="../EXAMPLES.md">EXAMPLES.md</a></p></li>
+  <li><a href="solution.html">Solution</a><p>Run it in 2 minutes, how it works, operations: hosting, cost, console links, from source. <a href="../SOLUTION.md">SOLUTION.md</a></p></li>
+</ul>
+<div class="tbl" style="margin-top: var(--s-6)"><table>
+  <thead><tr><th>Path</th><th>Role</th></tr></thead>
+  <tbody>
+    <tr><td><code>app/</code></td><td>FastAPI API: auth (JWT + refresh cookie, staff/admin), <code>/ask</code>, conversations, feedback, admin (stats, documents, re-index, remove from index, jobs, users, cache)</td></tr>
+    <tr><td><code>frontend/</code></td><td>React + TypeScript UI, served by the API</td></tr>
+    <tr><td><code>src/pharmassist/agent/</code></td><td>the tool-using agent: loop, tools, prompt, citation checks, telemetry</td></tr>
+    <tr><td><code>src/pharmassist/search/hybrid.py</code>, <code>store/pg.py</code></td><td>hybrid retrieval over PostgreSQL + pgvector and the store</td></tr>
+    <tr><td><code>src/pharmassist/cache/</code></td><td>Valkey semantic cache</td></tr>
+    <tr><td><code>src/pharmassist/ingest/</code>, <code>scripts/ingest_worker.py</code></td><td>upload → SQS → worker → activate</td></tr>
+    <tr><td><code>src/pharmassist/llm/</code></td><td>one message format over OpenAI (primary) and Anthropic (fallback)</td></tr>
+    <tr><td><code>src/pharmassist/{parsers,chunkers,tables,embedders}/</code></td><td>corpus preprocessing</td></tr>
+    <tr><td><code>src/pharmassist/eval/</code>, <code>scripts/run_eval.py</code>, <code>scripts/deepeval_score.py</code>, <code>evals/</code></td><td>evaluation harness, DeepEval scorer, frozen question sets</td></tr>
+    <tr><td><code>deploy/aws/v2/</code>, <code>deploy/docker-compose.yml</code>, <code>compose.yaml</code></td><td>CloudFormation stack; the local one-command stack</td></tr>
+  </tbody>
+</table></div>
+<p class="note">How it was built: Claude Code (Claude Fable 5.1) as an orchestrator over parallel subagents in git worktrees, with the human setting scope, making the product and cost decisions, reviewing every merge, and running the admin-only AWS and DNS steps (<a href="design.html#ai">DESIGN.md §6</a>).</p>
+</section>
+
+<section class="sources" aria-label="Sources"><p class="ve-label caps">Sources</p>
+<p><a href="../../README.md">README.md</a> · <code>reports/evals/v2_2026-10-18_0903/summary.md</code> · <code>reports/evals/docling_rerank_structured_orig_2026-10-17_2342</code> · <code>reports/evals/docling_norerank_structured_orig-hosted_2026-10-18_0152</code> · <code>evidence/live_check_2026-10-18.log</code> · <code>evidence/screenshots/</code> · <code>pytest --collect-only -q</code>; <code>frontend/src/test/</code> · <a href="../EVALUATION.md">EVALUATION.md</a> §3.1, §4.1 · <a href="../SOLUTION.md">SOLUTION.md</a></p>
+</section>
+</main>
+<script>
+(() => {
+  const links = [...document.querySelectorAll('.toc a')];
+  const byId = new Map(links.map(a => [a.getAttribute('href').slice(1), a]));
+  const io = new IntersectionObserver(es => {
+    es.forEach(e => { if (e.isIntersecting) { links.forEach(a => a.classList.remove('on')); byId.get(e.target.id)?.classList.add('on');
+      try { history.replaceState(null, '', '#' + e.target.id); } catch (_) {} } });
+  }, { rootMargin: '-10% 0px -80% 0px' });
+  document.querySelectorAll('main > section[id]').forEach(s => io.observe(s));
+})();
+</script>
+</body>
+</html>

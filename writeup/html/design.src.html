@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="en" data-register="blueprint">
+<head>
+<title>PharmAssist design: a cited answer or exactly no answer, and the decisions behind it</title>
+<link rel="stylesheet" href="kit.css" data-ve-kit>
+<style>
+  .crumbs { display: flex; flex-wrap: wrap; gap: var(--s-4); font-size: var(--t-small); color: var(--text-dim); margin-bottom: var(--s-5); }
+  .crumbs a { color: var(--text-dim); }
+  .toc { position: sticky; top: 0; z-index: 3; background: var(--bg); border-bottom: 1px solid var(--border);
+         padding: var(--s-2) 0; margin-bottom: var(--s-6); }
+  .toc ol { display: flex; gap: var(--s-4); list-style: none; margin: 0; padding: 0; overflow-x: auto;
+            scrollbar-width: none; mask-image: linear-gradient(90deg, #000 92%, transparent); }
+  .toc a { white-space: nowrap; font-size: var(--t-small); color: var(--text-dim); text-decoration: none; }
+  .toc a.on { color: var(--accent); }
+  section { scroll-margin-top: 56px; }
+  .note { font-size: var(--t-small); color: var(--text-dim); max-width: 65ch; }
+  .tbl { overflow-x: auto; border: 1px solid var(--border); border-radius: var(--r-2); }
+  .tbl table { width: 100%; border-collapse: collapse; font-size: var(--t-small); }
+  .tbl th { text-align: left; font-weight: 500; color: var(--text-dim); background: var(--surface); padding: var(--s-3) var(--s-4); }
+  .tbl td { padding: var(--s-3) var(--s-4); border-top: 1px solid var(--border); vertical-align: top; }
+  .tbl td.n, .tbl th.n { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .tbl td.hot { font-weight: 600; }
+  .tbl code, .sources p, .sources code, .note code, .dash code, .case code { overflow-wrap: anywhere; }
+  .two { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--s-6); align-items: start; }
+  .two > * { min-width: 0; }
+  .two h3 { margin: 0 0 var(--s-3); font-size: var(--t-body); }
+  .ve-svg:not(.narrow) { min-width: 925px; }
+  .bnd { fill: none; stroke: var(--border-bright); stroke-dasharray: 6 4; }
+  .bnd-l { font-family: var(--mono); font-size: 13px; fill: var(--text-dim); }
+  .tn { font-size: 13px; fill: var(--text-dim); }
+  .tn.k { fill: var(--text); }
+  .rule { stroke: var(--border); }
+  /* risk small multiples */
+  .case dl { margin: var(--s-3) 0 0; font-size: var(--t-small); display: grid; grid-template-columns: 5.5rem 1fr; gap: var(--s-1) var(--s-3); }
+  .case dt { color: var(--text-dim); } .case dd { margin: 0; }
+  .ve-mini .st { fill: var(--surface); stroke: var(--border-bright); stroke-width: 1.25; }
+  .ve-mini .st.is-st { fill: var(--accent-dim); stroke: var(--st); stroke-width: 2; }
+  .ve-mini text { font-size: 14px; fill: var(--text); text-anchor: middle; }
+  .ve-mini .mech { text-anchor: start; fill: var(--text-dim); }
+  .ve-mini .ar { stroke: var(--border-bright); stroke-width: 1.25; }
+  /* metrics dashboard */
+  .dash { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); border: 1px solid var(--border); border-radius: var(--r-2); overflow: hidden; }
+  .dash > div { padding: var(--s-4); border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); display: grid; gap: var(--s-2); align-content: start; }
+  .dash .v { font-size: var(--t-h2); font-weight: 600; font-variant-numeric: tabular-nums; line-height: 1.1; }
+  .dash .v small { font-size: var(--t-small); font-weight: 400; color: var(--text-dim); }
+  .dash .alert { font-size: var(--t-small); color: var(--text-dim); border-top: 1px dashed var(--border-bright); padding-top: var(--s-2); }
+  .dash .alert b { color: var(--risk); font-weight: 600; }
+  .lists { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--s-6); }
+  .lists ul, .lists ol { margin: var(--s-3) 0 0; padding-left: 1.2rem; font-size: var(--t-small); }
+  .lists li { margin-bottom: var(--s-2); }
+  .lists h3 { margin: 0; font-size: var(--t-body); }
+  .shapes { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--s-4); }
+  .shape { border-top: 1px solid var(--border-bright); padding-top: var(--s-3); font-size: var(--t-small); }
+  .shape h3 { margin: 0 0 var(--s-2); font-size: var(--t-body); }
+  .shape .demo { font-family: var(--mono); font-size: 12px; background: var(--surface); border-radius: var(--r-1); padding: var(--s-2) var(--s-3); color: var(--text-dim); margin-bottom: var(--s-2); white-space: pre-line; }
+  .co { background: var(--surface); border-radius: var(--r-2); padding: var(--s-4); font-size: var(--t-small); }
+  .co h3 { margin: 0 0 var(--s-2); font-size: var(--t-body); display: flex; gap: var(--s-3); align-items: center; }
+  .co p { margin: 0; }
+  .cost .seg { stroke: var(--bg); stroke-width: 1; }
+  .cost .s1 { fill: var(--accent); } .cost .s2 { fill: var(--border-bright); } .cost .s3 { fill: var(--text-dim); } .cost .s4 { fill: var(--border); }
+</style>
+</head>
+<body><main>
+<header>
+  <p class="crumbs"><a href="index.html">← Overview</a> · <a href="../DESIGN.md">Rendered from DESIGN.md</a> · <a href="pharmassist-v2.html">The system explainer</a></p>
+  <p class="eyebrow">PharmAssist · design</p>
+  <h1>Every answer is cited, or it is exactly <span class="num">“No answer found in knowledge base”</span></h1>
+  <p class="lead">One pharmacy operations question at a time, answered from the 11 public VA, Medicare Part D and NY Medicaid documents in the corpus. <b>Accuracy 0.85 with 0 incorrect, groundedness 0.937, 21.4 s at p95 against 30 s, $0.110 per fresh question.</b> Nothing below is estimated unless it says so.</p>
+  <p class="meta">golden set, 20 questions · <code>reports/evals/v2_2026-10-18_0903/summary.md</code> · live at pharmassist.aishwaryabhanage.com</p>
+</header>
+
+<nav class="toc" aria-label="Sections"><ol>
+  <li><a href="#brief">1 Brief</a></li><li><a href="#decisions">2 Decisions</a></li><li><a href="#risks">3 Risks</a></li><li><a href="#metrics">4 Metrics</a></li>
+  <li><a href="#tests">5 Test plan</a></li><li><a href="#ai">6 AI usage</a></li><li><a href="#tools">7 Tools</a></li><li><a href="#cut">Cut / next</a></li>
+  <li><a href="#architecture">Architecture</a></li><li><a href="#quality">Quality</a></li><li><a href="#improve">Improvement</a></li><li><a href="#output">Output shape</a></li>
+</ol></nav>
+
+<!-- ======================= 1. BRIEF ======================= -->
+<section id="brief">
+<figure>
+  <div class="frame"><svg class="ve-svg" viewBox="0 0 1000 340" role="img" aria-label="The brief as one picture: a pharmacist's question enters PharmAssist, which reads only the 11 public documents with at most 6 lookups in 25 seconds, and leaves as either a cited answer of 60 to 120 words or the exact sentence No answer found in knowledge base. A dashed box lists what is not solved: multi-turn chat, patient-specific advice, documents outside the corpus, live payer systems.">
+    <rect class="bnd" x="300" y="30" width="400" height="200" rx="6"/><text class="bnd-l" x="308" y="44">corpus: 11 public documents · VA, Medicare Part D, NY Medicaid</text>
+    <!-- edges -->
+    <path class="ve-e is-hot" d="M180 120H325"/><text class="ve-el" x="252" y="110">one question</text>
+    <path class="ve-e is-hot" d="M555 105H790"/><text class="ve-el" x="672" y="95">answered + cited</text>
+    <path class="ve-e" d="M555 135H660V250H790"/><text class="ve-el" x="672" y="241">anything else</text>
+    <!-- nodes -->
+    <g class="ve-n"><rect class="sh" x="40" y="93" width="140" height="54" rx="6"/><text x="110" y="114">Pharmacy staff</text><text class="sub" x="110" y="132">knows the acronyms</text></g>
+    <g class="ve-n is-key"><rect class="sh" x="325" y="78" width="230" height="84" rx="6"/><text x="440" y="104">PharmAssist agent</text><text class="sub" x="440" y="122">≤ 6 lookups · 25 s deadline</text><text class="sub" x="440" y="140">gpt-5.5, Sonnet on failure</text></g>
+    <text class="tn" x="325" y="190">program inferred, assumption stated first</text>
+    <text class="tn" x="325" y="208">conflicts: fixed precedence rule, named</text>
+    <g class="ve-n"><rect class="sh" x="790" y="60" width="190" height="90" rx="6"/><text x="885" y="84">Cited answer</text><text class="sub" x="885" y="102">60–120 words</text><text class="sub" x="885" y="120">steps for processes</text><text class="sub" x="885" y="138">a table for coverage</text></g>
+    <g class="ve-n"><rect class="sh" x="790" y="222" width="190" height="56" rx="6"/><text x="885" y="244">“No answer found</text><text x="885" y="262">in knowledge base”</text></g>
+    <!-- not solved -->
+    <rect class="bnd" x="40" y="212" width="250" height="84" rx="6"/><text class="bnd-l" x="48" y="226">not solved, by design</text>
+    <text class="tn" x="48" y="244">multi-turn chat · clarifying questions</text>
+    <text class="tn" x="48" y="260">patient-specific advice · live payer systems</text>
+    <text class="tn" x="48" y="276">documents outside the corpus</text>
+    <text class="tn" x="48" y="292">non-pharmacy questions → out_of_scope</text>
+    <!-- dimension -->
+    <g class="ve-dim is-key"><path class="ext" d="M180 306V328M980 306V328"/><path class="ln" d="M180 322H980M176 326l8-8M976 326l8-8"/><text x="580" y="316">under 30 s · measured p95 21.4 s</text></g>
+  </svg></div>
+  <figcaption><span class="fig-n">Fig. 1</span>One question in, one answer out: either cited to a page or row, or the exact no-answer sentence; no clarifying turn, no patient data, no document outside the corpus.</figcaption>
+</figure>
+<p class="note">Roles: <code>staff</code> ask and rate; <code>admin</code> see every conversation, manage documents, watch spend (<code>app/auth.py</code>, <code>app/admin.py</code>). The alternative today is reading the manual. Scoped outcomes: <code>REQUIREMENTS.md</code>; the <code>out_of_scope</code> status: <code>docs/PROMPTS.md</code>.</p>
+</section>
+
+<!-- ======================= 2. DECISIONS ======================= -->
+<section id="decisions">
+<div class="sec-head"><p class="ve-label caps">2 · Decisions</p><h2>Nine decisions, each with the alternative that was measured or rejected</h2></div>
+<div class="tbl"><table>
+  <thead><tr><th>Decision</th><th>Chosen</th><th>Alternative, and why rejected</th></tr></thead>
+  <tbody>
+    <tr><td>Model</td><td><code>gpt-5.5</code> first, <code>claude-sonnet-5-5</code> on failure (<code>src/pharmassist/llm/router.py</code>)</td><td>Sonnet-only (v1): 0.925 with the reranker, 0.85 without, same as gpt-5.5 (<a href="evaluation.html#history">EVALUATION.md §3.1</a>). OpenAI as the primary provider was a project constraint</td></tr>
+    <tr><td>Agent vs pipeline</td><td>Tool loop, at most 6 lookups, 25 s deadline (<code>src/pharmassist/agent/loop.py</code>)</td><td>A fixed retrieve-then-generate pipeline (v1) cannot decide that a question needs a formulary row, policy text and a second search</td></tr>
+    <tr><td>Retrieval unit</td><td>Child chunks (350 tokens) matched, parent sections (≤ 1,500 tokens) returned; exact table rows; interpreted figures</td><td>Fixed 350-token chunks: Recall@10 0.713 vs 0.833, same embedder (<a href="evaluation.html#retrieval">EVALUATION.md §3.4</a>)</td></tr>
+    <tr><td>Search</td><td>pgvector (Postgres extension for embeddings) + Postgres full-text, fused with RRF (reciprocal rank fusion) (<code>src/pharmassist/search/hybrid.py</code>)</td><td>Pinecone + BM25 files (v1): identical recall in a parity test, one more vendor</td></tr>
+    <tr><td>Reranker</td><td>Off</td><td><code>bge-reranker-large</code>: 19 s per search on CPU, 5 answers over 30 s; <code>bge-reranker-base</code>: 0.70 vs 0.85 without (<a href="evaluation.html#reading">EVALUATION.md §4.2</a>)</td></tr>
+    <tr><td>Answer checking</td><td>Live: a citation must point at a page or row a tool returned this request, else no answer. Everything else offline</td><td>A live claim-by-claim gate: accuracy 0.875 → 0.300, abstaining on 13 of 19 answerable questions (<a href="evaluation.html#reading">EVALUATION.md §4.3</a>)</td></tr>
+    <tr><td>Cache</td><td>Valkey; cosine ≥ 0.90 returns the stored answer and citations; dropped on index change (<code>src/pharmassist/cache/valkey.py</code>)</td><td>Exact-string cache never hits on pharmacist phrasing; a lower threshold conflates “max dose” with “starting dose” (paraphrases 0.86–0.89, <code>docs/CACHE.md</code>)</td></tr>
+    <tr><td>Store</td><td>One PostgreSQL 16 database for everything persistent (<code>src/pharmassist/store/pg.py</code>)</td><td>DynamoDB + Pinecone + S3 index files (v1): three consistency stories for one corpus</td></tr>
+    <tr><td>Ingestion</td><td>Upload → S3 → SQS → Fargate worker, one task kept warm (<code>WorkerMinCount</code>, <code>deploy/aws/v2/template.yaml</code>)</td><td>Scale-to-zero saved ≈ $144/month but an upload waited for a cold start: 15 s to active (<code>evidence/live_check_2026-10-18.log</code>) vs 5 s warm (production run 2026-10-18, admin API)</td></tr>
+  </tbody>
+</table></div>
+<p class="note">Prompt stance (<code>docs/PROMPTS.md</code>): answer only from returned text; state the program assumption; apply the precedence rule and name it; distinguish “covered but silent on X” from “not in the documents”.</p>
+</section>
+
+<!-- ======================= 3. RISKS ======================= -->
+<section id="risks">
+<div class="sec-head"><p class="ve-label caps">3 · Risks</p><h2>Ten failure modes, each with the stage where it breaks, the guard, and what was measured</h2></div>
+<div class="cases">
+  <div class="case" data-st="warn"><span class="chip warn">write</span><h3>Unsupported claims</h3>
+    <svg class="ve-mini" viewBox="0 0 240 128" role="img" aria-label="Breaks at the write stage"><rect class="st" x="2" y="14" width="44" height="30" rx="4"/><text x="24" y="34">ask</text><rect class="st" x="50" y="14" width="44" height="30" rx="4"/><text x="72" y="34">cache</text><rect class="st" x="98" y="14" width="44" height="30" rx="4"/><text x="120" y="34">find</text><rect class="st is-st" x="146" y="14" width="44" height="30" rx="4"/><text x="168" y="34">write</text><rect class="st" x="194" y="14" width="44" height="30" rx="4"/><text x="216" y="34">check</text><text class="mech" x="2" y="80">3 of 20 answers held a claim</text><text class="mech" x="2" y="98">the judge could not support</text><text class="mech" x="2" y="116">visual: 0.614 (image pages)</text></svg>
+    <dl><dt>Guard</dt><dd>citations checked in code; judge offline</dd><dt>Measured</dt><dd>3/20 (<code>v2_2026-10-18_0903/summary.md</code>); flowchart pages read as a heading (EVALUATION.md §4.5)</dd></dl></div>
+  <div class="case" data-st="warn"><span class="chip warn">find</span><h3>Effective dates</h3>
+    <svg class="ve-mini" viewBox="0 0 240 128" role="img" aria-label="Breaks at the find stage"><rect class="st" x="2" y="14" width="44" height="30" rx="4"/><text x="24" y="34">ask</text><rect class="st" x="50" y="14" width="44" height="30" rx="4"/><text x="72" y="34">cache</text><rect class="st is-st" x="98" y="14" width="44" height="30" rx="4"/><text x="120" y="34">find</text><rect class="st" x="146" y="14" width="44" height="30" rx="4"/><text x="168" y="34">write</text><rect class="st" x="194" y="14" width="44" height="30" rx="4"/><text x="216" y="34">check</text><text class="mech" x="2" y="80">NY PDL prints future changes</text><text class="mech" x="2" y="98">Q15: a 10/22/2026 status</text><text class="mech" x="2" y="116">stated as current</text></svg>
+    <dl><dt>Guard</dt><dd>none yet; dates as a PDL-row field is next</dd><dt>Measured</dt><dd>Q15 (<code>v2_2026-10-18_0903/results.csv</code>)</dd></dl></div>
+  <div class="case" data-st="warn"><span class="chip warn">cache</span><h3>Cache false positives</h3>
+    <svg class="ve-mini" viewBox="0 0 240 128" role="img" aria-label="Breaks at the cache stage"><rect class="st" x="2" y="14" width="44" height="30" rx="4"/><text x="24" y="34">ask</text><rect class="st is-st" x="50" y="14" width="44" height="30" rx="4"/><text x="72" y="34">cache</text><rect class="st" x="98" y="14" width="44" height="30" rx="4"/><text x="120" y="34">find</text><rect class="st" x="146" y="14" width="44" height="30" rx="4"/><text x="168" y="34">write</text><rect class="st" x="194" y="14" width="44" height="30" rx="4"/><text x="216" y="34">check</text><text class="mech" x="2" y="80">a 0.90 match returns</text><text class="mech" x="2" y="98">another question's answer</text></svg>
+    <dl><dt>Guard</dt><dd>hit shows the matched question; entries die with the index generation; admins clear the cache</dd><dt>Measured</dt><dd>paraphrases 0.86–0.89 (<code>docs/CACHE.md</code>)</dd></dl></div>
+  <div class="case" data-st="ok"><span class="chip ok">write</span><h3>Latency</h3>
+    <svg class="ve-mini" viewBox="0 0 240 128" role="img" aria-label="Breaks at the write stage"><rect class="st" x="2" y="14" width="44" height="30" rx="4"/><text x="24" y="34">ask</text><rect class="st" x="50" y="14" width="44" height="30" rx="4"/><text x="72" y="34">cache</text><rect class="st" x="98" y="14" width="44" height="30" rx="4"/><text x="120" y="34">find</text><rect class="st is-st" x="146" y="14" width="44" height="30" rx="4"/><text x="168" y="34">write</text><rect class="st" x="194" y="14" width="44" height="30" rx="4"/><text x="216" y="34">check</text><text class="mech" x="2" y="80">p95 21.4 s against 30 s</text><text class="mech" x="2" y="98">2–3 sequential model turns</text></svg>
+    <dl><dt>Guard</dt><dd>each model call gets only the time remaining; a timeout falls back to Sonnet (<code>agent/loop.py</code>)</dd><dt>Measured</dt><dd>0 questions over 30 s in both eval runs</dd></dl></div>
+  <div class="case" data-st="ok"><span class="chip ok">write</span><h3>Cost</h3>
+    <svg class="ve-mini" viewBox="0 0 240 128" role="img" aria-label="Breaks at the write stage"><rect class="st" x="2" y="14" width="44" height="30" rx="4"/><text x="24" y="34">ask</text><rect class="st" x="50" y="14" width="44" height="30" rx="4"/><text x="72" y="34">cache</text><rect class="st" x="98" y="14" width="44" height="30" rx="4"/><text x="120" y="34">find</text><rect class="st is-st" x="146" y="14" width="44" height="30" rx="4"/><text x="168" y="34">write</text><rect class="st" x="194" y="14" width="44" height="30" rx="4"/><text x="216" y="34">check</text><text class="mech" x="2" y="80">$0.015–0.38 per question</text><text class="mech" x="2" y="98">(Q11 vs Q07, traces/)</text></svg>
+    <dl><dt>Guard</dt><dd>10/min and 100/day per user, 500/day global, $10/day spend (<code>config.yaml</code> <code>limits_v2</code>); WAF 300 requests per 5 min per IP</dd><dt>Measured</dt><dd>mean $0.110</dd></dl></div>
+  <div class="case" data-st="warn"><span class="chip warn">find</span><h3>Prompt injection through documents</h3>
+    <svg class="ve-mini" viewBox="0 0 240 128" role="img" aria-label="Breaks at the find stage"><rect class="st" x="2" y="14" width="44" height="30" rx="4"/><text x="24" y="34">ask</text><rect class="st" x="50" y="14" width="44" height="30" rx="4"/><text x="72" y="34">cache</text><rect class="st is-st" x="98" y="14" width="44" height="30" rx="4"/><text x="120" y="34">find</text><rect class="st" x="146" y="14" width="44" height="30" rx="4"/><text x="168" y="34">write</text><rect class="st" x="194" y="14" width="44" height="30" rx="4"/><text x="216" y="34">check</text><text class="mech" x="2" y="80">uploaded text is evidence</text><text class="mech" x="2" y="98">the model reads</text></svg>
+    <dl><dt>Guard</dt><dd>read-only tools, admin-only type-sniffed uploads, a markdown sanitizer, citations checked in code (<code>agent/tools.py</code>)</dd><dt>Measured</dt><dd>containment only; no injection eval</dd></dl></div>
+  <div class="case" data-st="ok"><span class="chip ok">write</span><h3>Unsafe output</h3>
+    <svg class="ve-mini" viewBox="0 0 240 128" role="img" aria-label="Breaks at the write stage"><rect class="st" x="2" y="14" width="44" height="30" rx="4"/><text x="24" y="34">ask</text><rect class="st" x="50" y="14" width="44" height="30" rx="4"/><text x="72" y="34">cache</text><rect class="st" x="98" y="14" width="44" height="30" rx="4"/><text x="120" y="34">find</text><rect class="st is-st" x="146" y="14" width="44" height="30" rx="4"/><text x="168" y="34">write</text><rect class="st" x="194" y="14" width="44" height="30" rx="4"/><text x="216" y="34">check</text><text class="mech" x="2" y="80">guidance is quoted, not</text><text class="mech" x="2" y="98">generated; the risk is omission</text></svg>
+    <dl><dt>Guard</dt><dd>answer only from returned text</dd><dt>Measured</dt><dd>Q06 omits the “avoid the combination” advice (<a href="examples.html#partials">EXAMPLES.md</a>)</dd></dl></div>
+  <div class="case" data-st="warn"><span class="chip warn">check</span><h3>Silent failures</h3>
+    <svg class="ve-mini" viewBox="0 0 240 128" role="img" aria-label="Breaks at the check stage"><rect class="st" x="2" y="14" width="44" height="30" rx="4"/><text x="24" y="34">ask</text><rect class="st" x="50" y="14" width="44" height="30" rx="4"/><text x="72" y="34">cache</text><rect class="st" x="98" y="14" width="44" height="30" rx="4"/><text x="120" y="34">find</text><rect class="st" x="146" y="14" width="44" height="30" rx="4"/><text x="168" y="34">write</text><rect class="st is-st" x="194" y="14" width="44" height="30" rx="4"/><text x="216" y="34">check</text><text class="mech" x="2" y="80">two slipped through:</text><text class="mech" x="2" y="98">a health banner that never cleared</text><text class="mech" x="2" y="116">a scanned PDF failing at chunking</text></svg>
+    <dl><dt>Guard</dt><dd>fallback flagged; failed ingestion in a dead-letter queue with the error in the admin UI; <code>/health/ready</code> checks Postgres, Valkey, S3</dd><dt>Measured</dt><dd>both fixed on 2026-10-18</dd></dl></div>
+  <div class="case" data-st="ok"><span class="chip ok">deploy</span><h3>Deployment</h3>
+    <svg class="ve-mini" viewBox="0 0 240 128" role="img" aria-label="Breaks before the pipeline, at deployment"><rect class="st is-st" x="2" y="14" width="68" height="30" rx="4"/><text x="36" y="34">deploy</text><path class="ar" d="M70 29H98"/><rect class="st" x="98" y="14" width="44" height="30" rx="4"/><text x="120" y="34">ask</text><rect class="st" x="146" y="14" width="44" height="30" rx="4"/><text x="168" y="34">find</text><rect class="st" x="194" y="14" width="44" height="30" rx="4"/><text x="216" y="34">write</text><text class="mech" x="2" y="80">five stack-creation attempts,</text><text class="mech" x="2" y="98">one IAM gap each</text></svg>
+    <dl><dt>Guard</dt><dd><code>deploy/aws/v2/bootstrap.sh</code> pre-creates the roles</dd><dt>Measured</dt><dd>5 attempts</dd></dl></div>
+  <div class="case" data-st="warn"><span class="chip warn">trace</span><h3>Privacy</h3>
+    <svg class="ve-mini" viewBox="0 0 240 128" role="img" aria-label="Breaks after the pipeline, in tracing"><rect class="st" x="2" y="14" width="44" height="30" rx="4"/><text x="24" y="34">ask</text><rect class="st" x="50" y="14" width="44" height="30" rx="4"/><text x="72" y="34">find</text><rect class="st" x="98" y="14" width="44" height="30" rx="4"/><text x="120" y="34">write</text><rect class="st" x="146" y="14" width="44" height="30" rx="4"/><text x="168" y="34">check</text><path class="ar" d="M190 29H194"/><rect class="st is-st" x="194" y="14" width="44" height="30" rx="4"/><text x="216" y="34">trace</text><text class="mech" x="2" y="80">LangSmith receives question</text><text class="mech" x="2" y="98">and answer text</text></svg>
+    <dl><dt>Guard</dt><dd><code>tracing_v2.content: metadata</code> is one setting (<code>config.yaml</code>)</dd><dt>Measured</dt><dd>today <code>content: full</code></dd></dl></div>
+</div>
+</section>
+
+<!-- ======================= 4. METRICS ======================= -->
+<section id="metrics">
+<div class="sec-head"><p class="ve-label caps">4 · Metrics</p><h2>Eleven metrics with today's value and the alert that fires</h2></div>
+<figure>
+<div class="dash">
+  <div><span class="ve-label">Latency p50 / p95, uncached</span><span class="v">10.8 / 21.4 <small>s golden</small></span><span class="note">6.5 / 6.9 s visual</span><span class="alert">alert <b>p95 &gt; 25 s</b> over 15 min, or &gt; 2% over 30 s in 5 min</span></div>
+  <div><span class="ve-label">Cache-hit latency</span><span class="v">0.4 <small>s</small></span><span class="note">live-check log</span><span class="alert">alert <b>p95 &gt; 2 s</b></span></div>
+  <div><span class="ve-label">Cost per uncached question</span><span class="v">$0.110 <small>mean</small></span><span class="note"><code>v2_2026-10-18_0903/summary.md</code></span><span class="alert">alert <b>daily spend &gt; 70% of the $10 cap</b> before 18:00</span></div>
+  <div><span class="ve-label">Accuracy (judge, golden)</span><span class="v">0.85</span><ve-bars unit="" max="20" label="14 correct, 6 partial, 0 incorrect of 20"><ve-bar value="14" hot>correct</ve-bar><ve-bar value="6">partial</ve-bar><ve-bar value="0">incorrect</ve-bar></ve-bars><span class="alert">alert <b>&lt; 0.80</b>, or any <code>incorrect</code></span></div>
+  <div><span class="ve-label">Groundedness</span><span class="v">0.937 <small>golden</small></span><span class="note">0.614 visual</span><span class="alert">alert <b>&lt; 0.90</b> golden</span></div>
+  <div><span class="ve-label">Safe (no unsupported claim shown)</span><span class="v">17/20</span><ve-waffle value="85" note="3 not safe" label="17 of 20 answers show no unsupported claim; 3 do"></ve-waffle><span class="alert">alert <b>&lt; 16/20</b></span></div>
+  <div><span class="ve-label">No-answer rate</span><span class="v">3 of 13</span><span class="note">live session, off-corpus tests included</span><span class="alert">alert <b>&gt; 25%</b> in a day</span></div>
+  <div><span class="ve-label">Fallback rate</span><span class="v">0</span><span class="note">live session</span><span class="alert">alert <b>&gt; 10%</b> in an hour</span></div>
+  <div><span class="ve-label">Errors (5xx, timeouts)</span><span class="v">0 <small>over 30 s</small></span><span class="note">both eval runs</span><span class="alert">alert <b>&gt; 1%</b> in 5 min</span></div>
+  <div><span class="ve-label">Unhelpful ratings</span><span class="v">0 of 3</span><span class="note">live-check log</span><span class="alert">alert <b>&gt; 30%</b> of rated answers in a week</span></div>
+  <div><span class="ve-label">Ingestion, upload → active</span><span class="v">15 s <small>cold</small> · 5 s <small>warm</small></span><span class="note">live-check log; production run 2026-10-18</span><span class="alert">alert <b>any dead-letter message</b>; a job older than 30 min</span></div>
+</div>
+<figcaption><span class="fig-n">Fig. 2</span>Every metric today sits inside its alert band; the tightest margins are p95 latency (21.4 s against a 25 s alert) and Safe (17/20 against 16/20).</figcaption>
+</figure>
+<p class="note">Sources: LangSmith project <code>pharmassist</code> (one run per answer), <code>GET /api/v1/admin/stats</code>, CloudWatch. Metric definitions: <a href="evaluation.html#method">EVALUATION.md §2</a>.</p>
+</section>
+
+<!-- ======================= 5. TEST PLAN ======================= -->
+<section id="tests">
+<div class="sec-head"><p class="ve-label caps">5 · Test plan</p><h2>Tests gate the code, the acceptance table gates a release, and the live check gates production</h2></div>
+<figure>
+  <div class="frame"><svg class="ve-svg" viewBox="0 0 1000 380" role="img" aria-label="Test pipeline: 657 pytest tests and 28 frontend tests feed the evaluation run, whose acceptance table has six rules; a passing run is deployed and the live check against production must end ALL PASS. A model change re-runs both question sets; a corpus change re-runs the retrieval recall check. A CI job doing this on every merge is not built.">
+    <!-- edges -->
+    <path class="ve-e" d="M210 70H330"/><text class="ve-el" x="270" y="60">no network</text>
+    <path class="ve-e" d="M210 150H330"/><text class="ve-el" x="270" y="140">Vitest + MSW</text>
+    <path class="ve-e is-hot" d="M600 110H660"/><text class="ve-el" x="630" y="100">holds</text>
+    <path class="ve-e is-hot" d="M820 110H870"/><text class="ve-el" x="845" y="100">deploy</text>
+    <path class="ve-e is-async" d="M290 252H430V180"/>
+    <path class="ve-e is-async" d="M290 312H480V180"/>
+    <!-- nodes -->
+    <g class="ve-n"><rect class="sh" x="40" y="43" width="170" height="54" rx="6"/><text x="125" y="64">pytest · 657 tests</text><text class="sub" x="125" y="82">57 integration</text></g>
+    <g class="ve-n"><rect class="sh" x="40" y="123" width="170" height="54" rx="6"/><text x="125" y="144">frontend · 28 tests</text><text class="sub" x="125" y="162">frontend/src/test/</text></g>
+    <g class="ve-n is-key"><rect class="sh" x="330" y="40" width="270" height="140" rx="6"/><text x="465" y="62">run_eval.py · acceptance</text>
+      <text class="sub" x="465" y="84">accuracy ≥ 0.85, 0 incorrect</text><text class="sub" x="465" y="100">Q20: exact no-answer sentence</text><text class="sub" x="465" y="116">0 questions over 30 s</text><text class="sub" x="465" y="132">0 answers without citations</text><text class="sub" x="465" y="148">0 citations failing the check</text><text class="sub" x="465" y="164">≥ 18/20 within 60–120 words</text></g>
+    <g class="ve-n"><rect class="sh" x="660" y="76" width="160" height="68" rx="6"/><text x="740" y="98">production run</text><text class="sub" x="740" y="116">meets all six</text><text class="sub" x="740" y="132">19/20 on length</text></g>
+    <g class="ve-n"><rect class="sh" x="870" y="83" width="110" height="54" rx="6"/><text x="925" y="104">live check</text><text class="sub" x="925" y="122">ends ALL PASS</text></g>
+    <g class="ve-n"><rect class="sh" x="40" y="230" width="250" height="44" rx="6" stroke-dasharray="5 4"/><text x="165" y="248">model change</text><text class="sub" x="165" y="266">both sets · ≈ $5 + $1.25</text></g>
+    <g class="ve-n"><rect class="sh" x="40" y="290" width="250" height="44" rx="6" stroke-dasharray="5 4"/><text x="165" y="308">corpus change</text><text class="sub" x="165" y="326">generation bump · Recall@k</text></g>
+    <g class="ve-n"><rect class="sh" x="660" y="230" width="320" height="44" rx="6" stroke-dasharray="5 4"/><text x="820" y="248">CI job on every merge</text><text class="sub" x="820" y="266">not built</text></g>
+    <text class="tn" x="40" y="365">meta.json: dataset and prompt hashes, commit · model ids pinned in config.yaml · --rejudge re-scores under one judge</text>
+  </svg></div>
+  <figcaption><span class="fig-n">Fig. 3</span>A change ships only if the six-row acceptance table holds on the frozen golden set; the production run meets all six, 19/20 on length.</figcaption>
+</figure>
+<p class="note">Covered by tests: tool cap and deadline, citation check, no-answer rule, fallback with a fault-injected client, cache, auth, roles, limits, remove-from-index (<code>tests/test_admin.py</code>), scanned-PDF chunking (<code>tests/test_ingest_pipeline.py</code>), ingestion end to end (<code>pytest --collect-only -q</code>). Failure classes say which layer moved. Commands and frozen hashes: <a href="evaluation.html#data">EVALUATION.md §6</a>.</p>
+</section>
+
+<!-- ======================= 6. AI USAGE ======================= -->
+<section id="ai">
+<div class="sec-head"><p class="ve-label caps">6 · AI usage</p><h2>The AI wrote the code; the human set scope, made the cost calls and ran the real thing</h2></div>
+<div class="two">
+  <div class="co"><h3>What the AI did</h3><p>Claude Code (Claude Fable 5.1) as an orchestrator over parallel subagents in git worktrees: seven streams for v2 (data, llm, api, cache, ingest, frontend, infra) against shared contracts, then an integration pass. It wrote the code, tests, documentation, prompts and the evaluation harness.</p></div>
+  <div class="co"><h3>What the human did</h3><p>Set the scope; made the product and cost decisions (instance sizing, reranker off after seeing the numbers, the 0.90 threshold, the warm worker); reviewed every merge; ran the admin-only AWS and DNS steps.</p></div>
+</div>
+<p class="note">What failed: the frontend and its test mocks shared a wrong health path, so tests passed while the live banner was wrong; the ingestion image lacked a dependency that only showed in the real container; five IAM gaps, one per deploy attempt. Each was found by running the real thing, not by review.</p>
+</section>
+
+<!-- ======================= 7. TOOLS ======================= -->
+<section id="tools">
+<div class="sec-head"><p class="ve-label caps">7 · Tool selection</p><h2>Uncached input tokens are 76% of the $0.110 a question costs</h2></div>
+<figure>
+  <div class="frame"><svg class="ve-svg cost" viewBox="0 0 1000 250" role="img" aria-label="One stacked bar splits the mean cost of 0.110 dollars per question: uncached input 16,748 tokens at 5 dollars per million tokens is 0.084; cached input 11,827 tokens at 0.50 is 0.006; output including reasoning 682 tokens at 30 is 0.020; the question embedding about 30 tokens at 0.13 is under 0.001. A range line runs from 0.015 for Q11 to 0.382 for Q07.">
+    <text class="tn k" x="40" y="40">mean per question, 20 golden traces · tokens × price per Mtok</text>
+    <rect class="seg s1" x="40" y="60" width="611" height="40"/>
+    <rect class="seg s2" x="651" y="60" width="44" height="40"/>
+    <rect class="seg s3" x="695" y="60" width="145" height="40"/>
+    <rect class="seg s4" x="840" y="60" width="4" height="40"/>
+    <text class="tn k" x="40" y="122">uncached input · 16,748 × $5 = $0.084</text>
+    <text class="tn" x="651" y="122">cached · 11,827 × $0.50 = $0.006</text>
+    <text class="tn" x="695" y="140">output incl. reasoning · 682 × $30 = $0.020</text>
+    <text class="tn" x="40" y="140">embedding ≈ 30 × $0.13 &lt; $0.001</text>
+    <g class="ve-dim is-key"><path class="ext" d="M40 150V172M844 150V172"/><path class="ln" d="M40 166H844M36 170l8-8M840 170l8-8"/><text x="442" y="160">mean $0.110</text></g>
+    <!-- range -->
+    <text class="tn k" x="40" y="205">range per question</text>
+    <path class="rule" d="M200 220H980"/>
+    <circle cx="231" cy="220" r="5" fill="var(--text-dim)"/><text class="tn" x="200" y="243">$0.015 · Q11: one lookup, 1,085 input tokens</text>
+    <circle cx="425" cy="220" r="5" fill="var(--accent)"/><text class="tn" x="415" y="208">mean $0.110</text>
+    <circle cx="980" cy="220" r="5" fill="var(--text-dim)"/><text class="tn" x="980" y="243" text-anchor="end">$0.382 · Q07: four searches, 63,935 input tokens</text>
+  </svg></div>
+  <figcaption><span class="fig-n">Fig. 4</span>Of the $0.110 mean, $0.084 is uncached input, mostly parent sections of up to 1,500 tokens; a cache hit costs the embedding only.</figcaption>
+</figure>
+<div class="tbl"><table>
+  <thead><tr><th>Call</th><th>Model</th><th>Price per Mtok</th><th>Where</th></tr></thead>
+  <tbody>
+    <tr><td>Agent, primary</td><td><code>gpt-5.5</code>, effort medium</td><td>$5 in / $0.50 cached / $30 out</td><td>every uncached question</td></tr>
+    <tr><td>Agent, fallback</td><td><code>claude-sonnet-5-5</code></td><td>$2 / $0.20 / $10</td><td>transport error, 5xx, exhausted retries, timeout</td></tr>
+    <tr><td>Embeddings</td><td><code>text-embedding-3-large</code>, 3,072-d</td><td>$0.13</td><td>one per question; ingestion</td></tr>
+    <tr><td>Judge, offline</td><td><code>claude-opus-5-5</code>, 3 passes</td><td>$4 / $20</td><td>evaluations only</td></tr>
+    <tr><td>Figures, offline</td><td><code>claude-opus-5-5</code> vision</td><td>$4 / $20</td><td>once per non-decorative image at ingestion</td></tr>
+  </tbody>
+</table></div>
+<p class="note">Infrastructure: ≈ $197/month always on plus ≈ $144/month for the warm ingestion task (<code>deploy/aws/v2/README.md</code> “Cost”; <code>deploy/aws/v2/template.yaml</code> <code>WorkerMinCount</code>).</p>
+<div class="two" style="margin-top: var(--s-5)">
+  <div class="co"><h3><span class="chip warn">not measured</span>Cut cost 10×</h3><p>Return the matched child and let the model <code>read_page</code> for the rest: about 4× fewer input tokens. Then answer short coverage questions (Q11, Q12: under 2,000 input tokens) with the fallback model at effort low, 2.5× cheaper per token. Config plus a tool-result formatter.</p></div>
+  <div class="co"><h3><span class="chip warn">not measured</span>Cut latency 2×</h3><p>The median question makes 2–3 sequential model turns. Run the search and both drug lookups on the original question before the first model call and put the results in the first prompt, so two-turn questions need one. Q11 (one turn) took 5.2 s against the 10.8 s median.</p></div>
+</div>
+</section>
+
+<!-- ======================= CUT / NEXT ======================= -->
+<section id="cut">
+<div class="sec-head"><p class="ve-label caps">Scope</p><h2>What was cut, and the nine things to build next</h2></div>
+<div class="lists">
+  <div><h3>Cut</h3><ul>
+    <li>Titan embeddings and the CI feedback loop (“later” in <code>REQUIREMENTS.md</code>)</li>
+    <li>A Playwright smoke test</li>
+    <li>The reranker (measured, off)</li>
+    <li>Per-claim citations</li>
+    <li>A selective gate on high-risk fields</li>
+    <li>Multi-turn follow-ups</li>
+    <li>A recorded forced-fallback eval (covered by tests with a fault-injected client)</li>
+    <li>Effective dates as a field on PDL rows</li>
+  </ul></div>
+  <div><h3>Next</h3><ol>
+    <li>Figure-derived answers: give the groundedness judge the figure interpretation for cited figure pages; cite the figure plus the appendix page where the algorithm is printed as text.</li>
+    <li>Effective dates on PDL rows, so “preferred as of 10/22/2026” is never stated as current.</li>
+    <li>The selective gate, measured against the 0.300 lesson: block only unsupported numbers and codes.</li>
+    <li>A nightly eval job posting the acceptance table; unhelpful ratings feeding the golden set.</li>
+    <li>The two §7 ideas, measured.</li>
+    <li><strong>Amazon Titan embeddings on Bedrock</strong>: re-run the retrieval experiment with <code>amazon.titan-embed-text-v2</code> beside <code>text-embedding-3-large</code>, same frozen set, keep the winner; embeddings stay inside the AWS account.</li>
+    <li><strong>Evaluating the agent’s tool decisions</strong>: check which tools were called, in what order, against what the gold pages imply, so a wrong route counts even when the answer is right.</li>
+    <li><strong>HIPAA readiness and PII handling</strong>: a PHI detector on the question before any model or trace sees it, tracing in metadata mode, a BAA or Bedrock-hosted models, per-user access logs and a retention period. Not measured.</li>
+    <li><strong>Retrieval beyond the fused search</strong>: multi-query expansion, step-back queries, HyDE and a GPU reranker, each a config flag plus one measured run.</li>
+  </ol></div>
+</div>
+</section>
+
+<!-- ======================= ARCHITECTURE ======================= -->
+<section id="architecture">
+<div class="sec-head"><p class="ve-label caps">Architecture</p><h2>The retrieval unit is the child chunk; the delivery unit is the parent section</h2></div>
+<figure>
+  <div class="frame"><svg class="ve-svg" viewBox="0 0 1000 462" role="img" aria-label="The retrieval unit: a document is split into 589 parent sections of up to 1,500 tokens, each into child chunks of 350 tokens with 100 overlap and a heading path, 1,983 in all. Hybrid search over pgvector and Postgres full-text, fused with RRF, matches children; the enclosing parent is returned to the agent. Formulary and PDL rows, 3,520, are exact lookups; 50 figures were interpreted once by a vision model and checked against OCR.">
+    <rect class="bnd" x="30" y="30" width="950" height="210" rx="6"/><text class="bnd-l" x="38" y="44">PostgreSQL 16 · one database · active versions only</text>
+    <!-- edges -->
+    <path class="ve-e" d="M170 120H220"/><text class="ve-el" x="195" y="110">split</text>
+    <path class="ve-e" d="M410 120H470"/><text class="ve-el" x="440" y="110">split</text>
+    <path class="ve-e" d="M470 150H410"/><text class="ve-el" x="440" y="170">parent</text>
+    <path class="ve-e is-hot" d="M570 290V160"/><text class="ve-el r" x="578" y="230">matches</text>
+    <path class="ve-e is-hot" d="M315 160V290"/><text class="ve-el r" x="323" y="230">parent returned</text>
+    <path class="ve-e" d="M470 332H410"/><text class="ve-el" x="440" y="322">results</text>
+    <path class="ve-e" d="M785 137V290"/><text class="ve-el r" x="793" y="220">exact match</text>
+    <path class="ve-e" d="M700 360H690V392H315V374"/><text class="ve-el" x="500" y="383">drug lookups</text>
+    <!-- nodes -->
+    <g class="ve-n"><rect class="sh" x="40" y="93" width="130" height="54" rx="6"/><text x="105" y="114">11 documents</text><text class="sub" x="105" y="132">PDF, XLSX</text></g>
+    <g class="ve-n"><rect class="sh" x="220" y="80" width="190" height="80" rx="6"/><text x="315" y="104">589 parents</text><text class="sub" x="315" y="122">≤ 1,500 tokens</text><text class="sub" x="315" y="140">what the model reads</text></g>
+    <g class="ve-n is-key"><rect class="sh" x="470" y="80" width="200" height="80" rx="6"/><text x="570" y="104">1,983 children</text><text class="sub" x="570" y="122">350 tokens, 100 overlap</text><text class="sub" x="570" y="140">heading path prefix</text></g>
+    <g class="ve-n"><rect class="sh" x="720" y="83" width="130" height="54" rx="6"/><text x="785" y="104">3,520 rows</text><text class="sub" x="785" y="122">formulary + PDL</text></g>
+    <g class="ve-n"><rect class="sh" x="860" y="83" width="120" height="70" rx="6"/><text x="920" y="104">50 figures</text><text class="sub" x="920" y="122">vision + OCR</text><text class="sub" x="920" y="138">decision paths</text></g>
+    <g class="ve-n"><rect class="sh" x="220" y="290" width="190" height="84" rx="6"/><text x="315" y="316">Agent</text><text class="sub" x="315" y="334">reads the parent</text><text class="sub" x="315" y="350">cites page or row</text></g>
+    <g class="ve-n"><rect class="sh" x="470" y="290" width="200" height="84" rx="6"/><text x="570" y="316">Hybrid search</text><text class="sub" x="570" y="334">dense + full-text</text><text class="sub" x="570" y="350">HNSW + GIN, fused RRF</text></g>
+    <g class="ve-n"><rect class="sh" x="700" y="290" width="280" height="84" rx="6"/><text x="840" y="316">Drug lookup tools</text><text class="sub" x="840" y="334">lookup_va_formulary</text><text class="sub" x="840" y="350">lookup_ny_medicaid_drug</text></g>
+    <text class="tn" x="40" y="414">heading path example: “4.2 Prior Authorization &gt; Refills” · fuzzy drug names; no_matching_row never means “not covered”</text>
+    <text class="tn" x="40" y="432">each search runs the agent's query and the original question concurrently and fuses them: +0.075 accuracy</text>
+    <text class="tn" x="40" y="450">activating a new version supersedes the old in the same transaction and bumps the generation that invalidates the cache</text>
+  </svg></div>
+  <figcaption><span class="fig-n">Fig. 5</span>Children match precisely in dense and full-text search; the parent is what the model reads, so a rule arrives with its conditions and every page it spans is citable.</figcaption>
+</figure>
+<div class="two">
+  <figure>
+    <ve-bars unit="" max="1" label="Recall at 10 was 0.713 on fixed 350-token chunks and 0.833 on parent and child sections with the same embedder"><ve-bar value="0.713">fixed</ve-bar><ve-bar value="0.833" hot>sections</ve-bar></ve-bars>
+    <figcaption><span class="fig-n">Fig. 6</span>The retrieval experiment decided the unit: Recall@10 0.713 on fixed chunks, 0.833 on sections, same embedder, equal token budgets (<code>reports/retrieval/2026-10-16_0121/results.md</code>).</figcaption>
+  </figure>
+  <div class="co"><h3>Two kinds of content do not fit chunks</h3><p>Formulary and PDL rows live in <code>table_rows</code> because drug-specific PA questions ranked generic PA prose above the row that answered them. Figures are inventoried from the PDF, interpreted once by a vision model into boxes and labelled arrows, checked against an independent OCR, and chunked as complete decision paths (<code>reports/parsing/VISUAL_EXTRACTION.md</code>); the visual set scores 1.0 because of it.</p></div>
+</div>
+<div class="lists" style="margin-top: var(--s-5)">
+  <div><h3>Preprocessing facts that shaped the design</h3><ul>
+    <li>The VA/DoD algorithm flowcharts are raster images (diabetes pp. 21–22, opioids pp. 25–27) no text extractor sees; the appendices print the same algorithms as text.</li>
+    <li>The NYRx manual's table of contents is broken, so headings are found by bold font plus “N.0” numbering.</li>
+    <li>NY PDL rows come from a fixed-column extractor that reads the 6.96 pt effective-date markers by font size (<code>src/pharmassist/tables/ny_pdl.py</code>); all 1,522 rows were checked against the PDF (<code>tests/test_ny_pdl.py</code>).</li>
+  </ul></div>
+  <div><h3>Data model and search</h3><ul>
+    <li><code>documents</code> and <code>document_versions</code> (status <code>queued</code> → <code>parsing</code> → <code>chunking</code> → <code>embedding</code> → <code>active</code>), <code>chunks</code>, <code>parents</code>, <code>figures</code>, <code>table_rows</code>, <code>ingestion_jobs</code>, plus users, conversations, feedback and usage (<code>src/pharmassist/store/pg.py</code>).</li>
+    <li>Activating a new version supersedes the old one in the same transaction and bumps the generation that invalidates the cache.</li>
+    <li>Each search runs the agent's query and the original question concurrently and fuses them: +0.075 accuracy (EVALUATION.md §3.1, Oct 17 row).</li>
+    <li>Not built: summaries, concept articles, a graph. These questions are answered by specific sections and rows; a generated layer is one more thing to keep grounded.</li>
+  </ul></div>
+</div>
+</section>
+
+<!-- ======================= QUALITY ======================= -->
+<section id="quality">
+<div class="sec-head"><p class="ve-label caps">Quality</p><h2>Three hallucination detectors: one in the prompt, one in code, the rest offline</h2></div>
+<figure>
+  <div class="frame"><svg class="ve-svg" viewBox="0 0 1000 330" role="img" aria-label="Three detectors along the answer path. Detector 1, in the prompt: silence versus absence is explicit, tested by Q09 and Q19. Detector 2, in code, after the model submits: the status must be answered and at least one citation must point at a page or row a tool returned in this request; anything else becomes the fixed no-answer sentence and is never cached. Detector 3, offline, after delivery: deterministic checks on values, dates, phone numbers and row status, plus the judge's unsupported-claim list.">
+    <!-- edges -->
+    <path class="ve-e is-hot" d="M170 100H230"/><text class="ve-el" x="200" y="90">prompt</text>
+    <path class="ve-e is-hot" d="M420 100H480"/><text class="ve-el" x="450" y="90">submit</text>
+    <path class="ve-e is-hot" d="M700 87H760"/><text class="ve-el" x="730" y="77">passes</text>
+    <path class="ve-e" d="M700 130H730V230H760"/><text class="ve-el" x="745" y="250">fails</text>
+    <path class="ve-e is-async" d="M590 150V296H760"/><text class="ve-el" x="675" y="287">saved trace</text>
+    <!-- callouts -->
+    <g class="ve-co" transform="translate(325 48)"><circle r="11"/><text>1</text></g>
+    <g class="ve-co" transform="translate(590 48)"><circle r="11"/><text>2</text></g>
+    <g class="ve-co" transform="translate(590 230)"><circle r="11"/><text>3</text></g>
+    <!-- nodes -->
+    <g class="ve-n"><rect class="sh" x="40" y="73" width="130" height="54" rx="6"/><text x="105" y="94">Tools return</text><text class="sub" x="105" y="112">pages, rows</text></g>
+    <g class="ve-n"><rect class="sh" x="230" y="65" width="190" height="70" rx="6"/><text x="325" y="89">Model writes</text><text class="sub" x="325" y="107">silent on X ≠ absent</text><text class="sub" x="325" y="123">Q09, Q19 correct</text></g>
+    <g class="ve-n is-key"><rect class="sh" x="480" y="65" width="220" height="85" rx="6"/><text x="590" y="89">Citation check, in code</text><text class="sub" x="590" y="107">status == answered</text><text class="sub" x="590" y="123">citation ∈ returned</text><text class="sub" x="590" y="139">answer_service.py</text></g>
+    <g class="ve-n"><rect class="sh" x="760" y="60" width="220" height="55" rx="6"/><text x="870" y="82">Cited answer</text><text class="sub" x="870" y="100">cached, traced</text></g>
+    <g class="ve-n"><rect class="sh" x="760" y="195" width="220" height="70" rx="6"/><text x="870" y="217">“No answer found</text><text x="870" y="235">in knowledge base”</text><text class="sub" x="870" y="253">never cached</text></g>
+    <g class="ve-n"><rect class="sh" x="760" y="272" width="220" height="48" rx="6" stroke-dasharray="5 4"/><text x="870" y="291">Offline checks</text><text class="sub" x="870" y="309">verify.py + judge list</text></g>
+    <text class="tn" x="40" y="180">① in the prompt   ② in code, live   ③ offline on saved traces, never while answering</text>
+    <text class="tn" x="40" y="198">measured: 0 answers without citations · 0 citations failing the check</text>
+    <text class="tn" x="40" y="216">Q20 declined correctly · the no-answer result is never cached</text>
+  </svg></div>
+  <figcaption><span class="fig-n">Fig. 7</span>Only the citation check runs live; the prompt separates silence from absence, and every other check scores saved traces so no checker can abstain on an answerable question.</figcaption>
+</figure>
+<div class="two">
+  <figure>
+    <ve-bars unit="" max="1" label="The ungated agent scored 0.875 and the live claim-by-claim gate 0.300 on the same 20 questions"><ve-bar value="0.875" hot>ungated</ve-bar><ve-bar value="0.3">live gate</ve-bar></ve-bars>
+    <figcaption><span class="fig-n">Fig. 8</span>The live gate was measured and removed: 0.300 against 0.875, abstaining on answerable questions far more often than it caught a fabrication (EVALUATION.md §4.3).</figcaption>
+  </figure>
+  <div class="co"><h3>How groundedness is measured</h3><p>Offline: a Claude Opus judge splits each answer into claims and checks each against the text of the cited pages and rows only, three passes, median taken (<code>src/pharmassist/eval/judge.py</code>; <code>docs/PROMPTS.md</code> §2). Reported as supported claims / claims (0.937) and as Safe, answers with zero unsupported claims (17/20). DeepEval (judge <code>claude-sonnet-5-5</code>) ranks the versions the same way and scores 0.98–1.0 everywhere because it penalises contradiction, not missing support; the harness numbers are the strict ones. Regression testing is §5; two answer-side improvements were measured under its rule and left off because accuracy did not rise (EVALUATION.md §4.5).</p></div>
+</div>
+</section>
+
+<!-- ======================= CONTINUOUS IMPROVEMENT ======================= -->
+<section id="improve">
+<div class="sec-head"><p class="ve-label caps">Continuous improvement</p><h2>Ratings, admin review and eval failure classes feed the corpus and the golden set</h2></div>
+<figure>
+  <div class="frame"><svg class="ve-svg" viewBox="0 0 1000 370" role="img" aria-label="The feedback loop. Staff rate answers with a reason and comment. Admins filter conversations by rating, user, date and text and see answer, citations, model and cost. Every evaluation classifies each miss by layer. A new document version supersedes the old in one transaction and drops the cache; a document can be removed from the index while keeping its file, and re-indexed in 5 seconds. Dashed, not built: a weekly inconsistency list from the conflicts_noted field and a clustering job turning no-answer questions and unhelpful ratings into a gap list.">
+    <!-- edges -->
+    <path class="ve-e is-hot" d="M170 100H230"/><text class="ve-el" x="200" y="90">rates</text>
+    <path class="ve-e is-hot" d="M430 100H490"/><text class="ve-el" x="460" y="90">filters</text>
+    <path class="ve-e is-hot" d="M670 100H730"/><text class="ve-el" x="700" y="90">decides</text>
+    <path class="ve-e is-hot" d="M855 127V231H450"/><text class="ve-el" x="650" y="249">new version</text>
+    <path class="ve-e" d="M350 231H170"/><text class="ve-el" x="260" y="222">serves</text>
+    <path class="ve-e" d="M105 200V127"/><text class="ve-el r" x="113" y="168">answers</text>
+    <path class="ve-e is-async" d="M105 254V324H490"/><text class="ve-el" x="300" y="315">conflicts_noted</text>
+    <!-- nodes -->
+    <g class="ve-n"><rect class="sh" x="40" y="73" width="130" height="54" rx="6"/><text x="105" y="94">Staff</text><text class="sub" x="105" y="112">rate + comment</text></g>
+    <g class="ve-n"><rect class="sh" x="230" y="65" width="200" height="70" rx="6"/><text x="330" y="89">Admin conversations</text><text class="sub" x="330" y="107">rating, user, date, text</text><text class="sub" x="330" y="123">answer, citations, cost</text></g>
+    <g class="ve-n"><rect class="sh" x="490" y="65" width="180" height="70" rx="6"/><text x="580" y="89">Eval run</text><text class="sub" x="580" y="107">misses by layer</text><text class="sub" x="580" y="123">golden set grows</text></g>
+    <g class="ve-n is-key"><rect class="sh" x="730" y="73" width="250" height="54" rx="6"/><text x="855" y="94">Admin: documents</text><text class="sub" x="855" y="112">upload · re-index · remove</text></g>
+    <g class="ve-n"><path class="sh" d="M350 212V250A50 9 0 0 0 450 250V212"/><ellipse class="sh lid" cx="400" cy="212" rx="50" ry="9"/><text x="400" y="232">Corpus</text><text class="sub" x="400" y="248">active only</text></g>
+    <g class="ve-n"><rect class="sh" x="40" y="200" width="130" height="54" rx="6"/><text x="105" y="221">Agent</text><text class="sub" x="105" y="239">reads the corpus</text></g>
+    <g class="ve-n"><rect class="sh" x="490" y="300" width="220" height="48" rx="6" stroke-dasharray="5 4"/><text x="600" y="319">weekly inconsistency list</text><text class="sub" x="600" y="337">document pairs · not built</text></g>
+    <g class="ve-n"><rect class="sh" x="740" y="300" width="240" height="48" rx="6" stroke-dasharray="5 4"/><text x="860" y="319">gap list · not built</text><text class="sub" x="860" y="337">no-answers + poor ratings</text></g>
+    <text class="tn" x="470" y="178">a new version supersedes the old in one</text>
+    <text class="tn" x="470" y="194">transaction and drops the cache</text>
+    <text class="tn" x="470" y="210">remove from index keeps the file · re-index 5 s</text>
+    <text class="tn" x="40" y="364">verified in production 2026-10-18: upload indexed in 5 s · remove returned 200 · question → no-answer · re-index 5 s · answerable again</text>
+  </svg></div>
+  <figcaption><span class="fig-n">Fig. 9</span>Built: ratings, admin review, failure classes, versioned documents with cache drop, remove-from-index; dashed: the two aggregation jobs that are next.</figcaption>
+</figure>
+<p class="note">Found in the corpus, not yet surfaced in the UI: the NY PDL gives the opioid PA threshold as “≥ 90 MME” in class rows and “&gt; 90 MME” in the fentanyl row; the 2020 and 2025 VA guides disagree on continuing a DPP-4 when prandial insulin starts (<a href="examples.html#q02">Q02</a> applies the rule and names it). Code: <code>app/admin.py</code>, <code>frontend/src/pages/admin/ConversationsPage.tsx</code>, <code>DELETE /api/v1/admin/documents/{id}/index</code>.</p>
+</section>
+
+<!-- ======================= OUTPUT SHAPE ======================= -->
+<section id="output">
+<div class="sec-head"><p class="ve-label caps">Output shape</p><h2>Five shipped shapes, and four that would help more than prose</h2></div>
+<figure>
+<div class="shapes">
+  <div class="shape"><h3>Assumption banner</h3><div class="demo">Assuming NY Medicaid/NYRx: …</div>shown when the program was inferred</div>
+  <div class="shape"><h3>Numbered steps</h3><div class="demo">1. 439-E4 Reason for Service = NP
+2. 420-DK Submission Clarification = 18</div>for processes: Q05, Q08, Q13</div>
+  <div class="shape"><h3>Table</h3><div class="demo">Product · Class · Status on 10/22/2026</div>for status changes: Q17; sanitized markdown</div>
+  <div class="shape"><h3>Citation</h3><div class="demo">NYRx PDL · p34 → opens the PDF at the page</div>with the figure crop and interpretation when the page has one (<code>CitationList.tsx</code>, <code>FigureNote.tsx</code>)</div>
+  <div class="shape"><h3>Badges</h3><div class="demo">cached · matched: “Is Trulicity preferred…”
+fallback · claude-sonnet-5-5</div>cached with the matched question; fallback model</div>
+</div>
+<figcaption><span class="fig-n">Fig. 10</span>What staff see today: an assumption first, steps or a table where the question is a process or a list, and a citation that opens the source page.</figcaption>
+</figure>
+<div class="lists"><div><h3>Would help more than prose</h3><ul>
+  <li>A fixed coverage card for drug questions (status, PA, QL, ST, effective date, copay) filled from the table row so no field is silently missing.</li>
+  <li>The answer's path drawn on the flowchart crop.</li>
+  <li>A claim-ready block for reject-code answers (field, value, condition).</li>
+  <li>A “what changes on date X” view for PDL updates.</li>
+</ul></div></div>
+</section>
+
+<section class="sources" aria-label="Sources"><p class="ve-label caps">Sources</p>
+<p><a href="../DESIGN.md">DESIGN.md</a> · <code>reports/evals/v2_2026-10-18_0903/summary.md</code>, <code>results.csv</code> · <code>reports/evals/v2_visual_2026-10-18_0916/summary.md</code> · <code>reports/retrieval/2026-10-16_0121/results.md</code> · <code>reports/parsing/VISUAL_EXTRACTION.md</code> · <code>traces/</code> · <code>evidence/live_check_2026-10-18.log</code> · <code>config.yaml</code> · <code>docs/PROMPTS.md</code>, <code>docs/CACHE.md</code> · <code>deploy/aws/v2/template.yaml</code>, <code>deploy/aws/v2/README.md</code> · <a href="../EVALUATION.md">EVALUATION.md</a> §3.1, §3.4, §4.2, §4.3, §4.5 · <a href="../EXAMPLES.md">EXAMPLES.md</a></p>
+</section>
+</main>
+<script>
+(() => {
+  const links = [...document.querySelectorAll('.toc a')];
+  const byId = new Map(links.map(a => [a.getAttribute('href').slice(1), a]));
+  const io = new IntersectionObserver(es => {
+    es.forEach(e => { if (e.isIntersecting) { links.forEach(a => a.classList.remove('on')); byId.get(e.target.id)?.classList.add('on');
+      try { history.replaceState(null, '', '#' + e.target.id); } catch (_) {} } });
+  }, { rootMargin: '-10% 0px -80% 0px' });
+  document.querySelectorAll('main > section[id]').forEach(s => io.observe(s));
+})();
+</script>
+</body>
+</html>

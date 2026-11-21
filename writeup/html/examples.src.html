@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en" data-register="paper">
+<head>
+<title>PharmAssist examples: eight answers verbatim, with the judge's verdict</title>
+<link rel="stylesheet" href="kit.css" data-ve-kit>
+<style>
+  .crumbs { display: flex; flex-wrap: wrap; gap: var(--s-4); font-size: var(--t-small); color: var(--text-dim); margin-bottom: var(--s-5); }
+  .crumbs a { color: var(--text-dim); }
+  .toc { position: sticky; top: 0; z-index: 3; background: var(--bg); border-bottom: 1px solid var(--border);
+         padding: var(--s-2) 0; margin-bottom: var(--s-6); }
+  .toc ol { display: flex; gap: var(--s-4); list-style: none; margin: 0; padding: 0; overflow-x: auto;
+            scrollbar-width: none; mask-image: linear-gradient(90deg, #000 92%, transparent); }
+  .toc a { white-space: nowrap; font-size: var(--t-small); color: var(--text-dim); text-decoration: none; }
+  .toc a.on { color: var(--accent); }
+  section { scroll-margin-top: 56px; }
+  .note { font-size: var(--t-small); color: var(--text-dim); max-width: 65ch; }
+  .tbl { overflow-x: auto; border: 1px solid var(--border); border-radius: var(--r-2); }
+  .tbl table { width: 100%; border-collapse: collapse; font-size: var(--t-small); }
+  .tbl th { text-align: left; font-weight: 500; color: var(--text-dim); background: var(--surface); padding: var(--s-3) var(--s-4); }
+  .tbl td { padding: var(--s-3) var(--s-4); border-top: 1px solid var(--border); vertical-align: top; }
+  .tbl td.n, .tbl th.n { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .tbl code, .sources p, .sources code, .note code, .qa code { overflow-wrap: anywhere; }
+  .two { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--s-6); align-items: start; }
+  .two > * { min-width: 0; }
+  /* card index */
+  .idx { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: var(--s-3); }
+  .idx a { display: grid; gap: var(--s-2); padding: var(--s-3); border: 1px solid var(--border); border-radius: var(--r-2); text-decoration: none; color: var(--text); background: var(--surface); }
+  .idx a:hover { border-color: var(--border-bright); }
+  .idx .id { font-family: var(--mono); font-size: var(--t-small); color: var(--text-dim); }
+  .idx .sh { font-size: var(--t-small); line-height: 1.3; }
+  /* Q/A card */
+  .qa { border-top: 2px solid var(--border-bright); padding-top: var(--s-4); margin-top: var(--s-7); }
+  .qa header { margin: 0 0 var(--s-4); display: flex; flex-wrap: wrap; gap: var(--s-3); align-items: baseline; }
+  .qa header h2 { margin: 0; font-size: var(--t-h2); }
+  .qa header .id { font-family: var(--mono); color: var(--text-dim); font-size: var(--t-small); }
+  .qa .meta { font-family: var(--mono); font-size: var(--t-small); color: var(--text-dim); margin-left: auto; font-variant-numeric: tabular-nums; }
+  .qa .cols { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: var(--s-6); align-items: start; }
+  @media (max-width: 800px) { .qa .cols { grid-template-columns: 1fr; } }
+  .qa .cols > * { min-width: 0; }
+  .qa blockquote, .qa .q, .qa .side { overflow-wrap: anywhere; }
+  .qa .q { font-size: var(--t-body); margin: 0 0 var(--s-4); }
+  .qa .q b { font-family: var(--mono); font-weight: 500; color: var(--text-dim); font-size: var(--t-small); display: block; margin-bottom: var(--s-1); }
+  .qa blockquote { margin: 0; padding: var(--s-4); background: var(--surface); border-radius: var(--r-2); font-size: var(--t-small); line-height: 1.55; }
+  .qa blockquote p { margin: 0 0 var(--s-3); } .qa blockquote p:last-child, .qa blockquote ol:last-child { margin-bottom: 0; }
+  .qa blockquote ol { margin: 0 0 var(--s-3); padding-left: 1.4rem; }
+  .qa blockquote table { border-collapse: collapse; width: 100%; margin: 0 0 var(--s-3); }
+  .qa blockquote th, .qa blockquote td { text-align: left; padding: var(--s-1) var(--s-3) var(--s-1) 0; border-bottom: 1px solid var(--border); vertical-align: top; }
+  .qa .side { display: grid; gap: var(--s-4); font-size: var(--t-small); }
+  .qa .side h3 { margin: 0 0 var(--s-2); font-size: var(--t-small); font-family: var(--mono); font-weight: 500; color: var(--text-dim); letter-spacing: .02em; }
+  .qa .side p { margin: 0; }
+  .qa .cites { display: flex; flex-wrap: wrap; gap: var(--s-2); }
+  .qa .cites code { font-size: 12px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-1); padding: 1px 6px; }
+  .qa .why { margin-top: var(--s-5); display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--s-4); }
+  .qa .why > div { background: var(--surface); border-radius: var(--r-2); padding: var(--s-4); font-size: var(--t-small); }
+  .qa .why h3 { margin: 0 0 var(--s-2); font-size: var(--t-body); display: flex; gap: var(--s-3); align-items: center; }
+  .qa .why p { margin: 0 0 var(--s-2); } .qa .why p:last-child { margin: 0; }
+  .qa .grade { font-size: var(--t-body); }
+</style>
+</head>
+<body><main>
+<header>
+  <p class="crumbs"><a href="index.html">← Overview</a> · <a href="../EXAMPLES.md">Rendered from EXAMPLES.md</a> · <a href="evaluation.html">Evaluation</a></p>
+  <p class="eyebrow">PharmAssist · examples</p>
+  <h1>Eight answers verbatim, <span class="num">three of them weak</span>, each with the judge's verdict</h1>
+  <p class="lead">Copied from the production evaluation results with the judge's grade and reason; nothing was re-run or edited. They cover every question shape the assistant is designed for: multi-document (Q03), synthesis and conflicts (Q02, Q03, Q07), structured data (Q08, Q17), silence vs absence (Q09, Q20), visual flowchart (V01). <b>Three answers are weak and each says where it fails, why, and how it would be fixed (Q13, V01, Q07).</b></p>
+  <p class="meta">agent <code>gpt-5.5</code>, fallback <code>claude-sonnet-5-5</code> · judge <code>claude-opus-5-5</code>, 3 passes · <code>reports/evals/v2_2026-10-18_0903/results.csv</code>, <code>v2_visual_2026-10-18_0916/results.csv</code></p>
+</header>
+
+<nav class="toc" aria-label="Sections"><ol>
+  <li><a href="#overview">Overview</a></li><li><a href="#q02">Q02</a></li><li><a href="#q03">Q03</a></li><li><a href="#q08">Q08</a></li><li><a href="#q09">Q09</a></li><li><a href="#q17">Q17</a></li><li><a href="#q20">Q20</a></li>
+  <li><a href="#q13">Q13 weak</a></li><li><a href="#v01">V01 weak</a></li><li><a href="#q07">Q07 weak</a></li><li><a href="#partials">Six partials</a></li>
+</ol></nav>
+
+<!-- ======================= OVERVIEW ======================= -->
+<section id="overview">
+<figure>
+  <div class="idx">
+    <a href="#q02"><span class="id">Q02</span><span class="chip ok">correct</span><span class="sh">conflict across versions</span></a>
+    <a href="#q03"><span class="id">Q03</span><span class="chip ok">correct</span><span class="sh">multi-document, apparent conflict</span></a>
+    <a href="#q08"><span class="id">Q08</span><span class="chip ok">correct</span><span class="sh">structured: claim code + policy</span></a>
+    <a href="#q09"><span class="id">Q09</span><span class="chip ok">correct</span><span class="sh">silence vs absence</span></a>
+    <a href="#q17"><span class="id">Q17</span><span class="chip ok">correct</span><span class="sh">structured: effective dates, table</span></a>
+    <a href="#q20"><span class="id">Q20</span><span class="chip ok">correct</span><span class="sh">absence: off-corpus, declined</span></a>
+    <a href="#q13"><span class="id">Q13</span><span class="chip warn">partial</span><span class="sh">prior auth process · weak</span></a>
+    <a href="#v01"><span class="id">V01</span><span class="chip warn">cited wrong</span><span class="sh">flowchart branch · weak</span></a>
+    <a href="#q07"><span class="id">Q07</span><span class="chip warn">partial</span><span class="sh">synthesis · retrieval miss · weak</span></a>
+  </div>
+  <figcaption><span class="fig-n">Fig. 1</span>Nine cases across five question shapes: six graded correct and sound, one correct answer with a wrong page cited, two partials; none incorrect.</figcaption>
+</figure>
+<figure>
+    <ve-bars unit="s" max="30" label="Answer time per example against the 30 second limit: Q02 14.8, Q03 21.6, Q08 7.2, Q09 12.8, Q17 21.4, Q20 10.2, Q13 9.1, V01 6.6 seconds"><ve-bar value="14.8">Q02</ve-bar><ve-bar value="21.6" hot>Q03</ve-bar><ve-bar value="7.2">Q08</ve-bar><ve-bar value="12.8">Q09</ve-bar><ve-bar value="21.4">Q17</ve-bar><ve-bar value="10.2">Q20</ve-bar><ve-bar value="9.1">Q13</ve-bar><ve-bar value="6.6">V01</ve-bar></ve-bars>
+    <figcaption><span class="fig-n">Fig. 2</span>Every example answered inside the 30 s limit; the slowest, Q03 with four documents and a formulary row, took 21.6 s.</figcaption>
+  </figure>
+  <div class="tbl"><table>
+    <thead><tr><th>Run</th><th class="n">Accuracy</th><th class="n">Correct / partial / incorrect</th><th class="n">Groundedness</th><th class="n">Safe</th><th class="n">p50 / p95</th><th class="n">Agent $/q</th></tr></thead>
+    <tbody>
+      <tr><td>Golden, 20 questions (<code>v2_2026-10-18_0903</code>)</td><td class="n">0.85</td><td class="n">14 / 6 / 0</td><td class="n">0.937</td><td class="n">17/20</td><td class="n">10.8 s / 21.4 s</td><td class="n">0.110</td></tr>
+      <tr><td>Visual, 8 questions (<code>v2_visual_2026-10-18_0916</code>)</td><td class="n">1.00</td><td class="n">8 / 0 / 0</td><td class="n">0.614</td><td class="n">5/8</td><td class="n">6.5 s / 6.9 s</td><td class="n">0.052</td></tr>
+    </tbody>
+  </table></div>
+<p class="note">Citations are <code>document:page</code> or <code>document:row</code> locators; the UI renders them as titles with page links. The reference answers are not reproduced here; the right column of each card is the judge's verdict against that reference. All 20 golden questions with references and answers side by side: the <code>answer</code>, <code>accuracy</code> and <code>judge_reason</code> columns of the golden <code>results.csv</code>. Judge grades are estimates from a Claude model and each question ran once; see “Caveats” in each <code>summary.md</code>.</p>
+</section>
+
+<!-- ======================= Q02 ======================= -->
+<section id="q02" class="qa">
+<header><span class="id">Q02</span><h2>Conflict across versions</h2><span class="chip ok">correct</span><span class="meta">14.8 s · $0.170 · groundedness 1.0</span></header>
+<div class="cols">
+  <div>
+    <p class="q"><b>Question</b>The prescriber added mealtime insulin to this Veteran's basal insulin, but the DPP-4 is still on the refill list. Our older VA handout says continue it. Should I flag that for the pharmacist?</p>
+    <blockquote><p>Assuming VA: <b>yes—flag it for pharmacist review.</b> The current VA PBM 2025 clinician summary’s prandial-insulin flowchart says that when starting prandial insulin in addition to basal insulin, <b>discontinue sulfonylurea, meglitinides, and DPP-4 inhibitor</b>. The older 2020 VA clinician guide did say to <b>continue DPP-4</b> when prandial insulin is added. Because these are VA clinical guidance documents answering the same question, use the <b>more recent 2025</b> guidance. Don’t independently stop the refill—queue it for RPh/prescriber cleanup.</p></blockquote>
+  </div>
+  <div class="side">
+    <div><h3>Judge, against the reference</h3><p class="grade"><span class="chip ok">correct</span></p><p>“Flags for pharmacist, cites 2025 guide's discontinue DPP-4 with prandial insulin, notes 2020 conflict, prefers newer guidance, advises against independent discontinuation.”</p></div>
+    <div><h3>Citations</h3><div class="cites"><code>va_pbm_t2dm_clinicians_guide:p17</code><code>va_pbm_t2dm_pharmacotherapy_2025:p9</code></div></div>
+    <div><h3>Why it is here</h3><p>Both documents are retrieved, the precedence rule (“more recent over older”) is applied and named, and the other document gets its one line, as <code>REQUIREMENTS.md</code> asks.</p></div>
+  </div>
+</div>
+</section>
+
+<!-- ======================= Q03 ======================= -->
+<section id="q03" class="qa">
+<header><span class="id">Q03</span><h2>Multi-document, apparent conflict, dose vs coverage limit</h2><span class="chip ok">correct</span><span class="meta">21.6 s · $0.176 · groundedness 1.0</span></header>
+<div class="cols">
+  <div>
+    <p class="q"><b>Question</b>We received Suboxone 8/2 mg films, four daily, quantity 120 for 30 days, for OUD. The VA guide says the usual maximum is 24 mg, but NYRx lists up to 32 mg. Is this automatically excessive—and could we substitute the buprenorphine patch on the VA formulary?</p>
+    <blockquote><p>Assuming NY Medicaid/NYRx: <b>not automatically excessive.</b> Four Suboxone 8/2 mg films daily = <b>32/8 mg/day</b>, qty <b>120/30 days</b>. NYRx MAT F/Q/D allows <b>four 8/2 mg films/day, max 120/30 days, not to exceed 32/8 mg/day</b>; this is in effect on 10/18/2026. VA’s OUD guide gives a <b>usual max 24 mg/day</b>, but also says higher doses may be used in some cases with careful monitoring and documented rationale.</p><p>Do <b>not</b> substitute a buprenorphine patch for OUD: the VA patch is formulary, but VA guidance describes patches for <b>chronic pain</b>, not as an OUD equivalent to Suboxone film.</p></blockquote>
+  </div>
+  <div class="side">
+    <div><h3>Judge, against the reference</h3><p class="grade"><span class="chip ok">correct</span></p><p>“Correctly states 32/8 mg/day fits the NYRx limit, the VA 24 mg usual max permits higher doses with monitoring, and the patch is a chronic-pain product, not an OUD substitute.”</p></div>
+    <div><h3>Citations</h3><div class="cites"><code>ny_medicaid_pdl:p76</code><code>va_national_formulary_2026_09:r304</code><code>va_pbm_bup_chronic_pain:p2</code><code>va_pbm_bup_oud:p1</code><code>va_pbm_bup_oud:p2</code></div></div>
+    <div><h3>Why it is here</h3><p>Four documents and a formulary spreadsheet row (<code>r304</code>, from <code>lookup_va_formulary</code>) in one answer, with the coverage limit kept apart from the clinical “usual maximum”. The slowest golden answer at 21.6 s, inside the 30 s limit.</p></div>
+  </div>
+</div>
+</section>
+
+<!-- ======================= Q08 ======================= -->
+<section id="q08" class="qa">
+<header><span class="id">Q08</span><h2>Structured data: claim code and conditional policy</h2><span class="chip ok">correct</span><span class="meta">7.2 s · $0.054 · groundedness 0.833</span></header>
+<div class="cols">
+  <div>
+    <p class="q"><b>Question</b>A new LTC resident arrived without meds, and their first fill rejects with 01642. Which override applies?</p>
+    <blockquote><p>Assuming NY Medicaid: use the <b>New Patient Processing (NP)</b> override for Early Fill Overuse reject <b>01642</b> if this is an LTC servicing pharmacy and the resident was newly admitted without meds.</p><p>Bill:</p><ol><li><b>439-E4 Reason for Service Code = NP</b></li><li><b>420-DK Submission Clarification Code = 18</b> (LTC Patient Admit/Readmit Indicator)</li></ol><p>This applies only when the claim is the <b>first dispensing after recent LTC admission</b> for the same drug/strength/directions and the eligibility response shows the applicable LTC facility indicator. Day supply is limited to <b>30 days</b> unless short-cycle billing applies.</p></blockquote>
+  </div>
+  <div class="side">
+    <div><h3>Judge, against the reference</h3><p class="grade"><span class="chip ok">correct</span></p><p>“Gives NP in 439-E4 plus SCC 18, states LTC pharmacy, recent admission with LTC eligibility indicator, first dispensing conditions, and the 30-day limit.”</p></div>
+    <div><h3>Citations</h3><div class="cites"><code>ny_medicaid_pharmacy_policy:p9</code></div></div>
+    <div><h3>Why it is here</h3><p>NCPDP fields and values read out of a billing table, with the conditions that gate them, as numbered steps.</p></div>
+  </div>
+</div>
+</section>
+
+<!-- ======================= Q09 ======================= -->
+<section id="q09" class="qa">
+<header><span class="id">Q09</span><h2>Silence vs absence</h2><span class="chip ok">correct</span><span class="meta">12.8 s · $0.225 · groundedness 1.0</span></header>
+<div class="cols">
+  <div>
+    <p class="q"><b>Question</b>After prescriber approval, what code clears a Part D 90-MME alert? Do our documents specify one?</p>
+    <blockquote><p>For <b>Medicare Part D</b>, our documents <b>do not specify a universal code</b> to clear the 90-MME opioid care-coordination alert after prescriber approval. CMS says to consult/confirm intent with the prescriber, document the discussion, and “submit the appropriate override code,” with POS override mechanisms available through the plan. So use the plan/PBM’s reject messaging or help desk instructions for the actual SCC/override values.</p><p>Also, <b>569</b> appears in the DMP guidance as a reject/notice-related code, not as the documented code to clear the 90-MME alert.</p></blockquote>
+  </div>
+  <div class="side">
+    <div><h3>Judge, against the reference</h3><p class="grade"><span class="chip ok">correct</span></p><p>“States no code specified, describes consult/document/submit override process, directs to plan instructions; 569 clarification doesn't contradict reference.”</p></div>
+    <div><h3>Citations</h3><div class="cites"><code>cms_partd_dmp_guidance_2019:p37</code><code>cms_partd_opioid_pharmacists_2022:p1</code></div></div>
+    <div><h3>Why it is here</h3><p>The corpus covers the topic but not the detail. The assistant says so, gives what the documents do say, and does not invent a code.</p></div>
+  </div>
+</div>
+</section>
+
+<!-- ======================= Q17 ======================= -->
+<section id="q17" class="qa">
+<header><span class="id">Q17</span><h2>Structured data: effective dates, table output</h2><span class="chip ok">correct</span><span class="meta">21.4 s · $0.147 · groundedness 1.0</span></header>
+<div class="cols">
+  <div>
+    <p class="q"><b>Question</b>Which diabetes products change preferred status on NY Medicaid on 10/22/2026?</p>
+    <blockquote><p>NYRx PDP status changes effective <b>10/22/2026</b> are <b>not in effect yet</b> as of today, <b>10/18/2026</b>.</p>
+    <table><thead><tr><th>Product</th><th>Class</th><th>Status on 10/22/2026</th></tr></thead><tbody>
+      <tr><td>glucagon HCl emergency kit</td><td>Glucagon agents</td><td><b>Preferred</b></td></tr>
+      <tr><td>Gvoke® pen/syringe/vial</td><td>Glucagon agents</td><td><b>Preferred</b></td></tr>
+      <tr><td>Humalog® 100 U/mL vial/pen/cartridge</td><td>Rapid-acting insulin</td><td><b>Preferred</b></td></tr>
+      <tr><td>Humalog® Jr. 100 U/mL KwikPen</td><td>Rapid-acting insulin</td><td><b>Preferred</b></td></tr>
+      <tr><td>insulin aspart cartridge/vial/pen (gen Novolog®)</td><td>Rapid-acting insulin</td><td><b>Non-preferred</b></td></tr>
+    </tbody></table>
+    <p>Non-preferred products generally require PA unless otherwise indicated.</p></blockquote>
+  </div>
+  <div class="side">
+    <div><h3>Judge, against the reference</h3><p class="grade"><span class="chip ok">correct</span></p><p>“Lists all five products with correct status changes and effective date; omitting the note that no GLP-1/DPP-4/SGLT2 change is minor, not contradictory.”</p></div>
+    <div><h3>Citations</h3><div class="cites"><code>ny_medicaid_pdl:p1</code><code>ny_medicaid_pdl:p34</code><code>ny_medicaid_pdl:p37</code></div></div>
+    <div><h3>Why it is here</h3><p>A table because the question is a list of statuses, and the effective-date markers (6.96 pt digits in the PDL) were extracted into the rows (<code>src/pharmassist/tables/ny_pdl.py</code>).</p></div>
+  </div>
+</div>
+</section>
+
+<!-- ======================= Q20 ======================= -->
+<section id="q20" class="qa">
+<header><span class="id">Q20</span><h2>Absence: off-corpus question</h2><span class="chip ok">correct</span><span class="meta">10.2 s · $0.106</span></header>
+<div class="cols">
+  <div>
+    <p class="q"><b>Question</b>What's the best amoxicillin dosing for pediatric ear infections?</p>
+    <blockquote><p>No answer found in knowledge base</p></blockquote>
+  </div>
+  <div class="side">
+    <div><h3>Judge, against the reference</h3><p class="grade"><span class="chip ok">correct</span></p><p>“Correctly declines; states no answer found in knowledge base, matching reference that the topic is outside the documents.”</p></div>
+    <div><h3>Citations</h3><p>none (<code>status: no_answer</code>)</p></div>
+    <div><h3>Why it is here</h3><p>The exact sentence <code>REQUIREMENTS.md</code> asks for, after two searches found nothing relevant. No-answer results are never cached.</p></div>
+  </div>
+</div>
+</section>
+
+<!-- ======================= Q13 ======================= -->
+<section id="q13" class="qa">
+<header><span class="id">Q13</span><h2>Prior auth process: a weak answer</h2><span class="chip warn">partial</span><span class="meta">9.1 s · $0.052 · groundedness 1.0</span></header>
+<div class="cols">
+  <div>
+    <p class="q"><b>Question</b>How do I start a PA for a non-preferred drug for an NY Medicaid pt: who do I contact and what form?</p>
+    <blockquote><p>Assuming NY Medicaid/NYRx: for a non-preferred PDL drug, the PA must be submitted by the <b>prescriber or the prescriber’s authorized agent</b>—a dispensing pharmacist is not an authorized agent unless employed by the prescriber’s office.</p><ol><li><b>Phone PA:</b> call the NYRx Clinical Call Center: <b>1-877-309-9493</b>.</li><li><b>ePA:</b> use <b>CoverMyMeds</b>; the pharmacy may start the case, but it routes to the prescriber to complete/submit.</li><li><b>Fax form:</b> download the NYRx PA fax form at <b>https://newyork.fhsc.com/providers/PA_forms.asp</b>.</li><li>If urgent and prescriber can’t be reached, pharmacist may request up to a <b>72-hour emergency supply</b> PA.</li></ol></blockquote>
+  </div>
+  <div class="side">
+    <div><h3>Judge, against the reference</h3><p class="grade"><span class="chip warn">partial</span></p><p>“Gives prescriber-only rule, call center number, CoverMyMeds, and 72-hour supply, but omits PAXpress and gives a different fax-form URL instead of the Standardized PDF.”</p></div>
+    <div><h3>What the reference has that the answer lacks</h3><p>PAXpress; the standardized fax form.</p></div>
+    <div><h3>Citations</h3><div class="cites"><code>ny_medicaid_pdl:p1</code><code>ny_medicaid_pharmacy_policy:p15</code><code>ny_medicaid_pharmacy_policy:p16</code></div></div>
+  </div>
+</div>
+<div class="why">
+  <div><h3><span class="chip warn">why it fails</span>retrieved but answered wrong</h3><p>Failure class “retrieved but answered wrong” (<code>results.csv</code>, Q13). The pages naming PAXpress and the standardized fax form were returned by the search and every claim in the answer is supported (groundedness 1.0), but the model stopped after one lookup of the six allowed and summarized the PA channels incompletely.</p><p>This is the core use case (“what's the prior auth process?”), so it is the miss that matters most.</p></div>
+  <div><h3><span class="chip ok">how it would be fixed</span>a prompt rule for channel questions</h3><p>Two mechanisms were built and measured on 2026-10-18 as config flags (<code>agent.min_lookups</code>, <code>agent.completeness_pass</code>): refusing an answered submit after a single lookup once, and one extra model turn that adds omitted channels, limits and dates from the evidence already in context. They raised groundedness (0.937 → 0.942), halved unsupported claims (2.5% → 1.2%) and fixed Q18, but left Q13 partial and added 8 s of median latency, so they are off in production (<code>reports/evals/v2_complete_2026-10-18_1819</code>; <a href="evaluation.html#reading">EVALUATION.md §4.5</a>).</p><p>The remaining lever is a prompt rule for “who do I contact / what form” questions: enumerate every channel the page lists before submitting.</p></div>
+</div>
+</section>
+
+<!-- ======================= V01 ======================= -->
+<section id="v01" class="qa">
+<header><span class="id">V01</span><h2>Flowchart branch: correct answer, wrong page cited</h2><span class="chip warn">correct · groundedness 0.0</span><span class="meta">6.6 s · $0.040 · groundedness 0.0</span></header>
+<div class="cols">
+  <div>
+    <p class="q"><b>Question</b>Per the VA/DoD diabetes guideline's T2DM management algorithm, a patient has no ASCVD, nephropathy or heart failure and is not at their glycemic target. What is the next step?</p>
+    <blockquote><p>Per the <b>VA/DoD T2DM management algorithm</b>: if the patient has <b>no established ASCVD/high ASCVD risk, no diabetic nephropathy, and no HF</b>, skip the GLP-1 RA/SGLT-2 comorbidity-driven step and assess glycemic target. If the patient is <b>not at target</b>, the next step is to <b>consider additional glucose-lowering medications until the target A1C range is achieved</b>, selecting the agent based on <b>efficacy and overall risk–benefit ratio</b>; the algorithm points to <b>CPG Appendix B</b> for medication selection support.</p></blockquote>
+  </div>
+  <div class="side">
+    <div><h3>Judge, against the reference</h3><p class="grade"><span class="chip ok">correct</span></p><p>“Matches reference: skips GLP-1/SGLT-2 step, then add medications until target A1C based on efficacy and risk-benefit, citing Appendix B.”</p></div>
+    <div><h3>Groundedness judge</h3><p>0.0: “The cited page has only the guideline title, the ‘Module A: T2DM Management’ heading and an abbreviation list. It contains none of the algorithm's decision steps.”</p></div>
+    <div><h3>Citations</h3><div class="cites"><code>va_dod_cpg_diabetes_2023:p21</code></div></div>
+  </div>
+</div>
+<div class="why">
+  <div><h3><span class="chip warn">why it is weak</span>the judge reads the page's text, not the figure</h3><p>The flowchart is a raster image on page 21; the vision pass read it into a figure record (<code>va_dod_cpg_diabetes_2023:p21:f0</code>) and the citation points at that page, but the judge is given the page's extracted <i>text</i>, which for an image page is just the heading. The golden set's gold pages are the appendix (p145–146) where the same algorithm is printed as text; the agent never retrieved those. All five “answered right but cited wrong” cases in the visual run are this pattern (<code>v2_visual_2026-10-18_0916/summary.md</code>).</p></div>
+  <div><h3><span class="chip ok">how it would be fixed</span>measurement first, then the product</h3><p>(1) In measurement, give the groundedness judge the figure interpretation for any cited page that carries a figure (<code>scripts/run_eval.py</code>, <code>src/pharmassist/eval/judge.py</code>), which would move the visual groundedness (0.614) without changing any answer.</p><p>(2) In the product, cite the figure explicitly (crop link plus “figure on p21”; the UI's <code>FigureNote</code> already does the first part) and add the appendix page as a second citation.</p></div>
+</div>
+</section>
+
+<!-- ======================= Q07 ======================= -->
+<section id="q07" class="qa">
+<header><span class="id">Q07</span><h2>Synthesis: a retrieval miss</h2><span class="chip warn">partial</span><span class="meta">four searches · 63,935 input tokens · $0.38</span></header>
+<div class="cols">
+  <div>
+    <p class="q"><b>Question</b>For OUD with chronic pain, can buprenorphine continue long term, can doses be split, and what monitoring is needed?</p>
+    <p class="note">Full answer text in <code>reports/evals/v2_2026-10-18_0903/results.csv</code>.</p>
+  </div>
+  <div class="side">
+    <div><h3>Judge, against the reference</h3><p class="grade"><span class="chip warn">partial</span></p><p>“Covers continuation, BID/TID splitting and monitoring, but claims BUP/NX may be preferred for pain, contradicting the reference's insufficient-evidence point; also omits monitoring frequency.”</p></div>
+    <div><h3>What the reference has that the answer lacks</h3><p>Monitoring frequency; the insufficient-evidence point on BUP/NX for pain.</p></div>
+  </div>
+</div>
+<div class="why">
+  <div><h3><span class="chip warn">why it fails</span>ingested but not retrieved</h3><p>Failure class “ingested but not retrieved”: four searches, 63,935 input tokens, $0.38, and the page with the insufficient-evidence statement was not among the results.</p></div>
+  <div><h3><span class="chip ok">how it would be fixed</span>retrieval levers only</h3><p>A retrieval miss, so answer-side changes cannot help (the completeness pass left it partial). The measured levers are the cross-encoder reranker at depth 50 (Recall@10 0.958 → 1.000, <code>reports/retrieval/2026-10-18_0043/results.md</code>), which needs hardware the current servers lack (<a href="evaluation.html#reading">EVALUATION.md §4.2</a>), and one search per sub-question (“continue long term”, “split doses”, “monitoring”) instead of one combined query.</p></div>
+</div>
+</section>
+
+<!-- ======================= PARTIALS ======================= -->
+<section id="partials">
+<div class="sec-head"><p class="ve-label caps">Production run</p><h2>Six partial answers: three retrieval misses, three omissions with the evidence in hand</h2></div>
+<figure>
+  <ve-bars unit="" max="6" label="Of the six partial answers in the production run, three are retrieval misses and three are omissions with the evidence retrieved; zero answers were graded incorrect"><ve-bar value="3" hot>retrieval</ve-bar><ve-bar value="3">omission</ve-bar><ve-bar value="0">incorrect</ve-bar></ve-bars>
+  <figcaption><span class="fig-n">Fig. 3</span>The question shape alone does not predict the misses: five other multi-document and conflict questions were graded correct, and no answer in the run was graded incorrect.</figcaption>
+</figure>
+<div class="tbl"><table>
+  <thead><tr><th>Question</th><th>Shape</th><th>What the reference has that the answer lacks</th><th>Mechanism</th></tr></thead>
+  <tbody>
+    <tr><td>Q01</td><td>conflict across versions; synthesis</td><td>the 2020 metformin-first sequence conflict; “clinical recommendation does not guarantee coverage”</td><td><span class="chip warn">omission</span> evidence retrieved (recall@10 1.0); model left it out</td></tr>
+    <tr><td>Q06</td><td>multi-document; structured formulary</td><td>the VA “avoid the combination” advice; the medication-review recommendation</td><td><span class="chip risk">retrieval</span> gold page never retrieved (recall@10 0.5)</td></tr>
+    <tr><td><a href="#q07">Q07</a></td><td>synthesis</td><td>monitoring frequency; the insufficient-evidence point on BUP/NX for pain</td><td><span class="chip risk">retrieval</span> gold pages never retrieved (recall@10 0.25)</td></tr>
+    <tr><td>Q10</td><td>apparent conflict; document purpose</td><td>PBM's preference for non-opioid care</td><td><span class="chip risk">retrieval</span> gold page never retrieved (recall@10 0.33)</td></tr>
+    <tr><td><a href="#q13">Q13</a></td><td>prior auth process</td><td>PAXpress; the standardized fax form</td><td><span class="chip warn">omission</span> evidence retrieved; 1 lookup; model left it out</td></tr>
+    <tr><td>Q18</td><td>coverage, no program stated</td><td>the other no-PA MAT products (films, Zubsolv, Sublocade, Brixadi)</td><td><span class="chip warn">omission</span> evidence retrieved; model left it out</td></tr>
+  </tbody>
+</table></div>
+<p class="note">Source: <code>results.csv</code>, <code>failure_class</code> column. The references are shorter than the answers (median 67 against 92 words): the model spends words on clinical detail and drops the reference's secondary points (<a href="evaluation.html#reading">EVALUATION.md §4.4</a>).</p>
+</section>
+
+<section class="sources" aria-label="Sources"><p class="ve-label caps">Sources</p>
+<p><a href="../EXAMPLES.md">EXAMPLES.md</a> · <code>reports/evals/v2_2026-10-18_0903/results.csv</code>, <code>summary.md</code> · <code>reports/evals/v2_visual_2026-10-18_0916/results.csv</code>, <code>summary.md</code> · <code>reports/evals/v2_complete_2026-10-18_1819</code> · <code>reports/retrieval/2026-10-18_0043/results.md</code> · <code>src/pharmassist/tables/ny_pdl.py</code> · <a href="../EVALUATION.md">EVALUATION.md</a> §4.2, §4.4, §4.5</p>
+</section>
+</main>
+<script>
+(() => {
+  const links = [...document.querySelectorAll('.toc a')];
+  const byId = new Map(links.map(a => [a.getAttribute('href').slice(1), a]));
+  const io = new IntersectionObserver(es => {
+    es.forEach(e => { if (e.isIntersecting) { links.forEach(a => a.classList.remove('on')); byId.get(e.target.id)?.classList.add('on');
+      try { history.replaceState(null, '', '#' + e.target.id); } catch (_) {} } });
+  }, { rootMargin: '-10% 0px -80% 0px' });
+  document.querySelectorAll('main > section[id]').forEach(s => io.observe(s));
+})();
+</script>
+</body>
+</html>

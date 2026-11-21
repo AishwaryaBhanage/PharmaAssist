@@ -1,0 +1,21 @@
+PASS  health/ready  {"postgres": true, "cache": true, "storage": true, "llm_config": true}
+PASS  login staff1@pharmassist.local  status=200
+PASS  auth/me role staff  role=staff
+PASS  ask (fresh)  status=200 answered cited=3 cached=True provider=cache model=gpt-5.5-2026-04-23 fallback=False 1.2s
+PASS  ask (same question, cached)  cached=True similarity=1.0 cited=3 0.4s
+INFO  paraphrase: cached=False similarity=None status=answered 18.6s
+PASS  off-corpus -> no answer  status=no_answer answer='No answer found in knowledge base' 2.7s
+PASS  feedback on answer  status=200
+PASS  my conversations listed  status=200
+PASS  staff blocked from admin  status=403
+PASS  login admin@pharmassist.local  status=200
+PASS  admin/stats  {"since": "2026-09-18T00:00:00Z", "until": "2026-10-18T19:04:07.260473Z", "questions": 13, "answered": 10, "no_answer": 3, "cached": 6, "fallback": 0, "helpful": 3, "unhelpful": 0, "latency_p50_s": 1.
+PASS  admin/documents (corpus loaded)  documents=12
+PASS  admin/conversations  status=200
+PASS  admin/cache/stats  {"entries": 4, "hits": 6, "misses": 7, "hit_rate": 0.4615, "threshold": 0.9, "generation": 13, "backend": "valkey"}
+PASS  admin upload accepted  status=201 {"document":{"id":"live_check_bulletin_150407","title":"Live-check bulletin 150407","program":"NY Medicaid","doc_type":"","authority":"advisory","publisher":"","doc_date":"unknown","source_url":null,"
+PASS  upload indexed (worker scaled from 0)  status=succeeded stage=active after 15s
+PASS  ask about the uploaded document  status=answered cited=['live_check_bulletin', 'ny_medicaid_pdl'] 10.4s
+ALL PASS
+
+[exited with code 0]
