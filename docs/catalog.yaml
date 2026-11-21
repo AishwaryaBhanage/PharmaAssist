@@ -1,0 +1,164 @@
+# Corpus catalog: one entry per document in docs/.
+# date: publication or revision date as printed in the document itself
+#       (YYYY-MM or YYYY-MM-DD); "unknown" if the document doesn't state one.
+# download: auto (scripts/download_docs.py fetches it) or manual (site blocks scripts;
+#           save it from a browser).
+# pages: PDF page count; null for spreadsheets.
+
+documents:
+  # --- Diabetes ---
+  - id: va_dod_cpg_diabetes_2023
+    file: va_dod_cpg_diabetes_2023.pdf
+    title: VA/DoD Clinical Practice Guideline for the Management of Type 2 Diabetes Mellitus (Version 6.0)
+    publisher: U.S. Department of Veterans Affairs and Department of Defense
+    program: VA
+    doc_type: clinical guideline
+    theme: diabetes
+    authority: advisory
+    date: "2023-05"  # page headers: "May 2023"
+    source_url: https://www.healthquality.va.gov/guidelines/CD/diabetes/VADoD-Diabetes-CPG_Final_508.pdf
+    download: manual
+    downloaded: "2026-10-13"
+    pages: 165
+
+  - id: va_pbm_t2dm_clinicians_guide
+    file: va_pbm_t2dm_clinicians_guide.pdf
+    title: A VA Clinician's Guide to Diabetes Management in Primary Care (IB 10-1402)
+    publisher: VA Pharmacy Benefits Management (PBM) Academic Detailing Service
+    program: VA
+    doc_type: clinician guide
+    theme: diabetes
+    authority: advisory
+    date: "2020-05"  # back page: "May 2020 V2  IB-10-1402"
+    source_url: https://www.pbm.va.gov/PBM/AcademicDetailingService/Documents/508/IB10-1402_Type2DiabetesCliniciansGuide_508Conformant.pdf
+    download: auto
+    downloaded: "2026-10-13"
+    pages: 24
+
+  - id: va_pbm_t2dm_pharmacotherapy_2025
+    file: va_pbm_t2dm_pharmacotherapy_2025.pdf
+    title: "Pharmacotherapy for Type 2 Diabetes Mellitus (T2DM) 2025: A VA Clinician's Summary (IB 10-1775)"
+    publisher: VA Pharmacy Benefits Management (PBM) Academic Detailing Service
+    program: VA
+    doc_type: clinician guide
+    theme: diabetes
+    authority: advisory
+    date: "2025-04"  # back page: "April 2025 V2  IB 10-1775"
+    source_url: https://www.pbm.va.gov/PBM/AcademicDetailingService/Documents/508/IB10-1775_PharmacotherapyforT2DM_P97221.pdf
+    download: auto
+    downloaded: "2026-10-13"
+    pages: 16
+
+  # --- Opioids ---
+  - id: va_dod_cpg_opioids_2022
+    file: va_dod_cpg_opioids_2022.pdf
+    title: VA/DoD Clinical Practice Guideline for the Use of Opioids in the Management of Chronic Pain (Version 4.0)
+    publisher: U.S. Department of Veterans Affairs and Department of Defense
+    program: VA
+    doc_type: clinical guideline
+    theme: opioids
+    authority: advisory
+    date: "2022-05"  # page headers: "May 2022"
+    source_url: https://www.healthquality.va.gov/guidelines/Pain/cot/VADoDOpioidsCPG.pdf
+    download: manual
+    downloaded: "2026-10-13"
+    pages: 177
+
+  - id: va_pbm_bup_chronic_pain
+    file: va_pbm_bup_chronic_pain.pdf
+    title: Buprenorphine for Chronic Pain (IB 10-1497)
+    publisher: VA Pharmacy Benefits Management (PBM) Academic Detailing Service
+    program: VA
+    doc_type: clinician guide
+    theme: opioids
+    authority: advisory
+    date: "2021-05"  # back page: "May 2021  P97020  10-1497"
+    source_url: https://www.pbm.va.gov/PBM/AcademicDetailingService/Documents/Academic_Detailing_Educational_Material_Catalog/IB_1497_Provider_BupChronicPain.pdf
+    download: auto
+    downloaded: "2026-10-13"
+    pages: 4
+
+  - id: va_pbm_bup_oud
+    file: va_pbm_bup_oud.pdf
+    title: "Buprenorphine for Opioid Use Disorder: Clinician Guide (IB 10-1498)"
+    publisher: VA Pharmacy Benefits Management (PBM) Academic Detailing Service
+    program: VA
+    doc_type: clinician guide
+    theme: opioids
+    authority: advisory
+    date: "2023-03"  # back page: "March 2023 V2  P97021  10-1498"
+    source_url: https://www.pbm.va.gov/PBM/AcademicDetailingService/Documents/508/10-1498_OUD_Provider_BuprenorphineforOUD_P97021.pdf
+    download: auto
+    downloaded: "2026-10-13"
+    pages: 4
+
+  - id: cms_partd_dmp_guidance_2019
+    file: cms_partd_dmp_guidance_2019.pdf
+    title: Part D Drug Management Program Policy Guidance (CY 2019)
+    publisher: Centers for Medicare & Medicaid Services
+    program: Medicare Part D
+    doc_type: policy memo
+    theme: opioids
+    authority: binding
+    date: "2018-11-20"  # memo header: "Date: November 20, 2018"
+    source_url: https://www.cms.gov/medicare/prescription-drug-coverage/prescriptiondrugcovcontra/downloads/2019-part-d-drug-management-program-policy-guidance-memo-november-20-2018-.pdf
+    download: manual
+    downloaded: "2026-10-13"
+    pages: 41
+
+  - id: cms_partd_opioid_pharmacists_2022
+    file: cms_partd_opioid_pharmacists_2022.pdf
+    title: "Medicare Part D Opioid Policies: Information for Pharmacists"
+    publisher: Centers for Medicare & Medicaid Services
+    program: Medicare Part D
+    doc_type: pharmacist guidance
+    theme: opioids
+    authority: summary_of_binding_policy
+    date: "2022-12-19"  # not printed in the document text; taken from the published title (Dec 2022), the source URL and the PDF metadata
+    source_url: https://www.cms.gov/files/document/medicare-part-d-opioid-policies-information-pharmacists-december-19-2022.pdf
+    download: manual
+    downloaded: "2026-10-13"
+    pages: 2
+
+  # --- Cross-theme ---
+  - id: va_national_formulary_2026_09
+    file: va_national_formulary_2026_09.xlsx
+    title: VHA National Formulary
+    publisher: VA Pharmacy Benefits Management (PBM) Services
+    program: VA
+    doc_type: formulary
+    theme: both
+    authority: binding
+    date: "2026-09"  # header row 6: 2026-09-01
+    source_url: https://www.pbm.va.gov/PBM/nationalformulary/VA_National_Formulary_SEPT_2026.xlsx
+    download: auto
+    downloaded: "2026-10-13"
+    pages: null
+
+  - id: ny_medicaid_pdl
+    file: ny_medicaid_pdl.pdf
+    title: NYRx Preferred Drug Program (PDP) Preferred Drug List
+    publisher: New York State Department of Health (NYRx, the Medicaid Drug Program)
+    program: NY Medicaid
+    doc_type: preferred drug list
+    theme: both
+    authority: binding
+    date: "2026-09-14"  # every page: "Revised: September 14, 2026"
+    source_url: https://newyork.fhsc.com/downloads/providers/NYRx_PDP_PDL.pdf
+    download: auto
+    downloaded: "2026-10-13"
+    pages: 86
+
+  - id: ny_medicaid_pharmacy_policy
+    file: ny_medicaid_pharmacy_policy.pdf
+    title: NYRx Pharmacy Manual Policy Guidelines (Version 2026-3)
+    publisher: New York State Department of Health (NYRx, the Medicaid Drug Program)
+    program: NY Medicaid
+    doc_type: pharmacy manual
+    theme: both
+    authority: binding
+    date: "2026-09"  # page footers: "2026-3  September 2026"
+    source_url: https://www.emedny.org/ProviderManuals/Pharmacy/PDFS/Pharmacy_Policy_Guidelines.pdf
+    download: auto
+    downloaded: "2026-10-13"
+    pages: 50

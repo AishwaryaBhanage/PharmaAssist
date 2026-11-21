@@ -1,0 +1,11 @@
+{
+  "source": "ny_medicaid_pdl.pdf",
+  "sha256": "abd96218ef50d46fbd1e9a4a361049c1a013d89a005858e47cc1554c522cc232",
+  "pages": [
+    4,
+    60
+  ],
+  "rows": 1522,
+  "method": "pdfplumber fixed-column (find_tables grid + word size/indent)",
+  "built_at": "2026-10-18T01:34:42"
+}

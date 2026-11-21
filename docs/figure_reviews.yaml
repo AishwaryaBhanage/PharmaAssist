@@ -1,0 +1,30 @@
+# Figure reviews: a vision record compared against the original page image. A figure listed with
+# result "matches" gets verification status "reviewed" (parsers/figures.py). Reviewed by the AI build
+# assistant (Claude Code) looking at the rendered page image next to the extracted boxes and edges;
+# none of these is a clinician review.
+figures:
+  va_dod_cpg_diabetes_2023:p21:f0:
+    result: matches
+    reviewed: "2026-10-17"
+    reviewer: Claude Code (AI assistant), visual comparison
+    checked: "12 boxes; every arrow's direction; Yes/No labels on boxes 2, 6, 8; box 7 rejoins before box 8; boxes 3 and 10 are terminal"
+  va_dod_cpg_diabetes_2023:p22:f0:
+    result: matches
+    reviewed: "2026-10-17"
+    reviewer: Claude Code (AI assistant), visual comparison
+    checked: "boxes 13-18; box 14 Yes -> 15 -> 16, No -> 16; linear 16 -> 17 -> 18"
+  va_dod_cpg_opioids_2022:p25:f0:
+    result: matches
+    reviewed: "2026-10-17"
+    reviewer: Claude Code (AI assistant), visual comparison
+    checked: "17 boxes; box 3 Yes -> Module C; No branches of 8, 10, 12, 13 and Yes of 6 all join the line to box 17"
+  va_dod_cpg_opioids_2022:p26:f0:
+    result: matches
+    reviewed: "2026-10-17"
+    reviewer: Claude Code (AI assistant), visual comparison
+    checked: "boxes 18-30 after the crop was widened to the whole embedded image; 23 No -> 22; 28 loops back to 20; 29 No -> 28, Yes -> 30"
+  va_dod_cpg_opioids_2022:p27:f0:
+    result: matches
+    reviewed: "2026-10-17"
+    reviewer: Claude Code (AI assistant), visual comparison
+    checked: "boxes 31-40; 35 Yes and 37 Yes both -> 36; 40 Yes loops to 32, No loops to 39"

@@ -1,0 +1,2915 @@
+{
+ "va_dod_cpg_diabetes_2023:p88:f0": {
+  "record": {
+   "kind": "flowchart",
+   "title": "Figure A-1. Study Flow Diagram",
+   "nodes": [
+    {
+     "id": "1",
+     "shape": "start",
+     "text": "11,047 Citations Identified by Searches"
+    },
+    {
+     "id": "2",
+     "shape": "note",
+     "text": "5,078 Citations Excluded at the Title Level\nCitations excluded at this level were off-topic, not published in English, or published prior to inclusion date."
+    },
+    {
+     "id": "3",
+     "shape": "decision",
+     "text": "5,969 Abstracts Reviewed"
+    },
+    {
+     "id": "4",
+     "shape": "note",
+     "text": "4,793 Citations Excluded at the Abstract Level\nCitations excluded at this level were not an SR or CS, clearly did not address a KQ, did not report on an outcome of interest, or were outside cutoff publication dates."
+    },
+    {
+     "id": "5",
+     "shape": "action",
+     "text": "1,176 Full-length Articles Reviewed"
+    },
+    {
+     "id": "6",
+     "shape": "note",
+     "text": "734 Citations Excluded at 1st Pass Full Article Level\n73 Did not address KQ\n70 Relevant review with no data to abstract\n118 Not study design of interest\n125 Not a comparison/intervention of interest\n6 Less than 20 pts\n129 Did not report an outcome of interest\n41 Not a full-length clinical study or SR\n50 Not population of interest\n73 Not conducted in HDI country\n49 Other (duplicates, not in date range, not in English)"
+    },
+    {
+     "id": "7",
+     "shape": "decision",
+     "text": "442 Abstracts Reviewed"
+    },
+    {
+     "id": "8",
+     "shape": "note",
+     "text": "339 Citations Excluded at 2nd Pass KQ Level\n42 Not a study population of interest\n79 No outcomes of interest\n67 Not an intervention or comparator of interest\n56 Superseded by more comprehensive review or included in an SR\n11 Relevant review with no usable data\n4 Unclear or inadequate follow-up\n2 Fewer than 20 patients\n78 Other (e.g., duplicate, published outside date range)"
+    },
+    {
+     "id": "9",
+     "shape": "end",
+     "text": "103 Included Studies"
+    }
+   ],
+   "edges": [
+    {
+     "from": "1",
+     "to": "2",
+     "label": ""
+    },
+    {
+     "from": "1",
+     "to": "3",
+     "label": ""
+    },
+    {
+     "from": "3",
+     "to": "4",
+     "label": ""
+    },
+    {
+     "from": "3",
+     "to": "5",
+     "label": ""
+    },
+    {
+     "from": "5",
+     "to": "6",
+     "label": ""
+    },
+    {
+     "from": "5",
+     "to": "7",
+     "label": ""
+    },
+    {
+     "from": "7",
+     "to": "8",
+     "label": ""
+    },
+    {
+     "from": "7",
+     "to": "9",
+     "label": ""
+    }
+   ],
+   "unreadable": []
+  },
+  "status": "machine_interpreted",
+  "page": 88,
+  "bbox": [
+   75.3,
+   106.8,
+   539.0,
+   544.6
+  ],
+  "crop": "storage/figures/va_dod_cpg_diabetes_2023/p088_f0.png",
+  "doc_id": "va_dod_cpg_diabetes_2023",
+  "model": "claude-opus-5-5",
+  "checks": {
+   "passed": false,
+   "problems": [
+    "decision 3 has 2 exits, not all labelled",
+    "decision 7 has 2 exits, not all labelled",
+    "node 1 text only 0% found in OCR",
+    "node 2 text only 0% found in OCR",
+    "node 3 text only 0% found in OCR",
+    "node 4 text only 0% found in OCR",
+    "node 5 text only 0% found in OCR",
+    "node 6 text only 3% found in OCR",
+    "node 7 text only 0% found in OCR",
+    "node 8 text only 3% found in OCR",
+    "node 9 text only 0% found in OCR"
+   ],
+   "ocr_match": 0.007
+  }
+ },
+ "va_dod_cpg_diabetes_2023:p21:f0": {
+  "record": {
+   "kind": "flowchart",
+   "title": "",
+   "nodes": [
+    {
+     "id": "1",
+     "shape": "start",
+     "text": "Patient with T2DM"
+    },
+    {
+     "id": "2",
+     "shape": "decision",
+     "text": "Does the patient have an urgent or emergent care need (e.g., symptomatic hyperglycemia, severe hypoglycemia, concurrent medical issue, etc.)?"
+    },
+    {
+     "id": "3",
+     "shape": "action",
+     "text": "Treat and/or refer for acute care"
+    },
+    {
+     "id": "4",
+     "shape": "action",
+     "text": "Assess barriers to success (e.g., psychosocial needs, navigating health care, health literacy/numeracy, patient/provider inertia, social determinants of health [e.g., transportation, economic or food insecurity])"
+    },
+    {
+     "id": "5",
+     "shape": "action",
+     "text": "Develop an individualized treatment plan\n\nReview non-pharmacologic therapies\n\u2022 Medical Nutrition Therapy (MNT) (including weight management) (see Module B)\n\u2022 Diabetes Self-Management Education and Support (DSMES) (see Module B)\n\u2022 Exercise\n\nIf pharmacologic therapy is indicated, begin metformin unless contraindicated"
+    },
+    {
+     "id": "6",
+     "shape": "decision",
+     "text": "Does the patient have any of the following:\n1. Established ASCVD or high ASCVD risk\n2. Diabetic nephropathy\n3. Heart failure (see Sidebar 4)"
+    },
+    {
+     "id": "7",
+     "shape": "action",
+     "text": "Consider GLP-1 RA or SGLT-2 inhibitor if indicated"
+    },
+    {
+     "id": "8",
+     "shape": "decision",
+     "text": "Has the patient's glycemic target been achieved (A1C 7.0-8.5% for most patients or alternative range based on individualization)?"
+    },
+    {
+     "id": "9",
+     "shape": "action",
+     "text": "Review treatment plan to minimize or treat complications and/or comorbidities (see Sidebars 1, 2, 3 and 4)"
+    },
+    {
+     "id": "10",
+     "shape": "action",
+     "text": "Consider additional medications until target A1C range is achieved. Select agent based on efficacy and risk-benefit ratio. See CPG Appendix B."
+    },
+    {
+     "id": "11",
+     "shape": "action",
+     "text": "Review health promotion activities\n\u2022 Tobacco cessation\n\u2022 Vaccinations, age-related\n\u2022 Dental care"
+    },
+    {
+     "id": "12",
+     "shape": "end",
+     "text": "Follow up as needed"
+    }
+   ],
+   "edges": [
+    {
+     "from": "1",
+     "to": "2",
+     "label": ""
+    },
+    {
+     "from": "2",
+     "to": "3",
+     "label": "Yes"
+    },
+    {
+     "from": "2",
+     "to": "4",
+     "label": "No"
+    },
+    {
+     "from": "4",
+     "to": "5",
+     "label": ""
+    },
+    {
+     "from": "5",
+     "to": "6",
+     "label": ""
+    },
+    {
+     "from": "6",
+     "to": "7",
+     "label": "Yes"
+    },
+    {
+     "from": "6",
+     "to": "8",
+     "label": "No"
+    },
+    {
+     "from": "7",
+     "to": "8",
+     "label": ""
+    },
+    {
+     "from": "8",
+     "to": "9",
+     "label": "Yes"
+    },
+    {
+     "from": "8",
+     "to": "10",
+     "label": "No"
+    },
+    {
+     "from": "9",
+     "to": "11",
+     "label": ""
+    },
+    {
+     "from": "11",
+     "to": "12",
+     "label": ""
+    }
+   ],
+   "unreadable": []
+  },
+  "status": "reviewed",
+  "page": 21,
+  "bbox": [
+   72.0,
+   92.0,
+   439.2,
+   686.0
+  ],
+  "crop": "storage/figures/va_dod_cpg_diabetes_2023/p021_f0.png",
+  "doc_id": "va_dod_cpg_diabetes_2023",
+  "model": "claude-opus-5-5",
+  "checks": {
+   "passed": true,
+   "problems": [],
+   "ocr_match": 0.994
+  }
+ },
+ "va_dod_cpg_diabetes_2023:p22:f0": {
+  "record": {
+   "kind": "flowchart",
+   "title": "",
+   "nodes": [
+    {
+     "id": "13",
+     "shape": "start",
+     "text": "Patients with T2DM should be offered DSMES or MNT at all of the following times:\n\u2022 At initial diagnosis\n\u2022 When not meeting treatment goals\n\u2022 Change in health status/barriers to self-management"
+    },
+    {
+     "id": "14",
+     "shape": "decision",
+     "text": "Is the patient being treated in an acute setting?"
+    },
+    {
+     "id": "15",
+     "shape": "action",
+     "text": "Train in survival skills (see Sidebar 5) and refer for DSMES or MNT following acute care"
+    },
+    {
+     "id": "16",
+     "shape": "action",
+     "text": "Consult/enroll the patient in an outpatient VA/DoD DSMES and MNT program"
+    },
+    {
+     "id": "17",
+     "shape": "action",
+     "text": "Conduct DSMES assessment (see Sidebar 6) and/or MNT screening and assessment (see Sidebar 7)"
+    },
+    {
+     "id": "18",
+     "shape": "action",
+     "text": "Conduct comprehensive DSMES (see Sidebar 6) or ongoing support (see Sidebar 8) and MNT (see Sidebar 7)"
+    }
+   ],
+   "edges": [
+    {
+     "from": "13",
+     "to": "14",
+     "label": ""
+    },
+    {
+     "from": "14",
+     "to": "15",
+     "label": "Yes"
+    },
+    {
+     "from": "14",
+     "to": "16",
+     "label": "No"
+    },
+    {
+     "from": "15",
+     "to": "16",
+     "label": ""
+    },
+    {
+     "from": "16",
+     "to": "17",
+     "label": ""
+    },
+    {
+     "from": "17",
+     "to": "18",
+     "label": ""
+    }
+   ],
+   "unreadable": []
+  },
+  "status": "reviewed",
+  "page": 22,
+  "bbox": [
+   122.2,
+   92.0,
+   489.2,
+   440.7
+  ],
+  "crop": "storage/figures/va_dod_cpg_diabetes_2023/p022_f0.png",
+  "doc_id": "va_dod_cpg_diabetes_2023",
+  "model": "claude-opus-5-5",
+  "checks": {
+   "passed": true,
+   "problems": [],
+   "ocr_match": 0.991
+  }
+ },
+ "va_pbm_t2dm_clinicians_guide:p3:f0": {
+  "record": {
+   "kind": "chart",
+   "title": "Have Diabetes",
+   "chart": {
+    "chart_type": "donut charts (two progress rings)",
+    "x_axis": "",
+    "y_axis": "",
+    "units": "%",
+    "series": [
+     {
+      "name": "Have diabetes",
+      "points": [
+       {
+        "label": "Veterans receiving care from the VA",
+        "value": "25%"
+       },
+       {
+        "label": "Non-Veterans",
+        "value": "10%"
+       }
+      ]
+     }
+    ]
+   },
+   "description": "Two donut rings side by side. Left ring, about one quarter filled in orange: \"25% of Veterans receiving care from the VA\". Right ring, about one tenth filled in blue: \"10% of Non-Veterans\". The caption below both reads \"HAVE DIABETES\".",
+   "unreadable": []
+  },
+  "status": "ocr_checked",
+  "page": 3,
+  "bbox": [
+   73.2,
+   200.6,
+   318.6,
+   344.5
+  ],
+  "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p003_f0.png",
+  "doc_id": "va_pbm_t2dm_clinicians_guide",
+  "model": "claude-opus-5-5",
+  "checks": {
+   "passed": true,
+   "problems": [],
+   "ocr_match": null
+  }
+ },
+ "va_pbm_t2dm_clinicians_guide:p4:f2": {
+  "record": {
+   "kind": "chart",
+   "title": "Figure 1. Lifestyle changes reduce progression to diabetes compared to placebo or metformin, particularly in patients \u2265 60 years old.",
+   "chart": {
+    "chart_type": "grouped bar chart",
+    "x_axis": "Age",
+    "y_axis": "Progression to diabetes in patients with prediabetes (per 100 person years)",
+    "units": "per 100 person years",
+    "series": [
+     {
+      "name": "placebo",
+      "points": [
+       {
+        "label": "25-44 years (n=1000)",
+        "value": "~11"
+       },
+       {
+        "label": "45-59 years (n=1586)",
+        "value": "~10.8"
+       },
+       {
+        "label": "60+ years (n=648)",
+        "value": "~10.3"
+       }
+      ]
+     },
+     {
+      "name": "metformin",
+      "points": [
+       {
+        "label": "25-44 years (n=1000)",
+        "value": "~6.7"
+       },
+       {
+        "label": "45-59 years (n=1586)",
+        "value": "~7.8"
+       },
+       {
+        "label": "60+ years (n=648)",
+        "value": "~9.3"
+       }
+      ]
+     },
+     {
+      "name": "lifestyle",
+      "points": [
+       {
+        "label": "25-44 years (n=1000)",
+        "value": "~6.3"
+       },
+       {
+        "label": "45-59 years (n=1586)",
+        "value": "~4.9"
+       },
+       {
+        "label": "60+ years (n=648)",
+        "value": "~3.3"
+       }
+      ]
+     }
+    ]
+   },
+   "description": "Values are approximate, read off the y-axis (0 to 12); no values are printed on the bars.",
+   "unreadable": []
+  },
+  "status": "ocr_checked",
+  "page": 4,
+  "bbox": [
+   70.2,
+   468.8,
+   541.5,
+   667.7
+  ],
+  "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p004_f2.png",
+  "doc_id": "va_pbm_t2dm_clinicians_guide",
+  "model": "claude-opus-5-5",
+  "checks": {
+   "passed": true,
+   "problems": [],
+   "ocr_match": null
+  }
+ },
+ "va_pbm_t2dm_clinicians_guide:p6:f0": {
+  "record": {
+   "kind": "flowchart",
+   "title": "Figure 2. Initial considerations",
+   "nodes": [
+    {
+     "id": "1",
+     "shape": "action",
+     "text": "Diagnose diabetes\n\u2022 Establish HbA1c target range\n\u2022 Determine urgency to reach target range"
+    },
+    {
+     "id": "2",
+     "shape": "action",
+     "text": "Start lifestyle changes\n\u2022 Diet\n\u2022 Exercise\n\u2022 Tobacco cessation\n\u2022 Alcohol reduction/cessation\n\u2022 Weight reduction if patient has overweight/obesity"
+    },
+    {
+     "id": "3",
+     "shape": "action",
+     "text": "Pharmacotherapy\n\u2022 If lifestyle changes are insufficient to reach target range or are not expected to reach target range\n\u2022 First line = metformin\n\u2022 Consider starting insulin if HbA1c is > 2% over target range"
+    }
+   ],
+   "edges": [],
+   "description": "Three overlapping, staggered horizontal arrows (purple 1, green 2, red 3), each pointing right, with bullet boxes beneath. The arrows do not connect boxes to one another; they indicate sequential/overlapping steps.",
+   "footnotes": [],
+   "unreadable": []
+  },
+  "status": "machine_interpreted",
+  "page": 6,
+  "bbox": [
+   67.8,
+   213.6,
+   555.5,
+   465.3
+  ],
+  "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p006_f0.png",
+  "doc_id": "va_pbm_t2dm_clinicians_guide",
+  "model": "claude-opus-5-5",
+  "checks": {
+   "passed": false,
+   "problems": [
+    "node 1 text only 0% found in OCR",
+    "node 2 text only 0% found in OCR",
+    "node 3 text only 0% found in OCR"
+   ],
+   "ocr_match": 0.0
+  }
+ },
+ "va_pbm_t2dm_clinicians_guide:p8:f0": {
+  "record": {
+   "kind": "diagram",
+   "title": "Lab report is 7.0%, Range +/- 0.5%",
+   "description": "A horizontal scale bar marked from 6.0% to 10.0% in 0.5% increments (6.0%, 6.5%, 7.0%, 7.5%, 8.0%, 8.5%, 9.0%, 9.5%, 10.0%; whole numbers in bold). The segment from 6.5% to 7.5% is shaded dark purple, centered on 7.0%. A callout box above this segment reads: \"Lab report is 7.0% Range +/\u2013 0.5%\".",
+   "unreadable": []
+  },
+  "status": "ocr_checked",
+  "page": 8,
+  "bbox": [
+   68.5,
+   158.9,
+   547.4,
+   254.5
+  ],
+  "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p008_f0.png",
+  "doc_id": "va_pbm_t2dm_clinicians_guide",
+  "model": "claude-opus-5-5",
+  "checks": {
+   "passed": true,
+   "problems": [],
+   "ocr_match": null
+  }
+ },
+ "va_pbm_t2dm_clinicians_guide:p9:f0": {
+  "record": {
+   "kind": "flowchart",
+   "title": "Figure 3. Patient case example:",
+   "nodes": [
+    {
+     "id": "n1",
+     "shape": "start",
+     "text": "\u2022 60 year old, severe COPD, newly diagnosed with diabetes. No microvascular complications\n\u2022 HbA1c at diagnosis 9.3%\n\u2022 Started on lifestyle modifications and metformin"
+    },
+    {
+     "id": "n2",
+     "shape": "note",
+     "text": "HbA1c target range 7.0-8.0%"
+    },
+    {
+     "id": "n3",
+     "shape": "action",
+     "text": "\u2022 Currently taking metformin 1000 mg twice daily\n\u2022 Stopped smoking\n\u2022 No longer drinking sodas\n\u2022 Started walking 10 minutes a day"
+    },
+    {
+     "id": "n4",
+     "shape": "note",
+     "text": "New HbA1c test was 8.1%"
+    },
+    {
+     "id": "n5",
+     "shape": "action",
+     "text": "\u2022 Consider the accuracy of the HbA1c test\n\u2022 Veteran is making positive lifestyle changes and HbA1c improved significantly and is close to target range"
+    },
+    {
+     "id": "n6",
+     "shape": "end",
+     "text": "Not changing therapy is an acceptable approach"
+    }
+   ],
+   "edges": [
+    {
+     "from": "n1",
+     "to": "n3",
+     "label": ""
+    },
+    {
+     "from": "n3",
+     "to": "n5",
+     "label": ""
+    }
+   ],
+   "description": "Three panels arranged left to right connected by curved green arrows: a lower arrow from the first panel (patient profile) to the second panel (current management), and an upper arrow from the second panel to the third panel (assessment). Dark blue callouts overlay the panels: 'HbA1c target range 7.0-8.0%' at the bottom of the first panel, 'New HbA1c test was 8.1%' above the second panel, and 'Not changing therapy is an acceptable approach' at the bottom of the third panel.",
+   "unreadable": []
+  },
+  "status": "ocr_checked",
+  "page": 9,
+  "bbox": [
+   68.2,
+   64.9,
+   573.7,
+   308.2
+  ],
+  "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p009_f0.png",
+  "doc_id": "va_pbm_t2dm_clinicians_guide",
+  "model": "claude-opus-5-5",
+  "checks": {
+   "passed": true,
+   "problems": [],
+   "ocr_match": 1.0
+  }
+ },
+ "va_pbm_t2dm_clinicians_guide:p9:f1": {
+  "record": {
+   "kind": "flowchart",
+   "title": "Figure 4. Use shared-decision making to involve Veteran in establishing a treatment plan",
+   "nodes": [
+    {
+     "id": "n1",
+     "shape": "action",
+     "text": "Seek your patient's participation"
+    },
+    {
+     "id": "n2",
+     "shape": "action",
+     "text": "Help your patient explore and compare treatment options"
+    },
+    {
+     "id": "n3",
+     "shape": "action",
+     "text": "Assess your patient's values and preferences"
+    },
+    {
+     "id": "n4",
+     "shape": "action",
+     "text": "Reach a decision with your patient"
+    },
+    {
+     "id": "n5",
+     "shape": "action",
+     "text": "Evaluate your patient's decision"
+    }
+   ],
+   "edges": [
+    {
+     "from": "n1",
+     "to": "n2",
+     "label": ""
+    },
+    {
+     "from": "n2",
+     "to": "n3",
+     "label": ""
+    },
+    {
+     "from": "n3",
+     "to": "n4",
+     "label": ""
+    },
+    {
+     "from": "n4",
+     "to": "n5",
+     "label": ""
+    },
+    {
+     "from": "n5",
+     "to": "n1",
+     "label": ""
+    }
+   ],
+   "description": "Five overlapping colored rings arranged in a cycle (orange, purple, blue, green, red), with chevron arrows between consecutive rings indicating a clockwise cyclic process.",
+   "unreadable": []
+  },
+  "status": "machine_interpreted",
+  "page": 9,
+  "bbox": [
+   150.3,
+   443.1,
+   468.0,
+   729.3
+  ],
+  "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p009_f1.png",
+  "doc_id": "va_pbm_t2dm_clinicians_guide",
+  "model": "claude-opus-5-5",
+  "checks": {
+   "passed": false,
+   "problems": [
+    "node n1 text only 0% found in OCR",
+    "node n2 text only 14% found in OCR",
+    "node n3 text only 0% found in OCR",
+    "node n4 text only 0% found in OCR",
+    "node n5 text only 0% found in OCR"
+   ],
+   "ocr_match": 0.029
+  }
+ },
+ "va_pbm_t2dm_clinicians_guide:p11:f2": {
+  "record": {
+   "kind": "chart",
+   "title": "58%",
+   "chart": {
+    "chart_type": "donut/progress ring",
+    "x_axis": "",
+    "y_axis": "",
+    "units": "%",
+    "series": [
+     {
+      "name": "",
+      "points": [
+       {
+        "label": "filled (green)",
+        "value": "58%"
+       }
+      ]
+     }
+    ]
+   },
+   "description": "Donut-style progress ring with a dark green arc covering roughly 58% of the circle and a light gray remainder, with \"58%\" printed in large gray text at the center. A partial blue character is visible at the left edge, cut off by the crop.",
+   "unreadable": [
+    "Cut-off blue text at left edge (appears to be '6' or part of a label)",
+    "No label indicating what the 58% refers to is visible"
+   ]
+  },
+  "status": "ocr_checked",
+  "page": 11,
+  "bbox": [
+   408.8,
+   324.2,
+   499.6,
+   414.9
+  ],
+  "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p011_f2.png",
+  "doc_id": "va_pbm_t2dm_clinicians_guide",
+  "model": "claude-opus-5-5",
+  "checks": {
+   "passed": true,
+   "problems": [],
+   "ocr_match": null
+  }
+ },
+ "va_pbm_t2dm_clinicians_guide:p12:f0": {
+  "record": {
+   "kind": "flowchart",
+   "title": "Figure 5. Selection of glucose-lowering medications in those with HbA1c above target",
+   "nodes": [
+    {
+     "id": "n1",
+     "shape": "start",
+     "text": "Start lifestyle interventions + metformin"
+    },
+    {
+     "id": "n2",
+     "shape": "decision",
+     "text": "ASCVD"
+    },
+    {
+     "id": "n3",
+     "shape": "decision",
+     "text": "CKD or HF"
+    },
+    {
+     "id": "n4",
+     "shape": "decision",
+     "text": "None"
+    },
+    {
+     "id": "n5",
+     "shape": "action",
+     "text": "SGLT-2\u2020\n\u2022 empagliflozin\n\u2022 canagliflozin"
+    },
+    {
+     "id": "n6",
+     "shape": "action",
+     "text": "SGLT-2\u2020\n\u2022 empagliflozin\n\u2022 canagliflozin\n\u2022 dapagliflozin"
+    },
+    {
+     "id": "n7",
+     "shape": "action",
+     "text": "DPP-4\nor SGLT-2\u2020\nor Sulfonylurea\nor TZD"
+    },
+    {
+     "id": "n8",
+     "shape": "action",
+     "text": "GLP-1\u2020\n\u2022 inj. semaglutide\n\u2022 liraglutide\n\u2022 dulaglutide"
+    },
+    {
+     "id": "n9",
+     "shape": "action",
+     "text": "GLP-1\u2020\n\u2022 inj. semaglutide\n\u2022 liraglutide\n\u2022 dulaglutide"
+    },
+    {
+     "id": "n10",
+     "shape": "action",
+     "text": "GLP-1\u2020"
+    },
+    {
+     "id": "n11",
+     "shape": "note",
+     "text": "If HbA1c is > 9%, consider starting basal insulin at any step."
+    }
+   ],
+   "edges": [
+    {
+     "from": "n1",
+     "to": "n2",
+     "label": "Does Veteran have ASCVD, HF, or CKD?*"
+    },
+    {
+     "from": "n1",
+     "to": "n3",
+     "label": "Does Veteran have ASCVD, HF, or CKD?*"
+    },
+    {
+     "from": "n1",
+     "to": "n4",
+     "label": "Does Veteran have ASCVD, HF, or CKD?*"
+    },
+    {
+     "from": "n2",
+     "to": "n5",
+     "label": "Add second-line agent"
+    },
+    {
+     "from": "n3",
+     "to": "n6",
+     "label": "Add second-line agent"
+    },
+    {
+     "from": "n4",
+     "to": "n7",
+     "label": "Add second-line agent"
+    },
+    {
+     "from": "n5",
+     "to": "n8",
+     "label": "If not effective or tolerated, add or substitute"
+    },
+    {
+     "from": "n6",
+     "to": "n9",
+     "label": "If not effective or tolerated, add or substitute"
+    },
+    {
+     "from": "n7",
+     "to": "n10",
+     "label": "If not effective or tolerated, add or substitute"
+    }
+   ],
+   "description": "A bracket on the left spans from the start box to the GLP-1 row, labeled with the note about basal insulin.",
+   "footnotes": [],
+   "unreadable": []
+  },
+  "status": "machine_interpreted",
+  "page": 12,
+  "bbox": [
+   74.8,
+   84.6,
+   489.1,
+   456.1
+  ],
+  "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p012_f0.png",
+  "doc_id": "va_pbm_t2dm_clinicians_guide",
+  "model": "claude-opus-5-5",
+  "checks": {
+   "passed": false,
+   "problems": [
+    "decision n2 has 1 exits, not all labelled",
+    "decision n3 has 1 exits, not all labelled",
+    "decision n4 has 1 exits, not all labelled",
+    "node n1 text only 0% found in OCR",
+    "node n2 text only 0% found in OCR",
+    "node n4 text only 0% found in OCR",
+    "node n5 text only 0% found in OCR",
+    "node n6 text only 0% found in OCR",
+    "node n7 text only 0% found in OCR",
+    "node n8 text only 0% found in OCR",
+    "node n9 text only 0% found in OCR",
+    "node n10 text only 0% found in OCR",
+    "node n11 text only 17% found in OCR"
+   ],
+   "ocr_match": 0.017
+  }
+ },
+ "va_pbm_t2dm_clinicians_guide:p13:f0": {
+  "record": {
+   "kind": "chart",
+   "title": "Figure 6. Many types of insulin are available, all with different onsets and durations of action",
+   "chart": {
+    "chart_type": "line (schematic action-profile curves)",
+    "x_axis": "Hours (0, 12, 24 marked)",
+    "y_axis": "unlabeled (relative insulin action)",
+    "units": "hours",
+    "series": [
+     {
+      "name": "fast-acting*",
+      "points": [
+       {
+        "label": "start",
+        "value": "~0"
+       },
+       {
+        "label": "peak",
+        "value": "~1.5 (read off axis)"
+       },
+       {
+        "label": "end",
+        "value": "~3 (read off axis)"
+       }
+      ]
+     },
+     {
+      "name": "regular",
+      "points": [
+       {
+        "label": "start",
+        "value": "~0"
+       },
+       {
+        "label": "peak",
+        "value": "~3.5 (read off axis)"
+       },
+       {
+        "label": "end",
+        "value": "~6 (read off axis)"
+       }
+      ]
+     },
+     {
+      "name": "NPH",
+      "points": [
+       {
+        "label": "start",
+        "value": "~0"
+       },
+       {
+        "label": "peak",
+        "value": "~7-8 (read off axis)"
+       },
+       {
+        "label": "end",
+        "value": "~17 (read off axis)"
+       }
+      ]
+     },
+     {
+      "name": "detemir",
+      "points": [
+       {
+        "label": "start",
+        "value": "~0"
+       },
+       {
+        "label": "peak",
+        "value": "~9-10 (read off axis)"
+       },
+       {
+        "label": "end",
+        "value": "~20 (read off axis)"
+       }
+      ]
+     },
+     {
+      "name": "glargine",
+      "points": [
+       {
+        "label": "start",
+        "value": "~0"
+       },
+       {
+        "label": "plateau begins",
+        "value": "~3 (read off axis)"
+       },
+       {
+        "label": "end",
+        "value": "~24-25 (read off axis)"
+       }
+      ]
+     },
+     {
+      "name": "degludec",
+      "points": [
+       {
+        "label": "start",
+        "value": "~0"
+       },
+       {
+        "label": "plateau begins",
+        "value": "~3 (read off axis)"
+       },
+       {
+        "label": "end",
+        "value": "beyond 24 (curve continues to right edge)"
+       }
+      ]
+     }
+    ]
+   },
+   "description": "Schematic curves showing onset, peak and duration of insulin types; dashed segments appear near peaks of regular, NPH and detemir and at the ends of regular and detemir. Curve values are approximate, read off the axis.",
+   "footnotes": [
+    "* (footnote text for 'fast-acting*' not shown in image)"
+   ],
+   "unreadable": [
+    "y-axis has no scale or label",
+    "exact curve values; all estimated from axis"
+   ]
+  },
+  "status": "ocr_checked",
+  "page": 13,
+  "bbox": [
+   72.7,
+   486.3,
+   527.1,
+   669.8
+  ],
+  "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p013_f0.png",
+  "doc_id": "va_pbm_t2dm_clinicians_guide",
+  "model": "claude-opus-5-5",
+  "checks": {
+   "passed": true,
+   "problems": [],
+   "ocr_match": null
+  }
+ },
+ "va_pbm_t2dm_clinicians_guide:p14:f0": {
+  "record": {
+   "kind": "flowchart",
+   "title": "Figure 7. Using basal insulin*6,10",
+   "nodes": [
+    {
+     "id": "n1",
+     "shape": "start",
+     "text": "Basal insulin\n\u2022 Initial dose 10 units or 0.1 to 0.2 units/kg once daily"
+    },
+    {
+     "id": "n2",
+     "shape": "action",
+     "text": "Titrate basal insulin\n\u2022 10 to 15% weekly or 2 units every 3 days based on self-monitored FPG"
+    },
+    {
+     "id": "n3",
+     "shape": "end",
+     "text": "Decrease insulin\n\u2022 Decrease insulin dose by 10 to 20%"
+    }
+   ],
+   "edges": [
+    {
+     "from": "n1",
+     "to": "n2",
+     "label": "Set FPG target range"
+    },
+    {
+     "from": "n2",
+     "to": "n3",
+     "label": "If hypoglycemia"
+    }
+   ],
+   "description": "Three-box left-to-right flowchart with a stopwatch icon above the middle box.",
+   "footnotes": [],
+   "unreadable": []
+  },
+  "status": "ocr_checked",
+  "page": 14,
+  "bbox": [
+   68.6,
+   350.3,
+   552.1,
+   538.6
+  ],
+  "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p014_f0.png",
+  "doc_id": "va_pbm_t2dm_clinicians_guide",
+  "model": "claude-opus-5-5",
+  "checks": {
+   "passed": true,
+   "problems": [],
+   "ocr_match": 1.0
+  }
+ },
+ "va_pbm_t2dm_clinicians_guide:p15:f1": {
+  "record": {
+   "kind": "diagram",
+   "title": "Figure 9. Sample day with basal and prandial insulin",
+   "description": "A two-row grid. Top row, labeled \"TIME OF DAY\", shows four columns: \"Morning\" (sun icon), \"Breakfast\", \"Lunch\", and \"Dinner\" (each with a fork-and-plate icon). Bottom row, labeled \"INSULIN TYPE\", shows an insulin pen under each column: a purple pen marked with an asterisk (*) labeled \"Basal\" under Morning, and red pens labeled \"Prandial\" under Breakfast, Lunch, and Dinner.",
+   "footnotes": [
+    "* (asterisk next to Basal pen; explanation not shown in image)"
+   ],
+   "unreadable": []
+  },
+  "status": "ocr_checked",
+  "page": 15,
+  "bbox": [
+   70.2,
+   457.7,
+   504.7,
+   617.7
+  ],
+  "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p015_f1.png",
+  "doc_id": "va_pbm_t2dm_clinicians_guide",
+  "model": "claude-opus-5-5",
+  "checks": {
+   "passed": true,
+   "problems": [],
+   "ocr_match": null
+  }
+ },
+ "va_pbm_t2dm_clinicians_guide:p17:f2": {
+  "record": {
+   "kind": "photo",
+   "title": "",
+   "description": "Photo of a person in a gray shirt seated at a wooden table, holding an insulin pen with both hands and adjusting or attaching its end. On the table in the foreground are a dark object (likely a glucose meter) and another pen-like device with a blue cap. No text is visible.",
+   "unreadable": []
+  },
+  "status": "ocr_checked",
+  "page": 17,
+  "bbox": [
+   71.3,
+   498.2,
+   222.1,
+   588.7
+  ],
+  "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p017_f2.png",
+  "doc_id": "va_pbm_t2dm_clinicians_guide",
+  "model": "claude-opus-5-5",
+  "checks": {
+   "passed": true,
+   "problems": [],
+   "ocr_match": null
+  }
+ },
+ "va_pbm_t2dm_clinicians_guide:p18:f0": {
+  "record": {
+   "kind": "photo",
+   "title": "",
+   "description": "Photo of a hand holding a green/silver blood glucose meter with a test strip inserted at the top end. The LCD display shows a reading of \"38\" with \"mg/dL\" beneath, a time reading \"6:27 AM\" and a date-like reading \"10-13\", and an \"M\" indicator. Two arrow buttons (down and up) are on the right side of the device.",
+   "unreadable": [
+    "exact small text on display (time/date values) uncertain"
+   ]
+  },
+  "status": "ocr_checked",
+  "page": 18,
+  "bbox": [
+   71.3,
+   319.4,
+   300.0,
+   412.1
+  ],
+  "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p018_f0.png",
+  "doc_id": "va_pbm_t2dm_clinicians_guide",
+  "model": "claude-opus-5-5",
+  "checks": {
+   "passed": true,
+   "problems": [],
+   "ocr_match": null
+  }
+ },
+ "va_pbm_t2dm_clinicians_guide:p19:f0": {
+  "record": {
+   "kind": "diagram",
+   "title": "Figure 11. Changes to overall health and function should trigger a re-assessment of treatment targets.",
+   "nodes": [
+    {
+     "id": "n1",
+     "shape": "action",
+     "text": "Frailty"
+    },
+    {
+     "id": "n2",
+     "shape": "action",
+     "text": "Multimorbidity"
+    },
+    {
+     "id": "n3",
+     "shape": "action",
+     "text": "Limited life expectancy"
+    },
+    {
+     "id": "n4",
+     "shape": "action",
+     "text": "Cognitive impairment"
+    },
+    {
+     "id": "n5",
+     "shape": "action",
+     "text": "Impairment in activities of daily living"
+    },
+    {
+     "id": "n6",
+     "shape": "end",
+     "text": "Re-evaluate HbA1c target range"
+    }
+   ],
+   "edges": [
+    {
+     "from": "n1",
+     "to": "n6",
+     "label": ""
+    },
+    {
+     "from": "n2",
+     "to": "n6",
+     "label": ""
+    },
+    {
+     "from": "n3",
+     "to": "n6",
+     "label": ""
+    },
+    {
+     "from": "n4",
+     "to": "n6",
+     "label": ""
+    },
+    {
+     "from": "n5",
+     "to": "n6",
+     "label": ""
+    }
+   ],
+   "description": "Five blue boxes (Frailty, Multimorbidity, Limited life expectancy, Cognitive impairment, Impairment in activities of daily living) arranged around a central red circle labeled \"Re-evaluate HbA1c target range\", each with an arrow pointing to the circle.",
+   "unreadable": []
+  },
+  "status": "ocr_checked",
+  "page": 19,
+  "bbox": [
+   132.1,
+   218.2,
+   514.9,
+   421.2
+  ],
+  "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p019_f0.png",
+  "doc_id": "va_pbm_t2dm_clinicians_guide",
+  "model": "claude-opus-5-5",
+  "checks": {
+   "passed": true,
+   "problems": [],
+   "ocr_match": null
+  }
+ },
+ "va_pbm_t2dm_clinicians_guide:p19:f1": {
+  "record": {
+   "kind": "flowchart",
+   "title": "Figure 12. Key actions when simplifying insulin",
+   "nodes": [
+    {
+     "id": "n1",
+     "shape": "action",
+     "text": "Use basal insulin once daily in the morning\n\u2022 Glargine or detemir can be dosed once daily."
+    },
+    {
+     "id": "n2",
+     "shape": "action",
+     "text": "Reduce the total number of injections\n\u2022 Discontinue prandial insulins if patient is having difficulty remembering or hypoglycemia.\n\u2022 If prandial insulin required, consider using mixed insulin (basal/prandial mix like NPH/aspart, 70/30)."
+    },
+    {
+     "id": "n3",
+     "shape": "action",
+     "text": "Add and optimize non-insulin glucose-lowering therapies\n\u2022 Start with metformin.\n\u2022 Consider patient factors like ASCVD, HF, or CVD for next line agents."
+    }
+   ],
+   "edges": [
+    {
+     "from": "n1",
+     "to": "n2",
+     "label": ""
+    },
+    {
+     "from": "n2",
+     "to": "n3",
+     "label": ""
+    }
+   ],
+   "unreadable": []
+  },
+  "status": "machine_interpreted",
+  "page": 19,
+  "bbox": [
+   67.8,
+   468.6,
+   550.5,
+   641.2
+  ],
+  "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p019_f1.png",
+  "doc_id": "va_pbm_t2dm_clinicians_guide",
+  "model": "claude-opus-5-5",
+  "checks": {
+   "passed": false,
+   "problems": [
+    "node n1 text only 12% found in OCR",
+    "node n2 text only 5% found in OCR",
+    "node n3 text only 0% found in OCR"
+   ],
+   "ocr_match": 0.058
+  }
+ },
+ "va_pbm_t2dm_clinicians_guide:p24:f0": {
+  "record": {
+   "kind": "photo",
+   "title": "",
+   "description": "Cover image of a guideline document. Top banner text: \"VA/DoD Clinical Practice Guideline\". Title box: \"Management of Diabetes Mellitus\". Background shows an American flag with a caduceus/medical symbol in the center. Bottom banner text: \"VA/DoD Evidence Based Practice\".",
+   "unreadable": []
+  },
+  "status": "ocr_checked",
+  "page": 24,
+  "bbox": [
+   226.9,
+   127.5,
+   296.0,
+   213.0
+  ],
+  "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p024_f0.png",
+  "doc_id": "va_pbm_t2dm_clinicians_guide",
+  "model": "claude-opus-5-5",
+  "checks": {
+   "passed": true,
+   "problems": [],
+   "ocr_match": null
+  }
+ },
+ "va_pbm_t2dm_clinicians_guide:p4:f4": {
+  "record": {
+   "kind": "text_image",
+   "title": "58% reduction in diabetes risk with lifestyle changes",
+   "description": "A large downward-pointing arrow shaded in a light blue gradient, containing the text: \"58% reduction in diabetes risk with lifestyle changes8\" (the 8 is a superscript reference marker). The arrow emphasizes the reduction.",
+   "footnotes": [],
+   "unreadable": []
+  },
+  "status": "ocr_checked",
+  "page": 4,
+  "bbox": [
+   434.1,
+   169.3,
+   562.0,
+   387.5
+  ],
+  "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p004_f4.png",
+  "doc_id": "va_pbm_t2dm_clinicians_guide",
+  "model": "claude-opus-5-5",
+  "checks": {
+   "passed": true,
+   "problems": [],
+   "ocr_match": null
+  }
+ },
+ "va_pbm_t2dm_clinicians_guide:p7:f1": {
+  "record": {
+   "kind": "table_image",
+   "title": "",
+   "table": {
+    "header": [
+     "Status",
+     "Fasting Plasma Glucose (FPG)*\u00a7 or Hemoglobin A1c (HbA1c)\u2020"
+    ],
+    "rows": [
+     [
+      "Normal",
+      "FPG < 100 mg/dL; HbA1c < 5.7%"
+     ],
+     [
+      "Prediabetes",
+      "FPG \u2265 100 mg/dL and < 126 mg/dL on 2 occasions or HbA1c \u2265 5.7% and FPG \u2265 100 mg/dL and < 126 mg/dL or 2-hour plasma glucose 140\u2013199 mg/dL (IGT)"
+     ],
+     [
+      "Diabetes",
+      "FPG \u2265 126 mg/dL on 2 occasions or HbA1c \u2265 6.5% and a confirmatory FPG \u2265 126 mg/dL or HbA1c \u2265 7.0% on 2 occasions"
+     ]
+    ]
+   },
+   "footnotes": [],
+   "unreadable": [
+    "Footnote text for symbols *, \u00a7, \u2020 is not shown in the image"
+   ]
+  },
+  "status": "ocr_checked",
+  "page": 7,
+  "bbox": [
+   69.1,
+   85.1,
+   536.4,
+   359.8
+  ],
+  "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p007_f1.png",
+  "doc_id": "va_pbm_t2dm_clinicians_guide",
+  "model": "claude-opus-5-5",
+  "checks": {
+   "passed": true,
+   "problems": [],
+   "ocr_match": null
+  }
+ },
+ "va_pbm_t2dm_clinicians_guide:p15:f2": {
+  "record": {
+   "kind": "text_image",
+   "title": "Starting prandial insulin",
+   "description": "A callout box with a red header reading \"Starting prandial insulin\" and three bullet points on a light background:\n\u2022 Start with one dose before the largest meal of the day.\n\u2022 Begin with 4 units a day or 10% of basal dose.\n\u2022 If HbA1c is < 8% then consider lowering basal dose by 4 units a day or 10%.\nAlong the right edge of the crop, fragments of red text from adjacent page content are partly visible.",
+   "unreadable": [
+    "Cut-off red text fragments at the right edge of the image (adjacent page content)"
+   ]
+  },
+  "status": "ocr_checked",
+  "page": 15,
+  "bbox": [
+   69.1,
+   107.8,
+   224.3,
+   310.8
+  ],
+  "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p015_f2.png",
+  "doc_id": "va_pbm_t2dm_clinicians_guide",
+  "model": "claude-opus-5-5",
+  "checks": {
+   "passed": true,
+   "problems": [],
+   "ocr_match": null
+  }
+ },
+ "va_pbm_t2dm_clinicians_guide:p15:f3": {
+  "record": {
+   "kind": "text_image",
+   "title": "Titrating prandial insulin",
+   "description": "A single callout box with a red header titled \"Titrating prandial insulin\". Text verbatim:\n\u2022 Increase dose by 1 to 2 units or 10 to 15% twice weekly.\n\u2022 If having hypoglycemia, determine the cause (e.g., missed meal, exercise).\n  \u2013 If no clear reason, then lower corresponding dose by 10 to 20%.\nAt the right edge, fragments of an adjacent box are visible but cut off.",
+   "unreadable": [
+    "Cut-off text fragments at the right edge from an adjacent box (letters only partially visible)"
+   ]
+  },
+  "status": "ocr_checked",
+  "page": 15,
+  "bbox": [
+   251.6,
+   107.8,
+   393.5,
+   310.8
+  ],
+  "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p015_f3.png",
+  "doc_id": "va_pbm_t2dm_clinicians_guide",
+  "model": "claude-opus-5-5",
+  "checks": {
+   "passed": true,
+   "problems": [],
+   "ocr_match": null
+  }
+ },
+ "va_pbm_t2dm_clinicians_guide:p15:f4": {
+  "record": {
+   "kind": "flowchart",
+   "title": "Adding prandial doses",
+   "nodes": [
+    {
+     "id": "n1",
+     "shape": "action",
+     "text": "Adding prandial doses\n\u2022 Start with adding a second prandial dose and follow titration schedule.\n\u2022 Recheck HbA1c in 3 months.\n\u2022 If HbA1c still elevated, add a third prandial insulin dose."
+    }
+   ],
+   "edges": [],
+   "description": "A single box cropped from a larger flowchart, with the header 'Adding prandial doses' and three bullet points. No arrows are visible within the crop. A small mark at the left edge may be part of an arrow from the larger flowchart, but its source and direction cannot be determined.",
+   "unreadable": [
+    "Possible arrow fragment at the left edge; its source and direction are not visible in the crop"
+   ]
+  },
+  "status": "ocr_checked",
+  "page": 15,
+  "bbox": [
+   421.6,
+   107.8,
+   563.4,
+   310.8
+  ],
+  "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p015_f4.png",
+  "doc_id": "va_pbm_t2dm_clinicians_guide",
+  "model": "claude-opus-5-5",
+  "checks": {
+   "passed": true,
+   "problems": [],
+   "ocr_match": 1.0
+  }
+ },
+ "va_pbm_t2dm_clinicians_guide:p17:f6": {
+  "record": {
+   "kind": "text_image",
+   "title": "Clinical Pearl: When basal insulin is added to existing therapy",
+   "description": "A lavender callout box labeled \"CLINICAL PEARL\", with a gray sphere at its upper left corner and a purple stopwatch icon at the bottom. Text verbatim: \"CLINICAL PEARL. When basal insulin is added to existing therapy: \u2022 Continue metformin, SGLT-2, GLP-1, DPP-4, and/or sulfonylurea. \u2022 TZD can be continued if patient does not have heart failure. \u2022 Keep in mind hypoglycemia risk. Reduce the dose of basal insulin if hypoglycemia occurs.\"",
+   "unreadable": []
+  },
+  "status": "ocr_checked",
+  "page": 17,
+  "bbox": [
+   69.3,
+   59.7,
+   291.8,
+   371.8
+  ],
+  "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p017_f6.png",
+  "doc_id": "va_pbm_t2dm_clinicians_guide",
+  "model": "claude-opus-5-5",
+  "checks": {
+   "passed": true,
+   "problems": [],
+   "ocr_match": null
+  }
+ },
+ "va_pbm_t2dm_clinicians_guide:p17:f7": {
+  "record": {
+   "kind": "text_image",
+   "title": "Clinical Pearl: When prandial insulin is added to basal insulin and existing therapy",
+   "description": "A peach-colored callout box with a gray sphere ornament at the top left and a crossed knife-and-fork icon at the bottom. Text verbatim: \"CLINICAL PEARL\" / \"When prandial insulin is added to basal insulin and existing therapy:\" / \"\u2022 Continue metformin, DPP-4, SGLT-2, or GLP-1.\" / \"\u2022 Discontinue sulfonylurea due to risk of hypoglycemia.\" / \"\u2022 If hypoglycemia occurs, adjust the dose of prandial or basal insulin (based on readings and symptoms) before adjusting metformin, DPP-4, SGLT-2, or GLP-1.\"",
+   "unreadable": []
+  },
+  "status": "ocr_checked",
+  "page": 17,
+  "bbox": [
+   306.9,
+   59.7,
+   542.7,
+   371.8
+  ],
+  "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p017_f7.png",
+  "doc_id": "va_pbm_t2dm_clinicians_guide",
+  "model": "claude-opus-5-5",
+  "checks": {
+   "passed": true,
+   "problems": [],
+   "ocr_match": null
+  }
+ },
+ "va_pbm_t2dm_clinicians_guide:p18:f1": {
+  "record": {
+   "kind": "table_image",
+   "title": "",
+   "table": {
+    "header": [
+     "Modifiable",
+     "Non-modifiable"
+    ],
+    "rows": [
+     [
+      "Irregular eating habits",
+      "Longer duration of diabetes"
+     ],
+     [
+      "Insulin",
+      "Frailty or older age"
+     ],
+     [
+      "Sulfonylureas, meglitinides",
+      "Cognitive impairment"
+     ],
+     [
+      "Polypharmacy (e.g., non-selective beta-blockers)",
+      "Chronic kidney disease or hepatic dysfunction"
+     ],
+     [
+      "Alcohol use",
+      "Hypoglycemia unawareness"
+     ]
+    ]
+   },
+   "unreadable": []
+  },
+  "status": "ocr_checked",
+  "page": 18,
+  "bbox": [
+   93.5,
+   483.5,
+   522.6,
+   614.2
+  ],
+  "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p018_f1.png",
+  "doc_id": "va_pbm_t2dm_clinicians_guide",
+  "model": "claude-opus-5-5",
+  "checks": {
+   "passed": true,
+   "problems": [],
+   "ocr_match": null
+  }
+ },
+ "va_pbm_t2dm_clinicians_guide:p20:f6": {
+  "record": {
+   "kind": "text_image",
+   "title": "Antiplatelet therapy",
+   "description": "A callout box with a dark red left panel showing an icon of red blood cells/platelets and the label \"Antiplatelet therapy\". The right panel contains text:\n\nPrimary prevention (no CVD)\n\u2022 Balance risk and benefits. In older adults (e.g., \u2265 70 years), risk appears to outweigh benefit.\n\nSecondary prevention (has CVD)\n\u2022 Use antiplatelet therapy (e.g., aspirin) in most patients unless contraindicated.\n\u2022 Use clopidogrel 75mg in patients with an aspirin allergy.",
+   "unreadable": []
+  },
+  "status": "ocr_checked",
+  "page": 20,
+  "bbox": [
+   69.1,
+   84.1,
+   547.9,
+   186.0
+  ],
+  "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p020_f6.png",
+  "doc_id": "va_pbm_t2dm_clinicians_guide",
+  "model": "claude-opus-5-5",
+  "checks": {
+   "passed": true,
+   "problems": [],
+   "ocr_match": null
+  }
+ },
+ "va_pbm_t2dm_clinicians_guide:p20:f7": {
+  "record": {
+   "kind": "text_image",
+   "title": "Cholesterol",
+   "description": "Callout box with a blue left panel showing an icon of a finger with a drop of blood and the label \"Cholesterol\". The right panel contains bulleted text:\n\u2022 For all patients with diabetes who are > 40 years of age, prescribe a statin. (bold)\n\u2022 Patients > 40 years without other CVD risk factors:\n  \u2013 Prescribe a moderate intensity statin (e.g., atorvastatin 20mg daily).\n\u2022 Patients with CVD or CVD risk factors (e.g., 10-year ASCVD risk > 20%):\n  \u2013 Prescribe a high-intensity statin (e.g., atorvastatin 40-80mg).",
+   "unreadable": []
+  },
+  "status": "ocr_checked",
+  "page": 20,
+  "bbox": [
+   69.1,
+   326.1,
+   547.9,
+   426.2
+  ],
+  "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p020_f7.png",
+  "doc_id": "va_pbm_t2dm_clinicians_guide",
+  "model": "claude-opus-5-5",
+  "checks": {
+   "passed": true,
+   "problems": [],
+   "ocr_match": null
+  }
+ },
+ "va_pbm_t2dm_clinicians_guide:p20:f8": {
+  "record": {
+   "kind": "text_image",
+   "title": "Blood pressure*",
+   "description": "A text panel with a gray sidebar on the left showing a blood pressure cuff (sphygmomanometer) icon and the label \"Blood pressure*\". The right side contains bulleted recommendations:\n\u2022 Measure BP at every clinical visit using appropriate method, patient preparation, and technique. (\"Measure BP at every clinical visit\" in bold)\n\u2022 Suggest BP goal < 130/90 mm Hg. For patients 60 years and over with T2DM, recommend Systolic BP goal < 140 mm Hg with an added benefit to lowering Systolic BP further for those between 130 and 140 mm Hg.\n\u2022 Treat with a thiazide diuretic, angiotensin-converting enzyme inhibitor (ACEI), angiotensin receptor blocker (ARB), or calcium channel blocker (CCB).\n\u2022 Consider use of an ACEI or ARB if proteinuria present.**",
+   "unreadable": []
+  },
+  "status": "ocr_checked",
+  "page": 20,
+  "bbox": [
+   69.1,
+   185.0,
+   547.9,
+   326.8
+  ],
+  "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p020_f8.png",
+  "doc_id": "va_pbm_t2dm_clinicians_guide",
+  "model": "claude-opus-5-5",
+  "checks": {
+   "passed": true,
+   "problems": [],
+   "ocr_match": null
+  }
+ },
+ "va_pbm_t2dm_clinicians_guide:p20:f9": {
+  "record": {
+   "kind": "text_image",
+   "title": "Foot care",
+   "description": "A callout box with a purple left panel containing a white outline icon of a foot sole and the label \"Foot care\". The right panel contains two bullet points verbatim:\n\u2022 VA PAVE (Prevention of Amputation for Veterans Everywhere) is a program designed to prevent limb loss. It expands the care and treatment of clients at risk for amputation or who have had a prior amputation. VHA Directive 1410 for PAVE. (\"VHA Directive 1410 for PAVE\" appears as a hyperlink.)\n\u2022 Veterans are encouraged to not go barefoot, use mirrors to view the bottom of their feet to look for ulcers, avoid hot water, and notify their healthcare team if they have wounds that do not heal rapidly.",
+   "unreadable": []
+  },
+  "status": "ocr_checked",
+  "page": 20,
+  "bbox": [
+   69.1,
+   424.9,
+   547.9,
+   532.6
+  ],
+  "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p020_f9.png",
+  "doc_id": "va_pbm_t2dm_clinicians_guide",
+  "model": "claude-opus-5-5",
+  "checks": {
+   "passed": true,
+   "problems": [],
+   "ocr_match": null
+  }
+ },
+ "va_pbm_t2dm_clinicians_guide:p20:f10": {
+  "record": {
+   "kind": "text_image",
+   "title": "Gastroparesis",
+   "description": "Callout box with a green left panel showing a stomach icon and the label \"Gastroparesis\". The right panel lists bullet points verbatim:\n\u2022 Recommend a low-fiber, low fat dietary plan with small, frequent meals (bold) with a greater proportion of calories as liquids.\n\u2022 Withdraw medications that can worsen symptoms: Opioids (slowly taper), anticholinergics, GLP-1s, pramlintide, and DPP-4s when clinically feasible\n\u2022 Metaclopramide may be used for up to 12 weeks in patients unresponsive to other therapies.\n\u2022 Consider referral to registered dietitian.",
+   "unreadable": []
+  },
+  "status": "ocr_checked",
+  "page": 20,
+  "bbox": [
+   69.1,
+   531.7,
+   547.9,
+   644.4
+  ],
+  "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p020_f10.png",
+  "doc_id": "va_pbm_t2dm_clinicians_guide",
+  "model": "claude-opus-5-5",
+  "checks": {
+   "passed": true,
+   "problems": [],
+   "ocr_match": null
+  }
+ },
+ "va_pbm_t2dm_clinicians_guide:p20:f11": {
+  "record": {
+   "kind": "text_image",
+   "title": "Nephropathy",
+   "description": "A callout box with a red left panel showing a kidney icon and the label \"Nephropathy\". The right panel lists three bullet points:\n\u2022 Determine eGFR at diagnosis and annually thereafter.\n\u2022 Obtain a urine albumin-to-creatinine ratio at diagnosis and annually thereafter.\n\u2022 Prescribe an ACEI or ARB in Veterans with diabetes, hypertension, and elevated urinary albumin >30 mg/g Cr (e.g., spot urinary to albumin creatinine ratio (UACR)) and/or an eGFR <60 mL/min/1.73 m\u00b2.\nThe phrases \"Determine eGFR\" and \"Obtain a urine albumin-to-creatinine ratio\" are printed in bold.",
+   "unreadable": []
+  },
+  "status": "ocr_checked",
+  "page": 20,
+  "bbox": [
+   69.1,
+   643.6,
+   547.9,
+   743.7
+  ],
+  "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p020_f11.png",
+  "doc_id": "va_pbm_t2dm_clinicians_guide",
+  "model": "claude-opus-5-5",
+  "checks": {
+   "passed": true,
+   "problems": [],
+   "ocr_match": null
+  }
+ },
+ "va_pbm_t2dm_clinicians_guide:p21:f5": {
+  "record": {
+   "kind": "text_image",
+   "title": "Neuropathy",
+   "description": "A callout panel with a purple left section containing a white line icon of a foot held by a hand, labeled \"Neuropathy\". The right section contains bulleted text:\n\u2022 Comprehensive foot exam, including:\n  \u2013 Visual inspection (e.g., skin integrity, toe nails, callouses, deformities, ulcers)\n  \u2013 Determination of temperature, vibration, or pinprick sensation, and 10-g monofilament exam\n\u2022 Optimize glycemic control for symptoms of autonomic neuropathy and overall health.\n\u2022 Prescribe duloxetine, gabapentin, or pregabalin for neuropathic pain in accordance with VA PBM clinical guidance.",
+   "unreadable": []
+  },
+  "status": "ocr_checked",
+  "page": 21,
+  "bbox": [
+   69.1,
+   84.1,
+   547.9,
+   200.0
+  ],
+  "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p021_f5.png",
+  "doc_id": "va_pbm_t2dm_clinicians_guide",
+  "model": "claude-opus-5-5",
+  "checks": {
+   "passed": true,
+   "problems": [],
+   "ocr_match": null
+  }
+ },
+ "va_pbm_t2dm_clinicians_guide:p21:f6": {
+  "record": {
+   "kind": "text_image",
+   "title": "Obesity",
+   "description": "A callout box with a green left panel showing a bathroom scale icon labeled \"Obesity\". The right panel contains bulleted text verbatim:\n\u2022 Refer Veterans to the MOVE! Weight Management Program and/or refer to registered dietitian for individual counseling.\n\u2022 Provide pharmacologic therapy for weight loss when indicated.\n\u2022 Avoid medications which can contribute to weight gain where clinically feasible.\n\u2022 Refer for surgical weight loss interventions, especially if:\n\u2013 BMI 35-39 kg/m2 with obesity associated conditions\n\u2013 BMI \u2265 40mg/m2\n(\"Refer Veterans to the MOVE! Weight Management Program\" is printed in bold. The unit in the last line is printed as \"mg/m2\", as shown in the figure.)",
+   "unreadable": []
+  },
+  "status": "ocr_checked",
+  "page": 21,
+  "bbox": [
+   69.1,
+   199.0,
+   547.9,
+   327.1
+  ],
+  "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p021_f6.png",
+  "doc_id": "va_pbm_t2dm_clinicians_guide",
+  "model": "claude-opus-5-5",
+  "checks": {
+   "passed": true,
+   "problems": [],
+   "ocr_match": null
+  }
+ },
+ "va_pbm_t2dm_clinicians_guide:p21:f7": {
+  "record": {
+   "kind": "text_image",
+   "title": "Vaccines",
+   "description": "A callout box with a dark gray left panel showing an icon of a vial and syringe above the label \"Vaccines\". The right panel contains bulleted text:\n\u2022 Recommend influenza vaccine annually. (bold)\n\u2022 Other recommended vaccines include:\n\u2013 Pneumonia vaccines\n\u2013 Hepatitis B\n\u2013 Vaccines as per immunization schedule (e.g., Tdap, MMR, HPV, Zoster)",
+   "unreadable": []
+  },
+  "status": "ocr_checked",
+  "page": 21,
+  "bbox": [
+   69.1,
+   526.2,
+   547.9,
+   624.8
+  ],
+  "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p021_f7.png",
+  "doc_id": "va_pbm_t2dm_clinicians_guide",
+  "model": "claude-opus-5-5",
+  "checks": {
+   "passed": true,
+   "problems": [],
+   "ocr_match": null
+  }
+ },
+ "va_pbm_t2dm_clinicians_guide:p21:f8": {
+  "record": {
+   "kind": "text_image",
+   "title": "Retinopathy",
+   "description": "A callout box with a red left panel containing a white line icon of an eye (cross-section) above the label \"Retinopathy\". The right panel contains bulleted text:\n\u2022 All Veterans should have a dilated retinal exam or retinal imaging to detect retinopathy. (first clause \"All Veterans should have a dilated retinal exam or retinal imaging\" in bold)\n\u2022 Screen at least every other year for Veterans with no retinopathy on prior exams.\n\u2022 More frequent screenings required if risk factors for progression of retinopathy are present (e.g., pregnancy).\n\u2022 Follow-up for retinopathy should occur in conjunction with an eye care professional.",
+   "unreadable": []
+  },
+  "status": "ocr_checked",
+  "page": 21,
+  "bbox": [
+   69.1,
+   326.2,
+   547.9,
+   427.0
+  ],
+  "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p021_f8.png",
+  "doc_id": "va_pbm_t2dm_clinicians_guide",
+  "model": "claude-opus-5-5",
+  "checks": {
+   "passed": true,
+   "problems": [],
+   "ocr_match": null
+  }
+ },
+ "va_pbm_t2dm_clinicians_guide:p21:f9": {
+  "record": {
+   "kind": "text_image",
+   "title": "Tobacco",
+   "description": "A callout box with a dark blue left panel showing a cigarette icon with smoke and the label \"Tobacco\". The right panel contains bulleted text:\n\u2022 Drug therapy using nicotine replacement, bupropion, or varenicline significantly improves cessation rates.\n\u2022 Adding counseling programs to pharmacotherapy further increases the chances for success.\n\u2022 Contact your tobacco cessation clinician to learn about programs available at your facility.\n\u2022 Veterans can also be referred to the Veteran tobacco quitline at 1-855-QUIT-VET.",
+   "unreadable": []
+  },
+  "status": "ocr_checked",
+  "page": 21,
+  "bbox": [
+   69.1,
+   426.1,
+   547.9,
+   526.9
+  ],
+  "crop": "storage/figures/va_pbm_t2dm_clinicians_guide/p021_f9.png",
+  "doc_id": "va_pbm_t2dm_clinicians_guide",
+  "model": "claude-opus-5-5",
+  "checks": {
+   "passed": true,
+   "problems": [],
+   "ocr_match": null
+  }
+ },
+ "va_pbm_t2dm_pharmacotherapy_2025:p5:f0": {
+  "record": {
+   "kind": "chart",
+   "title": "Figure 2. Cardiac and renal benefits",
+   "chart": {
+    "chart_type": "grouped bar chart",
+    "x_axis": "Outcome composite (MACE composite, Heart failure composite, Kidney composite)",
+    "y_axis": "Percent relative risk reduction",
+    "units": "percent",
+    "series": [
+     {
+      "name": "SGLT2 inhibitors",
+      "points": [
+       {
+        "label": "MACE composite",
+        "value": "-14"
+       },
+       {
+        "label": "Heart failure composite",
+        "value": "-31"
+       },
+       {
+        "label": "Kidney composite",
+        "value": "-45"
+       }
+      ]
+     },
+     {
+      "name": "GLP-1 RA",
+      "points": [
+       {
+        "label": "MACE composite",
+        "value": "-13"
+       },
+       {
+        "label": "Heart failure composite",
+        "value": "-7"
+       },
+       {
+        "label": "Kidney composite",
+        "value": "-24"
+       }
+      ]
+     },
+     {
+      "name": "Sulfonylurea",
+      "points": [
+       {
+        "label": "MACE composite",
+        "value": "10"
+       },
+       {
+        "label": "Heart failure composite",
+        "value": "23"
+       },
+       {
+        "label": "Kidney composite",
+        "value": "4"
+       }
+      ]
+     },
+     {
+      "name": "DPP-4 inhibitors",
+      "points": [
+       {
+        "label": "MACE composite",
+        "value": "-2"
+       },
+       {
+        "label": "Heart failure composite",
+        "value": "0"
+       },
+       {
+        "label": "Kidney composite",
+        "value": "4"
+       }
+      ]
+     }
+    ]
+   },
+   "description": "Grouped bar chart with y-axis from -50 to 30. Values are printed as data labels on the bars. A downward blue arrow at right is annotated: \"Negative numbers = reduction in risk\".",
+   "footnotes": [
+    "Caption references: 10-13,37-41"
+   ],
+   "unreadable": []
+  },
+  "status": "ocr_checked",
+  "page": 5,
+  "bbox": [
+   52.7,
+   254.3,
+   581.8,
+   471.8
+  ],
+  "crop": "storage/figures/va_pbm_t2dm_pharmacotherapy_2025/p005_f0.png",
+  "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+  "model": "claude-opus-5-5",
+  "checks": {
+   "passed": true,
+   "problems": [],
+   "ocr_match": null
+  }
+ },
+ "va_pbm_t2dm_pharmacotherapy_2025:p6:f0": {
+  "record": {
+   "kind": "diagram",
+   "title": "",
+   "description": "A stepped, staircase-style diagram with three tiers rising from left to right, each topped by a chevron-shaped icon containing a concentric-circle target symbol. The bottom bar, labeled \"INTERMEDIATE\" (blue), spans the full width; the left step above it lists: \"\u2022 SGLT2 inhibitor \u2022 DPP4 inhibitor\". The middle bar, labeled \"HIGH\" (teal), sits on top of the intermediate bar under the middle and right steps; the middle step lists: \"\u2022 Metformin \u2022 Sulfonylurea* \u2022 TZD\". The top bar, labeled \"VERY HIGH\" (dark green), is under the right step, which lists: \"\u2022 GLP-1 RA\u2020 \u2022 Insulin*\". The asterisks and dagger are footnote markers whose explanations are not shown in the image.",
+   "unreadable": []
+  },
+  "status": "ocr_checked",
+  "page": 6,
+  "bbox": [
+   226.7,
+   104.3,
+   494.6,
+   242.4
+  ],
+  "crop": "storage/figures/va_pbm_t2dm_pharmacotherapy_2025/p006_f0.png",
+  "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+  "model": "claude-opus-5-5",
+  "checks": {
+   "passed": true,
+   "problems": [],
+   "ocr_match": null
+  }
+ },
+ "va_pbm_t2dm_pharmacotherapy_2025:p6:f1": {
+  "record": {
+   "kind": "diagram",
+   "title": "",
+   "description": "A staircase diagram with four ascending steps, each topped by a target/bullseye icon on an arrow-shaped tab and a labeled band beneath. Step 1 (lowest, gray): bullets 'Insulin*', 'Sulfonylurea*', 'TZD'; band label 'MILD TO MODERATE WEIGHT GAIN'. Step 2 (gray): bullets 'Metformin', 'DPP-4 inhibitor'; band label 'NEUTRAL'. Step 3 (blue): bullet 'SGLT2 inhibitor'; band label 'INTERMEDIATE'. Step 4 (highest, dark teal): bullets 'GLP-1 RA\u2020', 'GIP and GLP-1 RA\u2020'; band label 'VERY HIGH'. The bands are layered so each higher category sits above the previous, suggesting increasing degree of weight benefit from left to right.",
+   "footnotes": [
+    "* marker on Insulin and Sulfonylurea (footnote text not shown in image)",
+    "\u2020 marker on GLP-1 RA and GIP and GLP-1 RA (footnote text not shown in image)"
+   ],
+   "unreadable": []
+  },
+  "status": "ocr_checked",
+  "page": 6,
+  "bbox": [
+   173.7,
+   298.7,
+   495.1,
+   453.3
+  ],
+  "crop": "storage/figures/va_pbm_t2dm_pharmacotherapy_2025/p006_f1.png",
+  "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+  "model": "claude-opus-5-5",
+  "checks": {
+   "passed": true,
+   "problems": [],
+   "ocr_match": null
+  }
+ },
+ "va_pbm_t2dm_pharmacotherapy_2025:p7:f0": {
+  "record": {
+   "kind": "diagram",
+   "title": "",
+   "description": "A sequence of text items connected by small gray triangular arrowheads, read left to right and ending in an orange circle. Item 1: \"About 70% of patients with T2DM have MASLD\". Item 2: \"Calculate FIB-4*\". Item 3: \"If FIB-4 \u22651.3 consider FibroScan\u00ae\". Item 4: \"FibroScan\u00ae >8kPa MASH is likely & >15kPa cirrhosis is likely\". Final item, inside the orange circle: \"MASH may progress to cirrhosis and liver cancer\". The circle is not fully closed; it has a small gap at its upper left. The gray triangles sit between the text items and appear to point toward the next item. Their exact orientation is not clearly shown.",
+   "footnotes": [
+    "* (footnote text for FIB-4 not shown in image)"
+   ],
+   "unreadable": [
+    "Exact direction of the gray triangular arrowheads is ambiguous; the left-to-right sequence is inferred from their placement",
+    "Footnote text for the asterisk after FIB-4 is not visible"
+   ]
+  },
+  "status": "ocr_checked",
+  "page": 7,
+  "bbox": [
+   110.6,
+   101.2,
+   492.1,
+   257.0
+  ],
+  "crop": "storage/figures/va_pbm_t2dm_pharmacotherapy_2025/p007_f0.png",
+  "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+  "model": "claude-opus-5-5",
+  "checks": {
+   "passed": true,
+   "problems": [],
+   "ocr_match": null
+  }
+ },
+ "va_pbm_t2dm_pharmacotherapy_2025:p8:f0": {
+  "record": {
+   "kind": "flowchart",
+   "title": "Figure 5. Using basal insulin*1,2",
+   "nodes": [
+    {
+     "id": "n1",
+     "shape": "start",
+     "text": "Basal insulin\nInitial dose 10 units or 0.1 to 0.2 units/kg once daily"
+    },
+    {
+     "id": "n2",
+     "shape": "action",
+     "text": "Titrate basal insulin\n10 to 15% weekly or 2 units every 3 days based on self-monitored FPG"
+    },
+    {
+     "id": "n3",
+     "shape": "action",
+     "text": "Decrease insulin\nDecrease insulin dose by 10 to 20%"
+    }
+   ],
+   "edges": [
+    {
+     "from": "n1",
+     "to": "n2",
+     "label": "Set FPG target range"
+    },
+    {
+     "from": "n2",
+     "to": "n3",
+     "label": "If patient has hypoglycemia"
+    }
+   ],
+   "footnotes": [],
+   "unreadable": []
+  },
+  "status": "ocr_checked",
+  "page": 8,
+  "bbox": [
+   96.2,
+   298.7,
+   542.3,
+   462.9
+  ],
+  "crop": "storage/figures/va_pbm_t2dm_pharmacotherapy_2025/p008_f0.png",
+  "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+  "model": "claude-opus-5-5",
+  "checks": {
+   "passed": true,
+   "problems": [],
+   "ocr_match": 1.0
+  }
+ },
+ "va_pbm_t2dm_pharmacotherapy_2025:p9:f0": {
+  "record": {
+   "kind": "flowchart",
+   "title": "",
+   "nodes": [
+    {
+     "id": "n1",
+     "shape": "start",
+     "text": "Starting prandial insulin\n\u2022 Start with one dose before the largest meal of the day.\n\u2022 Use in addition to basal insulin.\n\u2022 Begin with 4 units or 10% of basal dose.\n\u2022 Discontinue sulfonylurea, meglitinides, and DPP-4 I."
+    },
+    {
+     "id": "n2",
+     "shape": "action",
+     "text": "Titrating prandial insulin\n\u2022 Increase dose by 1 to 2 units or 10 to 15% twice weekly\n\u2022 If having hypoglycemia, determine the cause (e.g., missed meal, exercise).\n - If no clear reason, lower dose by 10 to 20%"
+    },
+    {
+     "id": "n3",
+     "shape": "action",
+     "text": "Adding prandial doses\n\u2022 Start with adding a second prandial dose and follow titration schedule\n\u2022 Recheck HbA1c in 3 months\n\u2022 If HbA1c still elevated, adjust regimen based on glucose patterns; consider adding a third prandial insulin dose"
+    }
+   ],
+   "edges": [
+    {
+     "from": "n1",
+     "to": "n2",
+     "label": "Home glucose* or HbA1c over target range"
+    },
+    {
+     "from": "n2",
+     "to": "n3",
+     "label": "HbA1c over target range"
+    }
+   ],
+   "footnotes": [],
+   "unreadable": [
+    "Footnote text for the asterisk on 'Home glucose*' is not visible in the crop"
+   ]
+  },
+  "status": "ocr_checked",
+  "page": 9,
+  "bbox": [
+   62.5,
+   78.7,
+   523.1,
+   323.9
+  ],
+  "crop": "storage/figures/va_pbm_t2dm_pharmacotherapy_2025/p009_f0.png",
+  "doc_id": "va_pbm_t2dm_pharmacotherapy_2025",
+  "model": "claude-opus-5-5",
+  "checks": {
+   "passed": true,
+   "problems": [],
+   "ocr_match": 1.0
+  }
+ },
+ "va_dod_cpg_opioids_2022:p25:f0": {
+  "record": {
+   "kind": "flowchart",
+   "title": "",
+   "nodes": [
+    {
+     "id": "1",
+     "shape": "start",
+     "text": "Patient with chronic pain"
+    },
+    {
+     "id": "2",
+     "shape": "action",
+     "text": "Obtain pain and biopsychosocial assessment (see Sidebar A)"
+    },
+    {
+     "id": "3",
+     "shape": "decision",
+     "text": "Is the patient currently on opioids for chronic pain?"
+    },
+    {
+     "id": "4",
+     "shape": "end",
+     "text": "Proceed to Module C"
+    },
+    {
+     "id": "5",
+     "shape": "action",
+     "text": "Educate/re-educate on, implement, and optimize non-opioid treatments for chronic pain (see Sidebar B), including:\n\u2022 Self-management to promote health and wellness\n\u2022 Non-opioid pharmacologic management\n\u2022 Non-pharmacologic pain treatments:\n\u25aa Behavioral therapies (e.g., cognitive behavioral therapy)\n\u25aa Physical/movement-based therapies (e.g., physical therapy)\n\u25aa Manipulative therapies (e.g., chiropractic care)\n\u25aa Complementary and integrative health treatments (e.g., acupuncture)\n\u2022 Interventional pain care (e.g., joint injection, radiofrequency ablation)\n\u2022 Realistic expectations and limitations of medical treatment\n\u2022 Refer to the LBP, OA, and Headache CPGs as appropriate for further condition-specific guidance*"
+    },
+    {
+     "id": "6",
+     "shape": "decision",
+     "text": "After regular follow-up and treatment optimization, has the treatment plan been effective in managing pain and optimizing function?"
+    },
+    {
+     "id": "7",
+     "shape": "action",
+     "text": "Complete opioid risk assessment; refer for interdisciplinary pain and specialty consultations, as appropriate (see Sidebar C)"
+    },
+    {
+     "id": "8",
+     "shape": "decision",
+     "text": "Do potential benefits outweigh risks? Consider strength and number of risk factors and patient preference (see Sidebar C)"
+    },
+    {
+     "id": "9",
+     "shape": "action",
+     "text": "Refer/consult for appropriate interdisciplinary treatments"
+    },
+    {
+     "id": "10",
+     "shape": "decision",
+     "text": "Is the patient able and willing to engage in a comprehensive pain care plan?"
+    },
+    {
+     "id": "11",
+     "shape": "action",
+     "text": "Educate patient and family about treatment options, including education on:\n\u2022 Known risks and unknown long-term benefits of opioids\n\u2022 Risks of SUD and overdose\n\u2022 Need for risk mitigation strategies\n\u2022 Naloxone rescue"
+    },
+    {
+     "id": "12",
+     "shape": "decision",
+     "text": "Is adding opioids to comprehensive pain therapy indicated at this time? (see Sidebar D)"
+    },
+    {
+     "id": "13",
+     "shape": "decision",
+     "text": "Is patient prepared to accept responsibilities of and is provider prepared to implement risk mitigation strategies?"
+    },
+    {
+     "id": "14",
+     "shape": "action",
+     "text": "Discuss and complete written informed consent with patient and family"
+    },
+    {
+     "id": "15",
+     "shape": "action",
+     "text": "Modify and document comprehensive pain management plan including opioids"
+    },
+    {
+     "id": "16",
+     "shape": "end",
+     "text": "Proceed to Module B"
+    },
+    {
+     "id": "17",
+     "shape": "end",
+     "text": "Exit algorithm; manage with non-opioid modalities"
+    }
+   ],
+   "edges": [
+    {
+     "from": "1",
+     "to": "2",
+     "label": ""
+    },
+    {
+     "from": "2",
+     "to": "3",
+     "label": ""
+    },
+    {
+     "from": "3",
+     "to": "4",
+     "label": "Yes"
+    },
+    {
+     "from": "3",
+     "to": "5",
+     "label": "No"
+    },
+    {
+     "from": "5",
+     "to": "6",
+     "label": ""
+    },
+    {
+     "from": "6",
+     "to": "7",
+     "label": "No"
+    },
+    {
+     "from": "6",
+     "to": "17",
+     "label": "Yes"
+    },
+    {
+     "from": "7",
+     "to": "8",
+     "label": ""
+    },
+    {
+     "from": "8",
+     "to": "17",
+     "label": "No"
+    },
+    {
+     "from": "8",
+     "to": "9",
+     "label": "Yes"
+    },
+    {
+     "from": "9",
+     "to": "10",
+     "label": ""
+    },
+    {
+     "from": "10",
+     "to": "17",
+     "label": "No"
+    },
+    {
+     "from": "10",
+     "to": "11",
+     "label": "Yes"
+    },
+    {
+     "from": "11",
+     "to": "12",
+     "label": ""
+    },
+    {
+     "from": "12",
+     "to": "17",
+     "label": "No"
+    },
+    {
+     "from": "12",
+     "to": "13",
+     "label": "Yes"
+    },
+    {
+     "from": "13",
+     "to": "17",
+     "label": "No"
+    },
+    {
+     "from": "13",
+     "to": "14",
+     "label": "Yes"
+    },
+    {
+     "from": "14",
+     "to": "15",
+     "label": ""
+    },
+    {
+     "from": "15",
+     "to": "16",
+     "label": ""
+    }
+   ],
+   "footnotes": [],
+   "unreadable": []
+  },
+  "status": "reviewed",
+  "page": 25,
+  "bbox": [
+   76.8,
+   110.1,
+   534.6,
+   681.7
+  ],
+  "crop": "storage/figures/va_dod_cpg_opioids_2022/p025_f0.png",
+  "doc_id": "va_dod_cpg_opioids_2022",
+  "model": "claude-opus-5-5",
+  "checks": {
+   "passed": true,
+   "problems": [],
+   "ocr_match": 0.985
+  }
+ },
+ "va_dod_cpg_opioids_2022:p26:f0": {
+  "record": {
+   "kind": "flowchart",
+   "title": "",
+   "nodes": [
+    {
+     "id": "18",
+     "shape": "start",
+     "text": "Candidate for opioids with consent (begin a trial in conjunction with comprehensive pain care plan)"
+    },
+    {
+     "id": "19",
+     "shape": "action",
+     "text": "Initiate opioids using the following approach:\n\u2022 Use short duration (e.g., 1-week initial prescription)\n\u2022 Plan to reevaluate at 30 days or fewer\n\u2022 Use lowest effective dose, recognizing that no dose is completely safe\n  \u25aa A strategy of escalating dose to achieve benefit increases risk (see Sidebar L) and has not been shown to improve function\n\u2022 Long-acting opioids should not be prescribed for opioid-na\u00efve individuals (see Recommendation 11 and Appendix D)\n\u2022 Consider alternatives to methadone and transdermal fentanyl (see Appendix D)\n\u2022 Assess improvement in pain and functional status and adverse effects\n\u2022 Complete risk mitigation strategies (see Sidebar E)\n\u2022 Provide medication and overdose education, offer naloxone prescription"
+    },
+    {
+     "id": "20",
+     "shape": "action",
+     "text": "Reevaluation as needed clinically and based on patient risk factors (e.g., 1-4 weeks after initiation of opioids, not later than 30 days)\n\u2022 Assess:\n  \u25aa Function, pain, risks, and benefits of opioids\n  \u25aa Adverse effects\n  \u25aa Adherence to treatment plan\n  \u25aa Complications or co-occurring conditions (e.g., medical, behavioral health, and/or SUD)\n  \u25aa Patient preference\n\u2022 Complete risk mitigation strategies (see Sidebar E)\n\u2022 Review and optimize comprehensive pain care plan (e.g., non-opioid treatments, self-management strategies)"
+    },
+    {
+     "id": "21",
+     "shape": "decision",
+     "text": "Does the patient want to continue opioid therapy?"
+    },
+    {
+     "id": "22",
+     "shape": "action",
+     "text": "\u2022 Taper to discontinuation (consult Module C if needed)\n\u2022 Manage with non-opioid modalities"
+    },
+    {
+     "id": "23",
+     "shape": "decision",
+     "text": "Is there clinically meaningful improvement in function and pain that outweighs risks?"
+    },
+    {
+     "id": "24",
+     "shape": "decision",
+     "text": "Is the patient sufficiently medically and behaviorally stable to continue opioid medication?"
+    },
+    {
+     "id": "25",
+     "shape": "action",
+     "text": "Provide medical and/or behavioral health treatment to stabilize as indicated; consider tapering opioids to discontinuation (consult Module C)"
+    },
+    {
+     "id": "26",
+     "shape": "decision",
+     "text": "Are there factors that increase risks of opioids (e.g., non-adherence, co-occurring conditions, indications of OUD)?"
+    },
+    {
+     "id": "27",
+     "shape": "action",
+     "text": "Consider one or more of the following:\n\u2022 Shortening prescribing interval\n\u2022 Intensifying risk mitigation strategies (see Sidebar E)\n\u2022 Referring to interdisciplinary care\n\u2022 Consulting with or referring to specialty care\n\u2022 Switching to partial agonist opioids\n\u2022 See VA/DoD SUD CPG if there are indications of OUD*"
+    },
+    {
+     "id": "28",
+     "shape": "action",
+     "text": "Reassess in 1-3 months or more frequently as determined by patient risk factors (see Sidebar G)"
+    },
+    {
+     "id": "29",
+     "shape": "decision",
+     "text": "Are there indications to discontinue or taper? (see Sidebar F)"
+    },
+    {
+     "id": "30",
+     "shape": "end",
+     "text": "Taper to reduced dose or taper to discontinuation; proceed to Module C"
+    }
+   ],
+   "edges": [
+    {
+     "from": "18",
+     "to": "19",
+     "label": ""
+    },
+    {
+     "from": "19",
+     "to": "20",
+     "label": ""
+    },
+    {
+     "from": "20",
+     "to": "21",
+     "label": ""
+    },
+    {
+     "from": "21",
+     "to": "22",
+     "label": "No"
+    },
+    {
+     "from": "21",
+     "to": "23",
+     "label": "Yes"
+    },
+    {
+     "from": "23",
+     "to": "22",
+     "label": "No"
+    },
+    {
+     "from": "23",
+     "to": "24",
+     "label": "Yes"
+    },
+    {
+     "from": "24",
+     "to": "25",
+     "label": "No"
+    },
+    {
+     "from": "24",
+     "to": "26",
+     "label": "Yes"
+    },
+    {
+     "from": "26",
+     "to": "27",
+     "label": "Yes"
+    },
+    {
+     "from": "26",
+     "to": "28",
+     "label": "No"
+    },
+    {
+     "from": "27",
+     "to": "29",
+     "label": ""
+    },
+    {
+     "from": "29",
+     "to": "28",
+     "label": "No"
+    },
+    {
+     "from": "29",
+     "to": "30",
+     "label": "Yes"
+    },
+    {
+     "from": "28",
+     "to": "20",
+     "label": ""
+    }
+   ],
+   "footnotes": [],
+   "unreadable": []
+  },
+  "status": "reviewed",
+  "page": 26,
+  "bbox": [
+   62.2,
+   92.2,
+   549.7,
+   646.6
+  ],
+  "crop": "storage/figures/va_dod_cpg_opioids_2022/p026_f0.png",
+  "doc_id": "va_dod_cpg_opioids_2022",
+  "model": "claude-opus-5-5",
+  "checks": {
+   "passed": true,
+   "problems": [],
+   "ocr_match": 1.0
+  }
+ },
+ "va_dod_cpg_opioids_2022:p27:f0": {
+  "record": {
+   "kind": "flowchart",
+   "title": "",
+   "nodes": [
+    {
+     "id": "31",
+     "shape": "start",
+     "text": "Indication to maintain, taper, discontinue, or switch from full agonist opioids (see Sidebars H and I)"
+    },
+    {
+     "id": "32",
+     "shape": "action",
+     "text": "Repeat comprehensive biopsychosocial assessment (see Sidebars A and C)"
+    },
+    {
+     "id": "33",
+     "shape": "decision",
+     "text": "Does the patient demonstrate signs or symptoms of SUD? (see VA/DoD SUD CPG*)"
+    },
+    {
+     "id": "34",
+     "shape": "end",
+     "text": "\u2022 Initiate or refer to SUD treatment with appropriate monitoring and follow-up (e.g., MOUD, treatment for comorbidities) (see VA/DoD SUD CPG*)\n\u2022 Consider switch to partial agonist opioids or taper opioids to discontinuation (see Sidebar J)\n\u2022 Manage with non-opioid modalities (see Sidebar B)\n\u2022 Exit algorithm"
+    },
+    {
+     "id": "35",
+     "shape": "decision",
+     "text": "Is there evidence of diversion?**"
+    },
+    {
+     "id": "36",
+     "shape": "end",
+     "text": "\u2022 Address safety and misuse\n\u2022 Assess for elevated suicide risk\n\u2022 Assess for withdrawal symptoms and offer expedited taper, immediate discontinuation, or medically-assisted withdrawal as indicated\n\u2022 Continue to monitor for SUD and behavioral health comorbidities and offer treatment as indicated (see VA/DoD SUD CPG* and Academic Detailing Tapering Document)\n\u2022 Consider switch to partial agonist opioids or taper opioids to discontinuation (see Sidebar J)\n\u2022 Manage with non-opioid modalities (see Sidebar B)\n\u2022 Exit algorithm"
+    },
+    {
+     "id": "37",
+     "shape": "decision",
+     "text": "Is there high risk or dangerous behavior (e.g., intentional/self-harm overdose event, accidents, threatening provider)?"
+    },
+    {
+     "id": "38",
+     "shape": "action",
+     "text": "Develop individualized treatment plan (including pace of tapering if applicable and setting of care) based on patient and treatment characteristics (see Sidebar J and Recommendations 12 and 13)"
+    },
+    {
+     "id": "39",
+     "shape": "action",
+     "text": "\u2022 Follow-up as clinically indicated after each change in dosage and after discontinuation, considering patient and treatment characteristics\n\u2022 Consider the following at each interaction with patient:\n \u25aa Educate on self-management and risks of opioids (see Sidebar K)\n \u25aa Optimize whole person approach to pain care\n \u25aa Optimize treatment of co-occurring behavioral health conditions\n \u25aa Optimize non-opioid pain treatment modalities\n \u25aa Reassess for OUD and readiness for OUD treatment as indicated\n\u2022 If continuing treatment with opioids, use the following approach:\n \u25aa Shortest duration\n \u25aa Use lowest effective dose (recognizing that no dose is completely safe and overdose risk increases at doses >20 \u2013 50 mg MEDD) (see Sidebar L)\n \u25aa Continual assessment of improvement in pain and functional status and adverse effects"
+    },
+    {
+     "id": "40",
+     "shape": "decision",
+     "text": "Are one of the following present?\n\u2022 Patient resistance to taper\n\u2022 High risk or dangerous behaviors (including elevated risk of suicide)\n\u2022 Increase in patient distress"
+    }
+   ],
+   "edges": [
+    {
+     "from": "31",
+     "to": "32",
+     "label": ""
+    },
+    {
+     "from": "32",
+     "to": "33",
+     "label": ""
+    },
+    {
+     "from": "33",
+     "to": "34",
+     "label": "Yes"
+    },
+    {
+     "from": "33",
+     "to": "35",
+     "label": "No"
+    },
+    {
+     "from": "35",
+     "to": "36",
+     "label": "Yes"
+    },
+    {
+     "from": "35",
+     "to": "37",
+     "label": "No"
+    },
+    {
+     "from": "37",
+     "to": "36",
+     "label": "Yes"
+    },
+    {
+     "from": "37",
+     "to": "38",
+     "label": "No"
+    },
+    {
+     "from": "38",
+     "to": "39",
+     "label": ""
+    },
+    {
+     "from": "39",
+     "to": "40",
+     "label": ""
+    },
+    {
+     "from": "40",
+     "to": "32",
+     "label": "Yes"
+    },
+    {
+     "from": "40",
+     "to": "39",
+     "label": "No"
+    }
+   ],
+   "unreadable": []
+  },
+  "status": "reviewed",
+  "page": 27,
+  "bbox": [
+   66.3,
+   113.9,
+   546.2,
+   626.5
+  ],
+  "crop": "storage/figures/va_dod_cpg_opioids_2022/p027_f0.png",
+  "doc_id": "va_dod_cpg_opioids_2022",
+  "model": "claude-opus-5-5",
+  "checks": {
+   "passed": true,
+   "problems": [],
+   "ocr_match": 0.977
+  }
+ },
+ "va_dod_cpg_opioids_2022:p82:f0": {
+  "record": {
+   "kind": "flowchart",
+   "title": "Figure A-1. Study Flow Diagram",
+   "nodes": [
+    {
+     "id": "1",
+     "shape": "start",
+     "text": "9,766 Citations Identified by Searches"
+    },
+    {
+     "id": "2",
+     "shape": "note",
+     "text": "5,671 Citations Excluded at the Title Level\nCitations excluded at this level were off-topic, not published in English, or published prior to inclusion date"
+    },
+    {
+     "id": "3",
+     "shape": "decision",
+     "text": "4,095 Abstracts Reviewed"
+    },
+    {
+     "id": "4",
+     "shape": "note",
+     "text": "3,365 Citations Excluded at the Abstract Level\nCitations excluded at this level were not an SR or CS, clearly did not address a KQ, did not report on an outcome of interest, or were outside cutoff publication dates"
+    },
+    {
+     "id": "5",
+     "shape": "action",
+     "text": "730 Full-length Articles Reviewed"
+    },
+    {
+     "id": "6",
+     "shape": "note",
+     "text": "368 Citations Excluded at 1st Pass Full Article Level\n123 Did not address a KQ,\n40 Not study design of interest,\n38 Not population of interest,\n31 No outcomes of interest,\n29 Relevant review with no data to abstract,\n22 Not a full-length clinical study or SR,\n21 Not a comparison group of interest,\n15 Unclear of inadequate follow-up\n49 Other (duplicates, not in date range, not intervention of interest)"
+    },
+    {
+     "id": "7",
+     "shape": "decision",
+     "text": "362 Articles Reviewed"
+    },
+    {
+     "id": "8",
+     "shape": "note",
+     "text": "298 Citations Excluded at 2nd Pass KQ Level\n65 Did not address a KQ\n64 No outcomes of interest\n63 Wrong study design\n33 Relevant review with no data to extract\n27 Not a study population of interest\n20 Not an intervention or comparator of interest\n13 Superseded by more comprehensive review or included in a SR\n11 Unclear or inadequate follow-up\n2 Other (e.g., duplicate, outside date range)"
+    },
+    {
+     "id": "9",
+     "shape": "end",
+     "text": "64 Included Studies\n(11 studies addressed multiple KQs)"
+    }
+   ],
+   "edges": [
+    {
+     "from": "1",
+     "to": "2",
+     "label": ""
+    },
+    {
+     "from": "1",
+     "to": "3",
+     "label": ""
+    },
+    {
+     "from": "3",
+     "to": "4",
+     "label": ""
+    },
+    {
+     "from": "3",
+     "to": "5",
+     "label": ""
+    },
+    {
+     "from": "5",
+     "to": "6",
+     "label": ""
+    },
+    {
+     "from": "5",
+     "to": "7",
+     "label": ""
+    },
+    {
+     "from": "7",
+     "to": "8",
+     "label": ""
+    },
+    {
+     "from": "7",
+     "to": "9",
+     "label": ""
+    }
+   ],
+   "unreadable": []
+  },
+  "status": "machine_interpreted",
+  "page": 82,
+  "bbox": [
+   82.6,
+   111.9,
+   492.3,
+   503.0
+  ],
+  "crop": "storage/figures/va_dod_cpg_opioids_2022/p082_f0.png",
+  "doc_id": "va_dod_cpg_opioids_2022",
+  "model": "claude-opus-5-5",
+  "checks": {
+   "passed": false,
+   "problems": [
+    "decision 3 has 2 exits, not all labelled",
+    "decision 7 has 2 exits, not all labelled",
+    "node 1 text only 0% found in OCR",
+    "node 2 text only 0% found in OCR",
+    "node 3 text only 0% found in OCR",
+    "node 4 text only 0% found in OCR",
+    "node 5 text only 0% found in OCR",
+    "node 6 text only 3% found in OCR",
+    "node 7 text only 0% found in OCR",
+    "node 8 text only 3% found in OCR",
+    "node 9 text only 0% found in OCR"
+   ],
+   "ocr_match": 0.008
+  }
+ },
+ "va_dod_cpg_opioids_2022:p95:f0": {
+  "record": {
+   "kind": "flowchart",
+   "title": "",
+   "nodes": [
+    {
+     "id": "n1",
+     "shape": "action",
+     "text": "Codeine"
+    },
+    {
+     "id": "n2",
+     "shape": "action",
+     "text": "Morphine"
+    },
+    {
+     "id": "n3",
+     "shape": "action",
+     "text": "6-MAM"
+    },
+    {
+     "id": "n4",
+     "shape": "action",
+     "text": "Heroin"
+    },
+    {
+     "id": "n5",
+     "shape": "action",
+     "text": "Hydrocodone"
+    },
+    {
+     "id": "n6",
+     "shape": "action",
+     "text": "Hydromorphone"
+    },
+    {
+     "id": "n7",
+     "shape": "action",
+     "text": "Oxycodone"
+    },
+    {
+     "id": "n8",
+     "shape": "action",
+     "text": "Oxymorphone"
+    }
+   ],
+   "edges": [
+    {
+     "from": "n1",
+     "to": "n2",
+     "label": ""
+    },
+    {
+     "from": "n3",
+     "to": "n2",
+     "label": ""
+    },
+    {
+     "from": "n4",
+     "to": "n3",
+     "label": ""
+    },
+    {
+     "from": "n1",
+     "to": "n5",
+     "label": "<15%"
+    },
+    {
+     "from": "n2",
+     "to": "n6",
+     "label": "<5%"
+    },
+    {
+     "from": "n5",
+     "to": "n6",
+     "label": ""
+    },
+    {
+     "from": "n7",
+     "to": "n8",
+     "label": ""
+    }
+   ],
+   "unreadable": []
+  },
+  "status": "ocr_checked",
+  "page": 95,
+  "bbox": [
+   73.7,
+   90.4,
+   511.4,
+   168.2
+  ],
+  "crop": "storage/figures/va_dod_cpg_opioids_2022/p095_f0.png",
+  "doc_id": "va_dod_cpg_opioids_2022",
+  "model": "claude-opus-5-5",
+  "checks": {
+   "passed": true,
+   "problems": [],
+   "ocr_match": 1.0
+  }
+ },
+ "va_pbm_bup_chronic_pain:p3:f0": {
+  "record": {
+   "kind": "photo",
+   "title": "",
+   "description": "Faded image of buprenorphine product forms: a large orange rectangular film strip with faint repeated markings (appears to read \"N8\"), surrounded by four translucent square insets showing round white tablets, an orange hexagonal tablet, and a round white/orange tablet. No legible text beyond the faint film markings.",
+   "unreadable": [
+    "Faint markings on the orange film (possibly \"N8\")"
+   ]
+  },
+  "status": "ocr_checked",
+  "page": 3,
+  "bbox": [
+   484.2,
+   47.5,
+   581.5,
+   127.9
+  ],
+  "crop": "storage/figures/va_pbm_bup_chronic_pain/p003_f0.png",
+  "doc_id": "va_pbm_bup_chronic_pain",
+  "model": "claude-opus-5-5",
+  "checks": {
+   "passed": true,
+   "problems": [],
+   "ocr_match": null
+  }
+ }
+}

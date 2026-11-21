@@ -1,0 +1,51 @@
+{
+  "setup": "docling_sections",
+  "config": {
+    "chunks_from": "docling_sections_bge",
+    "embedder": {
+      "name": "openai",
+      "model": "text-embedding-3-large"
+    },
+    "search_mode": "hybrid",
+    "rrf_k": 60,
+    "fusion_depth": 100,
+    "return_parents": true,
+    "rerank": {
+      "model": "BAAI/bge-reranker-base",
+      "depth": 50
+    }
+  },
+  "built_at": "2026-10-18T05:35:45+00:00",
+  "model": "text-embedding-3-large",
+  "dim": 3072,
+  "versions": {
+    "sentence-transformers": "6.1.0",
+    "rank-bm25": "0.2.2",
+    "torch": "2.14.1",
+    "transformers": "5.19.0",
+    "pymupdf": "1.28.2",
+    "pdfplumber": "0.11.10"
+  },
+  "n_chunks": 1983,
+  "n_parents": 589,
+  "chunks_per_doc": {
+    "va_dod_cpg_diabetes_2023": 579,
+    "va_pbm_t2dm_clinicians_guide": 94,
+    "va_pbm_t2dm_pharmacotherapy_2025": 83,
+    "va_dod_cpg_opioids_2022": 665,
+    "va_pbm_bup_chronic_pain": 31,
+    "va_pbm_bup_oud": 29,
+    "cms_partd_dmp_guidance_2019": 127,
+    "cms_partd_opioid_pharmacists_2022": 7,
+    "ny_medicaid_pdl": 214,
+    "ny_medicaid_pharmacy_policy": 154
+  },
+  "timings_s": {
+    "parse": 0.0,
+    "chunk": 0.0,
+    "embed": 13.5,
+    "total": 13.5
+  },
+  "embed_tokens": 544723,
+  "embed_cost_usd": 0.0708
+}
